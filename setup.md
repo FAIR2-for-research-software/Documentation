@@ -2,36 +2,37 @@
 title: Setup
 ---
 
-FIXME: Setup instructions live in this document. Please specify the tools and
-the data sets the Learner needs to have installed.
-
-## Data Sets
-
-<!--
-FIXME: place any data you want learners to use in `episodes/data` and then use
-       a relative link ( [data zip file](data/lesson-data.zip) ) to provide a
-       link to it, replacing the example.com link.
--->
-Download the [data zip file](https://example.com/FIXME) and unzip it to your Desktop
-
 ## Software Setup
 
-::::::::::::::::::::::::::::::::::::::: discussion
+This course may be completed using *either* the Python programming language **or** the R statistical package.
+Please use the tool that you prefer.
 
-### Details
+[Python](https://python.org) is a popular language for research computing, and great for general-purpose
+programming as well. We will be using some of the inbuilt functionality of Python 3.
 
-Setup for different systems can be presented in dropdown menus via a `spoiler`
-tag. They will join to this discussion block, so you can give a general overview
-of the software used in this lesson here and fill out the individual operating
-systems (and potentially add more, e.g. online setup) in the solutions blocks.
-
-:::::::::::::::::::::::::::::::::::::::::::::::::::
+[R](https://cran.rstudio.com/) is a statistical language that is designed for data exploration, visualization,
+and data analysis. To interact with R, the most popular tool is
+[RStudio Desktop](https://posit.co/download/rstudio-desktop/).
 
 :::::::::::::::: spoiler
 
 ### Windows
 
-Use PuTTY
+#### Text editor
+
+The Notepad text editor is installed by default on Windows.
+
+#### Python
+
+
+There is a guide for [using Python on Windows](https://docs.python.org/3/using/windows.html) in the
+Python documentation. [Python Releases for Windows](https://www.python.org/downloads/windows/) are
+available at [Python.org](https://python.org).
+
+#### R
+
+[Download R for Windows.](https://cran.rstudio.com/bin/windows/) We will use base R and some libraries
+that offer additional functionality required for this course.
 
 ::::::::::::::::::::::::
 
@@ -39,7 +40,18 @@ Use PuTTY
 
 ### MacOS
 
-Use Terminal.app
+#### Text editor
+
+TextEdit is installed by default on Mac OS.
+
+#### Python
+
+Please read the guide on [using Python on a Mac](https://docs.python.org/3/using/mac.html) in 
+the Python documentation.
+
+#### R
+
+[Download R for macOS](https://cran.rstudio.com/bin/macosx/) and [RStudio Desktop](https://posit.co/download/rstudio-desktop/).
 
 ::::::::::::::::::::::::
 
@@ -48,7 +60,18 @@ Use Terminal.app
 
 ### Linux
 
-Use Terminal
+#### Text editor
+
+GNOME Text Editor is the default app on Ubuntu since version 22.10. On other distributions,
+other text editors may be available, such as Gedit or Kate.
+
+#### Python
+
+Please read the guide on [using Python on Unix platforms](https://docs.python.org/3/using/unix.html) in 
+the Python documentation.
+
+#### R
+
+[Download R for Linux](https://cran.rstudio.com/) and [RStudio Desktop](https://posit.co/download/rstudio-desktop/).
 
 ::::::::::::::::::::::::
-
