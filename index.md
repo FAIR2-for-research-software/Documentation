@@ -2,7 +2,9 @@
 site: sandpaper::sandpaper_site
 ---
 
-This course will introduce you to the different ways we can provide guidance to future users and maintainers of our code. These range from the very simple, just as leaving a few handy notes, to the complex, generating a reference website that includes tutorials and a detailed reference. The right approach for your projects will probably be a blend of these, and depends on the context and your audience.
+## Course description
+
+This course will introduce you to the different ways we can provide guidance to future users and maintainers of our code. These coding best practices range from the very simple, such as leaving a few handy notes, to the complex, generating a reference website that includes tutorials and a detailed reference. The right approach for your projects will probably be a blend of these, and depends on the context and your audience.
 
 ## Why document software?
 
