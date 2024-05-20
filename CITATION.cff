@@ -5,7 +5,7 @@
 # ensuring that the author list and other fields remain accurate.
 
 cff-version: 1.2.0
-title: FIXME
+title: FAIR4RS Documentation course
 message: >-
   Please cite this lesson using the information in this file
   when you refer to it in publications, and/or if you
@@ -13,10 +13,14 @@ message: >-
   training material.
 type: dataset
 authors:
-  - given-names: FIXME
-    family-names: FIXME
+  - given-names: Joe Salvador Thornhill
+    family-names: Heffer
+    email: j.heffer@sheffield.ac.uk
+    affiliation: The University of Sheffield
+    orcid: 'https://orcid.org/0000-0001-8733-1117'
 abstract: >-
-  FIXME Replace this with a short abstract describing the
-  lesson, e.g. its target audience and main intended
-  learning objectives.
+  Software documentation helps you and others to use your software
+  successfully in the future and to read your code ensuring that its
+  value is sustained. This course introduces the different ways to
+  provide other researchers with useful documentation for your software.
 license: CC-BY-4.0
