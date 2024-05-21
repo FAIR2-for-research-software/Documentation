@@ -14,13 +14,15 @@ programming as well. We will be using some of the inbuilt functionality of Pytho
 and data analysis. To interact with R, the most popular tool is
 [RStudio Desktop](https://posit.co/download/rstudio-desktop/).
 
+TODO online editors
+
 :::::::::::::::: spoiler
 
 ### Windows
 
 #### Text editor
 
-The Notepad text editor is installed by default on Windows.
+The Notepad text editor is installed by default on Windows. [Notepad++](https://notepad-plus-plus.org/) is a more powerful, open source editor that has a syntax highlighting feature.
 
 #### Python
 
