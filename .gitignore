@@ -39,3 +39,4 @@ renv
 renv.lock
 # Notepad++ backup file
 *.bak
+.Rproj
