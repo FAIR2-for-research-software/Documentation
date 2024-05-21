@@ -1,7 +1,3 @@
----
-title: "Licenses"
----
-
 ## Instructional Material
 
 All Carpentries (Software Carpentry, Data Carpentry, and Library Carpentry)

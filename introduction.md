@@ -1,114 +1,38 @@
 ---
-title: "Using Markdown"
+title: "Why document Code?"
 teaching: 10
 exercises: 2
 ---
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
-- How do you write a lesson using Markdown and `{sandpaper}`?
+- What is software documentation?
+- Why is documenting code useful for researchers?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Explain how to use markdown with The Carpentries Workbench
-- Demonstrate how to include pieces of code, figures, and nested challenge blocks
+- Learn the motivation for learning to document software
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## Introduction
 
-This is a lesson created via The Carpentries Workbench. It is written in
-[Pandoc-flavored Markdown](https://pandoc.org/MANUAL.txt) for static files and
-[R Markdown][r-markdown] for dynamic files that can render code into output. 
-Please refer to the [Introduction to The Carpentries 
-Workbench](https://carpentries.github.io/sandpaper-docs/) for full documentation.
+No code is self-explanatory. It’s a tool we design, or, more often, a complex organism that develops as we use it, such as a library of functions used within a research team to perform certain kinds of analysis.
 
-What you need to know is that there are three sections required for a valid
-Carpentries lesson:
+## Why document software?
 
- 1. `questions` are displayed at the beginning of the episode to prime the
-    learner for the content.
- 2. `objectives` are the learning objectives for an episode displayed with
-    the questions.
- 3. `keypoints` are displayed at the end of the episode to reinforce the
-    objectives.
+It’s a common occurrence to get a software package, whether it’s written by ourselves, a colleague, or someone else, that’s near-impossible to use because it’s unclear what each function or tool does. Maybe we look at the source code itself, but we can’t make head-nor-tail of it. Maybe the only person who can use this software is the person who wrote it—unless you wrote it and forgot what you were thinking when you did!
 
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::: instructor
+### Advantages of good documentation
 
-Inline instructor notes can help inform instructors of timing challenges
-associated with the lessons. They appear in the "Instructor View"
+There are many advantages to writing guidance to go along with your research software. Software documentation helps yourself and others to use it successfully in the future and read your code ensuring that its value is sustained.
 
-::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+It helps with your software engineering practice to reflect on what the purpose of the software is and to articulate what each component or module is for.
 
-::::::::::::::::::::::::::::::::::::: challenge 
+Research outputs often depend upon the code used to generate them. Clarity and confidence are essential in using code to perform calculations, simulations, or data analysis. All kinds of research software  can be made more reproducible by providing clear context and instructions for using it.
 
-## Challenge 1: Can you do it?
+There are many advantages to making your code more readable. Well-documented software is easier to maintain and has greater sustainability, which means it can continue to be used and modified for a longer period of time, despite changes in technology. If software is more reusable then it encourages others to use it for their research, increasing the number of citations of that software and its overall research impact.
 
-What is the output of this command?
-
-```r
-paste("This", "new", "lesson", "looks", "good")
-```
-
-:::::::::::::::::::::::: solution 
-
-## Output
- 
-```output
-[1] "This new lesson looks good"
-```
-
-:::::::::::::::::::::::::::::::::
-
-
-## Challenge 2: how do you nest solutions within challenge blocks?
-
-:::::::::::::::::::::::: solution 
-
-You can add a line with at least three colons and a `solution` tag.
-
-:::::::::::::::::::::::::::::::::
-::::::::::::::::::::::::::::::::::::::::::::::::
-
-## Figures
-
-You can use standard markdown for static figures with the following syntax:
-
-`![optional caption that appears below the figure](figure url){alt='alt text for
-accessibility purposes'}`
-
-![You belong in The Carpentries!](https://raw.githubusercontent.com/carpentries/logo/master/Badge_Carpentries.svg){alt='Blue Carpentries hex person logo with no text.'}
-
-::::::::::::::::::::::::::::::::::::: callout
-
-Callout sections can highlight information.
-
-They are sometimes used to emphasise particularly important points
-but are also used in some lessons to present "asides": 
-content that is not central to the narrative of the lesson,
-e.g. by providing the answer to a commonly-asked question.
-
-::::::::::::::::::::::::::::::::::::::::::::::::
-
-
-## Math
-
-One of our episodes contains $\LaTeX$ equations when describing how to create
-dynamic reports with {knitr}, so we now use mathjax to describe this:
-
-`$\alpha = \dfrac{1}{(1 - \beta)^2}$` becomes: $\alpha = \dfrac{1}{(1 - \beta)^2}$
-
-Cool, right?
-
-::::::::::::::::::::::::::::::::::::: keypoints 
-
-- Use `.md` files for episodes when you want static content
-- Use `.Rmd` files for episodes when you need to generate output
-- Run `sandpaper::check_lesson()` to identify any issues with your lesson
-- Run `sandpaper::build_lesson()` to preview your lesson locally
-
-::::::::::::::::::::::::::::::::::::::::::::::::
-
-[r-markdown]: https://rmarkdown.rstudio.com/
+Writing a useful software package that is well-documented and can be reused in the future means that your code could take on a life of its own, with benefits that extend beyond yourself to your collaborators and other researchers in the future.
