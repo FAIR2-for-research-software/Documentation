@@ -27,6 +27,10 @@ We describe functions by using a feature of many programming languages called do
 
 To make a docstring, we put a string as the first line of a function (or other object.) For example, for a simple Python function that calculates the sum of two numbers:
 
+<!---
+TODO R examples
+-->
+
 ```python
 def add(x, y):
     """
@@ -90,7 +94,9 @@ Help function in R and Python e.g.
 help(print)
 ```
 
-TODO Usage examples for functions. Code snippets: comprehensive collections of code examples that demonstrate how to use functions effectively in different scenarios.
+TODO Usage examples for functions.
+
+Code snippets: comprehensive collections of code examples that demonstrate how to use functions effectively in different scenarios.
 
 ## Automatically generate docstrings
 
@@ -128,6 +134,14 @@ def calculate_rectangle_area(width, height):
 ```
 
 This can save you a lot of time, but as with any AI-generated content, always check the output and ensure it's correct!
+
+## Further reading
+
+For more information, please see:
+
+- Python [PEP 8 Documentation Strings](https://peps.python.org/pep-0008/#documentation-strings)
+
+::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 

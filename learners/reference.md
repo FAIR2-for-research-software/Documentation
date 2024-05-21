@@ -14,3 +14,9 @@ Developer
 
 Installation
 : The process of putting software onto a computer
+
+Editor
+: A software tool for modifying plain text files
+
+IDE
+: An _Integrated Development Environment_ is a powerful source code editor and debugging tool designed for software engineers
