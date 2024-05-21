@@ -14,7 +14,7 @@ carpentry: 'incubator'
 title: 'Research Software Documentation'
 
 # Date the lesson was created (YYYY-MM-DD, this is empty by default)
-created: 2024-05-20
+created: '2024-05-20'
 
 # Comma-separated list of keywords for the lesson
 keywords: 'software documentation, docstrings, type hints'
@@ -23,7 +23,7 @@ keywords: 'software documentation, docstrings, type hints'
 # possible values: pre-alpha, alpha, beta, stable
 life_cycle: 'pre-alpha'
 
-# License of the lesson
+# License of the lesson materials (recommended CC-BY 4.0)
 license: 'CC-BY 4.0'
 
 # Link to the source repository for this lesson
@@ -58,19 +58,22 @@ contact: 'research-it@sheffield.ac.uk'
 # - another-learner.md
 
 # Order of episodes in your lesson
-episodes: 
+episodes:
 - introduction.md
+- writing-readmes.md
 
 # Information for Learners
-learners: 
+learners:
 
 # Information for Instructors
-instructors: 
+instructors:
 
 # Learner Profiles
-profiles: 
+profiles:
 
 # Customisation ---------------------------------------------
 #
 # This space below is where custom yaml items (e.g. pinning
 # sandpaper and varnish versions) should live
+
+
