@@ -277,16 +277,33 @@
 
 <section id="course-description"><h2 class="section-heading">Course description<a class="anchor" aria-label="anchor" href="#course-description"></a>
 </h2>
-<hr class="half-width"><p>This course will introduce you to the different ways we can provide
+<hr class="half-width"><p>Software documentation helps you and others to use your software
+successfully in the future and to read your code ensuring that its value
+is sustained. This course introduces the different ways to provide other
+researchers with useful documentation for your software.</p>
+<p>Research outputs often depend upon the code used to generate them.
+There are many advantages to making your code more readable. All kinds
+of research software, whether it’s code for data processing, analysis,
+and simulations, can be made more reproducible by providing clear
+context and instructions for using it.</p>
+<p>Well-documented software is easier to maintain and has greater
+sustainability, which means it can continue to be used and modified for
+a longer period of time, despite changes in technology. If software is
+more reusable then it encourages others to use it for their research,
+increasing the number of citations of that software and its overall
+research impact.</p>
+</section><section id="course-overview"><h2 class="section-heading">Course overview<a class="anchor" aria-label="anchor" href="#course-overview"></a>
+</h2>
+<hr class="half-width"><p>This module is part of the “Coding best practices” section of the
+FAIR4RS training course.</p>
+<p>This course will introduce you to the different ways we can provide
 guidance to future users and maintainers of our code. These coding best
 practices range from the very simple, such as leaving a few handy notes,
 to the complex, generating a reference website that includes tutorials
 and a detailed reference. The right approach for your projects will
 probably be a blend of these, and depends on the context and your
 audience.</p>
-</section><section id="course-overview"><h2 class="section-heading">Course overview<a class="anchor" aria-label="anchor" href="#course-overview"></a>
-</h2>
-<hr class="half-width"><p>This course introduces the different ways to provide other
+<p>This course introduces the different ways to provide other
 researchers with useful documentation for your software.</p>
 <ul><li>Writing informative README files
 <ul><li>Writing installation instructions</li>
@@ -303,6 +320,37 @@ researchers with useful documentation for your software.</p>
 </ul><p>There is information about publishing a software package and
 providing metadata and citation details in Modules 6 and 7 of this
 course.</p>
+</section><section id="related-modules"><h2 class="section-heading">Related modules<a class="anchor" aria-label="anchor" href="#related-modules"></a>
+</h2>
+<hr class="half-width"><p>For more information about describing and sharing your software,
+please see the following modules:</p>
+<ul><li><ol start="6" style="list-style-type: decimal"><li>Packaging</li>
+</ol></li>
+<li>7a. Software repos, DOIs, metadata, citation</li>
+<li>7b. Publishing a software paper</li>
+</ul><div id="learning-outcomes" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<div id="learning-outcomes" class="callout-inner">
+<h3 class="callout-title">Learning outcomes<a class="anchor" aria-label="anchor" href="#learning-outcomes"></a>
+</h3>
+<div class="callout-content">
+<p>After completing this course, participants should be able to:</p>
+<ul><li>Write clear and concise software documentation that provides
+essential information to future users and maintainers;</li>
+<li>Understand how to make their code more readable, clean, and
+well-structured;</li>
+<li>Write clear installation instructions;</li>
+<li>Write effective comments and doc-strings to explain the purpose of
+code;</li>
+<li>Automatically generate documentation websites from their code;</li>
+<li>Create user-friendly command-line interfaces (CLIs) with clear
+descriptions of commands and options, along with help messages for
+individual parameters.</li>
+</ul></div>
+</div>
+</div>
 <!-- 
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use. 
@@ -315,9 +363,10 @@ Please use the tool that you prefer.</p>
 <p><a href="https://python.org" class="external-link">Python</a> is a popular language for
 research computing, and great for general-purpose programming as well.
 We will be using some of the inbuilt functionality of Python 3.</p>
-<p><a href="https://cran.rstudio.com/" class="external-link">R</a> is a statistical language
-that is designed for data exploration, visualization, and data analysis.
-To interact with R, the most popular tool is <a href="https://posit.co/download/rstudio-desktop/" class="external-link">RStudio
+<p>The <a href="https://cran.rstudio.com/" class="external-link">R programming language</a> is
+a statistical package that is designed for data exploration,
+visualization, and data analysis. To interact with R, the most popular
+tool is <a href="https://posit.co/download/rstudio-desktop/" class="external-link">RStudio
 Desktop</a>.</p>
 <p>TODO online editors</p>
 <div id="accordionSpoiler1" class="accordion spoiler-accordion accordion-flush">
@@ -326,7 +375,7 @@ Desktop</a>.</p>
   <h3 class="accordion-header" id="headingSpoiler1">
 <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>Windows</h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <div class="section level4">
 <h4 id="text-editor">Text editor<a class="anchor" aria-label="anchor" href="#text-editor"></a></h4>
@@ -355,7 +404,7 @@ functionality required for this course.</p>
   <h3 class="accordion-header" id="headingSpoiler2">
 <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>MacOS</h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
 <div class="accordion-body">
 <div class="section level4">
 <h4 id="text-editor-1">Text editor<a class="anchor" aria-label="anchor" href="#text-editor-1"></a></h4>
@@ -382,7 +431,7 @@ Desktop</a>.</p>
   <h3 class="accordion-header" id="headingSpoiler3">
 <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>Linux</h3>
 </button>
-<div id="collapseSpoiler3" class="accordion-collapse collapse" aria-labelledby="headingSpoiler3" data-bs-parent="#accordionSpoiler3">
+<div id="collapseSpoiler3" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler3" aria-labelledby="headingSpoiler3">
 <div class="accordion-body">
 <div class="section level4">
 <h4 id="text-editor-2">Text editor<a class="anchor" aria-label="anchor" href="#text-editor-2"></a></h4>

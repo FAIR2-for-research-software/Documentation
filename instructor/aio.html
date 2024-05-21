@@ -427,19 +427,19 @@ prefer to use?</p>
 what this code is for or why it was written.</p>
 <div class="tabs">
 <nav><div id="nav-tab-1" class="nav nav-tabs" role="tablist">
-<button class="nav-link active" id="nav-tab-1-1" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-1-1" type="button" role="tab" aria-controls="nav-tabpanel-1-1" aria-selected="true">
-  <h3 class="tab-header" id="nav-tab-heading-1-1">
+<button class="nav-link active" id="nav-tab-1-Python" name="Python" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-1-Python" type="button" role="tab" aria-controls="nav-tabpanel-1-Python" aria-selected="true">
+  <h3 class="tab-header" id="nav-tab-heading-1-Python">
   Python
   </h3>
 </button>
-<button class="nav-link" id="nav-tab-1-2" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-1-2" type="button" role="tab" aria-controls="nav-tabpanel-1-2" aria-selected="false">
-  <h3 class="tab-header" id="nav-tab-heading-1-2">
+<button class="nav-link" id="nav-tab-1-R" name="R" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-1-R" type="button" role="tab" aria-controls="nav-tabpanel-1-R" aria-selected="false">
+  <h3 class="tab-header" id="nav-tab-heading-1-R">
   R
   </h3>
 </button>
 </div>
 </nav><div id="nav-tabContent-1" class="tab-content">
-<div id="nav-tabpanel-1-1" class="tab-pane show active" aria-labelledby="nav-tab-1-1" role="tabpanel">
+<div id="nav-tabpanel-1-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-Python">
 <p>This is some research code that is contained in a Python
 function.</p>
 <div class="codewrapper sourceCode" id="cb1">
@@ -450,7 +450,7 @@ function.</p>
 <span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a>  <span class="cf">return</span> x <span class="op">*</span> weird_num <span class="op">-</span> angle<span class="op">**</span><span class="dv">3</span> <span class="op">/</span> (weird_num <span class="op">*</span> <span class="dv">2</span>)</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-1-2" class="tab-pane" aria-labelledby="nav-tab-1-2" role="tabpanel">
+<div id="nav-tabpanel-1-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-R">
 <p>This is some research code that is contained in an R function.</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -479,6 +479,21 @@ future.</p>
 </h2>
 <p>Now let’s look at an example of best practices in documenting
 research software.</p>
+<div class="tabs">
+<nav><div id="nav-tab-2" class="nav nav-tabs" role="tablist">
+<button class="nav-link active" id="nav-tab-2-Python" name="Python" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-2-Python" type="button" role="tab" aria-controls="nav-tabpanel-2-Python" aria-selected="true">
+  <h3 class="tab-header" id="nav-tab-heading-2-Python">
+  Python
+  </h3>
+</button>
+<button class="nav-link" id="nav-tab-2-R" name="R" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-2-R" type="button" role="tab" aria-controls="nav-tabpanel-2-R" aria-selected="false">
+  <h3 class="tab-header" id="nav-tab-heading-2-R">
+  R
+  </h3>
+</button>
+</div>
+</nav><div id="nav-tabContent-2" class="tab-content">
+<div id="nav-tabpanel-2-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-2-Python">
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -508,6 +523,40 @@ research software.</p>
 <span id="cb3-24"><a href="#cb3-24" tabindex="-1"></a>    sin_value <span class="op">+=</span> sign <span class="op">*</span> (angle <span class="op">**</span> (<span class="dv">2</span> <span class="op">*</span> i)) <span class="op">/</span> factorial</span>
 <span id="cb3-25"><a href="#cb3-25" tabindex="-1"></a></span>
 <span id="cb3-26"><a href="#cb3-26" tabindex="-1"></a>  <span class="cf">return</span> sin_value</span></code></pre>
+</div>
+</div>
+<div id="nav-tabpanel-2-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-R">
+<div class="codewrapper sourceCode" id="cb4">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode r" tabindex="0"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="co"># Function to calculate sine using Taylor series approximation</span></span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a>calculate_sine <span class="ot">&lt;-</span> <span class="cf">function</span>(angle) {</span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a>  <span class="st">"""</span></span>
+<span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a><span class="st">  This function calculates the sine of an angle using the first four terms of the Taylor series.</span></span>
+<span id="cb4-5"><a href="#cb4-5" tabindex="-1"></a></span>
+<span id="cb4-6"><a href="#cb4-6" tabindex="-1"></a><span class="st">  Args:</span></span>
+<span id="cb4-7"><a href="#cb4-7" tabindex="-1"></a><span class="st">      angle (numeric): The angle in radians.</span></span>
+<span id="cb4-8"><a href="#cb4-8" tabindex="-1"></a></span>
+<span id="cb4-9"><a href="#cb4-9" tabindex="-1"></a><span class="st">  Returns:</span></span>
+<span id="cb4-10"><a href="#cb4-10" tabindex="-1"></a><span class="st">      numeric: The sine of the angle (sin(angle)).</span></span>
+<span id="cb4-11"><a href="#cb4-11" tabindex="-1"></a><span class="st">  """</span></span>
+<span id="cb4-12"><a href="#cb4-12" tabindex="-1"></a>  </span>
+<span id="cb4-13"><a href="#cb4-13" tabindex="-1"></a>  sin_value <span class="ot">&lt;-</span> angle</span>
+<span id="cb4-14"><a href="#cb4-14" tabindex="-1"></a>  </span>
+<span id="cb4-15"><a href="#cb4-15" tabindex="-1"></a>  <span class="co"># Loop for the first four terms</span></span>
+<span id="cb4-16"><a href="#cb4-16" tabindex="-1"></a>  <span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">4</span>) {</span>
+<span id="cb4-17"><a href="#cb4-17" tabindex="-1"></a>    factorial <span class="ot">&lt;-</span> <span class="fu">factorial</span>(<span class="dv">2</span> <span class="sc">*</span> i)</span>
+<span id="cb4-18"><a href="#cb4-18" tabindex="-1"></a>    sign <span class="ot">&lt;-</span> (<span class="sc">-</span><span class="dv">1</span>)<span class="sc">^</span>(i <span class="sc">%%</span> <span class="dv">2</span>)  <span class="co"># Alternate signs with modulo (%)</span></span>
+<span id="cb4-19"><a href="#cb4-19" tabindex="-1"></a>    </span>
+<span id="cb4-20"><a href="#cb4-20" tabindex="-1"></a>    <span class="co"># Add terms for sine</span></span>
+<span id="cb4-21"><a href="#cb4-21" tabindex="-1"></a>    sin_value <span class="ot">&lt;-</span> sin_value <span class="sc">+</span> sign <span class="sc">*</span> (angle<span class="sc">^</span>(<span class="dv">2</span> <span class="sc">*</span> i)) <span class="sc">/</span> factorial</span>
+<span id="cb4-22"><a href="#cb4-22" tabindex="-1"></a>  }</span>
+<span id="cb4-23"><a href="#cb4-23" tabindex="-1"></a>  </span>
+<span id="cb4-24"><a href="#cb4-24" tabindex="-1"></a>  <span class="fu">return</span>(sin_value)</span>
+<span id="cb4-25"><a href="#cb4-25" tabindex="-1"></a>}</span></code></pre>
+</div>
+</div>
+</div>
 </div>
 <p>This time, the function name is a verb that describes what the code
 will attempt to do. The description of the function is also written out
