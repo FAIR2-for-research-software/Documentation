@@ -4,7 +4,6 @@ teaching: 10
 exercises: 2
 ---
 
-
 :::::::::::::::::::::::::::::::::::::: questions 
 
 - TODO
@@ -27,9 +26,7 @@ We describe functions by using a feature of many programming languages called do
 
 To make a docstring, we put a string as the first line of a function (or other object.) For example, for a simple Python function that calculates the sum of two numbers:
 
-<!---
 TODO R examples
--->
 
 ```python
 def add(x, y):
@@ -140,8 +137,6 @@ This can save you a lot of time, but as with any AI-generated content, always ch
 For more information, please see:
 
 - Python [PEP 8 Documentation Strings](https://peps.python.org/pep-0008/#documentation-strings)
-
-::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
