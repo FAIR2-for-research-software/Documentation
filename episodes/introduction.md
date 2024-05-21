@@ -50,7 +50,7 @@ Here are some examples of some code to perform some geometry. The first example 
 
 Here's an example of some code that does... something. It's not clear what this code is for or why it was written.
 
-::: tab
+::: group-tab
 
 ### Python
 
@@ -85,6 +85,10 @@ Maybe the code works, maybe it doesn't (would you trust it?) but it could be mad
 
 Now let's look at an example of best practices in documenting research software.
 
+::: group-tab
+
+### Python
+
 ```python
 import math
 
@@ -112,8 +116,39 @@ def calculate_sine(angle: float) -> float:
     sin_value += sign * (angle ** (2 * i)) / factorial
 
   return sin_value
-
 ```
+
+### R
+
+```R
+# Function to calculate sine using Taylor series approximation
+calculate_sine <- function(angle) {
+  """
+  This function calculates the sine of an angle using the first four terms of the Taylor series.
+
+  Args:
+      angle (numeric): The angle in radians.
+
+  Returns:
+      numeric: The sine of the angle (sin(angle)).
+  """
+  
+  sin_value <- angle
+  
+  # Loop for the first four terms
+  for (i in 1:4) {
+    factorial <- factorial(2 * i)
+    sign <- (-1)^(i %% 2)  # Alternate signs with modulo (%)
+    
+    # Add terms for sine
+    sin_value <- sin_value + sign * (angle^(2 * i)) / factorial
+  }
+  
+  return(sin_value)
+}
+```
+
+:::
 
 This time, the function name is a verb that describes what the code will attempt to do. The description of the function is also written out clearly in a note for the user. There are comment lines (starting with `#`) that explain the mathematicalal method used. Each variable has a descriptive, human-readable name, making the code more intuitive to read. An existing library is used to calculate the factorial, which means we can look up the usage for the `factorial()` function elsewhere.
 
