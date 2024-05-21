@@ -10,7 +10,7 @@ Please use the tool that you prefer.
 [Python](https://python.org) is a popular language for research computing, and great for general-purpose
 programming as well. We will be using some of the inbuilt functionality of Python 3.
 
-[R](https://cran.rstudio.com/) is a statistical language that is designed for data exploration, visualization,
+The [R programming language](https://cran.rstudio.com/) is a statistical package that is designed for data exploration, visualization,
 and data analysis. To interact with R, the most popular tool is
 [RStudio Desktop](https://posit.co/download/rstudio-desktop/).
 
