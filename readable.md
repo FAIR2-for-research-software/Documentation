@@ -134,6 +134,8 @@ To work with our source code in a colourised way like this, use a text editor or
 
 ## Meaningful names
 
+Our code should convey as much **meaning** as possible to the user or developer that's trying to interpret it.
+
 ### Variable naming
 
 Every variable has a *name* and a *value*.
@@ -145,13 +147,96 @@ For example, in our case we'd use `laden_coconut_capacity = 42` which is much cl
 
 ### Function names
 
-As with variables, the name of a function should describe its behaviour so that the user of that code can anticipate what it will do when they run it.
+A function contains code that defines the performance of an **action**. As with variables, the name of a function should **describe its behaviour** so that the user of that code can anticipate what it will do when they run it.
 A vague function name, such as `calc(a, b)` will be mysterious without any more explanation.
-Name your functions using a verb such as `calculate_area(width, height)` so it's easy to interpret their purpose.
+Name your functions using a **simple verb phrase** such as `calculate_area(width, height)` so it's easy to interpret their purpose.
+
+### Naming conventions
+
+The communities of developers that use each programming language usually follow a conventional approach when naming objects in their code.
+
+It's also a good idea not to use single-letter names such as `x` or `T` because it may not be clear to someone else what these represent. Also, avoid the common pitfall of naming a variable with the same name as an inbuilt function such as `sum()`.
+
+::: group-tab
+
+### Python
+
+Classes use capitalised words
+
+```python
+class VectorSpace:
+    pass
+```
+
+Variables use lower case with underscores
+
+```python
+my_user_name = "Joe"
+```
+
+Constants are named using upper case with underscores
+
+```python
+NEGATIVE_ONE = -1
+```
+
+ the [Naming Conventions](https://peps.python.org/pep-0008/#naming-conventions) section of <acronym title="Python Enhancement Proposals">PEP</acronym> 8.
+
+### R
+
+Classes use capitalised words
+
+```R
+setClass("VectorSpace", representation = character())
+```
+
+Variables use lower case with underscores
+
+```R
+my_user_name <- "Joe"
+```
+
+Constants are named using upper case with underscores
+
+```R
+NEGATIVE_ONE <- -1
+```
+
+For more information about this aspect of coding style, please read the [Style Guide](http://adv-r.had.co.nz/Style.html) in *Advanced R* by Hadley Wickham.
+
+:::
+
+Although these rules aren't strict, because your code will still run without error, it does help clarify your intentions by describing what type of variable or object is being referred to. Whatever you do, please try to follow a consistent style with your collaborators to avoid confusion.
 
 ## Code comments
 
-Comments. Active tense. Verbs.
+Code **comments** allow us to annotate any part of our software with a human-readable description of the expected behaviour of the code or our general intentions to aid the reader in their interpretation.
+
+To add comments to your code, use the `#` symbol at the start of a new line, like so:
+
+::: group-tab
+
+### Python
+
+```python
+# Add three to my age
+age = 21
+age =+ 3
+```
+
+### R
+
+```R
+# Add three to my age
+age <- 21
+age = age + 3
+```
+
+:::
+
+It's best practice to use a very concise style when writing code comments. I recommend using active tense verbs.
+
+## Coding convnetions
 
 Proper curly brace structure, indentation, whitespace.
 
