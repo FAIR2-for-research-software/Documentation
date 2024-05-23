@@ -19,4 +19,13 @@ Editor
 : A software tool for modifying plain text files
 
 IDE
-: An _Integrated Development Environment_ is a powerful source code editor and debugging tool designed for software engineers
+: An *Integrated Development Environment* is a powerful source code editor and debugging tool designed for software engineers
+
+Developer
+: A software engineer who's contributing to a softare project
+
+Codebase
+: All the code, functions, and files within a software project
+
+Package
+: A collection of code and functions that is bundled together and distributed for other people to use.
