@@ -202,6 +202,7 @@
         <ul><li><a href="#syntax-highlighting">Syntax highlighting</a></li>
 <li><a href="#meaningful-names">Meaningful names</a></li>
 <li><a href="#code-comments">Code comments</a></li>
+<li><a href="#coding-convnetions">Coding convnetions</a></li>
 <li><a href="#type-hints">Type hints</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
@@ -458,7 +459,9 @@ text editor or IDE with a syntax highlighting feature such as Notepad++,
 VSCode, PyCharm, or RStudio.</p>
 </section><section id="meaningful-names"><h2 class="section-heading">Meaningful names<a class="anchor" aria-label="anchor" href="#meaningful-names"></a>
 </h2>
-<hr class="half-width"><div class="section level3">
+<hr class="half-width"><p>Our code should convey as much <strong>meaning</strong> as possible
+to the user or developer that’s trying to interpret it.</p>
+<div class="section level3">
 <h3 id="variable-naming">Variable naming<a class="anchor" aria-label="anchor" href="#variable-naming"></a></h3>
 <p>Every variable has a <em>name</em> and a <em>value</em>. For example,
 the code <code>x = 42</code> creates a variable named <code>x</code>
@@ -472,17 +475,145 @@ For example, in our case we’d use
 </div>
 <div class="section level3">
 <h3 id="function-names">Function names<a class="anchor" aria-label="anchor" href="#function-names"></a></h3>
-<p>As with variables, the name of a function should describe its
-behaviour so that the user of that code can anticipate what it will do
-when they run it. A vague function name, such as <code>calc(a, b)</code>
-will be mysterious without any more explanation. Name your functions
-using a verb such as <code>calculate_area(width, height)</code> so it’s
-easy to interpret their purpose.</p>
+<p>A function contains code that defines the performance of an
+<strong>action</strong>. As with variables, the name of a function
+should <strong>describe its behaviour</strong> so that the user of that
+code can anticipate what it will do when they run it. A vague function
+name, such as <code>calc(a, b)</code> will be mysterious without any
+more explanation. Name your functions using a <strong>simple verb
+phrase</strong> such as <code>calculate_area(width, height)</code> so
+it’s easy to interpret their purpose.</p>
+</div>
+<div class="section level3">
+<h3 id="naming-conventions">Naming conventions<a class="anchor" aria-label="anchor" href="#naming-conventions"></a></h3>
+<p>The communities of developers that use each programming language
+usually follow a conventional approach when naming objects in their
+code.</p>
+<p>It’s also a good idea not to use single-letter names such as
+<code>x</code> or <code>T</code> because it may not be clear to someone
+else what these represent. Also, avoid the common pitfall of naming a
+variable with the same name as an inbuilt function such as
+<code>sum()</code>.</p>
+<div class="tabs">
+<nav><div id="nav-tab-2" class="nav nav-tabs" role="tablist">
+<button class="nav-link active" id="nav-tab-2-Python" name="Python" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-2-Python" type="button" role="tab" aria-controls="nav-tabpanel-2-Python" aria-selected="true">
+  <h3 class="tab-header" id="nav-tab-heading-2-Python">
+  Python
+  </h3>
+</button>
+<button class="nav-link" id="nav-tab-2-R" name="R" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-2-R" type="button" role="tab" aria-controls="nav-tabpanel-2-R" aria-selected="false">
+  <h3 class="tab-header" id="nav-tab-heading-2-R">
+  R
+  </h3>
+</button>
+</div>
+</nav><div id="nav-tabContent-2" class="tab-content">
+<div id="nav-tabpanel-2-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-2-Python">
+<p>Classes use capitalised words</p>
+<div class="codewrapper sourceCode" id="cb5">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="kw">class</span> VectorSpace:</span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a>    <span class="cf">pass</span></span></code></pre>
+</div>
+<p>Variables use lower case with underscores</p>
+<div class="codewrapper sourceCode" id="cb6">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a>my_user_name <span class="op">=</span> <span class="st">"Joe"</span></span></code></pre>
+</div>
+<p>Constants are named using upper case with underscores</p>
+<div class="codewrapper sourceCode" id="cb7">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a>NEGATIVE_ONE <span class="op">=</span> <span class="op">-</span><span class="dv">1</span></span></code></pre>
+</div>
+<p>the <a href="https://peps.python.org/pep-0008/#naming-conventions" class="external-link">Naming
+Conventions</a> section of
+<acronym title="Python Enhancement Proposals">PEP</acronym> 8.</p>
+</div>
+<div id="nav-tabpanel-2-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-R">
+<p>Classes use capitalised words</p>
+<div class="codewrapper sourceCode" id="cb8">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="kw">setClass</span><span class="op">(</span><span class="st">"VectorSpace"</span>, representation <span class="op">=</span> <span class="fu">character</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></code></pre>
+</div>
+<p>Variables use lower case with underscores</p>
+<div class="codewrapper sourceCode" id="cb9">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">my_user_name</span> <span class="op">&lt;-</span> <span class="st">"Joe"</span></span></code></pre>
+</div>
+<p>Constants are named using upper case with underscores</p>
+<div class="codewrapper sourceCode" id="cb10">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="va">NEGATIVE_ONE</span> <span class="op">&lt;-</span> <span class="op">-</span><span class="fl">1</span></span></code></pre>
+</div>
+<p>For more information about this aspect of coding style, please read
+the <a href="http://adv-r.had.co.nz/Style.html" class="external-link">Style Guide</a> in
+<em>Advanced R</em> by Hadley Wickham.</p>
+</div>
+</div>
+</div>
+<p>Although these rules aren’t strict, because your code will still run
+without error, it does help clarify your intentions by describing what
+type of variable or object is being referred to. Whatever you do, please
+try to follow a consistent style with your collaborators to avoid
+confusion.</p>
 </div>
 </section><section id="code-comments"><h2 class="section-heading">Code comments<a class="anchor" aria-label="anchor" href="#code-comments"></a>
 </h2>
-<hr class="half-width"><p>Comments. Active tense. Verbs.</p>
-<p>Proper curly brace structure, indentation, whitespace.</p>
+<hr class="half-width"><p>Code <strong>comments</strong> allow us to annotate any part of our
+software with a human-readable description of the expected behaviour of
+the code or our general intentions to aid the reader in their
+interpretation.</p>
+<p>To add comments to your code, use the <code>#</code> symbol at the
+start of a new line, like so:</p>
+<div class="tabs">
+<nav><div id="nav-tab-3" class="nav nav-tabs" role="tablist">
+<button class="nav-link active" id="nav-tab-3-Python" name="Python" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-3-Python" type="button" role="tab" aria-controls="nav-tabpanel-3-Python" aria-selected="true">
+  <h3 class="tab-header" id="nav-tab-heading-3-Python">
+  Python
+  </h3>
+</button>
+<button class="nav-link" id="nav-tab-3-R" name="R" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-3-R" type="button" role="tab" aria-controls="nav-tabpanel-3-R" aria-selected="false">
+  <h3 class="tab-header" id="nav-tab-heading-3-R">
+  R
+  </h3>
+</button>
+</div>
+</nav><div id="nav-tabContent-3" class="tab-content">
+<div id="nav-tabpanel-3-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-3-Python">
+<div class="codewrapper sourceCode" id="cb11">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="co"># Add three to my age</span></span>
+<span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a>age <span class="op">=</span> <span class="dv">21</span></span>
+<span id="cb11-3"><a href="#cb11-3" tabindex="-1"></a>age <span class="op">=+</span> <span class="dv">3</span></span></code></pre>
+</div>
+</div>
+<div id="nav-tabpanel-3-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-3-R">
+<div class="codewrapper sourceCode" id="cb12">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Add three to my age</span></span>
+<span><span class="va">age</span> <span class="op">&lt;-</span> <span class="fl">21</span></span>
+<span><span class="va">age</span> <span class="op">=</span> <span class="va">age</span> <span class="op">+</span> <span class="fl">3</span></span></code></pre>
+</div>
+</div>
+</div>
+</div>
+<p>It’s best practice to use a very concise style when writing code
+comments. I recommend using active tense verbs.</p>
+</section><section id="coding-convnetions"><h2 class="section-heading">Coding convnetions<a class="anchor" aria-label="anchor" href="#coding-convnetions"></a>
+</h2>
+<hr class="half-width"><p>Proper curly brace structure, indentation, whitespace.</p>
 <div class="section level3">
 <h3 id="block-comments">Block comments<a class="anchor" aria-label="anchor" href="#block-comments"></a></h3>
 <p><a href="https://peps.python.org/pep-0008/#block-comments" class="external-link uri">https://peps.python.org/pep-0008/#block-comments</a></p>
