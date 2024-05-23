@@ -32,30 +32,6 @@ The **audience** for a README file is the end user. It's important to consider _
 
 To start writing a README file, the simplest way is to just create an empty text file called `README.txt` and start writing. This file should be located in the directory (or folder) that contains your software project. 
 
-Most people prefer to use a file format that allows you to create headers to organise the content into sections or chapters, which is much clearer for the reader. In this case, a Markdown document may be used. Markdown is a simple mark-up language that allows you to format your text using symbols to represent headers, bold text, bullet lists, etc. that are displayed to the user in an appealing way.
-
-An example README file in Markdown format is shown below, in a file called `README.md` where .md is the file extension for Markdown files.
-
-```md
-# My research software
-
-This software is designed to...
-
-# Installation
-
-To install this software...
-
-# Usage
-
-To use this package...
-```
-
-The “#” symbol means that line will be converted into a header and displayed to the reader in a large, bold font.
-
-If your code is published on GitHub, the home page of your code repository will display the README.md file, including a navigation menu that is automatically created to easily select the section of the document to view.
-
-!["This repository has a README file with chapters, making navigation easier."](fig/bootstrap-readme-chapters.png){alt="A screenshot of a GitHub repository with a drop-down navigation menu on the readme text box."}
-
 The essentials contents of a README file are:
 
 - The name of the software. This seems trivial, but a clear title and description of a piece of software will be essential for others to identify your software and differentiate it from others.
@@ -85,6 +61,49 @@ The writing style should be concise, jargon-free, clear, and pitched at the appr
 
 Diagrams can be particularly useful to explain complex concepts and workflows. Screenshots may also provide a visual demonstration of how the software will work.
 
+## Markdown format
+
+Most people prefer to use a file format that allows you to create headers to organise the content into sections or chapters, which is much clearer for the reader. In this case, a Markdown document may be used. Markdown is a simple mark-up language that allows you to format your text using symbols to represent headers, bold text, bullet lists, etc. that are displayed to the user in an appealing way.
+
+An example README file in Markdown format is shown below, in a file called `README.md` where .md is the file extension for Markdown files.
+
+### Section headers
+
+You can separate your document into sections with headers using the `#` symbol, for example:
+
+```md
+# My research software
+
+This software is designed to...
+
+# Installation
+
+To install this software...
+
+# Usage
+
+To use this package...
+```
+
+The “#” symbol means that line will be converted into a header and displayed to the reader in a large, bold font. This makes it easier for the reader to navigate your text, just like having chapters in a book.
+
+If your code is published on GitHub, the home page of your code repository will display the README.md file, including a navigation menu that is automatically created to easily select the section of the document to view.
+
+!["This repository has a README file with chapters, making navigation easier."](fig/bootstrap-readme-chapters.png){alt="A screenshot of a GitHub repository with a drop-down navigation menu on the readme text box."}
+
+### Text formatting
+
+Here are some commonly-used text formatting options that can be used with Markdown syntax:
+
+| Text display      | Syntax              |
+| ----------------- | ------------------- |
+| **Bold font**     | `**Bold font**`     |
+| *Italic text*     | `*Italic text*`     |
+| <u>Underlined</u> | `<u>Underlined</u>` |
+| `Code block`      | ``` `code block` ``` |
+| [Hyperlink](https://sheffield.ac.uk) | `[Hyperlink](https://sheffield.ac.uk)` |
+
 :::::: keypoints
+
  - TODO
 ::::::
