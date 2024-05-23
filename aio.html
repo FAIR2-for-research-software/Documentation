@@ -436,7 +436,7 @@ what this code is for or why it was written.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-1" class="tab-content">
-<div id="nav-tabpanel-1-Python" class="tab-pane show active" aria-labelledby="nav-tab-1-Python" role="tabpanel">
+<div id="nav-tabpanel-1-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-Python">
 <p>This is some research code that is contained in a Python
 function.</p>
 <div class="codewrapper sourceCode" id="cb1">
@@ -447,7 +447,7 @@ function.</p>
 <span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a>  <span class="cf">return</span> x <span class="op">*</span> weird_num <span class="op">-</span> angle<span class="op">**</span><span class="dv">3</span> <span class="op">/</span> (weird_num <span class="op">*</span> <span class="dv">2</span>)</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-1-R" class="tab-pane" aria-labelledby="nav-tab-1-R" role="tabpanel">
+<div id="nav-tabpanel-1-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-R">
 <p>This is some research code that is contained in an R function.</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -490,7 +490,7 @@ research software.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-2" class="tab-content">
-<div id="nav-tabpanel-2-Python" class="tab-pane show active" aria-labelledby="nav-tab-2-Python" role="tabpanel">
+<div id="nav-tabpanel-2-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-2-Python">
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -522,7 +522,7 @@ research software.</p>
 <span id="cb3-26"><a href="#cb3-26" tabindex="-1"></a>  <span class="cf">return</span> sin_value</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-2-R" class="tab-pane" aria-labelledby="nav-tab-2-R" role="tabpanel">
+<div id="nav-tabpanel-2-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-R">
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -662,39 +662,7 @@ a manual for a new user who has never seen this software before.</p>
 empty text file called <code>README.txt</code> and start writing. This
 file should be located in the directory (or folder) that contains your
 software project.</p>
-<p>Most people prefer to use a file format that allows you to create
-headers to organise the content into sections or chapters, which is much
-clearer for the reader. In this case, a Markdown document may be used.
-Markdown is a simple mark-up language that allows you to format your
-text using symbols to represent headers, bold text, bullet lists, etc.
-that are displayed to the user in an appealing way.</p>
-<p>An example README file in Markdown format is shown below, in a file
-called <code>README.md</code> where .md is the file extension for
-Markdown files.</p>
-<div class="codewrapper sourceCode" id="cb1">
-<h3 class="code-label">MD<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode md" tabindex="0"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="fu"># My research software</span></span>
-<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a>This software is designed to...</span>
-<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a><span class="fu"># Installation</span></span>
-<span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" tabindex="-1"></a>To install this software...</span>
-<span id="cb1-8"><a href="#cb1-8" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" tabindex="-1"></a><span class="fu"># Usage</span></span>
-<span id="cb1-10"><a href="#cb1-10" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" tabindex="-1"></a>To use this package...</span></code></pre>
-</div>
-<p>The “#” symbol means that line will be converted into a header and
-displayed to the reader in a large, bold font.</p>
-<p>If your code is published on GitHub, the home page of your code
-repository will display the README.md file, including a navigation menu
-that is automatically created to easily select the section of the
-document to view.</p>
-<figure><img src="fig/bootstrap-readme-chapters.png" alt="A screenshot of a GitHub repository with a drop-down navigation menu on the readme text box." class="figure mx-auto d-block"><div class="figcaption">“This repository has a README file with
-chapters, making navigation easier.”</div>
-</figure><p>The essentials contents of a README file are:</p>
+<p>The essentials contents of a README file are:</p>
 <ul>
 <li>The name of the software. This seems trivial, but a clear title and
 description of a piece of software will be essential for others to
@@ -758,6 +726,88 @@ external source or journal article.</p>
 <p>Diagrams can be particularly useful to explain complex concepts and
 workflows. Screenshots may also provide a visual demonstration of how
 the software will work.</p>
+</div>
+</section><section id="markdown-format"><h2 class="section-heading">Markdown format<a class="anchor" aria-label="anchor" href="#markdown-format"></a>
+</h2>
+<hr class="half-width">
+<p>Most people prefer to use a file format that allows you to create
+headers to organise the content into sections or chapters, which is much
+clearer for the reader. In this case, a Markdown document may be used.
+Markdown is a simple mark-up language that allows you to format your
+text using symbols to represent headers, bold text, bullet lists, etc.
+that are displayed to the user in an appealing way.</p>
+<p>An example README file in Markdown format is shown below, in a file
+called <code>README.md</code> where .md is the file extension for
+Markdown files.</p>
+<div class="section level3">
+<h3 id="section-headers">Section headers<a class="anchor" aria-label="anchor" href="#section-headers"></a>
+</h3>
+<p>You can separate your document into sections with headers using the
+<code>#</code> symbol, for example:</p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">MD<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode md" tabindex="0"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="fu"># My research software</span></span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a>This software is designed to...</span>
+<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a><span class="fu"># Installation</span></span>
+<span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" tabindex="-1"></a>To install this software...</span>
+<span id="cb1-8"><a href="#cb1-8" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" tabindex="-1"></a><span class="fu"># Usage</span></span>
+<span id="cb1-10"><a href="#cb1-10" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" tabindex="-1"></a>To use this package...</span></code></pre>
+</div>
+<p>The “#” symbol means that line will be converted into a header and
+displayed to the reader in a large, bold font. This makes it easier for
+the reader to navigate your text, just like having chapters in a
+book.</p>
+<p>If your code is published on GitHub, the home page of your code
+repository will display the README.md file, including a navigation menu
+that is automatically created to easily select the section of the
+document to view.</p>
+<figure><img src="fig/bootstrap-readme-chapters.png" alt="A screenshot of a GitHub repository with a drop-down navigation menu on the readme text box." class="figure mx-auto d-block"><div class="figcaption">“This repository has a README file with
+chapters, making navigation easier.”</div>
+</figure>
+</div>
+<div class="section level3">
+<h3 id="text-formatting">Text formatting<a class="anchor" aria-label="anchor" href="#text-formatting"></a>
+</h3>
+<p>Here are some commonly-used text formatting options that can be used
+with Markdown syntax:</p>
+<table class="table">
+<colgroup>
+<col width="47%">
+<col width="52%">
+</colgroup>
+<thead><tr class="header">
+<th>Text display</th>
+<th>Syntax</th>
+</tr></thead>
+<tbody>
+<tr class="odd">
+<td><strong>Bold font</strong></td>
+<td><code>**Bold font**</code></td>
+</tr>
+<tr class="even">
+<td><em>Italic text</em></td>
+<td><code>*Italic text*</code></td>
+</tr>
+<tr class="odd">
+<td><u>Underlined</u></td>
+<td><code>&lt;u&gt;Underlined&lt;/u&gt;</code></td>
+</tr>
+<tr class="even">
+<td><code>Code block</code></td>
+<td><code>`code block`</code></td>
+</tr>
+<tr class="odd">
+<td><a href="https://sheffield.ac.uk" class="external-link">Hyperlink</a></td>
+<td><code>[Hyperlink](https://sheffield.ac.uk)</code></td>
+</tr>
+</tbody>
+</table>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
