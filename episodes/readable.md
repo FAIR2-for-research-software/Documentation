@@ -151,6 +151,31 @@ A function contains code that defines the performance of an **action**. As with 
 A vague function name, such as `calc(a, b)` will be mysterious without any more explanation.
 Name your functions using a **simple verb phrase** such as `calculate_area(width, height)` so it's easy to interpret their purpose.
 
+### Python
+
+```python
+def calculate_area(width, height):
+    """
+    Work out the surface area of a rectangle with the specified dimensions.
+    """
+    area = width * height
+    return area
+```
+
+### R
+
+```R
+calculate_area <- function(width, height) {
+  """
+  Work out the surface area of a rectangle with the specified dimensions.
+  """
+  area <- width * height
+  return(area)
+}
+```
+
+:::
+
 ### Naming conventions
 
 The communities of developers that use each programming language usually follow a conventional approach when naming objects in their code.
