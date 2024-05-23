@@ -60,10 +60,10 @@ contact: 'research-it@sheffield.ac.uk'
 # Order of episodes in your lesson
 episodes:
 - introduction.md
-- writing-readmes.md
+- readmes.md
 - developers.md
 - docstrings.md
-- readable-code.md
+- readable.md
 - cli.md
 - pages.md
 
