@@ -41,21 +41,6 @@ contact: 'research-it@sheffield.ac.uk'
 # individual pages in each dropdown section. Leave blank to
 # include all pages in the folder.
 #
-# Example -------------
-#
-# episodes:
-# - introduction.md
-# - first-steps.md
-#
-# learners:
-# - setup.md
-#
-# instructors:
-# - instructor-notes.md
-#
-# profiles:
-# - one-learner.md
-# - another-learner.md
 
 # Order of episodes in your lesson
 episodes:
@@ -80,5 +65,3 @@ profiles:
 #
 # This space below is where custom yaml items (e.g. pinning
 # sandpaper and varnish versions) should live
-
-
