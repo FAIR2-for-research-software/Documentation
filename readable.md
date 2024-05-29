@@ -16,7 +16,7 @@ exercises: 2
 
 - Understand the common ways to make code easy to read
 - Learn how to write code comments
-- Learn to document data types in Python
+- Learn to document variable types in Python and R
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -229,7 +229,7 @@ Constants are named using upper case with underscores
 NEGATIVE_ONE <- -1
 ```
 
-For more information about this aspect of coding style, please read the [Style Guide](http://adv-r.had.co.nz/Style.html) in *Advanced R* by Hadley Wickham.
+For more information about this aspect of coding style, please read the [Tidyverse Style Guide](https://style.tidyverse.org/).
 
 :::
 
@@ -367,12 +367,17 @@ add('cheese', 'cake')
 None of these code examples will cause an error because type hints are just passive labels that document our code. They don't enforce any type checking or rules that are asserted when the code is executed. This means that, while type hints are very useful for *static analysis* of code, where we learn something about a piece of software without running it.
 
 :::::::::::::::::::::::::
+
 :::::::::::::::::::::::::::::::::::::::::::::::
+
+This is just a brief introduction to code annotation. For the keen coder, there are many more features and tools available to make your software easier for other people to understand and use.
 
 It will take some time and effort to write these labels, but it will pay off in the long run to think about variables tapes and make it easier to interpret how the code will behave as it operates. It's best practice to use an integrated development environment (IDE) that will check your type hints and inform you if it detects a problem with your source code.
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
-- TODO
+- Try to inject as much *meaning* into your source code as possible by naming things clearly and succintly.
+- Use comments to explain your rationale&mdash;even if the code seems obvious to you know, think of the future benefits!
+- Label functions and variables with *type hints* to tell the user what data types are expected.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
