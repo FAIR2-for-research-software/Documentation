@@ -296,7 +296,7 @@ age <- 21L
 
 Using type hints will make sure your code much easier to read and provide helpful documentation for others, and yourself in the future.
 
-## Function argument type hints
+### Function argument type hints
 
 They can also be used to label the input and output types of functions.  They are not strictly enforced, but act as a guide to the reader.
 
