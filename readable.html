@@ -286,7 +286,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Code readability</h1>
-        <p>Last updated on 2024-05-23 |
+        <p>Last updated on 2024-05-29 |
         
         <a href="https://github.com/Joe-Heffer-Shef/FAIR4RS-Documentation/edit/main/episodes/readable.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
         
@@ -352,7 +352,7 @@ font.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-1" class="tab-content">
-<div id="nav-tabpanel-1-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-Python">
+<div id="nav-tabpanel-1-Python" class="tab-pane show active" aria-labelledby="nav-tab-1-Python" role="tabpanel">
 <p>Without syntax highlighting:</p>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -396,7 +396,7 @@ font.</p>
 <span id="cb2-16"><a href="#cb2-16" tabindex="-1"></a>  <span class="cf">return</span> word_count</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-1-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-R">
+<div id="nav-tabpanel-1-R" class="tab-pane" aria-labelledby="nav-tab-1-R" role="tabpanel">
 <p>Without syntax highlighting:</p>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -481,17 +481,6 @@ name, such as <code>calc(a, b)</code> will be mysterious without any
 more explanation. Name your functions using a <strong>simple verb
 phrase</strong> such as <code>calculate_area(width, height)</code> so
 it’s easy to interpret their purpose.</p>
-</div>
-<div class="section level3">
-<h3 id="naming-conventions">Naming conventions<a class="anchor" aria-label="anchor" href="#naming-conventions"></a></h3>
-<p>The communities of developers that use each programming language
-usually follow a conventional approach when naming objects in their
-code.</p>
-<p>It’s also a good idea not to use single-letter names such as
-<code>x</code> or <code>T</code> because it may not be clear to someone
-else what these represent. Also, avoid the common pitfall of naming a
-variable with the same name as an inbuilt function such as
-<code>sum()</code>.</p>
 <div class="tabs">
 <nav><div id="nav-tab-2" class="nav nav-tabs" role="tablist">
 <button class="nav-link active" id="nav-tab-2-Python" name="Python" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-2-Python" type="button" role="tab" aria-controls="nav-tabpanel-2-Python" aria-selected="true">
@@ -506,47 +495,99 @@ variable with the same name as an inbuilt function such as
 </button>
 </div>
 </nav><div id="nav-tabContent-2" class="tab-content">
-<div id="nav-tabpanel-2-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-2-Python">
-<p>Classes use capitalised words</p>
+<div id="nav-tabpanel-2-Python" class="tab-pane show active" aria-labelledby="nav-tab-2-Python" role="tabpanel">
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="kw">class</span> VectorSpace:</span>
-<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a>    <span class="cf">pass</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="kw">def</span> calculate_area(width, height):</span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a><span class="co">    Work out the surface area of a rectangle with the specified dimensions.</span></span>
+<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a>    area <span class="op">=</span> width <span class="op">*</span> height</span>
+<span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a>    <span class="cf">return</span> area</span></code></pre>
 </div>
-<p>Variables use lower case with underscores</p>
+</div>
+<div id="nav-tabpanel-2-R" class="tab-pane" aria-labelledby="nav-tab-2-R" role="tabpanel">
 <div class="codewrapper sourceCode" id="cb6">
-<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a>my_user_name <span class="op">=</span> <span class="st">"Joe"</span></span></code></pre>
+<pre class="sourceCode r" tabindex="0"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a>calculate_area <span class="ot">&lt;-</span> <span class="cf">function</span>(width, height) {</span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a>  <span class="st">"""</span></span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a><span class="st">  Work out the surface area of a rectangle with the specified dimensions.</span></span>
+<span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a><span class="st">  """</span></span>
+<span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a>  area <span class="ot">&lt;-</span> width <span class="sc">*</span> height</span>
+<span id="cb6-6"><a href="#cb6-6" tabindex="-1"></a>  <span class="fu">return</span>(area)</span>
+<span id="cb6-7"><a href="#cb6-7" tabindex="-1"></a>}</span></code></pre>
 </div>
-<p>Constants are named using upper case with underscores</p>
+</div>
+</div>
+</div>
+</div>
+<div class="section level3">
+<h3 id="naming-conventions">Naming conventions<a class="anchor" aria-label="anchor" href="#naming-conventions"></a></h3>
+<p>The communities of developers that use each programming language
+usually follow a conventional approach when naming objects in their
+code.</p>
+<p>It’s also a good idea not to use single-letter names such as
+<code>x</code> or <code>T</code> because it may not be clear to someone
+else what these represent. Also, avoid the common pitfall of naming a
+variable with the same name as an inbuilt function such as
+<code>sum()</code>.</p>
+<div class="tabs">
+<nav><div id="nav-tab-3" class="nav nav-tabs" role="tablist">
+<button class="nav-link active" id="nav-tab-3-Python" name="Python" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-3-Python" type="button" role="tab" aria-controls="nav-tabpanel-3-Python" aria-selected="true">
+  <h3 class="tab-header" id="nav-tab-heading-3-Python">
+  Python
+  </h3>
+</button>
+<button class="nav-link" id="nav-tab-3-R" name="R" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-3-R" type="button" role="tab" aria-controls="nav-tabpanel-3-R" aria-selected="false">
+  <h3 class="tab-header" id="nav-tab-heading-3-R">
+  R
+  </h3>
+</button>
+</div>
+</nav><div id="nav-tabContent-3" class="tab-content">
+<div id="nav-tabpanel-3-Python" class="tab-pane show active" aria-labelledby="nav-tab-3-Python" role="tabpanel">
+<p>Classes use capitalised words</p>
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a>NEGATIVE_ONE <span class="op">=</span> <span class="op">-</span><span class="dv">1</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="kw">class</span> VectorSpace:</span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a>    <span class="cf">pass</span></span></code></pre>
+</div>
+<p>Variables use lower case with underscores</p>
+<div class="codewrapper sourceCode" id="cb8">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a>my_user_name <span class="op">=</span> <span class="st">"Joe"</span></span></code></pre>
+</div>
+<p>Constants are named using upper case with underscores</p>
+<div class="codewrapper sourceCode" id="cb9">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a>NEGATIVE_ONE <span class="op">=</span> <span class="op">-</span><span class="dv">1</span></span></code></pre>
 </div>
 <p>the <a href="https://peps.python.org/pep-0008/#naming-conventions" class="external-link">Naming
 Conventions</a> section of
 <acronym title="Python Enhancement Proposals">PEP</acronym> 8.</p>
 </div>
-<div id="nav-tabpanel-2-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-R">
+<div id="nav-tabpanel-3-R" class="tab-pane" aria-labelledby="nav-tab-3-R" role="tabpanel">
 <p>Classes use capitalised words</p>
-<div class="codewrapper sourceCode" id="cb8">
+<div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="kw">setClass</span><span class="op">(</span><span class="st">"VectorSpace"</span>, representation <span class="op">=</span> <span class="fu">character</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></code></pre>
 </div>
 <p>Variables use lower case with underscores</p>
-<div class="codewrapper sourceCode" id="cb9">
+<div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">my_user_name</span> <span class="op">&lt;-</span> <span class="st">"Joe"</span></span></code></pre>
 </div>
 <p>Constants are named using upper case with underscores</p>
-<div class="codewrapper sourceCode" id="cb10">
+<div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -573,30 +614,30 @@ interpretation.</p>
 <p>To add comments to your code, use the <code>#</code> symbol at the
 start of a new line, like so:</p>
 <div class="tabs">
-<nav><div id="nav-tab-3" class="nav nav-tabs" role="tablist">
-<button class="nav-link active" id="nav-tab-3-Python" name="Python" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-3-Python" type="button" role="tab" aria-controls="nav-tabpanel-3-Python" aria-selected="true">
-  <h3 class="tab-header" id="nav-tab-heading-3-Python">
+<nav><div id="nav-tab-4" class="nav nav-tabs" role="tablist">
+<button class="nav-link active" id="nav-tab-4-Python" name="Python" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-4-Python" type="button" role="tab" aria-controls="nav-tabpanel-4-Python" aria-selected="true">
+  <h3 class="tab-header" id="nav-tab-heading-4-Python">
   Python
   </h3>
 </button>
-<button class="nav-link" id="nav-tab-3-R" name="R" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-3-R" type="button" role="tab" aria-controls="nav-tabpanel-3-R" aria-selected="false">
-  <h3 class="tab-header" id="nav-tab-heading-3-R">
+<button class="nav-link" id="nav-tab-4-R" name="R" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-4-R" type="button" role="tab" aria-controls="nav-tabpanel-4-R" aria-selected="false">
+  <h3 class="tab-header" id="nav-tab-heading-4-R">
   R
   </h3>
 </button>
 </div>
-</nav><div id="nav-tabContent-3" class="tab-content">
-<div id="nav-tabpanel-3-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-3-Python">
-<div class="codewrapper sourceCode" id="cb11">
+</nav><div id="nav-tabContent-4" class="tab-content">
+<div id="nav-tabpanel-4-Python" class="tab-pane show active" aria-labelledby="nav-tab-4-Python" role="tabpanel">
+<div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="co"># Add three to my age</span></span>
-<span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a>age <span class="op">=</span> <span class="dv">21</span></span>
-<span id="cb11-3"><a href="#cb11-3" tabindex="-1"></a>age <span class="op">=+</span> <span class="dv">3</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="co"># Add three to my age</span></span>
+<span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a>age <span class="op">=</span> <span class="dv">21</span></span>
+<span id="cb13-3"><a href="#cb13-3" tabindex="-1"></a>age <span class="op">=+</span> <span class="dv">3</span></span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-3-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-3-R">
-<div class="codewrapper sourceCode" id="cb12">
+<div id="nav-tabpanel-4-R" class="tab-pane" aria-labelledby="nav-tab-4-R" role="tabpanel">
+<div class="codewrapper sourceCode" id="cb14">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
@@ -703,8 +744,8 @@ any links that you are not going to use.
   "url": "https://Joe-Heffer-Shef.github.io/FAIR4RS-Documentation/readable.html",
   "identifier": "https://Joe-Heffer-Shef.github.io/FAIR4RS-Documentation/readable.html",
   "dateCreated": "2024-05-20",
-  "dateModified": "2024-05-23",
-  "datePublished": "2024-05-23"
+  "dateModified": "2024-05-29",
+  "datePublished": "2024-05-29"
 }
 
   </script><script>
