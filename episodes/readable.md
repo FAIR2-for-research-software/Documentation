@@ -151,6 +151,8 @@ A function contains code that defines the performance of an **action**. As with 
 A vague function name, such as `calc(a, b)` will be mysterious without any more explanation.
 Name your functions using a **simple verb phrase** such as `calculate_area(width, height)` so it's easy to interpret their purpose.
 
+::: group-tab
+
 ### Python
 
 ```python
