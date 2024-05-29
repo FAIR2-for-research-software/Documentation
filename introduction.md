@@ -157,7 +157,9 @@ This approach means that our code is much easier to interpret, maintain, and mak
 Of course, there may be some syntax in this example that is unfamiliar to you&mdash;but don't worry, we'll learn the basics in this course!
 
 :::::: keypoints
+
  - **Reproducibility:** Well-documented software is easier for other researchers to understand and use with confidence. It enables them to **reproduce your results** to replicate research findings, enabling others to validate them and building trust in your research outputs.
  - **Collaboration:** Clear instructions enable other researchers to use and **collaborate** with your software and research projects.
  - **Knowledge transfer:** Your software package will be easier to maintain in the long term if others are able to learn about it and look after it after the original developers move on.
+
 ::::::
