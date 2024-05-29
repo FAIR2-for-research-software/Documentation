@@ -153,7 +153,7 @@ Name your functions using a **simple verb phrase** such as `calculate_area(width
 
 ::: group-tab
 
-#### Python
+### Python
 
 ```python
 def calculate_area(width, height):
@@ -164,7 +164,7 @@ def calculate_area(width, height):
     return area
 ```
 
-#### R
+### R
 
 ```R
 calculate_area <- function(width, height) {
@@ -186,7 +186,7 @@ It's also a good idea not to use single-letter names such as `x` or `T` because 
 
 ::: group-tab
 
-#### Python
+### Python
 
 Classes use capitalised words
 
@@ -209,7 +209,7 @@ NEGATIVE_ONE = -1
 
  the [Naming Conventions](https://peps.python.org/pep-0008/#naming-conventions) section of <acronym title="Python Enhancement Proposals">PEP</acronym> 8.
 
-#### R
+### R
 
 Classes use capitalised words
 
@@ -273,7 +273,7 @@ When reading source code, it can be useful to know the type of each variable so 
 
 ::: group-tab
 
-#### Python
+### Python
 
 In the Python programming language, we can tell the user what type of data we expect each variable to contain by using the syntax below. This colon means that the `age` variable should contain a value with the integer type, `int`.
 
@@ -283,7 +283,7 @@ age: int = 21
 
 For more information, please see the [typing section](https://docs.python.org/3/library/typing.html) of the Python Documentation and the [Type hints cheat sheet](https://mypy.readthedocs.io/en/stable/cheat_sheet_py3.html) in the mypy documentation.
 
-#### R
+### R
 
 There is no type hinting feature in base R, although some packages are available that enable this. Here, the `L` symbol at the end of the number tells the R interpreter that this is an integer data type that should only contain whole numbers.
 
@@ -331,6 +331,8 @@ add <- function(a, b) {
 :::
 
 ::::::::::::::::::::::::::::::::::::: challenge
+
+### Type hints quiz
 
 What do you expect to happen when the following code runs?
 

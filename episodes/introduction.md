@@ -89,6 +89,8 @@ Now let's look at an example of best practices in documenting research software.
 
 ### Python
 
+This is a function written in the Python programming language that calculates a mathematical result, the details of which aren't relevant. This code has plenty of documentation to help us read and understand it.
+
 ```python
 import math
 
@@ -119,6 +121,8 @@ def calculate_sine(angle: float) -> float:
 ```
 
 ### R
+
+This is a function written in the R programming language that calculates a mathematical result, the details of which aren't relevant. This code has plenty of documentation to help us read and understand it.
 
 ```R
 # Function to calculate sine using Taylor series approximation
