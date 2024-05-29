@@ -151,7 +151,7 @@ A function contains code that defines the performance of an **action**. As with 
 A vague function name, such as `calc(a, b)` will be mysterious without any more explanation.
 Name your functions using a **simple verb phrase** such as `calculate_area(width, height)` so it's easy to interpret their purpose.
 
-### Python
+#### Python
 
 ```python
 def calculate_area(width, height):
@@ -162,7 +162,7 @@ def calculate_area(width, height):
     return area
 ```
 
-### R
+#### R
 
 ```R
 calculate_area <- function(width, height) {
@@ -180,11 +180,11 @@ calculate_area <- function(width, height) {
 
 The communities of developers that use each programming language usually follow a conventional approach when naming objects in their code.
 
-It's also a good idea not to use single-letter names such as `x` or `T` because it may not be clear to someone else what these represent. Also, avoid the common pitfall of naming a variable with the same name as an inbuilt function such as `sum()`.
+It's also a good idea not to use single-letter names such as `x` or `T` because it may not be clear to someone else what these represent. Also, avoid the common pitfall of naming a variable with the same name as an inbuilt function such as `sum()`.
 
 ::: group-tab
 
-### Python
+#### Python
 
 Classes use capitalised words
 
@@ -207,7 +207,7 @@ NEGATIVE_ONE = -1
 
  the [Naming Conventions](https://peps.python.org/pep-0008/#naming-conventions) section of <acronym title="Python Enhancement Proposals">PEP</acronym> 8.
 
-### R
+#### R
 
 Classes use capitalised words
 
@@ -227,7 +227,7 @@ Constants are named using upper case with underscores
 NEGATIVE_ONE <- -1
 ```
 
-For more information about this aspect of coding style, please read the [Style Guide](http://adv-r.had.co.nz/Style.html) in *Advanced R* by Hadley Wickham.
+For more information about this aspect of coding style, please read the [Style Guide](http://adv-r.had.co.nz/Style.html) in *Advanced R* by Hadley Wickham.
 
 :::
 
@@ -275,13 +275,99 @@ https://peps.python.org/pep-0008/#inline-comments
 
 ## Type hints
 
-Type hints to improve code clarity and enable static type checking for catching errors early in the development process.
+Type hints display the expected *type* of each object in your code. They are a kind of "documentation as code" that annotate the code that's already there, rather than being written as separate documentation. While they don't change the way the software works, they can help to improve code clarity and may be used to catch errors early in the development process.
 
-https://docs.google.com/presentation/d/1mFgQOG4zIZJW-Kl-STi8VnbekVgxzNF_JSO-UOzjHnU/edit?usp=sharing
+### Type hints for variables
 
-### Variable annotations
+When reading source code, it can be useful to know the type of each variable so we get an idea of what possible values they might contain as they move through the system.
 
-https://peps.python.org/pep-0526/
+::: group-tab
+
+#### Python
+
+In the Python programming language, we can tell the user what type of data we expect each variable to contain by using the syntax below. This colon means that the `age` variable should contain a value with the integer type, `int`.
+
+```python
+age: int = 21
+```
+
+For more information, please see the [typing section](https://docs.python.org/3/library/typing.html) of the Python Documentation and the [Type hints cheat sheet](https://mypy.readthedocs.io/en/stable/cheat_sheet_py3.html) in the mypy documentation.
+
+#### R
+
+There is no type hinting feature in base R, although some packages are available that enable this. Here, the `L` symbol at the end of the number tells the R interpreter that this is an integer data type that should only contain whole numbers.
+
+```R
+# Integer
+age <- 21L
+```
+
+:::
+
+Using type hints will make sure your code much easier to read and provide helpful documentation for others, and yourself in the future.
+
+## Function argument type hints
+
+They can also be used to label the input and output types of functions.  They are not strictly enforced, but act as a guide to the reader.
+
+::: group-tab
+
+### Python
+
+Below is the source code for a simple Python function that calculates the sum of two numbers. I've labelled each of the function arguments `a` and `b` with variable annotations that let you know that the expected inputs are whole numbers because `int` is short for the *integer* type. The result of this mathematical operation is also expected to be an integer, so the return type is labelled with the arrow syntax on the first line of the function declaration as `-> int`.
+
+```python
+def add(a: int, b: int) -> int:
+    """Add two numbers"""
+    return a + b
+```
+
+### R
+
+Below is the source code for a simple R function that calculates the sum of two numbers.
+
+In R, there is no inbuilt functionality for annotating the expected types of variable arguments, but this can be done with the [roxygen2](https://roxygen2.r-lib.org/) library. The code block below shows a docstring (which we covered earlier in the course) that labels the types of the inputs and output of the function.
+
+```R
+#' @title Add two numbers
+#' @param a integer
+#' @param b integer
+#' @return integer
+add <- function(a, b) {
+  return(a + b)
+}
+```
+
+:::
+
+::::::::::::::::::::::::::::::::::::: challenge
+
+What do you expect to happen when the following code runs?
+
+```python
+add(42, 1)
+```
+
+What about this code?
+
+```python
+add(42.5, 1e5)
+```
+
+Will an error occur when we use strings as the input arguments?
+
+```python
+add('cheese', 'cake')
+```
+
+:::::::::::::::: solution
+
+None of these code examples will cause an error because type hints are just passive labels that document our code. They don't enforce any type checking or rules that are asserted when the code is executed. This means that, while type hints are very useful for *static analysis* of code, where we learn something about a piece of software without running it.
+
+:::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::
+
+It will take some time and effort to write these labels, but it will pay off in the long run to think about variables tapes and make it easier to interpret how the code will behave as it operates. It's best practice to use an integrated development environment (IDE) that will check your type hints and inform you if it detects a problem with your source code.
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
