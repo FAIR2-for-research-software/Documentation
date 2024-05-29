@@ -263,18 +263,6 @@ age = age + 3
 
 It's best practice to use a very concise style when writing code comments. I recommend using active tense verbs.
 
-## Coding convnetions
-
-Proper curly brace structure, indentation, whitespace.
-
-### Block comments
-
-https://peps.python.org/pep-0008/#block-comments
-
-### Inline comments
-
-https://peps.python.org/pep-0008/#inline-comments
-
 ## Type hints
 
 Type hints display the expected *type* of each object in your code. They are a kind of "documentation as code" that annotate the code that's already there, rather than being written as separate documentation. While they don't change the way the software works, they can help to improve code clarity and may be used to catch errors early in the development process.
@@ -293,11 +281,11 @@ In the Python programming language, we can tell the user what type of data we ex
 age: int = 21
 ```
 
-For more information, please see the [typing section](https://docs.python.org/3/library/typing.html) of the Python Documentation and the [Type hints cheat sheet](https://mypy.readthedocs.io/en/stable/cheat_sheet_py3.html) in the mypy documentation.
+For more information, please see the [typing section](https://docs.python.org/3/library/typing.html) of the Python Documentation and the [Type hints cheat sheet](https://mypy.readthedocs.io/en/stable/cheat_sheet_py3.html) in the mypy documentation.
 
 #### R
 
-There is no type hinting feature in base R, although some packages are available that enable this. Here, the `L` symbol at the end of the number tells the R interpreter that this is an integer data type that should only contain whole numbers.
+There is no type hinting feature in base R, although some packages are available that enable this. Here, the `L` symbol at the end of the number tells the R interpreter that this is an integer data type that should only contain whole numbers.
 
 ```R
 # Integer
@@ -316,7 +304,7 @@ They can also be used to label the input and output types of functions.  They ar
 
 ### Python
 
-Below is the source code for a simple Python function that calculates the sum of two numbers. I've labelled each of the function arguments `a` and `b` with variable annotations that let you know that the expected inputs are whole numbers because `int` is short for the *integer* type. The result of this mathematical operation is also expected to be an integer, so the return type is labelled with the arrow syntax on the first line of the function declaration as `-> int`.
+Below is the source code for a simple Python function that calculates the sum of two numbers. I've labelled each of the function arguments `a` and `b` with variable annotations that let you know that the expected inputs are whole numbers because `int` is short for the *integer* type. The result of this mathematical operation is also expected to be an integer, so the return type is labelled with the arrow syntax on the first line of the function declaration as `-> int`.
 
 ```python
 def add(a: int, b: int) -> int:
@@ -364,7 +352,7 @@ add('cheese', 'cake')
 
 :::::::::::::::: solution
 
-None of these code examples will cause an error because type hints are just passive labels that document our code. They don't enforce any type checking or rules that are asserted when the code is executed. This means that, while type hints are very useful for *static analysis* of code, where we learn something about a piece of software without running it.
+None of these code examples will cause an error because type hints are just passive labels that document our code. They don't enforce any type checking or rules that are asserted when the code is executed. This means that, while type hints are very useful for *static analysis* of code, where we learn something about a piece of software without running it.
 
 :::::::::::::::::::::::::
 
@@ -378,6 +366,6 @@ It will take some time and effort to write these labels, but it will pay off in 
 
 - Try to inject as much *meaning* into your source code as possible by naming things clearly and succintly.
 - Use comments to explain your rationale&mdash;even if the code seems obvious to you know, think of the future benefits!
-- Label functions and variables with *type hints* to tell the user what data types are expected.
+- Label functions and variables with *type hints* to tell the user what data types are expected.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
