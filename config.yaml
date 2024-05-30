@@ -46,9 +46,9 @@ contact: 'research-it@sheffield.ac.uk'
 episodes:
 - introduction.md
 - readmes.md
-- developers.md
 - docstrings.md
 - readable.md
+- developers.md
 - cli.md
 - pages.md
 
