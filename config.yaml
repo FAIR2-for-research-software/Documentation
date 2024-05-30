@@ -48,9 +48,9 @@ episodes:
 - readmes.md
 - docstrings.md
 - readable.md
+- pages.md
 - developers.md
 - cli.md
-- pages.md
 
 # Information for Learners
 learners:
