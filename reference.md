@@ -27,6 +27,9 @@ Developer
 Codebase
 : All the code, functions, and files within a software project
 
+Software documentation
+: Written guidance for users of a computer system to understanding how to utilise it.
+
 Package
 : A collection of code and functions that is bundled together and distributed for other people to use.
 
@@ -35,3 +38,9 @@ Type
 
 Static analysis
 : "a software verification activity that analyses source code for quality, reliability, and security without executing the code." &mdash; MATLAB "[What Is Static Code Analysis?](https://uk.mathworks.com/discovery/static-code-analysis.html)"
+
+Command-line interface (CLI)
+: A way of running software by typing text instructions into a terminal
+
+Terminal
+: A text prompt that is used to enter commands into a computer
