@@ -49,7 +49,12 @@ documentation][template-doc].
 There are many ways to contribute, from writing new exercises and improving
 existing ones to updating or filling in the documentation and submitting [bug
 reports][issues] about things that do not work, are not clear, or are missing.
-If you are looking for ideas, please see [the list of issues for this
+
+If you are looking for ideas, please see the
+[kanban board](https://github.com/users/Joe-Heffer-Shef/projects/1) on GitHub
+projects, which is a task tracker associated with this repository.
+
+There is also [the list of issues for this
 repository][repo-issues], or the issues for [Data Carpentry][dc-issues],
 [Library Carpentry][lc-issues], and [Software Carpentry][swc-issues] projects.
 
