@@ -87,8 +87,6 @@ Let's examine a simple one-word command that lists the files in the current dire
 
 ::: group-tab
 
-Test sentence goes here.
-
 ### Windows
 
 On Windows, the [dir](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/dir) command is used to list the contents of a directory. When you enter this command and press <kbd>Enter</kbd>
@@ -147,17 +145,31 @@ For more information, please read [Get started with Terminal on Mac](https://sup
 
 :::
 
+### Arguments
+
+Commands have *options* that allow the user to choose what the tool will do.
+
+::: group-tab
+
+### Windows
+
 ```bash
 date /T
 ```
+
+### Linux
 
 ```bash
 date
 ```
 
+### Mac OS
+
 ```bash
-echo Hello world
+date
 ```
+
+:::
 
 ### Advantages of CLIs
 
