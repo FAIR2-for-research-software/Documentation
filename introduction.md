@@ -42,11 +42,11 @@ Writing a useful software package that is well-documented and can be reused in t
 
 In the long run, it can help you to develop your own software engineering practice by getting into the habit of reflecting on what the purpose of the software is and to articulate what each component or module is for.
 
-## Examples
+# Examples
 
 Here are some examples of some code to perform some geometry. The first example could be improved in terms of its documentation and readability, while the second one is much clearer. Which one would you prefer to use?
 
-### Example of no documentation
+## Example of no documentation
 
 Here's an example of some code that does... something. It's not clear what this code is for or why it was written.
 
@@ -81,7 +81,7 @@ The logic of the calculation is also... rather cryptic.
 
 Maybe the code works, maybe it doesn't (would you trust it?) but it could be made clearer and easier to maintain and modify in the future.
 
-### Well-documented example
+## Well-documented example
 
 Now let's look at an example of best practices in documenting research software.
 
