@@ -2,7 +2,7 @@
 
 # Research Software Documentation
 
-This repository contains a course on documenting research software that has been created using [The Carpentries Workbench](https://carpentries.github.io/workbench).
+This repository contains a course on documenting research software that is part of the [training provision for research computing](https://sites.google.com/sheffield.ac.uk/research-training/) at the University of Sheffield.
 
 ## Course description
 
