@@ -67,6 +67,12 @@ On Ubuntu, press <kbd>Ctrl + Alt + T</kbd> to open a terminal.
 
 You can also open Dash and search for "Terminal". For detailed instructions, please read [Opening a terminal](https://ubuntu.com/tutorials/command-line-for-beginners#3-opening-a-terminal) section in the [The Linux command line for beginners](https://ubuntu.com/tutorials/command-line-for-beginners#1-overview) tutorial in the official Ubuntu documentation.
 
+The terminal on an Ubuntu computer will look something like this, where the dollar sign `$` means "type here".
+
+```bash
+bob@myUbuntuPC:~$
+```
+
 ### Mac OS
 
 Please read [Open or quit Terminal on Mac](https://support.apple.com/en-gb/guide/terminal/apd5265185d-f365-44cb-8b09-71a064a42125/mac) on the [Terminal User Guide](https://support.apple.com/en-gb/guide/terminal/welcome/mac) for macOS.
@@ -88,17 +94,57 @@ Test sentence goes here.
 On Windows, the [dir](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/dir) command is used to list the contents of a directory. When you enter this command and press <kbd>Enter</kbd>
 
 ```bash
-dir
+> dir
 ```
 
+The result of this command will be printed to the screen.
+
+```output
+C:\temp\my_data>dir
+ Volume in drive C has no label.
+ Volume Serial Number is Y72W-9DA1
+
+ Directory of C:\temp\my_data
+
+30/05/2024  14:06    <DIR>          .
+30/05/2024  14:06    <DIR>          ..
+30/05/2024  14:06                12 README.txt
+               1 File(s)             12 bytes
+               2 Dir(s)  171,395,805,184 bytes free
+```
+
+This means that in the folder `C:\temp\my_data` there is a single file called `README.txt`. The date and time that each file was last modified is shown, along with the file size, which is 12 bytes in this case.
+
 ### Linux
+
+To show the contents of a directory on a Linux system, we use the [`ls` command](https://manpages.ubuntu.com/manpages/noble/man1/ls.1plan9.html) which lists information about the files in the current location.
+
 ```bash
-cd
+bob@myUbuntuPC:/tmp/my_data$ ls
 ```
+
+The output is a simple list of the names of all the files in that folder.
+
+```output
+README.txt
+```
+
 ### Mac OS
+
+The macOS terminal is very similar to the Linux one. To show the contents of a directory on a Linux system, we use the [`ls` command](https://support.apple.com/en-gb/guide/terminal/apdb66b5242-0d18-49fc-9c47-a2498b7c91d5/2.14/mac/14.0) which lists information about the files in the current location.
+
 ```bash
-cd
+ls
 ```
+
+The output is a simple list of the names of all the files in that folder.
+
+```output
+README.txt
+```
+
+For more information, please read [Get started with Terminal on Mac](https://support.apple.com/en-gb/guide/terminal/pht23b129fed/mac)
+
 :::
 
 ```bash
