@@ -50,3 +50,6 @@ Graphical user interface (GUI)
 
 Operating system
 : Manages the files (data storage), software, and hardware that make up the computer and its services.
+
+Documentation site
+: A software documentation website is a structured guide to using a library of research code.
