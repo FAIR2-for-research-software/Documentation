@@ -1,3 +1,5 @@
+[![01 Build and Deploy Site](https://github.com/Joe-Heffer-Shef/FAIR4RS-Documentation/actions/workflows/sandpaper-main.yaml/badge.svg)](https://github.com/Joe-Heffer-Shef/FAIR4RS-Documentation/actions/workflows/sandpaper-main.yaml)
+
 # Research Software Documentation
 
 This repository contains a course on documenting research software that has been created using [The Carpentries Workbench](https://carpentries.github.io/workbench).
@@ -22,3 +24,7 @@ This course introduces the different ways to provide other researchers with usef
 - Command line interfaces with usage instructions
 
 There is information about publishing a software package and providing metadata and citation details in Modules 6 and 7 of this course.
+
+# Contact us
+
+Please contact [Research & Innovation IT](https://sheffield.ac.uk/it-services/research) or [Research Software Engineering](https://rse.shef.ac.uk/) at the University of Sheffield.
