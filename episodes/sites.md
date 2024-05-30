@@ -1,5 +1,5 @@
 ---
-title: 'Documentation pages'
+title: 'Documentation sites'
 teaching: 10
 exercises: 2
 ---
@@ -24,7 +24,13 @@ exercises: 2
 
 ## Documentation sites
 
+A documentation website is a user guide and reference manual for a library of research code. Up to now, we've looked at ways to put helpful notes in our code, but now we'll learn how to write a longer, more complete guide to the research tools you create.
+
+A documentation site for research software usually contains an introduction, installation instructions, a user guide, troubleshooting tips, and an in-depth reference section.
+
 ### Advantages
+
+It makes it much easier for new users to get started using your software to boost their research.
 
 ### When to use one
 
@@ -38,9 +44,33 @@ MkDocs
 
 ## Docsite contents
 
-Tutorials
+Documentation pages contain comphrehensive information about a particular piece of research software. Think of it like a user manual for your car or an instruction guide for building a piece of furniature.
 
-Demos
+### Research context
+
+For research software, it may be important to explain the theoretical background or statistical methods that are used and explain the domain-specific assumptions that were made when the code was designed and written. It's good practice to provide a concise summary of the relevent concepts and link to external sources such as papers, books, and other websites for users to take a deeper dive into the principles and algorithms used.
+
+### Installation instructions
+
+This section provides a detailed walkthrough of the steps required to install the package onto their computer, with details that are specific to their operating system.
+
+### Tutorials
+
+It can be very useful to include an in-depth "Getting Started" guide that provides step-by-step instructions to introduce a new user to your software package. It might guide the user through each aspect of the tool's functionality and features so they're able to become familiar with it in a more approachable way.
+
+A series of code examples to demonstrate how to use the software in different contexts can be very useful for users to get off the ground in implementing common research workflows to achieve their specific goals.
+
+### User reference
+
+If you have written functions that are intended to be use in other reseachers' code, then an on-depth explaination of these procedures is essential reference material. In the world of software engineering, these detailed appendices are called <acronym title="Application Programming Interfaces">API</acronym> references, which list each function and describe how the arguments may be used to control how the code works. This content may be automatically generated from the documentation strings.
+
+### Troubleshooting
+
+As issues come up with your research code, and are eventually resolved and clarified, make a note of the causes of these troubles and make them available to the entire user base in your documentation site. This will help users to identify and fix common misunderstandings and technical problems they may run into when utilising your code.
+
+### FAQs
+
+An appendix containing frequently asked questions (FAQs) is very useful to save yourself time in responding to common queries from the users of your code.
 
 ## Publishing your docsite
 
