@@ -165,6 +165,7 @@
       <div class="accordion-body">
         <ul><li><a href="#introduction">Introduction</a></li>
 <li><a href="#why-document-software">Why document software?</a></li>
+<li><a href="#examples">Examples</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
         
@@ -183,7 +184,7 @@
 <div class="accordion accordion-flush" id="accordionFlush4">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading4">
-        <a href="developers.html">3. Developer guidance</a>
+        <a href="docstrings.html">3. Documentation strings</a>
     </div><!--/div.accordion-header-->
         
   </div><!--/div.accordion-item-->
@@ -192,7 +193,7 @@
 <div class="accordion accordion-flush" id="accordionFlush5">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading5">
-        <a href="docstrings.html">4. Documentation strings</a>
+        <a href="readable.html">4. Code readability</a>
     </div><!--/div.accordion-header-->
         
   </div><!--/div.accordion-item-->
@@ -201,7 +202,7 @@
 <div class="accordion accordion-flush" id="accordionFlush6">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading6">
-        <a href="readable.html">5. Code readability</a>
+        <a href="developers.html">5. Developer guidance</a>
     </div><!--/div.accordion-header-->
         
   </div><!--/div.accordion-item-->
@@ -370,14 +371,14 @@ engineering practice by getting into the habit of reflecting on what the
 purpose of the software is and to articulate what each component or
 module is for.</p>
 </div>
-</section><div class="section level1">
-<h1 id="examples">Examples<a class="anchor" aria-label="anchor" href="#examples"></a></h1>
-<p>Here are some examples of some code to perform some geometry. The
+</section><section id="examples"><h2 class="section-heading">Examples<a class="anchor" aria-label="anchor" href="#examples"></a>
+</h2>
+<hr class="half-width"><p>Here are some examples of some code to perform some geometry. The
 first example could be improved in terms of its documentation and
 readability, while the second one is much clearer. Which one would you
 prefer to use?</p>
-<div class="section level2">
-<h2 id="example-of-no-documentation">Example of no documentation<a class="anchor" aria-label="anchor" href="#example-of-no-documentation"></a></h2>
+<div class="section level3">
+<h3 id="example-of-no-documentation">Example of no documentation<a class="anchor" aria-label="anchor" href="#example-of-no-documentation"></a></h3>
 <p>Here’s an example of some code that does… something. It’s not clear
 what this code is for or why it was written.</p>
 <div class="tabs">
@@ -394,7 +395,7 @@ what this code is for or why it was written.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-1" class="tab-content">
-<div id="nav-tabpanel-1-Python" class="tab-pane show active" aria-labelledby="nav-tab-1-Python" role="tabpanel">
+<div id="nav-tabpanel-1-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-Python">
 <p>This is some research code that is contained in a Python
 function.</p>
 <div class="codewrapper sourceCode" id="cb1">
@@ -405,7 +406,7 @@ function.</p>
 <span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a>  <span class="cf">return</span> x <span class="op">*</span> weird_num <span class="op">-</span> angle<span class="op">**</span><span class="dv">3</span> <span class="op">/</span> (weird_num <span class="op">*</span> <span class="dv">2</span>)</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-1-R" class="tab-pane" aria-labelledby="nav-tab-1-R" role="tabpanel">
+<div id="nav-tabpanel-1-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-R">
 <p>This is some research code that is contained in an R function.</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -429,8 +430,8 @@ number that is arbitrarily stated but unexplained.</p>
 could be made clearer and easier to maintain and modify in the
 future.</p>
 </div>
-<div class="section level2">
-<h2 id="well-documented-example">Well-documented example<a class="anchor" aria-label="anchor" href="#well-documented-example"></a></h2>
+<div class="section level3">
+<h3 id="well-documented-example">Well-documented example<a class="anchor" aria-label="anchor" href="#well-documented-example"></a></h3>
 <p>Now let’s look at an example of best practices in documenting
 research software.</p>
 <div class="tabs">
@@ -447,7 +448,7 @@ research software.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-2" class="tab-content">
-<div id="nav-tabpanel-2-Python" class="tab-pane show active" aria-labelledby="nav-tab-2-Python" role="tabpanel">
+<div id="nav-tabpanel-2-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-2-Python">
 <p>This is a function written in the Python programming language that
 calculates a mathematical result, the details of which aren’t relevant.
 This code has plenty of documentation to help us read and understand
@@ -483,7 +484,7 @@ it.</p>
 <span id="cb3-26"><a href="#cb3-26" tabindex="-1"></a>  <span class="cf">return</span> sin_value</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-2-R" class="tab-pane" aria-labelledby="nav-tab-2-R" role="tabpanel">
+<div id="nav-tabpanel-2-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-R">
 <p>This is a function written in the R programming language that
 calculates a mathematical result, the details of which aren’t relevant.
 This code has plenty of documentation to help us read and understand
@@ -563,11 +564,7 @@ Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use. 
  -->
 </div>
-</div>
-
-
-
-      </div> <!-- / div.lesson-content -->
+</section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="index.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
         <a class="chapter-link float-end" href="readmes.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>

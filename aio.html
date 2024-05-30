@@ -209,7 +209,7 @@
 <div class="accordion accordion-flush" id="accordionFlush4">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading4">
-        <a href="developers.html">3. Developer guidance</a>
+        <a href="docstrings.html">3. Documentation strings</a>
     </div>
 <!--/div.accordion-header-->
         
@@ -221,7 +221,7 @@
 <div class="accordion accordion-flush" id="accordionFlush5">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading5">
-        <a href="docstrings.html">4. Documentation strings</a>
+        <a href="readable.html">4. Code readability</a>
     </div>
 <!--/div.accordion-header-->
         
@@ -233,7 +233,7 @@
 <div class="accordion accordion-flush" id="accordionFlush6">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading6">
-        <a href="readable.html">5. Code readability</a>
+        <a href="developers.html">5. Developer guidance</a>
     </div>
 <!--/div.accordion-header-->
         
@@ -410,16 +410,16 @@ engineering practice by getting into the habit of reflecting on what the
 purpose of the software is and to articulate what each component or
 module is for.</p>
 </div>
-</section><div class="section level1">
-<h1 id="examples">Examples<a class="anchor" aria-label="anchor" href="#examples"></a>
-</h1>
+</section><section id="examples"><h2 class="section-heading">Examples<a class="anchor" aria-label="anchor" href="#examples"></a>
+</h2>
+<hr class="half-width">
 <p>Here are some examples of some code to perform some geometry. The
 first example could be improved in terms of its documentation and
 readability, while the second one is much clearer. Which one would you
 prefer to use?</p>
-<div class="section level2">
-<h2 id="example-of-no-documentation">Example of no documentation<a class="anchor" aria-label="anchor" href="#example-of-no-documentation"></a>
-</h2>
+<div class="section level3">
+<h3 id="example-of-no-documentation">Example of no documentation<a class="anchor" aria-label="anchor" href="#example-of-no-documentation"></a>
+</h3>
 <p>Here’s an example of some code that does… something. It’s not clear
 what this code is for or why it was written.</p>
 <div class="tabs">
@@ -436,7 +436,7 @@ what this code is for or why it was written.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-1" class="tab-content">
-<div id="nav-tabpanel-1-Python" class="tab-pane show active" aria-labelledby="nav-tab-1-Python" role="tabpanel">
+<div id="nav-tabpanel-1-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-Python">
 <p>This is some research code that is contained in a Python
 function.</p>
 <div class="codewrapper sourceCode" id="cb1">
@@ -447,7 +447,7 @@ function.</p>
 <span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a>  <span class="cf">return</span> x <span class="op">*</span> weird_num <span class="op">-</span> angle<span class="op">**</span><span class="dv">3</span> <span class="op">/</span> (weird_num <span class="op">*</span> <span class="dv">2</span>)</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-1-R" class="tab-pane" aria-labelledby="nav-tab-1-R" role="tabpanel">
+<div id="nav-tabpanel-1-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-R">
 <p>This is some research code that is contained in an R function.</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -471,9 +471,9 @@ number that is arbitrarily stated but unexplained.</p>
 could be made clearer and easier to maintain and modify in the
 future.</p>
 </div>
-<div class="section level2">
-<h2 id="well-documented-example">Well-documented example<a class="anchor" aria-label="anchor" href="#well-documented-example"></a>
-</h2>
+<div class="section level3">
+<h3 id="well-documented-example">Well-documented example<a class="anchor" aria-label="anchor" href="#well-documented-example"></a>
+</h3>
 <p>Now let’s look at an example of best practices in documenting
 research software.</p>
 <div class="tabs">
@@ -490,7 +490,7 @@ research software.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-2" class="tab-content">
-<div id="nav-tabpanel-2-Python" class="tab-pane show active" aria-labelledby="nav-tab-2-Python" role="tabpanel">
+<div id="nav-tabpanel-2-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-2-Python">
 <p>This is a function written in the Python programming language that
 calculates a mathematical result, the details of which aren’t relevant.
 This code has plenty of documentation to help us read and understand
@@ -526,7 +526,7 @@ it.</p>
 <span id="cb3-26"><a href="#cb3-26" tabindex="-1"></a>  <span class="cf">return</span> sin_value</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-2-R" class="tab-pane" aria-labelledby="nav-tab-2-R" role="tabpanel">
+<div id="nav-tabpanel-2-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-R">
 <p>This is a function written in the R programming language that
 calculates a mathematical result, the details of which aren’t relevant.
 This code has plenty of documentation to help us read and understand
@@ -608,7 +608,7 @@ Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use. 
  -->
 </div>
-</div></section><section id="aio-readmes"><p>Content from <a href="readmes.html">Writing README files</a></p>
+</section></section><section id="aio-readmes"><p>Content from <a href="readmes.html">Writing README files</a></p>
 <hr>
 <p>Last updated on 2024-05-23 |
         
@@ -835,113 +835,6 @@ Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use. 
  -->
 </div>
-</section></section><section id="aio-developers"><p>Content from <a href="developers.html">Developer guidance</a></p>
-<hr>
-<p>Last updated on 2024-05-21 |
-        
-        <a href="https://github.com/Joe-Heffer-Shef/FAIR4RS-Documentation/edit/main/episodes/developers.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
-<div class="text-end">
-          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
-        </div>
-<div class="overview card">
-<h2 class="card-header">Overview</h2>
-<div class="row g-0">
-<div class="col-md-4">
-<div class="card-body">
-<div class="inner">
-<h3 class="card-title">Questions</h3>
-<ul>
-<li>TODO</li>
-</ul>
-</div>
-</div>
-</div>
-<div class="col-md-8">
-<div class="card-body">
-<div class="inner bordered">
-<h3 class="card-title">Objectives</h3>
-<ul>
-<li>TODO</li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div>
-<section id="introduction"><h2 class="section-heading">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
-</h2>
-<hr class="half-width">
-<p>Most research software is written in a collaborative manner,
-involving multiple specialists from within a team or from multiple
-institutions. For the long-term health of a software package, it’s
-important to encourage potential contributors to get in touch and feel
-welcome to take part. Useful research software can take on a life of its
-own. For more information on planning the development of research
-software and project governance, see Module 1a.</p>
-<p>It’s often published using an open source licence, which means that
-all the code is publicly available and may be used and modified by
-anyone, within certain conditions (see module 1b to learn more about
-software licensing.)</p>
-</section><section id="contribution-guides"><h2 class="section-heading">Contribution guides<a class="anchor" aria-label="anchor" href="#contribution-guides"></a>
-</h2>
-<hr class="half-width">
-<p>Contribution guidelines help users and understand how they can help
-to improve the software, whether that’s by submitting bug reports,
-suggesting new features, or writing better code and documentation. All
-of these aspects are vital to produce reusable research software.</p>
-<p>Potential collaborators should be able to easily find out how to take
-part and contribute. Developers should be encouraged to use appropriate
-communication channels to ask questions and inform others of proposed
-software changes. The contact details for the project administrator or
-committee should be available and they should be welcome and responsive
-to any queries.</p>
-<p>It’s important to explain how the project is managed so the process
-for evaluating new features and getting them implemented is clear, such
-as the code review and approval process. For many projects, a ticket
-system may be used to raise issues and suggest new features. Software
-developers often propose new code by creating a branch on the version
-control system (such as Git) and requesting for those changes to be
-merged into the main codebase.</p>
-</section><section id="developer-notes"><h2 class="section-heading">Developer notes<a class="anchor" aria-label="anchor" href="#developer-notes"></a>
-</h2>
-<hr class="half-width">
-<p>System documentation is important for new contributors to familiarise
-themselves with the codebase and as a reference for existing engineers.
-There should be a concise description of how the system works from a
-more technical perspective, with the intended audience being software
-developers, rather than the research users.</p>
-<p>An architecture diagram is an efficient way to provide a “map” to
-help developers to understand and navigate a complex system.</p>
-<p>A coding style guide will help to ensure consistency across all the
-code written as part of a collaborative project, which helps others to
-read and interpret the code, making it easier to maintain in the long
-run. The code style rules should cover things like the way to describe
-functions, how to indent code, and naming conventions for variables.</p>
-<p>This might include guidance and advice, or more strict rules as
-standards that are checked by a code linter. A code linter is an
-analysis tool that inspects code and checks for common errors and
-problems, producing a report for the developer to read and act upon.
-Common coding style standards include the PEP 8 style guide for the
-Python programming language and the tidyverse style guide in the R
-statistical language.</p>
-<div id="keypoints1" class="callout keypoints">
-<div class="callout-square">
-<i class="callout-icon" data-feather="key"></i>
-</div>
-<div class="callout-inner">
-<h3 class="callout-title">Key Points<a class="anchor" aria-label="anchor" href="#keypoints1"></a>
-</h3>
-<div class="callout-content">
-<ul>
-<li>TODO</li>
-</ul>
-</div>
-</div>
-</div>
-<!-- 
-Place links that you need to refer to multiple times across pages here. Delete
-any links that you are not going to use. 
- -->
 </section></section><section id="aio-docstrings"><p>Content from <a href="docstrings.html">Documentation strings</a></p>
 <hr>
 <p>Last updated on 2024-05-21 |
@@ -1659,7 +1552,7 @@ labels the types of the inputs and output of the function.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1">Show me the solution</h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>None of these code examples will cause an error because type hints
 are just passive labels that document our code. They don’t enforce any
@@ -1704,6 +1597,113 @@ Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use. 
  -->
 </div>
+</section></section><section id="aio-developers"><p>Content from <a href="developers.html">Developer guidance</a></p>
+<hr>
+<p>Last updated on 2024-05-21 |
+        
+        <a href="https://github.com/Joe-Heffer-Shef/FAIR4RS-Documentation/edit/main/episodes/developers.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<div class="text-end">
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
+        </div>
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul>
+<li>TODO</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul>
+<li>TODO</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section id="introduction"><h2 class="section-heading">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
+</h2>
+<hr class="half-width">
+<p>Most research software is written in a collaborative manner,
+involving multiple specialists from within a team or from multiple
+institutions. For the long-term health of a software package, it’s
+important to encourage potential contributors to get in touch and feel
+welcome to take part. Useful research software can take on a life of its
+own. For more information on planning the development of research
+software and project governance, see Module 1a.</p>
+<p>It’s often published using an open source licence, which means that
+all the code is publicly available and may be used and modified by
+anyone, within certain conditions (see module 1b to learn more about
+software licensing.)</p>
+</section><section id="contribution-guides"><h2 class="section-heading">Contribution guides<a class="anchor" aria-label="anchor" href="#contribution-guides"></a>
+</h2>
+<hr class="half-width">
+<p>Contribution guidelines help users and understand how they can help
+to improve the software, whether that’s by submitting bug reports,
+suggesting new features, or writing better code and documentation. All
+of these aspects are vital to produce reusable research software.</p>
+<p>Potential collaborators should be able to easily find out how to take
+part and contribute. Developers should be encouraged to use appropriate
+communication channels to ask questions and inform others of proposed
+software changes. The contact details for the project administrator or
+committee should be available and they should be welcome and responsive
+to any queries.</p>
+<p>It’s important to explain how the project is managed so the process
+for evaluating new features and getting them implemented is clear, such
+as the code review and approval process. For many projects, a ticket
+system may be used to raise issues and suggest new features. Software
+developers often propose new code by creating a branch on the version
+control system (such as Git) and requesting for those changes to be
+merged into the main codebase.</p>
+</section><section id="developer-notes"><h2 class="section-heading">Developer notes<a class="anchor" aria-label="anchor" href="#developer-notes"></a>
+</h2>
+<hr class="half-width">
+<p>System documentation is important for new contributors to familiarise
+themselves with the codebase and as a reference for existing engineers.
+There should be a concise description of how the system works from a
+more technical perspective, with the intended audience being software
+developers, rather than the research users.</p>
+<p>An architecture diagram is an efficient way to provide a “map” to
+help developers to understand and navigate a complex system.</p>
+<p>A coding style guide will help to ensure consistency across all the
+code written as part of a collaborative project, which helps others to
+read and interpret the code, making it easier to maintain in the long
+run. The code style rules should cover things like the way to describe
+functions, how to indent code, and naming conventions for variables.</p>
+<p>This might include guidance and advice, or more strict rules as
+standards that are checked by a code linter. A code linter is an
+analysis tool that inspects code and checks for common errors and
+problems, producing a report for the developer to read and act upon.
+Common coding style standards include the PEP 8 style guide for the
+Python programming language and the tidyverse style guide in the R
+statistical language.</p>
+<div id="keypoints1" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Key Points<a class="anchor" aria-label="anchor" href="#keypoints1"></a>
+</h3>
+<div class="callout-content">
+<ul>
+<li>TODO</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- 
+Place links that you need to refer to multiple times across pages here. Delete
+any links that you are not going to use. 
+ -->
 </section></section><section id="aio-cli"><p>Content from <a href="cli.html">Command line interfaces</a></p>
 <hr>
 <p>Last updated on 2024-05-30 |
