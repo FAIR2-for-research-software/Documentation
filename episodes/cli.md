@@ -32,6 +32,8 @@ Command lines are a way of interacting with a digital system that go back to the
 
 It's a great way to talk to your computer because you can record the commands that you've run to provide a documented history of a research process. (We could record a video screen capture of your working procedure, but that's much less efficient.)
 
+Terminals are more efficient for running repetitive tasks and provide extra functionality for advanced users. They are an cost-effective way to provide a user interface for research software, as research teams often lack the resources and know-how to produce sophisticated graphical user interfaces.
+
 ## Using the terminal
 
 There's a lot of powerful commands that can be learned to take full advantage of the command line, but here we'll just address the basics to help us make our research software easier to use by providing a well-documented CLI.
@@ -73,13 +75,22 @@ Please read [Open or quit Terminal on Mac](https://support.apple.com/en-gb/guide
 
 ### Example commands
 
-An example of a CLI command is a simple text command 
+An example of a CLI command is a simple text command that performs some action or interacts with the computer operating system. 
+
+Let's examine a simple one-word command that lists the files in the current directory.
 
 ::: group-tab
+
+Test sentence goes here.
+
 ### Windows
+
+On Windows, the [dir](https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/dir) command is used to list the contents of a directory. When you enter this command and press <kbd>Enter</kbd>
+
 ```bash
 dir
 ```
+
 ### Linux
 ```bash
 cd

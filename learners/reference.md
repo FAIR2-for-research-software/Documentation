@@ -44,3 +44,9 @@ Command-line interface (CLI)
 
 Terminal
 : A text prompt that is used to enter commands into a computer
+
+Graphical user interface (GUI)
+: A visual way to provide instructions to a computer by manipulating buttons and icons.
+
+Operating system
+: Manages the files (data storage), software, and hardware that make up the computer and its services.
