@@ -28,19 +28,19 @@ A documentation website is a user guide and reference manual for a library of re
 
 A documentation site for research software usually contains an introduction, installation instructions, a user guide, troubleshooting tips, and an in-depth reference section.
 
+To get an idea of this, here are some links documentation websites for widely-used data analysis and research software packages:
+
+- [pandas](https://pandas.pydata.org/docs/) is a data processing library for the Python programming language.
+- [ggplot2](https://ggplot2.tidyverse.org/index.html) is a plotting package for the R statistical language.
+- [scikit-learn](https://scikit-learn.org/stable/user_guide.html) is a machine learning library for the Python programming language.
+
 ### Advantages
 
 It makes it much easier for new users to get started using your software to boost their research.
 
 ### When to use one
 
-## Docsite tools
-
-GitHub Wiki
-
-Sphinx
-
-MkDocs
+TODO
 
 ## Docsite contents
 
@@ -71,6 +71,14 @@ As issues come up with your research code, and are eventually resolved and clari
 ### FAQs
 
 An appendix containing frequently asked questions (FAQs) is very useful to save yourself time in responding to common queries from the users of your code.
+
+## Docsite tools
+
+GitHub Wiki
+
+Sphinx
+
+MkDocs
 
 ## Publishing your docsite
 
