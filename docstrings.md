@@ -36,6 +36,18 @@ def add(x, y):
     return x + y
 ```
 
+::::::::::::::::::::::::::::::::: challenge
+
+Write a documentation string for a function.
+
+::::::::::::::::: solution
+
+TODO
+
+::::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::::::::
+
 In this code, the function uses the normal Python syntax, except a string has been included below the function definition. The contents of that string will be displayed to users in their development environment or by running the help function like so:
 
 ```output
@@ -45,6 +57,18 @@ Help on function add in module __main__:
 add(x, y)
     Calculate the sum of two numbers.
 ```
+
+::::::::::::::::::::::::::::::::: challenge
+
+Use the `help()` function to view the documentation string for a function.
+
+::::::::::::::::: solution
+
+TODO
+
+::::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::::::::
 
 The most important thing to include in a docstrings is an explanation of the purpose of this piece of code. To write a useful docstring, put yourself in the shoes of someone who encounters your code for the first time and needs a simple introduction that doesn’t assume any implied knowledge. The explanation will be very basic and seem obvious to you, but it may help a new user greatly.
 
