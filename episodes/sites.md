@@ -196,7 +196,7 @@ Sphinx will load our files from the `docs/` directory and output the built HTML 
 
 The file `docs/_build/html/index.html` contains the home page of your new documentation site! Open that file to view your handiwork.
 
-![The Sphinx homepage for our documentation site](fig/sphinx-build-screenshot "Sphinx")
+![The Sphinx homepage for our documentation site](fig/sphinx-build-screenshot.png "Sphinx")
 
 #### Autodoc
 
@@ -233,6 +233,10 @@ Now, when we build our site, Sphinx will scan the contents of the `oddsong` Pyth
 ```bash
 sphinx-build -M html docs docs/_build
 ```
+
+The result looks something like this:
+
+![Python documentation string rendered as HTML](fig/oddsong-autodoc.png "A Python function documentation string")
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
