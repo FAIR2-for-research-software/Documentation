@@ -53,3 +53,7 @@ Operating system
 
 Documentation site
 : A software documentation website is a structured guide to using a library of research code.
+
+## Further resources
+
+- Write the Docs, [A beginner’s guide to writing documentation](https://www.writethedocs.org/guide/writing/beginners-guide-to-docs/)

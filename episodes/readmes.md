@@ -7,14 +7,14 @@ exercises: 2
 :::::::::::::::::::::::::::::::::::::: questions 
 
 - What is a README file?
-- How do I write a README?
+- How do I write a README for my research code?
 - What are the contents of a good README file?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Explain why and how to write a README file
+- Explain why and how to write a README file for research software
 - Learn how to structure a README file into sections
 - Understand the important components of a good README
 
@@ -63,15 +63,17 @@ Diagrams can be particularly useful to explain complex concepts and workflows. S
 
 ## Markdown format
 
-Most people prefer to use a file format that allows you to create headers to organise the content into sections or chapters, which is much clearer for the reader. In this case, a Markdown document may be used. Markdown is a simple mark-up language that allows you to format your text using symbols to represent headers, bold text, bullet lists, etc. that are displayed to the user in an appealing way.
+Most people prefer to use a file format that allows you to create headers to organise the content into sections or chapters, which is much clearer for the reader.
+
+In this case, a Markdown document may be used. Markdown is a simple mark-up language that allows you to format your text using symbols to represent headers, bold text, bullet lists, etc. that are displayed to the user in an appealing way. The Markdown syntax will be converted into appealing visual styles that make your documentation more aesthetically pleasing and easier to read.
 
 An example README file in Markdown format is shown below, in a file called `README.md` where .md is the file extension for Markdown files.
 
 ### Section headers
 
-You can separate your document into sections with headers using the `#` symbol, for example:
+You can separate your document into hierarchical sections with headings using the `#` symbol. This makes your README easier to navigate. For example:
 
-```md
+```markdown
 # My research software
 
 This software is designed to...
@@ -85,7 +87,7 @@ To install this software...
 To use this package...
 ```
 
-The “#” symbol means that line will be converted into a header and displayed to the reader in a large, bold font. This makes it easier for the reader to navigate your text, just like having chapters in a book.
+The “#” symbol means that line will be converted into a header and displayed to the reader in a large, bold font. This makes it easier for the reader to find the part of your text they're looking for, just like having chapters in a book.
 
 If your code is published on GitHub, the home page of your code repository will display the README.md file, including a navigation menu that is automatically created to easily select the section of the document to view.
 
@@ -103,7 +105,43 @@ Here are some commonly-used text formatting options that can be used with Markdo
 | `Code block`      | ``` `code block` ``` |
 | [Hyperlink](https://sheffield.ac.uk) | `[Hyperlink](https://sheffield.ac.uk)` |
 
+### Block quotes
+
+We can create a citation with appealing formatting by using the blockquote syntax in Markdown, which is similar to the method used in email.
+
+```markdown
+> This text is part of a blockquote.
+```
+
+This will be rendered with the following apperearance:
+
+> This text is part of a blockquote.
+
+### Code blocks
+
+If you'd like to present the user will examples of source code, use code fences to display the code in a special text box with syntax highlighting. For example:
+
+<code>
+```
+pi = 3.14
+```
+</code>
+
+::: callout
+
+You can learn more about writing documents using Markdown at [Markdown Guide](https://www.markdownguide.org/), a reference for using this syntax.
+
+:::
+
+Remember, the README file is a first impression that research users will receive for your software. Make them informative and user-friendly to enhance the research experience for others and foster collaboration.
+
 :::::: keypoints
 
- - TODO
+ - A README file serves as an introduction to your software, guiding users on installation, usage, and understanding its capabilities.
+ - Consider the user's technical background; write clearly and avoid jargon.
+ - A README contains a brief description of the software, installation instructions, and a usage guide.
+ - The writing style should be concide, clear, and explain technical terms.
+ - Use diagrams and screenshots for clarity.
+ - Markdown is a recommended format for creating headers, bold text, bullet points, etc.
+
 ::::::

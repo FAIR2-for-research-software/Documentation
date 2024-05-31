@@ -42,6 +42,12 @@ Writing a useful software package that is well-documented and can be reused in t
 
 In the long run, it can help you to develop your own software engineering practice by getting into the habit of reflecting on what the purpose of the software is and to articulate what each component or module is for.
 
+## When should I write documentation?
+
+Now! Start writing and sharing documentation for your reseach code from the beginning of your project. This might include design notes, diagrams, or the various kinds of software documentation we'll discuss in this module. The best practice for modern, collaborative research involving digital methods and tools is to document your processes *early and often*. Not only will writing notes about your code help other people to read and use that code, it will clarify your thought process as you design your system, focussing your work on the important parts of the task at hand.
+
+Keep in touch with other developers and users of the research code and make a note of their feedback. Common questions and problems are a sign that there are issues that must be covered more clearly and in greater depth in the software documentation. Incorporate this feedback into the software documentation using the whichever method is most appropriate, following the guidance in this module.
+
 ## Examples
 
 Here are some examples of some code to perform some geometry. The first example could be improved in terms of its documentation and readability, while the second one is much clearer. Which one would you prefer to use?

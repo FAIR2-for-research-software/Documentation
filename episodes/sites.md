@@ -26,7 +26,7 @@ exercises: 2
 
 A documentation website is a user guide and reference manual for a library of research code. Up to now, we've looked at ways to put helpful notes in our code, but now we'll learn how to write a longer, more complete guide to the research tools you create.
 
-A documentation site for research software usually contains an introduction, installation instructions, a user guide, troubleshooting tips, and an in-depth reference section.
+A documentation site bring all your user guidance into one place. This kind of resource may be prepared for research software and will usually contain an introduction, installation instructions, a user guide, troubleshooting tips, and an in-depth reference section.
 
 To get an idea of this, here are some links documentation websites for widely-used data analysis and research software packages:
 
@@ -36,11 +36,23 @@ To get an idea of this, here are some links documentation websites for widely-us
 
 ### Advantages
 
-It makes it much easier for new users to get started using your software to boost their research.
+There are many advantages to building a documentation site to provide a information-rich resource for researchers who use your code at institutions all around the world. These sites can work as hubs for collaboration, sharing the latest updates, and encouraging people to take up your system and get involved in improving it. The effort of setting one up will be rewarded in the long run because you will have created a valuable asset that will foster collaboration and knowledge sharing in your research community.
+
+A key foundation stone of modern digital research practices is the ability to replicate results by reproducing analysis workflows.  Clear, thorough documentation of the research code ensures that researchers can repeat processes and verify results and other people's outputs.
+
+Documementation sites are really useful for introducing new users to your software. It makes it much easier and faster for new users to get started using your software to boost their research. It's one of the most effective ways to create a user base that has a sophisticated understanding of the research code, which is essential for them to adapt it to the complex problems that often raise in research contexts.
+
+They're also a valuable resource for your existing user base, enabling them to look up reference material or search the manual to find new capabilities they weren't aware of before. This will increase the potential for your software to accellerate the productivity of other research teams and boost scientific progress.
 
 ### When to use one
 
-TODO
+Although the advantages are numerous, not all software packages require a comprehensive documentation website. However, for any code project that is growing in the number of collaborators, users, and technicala complexity, consider coordinating the team to write one as soon as possible to help the project grow in a healthy manner.
+
+### Writing style
+
+Strive to use everyday, jargon-free language. It helps to set an approachable tone that encourages others to use the software and get involved with the project. This will en sure that the code is accesible to the widest possible layers of the research community and foster collaboration.
+
+Always consider the target audience of your documentation, because your user base may be unaware of some of the unstated assumptions and technical backgroud knowledge that you take for granted.
 
 ## Docsite contents
 
@@ -68,27 +80,78 @@ If you have written functions that are intended to be use in other reseachers' c
 
 As issues come up with your research code, and are eventually resolved and clarified, make a note of the causes of these troubles and make them available to the entire user base in your documentation site. This will help users to identify and fix common misunderstandings and technical problems they may run into when utilising your code.
 
+This prevents a situation where potential solutions to common issues do exist, but are scattered around the internet are the exclusive knowledge of a few individuals and are hard to find.
+
 ### FAQs
 
 An appendix containing frequently asked questions (FAQs) is very useful to save yourself time in responding to common queries from the users of your code.
 
 ## Docsite tools
 
-GitHub Wiki
+There are various tools available to build documentation sites for your research software.
 
-Sphinx
+### GitHub Wiki
 
-MkDocs
+If you are publishing your code on GitHub, which is a web service that hosts costs repositories, then one of the easiest ways to create a documentation site is to use the wiki feature on that platform. This is a great way to write detailed, structured documents containing long-form content that describes aspects of your software. What's more, it's available alongside your code so your documentation and software are located in one place.
+
+As with readme files, the text that appears on GitHub is [formatted using Markdown syntax](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github).
+
+#### Getting started
+
+To create a wiki, which is a simple, easy-to-edit web site, go to the main page of your code repository on GitHub and click on the Wiki button on the top menu. For a detailed walkthrough of this process, please read [adding or editing wiki pages](https://docs.github.com/en/communities/documenting-your-project-with-wikis/adding-or-editing-wiki-pages) on the GitHub documentation.
+
+::: callout
+
+For more information about the wiki feature on GitHub, see [Documenting your project with wikis](https://docs.github.com/en/communities/documenting-your-project-with-wikis) on the GitHub documentation.
+
+:::
+
+### Sphinx
+
+Sphinx is a tool for building documentation websites that is commonly used amongst developers of Python packages, although it's also compatible with other programming languages.
+
+Sphinx is a documentation generator tool takes plain text files that use a markup syntax (such as reStructuredText or Markdown) for formatting the content of your documentation site and transforms them into various output formats, ready to be published on the internet. It has a number of useful features, but in this module we'll learn the basics to document our research code.
+
+::: callout
+
+For a more in-depth guide, please see [Build your first project](https://www.sphinx-doc.org/en/master/tutorial/) in the Sphinx documentation.
+
+:::
+
+#### Getting started
+
+
+
+#### Autodoc
+
+Automatically generate documentation sites from doc-strings.
+
+https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html
+
+### pkgdown
+
+https://r-pkgs.org/website.html
 
 ## Publishing your docsite
 
-GitHub pages
+### GitHub pages
 
-Read the Docs
+TODO
+
+[GitHub Pages documentation](https://docs.github.com/en/pages)
+
+### Getting started
+
+TODO
+
+### Deploying your site
+
+TODO
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
-- Structured documentation websites are very useful for users to learn to use all kinds of digital systems.
+- Structured documentation websites are very useful for users to learn to use all kinds of digital systems, ensuring its successful adoption by the wider research community.
+- Documentation sites contain comprehensive installation instructions, user guides, and troubleshooting tips.
 - There are several libraries that may be used to generate documentation sites.
 - Documentation websites may be deployed to a hosting platform.
 
