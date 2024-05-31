@@ -235,9 +235,9 @@ For more information about this aspect of coding style, please read the [Tidyver
 
 Although these rules aren't strict, because your code will still run without error, it does help clarify your intentions by describing what type of variable or object is being referred to. Whatever you do, please try to follow a consistent style with your collaborators to avoid confusion.
 
-## Code comments
+## Comments
 
-Code **comments** allow us to annotate any part of our software with a human-readable description of the expected behaviour of the code or our general intentions to aid the reader in their interpretation.
+Code **comments** allow us to annotate any part of our software with a human-readable description of the expected behaviour of the code or our general intentions to aid the reader in their interpretation. Start writing these as soon as you begin development work, as they'll capture your thought process while the knowledge is fresh in your mind, avoiding the risk of forgetting important details.
 
 To add comments to your code, use the `#` symbol at the start of a new line, like so:
 
