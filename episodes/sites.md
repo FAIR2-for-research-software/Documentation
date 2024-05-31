@@ -22,7 +22,7 @@ exercises: 2
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Documentation sites
+## Introduction
 
 A documentation website is a user guide and reference manual for a library of research code. Up to now, we've looked at ways to put helpful notes in our code, but now we'll learn how to write a longer, more complete guide to the research tools you create.
 
@@ -54,7 +54,7 @@ Strive to use everyday, jargon-free language. It helps to set an approachable to
 
 Always consider the target audience of your documentation, because your user base may be unaware of some of the unstated assumptions and technical backgroud knowledge that you take for granted.
 
-## Docsite contents
+## Contents
 
 Documentation pages contain comphrehensive information about a particular piece of research software. Think of it like a user manual for your car or an instruction guide for building a piece of furniature.
 
@@ -86,7 +86,7 @@ This prevents a situation where potential solutions to common issues do exist, b
 
 An appendix containing frequently asked questions (FAQs) is very useful to save yourself time in responding to common queries from the users of your code.
 
-## Docsite tools
+## Tools
 
 There are various tools available to build documentation sites for your research software.
 
@@ -132,7 +132,7 @@ https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html
 
 https://r-pkgs.org/website.html
 
-## Publishing your docsite
+## Publishing
 
 ### GitHub pages
 
