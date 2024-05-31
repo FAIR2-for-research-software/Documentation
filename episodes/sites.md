@@ -22,7 +22,7 @@ exercises: 2
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Documentation sites
+## Introduction
 
 A documentation website is a user guide and reference manual for a library of research code. Up to now, we've looked at ways to put helpful notes in our code, but now we'll learn how to write a longer, more complete guide to the research tools you create.
 
@@ -54,7 +54,7 @@ Strive to use everyday, jargon-free language. It helps to set an approachable to
 
 Always consider the target audience of your documentation, because your user base may be unaware of some of the unstated assumptions and technical backgroud knowledge that you take for granted.
 
-## Docsite contents
+## Contents
 
 Documentation pages contain comphrehensive information about a particular piece of research software. Think of it like a user manual for your car or an instruction guide for building a piece of furniature.
 
@@ -86,7 +86,7 @@ This prevents a situation where potential solutions to common issues do exist, b
 
 An appendix containing frequently asked questions (FAQs) is very useful to save yourself time in responding to common queries from the users of your code.
 
-## Docsite tools
+## Tools
 
 There are various tools available to build documentation sites for your research software.
 
@@ -108,7 +108,7 @@ For more information about the wiki feature on GitHub, see [Documenting your pro
 
 ### Sphinx
 
-Sphinx is a tool for building documentation websites that is commonly used amongst developers of Python packages, although it's also compatible with other programming languages.
+[Sphinx](https://www.sphinx-doc.org/) is a tool for building documentation websites that is commonly used amongst developers of Python packages, although it's also compatible with other programming languages.
 
 Sphinx is a documentation generator tool takes plain text files that use a markup syntax (such as reStructuredText or Markdown) for formatting the content of your documentation site and transforms them into various output formats, ready to be published on the internet. It has a number of useful features, but in this module we'll learn the basics to document our research code.
 
@@ -120,19 +120,142 @@ For a more in-depth guide, please see [Build your first project](https://www.sph
 
 #### Getting started
 
+Let's use Sphinx to create a documentation site for our Python code.
 
+##### Installing Sphinx
+
+Navigate to the root folder of your code project. Create a virtual environment using [venv](https://docs.python.org/3/library/venv.html) which is a separate area in which to install the Sphinx package.
+
+```bash
+python -m venv .venv
+```
+
+This will create a subdirectory that contains the packages we'll need to complete the exercises in this section.
+
+Run the activation script to enable the virtual environment. The specific command needed to activate the virtual environment depends on the operating system you are using.
+
+::: group-tab
+
+### Windows
+
+```bash
+.venv\Scripts\activate
+```
+
+### Linux
+
+```bash
+source .venv/bin/activate
+```
+
+### macOS
+
+```bash
+source .venv/bin/activate
+```
+
+Use the Python package manager [pip](https://pip.pypa.io/en/stable/) to [install Sphinx](https://www.sphinx-doc.org/en/master/usage/installation.html).
+
+```bash
+pip install sphinx
+```
+
+:::
+
+##### Start a new Sphinx project
+
+Sphinx includes a command to set up a new project called [sphinx-quickstart](https://www.sphinx-doc.org/en/master/man/sphinx-quickstart.html). Navigate to your project's root folder and run the following command. 
+
+```bash
+sphinx-quickstart docs --no-sep --ext-autodoc
+```
+
+This will initialise the configuration files for a new Sphinx site in a subdirectory called `docs/` and prompt you to enter the following options:
+
+* Project name: Birdsong Identifier
+* Author name(s): Bill Oddie
+* Project release []: 1.0
+
+::: callout
+
+To find out more about the Sphinx configuration files, please read their guide to [defining document structure](https://www.sphinx-doc.org/en/master/usage/quickstart.html#defining-document-structure) on the Sphinx documentation.
+
+:::
+
+#### Building the site
+
+In this context, building means taking our collection of Sphinx files and converting them into the source code files that define a website. Sphinx will create HyperText Markup Language (HTML) files, which is the markup language for pages that display in a web browser commonly used on the internet.
+
+To build our site, we run the [sphinx-build](https://www.sphinx-doc.org/en/master/man/sphinx-build.html) command using the `-M` option to select HTML syntax as the output format.
+
+```bash
+sphinx-build -M html docs docs/_build
+```
+
+Sphinx will load our files from the `docs/` directory and output the built HTML files in the `docs/_build` directory.
+
+The file `docs/_build/html/index.html` contains the home page of your new documentation site! Open that file to view your handiwork.
+
+![The Sphinx homepage for our documentation site](fig/sphinx-build-screenshot.png "Sphinx")
 
 #### Autodoc
 
-Automatically generate documentation sites from doc-strings.
+It can be useful to automatically populate our documentation sites by converting our [documentation strings](docstrings.md) into formatted text. We can achieve this using the [autodoc](https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html) plugin for Sphinx.
 
-https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html
+##### Configuring Autodoc
+
+::: Hint
+
+If you struggle with these steps, please refer to the [template project](https://github.com/Joe-Heffer-Shef/oddsong).
+
+:::
+
+Add the following lines to `docs/conf.py`
+
+```python
+# Our Python code may be imported from the parent directory
+import os
+import sys
+sys.path.insert(0, os.path.abspath('..'))
+```
+
+This ensures that Sphinx can access our Python code.
+
+Next, edit `docs/index.rst` and add the following lines:
+
+```rst
+.. automodule:: oddsong.song
+    :members:
+```
+
+Now, when we build our site, Sphinx will scan the contents of the `oddsong` Python module and automatically generate a useful reference guide to our functions.
+
+```bash
+sphinx-build -M html docs docs/_build
+```
+
+The result looks something like this:
+
+![Python documentation string rendered as HTML](fig/oddsong-autodoc.png "A Python function documentation string")
+
+::::::::::::::::::::::::::::::::::::: challenge
+
+## Automatically generated content
+
+Try using `autodoc`.
+
+:::::::::::::::: solution
+
+TODO
+
+:::::::::::::::::::::::::
+:::::::::::::::::::::::::::::::::::::::::::::::
 
 ### pkgdown
 
 https://r-pkgs.org/website.html
 
-## Publishing your docsite
+## Publishing
 
 ### GitHub pages
 
