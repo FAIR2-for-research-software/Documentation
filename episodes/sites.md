@@ -98,7 +98,7 @@ As with readme files, the text that appears on GitHub is [formatted using Markdo
 
 #### Getting started
 
-To create a wiki, go to the main page of your code repository on GitHub and click on the Wiki button on the top menu. For a detailed walkthrough of this process, please read [adding or editing wiki pages](https://docs.github.com/en/communities/documenting-your-project-with-wikis/adding-or-editing-wiki-pages) on the GitHub documentation.
+To create a wiki, which is a simple, easy-to-edit web site, go to the main page of your code repository on GitHub and click on the Wiki button on the top menu. For a detailed walkthrough of this process, please read [adding or editing wiki pages](https://docs.github.com/en/communities/documenting-your-project-with-wikis/adding-or-editing-wiki-pages) on the GitHub documentation.
 
 ::: callout
 
@@ -108,11 +108,29 @@ For more information about the wiki feature on GitHub, see [Documenting your pro
 
 ### Sphinx
 
-TODO
+Sphinx is a tool for building documentation websites that is commonly used amongst developers of Python packages, although it's also compatible with other programming languages.
 
-### MkDocs
+Sphinx is a documentation generator tool takes plain text files that use a markup syntax (such as reStructuredText or Markdown) for formatting the content of your documentation site and transforms them into various output formats, ready to be published on the internet. It has a number of useful features, but in this module we'll learn the basics to document our research code.
 
-TODO
+::: callout
+
+For a more in-depth guide, please see [Build your first project](https://www.sphinx-doc.org/en/master/tutorial/) in the Sphinx documentation.
+
+:::
+
+#### Getting started
+
+
+
+#### Autodoc
+
+Automatically generate documentation sites from doc-strings.
+
+https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html
+
+### pkgdown
+
+https://r-pkgs.org/website.html
 
 ## Publishing your docsite
 
@@ -122,13 +140,17 @@ TODO
 
 [GitHub Pages documentation](https://docs.github.com/en/pages)
 
-### Read the Docs
+### Getting started
+
+TODO
+
+### Deploying your site
 
 TODO
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
-- Structured documentation websites are very useful for users to learn to use all kinds of digital systems.
+- Structured documentation websites are very useful for users to learn to use all kinds of digital systems, ensuring its successful adoption by the wider research community.
 - Documentation sites contain comprehensive installation instructions, user guides, and troubleshooting tips.
 - There are several libraries that may be used to generate documentation sites.
 - Documentation websites may be deployed to a hosting platform.
