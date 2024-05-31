@@ -454,7 +454,7 @@ what this code is for or why it was written.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-1" class="tab-content">
-<div id="nav-tabpanel-1-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-Python">
+<div id="nav-tabpanel-1-Python" class="tab-pane show active" aria-labelledby="nav-tab-1-Python" role="tabpanel">
 <p>This is some research code that is contained in a Python
 function.</p>
 <div class="codewrapper sourceCode" id="cb1">
@@ -465,7 +465,7 @@ function.</p>
 <span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a>  <span class="cf">return</span> x <span class="op">*</span> weird_num <span class="op">-</span> angle<span class="op">**</span><span class="dv">3</span> <span class="op">/</span> (weird_num <span class="op">*</span> <span class="dv">2</span>)</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-1-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-R">
+<div id="nav-tabpanel-1-R" class="tab-pane" aria-labelledby="nav-tab-1-R" role="tabpanel">
 <p>This is some research code that is contained in an R function.</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -508,7 +508,7 @@ research software.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-2" class="tab-content">
-<div id="nav-tabpanel-2-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-2-Python">
+<div id="nav-tabpanel-2-Python" class="tab-pane show active" aria-labelledby="nav-tab-2-Python" role="tabpanel">
 <p>This is a function written in the Python programming language that
 calculates a mathematical result, the details of which aren’t relevant.
 This code has plenty of documentation to help us read and understand
@@ -544,7 +544,7 @@ it.</p>
 <span id="cb3-26"><a href="#cb3-26" tabindex="-1"></a>  <span class="cf">return</span> sin_value</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-2-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-R">
+<div id="nav-tabpanel-2-R" class="tab-pane" aria-labelledby="nav-tab-2-R" role="tabpanel">
 <p>This is a function written in the R programming language that
 calculates a mathematical result, the details of which aren’t relevant.
 This code has plenty of documentation to help us read and understand
@@ -689,6 +689,37 @@ a manual for a new user who has never seen this software before.</p>
 empty text file called <code>README.txt</code> and start writing. This
 file should be located in the directory (or folder) that contains your
 software project.</p>
+<div id="challenge1" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Challenge<a class="anchor" aria-label="anchor" href="#challenge1"></a>
+</h3>
+<div class="callout-content">
+<p>Let’s create a new code project. Create a new, empty directory to
+contain your work. Then, start writing your README!</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1">Show me the solution</h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div class="accordion-body">
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="fu">mkdir</span> my_project</span>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a><span class="fu">touch</span> my_project/README.txt</span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a><span class="bu">echo</span> <span class="st">"This is my code"</span> <span class="op">&gt;&gt;</span> my_project/README.txt</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
 <p>The essentials contents of a README file are:</p>
 <ul>
 <li>The name of the software. This seems trivial, but a clear title and
@@ -775,20 +806,20 @@ Markdown files.</p>
 <p>You can separate your document into hierarchical sections with
 headings using the <code>#</code> symbol. This makes your README easier
 to navigate. For example:</p>
-<div class="codewrapper sourceCode" id="cb1">
+<div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">MARKDOWN<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode markdown" tabindex="0"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="fu"># My research software</span></span>
-<span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a></span>
-<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a>This software is designed to...</span>
-<span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a></span>
-<span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a><span class="fu"># Installation</span></span>
-<span id="cb1-6"><a href="#cb1-6" tabindex="-1"></a></span>
-<span id="cb1-7"><a href="#cb1-7" tabindex="-1"></a>To install this software...</span>
-<span id="cb1-8"><a href="#cb1-8" tabindex="-1"></a></span>
-<span id="cb1-9"><a href="#cb1-9" tabindex="-1"></a><span class="fu"># Usage</span></span>
-<span id="cb1-10"><a href="#cb1-10" tabindex="-1"></a></span>
-<span id="cb1-11"><a href="#cb1-11" tabindex="-1"></a>To use this package...</span></code></pre>
+<pre class="sourceCode markdown" tabindex="0"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="fu"># My research software</span></span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a></span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a>This software is designed to...</span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a><span class="fu"># Installation</span></span>
+<span id="cb2-6"><a href="#cb2-6" tabindex="-1"></a></span>
+<span id="cb2-7"><a href="#cb2-7" tabindex="-1"></a>To install this software...</span>
+<span id="cb2-8"><a href="#cb2-8" tabindex="-1"></a></span>
+<span id="cb2-9"><a href="#cb2-9" tabindex="-1"></a><span class="fu"># Usage</span></span>
+<span id="cb2-10"><a href="#cb2-10" tabindex="-1"></a></span>
+<span id="cb2-11"><a href="#cb2-11" tabindex="-1"></a>To use this package...</span></code></pre>
 </div>
 <p>The “#” symbol means that line will be converted into a header and
 displayed to the reader in a large, bold font. This makes it easier for
@@ -846,10 +877,10 @@ with Markdown syntax:</p>
 <p>We can create a citation with appealing formatting by using the
 blockquote syntax in Markdown, which is similar to the method used in
 email.</p>
-<div class="codewrapper sourceCode" id="cb2">
+<div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">MARKDOWN<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode markdown" tabindex="0"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="at">&gt; This text is part of a blockquote.</span></span></code></pre>
+<pre class="sourceCode markdown" tabindex="0"><code class="sourceCode markdown"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="at">&gt; This text is part of a blockquote.</span></span></code></pre>
 </div>
 <p>This will be rendered with the following apperearance:</p>
 <blockquote>
@@ -913,7 +944,7 @@ any links that you are not going to use.
 </div>
 </section></section><section id="aio-docstrings"><p>Content from <a href="docstrings.html">Documentation strings</a></p>
 <hr>
-<p>Last updated on 2024-05-21 |
+<p>Last updated on 2024-05-31 |
         
         <a href="https://github.com/Joe-Heffer-Shef/FAIR4RS-Documentation/edit/main/episodes/docstrings.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -971,6 +1002,30 @@ calculates the sum of two numbers:</p>
 <span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a><span class="co">    """</span></span>
 <span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a>    <span class="cf">return</span> x <span class="op">+</span> y</span></code></pre>
 </div>
+<div id="challenge1" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Challenge<a class="anchor" aria-label="anchor" href="#challenge1"></a>
+</h3>
+<div class="callout-content">
+<p>Write a documentation string for a function.</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1">Show me the solution</h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div class="accordion-body">
+<p>TODO</p>
+</div>
+</div>
+</div>
+</div>
 <p>In this code, the function uses the normal Python syntax, except a
 string has been included below the function definition. The contents of
 that string will be displayed to users in their development environment
@@ -983,6 +1038,31 @@ Help on function add in module __main__:
 
 add(x, y)
     Calculate the sum of two numbers.</code></pre>
+</div>
+<div id="challenge2" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Challenge<a class="anchor" aria-label="anchor" href="#challenge2"></a>
+</h3>
+<div class="callout-content">
+<p>Use the <code>help()</code> function to view the documentation string
+for a function.</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution2" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
+  <h4 class="accordion-header" id="headingSolution2">Show me the solution</h4>
+</button>
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div class="accordion-body">
+<p>TODO</p>
+</div>
+</div>
+</div>
 </div>
 <p>The most important thing to include in a docstrings is an explanation
 of the purpose of this piece of code. To write a useful docstring, put
@@ -1170,7 +1250,7 @@ font.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-1" class="tab-content">
-<div id="nav-tabpanel-1-Python" class="tab-pane show active" aria-labelledby="nav-tab-1-Python" role="tabpanel">
+<div id="nav-tabpanel-1-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-Python">
 <p>Without syntax highlighting:</p>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1214,7 +1294,7 @@ font.</p>
 <span id="cb2-16"><a href="#cb2-16" tabindex="-1"></a>  <span class="cf">return</span> word_count</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-1-R" class="tab-pane" aria-labelledby="nav-tab-1-R" role="tabpanel">
+<div id="nav-tabpanel-1-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-R">
 <p>Without syntax highlighting:</p>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1316,7 +1396,7 @@ it’s easy to interpret their purpose.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-2" class="tab-content">
-<div id="nav-tabpanel-2-Python" class="tab-pane show active" aria-labelledby="nav-tab-2-Python" role="tabpanel">
+<div id="nav-tabpanel-2-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-2-Python">
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -1328,7 +1408,7 @@ it’s easy to interpret their purpose.</p>
 <span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a>    <span class="cf">return</span> area</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-2-R" class="tab-pane" aria-labelledby="nav-tab-2-R" role="tabpanel">
+<div id="nav-tabpanel-2-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-R">
 <div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -1369,7 +1449,7 @@ variable with the same name as an inbuilt function such as
 </button>
 </div>
 </nav><div id="nav-tabContent-3" class="tab-content">
-<div id="nav-tabpanel-3-Python" class="tab-pane show active" aria-labelledby="nav-tab-3-Python" role="tabpanel">
+<div id="nav-tabpanel-3-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-3-Python">
 <p>Classes use capitalised words</p>
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1393,7 +1473,7 @@ variable with the same name as an inbuilt function such as
 Conventions</a> section of
 <acronym title="Python Enhancement Proposals">PEP</acronym> 8.</p>
 </div>
-<div id="nav-tabpanel-3-R" class="tab-pane" aria-labelledby="nav-tab-3-R" role="tabpanel">
+<div id="nav-tabpanel-3-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-3-R">
 <p>Classes use capitalised words</p>
 <div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1453,7 +1533,7 @@ start of a new line, like so:</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-4" class="tab-content">
-<div id="nav-tabpanel-4-Python" class="tab-pane show active" aria-labelledby="nav-tab-4-Python" role="tabpanel">
+<div id="nav-tabpanel-4-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-4-Python">
 <div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -1462,7 +1542,7 @@ start of a new line, like so:</p>
 <span id="cb13-3"><a href="#cb13-3" tabindex="-1"></a>age <span class="op">=+</span> <span class="dv">3</span></span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-4-R" class="tab-pane" aria-labelledby="nav-tab-4-R" role="tabpanel">
+<div id="nav-tabpanel-4-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-4-R">
 <div class="codewrapper sourceCode" id="cb14">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -1505,7 +1585,7 @@ they move through the system.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-5" class="tab-content">
-<div id="nav-tabpanel-5-Python" class="tab-pane show active" aria-labelledby="nav-tab-5-Python" role="tabpanel">
+<div id="nav-tabpanel-5-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-5-Python">
 <p>In the Python programming language, we can tell the user what type of
 data we expect each variable to contain by using the syntax below. This
 colon means that the <code>age</code> variable should contain a value
@@ -1519,7 +1599,7 @@ with the integer type, <code>int</code>.</p>
 of the Python Documentation and the <a href="https://mypy.readthedocs.io/en/stable/cheat_sheet_py3.html" class="external-link">Type
 hints cheat sheet</a> in the mypy documentation.</p>
 </div>
-<div id="nav-tabpanel-5-R" class="tab-pane" aria-labelledby="nav-tab-5-R" role="tabpanel">
+<div id="nav-tabpanel-5-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-5-R">
 <p>There is no type hinting feature in base R, although some packages
 are available that enable this. Here, the <code>L</code> symbol at the
 end of the number tells the R interpreter that this is an integer data
@@ -1558,7 +1638,7 @@ reader.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-6" class="tab-content">
-<div id="nav-tabpanel-6-Python" class="tab-pane show active" aria-labelledby="nav-tab-6-Python" role="tabpanel">
+<div id="nav-tabpanel-6-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-6-Python">
 <p>Below is the source code for a simple Python function that calculates
 the sum of two numbers. I’ve labelled each of the function arguments
 <code>a</code> and <code>b</code> with variable annotations that let you
@@ -1575,7 +1655,7 @@ declaration as <code>-&gt; int</code>.</p>
 <span id="cb17-3"><a href="#cb17-3" tabindex="-1"></a>    <span class="cf">return</span> a <span class="op">+</span> b</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-6-R" class="tab-pane" aria-labelledby="nav-tab-6-R" role="tabpanel">
+<div id="nav-tabpanel-6-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-6-R">
 <p>Below is the source code for a simple R function that calculates the
 sum of two numbers.</p>
 <p>In R, there is no inbuilt functionality for annotating the expected
@@ -1716,7 +1796,7 @@ tools.</li>
 </div>
 </div>
 </div>
-<section id="documentation-sites"><h2 class="section-heading">Documentation sites<a class="anchor" aria-label="anchor" href="#documentation-sites"></a>
+<section id="introduction"><h2 class="section-heading">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
 </h2>
 <hr class="half-width">
 <p>A documentation website is a user guide and reference manual for a
@@ -1788,7 +1868,7 @@ collaboration.</p>
 your user base may be unaware of some of the unstated assumptions and
 technical backgroud knowledge that you take for granted.</p>
 </div>
-</section><section id="docsite-contents"><h2 class="section-heading">Docsite contents<a class="anchor" aria-label="anchor" href="#docsite-contents"></a>
+</section><section id="contents"><h2 class="section-heading">Contents<a class="anchor" aria-label="anchor" href="#contents"></a>
 </h2>
 <hr class="half-width">
 <p>Documentation pages contain comphrehensive information about a
@@ -1857,7 +1937,7 @@ knowledge of a few individuals and are hard to find.</p>
 useful to save yourself time in responding to common queries from the
 users of your code.</p>
 </div>
-</section><section id="docsite-tools"><h2 class="section-heading">Docsite tools<a class="anchor" aria-label="anchor" href="#docsite-tools"></a>
+</section><section id="tools"><h2 class="section-heading">Tools<a class="anchor" aria-label="anchor" href="#tools"></a>
 </h2>
 <hr class="half-width">
 <p>There are various tools available to build documentation sites for
@@ -1900,9 +1980,10 @@ your project with wikis</a> on the GitHub documentation.</p>
 <div class="section level3">
 <h3 id="sphinx">Sphinx<a class="anchor" aria-label="anchor" href="#sphinx"></a>
 </h3>
-<p>Sphinx is a tool for building documentation websites that is commonly
-used amongst developers of Python packages, although it’s also
-compatible with other programming languages.</p>
+<p><a href="https://www.sphinx-doc.org/" class="external-link">Sphinx</a> is a tool for
+building documentation websites that is commonly used amongst developers
+of Python packages, although it’s also compatible with other programming
+languages.</p>
 <p>Sphinx is a documentation generator tool takes plain text files that
 use a markup syntax (such as reStructuredText or Markdown) for
 formatting the content of your documentation site and transforms them
@@ -1925,12 +2006,203 @@ project</a> in the Sphinx documentation.</p>
 <div class="section level4">
 <h4 id="getting-started-1">Getting started<a class="anchor" aria-label="anchor" href="#getting-started-1"></a>
 </h4>
+<p>Let’s use Sphinx to create a documentation site for our Python
+code.</p>
+<div class="section level5">
+<h5 id="installing-sphinx">Installing Sphinx<a class="anchor" aria-label="anchor" href="#installing-sphinx"></a>
+</h5>
+<p>Navigate to the root folder of your code project. Create a virtual
+environment using <a href="https://docs.python.org/3/library/venv.html" class="external-link">venv</a> which is a
+separate area in which to install the Sphinx package.</p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> venv .venv</span></code></pre>
+</div>
+<p>This will create a subdirectory that contains the packages we’ll need
+to complete the exercises in this section.</p>
+<p>Run the activation script to enable the virtual environment. The
+specific command needed to activate the virtual environment depends on
+the operating system you are using.</p>
+<div class="tabs">
+<nav><div id="nav-tab-1" class="nav nav-tabs" role="tablist">
+<button class="nav-link active" id="nav-tab-1-Windows" name="Windows" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-1-Windows" type="button" role="tab" aria-controls="nav-tabpanel-1-Windows" aria-selected="true">
+  <h3 class="tab-header" id="nav-tab-heading-1-Windows">
+  Windows
+  </h3>
+</button>
+<button class="nav-link" id="nav-tab-1-Linux" name="Linux" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-1-Linux" type="button" role="tab" aria-controls="nav-tabpanel-1-Linux" aria-selected="false">
+  <h3 class="tab-header" id="nav-tab-heading-1-Linux">
+  Linux
+  </h3>
+</button>
+<button class="nav-link" id="nav-tab-1-macOS" name="macOS" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-1-macOS" type="button" role="tab" aria-controls="nav-tabpanel-1-macOS" aria-selected="false">
+  <h3 class="tab-header" id="nav-tab-heading-1-macOS">
+  macOS
+  </h3>
+</button>
+</div>
+</nav><div id="nav-tabContent-1" class="tab-content">
+<div id="nav-tabpanel-1-Windows" class="tab-pane show active" aria-labelledby="nav-tab-1-Windows" role="tabpanel">
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="ex">.venv\Scripts\activate</span></span></code></pre>
+</div>
+</div>
+<div id="nav-tabpanel-1-Linux" class="tab-pane" aria-labelledby="nav-tab-1-Linux" role="tabpanel">
+<div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="bu">source</span> .venv/bin/activate</span></code></pre>
+</div>
+</div>
+<div id="nav-tabpanel-1-macOS" class="tab-pane" aria-labelledby="nav-tab-1-macOS" role="tabpanel">
+<div class="codewrapper sourceCode" id="cb4">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="bu">source</span> .venv/bin/activate</span></code></pre>
+</div>
+<p>Use the Python package manager <a href="https://pip.pypa.io/en/stable/" class="external-link">pip</a> to <a href="https://www.sphinx-doc.org/en/master/usage/installation.html" class="external-link">install
+Sphinx</a>.</p>
+<div class="codewrapper sourceCode" id="cb5">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="ex">pip</span> install sphinx</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section level5">
+<h5 id="start-a-new-sphinx-project">Start a new Sphinx project<a class="anchor" aria-label="anchor" href="#start-a-new-sphinx-project"></a>
+</h5>
+<p>Sphinx includes a command to set up a new project called <a href="https://www.sphinx-doc.org/en/master/man/sphinx-quickstart.html" class="external-link">sphinx-quickstart</a>.
+Navigate to your project’s root folder and run the following
+command.</p>
+<div class="codewrapper sourceCode" id="cb6">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="ex">sphinx-quickstart</span> docs <span class="at">--no-sep</span> <span class="at">--ext-autodoc</span></span></code></pre>
+</div>
+<p>This will initialise the configuration files for a new Sphinx site in
+a subdirectory called <code>docs/</code> and prompt you to enter the
+following options:</p>
+<ul>
+<li>Project name: Birdsong Identifier</li>
+<li>Author name(s): Bill Oddie</li>
+<li>Project release []: 1.0</li>
+</ul>
+<div id="callout3" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Callout<a class="anchor" aria-label="anchor" href="#callout3"></a>
+</h3>
+<div class="callout-content">
+<p>To find out more about the Sphinx configuration files, please read
+their guide to <a href="https://www.sphinx-doc.org/en/master/usage/quickstart.html#defining-document-structure" class="external-link">defining
+document structure</a> on the Sphinx documentation.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section level4">
+<h4 id="building-the-site">Building the site<a class="anchor" aria-label="anchor" href="#building-the-site"></a>
+</h4>
+<p>In this context, building means taking our collection of Sphinx files
+and converting them into the source code files that define a website.
+Sphinx will create HyperText Markup Language (HTML) files, which is the
+markup language for pages that display in a web browser commonly used on
+the internet.</p>
+<p>To build our site, we run the <a href="https://www.sphinx-doc.org/en/master/man/sphinx-build.html" class="external-link">sphinx-build</a>
+command using the <code>-M</code> option to select HTML syntax as the
+output format.</p>
+<div class="codewrapper sourceCode" id="cb7">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="ex">sphinx-build</span> <span class="at">-M</span> html docs docs/_build</span></code></pre>
+</div>
+<p>Sphinx will load our files from the <code>docs/</code> directory and
+output the built HTML files in the <code>docs/_build</code>
+directory.</p>
+<p>The file <code>docs/_build/html/index.html</code> contains the home
+page of your new documentation site! Open that file to view your
+handiwork.</p>
+<figure><img src="fig/sphinx-build-screenshot.png" title="Sphinx" alt="The Sphinx homepage for our documentation site" class="figure mx-auto d-block"><div class="figcaption">The Sphinx homepage for our documentation
+site</div>
+</figure>
 </div>
 <div class="section level4">
 <h4 id="autodoc">Autodoc<a class="anchor" aria-label="anchor" href="#autodoc"></a>
 </h4>
-<p>Automatically generate documentation sites from doc-strings.</p>
-<p><a href="https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html" class="external-link uri">https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html</a></p>
+<p>It can be useful to automatically populate our documentation sites by
+converting our <a href="docstrings.html">documentation strings</a> into
+formatted text. We can achieve this using the <a href="https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html" class="external-link">autodoc</a>
+plugin for Sphinx.</p>
+<div class="section level5">
+<h5 id="configuring-autodoc">Configuring Autodoc<a class="anchor" aria-label="anchor" href="#configuring-autodoc"></a>
+</h5>
+<div class="Hint">
+<p>If you struggle with these steps, please refer to the <a href="https://github.com/Joe-Heffer-Shef/oddsong" class="external-link">template
+project</a>.</p>
+</div>
+<p>Add the following lines to <code>docs/conf.py</code></p>
+<div class="codewrapper sourceCode" id="cb8">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="co"># Our Python code may be imported from the parent directory</span></span>
+<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a><span class="im">import</span> sys</span>
+<span id="cb8-4"><a href="#cb8-4" tabindex="-1"></a>sys.path.insert(<span class="dv">0</span>, os.path.abspath(<span class="st">'..'</span>))</span></code></pre>
+</div>
+<p>This ensures that Sphinx can access our Python code.</p>
+<p>Next, edit <code>docs/index.rst</code> and add the following
+lines:</p>
+<div class="codewrapper sourceCode" id="cb9">
+<h3 class="code-label">RST<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode rst" tabindex="0"><code class="sourceCode rest"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="dt">.. automodule:: </span>oddsong.song</span>
+<span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a>    <span class="fu">:members:</span></span></code></pre>
+</div>
+<p>Now, when we build our site, Sphinx will scan the contents of the
+<code>oddsong</code> Python module and automatically generate a useful
+reference guide to our functions.</p>
+<div class="codewrapper sourceCode" id="cb10">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="ex">sphinx-build</span> <span class="at">-M</span> html docs docs/_build</span></code></pre>
+</div>
+<p>The result looks something like this:</p>
+<figure><img src="fig/oddsong-autodoc.png" title="A Python function documentation string" alt="Python documentation string rendered as HTML" class="figure mx-auto d-block"><div class="figcaption">Python documentation string rendered as
+HTML</div>
+</figure><div id="automatically-generated-content" class="callout challenge">
+<div class="callout-square">
+<i class="callout-icon" data-feather="zap"></i>
+</div>
+<div id="automatically-generated-content" class="callout-inner">
+<h3 class="callout-title">Automatically generated content<a class="anchor" aria-label="anchor" href="#automatically-generated-content"></a>
+</h3>
+<div class="callout-content">
+<p>Try using <code>autodoc</code>.</p>
+</div>
+</div>
+</div>
+<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
+  <h4 class="accordion-header" id="headingSolution1">Show me the solution</h4>
+</button>
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div class="accordion-body">
+<p>TODO</p>
+</div>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="section level3">
@@ -1938,7 +2210,7 @@ project</a> in the Sphinx documentation.</p>
 </h3>
 <p><a href="https://r-pkgs.org/website.html" class="external-link uri">https://r-pkgs.org/website.html</a></p>
 </div>
-</section><section id="publishing-your-docsite"><h2 class="section-heading">Publishing your docsite<a class="anchor" aria-label="anchor" href="#publishing-your-docsite"></a>
+</section><section id="publishing"><h2 class="section-heading">Publishing<a class="anchor" aria-label="anchor" href="#publishing"></a>
 </h2>
 <hr class="half-width">
 <div class="section level3">
@@ -2194,7 +2466,7 @@ but they work in basically the same way.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-1" class="tab-content">
-<div id="nav-tabpanel-1-Windows" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-Windows">
+<div id="nav-tabpanel-1-Windows" class="tab-pane show active" aria-labelledby="nav-tab-1-Windows" role="tabpanel">
 <p>On Windows operating systems, press the Windows key and type in
 “command”. The start menu will find the “Command Prompt” app. Press
 <kbd>Enter</kbd> or click on the Command Prompt icon to launch the
@@ -2214,7 +2486,7 @@ something like this:</p>
 <p>For more information, see the <a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands" class="external-link">Windows
 Commands</a> page on the Windows Server documentation.</p>
 </div>
-<div id="nav-tabpanel-1-Linux" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-Linux">
+<div id="nav-tabpanel-1-Linux" class="tab-pane" aria-labelledby="nav-tab-1-Linux" role="tabpanel">
 <p>On Ubuntu, press <kbd>Ctrl + Alt + T</kbd> to open a terminal.</p>
 <p>You can also open Dash and search for “Terminal”. For detailed
 instructions, please read <a href="https://ubuntu.com/tutorials/command-line-for-beginners#3-opening-a-terminal" class="external-link">Opening
@@ -2229,7 +2501,7 @@ where the dollar sign <code>$</code> means “type here”.</p>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="ex">bob@myUbuntuPC:~$</span></span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-1-MacOS" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-MacOS">
+<div id="nav-tabpanel-1-MacOS" class="tab-pane" aria-labelledby="nav-tab-1-MacOS" role="tabpanel">
 <p>Please read <a href="https://support.apple.com/en-gb/guide/terminal/apd5265185d-f365-44cb-8b09-71a064a42125/mac" class="external-link">Open
 or quit Terminal on Mac</a> on the <a href="https://support.apple.com/en-gb/guide/terminal/welcome/mac" class="external-link">Terminal
 User Guide</a> for macOS.</p>
@@ -2263,7 +2535,7 @@ current directory.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-2" class="tab-content">
-<div id="nav-tabpanel-2-Windows" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-2-Windows">
+<div id="nav-tabpanel-2-Windows" class="tab-pane show active" aria-labelledby="nav-tab-2-Windows" role="tabpanel">
 <p>On Windows, the <a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/dir" class="external-link">dir</a>
 command is used to list the contents of a directory. When you enter this
 command and press <kbd>Enter</kbd></p>
@@ -2293,7 +2565,7 @@ single file called <code>README.txt</code>. The date and time that each
 file was last modified is shown, along with the file size, which is 12
 bytes in this case.</p>
 </div>
-<div id="nav-tabpanel-2-Linux" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-Linux">
+<div id="nav-tabpanel-2-Linux" class="tab-pane" aria-labelledby="nav-tab-2-Linux" role="tabpanel">
 <p>To show the contents of a directory on a Linux system, we use the <a href="https://manpages.ubuntu.com/manpages/noble/man1/ls.1plan9.html" class="external-link"><code>ls</code>
 command</a> which lists information about the files in the current
 location.</p>
@@ -2310,7 +2582,7 @@ folder.</p>
 <pre class="output" tabindex="0"><code><span><span class="va">README.txt</span></span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-2-MacOS" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-MacOS">
+<div id="nav-tabpanel-2-MacOS" class="tab-pane" aria-labelledby="nav-tab-2-MacOS" role="tabpanel">
 <p>The macOS terminal is very similar to the Linux one. To show the
 contents of a directory on a Linux system, we use the <a href="https://support.apple.com/en-gb/guide/terminal/apdb66b5242-0d18-49fc-9c47-a2498b7c91d5/2.14/mac/14.0" class="external-link"><code>ls</code>
 command</a> which lists information about the files in the current
@@ -2357,21 +2629,21 @@ tool will do.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-3" class="tab-content">
-<div id="nav-tabpanel-3-Windows" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-3-Windows">
+<div id="nav-tabpanel-3-Windows" class="tab-pane show active" aria-labelledby="nav-tab-3-Windows" role="tabpanel">
 <div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="fu">date</span> /T</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-3-Linux" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-3-Linux">
+<div id="nav-tabpanel-3-Linux" class="tab-pane" aria-labelledby="nav-tab-3-Linux" role="tabpanel">
 <div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="fu">date</span></span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-3-MacOS" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-3-MacOS">
+<div id="nav-tabpanel-3-MacOS" class="tab-pane" aria-labelledby="nav-tab-3-MacOS" role="tabpanel">
 <div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
