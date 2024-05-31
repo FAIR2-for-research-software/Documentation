@@ -285,7 +285,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Documentation sites</h1>
-        <p>Last updated on 2024-05-30 |
+        <p>Last updated on 2024-05-31 |
         
         <a href="https://github.com/Joe-Heffer-Shef/FAIR4RS-Documentation/edit/main/episodes/sites.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
         
@@ -331,9 +331,10 @@ tools.</li>
 library of research code. Up to now, we’ve looked at ways to put helpful
 notes in our code, but now we’ll learn how to write a longer, more
 complete guide to the research tools you create.</p>
-<p>A documentation site for research software usually contains an
-introduction, installation instructions, a user guide, troubleshooting
-tips, and an in-depth reference section.</p>
+<p>A documentation site bring all your user guidance into one place.
+This kind of resource may be prepared for research software and will
+usually contain an introduction, installation instructions, a user
+guide, troubleshooting tips, and an in-depth reference section.</p>
 <p>To get an idea of this, here are some links documentation websites
 for widely-used data analysis and research software packages:</p>
 <ul><li>
@@ -347,12 +348,48 @@ plotting package for the R statistical language.</li>
 is a machine learning library for the Python programming language.</li>
 </ul><div class="section level3">
 <h3 id="advantages">Advantages<a class="anchor" aria-label="anchor" href="#advantages"></a></h3>
-<p>It makes it much easier for new users to get started using your
-software to boost their research.</p>
+<p>There are many advantages to building a documentation site to provide
+a information-rich resource for researchers who use your code at
+institutions all around the world. These sites can work as hubs for
+collaboration, sharing the latest updates, and encouraging people to
+take up your system and get involved in improving it. The effort of
+setting one up will be rewarded in the long run because you will have
+created a valuable asset that will foster collaboration and knowledge
+sharing in your research community.</p>
+<p>A key foundation stone of modern digital research practices is the
+ability to replicate results by reproducing analysis workflows. Clear,
+thorough documentation of the research code ensures that researchers can
+repeat processes and verify results and other people’s outputs.</p>
+<p>Documementation sites are really useful for introducing new users to
+your software. It makes it much easier and faster for new users to get
+started using your software to boost their research. It’s one of the
+most effective ways to create a user base that has a sophisticated
+understanding of the research code, which is essential for them to adapt
+it to the complex problems that often raise in research contexts.</p>
+<p>They’re also a valuable resource for your existing user base,
+enabling them to look up reference material or search the manual to find
+new capabilities they weren’t aware of before. This will increase the
+potential for your software to accellerate the productivity of other
+research teams and boost scientific progress.</p>
 </div>
 <div class="section level3">
 <h3 id="when-to-use-one">When to use one<a class="anchor" aria-label="anchor" href="#when-to-use-one"></a></h3>
-<p>TODO</p>
+<p>Although the advantages are numerous, not all software packages
+require a comprehensive documentation website. However, for any code
+project that is growing in the number of collaborators, users, and
+technicala complexity, consider coordinating the team to write one as
+soon as possible to help the project grow in a healthy manner.</p>
+</div>
+<div class="section level3">
+<h3 id="writing-style">Writing style<a class="anchor" aria-label="anchor" href="#writing-style"></a></h3>
+<p>Strive to use everyday, jargon-free language. It helps to set an
+approachable tone that encourages others to use the software and get
+involved with the project. This will en sure that the code is accesible
+to the widest possible layers of the research community and foster
+collaboration.</p>
+<p>Always consider the target audience of your documentation, because
+your user base may be unaware of some of the unstated assumptions and
+technical backgroud knowledge that you take for granted.</p>
 </div>
 </section><section id="docsite-contents"><h2 class="section-heading">Docsite contents<a class="anchor" aria-label="anchor" href="#docsite-contents"></a>
 </h2>
@@ -406,6 +443,9 @@ resolved and clarified, make a note of the causes of these troubles and
 make them available to the entire user base in your documentation site.
 This will help users to identify and fix common misunderstandings and
 technical problems they may run into when utilising your code.</p>
+<p>This prevents a situation where potential solutions to common issues
+do exist, but are scattered around the internet are the exclusive
+knowledge of a few individuals and are hard to find.</p>
 </div>
 <div class="section level3">
 <h3 id="faqs">FAQs<a class="anchor" aria-label="anchor" href="#faqs"></a></h3>
@@ -415,13 +455,93 @@ users of your code.</p>
 </div>
 </section><section id="docsite-tools"><h2 class="section-heading">Docsite tools<a class="anchor" aria-label="anchor" href="#docsite-tools"></a>
 </h2>
-<hr class="half-width"><p>GitHub Wiki</p>
-<p>Sphinx</p>
-<p>MkDocs</p>
+<hr class="half-width"><p>There are various tools available to build documentation sites for
+your research software.</p>
+<div class="section level3">
+<h3 id="github-wiki">GitHub Wiki<a class="anchor" aria-label="anchor" href="#github-wiki"></a></h3>
+<p>If you are publishing your code on GitHub, which is a web service
+that hosts costs repositories, then one of the easiest ways to create a
+documentation site is to use the wiki feature on that platform. This is
+a great way to write detailed, structured documents containing long-form
+content that describes aspects of your software. What’s more, it’s
+available alongside your code so your documentation and software are
+located in one place.</p>
+<p>As with readme files, the text that appears on GitHub is <a href="https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github" class="external-link">formatted
+using Markdown syntax</a>.</p>
+<div class="section level4">
+<h4 id="getting-started">Getting started<a class="anchor" aria-label="anchor" href="#getting-started"></a></h4>
+<p>To create a wiki, which is a simple, easy-to-edit web site, go to the
+main page of your code repository on GitHub and click on the Wiki button
+on the top menu. For a detailed walkthrough of this process, please read
+<a href="https://docs.github.com/en/communities/documenting-your-project-with-wikis/adding-or-editing-wiki-pages" class="external-link">adding
+or editing wiki pages</a> on the GitHub documentation.</p>
+<div id="callout1" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Callout<a class="anchor" aria-label="anchor" href="#callout1"></a>
+</h3>
+<div class="callout-content">
+<p>For more information about the wiki feature on GitHub, see <a href="https://docs.github.com/en/communities/documenting-your-project-with-wikis" class="external-link">Documenting
+your project with wikis</a> on the GitHub documentation.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section level3">
+<h3 id="sphinx">Sphinx<a class="anchor" aria-label="anchor" href="#sphinx"></a></h3>
+<p>Sphinx is a tool for building documentation websites that is commonly
+used amongst developers of Python packages, although it’s also
+compatible with other programming languages.</p>
+<p>Sphinx is a documentation generator tool takes plain text files that
+use a markup syntax (such as reStructuredText or Markdown) for
+formatting the content of your documentation site and transforms them
+into various output formats, ready to be published on the internet. It
+has a number of useful features, but in this module we’ll learn the
+basics to document our research code.</p>
+<div id="callout2" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Callout<a class="anchor" aria-label="anchor" href="#callout2"></a>
+</h3>
+<div class="callout-content">
+<p>For a more in-depth guide, please see <a href="https://www.sphinx-doc.org/en/master/tutorial/" class="external-link">Build your first
+project</a> in the Sphinx documentation.</p>
+</div>
+</div>
+</div>
+<div class="section level4">
+<h4 id="getting-started-1">Getting started<a class="anchor" aria-label="anchor" href="#getting-started-1"></a></h4>
+</div>
+<div class="section level4">
+<h4 id="autodoc">Autodoc<a class="anchor" aria-label="anchor" href="#autodoc"></a></h4>
+<p>Automatically generate documentation sites from doc-strings.</p>
+<p><a href="https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html" class="external-link uri">https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html</a></p>
+</div>
+</div>
+<div class="section level3">
+<h3 id="pkgdown">pkgdown<a class="anchor" aria-label="anchor" href="#pkgdown"></a></h3>
+<p><a href="https://r-pkgs.org/website.html" class="external-link uri">https://r-pkgs.org/website.html</a></p>
+</div>
 </section><section id="publishing-your-docsite"><h2 class="section-heading">Publishing your docsite<a class="anchor" aria-label="anchor" href="#publishing-your-docsite"></a>
 </h2>
-<hr class="half-width"><p>GitHub pages</p>
-<p>Read the Docs</p>
+<hr class="half-width"><div class="section level3">
+<h3 id="github-pages">GitHub pages<a class="anchor" aria-label="anchor" href="#github-pages"></a></h3>
+<p>TODO</p>
+<p><a href="https://docs.github.com/en/pages" class="external-link">GitHub Pages
+documentation</a></p>
+</div>
+<div class="section level3">
+<h3 id="getting-started-2">Getting started<a class="anchor" aria-label="anchor" href="#getting-started-2"></a></h3>
+<p>TODO</p>
+</div>
+<div class="section level3">
+<h3 id="deploying-your-site">Deploying your site<a class="anchor" aria-label="anchor" href="#deploying-your-site"></a></h3>
+<p>TODO</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -431,7 +551,10 @@ users of your code.</p>
 </h3>
 <div class="callout-content">
 <ul><li>Structured documentation websites are very useful for users to learn
-to use all kinds of digital systems.</li>
+to use all kinds of digital systems, ensuring its successful adoption by
+the wider research community.</li>
+<li>Documentation sites contain comprehensive installation instructions,
+user guides, and troubleshooting tips.</li>
 <li>There are several libraries that may be used to generate
 documentation sites.</li>
 <li>Documentation websites may be deployed to a hosting platform.</li>
@@ -442,6 +565,7 @@ documentation sites.</li>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use. 
  -->
+</div>
 </section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="readable.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
@@ -500,8 +624,8 @@ any links that you are not going to use.
   "url": "https://Joe-Heffer-Shef.github.io/FAIR4RS-Documentation/sites.html",
   "identifier": "https://Joe-Heffer-Shef.github.io/FAIR4RS-Documentation/sites.html",
   "dateCreated": "2024-05-20",
-  "dateModified": "2024-05-30",
-  "datePublished": "2024-05-30"
+  "dateModified": "2024-05-31",
+  "datePublished": "2024-05-31"
 }
 
   </script><script>

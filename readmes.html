@@ -284,7 +284,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Writing README files</h1>
-        <p>Last updated on 2024-05-23 |
+        <p>Last updated on 2024-05-31 |
         
         <a href="https://github.com/Joe-Heffer-Shef/FAIR4RS-Documentation/edit/main/episodes/readmes.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
         
@@ -304,7 +304,7 @@
 <div class="inner">
 <h3 class="card-title">Questions</h3>
 <ul><li>What is a README file?</li>
-<li>How do I write a README?</li>
+<li>How do I write a README for my research code?</li>
 <li>What are the contents of a good README file?</li>
 </ul></div>
 </div>
@@ -313,7 +313,8 @@
 <div class="card-body">
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
-<ul><li>Explain why and how to write a README file</li>
+<ul><li>Explain why and how to write a README file for research
+software</li>
 <li>Learn how to structure a README file into sections</li>
 <li>Understand the important components of a good README</li>
 </ul></div>
@@ -409,21 +410,25 @@ the software will work.</p>
 </h2>
 <hr class="half-width"><p>Most people prefer to use a file format that allows you to create
 headers to organise the content into sections or chapters, which is much
-clearer for the reader. In this case, a Markdown document may be used.
-Markdown is a simple mark-up language that allows you to format your
-text using symbols to represent headers, bold text, bullet lists, etc.
-that are displayed to the user in an appealing way.</p>
+clearer for the reader.</p>
+<p>In this case, a Markdown document may be used. Markdown is a simple
+mark-up language that allows you to format your text using symbols to
+represent headers, bold text, bullet lists, etc. that are displayed to
+the user in an appealing way. The Markdown syntax will be converted into
+appealing visual styles that make your documentation more aesthetically
+pleasing and easier to read.</p>
 <p>An example README file in Markdown format is shown below, in a file
 called <code>README.md</code> where .md is the file extension for
 Markdown files.</p>
 <div class="section level3">
 <h3 id="section-headers">Section headers<a class="anchor" aria-label="anchor" href="#section-headers"></a></h3>
-<p>You can separate your document into sections with headers using the
-<code>#</code> symbol, for example:</p>
+<p>You can separate your document into hierarchical sections with
+headings using the <code>#</code> symbol. This makes your README easier
+to navigate. For example:</p>
 <div class="codewrapper sourceCode" id="cb1">
-<h3 class="code-label">MD<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+<h3 class="code-label">MARKDOWN<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode md" tabindex="0"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="fu"># My research software</span></span>
+<pre class="sourceCode markdown" tabindex="0"><code class="sourceCode markdown"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="fu"># My research software</span></span>
 <span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a>This software is designed to...</span>
 <span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a></span>
@@ -437,8 +442,8 @@ Markdown files.</p>
 </div>
 <p>The “#” symbol means that line will be converted into a header and
 displayed to the reader in a large, bold font. This makes it easier for
-the reader to navigate your text, just like having chapters in a
-book.</p>
+the reader to find the part of your text they’re looking for, just like
+having chapters in a book.</p>
 <p>If your code is published on GitHub, the home page of your code
 repository will display the README.md file, including a navigation menu
 that is automatically created to easily select the section of the
@@ -462,7 +467,48 @@ with Markdown syntax:</p>
 <td><code>`code block`</code></td>
 </tr><tr class="odd"><td><a href="https://sheffield.ac.uk" class="external-link">Hyperlink</a></td>
 <td><code>[Hyperlink](https://sheffield.ac.uk)</code></td>
-</tr></tbody></table><div id="keypoints1" class="callout keypoints">
+</tr></tbody></table></div>
+<div class="section level3">
+<h3 id="block-quotes">Block quotes<a class="anchor" aria-label="anchor" href="#block-quotes"></a></h3>
+<p>We can create a citation with appealing formatting by using the
+blockquote syntax in Markdown, which is similar to the method used in
+email.</p>
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">MARKDOWN<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode markdown" tabindex="0"><code class="sourceCode markdown"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="at">&gt; This text is part of a blockquote.</span></span></code></pre>
+</div>
+<p>This will be rendered with the following apperearance:</p>
+<blockquote>
+<p>This text is part of a blockquote.</p>
+</blockquote>
+</div>
+<div class="section level3">
+<h3 id="code-blocks">Code blocks<a class="anchor" aria-label="anchor" href="#code-blocks"></a></h3>
+<p>If you’d like to present the user will examples of source code, use
+code fences to display the code in a special text box with syntax
+highlighting. For example:</p>
+<p><code></code></p>
+<pre><code><span><span class="va">pi</span> <span class="op">=</span> <span class="fl">3.14</span></span></code></pre>
+<p></p>
+<div id="callout1" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Callout<a class="anchor" aria-label="anchor" href="#callout1"></a>
+</h3>
+<div class="callout-content">
+<p>You can learn more about writing documents using Markdown at <a href="https://www.markdownguide.org/" class="external-link">Markdown Guide</a>, a reference
+for using this syntax.</p>
+</div>
+</div>
+</div>
+<p>Remember, the README file is a first impression that research users
+will receive for your software. Make them informative and user-friendly
+to enhance the research experience for others and foster
+collaboration.</p>
+<div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
 </div>
@@ -470,7 +516,17 @@ with Markdown syntax:</p>
 <h3 class="callout-title">Key Points<a class="anchor" aria-label="anchor" href="#keypoints1"></a>
 </h3>
 <div class="callout-content">
-<ul><li>TODO</li>
+<ul><li>A README file serves as an introduction to your software, guiding
+users on installation, usage, and understanding its capabilities.</li>
+<li>Consider the user’s technical background; write clearly and avoid
+jargon.</li>
+<li>A README contains a brief description of the software, installation
+instructions, and a usage guide.</li>
+<li>The writing style should be concide, clear, and explain technical
+terms.</li>
+<li>Use diagrams and screenshots for clarity.</li>
+<li>Markdown is a recommended format for creating headers, bold text,
+bullet points, etc.</li>
 </ul></div>
 </div>
 </div>
@@ -537,8 +593,8 @@ any links that you are not going to use.
   "url": "https://Joe-Heffer-Shef.github.io/FAIR4RS-Documentation/readmes.html",
   "identifier": "https://Joe-Heffer-Shef.github.io/FAIR4RS-Documentation/readmes.html",
   "dateCreated": "2024-05-20",
-  "dateModified": "2024-05-23",
-  "datePublished": "2024-05-30"
+  "dateModified": "2024-05-31",
+  "datePublished": "2024-05-31"
 }
 
   </script><script>
