@@ -32,6 +32,22 @@ The **audience** for a README file is the end user. It's important to consider _
 
 To start writing a README file, the simplest way is to just create an empty text file called `README.txt` and start writing. This file should be located in the directory (or folder) that contains your software project. 
 
+::::::::::::::::::::::::::::::::: challenge
+
+Let's create a new code project. Create a new, empty directory to contain your work. Then, start writing your README!
+
+::::::::::::::::: solution
+
+```bash
+mkdir my_project
+touch my_project/README.txt
+echo "This is my code" >> my_project/README.txt
+```
+
+::::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::::::::
+
 The essentials contents of a README file are:
 
 - The name of the software. This seems trivial, but a clear title and description of a piece of software will be essential for others to identify your software and differentiate it from others.
