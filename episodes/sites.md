@@ -98,7 +98,7 @@ As with readme files, the text that appears on GitHub is [formatted using Markdo
 
 #### Getting started
 
-To create a wiki 
+To create a wiki, go to the main page of your code repository on GitHub and click on the Wiki button on the top menu. For a detailed walkthrough of this process, please read [adding or editing wiki pages](https://docs.github.com/en/communities/documenting-your-project-with-wikis/adding-or-editing-wiki-pages) on the GitHub documentation.
 
 ::: callout
 
@@ -106,19 +106,30 @@ For more information about the wiki feature on GitHub, see [Documenting your pro
 
 :::
 
-Sphinx
+### Sphinx
 
-MkDocs
+TODO
+
+### MkDocs
+
+TODO
 
 ## Publishing your docsite
 
-GitHub pages
+### GitHub pages
 
-Read the Docs
+TODO
+
+[GitHub Pages documentation](https://docs.github.com/en/pages)
+
+### Read the Docs
+
+TODO
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
 - Structured documentation websites are very useful for users to learn to use all kinds of digital systems.
+- Documentation sites contain comprehensive installation instructions, user guides, and troubleshooting tips.
 - There are several libraries that may be used to generate documentation sites.
 - Documentation websites may be deployed to a hosting platform.
 
