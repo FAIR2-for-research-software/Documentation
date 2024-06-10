@@ -204,11 +204,9 @@ It can be useful to automatically populate our documentation sites by converting
 
 ##### Configuring Autodoc
 
-::: Hint
+Let's set up the options for `autodoc`.
 
 If you struggle with these steps, please refer to the [template project](https://github.com/Joe-Heffer-Shef/oddsong).
-
-:::
 
 Add the following lines to `docs/conf.py`
 
