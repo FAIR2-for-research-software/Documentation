@@ -108,7 +108,7 @@ For more information about the wiki feature on GitHub, see [Documenting your pro
 
 ### Sphinx
 
-[Sphinx](https://www.sphinx-doc.org/) is a tool for building documentation websites that is commonly used amongst developers of Python packages, although it's also compatible with other programming languages.
+[Sphinx](https://www.sphinx-doc.org/) is a tool for building documentation websites that is commonly used amongst developers of Python packages, although it's also compatible with other programming languages. It doesn't currently support packages written using the R statistical language.
 
 Sphinx is a documentation generator tool takes plain text files that use a markup syntax (such as reStructuredText or Markdown) for formatting the content of your documentation site and transforms them into various output formats, ready to be published on the internet. It has a number of useful features, but in this module we'll learn the basics to document our research code.
 
@@ -249,25 +249,19 @@ TODO
 :::::::::::::::::::::::::
 :::::::::::::::::::::::::::::::::::::::::::::::
 
-### pkgdown
+### Documentation sites for R packages
 
-https://r-pkgs.org/website.html
+It's also possible to generate a documentation site to accompany R packages that you create. 
+For more information about this, please refer to the book *R Packages* by Hadley Wickham, which
+has a chapter on [documentation websites](https://r-pkgs.org/website.html).
 
 ## Publishing
 
-### GitHub pages
+Now that you've started writing your documentation website, there are various ways to upload it to the internet so that others can read it.
 
-TODO
+There are several hosting services that can be used to publish your documentation site, such as [GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages) and [Read the Docs](https://about.readthedocs.com/).
 
-[GitHub Pages documentation](https://docs.github.com/en/pages)
-
-### Getting started
-
-TODO
-
-### Deploying your site
-
-TODO
+The detailed of setting up the deployment of your site to these platforms is beyond the scope of this course.
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
