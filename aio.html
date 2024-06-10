@@ -1983,7 +1983,8 @@ your project with wikis</a> on the GitHub documentation.</p>
 <p><a href="https://www.sphinx-doc.org/" class="external-link">Sphinx</a> is a tool for
 building documentation websites that is commonly used amongst developers
 of Python packages, although it’s also compatible with other programming
-languages.</p>
+languages. It doesn’t currently support packages written using the R
+statistical language.</p>
 <p>Sphinx is a documentation generator tool takes plain text files that
 use a markup syntax (such as reStructuredText or Markdown) for
 formatting the content of your documentation site and transforms them
@@ -2194,7 +2195,7 @@ HTML</div>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1">Show me the solution</h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>TODO</p>
 </div>
@@ -2205,29 +2206,26 @@ HTML</div>
 </div>
 </div>
 <div class="section level3">
-<h3 id="pkgdown">pkgdown<a class="anchor" aria-label="anchor" href="#pkgdown"></a>
+<h3 id="documentation-sites-for-r-packages">Documentation sites for R packages<a class="anchor" aria-label="anchor" href="#documentation-sites-for-r-packages"></a>
 </h3>
-<p><a href="https://r-pkgs.org/website.html" class="external-link uri">https://r-pkgs.org/website.html</a></p>
+<p>It’s also possible to generate a documentation site to accompany R
+packages that you create. For more information about this, please refer
+to the book <em>R Packages</em> by Hadley Wickham, which has a chapter
+on <a href="https://r-pkgs.org/website.html" class="external-link">documentation
+websites</a>.</p>
 </div>
 </section><section id="publishing"><h2 class="section-heading">Publishing<a class="anchor" aria-label="anchor" href="#publishing"></a>
 </h2>
 <hr class="half-width">
-<div class="section level3">
-<h3 id="github-pages">GitHub pages<a class="anchor" aria-label="anchor" href="#github-pages"></a>
-</h3>
-<p>TODO</p>
-<p><a href="https://docs.github.com/en/pages" class="external-link">GitHub Pages
-documentation</a></p>
-</div>
-<div class="section level3">
-<h3 id="getting-started-2">Getting started<a class="anchor" aria-label="anchor" href="#getting-started-2"></a>
-</h3>
-<p>TODO</p>
-</div>
-<div class="section level3">
-<h3 id="deploying-your-site">Deploying your site<a class="anchor" aria-label="anchor" href="#deploying-your-site"></a>
-</h3>
-<p>TODO</p>
+<p>Now that you’ve started writing your documentation website, there are
+various ways to upload it to the internet so that others can read
+it.</p>
+<p>There are several hosting services that can be used to publish your
+documentation site, such as <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages" class="external-link">GitHub
+Pages</a> and <a href="https://about.readthedocs.com/" class="external-link">Read the
+Docs</a>.</p>
+<p>The detailed of setting up the deployment of your site to these
+platforms is beyond the scope of this course.</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -2253,7 +2251,6 @@ documentation sites.</li>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use. 
  -->
-</div>
 </section></section><section id="aio-developers"><p>Content from <a href="developers.html">Developer guidance</a></p>
 <hr>
 <p>Last updated on 2024-05-21 |
