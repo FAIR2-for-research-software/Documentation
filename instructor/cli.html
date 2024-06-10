@@ -284,7 +284,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Command line interfaces</h1>
-        <p>Last updated on 2024-05-30 |
+        <p>Last updated on 2024-06-10 |
         
         <a href="https://github.com/Joe-Heffer-Shef/FAIR4RS-Documentation/edit/main/episodes/cli.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
         
@@ -363,6 +363,8 @@ user interfaces.</p>
 advantage of the command line, but here we’ll just address the basics to
 help us make our research software easier to use by providing a
 well-documented CLI.</p>
+<p>For an introduction to using the command line, please study the <a href="https://swcarpentry.github.io/shell-novice/" class="external-link">Unix Shell</a>
+Software Carpentry course.</p>
 <div class="section level3">
 <h3 id="how-to-open-the-command-line">How to open the command line<a class="anchor" aria-label="anchor" href="#how-to-open-the-command-line"></a></h3>
 <p>Each operating system has a slightly different terminal interface,
@@ -526,8 +528,23 @@ started with Terminal on Mac</a></p>
 </div>
 <div class="section level3">
 <h3 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h3>
-<p>Commands have <em>options</em> that allow the user to choose what the
-tool will do.</p>
+<p>Commands have options that allow the user to choose what the tool
+will do.</p>
+<div id="accordionSpoiler1" class="accordion spoiler-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
+  <h3 class="accordion-header" id="headingSpoiler1">
+<div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>What are arguments?</h3>
+</button>
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div class="accordion-body">
+<p>When using shell commands, we use the words option, flag, and
+arguments to describe parameters that we can use to modify the operation
+of that command.</p>
+</div>
+</div>
+</div>
+</div>
 <div class="tabs">
 <nav><div id="nav-tab-3" class="nav nav-tabs" role="tablist">
 <button class="nav-link active" id="nav-tab-3-Windows" name="Windows" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-3-Windows" type="button" role="tab" aria-controls="nav-tabpanel-3-Windows" aria-selected="true">
@@ -548,39 +565,174 @@ tool will do.</p>
 </div>
 </nav><div id="nav-tabContent-3" class="tab-content">
 <div id="nav-tabpanel-3-Windows" class="tab-pane show active" aria-labelledby="nav-tab-3-Windows" role="tabpanel">
+<p>In the Windows command line, we use the <code>/?</code> argument to
+instruct the computer to print the help information that that command.
+To see helpful reference information for using the <code>dir</code>
+command, run:</p>
 <div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="fu">date</span> /T</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="op">&gt;</span> dir <span class="ex">/?</span></span></code></pre>
 </div>
+<p>The result of this command will be printed to the screen.</p>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>Displays a list of files and subdirectories in a directory.
+
+DIR [drive:][path][filename] [/A[[:]attributes]] [/B] [/C] [/D] [/L] [/N]
+  [/O[[:]sortorder]] [/P] [/Q] [/R] [/S] [/T[[:]timefield]] [/W] [/X] [/4]
+
+  [drive:][path][filename]
+              Specifies drive, directory, and/or files to list.
+
+  /A          Displays files with specified attributes.
+  attributes   D  Directories                R  Read-only files
+               H  Hidden files               A  Files ready for archiving
+               S  System files               I  Not content indexed files
+               L  Reparse Points             O  Offline files
+               -  Prefix meaning not
+  /B          Uses bare format (no heading information or summary).
+...</code></pre>
+</div>
+<p>The output is a description of the <code>dir</code> command,
+instructions for using it, and a reference to each of the options or
+arguments available.</p>
 </div>
 <div id="nav-tabpanel-3-Linux" class="tab-pane" aria-labelledby="nav-tab-3-Linux" role="tabpanel">
-<div class="codewrapper sourceCode" id="cb10">
-<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="fu">date</span></span></code></pre>
-</div>
-</div>
-<div id="nav-tabpanel-3-MacOS" class="tab-pane" aria-labelledby="nav-tab-3-MacOS" role="tabpanel">
+<p>In the Linux command line, we use the <code>--help</code> argument to
+instruct the computer to print the help information that that command.
+To see helpful reference information for using the <code>ls</code>
+command, run:</p>
 <div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="fu">date</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="ex">$</span> ls <span class="at">--help</span></span></code></pre>
+</div>
+<p>The result of this command will be printed to the screen.</p>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>Usage: ls [OPTION]... [FILE]...
+List information about the FILEs (the current directory by default).
+Sort entries alphabetically if none of -cftuvSUX nor --sort is specified.
+
+Mandatory arguments to long options are mandatory for short options too.
+  -a, --all                  do not ignore entries starting with .
+  -A, --almost-all           do not list implied . and ..
+      --author               with -l, print the author of each file
+  -b, --escape               print C-style escapes for nongraphic characters
+...</code></pre>
+</div>
+<p>The output is a description of the <code>ls</code> command,
+instructions for using it, and a reference to each of the options or
+arguments available.</p>
+</div>
+<div id="nav-tabpanel-3-MacOS" class="tab-pane" aria-labelledby="nav-tab-3-MacOS" role="tabpanel">
+<p>In the macOS command line, we use the <code>--help</code> argument to
+instruct the computer to print the help information that that command.
+To see helpful reference information for using the <code>ls</code>
+command, run:</p>
+<div class="codewrapper sourceCode" id="cb13">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="ex">$</span> ls <span class="at">--help</span></span></code></pre>
+</div>
+<p>The result of this command will be printed to the screen.</p>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>Usage: ls [OPTION]... [FILE]...
+List information about the FILEs (the current directory by default).
+Sort entries alphabetically if none of -cftuvSUX nor --sort is specified.
+
+Mandatory arguments to long options are mandatory for short options too.
+  -a, --all                  do not ignore entries starting with .
+  -A, --almost-all           do not list implied . and ..
+      --author               with -l, print the author of each file
+  -b, --escape               print C-style escapes for nongraphic characters
+...</code></pre>
+</div>
+<p>The output is a description of the <code>ls</code> command,
+instructions for using it, and a reference to each of the options or
+arguments available.</p>
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="section level3">
-<h3 id="advantages-of-clis">Advantages of CLIs<a class="anchor" aria-label="anchor" href="#advantages-of-clis"></a></h3>
-</div>
-<div class="section level3">
-<h3 id="clis-for-research-code">CLIs for research code<a class="anchor" aria-label="anchor" href="#clis-for-research-code"></a></h3>
 </div>
 </section><section id="clis-in-python"><h2 class="section-heading">CLIs in Python<a class="anchor" aria-label="anchor" href="#clis-in-python"></a>
 </h2>
-<hr class="half-width"><div class="section level3">
-<h3 id="argparse">argparse<a class="anchor" aria-label="anchor" href="#argparse"></a></h3>
+<hr class="half-width"><p>We can add a command-line interface to our Python code using the
+methods and tools that are included in Python programming language.</p>
+<div class="section level3">
+<h3 id="getting-started">Getting started<a class="anchor" aria-label="anchor" href="#getting-started"></a></h3>
+<p>Let’s continue working on our birdsong identification software
+project and create an entry-point to our code.</p>
+<p>To create an executable script that will run from the command line,
+create a file called <code>oddsong/__main__.py</code>. When a user runs
+our code from the terminal, this <code>__main__.py</code> file will be
+executed first.</p>
+<div id="accordionSpoiler2" class="accordion spoiler-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
+  <h3 class="accordion-header" id="headingSpoiler2">
+<div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>Why must our file be named __main__.py?</h3>
+</button>
+<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
+<div class="accordion-body">
+<p>This is a mechanism that tells Python how we want users to interact
+with our software.</p>
+<p>To find out more, please read the <a href="https://docs.python.org/3/library/__main__.html#main-py-in-python-packages" class="external-link"><strong>main</strong>.py</a>
+section in the Python documentation.</p>
+</div>
+</div>
+</div>
+</div>
+<p>Let’s check if this works by writing a simple <code>print()</code>
+command in the <code>__main__.py</code> script.</p>
+<div class="codewrapper sourceCode" id="cb15">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a><span class="bu">print</span>(<span class="st">"Hello, world!"</span>)</span></code></pre>
+</div>
+<p>Run your code</p>
+<div class="codewrapper sourceCode" id="cb16">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" tabindex="-1"></a><span class="ex">$</span> python <span class="at">-m</span> oddsong</span>
+<span id="cb16-2"><a href="#cb16-2" tabindex="-1"></a><span class="ex">Hello,</span> world!</span></code></pre>
+</div>
+</div>
+<div class="section level3">
+<h3 id="main-functions">
+<code>main()</code> functions<a class="anchor" aria-label="anchor" href="#main-functions"></a></h3>
+<p><code>main</code> functions are used to as the primary “starting
+point” for a command-line interface, otherwise known as an “entry point”
+for our scripted sequence of commands.</p>
+<p>Inside this file, create a function called <code>main()</code> and an
+<code>if</code> statement as shown below.</p>
+<div class="codewrapper sourceCode" id="cb17">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" tabindex="-1"></a><span class="kw">def</span> main():</span>
+<span id="cb17-2"><a href="#cb17-2" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Identifying bird vocalisation..."</span>)</span>
+<span id="cb17-3"><a href="#cb17-3" tabindex="-1"></a></span>
+<span id="cb17-4"><a href="#cb17-4" tabindex="-1"></a><span class="cf">if</span> <span class="va">__name__</span> <span class="op">==</span> <span class="st">"__main__"</span>:</span>
+<span id="cb17-5"><a href="#cb17-5" tabindex="-1"></a>    main()</span></code></pre>
+</div>
+<p>When the user executes our CLI, Python will know to run the
+<code>main()</code> function and execute our research code.</p>
+<p>The logical statement <code>if __name__ == "__main__"</code> means
+that the <code>main()</code> function will <em>only</em> run when the
+code is run from the comand line as the <a href="https://docs.python.org/3/library/__main__.html#what-is-the-top-level-code-environment" class="external-link">top-level
+code environment</a>.</p>
+</div>
+<div class="section level3">
+<h3 id="cli-documentation">CLI documentation<a class="anchor" aria-label="anchor" href="#cli-documentation"></a></h3>
+<p>Python has a useful inbuilt module called <a href="https://docs.python.org/3/howto/argparse.html" class="external-link">argparse</a> to
+quickly create a command line interface that follows the standard
+conventions of the Linux software ecosystem.</p>
+<p>To get started, let’s create an</p>
 <div class="section level4">
 <h4 id="description">Description<a class="anchor" aria-label="anchor" href="#description"></a></h4>
 </div>
@@ -676,7 +828,7 @@ any links that you are not going to use.
   "url": "https://Joe-Heffer-Shef.github.io/FAIR4RS-Documentation/instructor/cli.html",
   "identifier": "https://Joe-Heffer-Shef.github.io/FAIR4RS-Documentation/instructor/cli.html",
   "dateCreated": "2024-05-20",
-  "dateModified": "2024-05-30",
+  "dateModified": "2024-06-10",
   "datePublished": "2024-06-10"
 }
 
