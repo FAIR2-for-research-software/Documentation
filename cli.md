@@ -38,6 +38,8 @@ Terminals are more efficient for running repetitive tasks and provide extra func
 
 There's a lot of powerful commands that can be learned to take full advantage of the command line, but here we'll just address the basics to help us make our research software easier to use by providing a well-documented CLI.
 
+For an introduction to using the command line, please study the [Unix Shell](https://swcarpentry.github.io/shell-novice/) Software Carpentry course.
+
 ### How to open the command line
 
 Each operating system has a slightly different terminal interface, but they work in basically the same way.
@@ -147,37 +149,160 @@ For more information, please read [Get started with Terminal on Mac](https://sup
 
 ### Arguments
 
-Commands have *options* that allow the user to choose what the tool will do.
+Commands have options that allow the user to choose what the tool will do.
+
+:::::::::::::::::::::::::::::::::::::::::: spoiler
+
+### What are arguments?
+
+When using shell commands, we use the words option, flag, and arguments to describe parameters that we can use to modify the operation of that command.
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::: group-tab
 
 ### Windows
 
+In the Windows command line, we use the `/?` argument to instruct the computer to print the help information that that command. To see helpful reference information for using the `dir` command, run:
+
 ```bash
-date /T
+> dir /?
 ```
+
+The result of this command will be printed to the screen.
+
+```output
+Displays a list of files and subdirectories in a directory.
+
+DIR [drive:][path][filename] [/A[[:]attributes]] [/B] [/C] [/D] [/L] [/N]
+  [/O[[:]sortorder]] [/P] [/Q] [/R] [/S] [/T[[:]timefield]] [/W] [/X] [/4]
+
+  [drive:][path][filename]
+              Specifies drive, directory, and/or files to list.
+
+  /A          Displays files with specified attributes.
+  attributes   D  Directories                R  Read-only files
+               H  Hidden files               A  Files ready for archiving
+               S  System files               I  Not content indexed files
+               L  Reparse Points             O  Offline files
+               -  Prefix meaning not
+  /B          Uses bare format (no heading information or summary).
+...
+```
+
+The output is a description of the `dir` command, instructions for using it, and a reference to each of the options or arguments available.
 
 ### Linux
 
+In the Linux command line, we use the `--help` argument to instruct the computer to print the help information that that command. To see helpful reference information for using the `ls` command, run:
+
 ```bash
-date
+$ ls --help
 ```
+
+The result of this command will be printed to the screen.
+
+```output
+Usage: ls [OPTION]... [FILE]...
+List information about the FILEs (the current directory by default).
+Sort entries alphabetically if none of -cftuvSUX nor --sort is specified.
+
+Mandatory arguments to long options are mandatory for short options too.
+  -a, --all                  do not ignore entries starting with .
+  -A, --almost-all           do not list implied . and ..
+      --author               with -l, print the author of each file
+  -b, --escape               print C-style escapes for nongraphic characters
+...
+```
+
+The output is a description of the `ls` command, instructions for using it, and a reference to each of the options or arguments available.
+
 
 ### Mac OS
 
+In the macOS command line, we use the `--help` argument to instruct the computer to print the help information that that command. To see helpful reference information for using the `ls` command, run:
+
 ```bash
-date
+$ ls --help
 ```
+
+The result of this command will be printed to the screen.
+
+```output
+Usage: ls [OPTION]... [FILE]...
+List information about the FILEs (the current directory by default).
+Sort entries alphabetically if none of -cftuvSUX nor --sort is specified.
+
+Mandatory arguments to long options are mandatory for short options too.
+  -a, --all                  do not ignore entries starting with .
+  -A, --almost-all           do not list implied . and ..
+      --author               with -l, print the author of each file
+  -b, --escape               print C-style escapes for nongraphic characters
+...
+```
+
+The output is a description of the `ls` command, instructions for using it, and a reference to each of the options or arguments available.
 
 :::
 
-### Advantages of CLIs
-
-### CLIs for research code
-
 ## CLIs in Python
 
-### argparse
+We can add a command-line interface to our Python code using the methods and tools that are included in Python programming language.
+
+### Getting started
+
+Let's continue working on our birdsong identification software project and create an entry-point to our code.
+
+To create an executable script that will run from the command line, create a file called `oddsong/__main__.py`.
+When a user runs our code from the terminal, this `__main__.py` file will be executed first.
+
+:::::::::::::::::::::::::::::::::::::::::: spoiler
+
+### Why must our file be named `__main__.py`?
+
+This is a mechanism that tells Python how we want users to interact with our software.
+
+To find out more, please read the [__main__.py](https://docs.python.org/3/library/__main__.html#main-py-in-python-packages) section in the Python documentation.
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
+Let's check if this works by writing a simple `print()` command in the `__main__.py` script.
+
+```python
+print("Hello, world!")
+```
+
+Run your code
+
+```bash
+$ python -m oddsong
+Hello, world!
+
+```
+
+### `main()` functions
+
+`main` functions are used to as the primary "starting point" for a command-line interface, otherwise known as an "entry point" for our scripted sequence of commands.
+
+Inside this file, create a function called `main()` and an `if` statement as shown below.
+
+```python
+def main():
+    print("Identifying bird vocalisation...")
+
+if __name__ == "__main__":
+    main()
+```
+
+When the user executes our CLI, Python will know to run the `main()` function and execute our research code.
+
+The logical statement `if __name__ == "__main__"` means that the `main()` function will *only* run when the code is run from the comand line as the [top-level code environment](https://docs.python.org/3/library/__main__.html#what-is-the-top-level-code-environment).
+
+### CLI documentation
+
+Python has a useful inbuilt module called [argparse](https://docs.python.org/3/howto/argparse.html) to quickly create a command line interface that follows the standard conventions of the Linux software ecosystem.
+
+To get started, let's create an 
 
 #### Description
 
