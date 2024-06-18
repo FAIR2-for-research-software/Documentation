@@ -1,5 +1,5 @@
 ---
-title: 'Developer guidance'
+title: 'Contributor guidance'
 teaching: 10
 exercises: 2
 ---
