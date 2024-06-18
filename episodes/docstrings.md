@@ -169,19 +169,11 @@ def calculate_rectangle_area(width, height):
 
 This can save you a lot of time, but as with any AI-generated content, always check the output and ensure it's correct!
 
-## Conclusion
-
-Docstrings are special comments that describe the purpose of a function and its inputs and outputs, making your code clearer, easier for other researchers to use, and more maintainable in the long run.
-
-## Further reading
-
-To find out more about documentation strings, please refer to the following resources:
-
-- Python [PEP 8 Documentation Strings](https://peps.python.org/pep-0008/#documentation-strings)
-- [Numpy style guide](https://numpydoc.readthedocs.io/en/latest/format.html) describes the syntax and best practices for docstrings in the Numpy project.
-
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
+- Docstrings are special comments that describe the **purpose of a function** and its inputs and outputs
+- Documentation strings make your code **clearer to read** and easier for other researchers to use
+- Documenting your functions make them **easier to maintain** in the long run.
 - Well-documented, **reusable research code** depends upon good documentation strings
 - Research collaborators will benefit from **clear explanations** of the purpose of each function
 - **Structure your docstrings** to convey more information, with a concise introduction
@@ -189,3 +181,10 @@ To find out more about documentation strings, please refer to the following reso
 - Documentation strings allow you to break your documentation into bite-size chunks, with one overview comment per function.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
+
+## Further resources
+
+To find out more about documentation strings, please refer to the following resources:
+
+- Python [PEP 8 Documentation Strings](https://peps.python.org/pep-0008/#documentation-strings)
+- [Numpy style guide](https://numpydoc.readthedocs.io/en/latest/format.html) describes the syntax and best practices for docstrings in the Numpy project.

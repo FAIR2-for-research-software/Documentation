@@ -70,13 +70,6 @@ A coding style guide will help to ensure consistency across all the code written
 
 This might include guidance and advice, or more strict rules as standards that are checked by a code linter. A code linter is an analysis tool that inspects code and checks for common errors and problems, producing a report for the developer to read and act upon. Common coding style standards include the PEP 8 style guide for the Python programming language and the tidyverse style guide in the R statistical language.
 
-## Further resources
-
-To find out more about creating healthy communities of developers to collaborate on research software engineering projects, please visit the following resources:
-
-- GitHub Docs [Setting guidelines for repository contributors](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/setting-guidelines-for-repository-contributors)
-- H. Gruson and H. Turner Software Sustainability Institute [Opening the door to new contributors in open source projects](https://www.software.ac.uk/blog/opening-door-new-contributors-open-source-projects)
-
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
 - **Encourage collaboration:** There are **many ways to contribute** to a research software project, including bug reoprts, feature suggests, design discussions, documentation, and software engineering.
@@ -85,3 +78,10 @@ To find out more about creating healthy communities of developers to collaborate
 - **Communication:** Create appropriate communication channels so that design discussions and proposed changes may be worked through transparently.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
+
+## Further resources
+
+To find out more about creating healthy communities of developers to collaborate on research software engineering projects, please visit the following resources:
+
+- GitHub Docs [Setting guidelines for repository contributors](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/setting-guidelines-for-repository-contributors)
+- H. Gruson and H. Turner Software Sustainability Institute [Opening the door to new contributors in open source projects](https://www.software.ac.uk/blog/opening-door-new-contributors-open-source-projects)
