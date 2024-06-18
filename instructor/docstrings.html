@@ -182,7 +182,9 @@
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
         <ul><li><a href="#introduction">Introduction</a></li>
+<li><a href="#best-practices">Best practices</a></li>
 <li><a href="#automatically-generate-docstrings">Automatically generate docstrings</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
 <li><a href="#further-reading">Further reading</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
@@ -284,7 +286,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Documentation strings</h1>
-        <p>Last updated on 2024-05-31 |
+        <p>Last updated on 2024-06-18 |
         
         <a href="https://github.com/Joe-Heffer-Shef/FAIR4RS-Documentation/edit/main/episodes/docstrings.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
         
@@ -305,7 +307,11 @@
 <div class="card-body">
 <div class="inner">
 <h3 class="card-title">Questions</h3>
-<ul><li>TODO</li>
+<ul><li>What is a <strong>documentation string</strong>?</li>
+<li>Why are documentation strings useful for <strong>research
+software</strong>?</li>
+<li>
+<strong>How</strong> do we write documentation strings?</li>
 </ul></div>
 </div>
 </div>
@@ -313,7 +319,12 @@
 <div class="card-body">
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
-<ul><li>TODO</li>
+<ul><li>Understand the <strong>purpose</strong> of documentation
+strings</li>
+<li>Learn <strong>how to write</strong> documentation strings that will
+be useful for other researchers</li>
+<li>Introduce ways to describe the parameters and return values of
+functions</li>
 </ul></div>
 </div>
 </div>
@@ -331,7 +342,8 @@ to future users and maintainers of that code. We also need to describe
 all the expected inputs and outputs of the function.</p>
 <p>We describe functions by using a feature of many programming
 languages called documentation strings, usually abbreviated to
-docstring.</p>
+<strong>docstring</strong>. A documentation string is a piece of text
+that describes that piece of code and helps people to use it.</p>
 <p>To make a docstring, we put a string as the first line of a function
 (or other object.) For example, for a simple Python function that
 calculates the sum of two numbers:</p>
@@ -362,7 +374,7 @@ calculates the sum of two numbers:</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1">Show me the solution</h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>TODO</p>
 </div>
@@ -400,7 +412,7 @@ for a function.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2">Show me the solution</h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>TODO</p>
 </div>
@@ -462,6 +474,26 @@ raise if the inputs aren’t as expected, and how to deal with them.</p>
 <p>TODO Usage examples for functions.</p>
 <p>Code snippets: comprehensive collections of code examples that
 demonstrate how to use functions effectively in different scenarios.</p>
+</section><section id="best-practices"><h2 class="section-heading">Best practices<a class="anchor" aria-label="anchor" href="#best-practices"></a>
+</h2>
+<hr class="half-width"><p>Focus on the <strong>purpose and functionality</strong> of the code,
+rather than getting bogged down in the details of how it works. Explain
+what the function <strong>does</strong>, rather then the specific
+implementation, because this might change over time. A function
+encapsulates an isolated part of a system, which can be used as a black
+box by other parts of the system or the end user, who in many cases only
+needs to understand its inputs and outputs. It’s a good idea to start
+your docstring with a high-level summary of the function and, if the
+function is a major one, an introduction for the new user.</p>
+<p>Clarity is key. Be <strong>concise</strong>. Describe the essential
+information that user needs to know first and be brief but clear. As
+with any software documentation, <strong>avoid jargon</strong> where
+possible, and provide links to further resources for users to take a
+deep dive into more complicated topics.</p>
+<p>Be <strong>consistent</strong>. Decide a style of docstring and use
+that everywhere across your software project. If you’re working on a
+larger project with multiple developers, refer to the coding conventions
+and, if in doubt, follow the style of existing code.</p>
 </section><section id="automatically-generate-docstrings"><h2 class="section-heading">Automatically generate docstrings<a class="anchor" aria-label="anchor" href="#automatically-generate-docstrings"></a>
 </h2>
 <hr class="half-width"><p>Generative AI services such as Google Gemini can write docstrings
@@ -498,12 +530,22 @@ descriptions of the content that it generated.</p>
 </div>
 <p>This can save you a lot of time, but as with any AI-generated
 content, always check the output and ensure it’s correct!</p>
+</section><section id="conclusion"><h2 class="section-heading">Conclusion<a class="anchor" aria-label="anchor" href="#conclusion"></a>
+</h2>
+<hr class="half-width"><p>Docstrings are special comments that describe the purpose of a
+function and its inputs and outputs, making your code clearer, easier
+for other researchers to use, and more maintainable in the long run.</p>
 </section><section id="further-reading"><h2 class="section-heading">Further reading<a class="anchor" aria-label="anchor" href="#further-reading"></a>
 </h2>
-<hr class="half-width"><p>For more information, please see:</p>
+<hr class="half-width"><p>To find out more about documentation strings, please refer to the
+following resources:</p>
 <ul><li>Python <a href="https://peps.python.org/pep-0008/#documentation-strings" class="external-link">PEP 8
 Documentation Strings</a>
 </li>
+<li>
+<a href="https://numpydoc.readthedocs.io/en/latest/format.html" class="external-link">Numpy style
+guide</a> describes the syntax and best practices for docstrings in the
+Numpy project.</li>
 </ul><div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -512,7 +554,18 @@ Documentation Strings</a>
 <h3 class="callout-title">Key Points<a class="anchor" aria-label="anchor" href="#keypoints1"></a>
 </h3>
 <div class="callout-content">
-<ul><li>TODO</li>
+<ul><li>Well-documented, <strong>reusable research code</strong> depends
+upon good documentation strings</li>
+<li>Research collaborators will benefit from <strong>clear
+explanations</strong> of the purpose of each function</li>
+<li>
+<strong>Structure your docstrings</strong> to convey more
+information, with a concise introduction</li>
+<li>Good docstrings are clear and use <strong>everyday
+language</strong>
+</li>
+<li>Documentation strings allow you to break your documentation into
+bite-size chunks, with one overview comment per function.</li>
 </ul></div>
 </div>
 </div>
@@ -578,7 +631,7 @@ any links that you are not going to use.
   "url": "https://Joe-Heffer-Shef.github.io/FAIR4RS-Documentation/instructor/docstrings.html",
   "identifier": "https://Joe-Heffer-Shef.github.io/FAIR4RS-Documentation/instructor/docstrings.html",
   "dateCreated": "2024-05-20",
-  "dateModified": "2024-05-31",
+  "dateModified": "2024-06-18",
   "datePublished": "2024-06-18"
 }
 
