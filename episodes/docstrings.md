@@ -6,16 +6,16 @@ exercises: 2
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
-- What is a documentation string?
-- Why are documentation strings useful for research software?
-- How do we write documentation strings?
+- What is a **documentation string**?
+- Why are documentation strings useful for **research software**?
+- **How** do we write documentation strings?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Understand the purpose of documentation strings
-- Learn to write documentation strings that will be useful for other researchers
+- Understand the **purpose** of documentation strings
+- Learn **how to write** documentation strings that will be useful for other researchers
 - Introduce ways to describe the parameters and return values of functions
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
@@ -182,9 +182,10 @@ To find out more about documentation strings, please refer to the following reso
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
-- Well-documented, reusable research code depends upon good documentation strings
-- Research collaborators will benefit from clear explanataions of the purpose of each function
-- Structure your docstrings to convey more information, with a concise introduction
-- Good docstrings are clear and use everyday language
+- Well-documented, **reusable research code** depends upon good documentation strings
+- Research collaborators will benefit from **clear explanations** of the purpose of each function
+- **Structure your docstrings** to convey more information, with a concise introduction
+- Good docstrings are clear and use **everyday language**
+- Documentation strings allow you to break your documentation into bite-size chunks, with one overview comment per function.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
