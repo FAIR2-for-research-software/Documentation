@@ -454,7 +454,7 @@ what this code is for or why it was written.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-1" class="tab-content">
-<div id="nav-tabpanel-1-Python" class="tab-pane show active" aria-labelledby="nav-tab-1-Python" role="tabpanel">
+<div id="nav-tabpanel-1-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-Python">
 <p>This is some research code that is contained in a Python
 function.</p>
 <div class="codewrapper sourceCode" id="cb1">
@@ -465,7 +465,7 @@ function.</p>
 <span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a>  <span class="cf">return</span> x <span class="op">*</span> weird_num <span class="op">-</span> angle<span class="op">**</span><span class="dv">3</span> <span class="op">/</span> (weird_num <span class="op">*</span> <span class="dv">2</span>)</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-1-R" class="tab-pane" aria-labelledby="nav-tab-1-R" role="tabpanel">
+<div id="nav-tabpanel-1-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-R">
 <p>This is some research code that is contained in an R function.</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -508,7 +508,7 @@ research software.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-2" class="tab-content">
-<div id="nav-tabpanel-2-Python" class="tab-pane show active" aria-labelledby="nav-tab-2-Python" role="tabpanel">
+<div id="nav-tabpanel-2-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-2-Python">
 <p>This is a function written in the Python programming language that
 calculates a mathematical result, the details of which aren’t relevant.
 This code has plenty of documentation to help us read and understand
@@ -544,7 +544,7 @@ it.</p>
 <span id="cb3-26"><a href="#cb3-26" tabindex="-1"></a>  <span class="cf">return</span> sin_value</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-2-R" class="tab-pane" aria-labelledby="nav-tab-2-R" role="tabpanel">
+<div id="nav-tabpanel-2-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-R">
 <p>This is a function written in the R programming language that
 calculates a mathematical result, the details of which aren’t relevant.
 This code has plenty of documentation to help us read and understand
@@ -1187,26 +1187,6 @@ descriptions of the content that it generated.</p>
 </div>
 <p>This can save you a lot of time, but as with any AI-generated
 content, always check the output and ensure it’s correct!</p>
-</section><section id="conclusion"><h2 class="section-heading">Conclusion<a class="anchor" aria-label="anchor" href="#conclusion"></a>
-</h2>
-<hr class="half-width">
-<p>Docstrings are special comments that describe the purpose of a
-function and its inputs and outputs, making your code clearer, easier
-for other researchers to use, and more maintainable in the long run.</p>
-</section><section id="further-reading"><h2 class="section-heading">Further reading<a class="anchor" aria-label="anchor" href="#further-reading"></a>
-</h2>
-<hr class="half-width">
-<p>To find out more about documentation strings, please refer to the
-following resources:</p>
-<ul>
-<li>Python <a href="https://peps.python.org/pep-0008/#documentation-strings" class="external-link">PEP 8
-Documentation Strings</a>
-</li>
-<li>
-<a href="https://numpydoc.readthedocs.io/en/latest/format.html" class="external-link">Numpy style
-guide</a> describes the syntax and best practices for docstrings in the
-Numpy project.</li>
-</ul>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -1216,6 +1196,12 @@ Numpy project.</li>
 </h3>
 <div class="callout-content">
 <ul>
+<li>Docstrings are special comments that describe the <strong>purpose of
+a function</strong> and its inputs and outputs</li>
+<li>Documentation strings make your code <strong>clearer to
+read</strong> and easier for other researchers to use</li>
+<li>Documenting your functions make them <strong>easier to
+maintain</strong> in the long run.</li>
 <li>Well-documented, <strong>reusable research code</strong> depends
 upon good documentation strings</li>
 <li>Research collaborators will benefit from <strong>clear
@@ -1232,11 +1218,24 @@ bite-size chunks, with one overview comment per function.</li>
 </div>
 </div>
 </div>
+</section><section id="further-resources"><h2 class="section-heading">Further resources<a class="anchor" aria-label="anchor" href="#further-resources"></a>
+</h2>
+<hr class="half-width">
+<p>To find out more about documentation strings, please refer to the
+following resources:</p>
+<ul>
+<li>Python <a href="https://peps.python.org/pep-0008/#documentation-strings" class="external-link">PEP 8
+Documentation Strings</a>
+</li>
+<li>
+<a href="https://numpydoc.readthedocs.io/en/latest/format.html" class="external-link">Numpy style
+guide</a> describes the syntax and best practices for docstrings in the
+Numpy project.</li>
+</ul>
 <!-- 
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use. 
- -->
-</section></section><section id="aio-readable"><p>Content from <a href="readable.html">Code readability</a></p>
+ --></section></section><section id="aio-readable"><p>Content from <a href="readable.html">Code readability</a></p>
 <hr>
 <p>Last updated on 2024-05-31 |
         
@@ -1303,7 +1302,7 @@ font.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-1" class="tab-content">
-<div id="nav-tabpanel-1-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-Python">
+<div id="nav-tabpanel-1-Python" class="tab-pane show active" aria-labelledby="nav-tab-1-Python" role="tabpanel">
 <p>Without syntax highlighting:</p>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1347,7 +1346,7 @@ font.</p>
 <span id="cb2-16"><a href="#cb2-16" tabindex="-1"></a>  <span class="cf">return</span> word_count</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-1-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-R">
+<div id="nav-tabpanel-1-R" class="tab-pane" aria-labelledby="nav-tab-1-R" role="tabpanel">
 <p>Without syntax highlighting:</p>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1449,7 +1448,7 @@ it’s easy to interpret their purpose.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-2" class="tab-content">
-<div id="nav-tabpanel-2-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-2-Python">
+<div id="nav-tabpanel-2-Python" class="tab-pane show active" aria-labelledby="nav-tab-2-Python" role="tabpanel">
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -1461,7 +1460,7 @@ it’s easy to interpret their purpose.</p>
 <span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a>    <span class="cf">return</span> area</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-2-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-R">
+<div id="nav-tabpanel-2-R" class="tab-pane" aria-labelledby="nav-tab-2-R" role="tabpanel">
 <div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -1502,7 +1501,7 @@ variable with the same name as an inbuilt function such as
 </button>
 </div>
 </nav><div id="nav-tabContent-3" class="tab-content">
-<div id="nav-tabpanel-3-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-3-Python">
+<div id="nav-tabpanel-3-Python" class="tab-pane show active" aria-labelledby="nav-tab-3-Python" role="tabpanel">
 <p>Classes use capitalised words</p>
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1526,7 +1525,7 @@ variable with the same name as an inbuilt function such as
 Conventions</a> section of
 <acronym title="Python Enhancement Proposals">PEP</acronym> 8.</p>
 </div>
-<div id="nav-tabpanel-3-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-3-R">
+<div id="nav-tabpanel-3-R" class="tab-pane" aria-labelledby="nav-tab-3-R" role="tabpanel">
 <p>Classes use capitalised words</p>
 <div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -1586,7 +1585,7 @@ start of a new line, like so:</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-4" class="tab-content">
-<div id="nav-tabpanel-4-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-4-Python">
+<div id="nav-tabpanel-4-Python" class="tab-pane show active" aria-labelledby="nav-tab-4-Python" role="tabpanel">
 <div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -1595,7 +1594,7 @@ start of a new line, like so:</p>
 <span id="cb13-3"><a href="#cb13-3" tabindex="-1"></a>age <span class="op">=+</span> <span class="dv">3</span></span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-4-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-4-R">
+<div id="nav-tabpanel-4-R" class="tab-pane" aria-labelledby="nav-tab-4-R" role="tabpanel">
 <div class="codewrapper sourceCode" id="cb14">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -1638,7 +1637,7 @@ they move through the system.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-5" class="tab-content">
-<div id="nav-tabpanel-5-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-5-Python">
+<div id="nav-tabpanel-5-Python" class="tab-pane show active" aria-labelledby="nav-tab-5-Python" role="tabpanel">
 <p>In the Python programming language, we can tell the user what type of
 data we expect each variable to contain by using the syntax below. This
 colon means that the <code>age</code> variable should contain a value
@@ -1652,7 +1651,7 @@ with the integer type, <code>int</code>.</p>
 of the Python Documentation and the <a href="https://mypy.readthedocs.io/en/stable/cheat_sheet_py3.html" class="external-link">Type
 hints cheat sheet</a> in the mypy documentation.</p>
 </div>
-<div id="nav-tabpanel-5-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-5-R">
+<div id="nav-tabpanel-5-R" class="tab-pane" aria-labelledby="nav-tab-5-R" role="tabpanel">
 <p>There is no type hinting feature in base R, although some packages
 are available that enable this. Here, the <code>L</code> symbol at the
 end of the number tells the R interpreter that this is an integer data
@@ -1691,7 +1690,7 @@ reader.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-6" class="tab-content">
-<div id="nav-tabpanel-6-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-6-Python">
+<div id="nav-tabpanel-6-Python" class="tab-pane show active" aria-labelledby="nav-tab-6-Python" role="tabpanel">
 <p>Below is the source code for a simple Python function that calculates
 the sum of two numbers. I’ve labelled each of the function arguments
 <code>a</code> and <code>b</code> with variable annotations that let you
@@ -1708,7 +1707,7 @@ declaration as <code>-&gt; int</code>.</p>
 <span id="cb17-3"><a href="#cb17-3" tabindex="-1"></a>    <span class="cf">return</span> a <span class="op">+</span> b</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-6-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-6-R">
+<div id="nav-tabpanel-6-R" class="tab-pane" aria-labelledby="nav-tab-6-R" role="tabpanel">
 <p>Below is the source code for a simple R function that calculates the
 sum of two numbers.</p>
 <p>In R, there is no inbuilt functionality for annotating the expected
@@ -2452,20 +2451,6 @@ problems, producing a report for the developer to read and act upon.
 Common coding style standards include the PEP 8 style guide for the
 Python programming language and the tidyverse style guide in the R
 statistical language.</p>
-</section><section id="further-resources"><h2 class="section-heading">Further resources<a class="anchor" aria-label="anchor" href="#further-resources"></a>
-</h2>
-<hr class="half-width">
-<p>To find out more about creating healthy communities of developers to
-collaborate on research software engineering projects, please visit the
-following resources:</p>
-<ul>
-<li>GitHub Docs <a href="https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/setting-guidelines-for-repository-contributors" class="external-link">Setting
-guidelines for repository contributors</a>
-</li>
-<li>H. Gruson and H. Turner Software Sustainability Institute <a href="https://www.software.ac.uk/blog/opening-door-new-contributors-open-source-projects" class="external-link">Opening
-the door to new contributors in open source projects</a>
-</li>
-</ul>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -2494,11 +2479,24 @@ through transparently.</li>
 </div>
 </div>
 </div>
+</section><section id="further-resources"><h2 class="section-heading">Further resources<a class="anchor" aria-label="anchor" href="#further-resources"></a>
+</h2>
+<hr class="half-width">
+<p>To find out more about creating healthy communities of developers to
+collaborate on research software engineering projects, please visit the
+following resources:</p>
+<ul>
+<li>GitHub Docs <a href="https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/setting-guidelines-for-repository-contributors" class="external-link">Setting
+guidelines for repository contributors</a>
+</li>
+<li>H. Gruson and H. Turner Software Sustainability Institute <a href="https://www.software.ac.uk/blog/opening-door-new-contributors-open-source-projects" class="external-link">Opening
+the door to new contributors in open source projects</a>
+</li>
+</ul>
 <!-- 
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use. 
- -->
-</section></section><section id="aio-cli"><p>Content from <a href="cli.html">Command line interfaces</a></p>
+ --></section></section><section id="aio-cli"><p>Content from <a href="cli.html">Command line interfaces</a></p>
 <hr>
 <p>Last updated on 2024-06-10 |
         
@@ -2604,7 +2602,7 @@ but they work in basically the same way.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-1" class="tab-content">
-<div id="nav-tabpanel-1-Windows" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-Windows">
+<div id="nav-tabpanel-1-Windows" class="tab-pane show active" aria-labelledby="nav-tab-1-Windows" role="tabpanel">
 <p>On Windows operating systems, press the Windows key and type in
 “command”. The start menu will find the “Command Prompt” app. Press
 <kbd>Enter</kbd> or click on the Command Prompt icon to launch the
@@ -2624,7 +2622,7 @@ something like this:</p>
 <p>For more information, see the <a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands" class="external-link">Windows
 Commands</a> page on the Windows Server documentation.</p>
 </div>
-<div id="nav-tabpanel-1-Linux" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-Linux">
+<div id="nav-tabpanel-1-Linux" class="tab-pane" aria-labelledby="nav-tab-1-Linux" role="tabpanel">
 <p>On Ubuntu, press <kbd>Ctrl + Alt + T</kbd> to open a terminal.</p>
 <p>You can also open Dash and search for “Terminal”. For detailed
 instructions, please read <a href="https://ubuntu.com/tutorials/command-line-for-beginners#3-opening-a-terminal" class="external-link">Opening
@@ -2639,7 +2637,7 @@ where the dollar sign <code>$</code> means “type here”.</p>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="ex">bob@myUbuntuPC:~$</span></span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-1-MacOS" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-MacOS">
+<div id="nav-tabpanel-1-MacOS" class="tab-pane" aria-labelledby="nav-tab-1-MacOS" role="tabpanel">
 <p>Please read <a href="https://support.apple.com/en-gb/guide/terminal/apd5265185d-f365-44cb-8b09-71a064a42125/mac" class="external-link">Open
 or quit Terminal on Mac</a> on the <a href="https://support.apple.com/en-gb/guide/terminal/welcome/mac" class="external-link">Terminal
 User Guide</a> for macOS.</p>
@@ -2673,7 +2671,7 @@ current directory.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-2" class="tab-content">
-<div id="nav-tabpanel-2-Windows" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-2-Windows">
+<div id="nav-tabpanel-2-Windows" class="tab-pane show active" aria-labelledby="nav-tab-2-Windows" role="tabpanel">
 <p>On Windows, the <a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/dir" class="external-link">dir</a>
 command is used to list the contents of a directory. When you enter this
 command and press <kbd>Enter</kbd></p>
@@ -2703,7 +2701,7 @@ single file called <code>README.txt</code>. The date and time that each
 file was last modified is shown, along with the file size, which is 12
 bytes in this case.</p>
 </div>
-<div id="nav-tabpanel-2-Linux" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-Linux">
+<div id="nav-tabpanel-2-Linux" class="tab-pane" aria-labelledby="nav-tab-2-Linux" role="tabpanel">
 <p>To show the contents of a directory on a Linux system, we use the <a href="https://manpages.ubuntu.com/manpages/noble/man1/ls.1plan9.html" class="external-link"><code>ls</code>
 command</a> which lists information about the files in the current
 location.</p>
@@ -2720,7 +2718,7 @@ folder.</p>
 <pre class="output" tabindex="0"><code><span><span class="va">README.txt</span></span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-2-MacOS" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-MacOS">
+<div id="nav-tabpanel-2-MacOS" class="tab-pane" aria-labelledby="nav-tab-2-MacOS" role="tabpanel">
 <p>The macOS terminal is very similar to the Linux one. To show the
 contents of a directory on a Linux system, we use the <a href="https://support.apple.com/en-gb/guide/terminal/apdb66b5242-0d18-49fc-9c47-a2498b7c91d5/2.14/mac/14.0" class="external-link"><code>ls</code>
 command</a> which lists information about the files in the current
@@ -2754,7 +2752,7 @@ will do.</p>
   <h3 class="accordion-header" id="headingSpoiler1">
 <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>What are arguments?</h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <p>When using shell commands, we use the words option, flag, and
 arguments to describe parameters that we can use to modify the operation
@@ -2782,7 +2780,7 @@ of that command.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-3" class="tab-content">
-<div id="nav-tabpanel-3-Windows" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-3-Windows">
+<div id="nav-tabpanel-3-Windows" class="tab-pane show active" aria-labelledby="nav-tab-3-Windows" role="tabpanel">
 <p>In the Windows command line, we use the <code>/?</code> argument to
 instruct the computer to print the help information that that command.
 To see helpful reference information for using the <code>dir</code>
@@ -2817,7 +2815,7 @@ DIR [drive:][path][filename] [/A[[:]attributes]] [/B] [/C] [/D] [/L] [/N]
 instructions for using it, and a reference to each of the options or
 arguments available.</p>
 </div>
-<div id="nav-tabpanel-3-Linux" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-3-Linux">
+<div id="nav-tabpanel-3-Linux" class="tab-pane" aria-labelledby="nav-tab-3-Linux" role="tabpanel">
 <p>In the Linux command line, we use the <code>--help</code> argument to
 instruct the computer to print the help information that that command.
 To see helpful reference information for using the <code>ls</code>
@@ -2846,7 +2844,7 @@ Mandatory arguments to long options are mandatory for short options too.
 instructions for using it, and a reference to each of the options or
 arguments available.</p>
 </div>
-<div id="nav-tabpanel-3-MacOS" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-3-MacOS">
+<div id="nav-tabpanel-3-MacOS" class="tab-pane" aria-labelledby="nav-tab-3-MacOS" role="tabpanel">
 <p>In the macOS command line, we use the <code>--help</code> argument to
 instruct the computer to print the help information that that command.
 To see helpful reference information for using the <code>ls</code>
@@ -2898,7 +2896,7 @@ executed first.</p>
   <h3 class="accordion-header" id="headingSpoiler2">
 <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>Why must our file be named __main__.py?</h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
 <div class="accordion-body">
 <p>This is a mechanism that tells Python how we want users to interact
 with our software.</p>
