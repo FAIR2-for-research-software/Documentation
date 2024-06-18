@@ -211,6 +211,7 @@
         <ul><li><a href="#introduction">Introduction</a></li>
 <li><a href="#contribution-guides">Contribution guides</a></li>
 <li><a href="#developer-notes">Developer notes</a></li>
+<li><a href="#further-resources">Further resources</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
         
@@ -284,7 +285,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Developer guidance</h1>
-        <p>Last updated on 2024-05-21 |
+        <p>Last updated on 2024-06-18 |
         
         <a href="https://github.com/Joe-Heffer-Shef/FAIR4RS-Documentation/edit/main/episodes/developers.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
         
@@ -305,7 +306,12 @@
 <div class="card-body">
 <div class="inner">
 <h3 class="card-title">Questions</h3>
-<ul><li>TODO</li>
+<ul><li>How do I introduce <strong>new contributors</strong> to my research
+software project?</li>
+<li>What is the best way to <strong>communicate processes</strong> such
+as bug reporting?</li>
+<li>Where should I write up the <strong>design and structure</strong> of
+the system?</li>
 </ul></div>
 </div>
 </div>
@@ -313,7 +319,15 @@
 <div class="card-body">
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
-<ul><li>TODO</li>
+<ul><li>Learn to write a <strong>contribution guide</strong> for research
+code</li>
+<li>Learn about software <strong>coding standards</strong>
+</li>
+<li>Implement ways to <strong>facilitate communication</strong> between
+researchers that are engaged in the project</li>
+<li>Provide a high-level <strong>understanding of an existing
+codebase</strong>
+</li>
 </ul></div>
 </div>
 </div>
@@ -332,6 +346,9 @@ software and project governance, see Module 1a.</p>
 all the code is publicly available and may be used and modified by
 anyone, within certain conditions (see module 1b to learn more about
 software licensing.)</p>
+<p>There’s a lot more creating and managing a sustainable community
+aorund a research software project, but having a central piece of
+documentation for contributors is a great start!</p>
 </section><section id="contribution-guides"><h2 class="section-heading">Contribution guides<a class="anchor" aria-label="anchor" href="#contribution-guides"></a>
 </h2>
 <hr class="half-width"><p>Contribution guidelines help users and understand how they can help
@@ -351,6 +368,46 @@ system may be used to raise issues and suggest new features. Software
 developers often propose new code by creating a branch on the version
 control system (such as Git) and requesting for those changes to be
 merged into the main codebase.</p>
+<p>Contribution guides will save you time in the long run, because it
+provides an on-ramp for people to get involved, prevents them from
+getting confused, and reduces the amount of incorrectly-submitted bug
+reports or requests for change, etc.</p>
+<div class="section level3">
+<h3 id="how-to-write-contributor-guidance">How to write contributor guidance<a class="anchor" aria-label="anchor" href="#how-to-write-contributor-guidance"></a></h3>
+<p>The stanard practice for authoring a contribution guide for a
+software project is to create a file called <code>CONTRIBUTING.md</code>
+in the root folder of your project. This is a Markdown file that
+introduces new people to the project. It lets people know the ways they
+can take part in the research software project and what to do to get
+involved.</p>
+<p>The specific contents of this file depend upon the kind of research
+project, but some useful information to provide typically includes:</p>
+<ul><li>An introduction to the organisation and structure of the code,
+possibly including diagrams.</li>
+<li>Instructions to raising issues, suggesting new features, and
+proposing code changes.</li>
+<li>Links to additional documentation that’s hosted elsewhere, such as a
+code of conduct or discussion forum.</li>
+<li>A walkthrough to setting up a development environment, such as
+guidance on installing developer tools or other prerequisites.</li>
+</ul><p>On code hosting platforms such as GitHub, the contribution guide will
+be created automatically using this <code>CONTRIBUTING.md</code>
+Markdown file.</p>
+<div id="discussion1" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Challenge<a class="anchor" aria-label="anchor" href="#discussion1"></a>
+</h3>
+<div class="callout-content">
+<p>TODO</p>
+<p>Create a new file called <code>CONTRIBUTING.md</code> and populate it
+with a few sentences.</p>
+</div>
+</div>
+</div>
+</div>
 </section><section id="developer-notes"><h2 class="section-heading">Developer notes<a class="anchor" aria-label="anchor" href="#developer-notes"></a>
 </h2>
 <hr class="half-width"><p>System documentation is important for new contributors to familiarise
@@ -372,7 +429,18 @@ problems, producing a report for the developer to read and act upon.
 Common coding style standards include the PEP 8 style guide for the
 Python programming language and the tidyverse style guide in the R
 statistical language.</p>
-<div id="keypoints1" class="callout keypoints">
+</section><section id="further-resources"><h2 class="section-heading">Further resources<a class="anchor" aria-label="anchor" href="#further-resources"></a>
+</h2>
+<hr class="half-width"><p>To find out more about creating healthy communities of developers to
+collaborate on research software engineering projects, please visit the
+following resources:</p>
+<ul><li>GitHub Docs <a href="https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/setting-guidelines-for-repository-contributors" class="external-link">Setting
+guidelines for repository contributors</a>
+</li>
+<li>H. Gruson and H. Turner Software Sustainability Institute <a href="https://www.software.ac.uk/blog/opening-door-new-contributors-open-source-projects" class="external-link">Opening
+the door to new contributors in open source projects</a>
+</li>
+</ul><div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
 </div>
@@ -380,7 +448,21 @@ statistical language.</p>
 <h3 class="callout-title">Key Points<a class="anchor" aria-label="anchor" href="#keypoints1"></a>
 </h3>
 <div class="callout-content">
-<ul><li>TODO</li>
+<ul><li>
+<strong>Encourage collaboration:</strong> There are <strong>many
+ways to contribute</strong> to a research software project, including
+bug reoprts, feature suggests, design discussions, documentation, and
+software engineering.</li>
+<li>
+<strong>Clear processes:</strong> Explain the process for making
+changes and having them included into the code</li>
+<li>
+<strong>Bug reports:</strong> Create simple ways for users to report
+issues and have these problems resolved in a timely manner.</li>
+<li>
+<strong>Communication:</strong> Create appropriate communication
+channels so that design discussions and proposed changes may be worked
+through transparently.</li>
 </ul></div>
 </div>
 </div>
@@ -446,7 +528,7 @@ any links that you are not going to use.
   "url": "https://Joe-Heffer-Shef.github.io/FAIR4RS-Documentation/instructor/developers.html",
   "identifier": "https://Joe-Heffer-Shef.github.io/FAIR4RS-Documentation/instructor/developers.html",
   "dateCreated": "2024-05-20",
-  "dateModified": "2024-05-21",
+  "dateModified": "2024-06-18",
   "datePublished": "2024-06-18"
 }
 
