@@ -279,6 +279,7 @@ This will execute the `oddsong` module by running our `oddsong/__main__.py` file
 Let's check if this works by writing a simple `print()` command in the `__main__.py` script.
 
 ```python
+# Show the text on the screen
 print("Hello, world!")
 ```
 
@@ -314,7 +315,7 @@ if __name__ == "__main__":
     main()
 ```
 
-When the user executes our CLI, Python will know to run the `main()` function and execute our research code.
+When the user executes our CLI, Python will know to run the `main()` function and execute our research code. In this case, our research code hasn't been written yet, so we'll just show a message on the screen for now.
 
 The logical statement `if __name__ == "__main__"` means that the `main()` function will *only* run when the code is run from the comand line as the [top-level code environment](https://docs.python.org/3/library/__main__.html#what-is-the-top-level-code-environment).
 
@@ -334,6 +335,7 @@ First, load the `argparse` library using the [`import` keyword](https://docs.pyt
 import argparse
 
 def main():
+    # Define command-line interface
     parser = argparse.ArgumentParser()
     parser.parse_args()
 
@@ -382,15 +384,16 @@ This is the default output of a CLI with no additional arguments specified. The 
 
 :::
 
-The `parse_args()` method runs the parser and makes our arguments available to the user on the command line. This makes the default `--help` flag available which displays instructions and notes that we can customise. As we continue to develop our CLI by adding arguments, each one will be listed and described in this help page. This is an excellent way to document our software and make it available to researchers!
-
 ::::
+
+The `parse_args()` method runs the parser and makes our arguments available to the user on the command line. This makes the default `--help` flag available which displays instructions and notes that we can customise. As we continue to develop our CLI by adding arguments, each one will be listed and described in this help page. This is an excellent way to document our software and make it available to researchers!
 
 #### Arguments
 
 But what if we want to take an input from the user? We add arguments to our CLI using the following syntax.
 
 ```python
+# Add the category argument
 parser.add_argument('-c', '--category')
 ```
 
@@ -408,6 +411,7 @@ The code now looks something like that shown below.
 import argparse
 
 def main():
+    # Define command-line interface
     parser = argparse.ArgumentParser()
     parser.add_argument('-c', '--category')
     parser.parse_args()
@@ -444,7 +448,9 @@ Of course, if you've imbibed the spirit of the course, you'll notice that our ne
 To provide a concise explanation for each parameter we use the `help` argument of the [`add_argument()` function](https://docs.python.org/3/library/argparse.html#the-add-argument-method) as shown below.
 
 ```python
-parser.add_argument('-c', '--category', help="The type of bird call e.g. alarm, contact, flight")
+# Add the category argument
+parser.add_argument('-c', '--category', 
+                    help="The type of bird call e.g. alarm, contact, flight")
 ```
 
 This text should briefly describe the purpose of the argument, without going into too much detail (which should be covered in the user guide.)
@@ -461,6 +467,7 @@ We can achieve this in our example script by adding a `help` string.
 import argparse
 
 def main():
+    # Define command-line interface
     parser = argparse.ArgumentParser()
     parser.add_argument('-c', '--category',
         help="The type of bird call e.g. alarm, contact, flight")
@@ -493,17 +500,68 @@ There's [a lot more to learn](https://docs.python.org/3/howto/argparse.html) abo
 
 #### Description
 
+We can provide a simple summary of the software that will be displayed on the `--help` screen of our CLI by using the [`description` argument](https://docs.python.org/3/library/argparse.html#description) when creating our argument parser object. This should concisely inform the user about the purpose of the tool and how it works.
 
+```python
+# Describe the software
+parser = argparse.ArgumentParser(description="A tool to identify bird vocalisations.")
+```
+
+:::: challenge
+
+Write your own description for our software. Where does it display on our help screen?
+
+::: solution
+
+We define the description when creating our argument parser object.
+
+```python
+import argparse
+
+def main():
+    # Define command-line interface
+    parser = argparse.ArgumentParser(
+        description="A tool to identify bird vocalisations.")
+    parser.add_argument('-c', '--category',
+        help="The type of bird call e.g. alarm, contact, flight")
+    parser.parse_args()
+
+    print("Identifying bird vocalisation...")
+
+if __name__ == "__main__":
+    main()
+
+```
+
+This text is displayed after the usage instruction.
+
+```bash
+$ python -m oddsong --help
+usage: oddsong.py [-h] [-c CATEGORY]
+
+A tool to identify bird vocalisations.
+
+options:
+  -h, --help            show this help message and exit
+  -c CATEGORY, --category CATEGORY
+                        The type of bird call e.g. alarm, contact, flight
+```
+
+:::
+
+::::
 
 #### Usage
 
-#### options
+By default, the usage message is generated automatically based on the arguments of our script. For our example, the usage instructions look like this:
 
-Help text
+```
+usage: oddsong.py [-h] [-c CATEGORY]
+```
 
-#### Using CLIs
+In most cases, this will do the job. If you want to overwrite this message then use the [`usage` parameter](https://docs.python.org/3/library/argparse.html#usage) when creating the argument parser object.
 
-TODO
+There are several [other options](https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser) to customise your CLI, but we've covered here the primary ways to document your research software to make it easier to use by your collaborators and other researchers.
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
@@ -517,4 +575,6 @@ TODO
 
 To find out more about command-line interfaces and using the terminal to improve your productivity for research computing, please refer to the following resources:
 
-- Software Carpentry [The Unix Shell](https://swcarpentry.github.io/shell-novice/)
+- Learn more about using the terminal in the Software Carpentry [Unix Shell](https://swcarpentry.github.io/shell-novice/) course.
+- There are Python packages such as [Click](https://click.palletsprojects.com/) that provide a framework for building bigger, more complex command-line interfaces.
+- To learn about distributing your CLI so others can easily install and use it, please see the packaging module in this course series.
