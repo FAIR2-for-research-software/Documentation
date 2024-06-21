@@ -322,7 +322,69 @@ The logical statement `if __name__ == "__main__"` means that the `main()` functi
 
 Python has a useful inbuilt module called [argparse](https://docs.python.org/3/howto/argparse.html) to quickly create a command line interface that follows the standard conventions of the Linux software ecosystem.
 
-To get started, let's create an 
+To get started, attempt the challenge below.
+
+:::: challenge
+
+In this exercise, we'll create an instance of the [argument parser](https://docs.python.org/3/howto/argparse.html#the-basics) tool. Let's edit our Python script.
+
+First, load the `argparse` library using the [`import` keyword](https://docs.python.org/3/reference/import.html), which is conventionally done at the top of the script. Then, we'll add the argument parser to our `main()` function so it loads when the script runs.
+
+```python
+import argparse
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.parse_args()
+
+    print("Identifying bird vocalisation...")
+
+if __name__ == "__main__":
+    main()
+```
+
+This creates a basic command line interface. Let's try it out.
+
+```bash
+python -m oddsong
+```
+
+What do expect to see? What actually happens?
+
+Now let's ask for help! Run the following command to view the usage instructions:
+
+```bash
+python -m oddsong --help
+```
+
+What should we see when using the `--help` flag? What happens in your temrinal?
+
+::: solution
+
+:::
+
+When we run our script as before, it will run like normal with no change in behaviour.
+
+```bash
+$ python test.py
+Identifying bird vocalisation...
+```
+
+But, if we invoke the command-line interface using any *arguments*, then this new functionality kicks in.
+
+```bash
+$ python test.py --help
+usage: test.py [-h]
+
+options:
+  -h, --help  show this help message and exit
+```
+
+This is the default output of a CLI with no additional arguments specified. The first line displays the usage instructions. This means that we may execute `test.py` with an optional help option using `--help` or `-h`  for short. Optional flags are denoted with square brackets like this `[-h]`.
+
+As we continue to develop our CLI by adding arguments, each one will be listed and described in this help page. This is an excellent way to document our software and make it available to researchers!
+
+::::
 
 #### Description
 
