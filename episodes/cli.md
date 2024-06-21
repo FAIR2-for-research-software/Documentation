@@ -26,7 +26,7 @@ A command-line interface, usually abbreviated to CLI, is a terminal or prompt th
 
 In this section, we'll introduce the concept of providing a command-line interface to our research code to make it easier to use and provide a well-documented "entry point" to our software.
 
-### Advantages
+### Advantages of CLIs for research tools
 
 Command lines are a way of interacting with a digital system that go back to the early history of computing. They might seem old-fashioned because typing out commands means that there is no graphical component. It may seem restrictive because your mouse isn't used, but terminals have a lot of power because we can formulate our instructions to the computer by writing commands. We have a direct line to control our computer's operating system.
 
@@ -38,7 +38,7 @@ Terminals are more efficient for running repetitive tasks and provide extra func
 
 There's a lot of powerful commands that can be learned to take full advantage of the command line, but here we'll just address the basics to help us make our research software easier to use by providing a well-documented CLI.
 
-For an introduction to using the command line, please study the [Unix Shell](https://swcarpentry.github.io/shell-novice/) Software Carpentry course.
+This section will briefly introduce you to using the terminal to achieve simple tasks. For an an in-depth course on using the command line, please study the [The Unix Shell](https://swcarpentry.github.io/shell-novice/) Software Carpentry course.
 
 ### How to open the command line
 
@@ -155,7 +155,7 @@ Commands have options that allow the user to choose what the tool will do.
 
 ### What are arguments?
 
-When using shell commands, we use the words option, flag, and arguments to describe parameters that we can use to modify the operation of that command.
+When using shell commands, we use the words **option**, **flag**, and **arguments** to describe **parameters** that we can use to modify the operation of that command and the inputs used to initialise our code.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -247,7 +247,7 @@ The output is a description of the `ls` command, instructions for using it, and 
 
 ## CLIs in Python
 
-We can add a command-line interface to our Python code using the methods and tools that are included in Python programming language.
+We can add a command-line interface to our Python code using the methods and tools that are included in the Python programming language.
 
 ### Getting started
 
@@ -262,9 +262,19 @@ When a user runs our code from the terminal, this `__main__.py` file will be exe
 
 This is a mechanism that tells Python how we want users to interact with our software.
 
-To find out more, please read the [__main__.py](https://docs.python.org/3/library/__main__.html#main-py-in-python-packages) section in the Python documentation.
+To find out more, please read the [\_\_main\_\_.py](https://docs.python.org/3/library/__main__.html#main-py-in-python-packages) section in the Python documentation.
+
+To run our code *as a script* we use the Python `-m` option that runs a module as a script. 
+
+```bash
+python -m oddsong
+```
+
+This will execute the `oddsong` module by running our `oddsong/__main__.py` file.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
+
+:::: challenge
 
 Let's check if this works by writing a simple `print()` command in the `__main__.py` script.
 
@@ -272,13 +282,23 @@ Let's check if this works by writing a simple `print()` command in the `__main__
 print("Hello, world!")
 ```
 
-Run your code
+Add this `print` statement to `__main__.py`. Run this script from the command line. What happens when you run `python -m oddsong`?
+
+::: solution
+
+When you run the `python -m oddsong` command, Python runs the *main module as a script*.
+
+You should see the following output in your terminal.
 
 ```bash
 $ python -m oddsong
 Hello, world!
 
 ```
+
+:::
+
+::::
 
 ### `main()` functions
 
@@ -302,9 +322,134 @@ The logical statement `if __name__ == "__main__"` means that the `main()` functi
 
 Python has a useful inbuilt module called [argparse](https://docs.python.org/3/howto/argparse.html) to quickly create a command line interface that follows the standard conventions of the Linux software ecosystem.
 
-To get started, let's create an 
+To get started, attempt the challenge below.
+
+:::: challenge
+
+In this exercise, we'll create an instance of the [argument parser](https://docs.python.org/3/howto/argparse.html#the-basics) tool. Let's edit our Python script.
+
+First, load the `argparse` library using the [`import` keyword](https://docs.python.org/3/reference/import.html), which is conventionally done at the top of the script. Then, we'll add the argument parser to our `main()` function so it loads when the script runs.
+
+```python
+import argparse
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.parse_args()
+
+    print("Identifying bird vocalisation...")
+
+if __name__ == "__main__":
+    main()
+```
+
+This creates a basic command line interface. Let's try it out.
+
+```bash
+python -m oddsong
+```
+
+What do expect to see? What actually happens?
+
+Now let's ask for help! Run the following command to view the usage instructions:
+
+```bash
+python -m oddsong --help
+```
+
+What should we see when using the `--help` flag? What happens in your temrinal?
+
+::: solution
+
+When we run our script as before, it will run like normal with no change in behaviour.
+
+```bash
+$ python -m oddsong
+Identifying bird vocalisation...
+```
+
+But, if we invoke the command-line interface using any *arguments*, then this new functionality kicks in.
+
+```bash
+$ python -m oddsong --help
+usage: test.py [-h]
+
+options:
+  -h, --help  show this help message and exit
+```
+
+This is the default output of a CLI with no additional arguments specified. The first line displays the usage instructions. This means that we may execute `test.py` with an optional help option using `--help` or `-h`  for short. Optional flags are denoted with square brackets like this `[-h]`.
+
+:::
+
+The `parse_args()` method runs the parser and makes our arguments available to the user on the command line. This makes the default `--help` flag available which displays instructions and notes that we can customise. As we continue to develop our CLI by adding arguments, each one will be listed and described in this help page. This is an excellent way to document our software and make it available to researchers!
+
+::::
+
+#### Arguments
+
+But what if we want to take an input from the user? We add arguments to our CLI using the following syntax.
+
+```python
+parser.add_argument('-c', '--category')
+```
+
+This will create an argument called `args.file` that the user can specify when they run our script, and that we can use in our code to do something useful.
+
+:::: challenge
+
+Add this argument to our script and note the changes to the user interface.
+
+::: solution
+
+The code now looks something like that shown below.
+
+```python
+import argparse
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-c', '--category')
+    parser.parse_args()
+
+    print("Identifying bird vocalisation...")
+
+if __name__ == "__main__":
+    main()
+```
+
+Note that we add the argument *before* we parse them, which makes them available to use.
+
+Now, when we invoke the help screen, we see our new "category" argument listed.
+
+```bash
+$ python -m oddsong --help
+usage: oddsong.py [-h] [-c CATEGORY]
+
+options:
+  -h, --help            show this help message and exit
+  -c CATEGORY, --category CATEGORY
+```
+
+The layout of this text is done for us and follows the standard conventions of terminal tools.
+
+:::
+
+::::
+
+Of course, if you've imbibed the spirit of the course, you'll notice that our new category parameter is completely undocumented! It's unclear what it is or how to use this option.
+
+#### Argument descriptions
+
+```python
+parser.add_argument('-c', '--category', help="The type of bird call e.g. alarm, contact, flight")
+```
+
+
 
 #### Description
+
+
 
 #### Usage
 
@@ -323,3 +468,9 @@ TODO
 - Most programming languages offer frameworks for creating CLIs. In Python, we do this using the `argparse` library.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
+
+## Further resources
+
+To find out more about command-line interfaces and using the terminal to improve your productivity for research computing, please refer to the following resources:
+
+- Software Carpentry [The Unix Shell](https://swcarpentry.github.io/shell-novice/)
