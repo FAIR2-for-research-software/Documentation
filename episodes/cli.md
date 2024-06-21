@@ -445,12 +445,12 @@ Of course, if you've imbibed the spirit of the course, you'll notice that our ne
 
 #### Argument descriptions
 
-To provide a concise explanation for each parameter we use the `help` argument of the [`add_argument()` function](https://docs.python.org/3/library/argparse.html#the-add-argument-method) as shown below.
+To provide a concise explanation for each parameter we use the `help` argument of the [`add_argument()` function](https://docs.python.org/3/library/argparse.html#the-add-argument-method) as shown below.
 
 ```python
 # Add the category argument
 parser.add_argument('-c', '--category', 
-                    help="The type of bird call e.g. alarm, contact, flight")
+    help="The type of bird call e.g. alarm, contact, flight")
 ```
 
 This text should briefly describe the purpose of the argument, without going into too much detail (which should be covered in the user guide.)
@@ -461,7 +461,7 @@ Add a description of the `--category` argument using the `add_argument()` functi
 
 ::: solution
 
-We can achieve this in our example script by adding a `help` string.
+We can achieve this in our example script by adding a `help` string.
 
 ```python
 import argparse
@@ -504,7 +504,8 @@ We can provide a simple summary of the software that will be displayed on the `-
 
 ```python
 # Describe the software
-parser = argparse.ArgumentParser(description="A tool to identify bird vocalisations.")
+parser = argparse.ArgumentParser(
+    description="A tool to identify bird vocalisations.")
 ```
 
 :::: challenge
@@ -575,6 +576,6 @@ There are several [other options](https://docs.python.org/3/library/argparse.htm
 
 To find out more about command-line interfaces and using the terminal to improve your productivity for research computing, please refer to the following resources:
 
-- Learn more about using the terminal in the Software Carpentry [Unix Shell](https://swcarpentry.github.io/shell-novice/) course.
+- Learn more about using the terminal in the Software Carpentry [Unix Shell](https://swcarpentry.github.io/shell-novice/) course.
 - There are Python packages such as [Click](https://click.palletsprojects.com/) that provide a framework for building bigger, more complex command-line interfaces.
 - To learn about distributing your CLI so others can easily install and use it, please see the packaging module in this course series.
