@@ -441,11 +441,55 @@ Of course, if you've imbibed the spirit of the course, you'll notice that our ne
 
 #### Argument descriptions
 
+To provide a concise explanation for each parameter we use the `help` argument of the [`add_argument()` function](https://docs.python.org/3/library/argparse.html#the-add-argument-method) as shown below.
+
 ```python
 parser.add_argument('-c', '--category', help="The type of bird call e.g. alarm, contact, flight")
 ```
 
+This text should briefly describe the purpose of the argument, without going into too much detail (which should be covered in the user guide.)
 
+:::: challenge
+
+Add a description of the `--category` argument using the `add_argument()` function. What change do you expect to happen in your CLI?
+
+::: solution
+
+We can achieve this in our example script by adding a `help` string.
+
+```python
+import argparse
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-c', '--category',
+        help="The type of bird call e.g. alarm, contact, flight")
+    parser.parse_args()
+
+    print("Identifying bird vocalisation...")
+
+if __name__ == "__main__":
+    main()
+
+```
+
+Now, when we call the `--help` option, we see this description as an annotation to that argument.
+
+```bash
+$ python -m oddsong --help
+usage: oddsong.py [-h] [-c CATEGORY]
+
+options:
+  -h, --help            show this help message and exit
+  -c CATEGORY, --category CATEGORY
+                        The type of bird call e.g. alarm, contact, flight
+```
+
+:::
+
+::::
+
+There's [a lot more to learn](https://docs.python.org/3/howto/argparse.html) about command line arguments, including several powerful features of the `argparse` library, but these are beyond the scope of this course.
 
 #### Description
 
