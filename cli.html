@@ -442,7 +442,7 @@ but they work in basically the same way.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-1" class="tab-content">
-<div id="nav-tabpanel-1-Windows" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-Windows">
+<div id="nav-tabpanel-1-Windows" class="tab-pane show active" aria-labelledby="nav-tab-1-Windows" role="tabpanel">
 <p>On Windows operating systems, press the Windows key and type in
 “command”. The start menu will find the “Command Prompt” app. Press
 <kbd>Enter</kbd> or click on the Command Prompt icon to launch the
@@ -462,7 +462,7 @@ something like this:</p>
 <p>For more information, see the <a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands" class="external-link">Windows
 Commands</a> page on the Windows Server documentation.</p>
 </div>
-<div id="nav-tabpanel-1-Linux" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-Linux">
+<div id="nav-tabpanel-1-Linux" class="tab-pane" aria-labelledby="nav-tab-1-Linux" role="tabpanel">
 <p>On Ubuntu, press <kbd>Ctrl + Alt + T</kbd> to open a terminal.</p>
 <p>You can also open Dash and search for “Terminal”. For detailed
 instructions, please read <a href="https://ubuntu.com/tutorials/command-line-for-beginners#3-opening-a-terminal" class="external-link">Opening
@@ -477,7 +477,7 @@ where the dollar sign <code>$</code> means “type here”.</p>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="ex">bob@myUbuntuPC:~$</span></span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-1-MacOS" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-MacOS">
+<div id="nav-tabpanel-1-MacOS" class="tab-pane" aria-labelledby="nav-tab-1-MacOS" role="tabpanel">
 <p>Please read <a href="https://support.apple.com/en-gb/guide/terminal/apd5265185d-f365-44cb-8b09-71a064a42125/mac" class="external-link">Open
 or quit Terminal on Mac</a> on the <a href="https://support.apple.com/en-gb/guide/terminal/welcome/mac" class="external-link">Terminal
 User Guide</a> for macOS.</p>
@@ -510,7 +510,7 @@ current directory.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-2" class="tab-content">
-<div id="nav-tabpanel-2-Windows" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-2-Windows">
+<div id="nav-tabpanel-2-Windows" class="tab-pane show active" aria-labelledby="nav-tab-2-Windows" role="tabpanel">
 <p>On Windows, the <a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/dir" class="external-link">dir</a>
 command is used to list the contents of a directory. When you enter this
 command and press <kbd>Enter</kbd></p>
@@ -540,7 +540,7 @@ single file called <code>README.txt</code>. The date and time that each
 file was last modified is shown, along with the file size, which is 12
 bytes in this case.</p>
 </div>
-<div id="nav-tabpanel-2-Linux" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-Linux">
+<div id="nav-tabpanel-2-Linux" class="tab-pane" aria-labelledby="nav-tab-2-Linux" role="tabpanel">
 <p>To show the contents of a directory on a Linux system, we use the <a href="https://manpages.ubuntu.com/manpages/noble/man1/ls.1plan9.html" class="external-link"><code>ls</code>
 command</a> which lists information about the files in the current
 location.</p>
@@ -557,7 +557,7 @@ folder.</p>
 <pre class="output" tabindex="0"><code><span><span class="va">README.txt</span></span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-2-MacOS" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-MacOS">
+<div id="nav-tabpanel-2-MacOS" class="tab-pane" aria-labelledby="nav-tab-2-MacOS" role="tabpanel">
 <p>The macOS terminal is very similar to the Linux one. To show the
 contents of a directory on a Linux system, we use the <a href="https://support.apple.com/en-gb/guide/terminal/apdb66b5242-0d18-49fc-9c47-a2498b7c91d5/2.14/mac/14.0" class="external-link"><code>ls</code>
 command</a> which lists information about the files in the current
@@ -589,7 +589,7 @@ will do.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> What are arguments? </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <p>When using shell commands, we use the words <strong>option</strong>,
 <strong>flag</strong>, and <strong>arguments</strong> to describe
@@ -618,7 +618,7 @@ that command and the inputs used to initialise our code.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-3" class="tab-content">
-<div id="nav-tabpanel-3-Windows" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-3-Windows">
+<div id="nav-tabpanel-3-Windows" class="tab-pane show active" aria-labelledby="nav-tab-3-Windows" role="tabpanel">
 <p>In the Windows command line, we use the <code>/?</code> argument to
 instruct the computer to print the help information that that command.
 To see helpful reference information for using the <code>dir</code>
@@ -653,7 +653,7 @@ DIR [drive:][path][filename] [/A[[:]attributes]] [/B] [/C] [/D] [/L] [/N]
 instructions for using it, and a reference to each of the options or
 arguments available.</p>
 </div>
-<div id="nav-tabpanel-3-Linux" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-3-Linux">
+<div id="nav-tabpanel-3-Linux" class="tab-pane" aria-labelledby="nav-tab-3-Linux" role="tabpanel">
 <p>In the Linux command line, we use the <code>--help</code> argument to
 instruct the computer to print the help information that that command.
 To see helpful reference information for using the <code>ls</code>
@@ -682,7 +682,7 @@ Mandatory arguments to long options are mandatory for short options too.
 instructions for using it, and a reference to each of the options or
 arguments available.</p>
 </div>
-<div id="nav-tabpanel-3-MacOS" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-3-MacOS">
+<div id="nav-tabpanel-3-MacOS" class="tab-pane" aria-labelledby="nav-tab-3-MacOS" role="tabpanel">
 <p>In the macOS command line, we use the <code>--help</code> argument to
 instruct the computer to print the help information that that command.
 To see helpful reference information for using the <code>ls</code>
@@ -732,7 +732,7 @@ executed first.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
   <h3 class="accordion-header" id="headingSpoiler2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Why must our file be named __main__.py? </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
 <div class="accordion-body">
 <p>This is a mechanism that tells Python how we want users to interact
 with our software.</p>
@@ -778,7 +778,7 @@ Run this script from the command line. What happens when you run
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>When you run the <code>python -m oddsong</code> command, Python runs
 the <em>main module as a script</em>.</p>
@@ -879,7 +879,7 @@ happens in your temrinal?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>When we run our script as before, it will run like normal with no
 change in behaviour.</p>
@@ -947,7 +947,7 @@ interface.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <p>The code now looks something like that shown below.</p>
 <div class="codewrapper sourceCode" id="cb25">
@@ -993,14 +993,14 @@ what it is or how to use this option.</p>
 <div class="section level4">
 <h4 id="argument-descriptions">Argument descriptions<a class="anchor" aria-label="anchor" href="#argument-descriptions"></a></h4>
 <p>To provide a concise explanation for each parameter we use the
-<code>help</code> argument of the <a href="https://docs.python.org/3/library/argparse.html#the-add-argument-method" class="external-link"><code>add_argument()</code>
+<code>help</code> argument of the <a href="https://docs.python.org/3/library/argparse.html#the-add-argument-method" class="external-link"><code>add_argument()</code>
 function</a> as shown below.</p>
 <div class="codewrapper sourceCode" id="cb27">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" tabindex="-1"></a><span class="co"># Add the category argument</span></span>
 <span id="cb27-2"><a href="#cb27-2" tabindex="-1"></a>parser.add_argument(<span class="st">'-c'</span>, <span class="st">'--category'</span>, </span>
-<span id="cb27-3"><a href="#cb27-3" tabindex="-1"></a>                    <span class="bu">help</span><span class="op">=</span><span class="st">"The type of bird call e.g. alarm, contact, flight"</span>)</span></code></pre>
+<span id="cb27-3"><a href="#cb27-3" tabindex="-1"></a>    <span class="bu">help</span><span class="op">=</span><span class="st">"The type of bird call e.g. alarm, contact, flight"</span>)</span></code></pre>
 </div>
 <p>This text should briefly describe the purpose of the argument,
 without going into too much detail (which should be covered in the user
@@ -1024,10 +1024,10 @@ happen in your CLI?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <p>We can achieve this in our example script by adding a
-<code>help</code> string.</p>
+<code>help</code> string.</p>
 <div class="codewrapper sourceCode" id="cb28">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -1078,7 +1078,8 @@ works.</p>
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb30-1"><a href="#cb30-1" tabindex="-1"></a><span class="co"># Describe the software</span></span>
-<span id="cb30-2"><a href="#cb30-2" tabindex="-1"></a>parser <span class="op">=</span> argparse.ArgumentParser(description<span class="op">=</span><span class="st">"A tool to identify bird vocalisations."</span>)</span></code></pre>
+<span id="cb30-2"><a href="#cb30-2" tabindex="-1"></a>parser <span class="op">=</span> argparse.ArgumentParser(</span>
+<span id="cb30-3"><a href="#cb30-3" tabindex="-1"></a>    description<span class="op">=</span><span class="st">"A tool to identify bird vocalisations."</span>)</span></code></pre>
 </div>
 <div id="challenge5" class="callout challenge">
 <div class="callout-square">
@@ -1098,7 +1099,7 @@ our help screen?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution5" aria-expanded="false" aria-controls="collapseSolution5">
   <h4 class="accordion-header" id="headingSolution5"> Show me the solution </h4>
 </button>
-<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
+<div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
 <div class="accordion-body">
 <p>We define the description when creating our argument parser
 object.</p>
@@ -1177,8 +1178,8 @@ Python, we do this using the <code>argparse</code> library.</li>
 <hr class="half-width"><p>To find out more about command-line interfaces and using the terminal
 to improve your productivity for research computing, please refer to the
 following resources:</p>
-<ul><li>Learn more about using the terminal in the Software Carpentry <a href="https://swcarpentry.github.io/shell-novice/" class="external-link">Unix
-Shell</a> course.</li>
+<ul><li>Learn more about using the terminal in the Software Carpentry <a href="https://swcarpentry.github.io/shell-novice/" class="external-link">Unix Shell</a>
+course.</li>
 <li>There are Python packages such as <a href="https://click.palletsprojects.com/" class="external-link">Click</a> that provide a
 framework for building bigger, more complex command-line
 interfaces.</li>
