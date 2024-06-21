@@ -361,19 +361,17 @@ What should we see when using the `--help` flag? What happens in your temrinal?
 
 ::: solution
 
-:::
-
 When we run our script as before, it will run like normal with no change in behaviour.
 
 ```bash
-$ python test.py
+$ python -m oddsong
 Identifying bird vocalisation...
 ```
 
 But, if we invoke the command-line interface using any *arguments*, then this new functionality kicks in.
 
 ```bash
-$ python test.py --help
+$ python -m oddsong --help
 usage: test.py [-h]
 
 options:
@@ -382,11 +380,76 @@ options:
 
 This is the default output of a CLI with no additional arguments specified. The first line displays the usage instructions. This means that we may execute `test.py` with an optional help option using `--help` or `-h`  for short. Optional flags are denoted with square brackets like this `[-h]`.
 
-As we continue to develop our CLI by adding arguments, each one will be listed and described in this help page. This is an excellent way to document our software and make it available to researchers!
+:::
+
+The `parse_args()` method runs the parser and makes our arguments available to the user on the command line. This makes the default `--help` flag available which displays instructions and notes that we can customise. As we continue to develop our CLI by adding arguments, each one will be listed and described in this help page. This is an excellent way to document our software and make it available to researchers!
 
 ::::
 
+#### Arguments
+
+But what if we want to take an input from the user? We add arguments to our CLI using the following syntax.
+
+```python
+parser.add_argument('-c', '--category')
+```
+
+This will create an argument called `args.file` that the user can specify when they run our script, and that we can use in our code to do something useful.
+
+:::: challenge
+
+Add this argument to our script and note the changes to the user interface.
+
+::: solution
+
+The code now looks something like that shown below.
+
+```python
+import argparse
+
+def main():
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-c', '--category')
+    parser.parse_args()
+
+    print("Identifying bird vocalisation...")
+
+if __name__ == "__main__":
+    main()
+```
+
+Note that we add the argument *before* we parse them, which makes them available to use.
+
+Now, when we invoke the help screen, we see our new "category" argument listed.
+
+```bash
+$ python -m oddsong --help
+usage: oddsong.py [-h] [-c CATEGORY]
+
+options:
+  -h, --help            show this help message and exit
+  -c CATEGORY, --category CATEGORY
+```
+
+The layout of this text is done for us and follows the standard conventions of terminal tools.
+
+:::
+
+::::
+
+Of course, if you've imbibed the spirit of the course, you'll notice that our new category parameter is completely undocumented! It's unclear what it is or how to use this option.
+
+#### Argument descriptions
+
+```python
+parser.add_argument('-c', '--category', help="The type of bird call e.g. alarm, contact, flight")
+```
+
+
+
 #### Description
+
+
 
 #### Usage
 
