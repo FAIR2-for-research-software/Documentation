@@ -2,6 +2,12 @@
 title: Setup
 ---
 
+## Sample code
+
+There is an example project contained in a code repository that is hosted on GitHub at [Joe-Heffer-Shef/oddsong](https://github.com/Joe-Heffer-Shef/oddsong).
+As we proceed through the course, we'll create a collection of scripts similar to this.
+Please feel free to refer to this example to help you engage with the course contents.
+
 ## Software Setup
 
 This course may be completed using *either* the Python programming language **or** the R statistical package.
