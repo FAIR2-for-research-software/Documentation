@@ -104,6 +104,20 @@ For research code, it’s often important to explain the context in which the so
 
 Provide instructions for installing your research software. These steps should be laid out in simple, clear language and organised in a step-by-step manner.
 
+::: challenge
+
+Consider a research code project you've worked on.
+Discuss the technical prerequisites for that software or system.
+What would someone need to do, when starting from a blank slate, to recreate that environment?
+
+Think about:
+
+- What hardware and software did you need?
+- What drivers and libraries were required?
+- What software setup, calibration, and configuration is required?
+
+:::
+
 For most research code, the user will need to install the programming language onto their computer, such as R or Python, so it’s useful to link to the download pages and provide a link to the package manager tools that are commonly used in those ecosystems. This might also include listing any prerequisites such as hardware or software that must be installed first, such as device drivers. 
 
 Consider how the installation method might differ for users of other common operating systems, such as Windows, Linux, and Mac OS.
