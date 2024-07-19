@@ -20,8 +20,6 @@ The [R programming language](https://cran.rstudio.com/) is a statistical package
 and data analysis. To interact with R, the most popular tool is
 [RStudio Desktop](https://posit.co/download/rstudio-desktop/).
 
-TODO online editors
-
 :::::::::::::::: spoiler
 
 ### Windows

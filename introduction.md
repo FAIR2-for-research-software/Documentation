@@ -1,5 +1,5 @@
 ---
-title: "Why document code?"
+title: "Introduction"
 teaching: 10
 exercises: 2
 ---
@@ -20,7 +20,7 @@ exercises: 2
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Introduction
+## Why document code?
 
 No code is self-explanatory. It’s a tool we design, or, more often, a complex organism that develops as we use it, such as a library of functions used within a research team to perform certain kinds of analysis.
 
