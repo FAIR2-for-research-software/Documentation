@@ -211,9 +211,9 @@ An example README file in Markdown format is shown below, in a file called `READ
 You can separate your document into hierarchical sections with headings using the `#` symbol. This makes your README easier to navigate. For example:
 
 ```markdown
-# My research software
+# Birdsong identification tool
 
-This software is designed to...
+This user guide provides instructions on how to use this birdsong identifier. The software is designed to assist users in identifying bird species based on their vocalisations.
 
 # Installation
 
@@ -225,6 +225,65 @@ To use this package...
 ```
 
 The “#” symbol means that line will be converted into a header and displayed to the reader in a large, bold font. This makes it easier for the reader to find the part of your text they're looking for, just like having chapters in a book.
+
+::::::::::::::::::::::::::::::::: challenge
+
+Create suitable headers in your document.
+
+How would you organise your document by dividing up the text into subsections by adding further subheadings?
+
+::::::::::::::::: solution
+
+We can create the commonly-used headers used in READMEs by using the Markdown syntax shown below
+
+```markdown
+# Title
+
+Brief introduction to the tool...
+
+# Installation
+
+To get started...
+
+# Usage
+
+To use this tool...
+```
+
+This gives some basic structure to the document, which we'll flesh out later.
+
+We can further subdivide the content by using _header levels_
+
+```markdown
+# Title
+
+Brief introduction to the tool...
+
+# Installation
+
+To get started...
+
+## Prerequisites
+...
+
+## Drivers
+...
+
+# Usage
+
+To use this tool...
+
+## Quick start
+...
+
+## Examples
+...
+```
+
+
+:::::::::::::::::
+
+:::::::::::::::::::::::::::::::::
 
 If your code is published on GitHub, the home page of your code repository will display the README.md file, including a navigation menu that is automatically created to easily select the section of the document to view.
 
