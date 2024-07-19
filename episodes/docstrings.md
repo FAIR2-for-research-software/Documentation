@@ -78,13 +78,9 @@ Create a script called `oddsong` and define a function named `identify()` that'l
 4. Write a string that describes the code.
 
 ```python
-def identify(audio_file: str) -> str:
+def identify(audio_file):
     """
     Identify a bird based on the sound of its call.
-    
-    :param audio_file: The path of an audio file.
-    
-    :return: The name of the bird species.
     """
     
     print("Identifying bird vocalisation...")
@@ -101,10 +97,6 @@ def identify(audio_file: str) -> str:
 
 ```R
 #' Identify a bird based on the sound of its call.
-#'
-#' @param audio_file The path of an audio file.
-#'
-#' @return The name of the bird species.
 identify <- function(audio_file) {
 
     print("Identifying bird vocalisation...")
