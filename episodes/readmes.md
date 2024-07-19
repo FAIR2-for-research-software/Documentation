@@ -137,9 +137,22 @@ All software should include some short guidance on how to use it and what the ma
 
 Many users will benefit from a frequently asked questions (FAQ) or troubleshooting notes, which describes common error messages, explains why they occur, and the steps to resolve them.
 
+::: callout
+
 The writing style should be concise, jargon-free, clear, and pitched at the appropriate level to the intended target audience. All technical terms and acronyms should be explained. However, don’t reinvent the wheel by defining all the terms used, instead link to a reliable external source or journal article.
 
+:::
+
 Diagrams can be particularly useful to explain complex concepts and workflows. Screenshots may also provide a visual demonstration of how the software will work.
+
+::::::::::::::::::::::::::::::::: challenge
+
+Discuss with the group:
+
+- Reflecting on your past experiences, what software or systems have you used that included excellent diagrams and illustrations to help you learn to use them as a new user?
+- Have you ever watched a tutorial video online that explained a software tool or process? What did you like and dislike about the walkthrough?
+
+:::::::::::::::::::::::::::::::::
 
 ## Markdown format
 
