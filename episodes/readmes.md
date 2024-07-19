@@ -98,6 +98,15 @@ The essentials contents of a README file are:
 
 It can be useful to signpost to other, related useful software tools by providing links and explaining how other software is related or different to this project when it comes to addressing these kinds of research problems.
 
+::: callout
+
+Put yourself in the shoes of a researcher who has encountered your software for the first time.
+Consider, if you had to start from square one, how would you like the code to be introduced to you?
+Remember: things that are obvious to you and your colleagues may not be clear to others.
+What assumed knowledge must you explicitly explain to get them up to speed?
+
+:::
+
 For research code, it’s often important to explain the context in which the software was written and the theory behind it. For example, many researchers write analysis packages or workflows that are based on previously-published research, statistical methods, or theoretical models for which citations can be provided. By including references to research papers we better help the users to understand the methods that are implemented by our software, which enables its users to properly cite their sources and increases the users’ confidence that you have applied those methods correctly.
 
 ### Installation instructions
