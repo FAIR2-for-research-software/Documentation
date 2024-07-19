@@ -38,11 +38,52 @@ Let's create a new code project. Create a new, empty directory to contain your w
 
 ::::::::::::::::: solution
 
+Follow these general steps to create a README file.
+The specific details for each operating system are detailed below.
+
+1. Create a directory to contain your project. We call this the _root directory_;
+2. In that directory, create a new text file;
+3. Name the file `README.txt`;
+4. Open the file for editing&mdash;start writing your documentation!
+
+::: group-tab
+
+### Windows
+
+1. Open [File Explorer](https://support.microsoft.com/en-gb/windows/find-and-open-file-explorer-ef370130-1cca-9dc5-e0df-2f7416fe1cb1) to browse the file system;
+2. In a folder, right click and select New &rightarrow; Folder;
+3. Name the folder `oddsong`;
+4. Open that new folder, then right click and select New &rightarrow; Text Document;
+5. Name the file `README.txt`;
+6. Double-click on the file to open it for editing.
+
+### Linux
+
+Use the [File Manager](https://help.ubuntu.com/stable/ubuntu-help/files-browse.html.en) to create a new directory called `oddsong`. Inside that folder, create a new text file called `README.txt`.
+
+These steps may be achieved using the terminal as follows:
+
 ```bash
-mkdir my_project
-touch my_project/README.txt
-echo "This is my code" >> my_project/README.txt
+mkdir oddsong
+touch oddsong/README.txt
+echo "This is my code" >> my_project/oddsong.txt
+nano oddsong/README.txt
 ```
+
+### MacOS
+
+Use the [Finder](https://support.apple.com/en-gb/guide/mac-help/mchlp2605/mac) file manager to create a new directory called `oddsong`. Inside that folder, create a new text file called `README.txt`.
+
+These steps may be achieved using the terminal as follows:
+
+```bash
+mkdir oddsong
+touch oddsong/README.txt
+echo "This is my code" >> my_project/oddsong.txt
+nano oddsong/README.txt
+```
+
+:::
 
 ::::::::::::::::::::::::::
 
