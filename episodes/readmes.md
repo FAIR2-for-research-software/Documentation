@@ -124,6 +124,50 @@ Most people prefer to use a file format that allows you to create headers to org
 
 In this case, a Markdown document may be used. Markdown is a simple mark-up language that allows you to format your text using symbols to represent headers, bold text, bullet lists, etc. that are displayed to the user in an appealing way. The Markdown syntax will be converted into appealing visual styles that make your documentation more aesthetically pleasing and easier to read.
 
+::::::::::::::::::::::::::::::::: challenge
+
+Convert your README file to Markdown format to enable more advanced formatting options.
+
+::::::::::::::::: solution
+
+Follow these steps to rename `README.txt` to `README.md`.
+
+::: group-tab
+
+### Windows
+
+Use [File Explorer](https://support.microsoft.com/en-gb/windows/find-and-open-file-explorer-ef370130-1cca-9dc5-e0df-2f7416fe1cb1) to [rename the file](https://support.microsoft.com/en-gb/office/rename-a-file-baea7aab-760b-4ee0-af58-06e940d505a4) from `README.txt` to `README.md`.
+
+1. Open the `oddsong` directory;
+2. Right-click on `README.txt` and select "Rename";
+3. Type `README.md`.
+
+### Linux
+
+Use the [File Manager](https://help.ubuntu.com/stable/ubuntu-help/files-browse.html.en) to [rename the file](https://help.ubuntu.com/stable/ubuntu-help/files-rename.html.en) from `README.txt` to `README.md`.
+
+This step may be achieved using the terminal as follows:
+
+```bash
+mv README.txt README.md
+```
+
+### MacOS
+
+Use the [Finder](https://support.apple.com/en-gb/guide/mac-help/mchlp2605/mac) to [rename the file](https://support.apple.com/en-gb/guide/mac-help/mchlp1144/mac) from `README.txt` to `README.md`.
+
+This step may be achieved using the terminal as follows:
+
+```bash
+mv README.txt README.md
+```
+
+:::
+
+::::::::::::::::::::::::::
+
+:::::::::::::::::::::::::::::::::::::::::::
+
 An example README file in Markdown format is shown below, in a file called `README.md` where .md is the file extension for Markdown files.
 
 ### Section headers
