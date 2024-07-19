@@ -252,7 +252,7 @@ To use this tool...
 
 This gives some basic structure to the document, which we'll flesh out later.
 
-We can further subdivide the content by using _header levels_
+We can further subdivide the content by using _header levels_, where each subheading uses an additional `#` symbol. For example, `#` is a top-level heading, `##` is a section header, `###` is a subsection header, etc.
 
 ```markdown
 # Title
@@ -280,6 +280,7 @@ To use this tool...
 ...
 ```
 
+These subheadings help the users to navigate the document.
 
 :::::::::::::::::
 
