@@ -13,6 +13,6 @@
 "episodes/contributors.md" "3b9de04f26a3a70de83424762c05ecda" "site/built/contributors.md" "2024-06-18"
 "episodes/cli.md" "605efa02a00db1bb673591623c31b632" "site/built/cli.md" "2024-06-21"
 "instructors/instructor-notes.md" "cae72b6712578d74a49fea7513099f8c" "site/built/instructor-notes.md" "2024-05-20"
-"learners/reference.md" "0987fff9dd037a9b53d7d13ef09ac3c7" "site/built/reference.md" "2024-06-18"
+"learners/reference.md" "e9f7941bcc07451554f1eebfa238cdda" "site/built/reference.md" "2024-08-05"
 "learners/setup.md" "c9c366a420d545cb0c8baa53d779233a" "site/built/setup.md" "2024-07-19"
 "profiles/learner-profiles.md" "1145111179d18933c4be354eff7373a1" "site/built/learner-profiles.md" "2024-05-21"
