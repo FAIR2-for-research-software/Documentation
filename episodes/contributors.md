@@ -76,6 +76,12 @@ This has the following advantages:
 
 For many working in a research context, there are additional considerations to ensure that institutional policies, ethics, and data protection regulations are carefully observed. These protocols are outside the scope of this document, but these factors should be clearly communicated to all contributors.
 
+:::: tip
+
+Many open-source research software projects adopt the [Contributor Covenant](https://www.contributor-covenant.org/), which can also be customised to suit the needs of your collaborators.
+
+::::
+
 ## Developer notes
 
 For people who are contributing code to the project, they'll need the following information:
