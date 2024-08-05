@@ -263,6 +263,7 @@
       <div class="accordion-body">
         <ul><li><a href="#introduction">Introduction</a></li>
 <li><a href="#contribution-guides">Contribution guides</a></li>
+<li><a href="#software-project-governance">Software project governance</a></li>
 <li><a href="#developer-notes">Developer notes</a></li>
 <li><a href="#further-resources">Further resources</a></li>
         </ul></div><!--/div.accordion-body-->
@@ -338,7 +339,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Contributor guidance</h1>
-        <p>Last updated on 2024-06-18 |
+        <p>Last updated on 2024-08-05 |
 
         <a href="https://github.com/Joe-Heffer-Shef/FAIR4RS-Documentation/edit/main/episodes/contributors.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -459,19 +460,76 @@ with a few sentences.</p>
 </div>
 </div>
 </div>
+</section><section><h2 class="section-heading" id="software-project-governance">Software project governance<a class="anchor" aria-label="anchor" href="#software-project-governance"></a>
+<a class="anchor" aria-label="anchor" href="#software-project-governance"></a></h2>
+<hr class="half-width"><p>Project governance defines the scope and aims of a research software
+engineering project, and determines how decisions will be made and
+carried out. It sets out the processes and responsibilities that
+collaborators must understand to take part. This is something that
+should be considered when preparing a software management plan, as
+discussed in Module 1a of this course. This is important to make sure
+that questions of who does what, and how, are stated clearly so that
+everyone can understand and collaborate effectively to produce excellent
+research software. It’s worthwhile to think about this early on in a
+project to avoid potential pitfalls later on!</p>
+<div class="section level3">
+<h3 id="code-of-conduct">Code of conduct<a class="anchor" aria-label="anchor" href="#code-of-conduct"></a></h3>
+<p>A code of conduct provides guidelines for the expected behaviour of
+people who are involved in the project. You may want to provide some
+general tips to create a productive community of researchers around the
+software, such as creating positive interactions between contributors,
+treat others with respect and dignity, and recommendations for processes
+for handling differences of opinion.</p>
+<p>This has the following advantages:</p>
+<ul><li>Fosters a healthy, <strong>collaborative working
+environment</strong> where people feel respected, included, and can
+freely share ideas.</li>
+<li>
+<strong>Managing expectations</strong> and creating clear rules will
+reduce the amount of time wasted due to misunderstanding and
+conflicts.</li>
+<li>
+<strong>Build a communinity</strong>: an ethically-run and
+transparent project will encourage contributors to share the values of
+the project and remain engaged.</li>
+</ul><p>For many working in a research context, there are additional
+considerations to ensure that institutional policies, ethics, and data
+protection regulations are carefully observed. These protocols are
+outside the scope of this document, but these factors should be clearly
+communicated to all contributors.</p>
+<div class="tip">
+<p>Many open-source research software projects adopt the <a href="https://www.contributor-covenant.org/" class="external-link">Contributor Covenant</a>,
+which can also be customised to suit the needs of your
+collaborators.</p>
+</div>
+</div>
 </section><section><h2 class="section-heading" id="developer-notes">Developer notes<a class="anchor" aria-label="anchor" href="#developer-notes"></a>
 <a class="anchor" aria-label="anchor" href="#developer-notes"></a></h2>
-<hr class="half-width"><p>System documentation is important for new contributors to familiarise
+<hr class="half-width"><p>For people who are contributing code to the project, they’ll need the
+following information:</p>
+<ul><li>Which version control system is being used. Typically, this will be
+<code>git</code> or similar tools, as discussed in Module 2 of this
+course.</li>
+<li>How to add automatic tests and whether a testing framework is in
+place.</li>
+<li>Describe the code organisation and package structure.</li>
+</ul><div class="section level3">
+<h3 id="technical-documentation">Technical documentation<a class="anchor" aria-label="anchor" href="#technical-documentation"></a></h3>
+<p>System documentation is important for new contributors to familiarise
 themselves with the codebase and as a reference for existing engineers.
 There should be a concise description of how the system works from a
 more technical perspective, with the intended audience being software
 developers, rather than the research users.</p>
 <p>An architecture diagram is an efficient way to provide a “map” to
 help developers to understand and navigate a complex system.</p>
-<p>A coding style guide will help to ensure consistency across all the
-code written as part of a collaborative project, which helps others to
-read and interpret the code, making it easier to maintain in the long
-run. The code style rules should cover things like the way to describe
+</div>
+<div class="section level3">
+<h3 id="coding-conventions">Coding conventions<a class="anchor" aria-label="anchor" href="#coding-conventions"></a></h3>
+<p>Many projects following programming standards to manage code quality.
+A coding style guide will help to ensure consistency across all the code
+written as part of a collaborative project, which helps others to read
+and interpret the code, making it easier to maintain in the long run.
+The code style rules should cover things like the way to describe
 functions, how to indent code, and naming conventions for variables.</p>
 <p>This might include guidance and advice, or more strict rules as
 standards that are checked by a code linter. A code linter is an
@@ -506,6 +564,7 @@ through transparently.</li>
 </ul></div>
 </div>
 </div>
+</div>
 </section><section><h2 class="section-heading" id="further-resources">Further resources<a class="anchor" aria-label="anchor" href="#further-resources"></a>
 <a class="anchor" aria-label="anchor" href="#further-resources"></a></h2>
 <hr class="half-width"><p>To find out more about creating healthy communities of developers to
@@ -517,6 +576,9 @@ guidelines for repository contributors</a>
 <li>H. Gruson and H. Turner Software Sustainability Institute <a href="https://www.software.ac.uk/blog/opening-door-new-contributors-open-source-projects" class="external-link">Opening
 the door to new contributors in open source projects</a>
 </li>
+<li>Stephan Druskat <a href="https://www.youtube.com/watch?v=_RMYO_20L-U" class="external-link">And then there were
+users: Designing governance for open research software projects</a> Talk
+at RSECon23 in Swansea.</li>
 </ul><!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
@@ -578,7 +640,7 @@ any links that you are not going to use.
   "url": "https://Joe-Heffer-Shef.github.io/FAIR4RS-Documentation/contributors.html",
   "identifier": "https://Joe-Heffer-Shef.github.io/FAIR4RS-Documentation/contributors.html",
   "dateCreated": "2024-05-20",
-  "dateModified": "2024-06-18",
+  "dateModified": "2024-08-05",
   "datePublished": "2024-08-05"
 }
 
