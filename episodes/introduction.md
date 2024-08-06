@@ -6,7 +6,7 @@ exercises: 2
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
-- What is software documentation?
+- How do we provide information to users of our research software?
 - Why is documenting code useful for researchers?
 - What does well-documented software look like?
 
@@ -22,13 +22,19 @@ exercises: 2
 
 ## Why document code?
 
-No code is self-explanatory. It’s a tool we design, or, more often, a complex organism that develops as we use it, such as a library of functions used within a research team to perform certain kinds of analysis.
+No code is self-explanatory. It’s a tool we design, or, more often, a complex organism that develops as we use it, such as a library of functions used within a research team to perform certain kinds of analysis. To explain our code we must write **software documentation**.
 
-To explain our code we must write **software documentation**. These documents provide information about our  programs for everyone involved in its development, use, and future re-use. Documentation may consist of text, tips within a computer environment, and diagrams that guide the user in using a (potentially complex) software tool. It explained how the software works why it behaves the way it does.
+These documents **provide information** about our programs for everyone involved in its development, use, and future re-use. Documentation may consist of text, tips within a computer environment, and diagrams that guide the user in using a (potentially complex) software tool. It explained how the software works why it behaves the way it does.
 
 ## Why document software?
 
 It’s a common occurrence to get a software package, whether it’s written by ourselves, a colleague, or someone else, that’s near-impossible to use because it’s unclear what each function or tool does. Maybe we look at the source code itself, but we can’t make head-nor-tail of it. Maybe the only person who can use this software is the person who wrote it—unless you wrote it and forgot what you were thinking when you did!
+
+:::: challenge
+
+Amongst yourselves, discuss a time that yu
+
+::::
 
 ### Advantages of good documentation
 
@@ -131,7 +137,7 @@ def calculate_sine(angle: float) -> float:
 This is a function written in the R programming language that calculates a mathematical result, the details of which aren't relevant. This code has plenty of documentation to help us read and understand it.
 
 ```R
-# Function to calculate sine using Taylor series approximation
+#' Function to calculate sine using Taylor series approximation
 calculate_sine <- function(angle) {
   """
   This function calculates the sine of an angle using the first four terms of the Taylor series.
