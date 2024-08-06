@@ -209,6 +209,8 @@ def add(x, y):
 
 :::: spoiler
 
+### Using docstrings to create automatic tests
+
 These code examples can be used as automatic tests using the [doctest](https://docs.python.org/3/library/doctest.html) module which is built into Python.
 
 ::::
@@ -222,6 +224,8 @@ Clarity is key. Be **concise**. Describe the essential information that user nee
 Be **consistent**. Decide a style of docstring and use that everywhere across your software project. If you're working on a larger project with multiple developers, refer to the coding conventions and, if in doubt, follow the style of existing code.
 
 :::: spoiler
+
+### Docstring conventions
 
 There are several different **standards** for documentation strings. A standard is a convention that determines how the docstrings will be organised and the syntax that is used to represent the arguments, data types, etc.
 
