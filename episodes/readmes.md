@@ -6,6 +6,7 @@ exercises: 2
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
+- How do we **introduce** our software to new researchers and developers?
 - What is a README file?
 - How do I write a README for my research code?
 - What are the contents of a good README file?

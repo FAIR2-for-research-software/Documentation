@@ -79,8 +79,8 @@ def count_word_occurrences(filename, word_to_count):
 
 Without syntax highlighting:
 
-```output
-# Function to count word occurrences in a text file
+```default
+#' Function to count word occurrences in a text file
 count_word_occurrences <- function(filename, word_to_count) {
   text_file <- file(filename, "r")
   word_count <- 0

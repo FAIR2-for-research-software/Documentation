@@ -6,9 +6,10 @@ exercises: 2
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
-- What is a **documentation string**?
+- How do we **describe our code**?
+- What are **documentation strings**?
 - Why are documentation strings useful for **research software**?
-- **How** do we write documentation strings?
+- **How do we write** documentation strings?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -16,21 +17,25 @@ exercises: 2
 
 - Understand the **purpose** of documentation strings
 - Learn **how to write** documentation strings that will be useful for other researchers
-- Introduce ways to describe the parameters and return values of functions
+- Introduce ways to describe the **parameters** and return values of functions
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Introduction
+## How do we describe our code?
 
-If you’re publishing a research software package, one of the most common ways that its users will learn to interact with the code is by reading the documentation for each individual function.
+If you’re publishing a research software package, one of the most common ways that its users will learn to interact with the code is by reading the documentation **for each individual function**.
 
-We learned about functions in an earlier module. Functions help us to break our code into smaller units that have a single purpose. By documenting those functions effectively, we aim to explain that purpose to future users and maintainers of that code. We also need to describe all the expected inputs and outputs of the function.
+We learned about _functions_ in an earlier module. Functions help us to break our code into smaller units that have a single purpose. By documenting those functions effectively, we aim to **explain their purpose** to future users and maintainers of that code. We also need to describe all the expected inputs and outputs of the function.
 
 We describe functions by using a feature of many programming languages called documentation strings, usually abbreviated to **docstring**. A documentation string is a piece of text that describes that piece of code and helps people to use it.
 
-To make a docstring, we put a string as the first line of a function (or other object.) For example, for a simple Python function that calculates the sum of two numbers:
+To make a docstring, we write special comments in our code using syntax which is specific to each programming language, although the principle is the same.
 
-TODO R examples
+::: group-tab 
+
+### Python
+
+In Python, we put a string as the first line of a function (or other object.) For example, for a simple Python function that calculates the sum of two numbers:
 
 ```python
 def add(x, y):
@@ -40,13 +45,67 @@ def add(x, y):
     return x + y
 ```
 
+### R
+
+In R, we use a comment with a single quote `#'` to specify a documentation string for a function.
+
+```R
+#' Calculate the sum of two numbers.
+add <- function(x, y) {
+  return(x + y)
+}
+```
+
+:::
+
+Whenever you add functionality to a code project, consider wrapping it up into a function.
+It may help to **write the docstring first** to help work through what the purpose of your new code is before you start!
+
 ::::::::::::::::::::::::::::::::: challenge
 
 Write a documentation string for a function.
+Create a script called `oddsong` and define a function named `identify()` that'll be used to identify bird songs by inspecting an audio file to provide the name of that species.
 
 ::::::::::::::::: solution
 
-TODO
+::: group-tab
+
+### Python
+
+1. Create a new Python script by creating a file called `oddsong.py`;
+2. Open the file for editing;
+3. Create a new function called `identify()`;
+4. Write a string that describes the code.
+
+```python
+def identify(audio_file):
+    """
+    Identify a bird based on the sound of its call.
+    """
+    
+    print("Identifying bird vocalisation...")
+    
+    return "Hirundo atrocaerulea"
+```
+
+### R
+
+1. Create a new R script by creating a file called `oddsong.R`;
+2. Open the file for editing;
+3. Create a new function called `identify()`;
+4. Write a string that describes the code.
+
+```R
+#' Identify a bird based on the sound of its call.
+identify <- function(audio_file) {
+
+    print("Identifying bird vocalisation...")
+    
+    return("Hirundo atrocaerulea")
+}
+```
+
+:::
 
 ::::::::::::::::::::::::::
 
