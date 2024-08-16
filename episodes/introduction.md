@@ -32,7 +32,11 @@ It’s a common occurrence to get a software package, whether it’s written by 
 
 :::: challenge
 
-Amongst yourselves, discuss a time that yu
+Discuss positive or negative experiences with using research software:
+
+- What documentation was available?
+- What challenges did you have picking up a new tool?
+- What useful software-related information do you often refer to in your research projects?
 
 ::::
 
@@ -48,6 +52,16 @@ Writing a useful software package that is well-documented and can be reused in t
 
 In the long run, it can help you to develop your own software engineering practice by getting into the habit of reflecting on what the purpose of the software is and to articulate what each component or module is for.
 
+:::: challenge
+
+Discuss the benefits of writing documentation for your research software.
+
+- How will it help you and your work?
+- What benefits will these provide to your collaborators?
+- In what ways does documentation contribute to the wider research community?
+
+::::
+
 ## When should I write documentation?
 
 Now! Start writing and sharing documentation for your reseach code from the beginning of your project. This might include design notes, diagrams, or the various kinds of software documentation we'll discuss in this module. The best practice for modern, collaborative research involving digital methods and tools is to document your processes *early and often*. Not only will writing notes about your code help other people to read and use that code, it will clarify your thought process as you design your system, focussing your work on the important parts of the task at hand.
@@ -56,7 +70,7 @@ Keep in touch with other developers and users of the research code and make a no
 
 ## Examples
 
-Here are some examples of some code to perform some geometry. The first example could be improved in terms of its documentation and readability, while the second one is much clearer. Which one would you prefer to use?
+Here are some examples of some code to perform some geometry. The first example could be improved in terms of its documentation and readability, while the second one is much clearer.
 
 ### Example of no documentation
 
@@ -87,11 +101,21 @@ run <- function(x) {
 
 :::
 
+:::: challenge
+
+Read and evaluate this code.
+
+- Can you tell what the purpose of the function is?
+- What is the meaning of the variables?
+- Would you rely on this code in your research? Why, or why not?
+
+::::
+
 This is a function with a name that doesn't explain what the code will do. There are no comments or notes to explain what the author intended to achieve. The variable names don't clarify anything either: what does `x` mean in this context? Where would I go to find out more about `weird_num`? This is effectively a "magic" number that is arbitrarily stated but unexplained.
 
 The logic of the calculation is also... rather cryptic.
 
-Maybe the code works, maybe it doesn't (would you trust it?) but it could be made clearer and easier to maintain and modify in the future.
+Maybe the code works, maybe it doesn't but it could be made clearer and easier to maintain and modify in the future.
 
 ### Well-documented example
 
@@ -164,6 +188,16 @@ calculate_sine <- function(angle) {
   return(sin_value)
 }
 ```
+
+:::: challenge
+
+Read and evaluate this code.
+
+- Can you tell what the purpose of the function is?
+- What is the meaning of the variables?
+- Which code would you prefer to use?
+
+::::
 
 :::
 
