@@ -2,6 +2,11 @@
 site: sandpaper::sandpaper_site
 ---
 
+Well-documented software promotes reproducibility, maintainability, and increased research impact through wider adoption and citation.
+This course teaches researchers how to document their software effectively, making it accessible and understandable to others.
+It covers topics such as writing readable code and usage instructions.
+
+
 ## Course summary
 
 Software documentation helps you and others to use your software successfully in the future and to read your code ensuring that its value is sustained. This course introduces the different ways to provide other researchers with useful documentation for your software.
