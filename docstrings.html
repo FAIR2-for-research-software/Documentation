@@ -179,6 +179,7 @@
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
         <ul><li><a href="#how-do-we-describe-our-code">How do we describe our code?</a></li>
+<li><a href="#usage-examples">Usage examples</a></li>
 <li><a href="#best-practices">Best practices</a></li>
 <li><a href="#automatically-generate-docstrings">Automatically generate docstrings</a></li>
 <li><a href="#further-resources">Further resources</a></li>
@@ -282,7 +283,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Documentation strings</h1>
-        <p>Last updated on 2024-07-23 |
+        <p>Last updated on 2024-08-16 |
 
         <a href="https://github.com/Joe-Heffer-Shef/FAIR4RS-Documentation/edit/main/episodes/docstrings.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -337,6 +338,8 @@ By documenting those functions effectively, we aim to <strong>explain
 their purpose</strong> to future users and maintainers of that code. We
 also need to describe all the expected inputs and outputs of the
 function.</p>
+<div class="section level3">
+<h3 id="documentation-strings">Documentation strings<a class="anchor" aria-label="anchor" href="#documentation-strings"></a></h3>
 <p>We describe functions by using a feature of many programming
 languages called documentation strings, usually abbreviated to
 <strong>docstring</strong>. A documentation string is a piece of text
@@ -358,7 +361,7 @@ principle is the same.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-1" class="tab-content">
-<div id="nav-tabpanel-1-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-Python">
+<div id="nav-tabpanel-1-Python" class="tab-pane show active" aria-labelledby="nav-tab-1-Python" role="tabpanel">
 <p>In Python, we put a string as the first line of a function (or other
 object.) For example, for a simple Python function that calculates the
 sum of two numbers:</p>
@@ -372,7 +375,7 @@ sum of two numbers:</p>
 <span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a>    <span class="cf">return</span> x <span class="op">+</span> y</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-1-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-R">
+<div id="nav-tabpanel-1-R" class="tab-pane" aria-labelledby="nav-tab-1-R" role="tabpanel">
 <p>In R, we use a comment with a single quote <code>#'</code> to specify
 a documentation string for a function.</p>
 <div class="codewrapper sourceCode" id="cb2">
@@ -411,7 +414,7 @@ provide the name of that species.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="tabs">
 <nav><div id="nav-tab-2" class="nav nav-tabs" role="tablist">
@@ -427,7 +430,7 @@ provide the name of that species.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-2" class="tab-content">
-<div id="nav-tabpanel-2-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-2-Python">
+<div id="nav-tabpanel-2-Python" class="tab-pane show active" aria-labelledby="nav-tab-2-Python" role="tabpanel">
 <ol style="list-style-type: decimal"><li>Create a new Python script by creating a file called
 <code>oddsong.py</code>;</li>
 <li>Open the file for editing;</li>
@@ -446,7 +449,7 @@ provide the name of that species.</p>
 <span id="cb3-8"><a href="#cb3-8" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">"Hirundo atrocaerulea"</span></span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-2-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-R">
+<div id="nav-tabpanel-2-R" class="tab-pane" aria-labelledby="nav-tab-2-R" role="tabpanel">
 <ol style="list-style-type: decimal"><li>Create a new R script by creating a file called
 <code>oddsong.R</code>;</li>
 <li>Open the file for editing;</li>
@@ -502,7 +505,7 @@ for a function.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>TODO</p>
 </div>
@@ -561,9 +564,52 @@ raise if the inputs aren’t as expected, and how to deal with them.</p>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="bu">help</span>(<span class="bu">print</span>)</span></code></pre>
 </div>
-<p>TODO Usage examples for functions.</p>
-<p>Code snippets: comprehensive collections of code examples that
-demonstrate how to use functions effectively in different scenarios.</p>
+</div>
+</section><section><h2 class="section-heading" id="usage-examples">Usage examples<a class="anchor" aria-label="anchor" href="#usage-examples"></a>
+<a class="anchor" aria-label="anchor" href="#usage-examples"></a></h2>
+<hr class="half-width"><p>We can also include demonstrations of how to use our code by
+providing code snippets. To do this, we write a collection of sample
+code that demonstrate how to use functions effectively in different
+scenarios.</p>
+<p>To do this, let’s add an examples section to our documentation
+string. Each code example has a prefix of <code>&gt;&gt;&gt;</code>
+which represents the input prompt on the Python interpreter. Some code
+editors will provide syntax highlighting of these code snippets.</p>
+<div class="codewrapper sourceCode" id="cb9">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="kw">def</span> add(x, y):</span>
+<span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb9-3"><a href="#cb9-3" tabindex="-1"></a><span class="co">    Calculate the sum of two numbers.</span></span>
+<span id="cb9-4"><a href="#cb9-4" tabindex="-1"></a></span>
+<span id="cb9-5"><a href="#cb9-5" tabindex="-1"></a><span class="co">    Args:</span></span>
+<span id="cb9-6"><a href="#cb9-6" tabindex="-1"></a><span class="co">        x: The first number to add. (float or int)</span></span>
+<span id="cb9-7"><a href="#cb9-7" tabindex="-1"></a><span class="co">        y: The second number to add. (float or int)</span></span>
+<span id="cb9-8"><a href="#cb9-8" tabindex="-1"></a></span>
+<span id="cb9-9"><a href="#cb9-9" tabindex="-1"></a><span class="co">    Returns:</span></span>
+<span id="cb9-10"><a href="#cb9-10" tabindex="-1"></a><span class="co">        The sum of x and y. (float or int)</span></span>
+<span id="cb9-11"><a href="#cb9-11" tabindex="-1"></a><span class="co">        </span></span>
+<span id="cb9-12"><a href="#cb9-12" tabindex="-1"></a><span class="co">    Examples:    </span></span>
+<span id="cb9-13"><a href="#cb9-13" tabindex="-1"></a><span class="co">    &gt;&gt;&gt; add(1, 1)</span></span>
+<span id="cb9-14"><a href="#cb9-14" tabindex="-1"></a><span class="co">    2</span></span>
+<span id="cb9-15"><a href="#cb9-15" tabindex="-1"></a><span class="co">    &gt;&gt;&gt; add(1.3, 5.3)</span></span>
+<span id="cb9-16"><a href="#cb9-16" tabindex="-1"></a><span class="co">    6.6</span></span>
+<span id="cb9-17"><a href="#cb9-17" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb9-18"><a href="#cb9-18" tabindex="-1"></a>    <span class="cf">return</span> x <span class="op">+</span> y</span></code></pre>
+</div>
+<div id="accordionSpoiler1" class="accordion spoiler-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
+  <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Using docstrings to create automatic tests </h3>
+</button>
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div class="accordion-body">
+<p>These code examples can be used as automatic tests using the <a href="https://docs.python.org/3/library/doctest.html" class="external-link">doctest</a> module
+which is built into Python.</p>
+</div>
+</div>
+</div>
+</div>
 </section><section><h2 class="section-heading" id="best-practices">Best practices<a class="anchor" aria-label="anchor" href="#best-practices"></a>
 <a class="anchor" aria-label="anchor" href="#best-practices"></a></h2>
 <hr class="half-width"><p>Focus on the <strong>purpose and functionality</strong> of the code,
@@ -584,6 +630,36 @@ deep dive into more complicated topics.</p>
 that everywhere across your software project. If you’re working on a
 larger project with multiple developers, refer to the coding conventions
 and, if in doubt, follow the style of existing code.</p>
+<div id="accordionSpoiler2" class="accordion spoiler-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
+  <h3 class="accordion-header" id="headingSpoiler2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Docstring conventions </h3>
+</button>
+<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
+<div class="accordion-body">
+<p>There are several different <strong>standards</strong> for
+documentation strings. A standard is a convention that determines how
+the docstrings will be organised and the syntax that is used to
+represent the arguments, data types, etc.</p>
+<p>A list of documentation string standards in Python:</p>
+<ul><li>The <a href="https://peps.python.org/pep-0257/" class="external-link">PEP 257</a>
+docstring standard was designed by the maintainers of the Python
+programming langauge.</li>
+<li>The <a href="https://google.github.io/styleguide/pyguide.html#381-docstrings" class="external-link">Google
+Style Guide</a> sets out a docstring format.</li>
+<li>
+<a href="https://www.sphinx-doc.org/en/master/" class="external-link">Sphinx docstring
+format</a>, which has a <a href="https://numpydoc.readthedocs.io/en/latest/format.html" class="external-link">NumpyDoc
+extension</a> designed for scientific use.</li>
+</ul><p>It doesn’t <em>really</em> matter which one you select, as long as
+it’s used consistently across a project and it’s clear what the syntax
+means. Some standards are better-supported by other tools such as
+<abbr title="Integrated development environments">IDEs</abbr> and
+documentation generators.</p>
+</div>
+</div>
+</div>
+</div>
 </section><section><h2 class="section-heading" id="automatically-generate-docstrings">Automatically generate docstrings<a class="anchor" aria-label="anchor" href="#automatically-generate-docstrings"></a>
 <a class="anchor" aria-label="anchor" href="#automatically-generate-docstrings"></a></h2>
 <hr class="half-width"><p>Generative AI services such as Google Gemini can write docstrings
@@ -598,25 +674,25 @@ def calculate_rectangle_area(width, height):
     return area</code></pre>
 <p>The result is the follow docstring, in addition to some helpful
 descriptions of the content that it generated.</p>
-<div class="codewrapper sourceCode" id="cb10">
+<div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="kw">def</span> calculate_rectangle_area(width, height):</span>
-<span id="cb10-2"><a href="#cb10-2" tabindex="-1"></a>  <span class="co">"""</span></span>
-<span id="cb10-3"><a href="#cb10-3" tabindex="-1"></a><span class="co">  This function calculates the area of a rectangle.</span></span>
-<span id="cb10-4"><a href="#cb10-4" tabindex="-1"></a></span>
-<span id="cb10-5"><a href="#cb10-5" tabindex="-1"></a><span class="co">  Args:</span></span>
-<span id="cb10-6"><a href="#cb10-6" tabindex="-1"></a><span class="co">      width (float): The width of the rectangle. Must be a positive number.</span></span>
-<span id="cb10-7"><a href="#cb10-7" tabindex="-1"></a><span class="co">      height (float): The height of the rectangle. Must be a positive number.</span></span>
-<span id="cb10-8"><a href="#cb10-8" tabindex="-1"></a></span>
-<span id="cb10-9"><a href="#cb10-9" tabindex="-1"></a><span class="co">  Returns:</span></span>
-<span id="cb10-10"><a href="#cb10-10" tabindex="-1"></a><span class="co">      float: The area of the rectangle. This will be a positive number.</span></span>
-<span id="cb10-11"><a href="#cb10-11" tabindex="-1"></a><span class="co">  """</span></span>
-<span id="cb10-12"><a href="#cb10-12" tabindex="-1"></a></span>
-<span id="cb10-13"><a href="#cb10-13" tabindex="-1"></a>  <span class="co"># Calculate the area</span></span>
-<span id="cb10-14"><a href="#cb10-14" tabindex="-1"></a>  area <span class="op">=</span> width <span class="op">*</span> height</span>
-<span id="cb10-15"><a href="#cb10-15" tabindex="-1"></a></span>
-<span id="cb10-16"><a href="#cb10-16" tabindex="-1"></a>  <span class="cf">return</span> area</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="kw">def</span> calculate_rectangle_area(width, height):</span>
+<span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a>  <span class="co">"""</span></span>
+<span id="cb11-3"><a href="#cb11-3" tabindex="-1"></a><span class="co">  This function calculates the area of a rectangle.</span></span>
+<span id="cb11-4"><a href="#cb11-4" tabindex="-1"></a></span>
+<span id="cb11-5"><a href="#cb11-5" tabindex="-1"></a><span class="co">  Args:</span></span>
+<span id="cb11-6"><a href="#cb11-6" tabindex="-1"></a><span class="co">      width (float): The width of the rectangle. Must be a positive number.</span></span>
+<span id="cb11-7"><a href="#cb11-7" tabindex="-1"></a><span class="co">      height (float): The height of the rectangle. Must be a positive number.</span></span>
+<span id="cb11-8"><a href="#cb11-8" tabindex="-1"></a></span>
+<span id="cb11-9"><a href="#cb11-9" tabindex="-1"></a><span class="co">  Returns:</span></span>
+<span id="cb11-10"><a href="#cb11-10" tabindex="-1"></a><span class="co">      float: The area of the rectangle. This will be a positive number.</span></span>
+<span id="cb11-11"><a href="#cb11-11" tabindex="-1"></a><span class="co">  """</span></span>
+<span id="cb11-12"><a href="#cb11-12" tabindex="-1"></a></span>
+<span id="cb11-13"><a href="#cb11-13" tabindex="-1"></a>  <span class="co"># Calculate the area</span></span>
+<span id="cb11-14"><a href="#cb11-14" tabindex="-1"></a>  area <span class="op">=</span> width <span class="op">*</span> height</span>
+<span id="cb11-15"><a href="#cb11-15" tabindex="-1"></a></span>
+<span id="cb11-16"><a href="#cb11-16" tabindex="-1"></a>  <span class="cf">return</span> area</span></code></pre>
 </div>
 <p>This can save you a lot of time, but as with any AI-generated
 content, always check the output and ensure it’s correct!</p>
@@ -734,7 +810,7 @@ any links that you are not going to use.
   "url": "https://Joe-Heffer-Shef.github.io/FAIR4RS-Documentation/docstrings.html",
   "identifier": "https://Joe-Heffer-Shef.github.io/FAIR4RS-Documentation/docstrings.html",
   "dateCreated": "2024-05-20",
-  "dateModified": "2024-07-23",
+  "dateModified": "2024-08-16",
   "datePublished": "2024-08-16"
 }
 
