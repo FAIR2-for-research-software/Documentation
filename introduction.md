@@ -6,7 +6,7 @@ exercises: 2
 
 :::::::::::::::::::::::::::::::::::::: questions
 
-- What is software documentation?
+- How do we provide information to users of our research software?
 - Why is documenting code useful for researchers?
 - What does well-documented software look like?
 
@@ -22,13 +22,23 @@ exercises: 2
 
 ## Why document code?
 
-No code is self-explanatory. It’s a tool we design, or, more often, a complex organism that develops as we use it, such as a library of functions used within a research team to perform certain kinds of analysis.
+No code is self-explanatory. It’s a tool we design, or, more often, a complex organism that develops as we use it, such as a library of functions used within a research team to perform certain kinds of analysis. To explain our code we must write **software documentation**.
 
-To explain our code we must write **software documentation**. These documents provide information about our  programs for everyone involved in its development, use, and future re-use. Documentation may consist of text, tips within a computer environment, and diagrams that guide the user in using a (potentially complex) software tool. It explained how the software works why it behaves the way it does.
+These documents **provide information** about our programs for everyone involved in its development, use, and future re-use. Documentation may consist of text, tips within a computer environment, and diagrams that guide the user in using a (potentially complex) software tool. It explained how the software works why it behaves the way it does.
 
 ## Why document software?
 
 It’s a common occurrence to get a software package, whether it’s written by ourselves, a colleague, or someone else, that’s near-impossible to use because it’s unclear what each function or tool does. Maybe we look at the source code itself, but we can’t make head-nor-tail of it. Maybe the only person who can use this software is the person who wrote it—unless you wrote it and forgot what you were thinking when you did!
+
+:::: challenge
+
+Discuss positive or negative experiences with using research software:
+
+- What documentation was available?
+- What challenges did you have picking up a new tool?
+- What useful software-related information do you often refer to in your research projects?
+
+::::
 
 ### Advantages of good documentation
 
@@ -38,19 +48,32 @@ Research outputs often depend upon the code used to generate them. Clarity and c
 
 There are many advantages to making your code more readable. Well-documented software is easier to maintain and has greater sustainability, which means it can continue to be used and modified for a longer period of time, despite changes in technology. If software is more reusable then it encourages others to use it for their research, increasing the number of citations of that software and its overall research impact.
 
-Writing a useful software package that is well-documented and can be reused in the future means that your code could take on a life of its own, with benefits that extend beyond yourself to your collaborators and other researchers in the future.
+:::: challenge
+
+Discuss the benefits of writing documentation for your research software.
+
+- How will it help you and your work?
+- What benefits will these provide to your collaborators?
+- In what ways does documentation contribute to the wider research community?
+
+::::
 
 In the long run, it can help you to develop your own software engineering practice by getting into the habit of reflecting on what the purpose of the software is and to articulate what each component or module is for.
 
+Writing a useful software package that is well-documented and can be reused in the future means that your code could take on a life of its own, with benefits that extend beyond yourself to your collaborators and other researchers in the future. High-quality documentation is a key part of ensuring a healthy software lifecycle. It can make the different between accidentally creating an abandoned piece of "gradware" (a slang term for mysterious code that a former student wrote and nobody else can use) and a successful long-term software project with lasting impact.
+
 ## When should I write documentation?
 
-Now! Start writing and sharing documentation for your reseach code from the beginning of your project. This might include design notes, diagrams, or the various kinds of software documentation we'll discuss in this module. The best practice for modern, collaborative research involving digital methods and tools is to document your processes *early and often*. Not only will writing notes about your code help other people to read and use that code, it will clarify your thought process as you design your system, focussing your work on the important parts of the task at hand.
+Now! Start writing and sharing documentation for your reseach code from the beginning of your project. It should be a 
+consideration in your _software management plan_, which is a concept discussed in the Module 1a on Software Lifecycle Planning. It's never too late to start documentaing an old code project.
+
+This might include design notes, diagrams, or the various kinds of software documentation we'll discuss in this module. The best practice for modern, collaborative research involving digital methods and tools is to document your processes *early and often*. Not only will writing notes about your code help other people to read and use that code, it will clarify your thought process as you design your system, focussing your work on the important parts of the task at hand.
 
 Keep in touch with other developers and users of the research code and make a note of their feedback. Common questions and problems are a sign that there are issues that must be covered more clearly and in greater depth in the software documentation. Incorporate this feedback into the software documentation using the whichever method is most appropriate, following the guidance in this module.
 
 ## Examples
 
-Here are some examples of some code to perform some geometry. The first example could be improved in terms of its documentation and readability, while the second one is much clearer. Which one would you prefer to use?
+Here are some examples of some code to perform some geometry. The first example could be improved in terms of its documentation and readability, while the second one is much clearer.
 
 ### Example of no documentation
 
@@ -81,15 +104,25 @@ run <- function(x) {
 
 :::
 
+:::: challenge
+
+Read and evaluate this code.
+
+- Can you tell what the purpose of the function is?
+- What is the meaning of the variables?
+- Would you rely on this code in your research? Why, or why not?
+
+::::
+
 This is a function with a name that doesn't explain what the code will do. There are no comments or notes to explain what the author intended to achieve. The variable names don't clarify anything either: what does `x` mean in this context? Where would I go to find out more about `weird_num`? This is effectively a "magic" number that is arbitrarily stated but unexplained.
 
 The logic of the calculation is also... rather cryptic.
 
-Maybe the code works, maybe it doesn't (would you trust it?) but it could be made clearer and easier to maintain and modify in the future.
+Maybe the code works, maybe it doesn't but it could be made clearer and easier to maintain and modify in the future.
 
 ### Well-documented example
 
-Now let's look at an example of best practices in documenting research software.
+Now let's look at an example of best practices in documenting research software. (These code snippets are part of the end-product of this course, so don't worry if they don't make sense yet!)
 
 ::: group-tab
 
@@ -159,6 +192,16 @@ calculate_sine <- function(angle) {
 }
 ```
 
+:::: challenge
+
+Read and evaluate this code.
+
+- Can you tell what the purpose of the function is?
+- What is the meaning of the variables?
+- Which code would you prefer to use?
+
+::::
+
 :::
 
 This time, the function name is a verb that describes what the code will attempt to do. The description of the function is also written out clearly in a note for the user. There are comment lines (starting with `#`) that explain the mathematicalal method used. Each variable has a descriptive, human-readable name, making the code more intuitive to read. An existing library is used to calculate the factorial, which means we can look up the usage for the `factorial()` function elsewhere.
@@ -166,6 +209,26 @@ This time, the function name is a verb that describes what the code will attempt
 This approach means that our code is much easier to interpret, maintain, and make changes to in the future.
 
 Of course, there may be some syntax in this example that is unfamiliar to you&mdash;but don't worry, we'll learn the basics in this course!
+
+## Real-world examples
+
+Let's review real-world examples of the documentation for software packages that are used in research.
+
+### NumPy user guide
+
+NumPy is a mathematical package for the Python programming language that's used for linear algebra.
+The [NumPy User Guide](https://numpy.org/doc/2.0/user/index.html#user) is a thorough website that organised into sections that cover the different aspects of using that package.
+It includes a beginner's guide, tutorials for different use-cases, and in-depth write-ups of technical details of certain aspects of the code.
+Some of the content is written for a target audience with no assumed knowledge, while other parts are written as a reference for people with some background in mathematics and computer programming.
+
+### ggplot2 documentation site
+
+ggplot2 is a package for the R statistical language that generates data visualisations and graphics.
+The [ggplot2 documentation](https://ggplot2.tidyverse.org/index.html) has a simple, accessible layout and walks a new user through installing and getting up-and-running with the tool.
+The page provides a "cheat sheet" which is a reference guide that lists commonly-used commands in an attractice two-page layout.
+The documentation site is moderate in scope and links to several external resources, such as online courses hosted elsewhere.
+
+The source code is neatly organised into [R code files](https://github.com/tidyverse/ggplot2/tree/main/R) in the repository. For example, the function [geom_point()](https://github.com/tidyverse/ggplot2/blob/main/R/geom-point.R) includes an extensive description of the purpose and operation of that code, including a list of the parameters and examples of how to use it.
 
 :::::: keypoints
 
