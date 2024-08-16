@@ -207,6 +207,26 @@ This approach means that our code is much easier to interpret, maintain, and mak
 
 Of course, there may be some syntax in this example that is unfamiliar to you&mdash;but don't worry, we'll learn the basics in this course!
 
+## Real-world examples
+
+Let's review real-world examples of the documentation for software packages that are used in research.
+
+### NumPy user guide
+
+NumPy is a mathematical package for the Python programming language that's used for linear algebra.
+The [NumPy User Guide](https://numpy.org/doc/2.0/user/index.html#user) is a thorough website that organised into sections that cover the different aspects of using that package.
+It includes a beginner's guide, tutorials for different use-cases, and in-depth write-ups of technical details of certain aspects of the code.
+Some of the content is written for a target audience with no assumed knowledge, while other parts are written as a reference for people with some background in mathematics and computer programming.
+
+### ggplot2 documentation site
+
+ggplot2 is a package for the R statistical language that generates data visualisations and graphics.
+The [ggplot2 documentation](https://ggplot2.tidyverse.org/index.html) has a simple, accessible layout and walks a new user through installing and getting up-and-running with the tool.
+The page provides a "cheat sheet" which is a reference guide that lists commonly-used commands in an attractice two-page layout.
+The documentation site is moderate in scope and links to several external resources, such as online courses hosted elsewhere.
+
+The source code is neatly organised into [R code files](https://github.com/tidyverse/ggplot2/tree/main/R) in the repository. For example, the function [geom_point()](https://github.com/tidyverse/ggplot2/blob/main/R/geom-point.R) includes an extensive description of the purpose and operation of that code, including a list of the parameters and examples of how to use it.
+
 :::::: keypoints
 
  - **Reproducibility:** Well-documented software is easier for other researchers to understand and use with confidence. It enables them to **reproduce your results** to replicate research findings, enabling others to validate them and building trust in your research outputs.
