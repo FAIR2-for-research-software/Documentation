@@ -48,10 +48,6 @@ Research outputs often depend upon the code used to generate them. Clarity and c
 
 There are many advantages to making your code more readable. Well-documented software is easier to maintain and has greater sustainability, which means it can continue to be used and modified for a longer period of time, despite changes in technology. If software is more reusable then it encourages others to use it for their research, increasing the number of citations of that software and its overall research impact.
 
-Writing a useful software package that is well-documented and can be reused in the future means that your code could take on a life of its own, with benefits that extend beyond yourself to your collaborators and other researchers in the future.
-
-In the long run, it can help you to develop your own software engineering practice by getting into the habit of reflecting on what the purpose of the software is and to articulate what each component or module is for.
-
 :::: challenge
 
 Discuss the benefits of writing documentation for your research software.
@@ -62,10 +58,14 @@ Discuss the benefits of writing documentation for your research software.
 
 ::::
 
+In the long run, it can help you to develop your own software engineering practice by getting into the habit of reflecting on what the purpose of the software is and to articulate what each component or module is for.
+
+Writing a useful software package that is well-documented and can be reused in the future means that your code could take on a life of its own, with benefits that extend beyond yourself to your collaborators and other researchers in the future. High-quality documentation is a key part of ensuring a healthy software lifecycle. It can make the different between accidentally creating an abandoned piece of "gradware" (a slang term for mysterious code that a former student wrote and nobody else can use) and a successful long-term software project with lasting impact.
+
 ## When should I write documentation?
 
 Now! Start writing and sharing documentation for your reseach code from the beginning of your project. It should be a 
-consideration in your _software management plan_, which is a concept discussed in the Module 1a on Software Lifecycle Planning.
+consideration in your _software management plan_, which is a concept discussed in the Module 1a on Software Lifecycle Planning. It's never too late to start documentaing an old code project.
 
 This might include design notes, diagrams, or the various kinds of software documentation we'll discuss in this module. The best practice for modern, collaborative research involving digital methods and tools is to document your processes *early and often*. Not only will writing notes about your code help other people to read and use that code, it will clarify your thought process as you design your system, focussing your work on the important parts of the task at hand.
 
@@ -122,7 +122,7 @@ Maybe the code works, maybe it doesn't but it could be made clearer and easier t
 
 ### Well-documented example
 
-Now let's look at an example of best practices in documenting research software.
+Now let's look at an example of best practices in documenting research software. (These code snippets are part of the end-product of this course, so don't worry if they don't make sense yet!)
 
 ::: group-tab
 
