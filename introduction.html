@@ -164,6 +164,7 @@
 <li><a href="#why-document-software">Why document software?</a></li>
 <li><a href="#when-should-i-write-documentation">When should I write documentation?</a></li>
 <li><a href="#examples">Examples</a></li>
+<li><a href="#real-world-examples">Real-world examples</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
 
@@ -301,7 +302,8 @@
 <div class="card-body">
 <div class="inner">
 <h3 class="card-title">Questions</h3>
-<ul><li>What is software documentation?</li>
+<ul><li>How do we provide information to users of our research
+software?</li>
 <li>Why is documenting code useful for researchers?</li>
 <li>What does well-documented software look like?</li>
 </ul></div>
@@ -324,9 +326,9 @@
 <hr class="half-width"><p>No code is self-explanatory. It’s a tool we design, or, more often, a
 complex organism that develops as we use it, such as a library of
 functions used within a research team to perform certain kinds of
-analysis.</p>
-<p>To explain our code we must write <strong>software
-documentation</strong>. These documents provide information about our
+analysis. To explain our code we must write <strong>software
+documentation</strong>.</p>
+<p>These documents <strong>provide information</strong> about our
 programs for everyone involved in its development, use, and future
 re-use. Documentation may consist of text, tips within a computer
 environment, and diagrams that guide the user in using a (potentially
@@ -341,6 +343,23 @@ does. Maybe we look at the source code itself, but we can’t make
 head-nor-tail of it. Maybe the only person who can use this software is
 the person who wrote it—unless you wrote it and forgot what you were
 thinking when you did!</p>
+<div id="discussion1" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Challenge<a class="anchor" aria-label="anchor" href="#discussion1"></a>
+</h3>
+<div class="callout-content">
+<p>Discuss positive or negative experiences with using research
+software:</p>
+<ul><li>What documentation was available?</li>
+<li>What challenges did you have picking up a new tool?</li>
+<li>What useful software-related information do you often refer to in
+your research projects?</li>
+</ul></div>
+</div>
+</div>
 <div class="section level3">
 <h3 id="advantages-of-good-documentation">Advantages of good documentation<a class="anchor" aria-label="anchor" href="#advantages-of-good-documentation"></a></h3>
 <p>There are many advantages to writing guidance to go along with your
@@ -360,26 +379,51 @@ a longer period of time, despite changes in technology. If software is
 more reusable then it encourages others to use it for their research,
 increasing the number of citations of that software and its overall
 research impact.</p>
-<p>Writing a useful software package that is well-documented and can be
-reused in the future means that your code could take on a life of its
-own, with benefits that extend beyond yourself to your collaborators and
-other researchers in the future.</p>
+<div id="discussion2" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Challenge<a class="anchor" aria-label="anchor" href="#discussion2"></a>
+</h3>
+<div class="callout-content">
+<p>Discuss the benefits of writing documentation for your research
+software.</p>
+<ul><li>How will it help you and your work?</li>
+<li>What benefits will these provide to your collaborators?</li>
+<li>In what ways does documentation contribute to the wider research
+community?</li>
+</ul></div>
+</div>
+</div>
 <p>In the long run, it can help you to develop your own software
 engineering practice by getting into the habit of reflecting on what the
 purpose of the software is and to articulate what each component or
 module is for.</p>
+<p>Writing a useful software package that is well-documented and can be
+reused in the future means that your code could take on a life of its
+own, with benefits that extend beyond yourself to your collaborators and
+other researchers in the future. High-quality documentation is a key
+part of ensuring a healthy software lifecycle. It can make the different
+between accidentally creating an abandoned piece of “gradware” (a slang
+term for mysterious code that a former student wrote and nobody else can
+use) and a successful long-term software project with lasting
+impact.</p>
 </div>
 </section><section><h2 class="section-heading" id="when-should-i-write-documentation">When should I write documentation?<a class="anchor" aria-label="anchor" href="#when-should-i-write-documentation"></a>
 <a class="anchor" aria-label="anchor" href="#when-should-i-write-documentation"></a></h2>
 <hr class="half-width"><p>Now! Start writing and sharing documentation for your reseach code
-from the beginning of your project. This might include design notes,
-diagrams, or the various kinds of software documentation we’ll discuss
-in this module. The best practice for modern, collaborative research
-involving digital methods and tools is to document your processes
-<em>early and often</em>. Not only will writing notes about your code
-help other people to read and use that code, it will clarify your
-thought process as you design your system, focussing your work on the
-important parts of the task at hand.</p>
+from the beginning of your project. It should be a consideration in your
+<em>software management plan</em>, which is a concept discussed in the
+Module 1a on Software Lifecycle Planning. It’s never too late to start
+documentaing an old code project.</p>
+<p>This might include design notes, diagrams, or the various kinds of
+software documentation we’ll discuss in this module. The best practice
+for modern, collaborative research involving digital methods and tools
+is to document your processes <em>early and often</em>. Not only will
+writing notes about your code help other people to read and use that
+code, it will clarify your thought process as you design your system,
+focussing your work on the important parts of the task at hand.</p>
 <p>Keep in touch with other developers and users of the research code
 and make a note of their feedback. Common questions and problems are a
 sign that there are issues that must be covered more clearly and in
@@ -390,8 +434,7 @@ appropriate, following the guidance in this module.</p>
 <a class="anchor" aria-label="anchor" href="#examples"></a></h2>
 <hr class="half-width"><p>Here are some examples of some code to perform some geometry. The
 first example could be improved in terms of its documentation and
-readability, while the second one is much clearer. Which one would you
-prefer to use?</p>
+readability, while the second one is much clearer.</p>
 <div class="section level3">
 <h3 id="example-of-no-documentation">Example of no documentation<a class="anchor" aria-label="anchor" href="#example-of-no-documentation"></a></h3>
 <p>Here’s an example of some code that does… something. It’s not clear
@@ -410,7 +453,7 @@ what this code is for or why it was written.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-1" class="tab-content">
-<div id="nav-tabpanel-1-Python" class="tab-pane show active" aria-labelledby="nav-tab-1-Python" role="tabpanel">
+<div id="nav-tabpanel-1-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-Python">
 <p>This is some research code that is contained in a Python
 function.</p>
 <div class="codewrapper sourceCode" id="cb1">
@@ -421,7 +464,7 @@ function.</p>
 <span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a>  <span class="cf">return</span> x <span class="op">*</span> weird_num <span class="op">-</span> angle<span class="op">**</span><span class="dv">3</span> <span class="op">/</span> (weird_num <span class="op">*</span> <span class="dv">2</span>)</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-1-R" class="tab-pane" aria-labelledby="nav-tab-1-R" role="tabpanel">
+<div id="nav-tabpanel-1-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-R">
 <p>This is some research code that is contained in an R function.</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -434,6 +477,21 @@ function.</p>
 </div>
 </div>
 </div>
+<div id="discussion3" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Challenge<a class="anchor" aria-label="anchor" href="#discussion3"></a>
+</h3>
+<div class="callout-content">
+<p>Read and evaluate this code.</p>
+<ul><li>Can you tell what the purpose of the function is?</li>
+<li>What is the meaning of the variables?</li>
+<li>Would you rely on this code in your research? Why, or why not?</li>
+</ul></div>
+</div>
+</div>
 <p>This is a function with a name that doesn’t explain what the code
 will do. There are no comments or notes to explain what the author
 intended to achieve. The variable names don’t clarify anything either:
@@ -441,14 +499,14 @@ what does <code>x</code> mean in this context? Where would I go to find
 out more about <code>weird_num</code>? This is effectively a “magic”
 number that is arbitrarily stated but unexplained.</p>
 <p>The logic of the calculation is also… rather cryptic.</p>
-<p>Maybe the code works, maybe it doesn’t (would you trust it?) but it
-could be made clearer and easier to maintain and modify in the
-future.</p>
+<p>Maybe the code works, maybe it doesn’t but it could be made clearer
+and easier to maintain and modify in the future.</p>
 </div>
 <div class="section level3">
 <h3 id="well-documented-example">Well-documented example<a class="anchor" aria-label="anchor" href="#well-documented-example"></a></h3>
 <p>Now let’s look at an example of best practices in documenting
-research software.</p>
+research software. (These code snippets are part of the end-product of
+this course, so don’t worry if they don’t make sense yet!)</p>
 <div class="tabs">
 <nav><div id="nav-tab-2" class="nav nav-tabs" role="tablist">
 <button class="nav-link active" id="nav-tab-2-Python" name="Python" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-2-Python" type="button" role="tab" aria-controls="nav-tabpanel-2-Python" aria-selected="true">
@@ -461,9 +519,14 @@ research software.</p>
   R
   </h3>
 </button>
+<button class="nav-link" id="nav-tab-2-Challenge" name="Challenge" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-2-Challenge" type="button" role="tab" aria-controls="nav-tabpanel-2-Challenge" aria-selected="false">
+  <h3 class="tab-header" id="nav-tab-heading-2-Challenge">
+  Challenge
+  </h3>
+</button>
 </div>
 </nav><div id="nav-tabContent-2" class="tab-content">
-<div id="nav-tabpanel-2-Python" class="tab-pane show active" aria-labelledby="nav-tab-2-Python" role="tabpanel">
+<div id="nav-tabpanel-2-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-2-Python">
 <p>This is a function written in the Python programming language that
 calculates a mathematical result, the details of which aren’t relevant.
 This code has plenty of documentation to help us read and understand
@@ -499,7 +562,7 @@ it.</p>
 <span id="cb3-26"><a href="#cb3-26" tabindex="-1"></a>  <span class="cf">return</span> sin_value</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-2-R" class="tab-pane" aria-labelledby="nav-tab-2-R" role="tabpanel">
+<div id="nav-tabpanel-2-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-R">
 <p>This is a function written in the R programming language that
 calculates a mathematical result, the details of which aren’t relevant.
 This code has plenty of documentation to help us read and understand it.
@@ -535,6 +598,45 @@ optionally external API documentation.</p>
 <span>  <span class="kw">return</span><span class="op">(</span><span class="va">sin_value</span><span class="op">)</span></span>
 <span><span class="op">}</span></span></code></pre>
 </div>
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+</div>
+<div id="nav-tabpanel-2-Python" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-Python">
+<p>Read and evaluate this code.</p>
+<ul><li>Can you tell what the purpose of the function is?</li>
+<li>What is the meaning of the variables?</li>
+<li>Which code would you prefer to use?</li>
+</ul><div class="callout-content">
+<p>Read and evaluate this code.</p>
+<ul><li>Can you tell what the purpose of the function is?</li>
+<li>What is the meaning of the variables?</li>
+<li>Which code would you prefer to use?</li>
+</ul></div>
+<div class="section level3 callout-title callout-inner">
+<h3 class="callout-title">Challenge</h3>
+<div class="callout-content">
+<p>Read and evaluate this code.</p>
+<ul><li>Can you tell what the purpose of the function is?</li>
+<li>What is the meaning of the variables?</li>
+<li>Which code would you prefer to use?</li>
+</ul></div>
+</div>
+<div id="discussion4" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Challenge<a class="anchor" aria-label="anchor" href="#discussion4"></a>
+</h3>
+<div class="callout-content">
+<p>Read and evaluate this code.</p>
+<ul><li>Can you tell what the purpose of the function is?</li>
+<li>What is the meaning of the variables?</li>
+<li>Which code would you prefer to use?</li>
+</ul></div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -551,6 +653,38 @@ maintain, and make changes to in the future.</p>
 <p>Of course, there may be some syntax in this example that is
 unfamiliar to you—but don’t worry, we’ll learn the basics in this
 course!</p>
+</div>
+</section><section><h2 class="section-heading" id="real-world-examples">Real-world examples<a class="anchor" aria-label="anchor" href="#real-world-examples"></a>
+<a class="anchor" aria-label="anchor" href="#real-world-examples"></a></h2>
+<hr class="half-width"><p>Let’s review real-world examples of the documentation for software
+packages that are used in research.</p>
+<div class="section level3">
+<h3 id="numpy-user-guide">NumPy user guide<a class="anchor" aria-label="anchor" href="#numpy-user-guide"></a></h3>
+<p>NumPy is a mathematical package for the Python programming language
+that’s used for linear algebra. The <a href="https://numpy.org/doc/2.0/user/index.html#user" class="external-link">NumPy User
+Guide</a> is a thorough website that organised into sections that cover
+the different aspects of using that package. It includes a beginner’s
+guide, tutorials for different use-cases, and in-depth write-ups of
+technical details of certain aspects of the code. Some of the content is
+written for a target audience with no assumed knowledge, while other
+parts are written as a reference for people with some background in
+mathematics and computer programming.</p>
+</div>
+<div class="section level3">
+<h3 id="ggplot2-documentation-site">ggplot2 documentation site<a class="anchor" aria-label="anchor" href="#ggplot2-documentation-site"></a></h3>
+<p>ggplot2 is a package for the R statistical language that generates
+data visualisations and graphics. The <a href="https://ggplot2.tidyverse.org/index.html" class="external-link">ggplot2
+documentation</a> has a simple, accessible layout and walks a new user
+through installing and getting up-and-running with the tool. The page
+provides a “cheat sheet” which is a reference guide that lists
+commonly-used commands in an attractice two-page layout. The
+documentation site is moderate in scope and links to several external
+resources, such as online courses hosted elsewhere.</p>
+<p>The source code is neatly organised into <a href="https://github.com/tidyverse/ggplot2/tree/main/R" class="external-link">R code files</a>
+in the repository. For example, the function <a href="https://github.com/tidyverse/ggplot2/blob/main/R/geom-point.R" class="external-link">geom_point()</a>
+includes an extensive description of the purpose and operation of that
+code, including a list of the parameters and examples of how to use
+it.</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
