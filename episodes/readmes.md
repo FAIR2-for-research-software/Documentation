@@ -383,19 +383,22 @@ pi = 3.14
 
 ::: callout
 
+## Markdown
+
 You can learn more about writing documents using Markdown at [Markdown Guide](https://www.markdownguide.org/), a reference for using this syntax.
 
 :::
 
-Remember, the README file is a first impression that research users will receive for your software. Make them informative and user-friendly to enhance the research experience for others and foster collaboration.
+Remember, the README file is a **first impression** that research users will receive for your software.
+A README contains a brief description of the software, installation instructions, and a usage guide.
+Make them informative and user-friendly to enhance the research experience for others and foster collaboration.
+The writing style should be concide, clear, and explain technical terms.
+Use diagrams and screenshots for clarity.
 
 :::::: keypoints
 
  - A README file serves as an introduction to your software, guiding users on installation, usage, and understanding its capabilities.
  - Consider the user's technical background; write clearly and avoid jargon.
- - A README contains a brief description of the software, installation instructions, and a usage guide.
- - The writing style should be concide, clear, and explain technical terms.
- - Use diagrams and screenshots for clarity.
  - Markdown is a recommended format for creating headers, bold text, bullet points, etc.
 
 ::::::
