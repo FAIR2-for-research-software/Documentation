@@ -200,6 +200,7 @@
 <li><a href="#contents">Contents</a></li>
 <li><a href="#tools">Tools</a></li>
 <li><a href="#publishing">Publishing</a></li>
+<li><a href="#further-resources">Further resources</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
 
@@ -282,7 +283,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Documentation sites</h1>
-        <p>Last updated on 2024-06-10 |
+        <p>Last updated on 2024-09-12 |
 
         <a href="https://github.com/Joe-Heffer-Shef/FAIR4RS-Documentation/edit/main/episodes/sites.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -303,9 +304,10 @@
 <div class="card-body">
 <div class="inner">
 <h3 class="card-title">Questions</h3>
-<ul><li>What is a documentation website for research software?</li>
+<ul><li>How do I present <strong>comprehensive information</strong> to users
+of my research software?</li>
 <li>How do I generate a website containing a user guide to my code?</li>
-<li>What should my documentation site contain?</li>
+<li>What should a good documentation website contain?</li>
 <li>How do I publish my software documentation on the internet?</li>
 </ul></div>
 </div>
@@ -314,7 +316,8 @@
 <div class="card-body">
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
-<ul><li>Learn about documentation websites for software packages.</li>
+<ul><li>Learn about <strong>documentation websites</strong> for software
+packages.</li>
 <li>Gain basic familiarity with some common website generation
 tools.</li>
 <li>Understand the basics of structuring a documentation website.</li>
@@ -486,6 +489,14 @@ your project with wikis</a> on the GitHub documentation.</p>
 </div>
 </div>
 <div class="section level3">
+<h3 id="documentation-sites-for-r-packages">Documentation sites for R packages<a class="anchor" aria-label="anchor" href="#documentation-sites-for-r-packages"></a></h3>
+<p>It’s also possible to generate a documentation site to accompany R
+packages that you create. For more information about this, please refer
+to the book <em>R Packages</em> by Hadley Wickham, which has a chapter
+on <a href="https://r-pkgs.org/website.html" class="external-link">documentation
+websites</a>.</p>
+</div>
+<div class="section level3">
 <h3 id="sphinx">Sphinx<a class="anchor" aria-label="anchor" href="#sphinx"></a></h3>
 <p><a href="https://www.sphinx-doc.org/" class="external-link">Sphinx</a> is a tool for
 building documentation websites that is commonly used amongst developers
@@ -518,17 +529,9 @@ code.</p>
 <h5 id="installing-sphinx">Installing Sphinx<a class="anchor" aria-label="anchor" href="#installing-sphinx"></a></h5>
 <p>Navigate to the root folder of your code project. Create a virtual
 environment using <a href="https://docs.python.org/3/library/venv.html" class="external-link">venv</a> which is a
-separate area in which to install the Sphinx package.</p>
-<div class="codewrapper sourceCode" id="cb1">
-<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> venv .venv</span></code></pre>
-</div>
-<p>This will create a subdirectory that contains the packages we’ll need
-to complete the exercises in this section.</p>
-<p>Run the activation script to enable the virtual environment. The
-specific command needed to activate the virtual environment depends on
-the operating system you are using.</p>
+separate area in which to install the Sphinx package. This command will
+create a virtual environment in a directory called
+<code>.venv/</code></p>
 <div class="tabs">
 <nav><div id="nav-tab-1" class="nav nav-tabs" role="tablist">
 <button class="nav-link active" id="nav-tab-1-Windows" name="Windows" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-1-Windows" type="button" role="tab" aria-controls="nav-tabpanel-1-Windows" aria-selected="true">
@@ -549,34 +552,81 @@ the operating system you are using.</p>
 </div>
 </nav><div id="nav-tabContent-1" class="tab-content">
 <div id="nav-tabpanel-1-Windows" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-Windows">
-<div class="codewrapper sourceCode" id="cb2">
+<div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="ex">.venv\Scripts\activate</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> venv .venv</span></code></pre>
 </div>
 </div>
 <div id="nav-tabpanel-1-Linux" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-Linux">
-<div class="codewrapper sourceCode" id="cb3">
+<div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="bu">source</span> .venv/bin/activate</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="ex">python3</span> <span class="at">-m</span> venv .venv</span></code></pre>
 </div>
 </div>
 <div id="nav-tabpanel-1-macOS" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-macOS">
+<div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> venv .venv</span></code></pre>
+</div>
+</div>
+</div>
+</div>
+<p>This will create a subdirectory that contains the packages we’ll need
+to complete the exercises in this section.</p>
+<p>Run the activation script to enable the virtual environment. The
+specific command needed to activate the virtual environment depends on
+the operating system you are using.</p>
+<div class="tabs">
+<nav><div id="nav-tab-2" class="nav nav-tabs" role="tablist">
+<button class="nav-link active" id="nav-tab-2-Windows" name="Windows" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-2-Windows" type="button" role="tab" aria-controls="nav-tabpanel-2-Windows" aria-selected="true">
+  <h3 class="tab-header" id="nav-tab-heading-2-Windows">
+  Windows
+  </h3>
+</button>
+<button class="nav-link" id="nav-tab-2-Linux" name="Linux" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-2-Linux" type="button" role="tab" aria-controls="nav-tabpanel-2-Linux" aria-selected="false">
+  <h3 class="tab-header" id="nav-tab-heading-2-Linux">
+  Linux
+  </h3>
+</button>
+<button class="nav-link" id="nav-tab-2-macOS" name="macOS" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-2-macOS" type="button" role="tab" aria-controls="nav-tabpanel-2-macOS" aria-selected="false">
+  <h3 class="tab-header" id="nav-tab-heading-2-macOS">
+  macOS
+  </h3>
+</button>
+</div>
+</nav><div id="nav-tabContent-2" class="tab-content">
+<div id="nav-tabpanel-2-Windows" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-2-Windows">
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="bu">source</span> .venv/bin/activate</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="ex">.venv\Scripts\activate</span></span></code></pre>
 </div>
-<p>Use the Python package manager <a href="https://pip.pypa.io/en/stable/" class="external-link">pip</a> to <a href="https://www.sphinx-doc.org/en/master/usage/installation.html" class="external-link">install
-Sphinx</a>.</p>
+</div>
+<div id="nav-tabpanel-2-Linux" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-Linux">
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="ex">pip</span> install sphinx</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="bu">source</span> .venv/bin/activate</span></code></pre>
+</div>
+</div>
+<div id="nav-tabpanel-2-macOS" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-macOS">
+<div class="codewrapper sourceCode" id="cb6">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="bu">source</span> .venv/bin/activate</span></code></pre>
 </div>
 </div>
 </div>
+</div>
+<p>Use the Python package manager <a href="https://pip.pypa.io/en/stable/" class="external-link">pip</a> to <a href="https://www.sphinx-doc.org/en/master/usage/installation.html" class="external-link">install
+Sphinx</a>.</p>
+<div class="codewrapper sourceCode" id="cb7">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="ex">pip</span> install sphinx</span></code></pre>
 </div>
 </div>
 <div class="section level5">
@@ -584,10 +634,10 @@ Sphinx</a>.</p>
 <p>Sphinx includes a command to set up a new project called <a href="https://www.sphinx-doc.org/en/master/man/sphinx-quickstart.html" class="external-link">sphinx-quickstart</a>.
 Navigate to your project’s root folder and run the following
 command.</p>
-<div class="codewrapper sourceCode" id="cb6">
+<div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a><span class="ex">sphinx-quickstart</span> docs <span class="at">--no-sep</span> <span class="at">--ext-autodoc</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="ex">sphinx-quickstart</span> docs <span class="at">--no-sep</span> <span class="at">--ext-autodoc</span></span></code></pre>
 </div>
 <p>This will initialise the configuration files for a new Sphinx site in
 a subdirectory called <code>docs/</code> and prompt you to enter the
@@ -595,12 +645,12 @@ following options:</p>
 <ul><li>Project name: Birdsong Identifier</li>
 <li>Author name(s): Bill Oddie</li>
 <li>Project release []: 1.0</li>
-</ul><div id="callout3" class="callout">
+</ul><div id="sphinx-options" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div class="callout-inner">
-<h3 class="callout-title">Callout</h3>
+<div id="sphinx-options" class="callout-inner">
+<h3 class="callout-title">Sphinx options</h3>
 <div class="callout-content">
 <p>To find out more about the Sphinx configuration files, please read
 their guide to <a href="https://www.sphinx-doc.org/en/master/usage/quickstart.html#defining-document-structure" class="external-link">defining
@@ -612,18 +662,19 @@ document structure</a> on the Sphinx documentation.</p>
 </div>
 <div class="section level4">
 <h4 id="building-the-site">Building the site<a class="anchor" aria-label="anchor" href="#building-the-site"></a></h4>
-<p>In this context, building means taking our collection of Sphinx files
-and converting them into the source code files that define a website.
-Sphinx will create HyperText Markup Language (HTML) files, which is the
-markup language for pages that display in a web browser commonly used on
-the internet.</p>
+<p>In this context, <em>building</em> means taking our collection of
+Sphinx files and converting them into the source code files that define
+a website. Sphinx will create <em>HyperText Markup Language</em> (HTML)
+files, which is the markup language for pages that display in a web
+browser commonly used on the internet.</p>
 <p>To build our site, we run the <a href="https://www.sphinx-doc.org/en/master/man/sphinx-build.html" class="external-link">sphinx-build</a>
-command using the <code>-M</code> option to select HTML syntax as the
-output format.</p>
-<div class="codewrapper sourceCode" id="cb7">
+command using the <code>-M</code> option to select
+<abbr title="HyperText Markup Language">HTML</abbr> syntax as the output
+format.</p>
+<div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="ex">sphinx-build</span> <span class="at">-M</span> html docs docs/_build</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="ex">sphinx-build</span> <span class="at">-M</span> html docs docs/_build</span></code></pre>
 </div>
 <p>Sphinx will load our files from the <code>docs/</code> directory and
 output the built HTML files in the <code>docs/_build</code>
@@ -642,71 +693,116 @@ formatted text. We can achieve this using the <a href="https://www.sphinx-doc.or
 plugin for Sphinx.</p>
 <div class="section level5">
 <h5 id="configuring-autodoc">Configuring Autodoc<a class="anchor" aria-label="anchor" href="#configuring-autodoc"></a></h5>
-<p>Let’s set up the options for <code>autodoc</code>.</p>
-<p>If you struggle with these steps, please refer to the <a href="https://github.com/Joe-Heffer-Shef/oddsong" class="external-link">template
-project</a>.</p>
-<p>Add the following lines to <code>docs/conf.py</code></p>
-<div class="codewrapper sourceCode" id="cb8">
+<p>Let’s set up the options for <code>autodoc</code>. (If you struggle
+with these steps, please refer to the <a href="https://github.com/Joe-Heffer-Shef/oddsong" class="external-link">template
+project</a>.)</p>
+<p>Add the following lines to <code>docs/conf.py</code> which</p>
+<div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="co"># Our Python code may be imported from the parent directory</span></span>
-<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a><span class="im">import</span> os</span>
-<span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a><span class="im">import</span> sys</span>
-<span id="cb8-4"><a href="#cb8-4" tabindex="-1"></a>sys.path.insert(<span class="dv">0</span>, os.path.abspath(<span class="st">'..'</span>))</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="co"># Our Python code may be imported from the parent directory</span></span>
+<span id="cb10-2"><a href="#cb10-2" tabindex="-1"></a><span class="im">import</span> os</span>
+<span id="cb10-3"><a href="#cb10-3" tabindex="-1"></a><span class="im">import</span> sys</span>
+<span id="cb10-4"><a href="#cb10-4" tabindex="-1"></a>sys.path.insert(<span class="dv">0</span>, os.path.abspath(<span class="st">'..'</span>))</span></code></pre>
 </div>
-<p>This ensures that Sphinx can access our Python code.</p>
-<p>Next, edit <code>docs/index.rst</code> and add the following
-lines:</p>
-<div class="codewrapper sourceCode" id="cb9">
+<p>This ensures that Sphinx can access our Python code by pointing at
+the root directory of our project. The <code>..</code> syntax means “one
+folder up”, which means <code>autodoc</code> will search in the root
+directory for code to import.</p>
+<div id="accordionSpoiler1" class="accordion spoiler-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
+  <h3 class="accordion-header" id="headingSpoiler1">
+  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>
+  What does this code mean?
+  </h3>
+</button>
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div class="accordion-body">
+<p>The Python code uses <a href="https://docs.python.org/3/library/sys.html#sys.path" class="external-link"><code>sys.path</code></a>,
+a list of locations to search for code. By modifying the Python
+<em>module search path</em>, we allow <code>autodoc</code> to locate and
+import our code modules from a specific directory that is not in the
+default search path.</p>
+<p>This is often necessary when working with project structures that
+involve multiple directories, helping the interpreter to find code that
+isn’t installed in the standard library location.</p>
+</div>
+</div>
+</div>
+</div>
+<p>Next, edit <code>docs/index.rst</code> and add the following lines to
+instruct Sphinx to automatically generation documentation for our Python
+module.</p>
+<div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">RST<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode rst" tabindex="0"><code class="sourceCode rest"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="dt">.. automodule:: </span>oddsong.song</span>
-<span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a>    <span class="fu">:members:</span></span></code></pre>
+<pre class="sourceCode rst" tabindex="0"><code class="sourceCode rest"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="dt">.. automodule:: </span>oddsong.song</span>
+<span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a>    <span class="fu">:members:</span></span></code></pre>
+</div>
+<div id="accordionSpoiler2" class="accordion spoiler-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
+  <h3 class="accordion-header" id="headingSpoiler2">
+  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>
+  What does this code mean?
+  </h3>
+</button>
+<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
+<div class="accordion-body">
+<p>This <a href="https://docutils.sourceforge.io/rst.html" class="external-link">reStructuredText
+(reST)</a> markup language has the following elements:</p>
+<ul><li>
+<code>..</code> indicates a <em>directive</em> within a
+<abbr title="reStructuredText">reST</abbr> document that is used to
+configure Sphinx.</li>
+<li>
+<code>automodule::</code> indicates a specific directive to use
+<code>autodoc</code> to automatically generate documentation for a
+module.</li>
+<li>
+<code>oddsong.song</code> is the path to our Python module, for
+which documentation will be created.</li>
+<li>
+<code>:members:</code> is an optional argument for the automodule
+directive that instructs Sphinx to include documentation for all members
+(functions, classes, variables) defined within the specified
+module.</li>
+</ul><p>For more information about
+<abbr title="reStructuredText">reST</abbr>, please read the <a href="https://www.writethedocs.org/guide/writing/reStructuredText/" class="external-link">Introduction
+to reStructuredText</a> by <em>Write The Docs</em>.</p>
+</div>
+</div>
+</div>
 </div>
 <p>Now, when we build our site, Sphinx will scan the contents of the
 <code>oddsong</code> Python module and automatically generate a useful
 reference guide to our functions.</p>
-<div class="codewrapper sourceCode" id="cb10">
+<div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="ex">sphinx-build</span> <span class="at">-M</span> html docs docs/_build</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a><span class="ex">sphinx-build</span> <span class="at">-M</span> html docs docs/_build</span></code></pre>
 </div>
 <p>The result looks something like this:</p>
 <figure><img src="../fig/oddsong-autodoc.png" title="A Python function documentation string" alt="Python documentation string rendered as HTML" class="figure mx-auto d-block"><div class="figcaption">Python documentation string rendered as
 HTML</div>
-</figure><div id="automatically-generated-content" class="callout challenge">
+</figure><div id="automatically-generate-content" class="callout discussion">
 <div class="callout-square">
-<i class="callout-icon" data-feather="zap"></i>
+<i class="callout-icon" data-feather="message-circle"></i>
 </div>
-<div id="automatically-generated-content" class="callout-inner">
-<h3 class="callout-title">Automatically generated content</h3>
+<div id="automatically-generate-content" class="callout-inner">
+<h3 class="callout-title">Automatically generate content</h3>
 <div class="callout-content">
-<p>Try using <code>autodoc</code>.</p>
-</div>
-</div>
-</div>
-<div id="accordionSolution1" class="accordion challenge-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
-  <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
-</button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
-<div class="accordion-body">
-<p>TODO</p>
+<p>Try using <code>autodoc</code> to analyise your own code and build a
+documentation site by following the steps above.</p>
+<p>After the <code>sphinx-build</code> command has completed
+successfully, browse the contents of the <code>docs/_build/html</code>
+folder and discuss what you find.</p>
 </div>
 </div>
 </div>
 </div>
 </div>
-</div>
-</div>
-<div class="section level3">
-<h3 id="documentation-sites-for-r-packages">Documentation sites for R packages<a class="anchor" aria-label="anchor" href="#documentation-sites-for-r-packages"></a></h3>
-<p>It’s also possible to generate a documentation site to accompany R
-packages that you create. For more information about this, please refer
-to the book <em>R Packages</em> by Hadley Wickham, which has a chapter
-on <a href="https://r-pkgs.org/website.html" class="external-link">documentation
-websites</a>.</p>
 </div>
 </section><section><h2 class="section-heading" id="publishing">Publishing<a class="anchor" aria-label="anchor" href="#publishing"></a></h2>
 <hr class="half-width"><p>Now that you’ve started writing your documentation website, there are
@@ -736,11 +832,23 @@ documentation sites.</li>
 </ul></div>
 </div>
 </div>
-<!--
+</section><section><h2 class="section-heading" id="further-resources">Further resources<a class="anchor" aria-label="anchor" href="#further-resources"></a></h2>
+<hr class="half-width"><p>Please review the following material which provides more information
+about some of the topics covered in this episode.</p>
+<ul><li>Sphinx <a href="https://www.sphinx-doc.org/en/master/usage/quickstart.html" class="external-link">Getting
+Started</a>
+</li>
+<li>
+<em>Write the Docs</em> <a href="https://www.writethedocs.org/guide/writing/reStructuredText/" class="external-link">Introduction
+to reStructuredText</a>
+</li>
+<li>GitHub documentation <a href="https://docs.github.com/en/communities/documenting-your-project-with-wikis/about-wikis" class="external-link">About
+wikis</a>
+</li>
+</ul><!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
- -->
-</section></div> <!-- / div.lesson-content -->
+ --></section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="../instructor/readable.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
         <a class="chapter-link float-end" href="../instructor/contributors.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
@@ -811,8 +919,8 @@ any links that you are not going to use.
   "url": "https://Joe-Heffer-Shef.github.io/FAIR4RS-Documentation/instructor/sites.html",
   "identifier": "https://Joe-Heffer-Shef.github.io/FAIR4RS-Documentation/instructor/sites.html",
   "dateCreated": "2024-05-20",
-  "dateModified": "2024-06-10",
-  "datePublished": "2024-09-10"
+  "dateModified": "2024-09-12",
+  "datePublished": "2024-09-12"
 }
 
   </script><script>
