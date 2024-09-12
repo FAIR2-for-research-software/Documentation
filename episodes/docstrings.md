@@ -7,9 +7,8 @@ exercises: 2
 :::::::::::::::::::::::::::::::::::::: questions 
 
 - How do we **describe our code**?
-- What are **documentation strings**?
+- How can we **annotate functions** in our research code?
 - Why are documentation strings useful for **research software**?
-- **How do we write** documentation strings?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -25,7 +24,7 @@ exercises: 2
 
 If you’re publishing a research software package, one of the most common ways that its users will learn to interact with the code is by reading the documentation **for each individual function**.
 
-We learned about _functions_ in an earlier module. Functions help us to break our code into smaller units that have a single purpose. By documenting those functions effectively, we aim to **explain their purpose** to future users and maintainers of that code. We also need to describe all the expected inputs and outputs of the function.
+We learned about _functions_ in an earlier module on software design principles. Functions help us to break our code into smaller units that have a single purpose. By documenting those functions effectively, we aim to **explain their purpose** to future users and maintainers of that code. We also need to describe all the expected inputs and outputs of the function.
 
 ## Documentation strings
 
@@ -148,7 +147,14 @@ abs(x, /)
 
 :::::::::::::::::::::::::::::::::::::::::::
 
-The most important thing to include in a docstrings is an explanation of the purpose of this piece of code. To write a useful docstring, put yourself in the shoes of someone who encounters your code for the first time and needs a simple introduction that doesn’t assume any implied knowledge. The explanation will be very basic and seem obvious to you, but it may help a new user greatly.
+The most important thing to include in a docstrings is an explanation of the purpose of this piece of code.
+To write a useful docstring, put yourself in the shoes of someone who encounters your code for the first time and needs a simple introduction that doesn’t assume any implied knowledge. The explanation will be very basic and seem obvious to you, but it may help a new user greatly.
+
+::: discussion
+
+How can we tailor our docstrings to different audiences, such as new users and experienced developers?
+
+:::
 
 ### Arguments
 
@@ -197,6 +203,8 @@ We have added an “arguments” (abbreviated to “args”) section to our docs
 
 Add a description of each argument to a function in your code.
 
+Run `help()` and evaluate the output.
+
 :::::::::::::::::::::::::::::::::
 
 ### Return values
@@ -242,6 +250,8 @@ This will help the user to understand what the function does and what they can e
 ::::::::::::::::::::::::::::::::: challenge
 
 Describe the return value of a function in a documentation string.
+
+Run `help()` and evaluate the output.
 
 :::::::::::::::::::::::::::::::::
 
@@ -323,9 +333,69 @@ In the R ecosystem, we can automatically test the examples in our documentation 
 
 ## Best practices
 
-Focus on the **purpose and functionality** of the code, rather than getting bogged down in the details of how it works. Explain what the function **does**, rather then the specific implementation, because this might change over time. A function encapsulates an isolated part of a system, which can be used as a black box by other parts of the system or the end user, who in many cases only needs to understand its inputs and outputs. It's a good idea to start your docstring with a high-level summary of the function and, if the function is a major one, an introduction for the new user.
+This section contains some tips for writing useful documentation strings.
 
-Clarity is key. Be **concise**. Describe the essential information that user needs to know first and be brief but clear. As with any software documentation, **avoid jargon** where possible, and provide links to further resources for users to take a deep dive into more complicated topics.
+### Prioritisation
+
+Focus on the **purpose and functionality** of the code, rather than getting bogged down in the details of how it works. Explain what the function **does**, rather then the specific implementation, because this might change over time. A function encapsulates an isolated part of a system, which can be used as a black box by other parts of the system or the end user, who in many cases only needs to understand its inputs and outputs.
+
+Tips:
+
+- It's a good idea to start your docstring with a **high-level summary** of the function.
+- If the function is a major one, include a **simple introduction** for the new user.
+
+::: discussion
+
+Consider this documentation string:
+
+```python
+def calculate_something(a, b, c):
+    """Does stuff with a, b, and c."""
+    # ... implementation ...
+```
+
+What problems do you notice? How could we improve this?
+
+:::
+
+### Clarity is key
+
+Be **concise**. Describe the essential information that user needs to know first and be brief but clear.
+
+As with any software documentation, **avoid jargon** where possible.
+
+::: discussion
+
+Read the following documentation string:
+
+```python
+def add(x, y):
+    """Adds two numbers together, which are the x and y arguents of this function.
+
+    This function takes two numbers as input and returns their sum.
+    The addition is performed using the built-in `+` operator.
+
+    Args:
+        x: The first number to add to the second number, y.
+        y: The second number to add to the first number, x.
+
+    Returns:
+        The sum of x and y, which are summed using the addition operator.
+    """
+    return x + y
+```
+
+Discuss how can we effectively convey the purpose and functionality of a function in a docstring, without going into excessive detail about its implementation?
+
+:::
+
+Don't reinvent the wheel. **Provide links** to further resources for users to take a deep dive into more complicated topics.
+
+::: discussion
+
+How can we link to external resources that can provide more in-depth information?
+
+:::
 
 Be **consistent**. Decide a style of docstring and use that everywhere across your software project. If you're working on a larger project with multiple developers, refer to the coding conventions and, if in doubt, follow the style of existing code.
 
@@ -403,16 +473,18 @@ How should we critically evaluate this material so that it can be used appropria
 
 :::::::::::::::::::::::::::::::::::::
 
+Documentation strings make your code **clearer to read** and easier for other researchers to use.
+Also, they make your research software **easier to maintain** in the long run, saving time and resources.
+Good docstrings are clear and use **everyday language**.
+
+Well-documented, **reusable research code** depends upon good documentation strings.
+Research collaborators will benefit from **clear explanations** of the purpose of each function.
+
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
-- Docstrings are special comments that describe the **purpose of a function** and its inputs and outputs
-- Documentation strings make your code **clearer to read** and easier for other researchers to use
-- Documenting your functions make them **easier to maintain** in the long run.
-- Well-documented, **reusable research code** depends upon good documentation strings
-- Research collaborators will benefit from **clear explanations** of the purpose of each function
-- **Structure your docstrings** to convey more information, with a concise introduction
-- Good docstrings are clear and use **everyday language**
-- Documentation strings allow you to break your documentation into bite-size chunks, with one overview comment per function.
+- Docstrings are special comments that describe the **purpose of a function** and its inputs and outputs.
+- **Structure your docstrings** to convey more information, with a concise introduction.
+- Documentation strings allow you to break your documentation into **bite-size chunks**, with one overview comment per function.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
