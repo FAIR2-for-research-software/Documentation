@@ -1475,11 +1475,10 @@ any links that you are not going to use.
 <h3 class="card-title">Questions</h3>
 <ul>
 <li>How do we <strong>describe our code</strong>?</li>
-<li>What are <strong>documentation strings</strong>?</li>
+<li>How can we <strong>annotate functions</strong> in our research
+code?</li>
 <li>Why are documentation strings useful for <strong>research
 software</strong>?</li>
-<li>
-<strong>How do we write</strong> documentation strings?</li>
 </ul>
 </div>
 </div>
@@ -1508,12 +1507,12 @@ return values of functions</li>
 common ways that its users will learn to interact with the code is by
 reading the documentation <strong>for each individual
 function</strong>.</p>
-<p>We learned about <em>functions</em> in an earlier module. Functions
-help us to break our code into smaller units that have a single purpose.
-By documenting those functions effectively, we aim to <strong>explain
-their purpose</strong> to future users and maintainers of that code. We
-also need to describe all the expected inputs and outputs of the
-function.</p>
+<p>We learned about <em>functions</em> in an earlier module on software
+design principles. Functions help us to break our code into smaller
+units that have a single purpose. By documenting those functions
+effectively, we aim to <strong>explain their purpose</strong> to future
+users and maintainers of that code. We also need to describe all the
+expected inputs and outputs of the function.</p>
 </section><section><h2 class="section-heading" id="documentation-strings">Documentation strings<a class="anchor" aria-label="anchor" href="#documentation-strings"></a>
 </h2>
 <hr class="half-width">
@@ -1538,7 +1537,7 @@ principle is the same.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-1" class="tab-content">
-<div id="nav-tabpanel-1-Python" class="tab-pane show active" aria-labelledby="nav-tab-1-Python" role="tabpanel">
+<div id="nav-tabpanel-1-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-Python">
 <p>In Python, we put a string as the first line of a function (or other
 object.) For example, for a simple Python function that calculates the
 sum of two numbers:</p>
@@ -1552,7 +1551,7 @@ sum of two numbers:</p>
 <span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a>    <span class="cf">return</span> x <span class="op">+</span> y</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-1-R" class="tab-pane" aria-labelledby="nav-tab-1-R" role="tabpanel">
+<div id="nav-tabpanel-1-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-R">
 <p>In R, we use the <a href="https://roxygen2.r-lib.org/" class="external-link">roxygen2</a>
 package, where a comment with a single quote <code>#'</code> to specify
 a documentation string for a function.</p>
@@ -1607,7 +1606,7 @@ provide the name of that species.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-2" class="tab-content">
-<div id="nav-tabpanel-2-Python" class="tab-pane show active" aria-labelledby="nav-tab-2-Python" role="tabpanel">
+<div id="nav-tabpanel-2-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-2-Python">
 <ol style="list-style-type: decimal">
 <li>Create a new Python script by creating a file called
 <code>oddsong.py</code>;</li>
@@ -1628,7 +1627,7 @@ provide the name of that species.</p>
 <span id="cb3-8"><a href="#cb3-8" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">"Hirundo atrocaerulea"</span></span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-2-R" class="tab-pane" aria-labelledby="nav-tab-2-R" role="tabpanel">
+<div id="nav-tabpanel-2-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-R">
 <ol style="list-style-type: decimal">
 <li>Create a new R script by creating a file called
 <code>oddsong.R</code>;</li>
@@ -1713,6 +1712,18 @@ yourself in the shoes of someone who encounters your code for the first
 time and needs a simple introduction that doesn’t assume any implied
 knowledge. The explanation will be very basic and seem obvious to you,
 but it may help a new user greatly.</p>
+<div id="discussion1" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Discussion</h3>
+<div class="callout-content">
+<p>How can we tailor our docstrings to different audiences, such as new
+users and experienced developers?</p>
+</div>
+</div>
+</div>
 <div class="section level3">
 <h3 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a>
 </h3>
@@ -1734,7 +1745,7 @@ examples below. Each argument has a name and a brief description.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-3" class="tab-content">
-<div id="nav-tabpanel-3-Python" class="tab-pane show active" aria-labelledby="nav-tab-3-Python" role="tabpanel">
+<div id="nav-tabpanel-3-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-3-Python">
 <p>The argument name matches the variable name in the function
 signature, such as <code>add(x, y)</code> in this case.</p>
 <div class="codewrapper sourceCode" id="cb8">
@@ -1751,7 +1762,7 @@ signature, such as <code>add(x, y)</code> in this case.</p>
 <span id="cb8-9"><a href="#cb8-9" tabindex="-1"></a>    <span class="cf">return</span> x <span class="op">+</span> y</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-3-R" class="tab-pane" aria-labelledby="nav-tab-3-R" role="tabpanel">
+<div id="nav-tabpanel-3-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-3-R">
 <p>The argument name matches the variable name in the function
 signature, such as <code>function(x, y)</code> in this case.</p>
 <div class="codewrapper sourceCode" id="cb9">
@@ -1772,7 +1783,7 @@ signature, such as <code>function(x, y)</code> in this case.</p>
 <p>We have added an “arguments” (abbreviated to “args”) section to our
 docstring which lists the input parameters of the function and describes
 each one.</p>
-<div id="discussion1" class="callout discussion">
+<div id="discussion2" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
@@ -1780,6 +1791,7 @@ each one.</p>
 <h3 class="callout-title">Challenge</h3>
 <div class="callout-content">
 <p>Add a description of each argument to a function in your code.</p>
+<p>Run <code>help()</code> and evaluate the output.</p>
 </div>
 </div>
 </div>
@@ -1803,7 +1815,7 @@ return statement.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-4" class="tab-content">
-<div id="nav-tabpanel-4-Python" class="tab-pane show active" aria-labelledby="nav-tab-4-Python" role="tabpanel">
+<div id="nav-tabpanel-4-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-4-Python">
 <div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -1821,7 +1833,7 @@ return statement.</p>
 <span id="cb10-12"><a href="#cb10-12" tabindex="-1"></a>    <span class="cf">return</span> x <span class="op">+</span> y</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-4-R" class="tab-pane" aria-labelledby="nav-tab-4-R" role="tabpanel">
+<div id="nav-tabpanel-4-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-4-R">
 <div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -1842,7 +1854,7 @@ return statement.</p>
 they can expect to receive back when they call it. It can also be useful
 to explain any potential errors or exceptions that the function will
 raise if the inputs aren’t as expected, and how to deal with them.</p>
-<div id="discussion2" class="callout discussion">
+<div id="discussion3" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
@@ -1851,6 +1863,7 @@ raise if the inputs aren’t as expected, and how to deal with them.</p>
 <div class="callout-content">
 <p>Describe the return value of a function in a documentation
 string.</p>
+<p>Run <code>help()</code> and evaluate the output.</p>
 </div>
 </div>
 </div>
@@ -1880,7 +1893,7 @@ editors will provide syntax highlighting of these code snippets.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-5" class="tab-content">
-<div id="nav-tabpanel-5-Python" class="tab-pane show active" aria-labelledby="nav-tab-5-Python" role="tabpanel">
+<div id="nav-tabpanel-5-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-5-Python">
 <div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -1904,7 +1917,7 @@ editors will provide syntax highlighting of these code snippets.</p>
 <span id="cb12-18"><a href="#cb12-18" tabindex="-1"></a>    <span class="cf">return</span> x <span class="op">+</span> y</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-5-R" class="tab-pane" aria-labelledby="nav-tab-5-R" role="tabpanel">
+<div id="nav-tabpanel-5-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-5-R">
 <p>For more information about writing R code examples within function
 documentation, please see the <a href="https://r-pkgs.org/man.html#sec-man-examples" class="external-link">Examples</a> section
 in the book <em>R Packages</em> by Hadley Wickham.</p>
@@ -1928,7 +1941,7 @@ in the book <em>R Packages</em> by Hadley Wickham.</p>
 </div>
 </div>
 </div>
-<div id="discussion3" class="callout discussion">
+<div id="discussion4" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
@@ -1961,11 +1974,11 @@ function in your code.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-6" class="tab-content">
-<div id="nav-tabpanel-6-Python" class="tab-pane show active" aria-labelledby="nav-tab-6-Python" role="tabpanel">
+<div id="nav-tabpanel-6-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-6-Python">
 <p>These code examples can be used as automatic tests using the <a href="https://docs.python.org/3/library/doctest.html" class="external-link">doctest</a> module
 which is built into Python.</p>
 </div>
-<div id="nav-tabpanel-6-R" class="tab-pane" aria-labelledby="nav-tab-6-R" role="tabpanel">
+<div id="nav-tabpanel-6-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-6-R">
 <p>In the R ecosystem, we can automatically test the examples in our
 documentation strings using the <a href="https://cran.r-project.org/web/packages/doctest/vignettes/doctest.html" class="external-link">doctest</a>
 package.</p>
@@ -1980,20 +1993,99 @@ package.</p>
 </section><section><h2 class="section-heading" id="best-practices">Best practices<a class="anchor" aria-label="anchor" href="#best-practices"></a>
 </h2>
 <hr class="half-width">
+<p>This section contains some tips for writing useful documentation
+strings.</p>
+<div class="section level3">
+<h3 id="prioritisation">Prioritisation<a class="anchor" aria-label="anchor" href="#prioritisation"></a>
+</h3>
 <p>Focus on the <strong>purpose and functionality</strong> of the code,
 rather than getting bogged down in the details of how it works. Explain
 what the function <strong>does</strong>, rather then the specific
 implementation, because this might change over time. A function
 encapsulates an isolated part of a system, which can be used as a black
 box by other parts of the system or the end user, who in many cases only
-needs to understand its inputs and outputs. It’s a good idea to start
-your docstring with a high-level summary of the function and, if the
-function is a major one, an introduction for the new user.</p>
-<p>Clarity is key. Be <strong>concise</strong>. Describe the essential
-information that user needs to know first and be brief but clear. As
-with any software documentation, <strong>avoid jargon</strong> where
-possible, and provide links to further resources for users to take a
-deep dive into more complicated topics.</p>
+needs to understand its inputs and outputs.</p>
+<p>Tips:</p>
+<ul>
+<li>It’s a good idea to start your docstring with a <strong>high-level
+summary</strong> of the function.</li>
+<li>If the function is a major one, include a <strong>simple
+introduction</strong> for the new user.</li>
+</ul>
+<div id="discussion5" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Discussion</h3>
+<div class="callout-content">
+<p>Consider this documentation string:</p>
+<div class="codewrapper sourceCode" id="cb14">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" tabindex="-1"></a><span class="kw">def</span> calculate_something(a, b, c):</span>
+<span id="cb14-2"><a href="#cb14-2" tabindex="-1"></a>    <span class="co">"""Does stuff with a, b, and c."""</span></span>
+<span id="cb14-3"><a href="#cb14-3" tabindex="-1"></a>    <span class="co"># ... implementation ...</span></span></code></pre>
+</div>
+<p>What problems do you notice? How could we improve this?</p>
+</div>
+</div>
+</div>
+</div>
+<div class="section level3">
+<h3 id="clarity-is-key">Clarity is key<a class="anchor" aria-label="anchor" href="#clarity-is-key"></a>
+</h3>
+<p>Be <strong>concise</strong>. Describe the essential information that
+user needs to know first and be brief but clear.</p>
+<p>As with any software documentation, <strong>avoid jargon</strong>
+where possible.</p>
+<div id="discussion6" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Discussion</h3>
+<div class="callout-content">
+<p>Read the following documentation string:</p>
+<div class="codewrapper sourceCode" id="cb15">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a><span class="kw">def</span> add(x, y):</span>
+<span id="cb15-2"><a href="#cb15-2" tabindex="-1"></a>    <span class="co">"""Adds two numbers together, which are the x and y arguents of this function.</span></span>
+<span id="cb15-3"><a href="#cb15-3" tabindex="-1"></a></span>
+<span id="cb15-4"><a href="#cb15-4" tabindex="-1"></a><span class="co">    This function takes two numbers as input and returns their sum.</span></span>
+<span id="cb15-5"><a href="#cb15-5" tabindex="-1"></a><span class="co">    The addition is performed using the built-in `+` operator.</span></span>
+<span id="cb15-6"><a href="#cb15-6" tabindex="-1"></a></span>
+<span id="cb15-7"><a href="#cb15-7" tabindex="-1"></a><span class="co">    Args:</span></span>
+<span id="cb15-8"><a href="#cb15-8" tabindex="-1"></a><span class="co">        x: The first number to add to the second number, y.</span></span>
+<span id="cb15-9"><a href="#cb15-9" tabindex="-1"></a><span class="co">        y: The second number to add to the first number, x.</span></span>
+<span id="cb15-10"><a href="#cb15-10" tabindex="-1"></a></span>
+<span id="cb15-11"><a href="#cb15-11" tabindex="-1"></a><span class="co">    Returns:</span></span>
+<span id="cb15-12"><a href="#cb15-12" tabindex="-1"></a><span class="co">        The sum of x and y, which are summed using the addition operator.</span></span>
+<span id="cb15-13"><a href="#cb15-13" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb15-14"><a href="#cb15-14" tabindex="-1"></a>    <span class="cf">return</span> x <span class="op">+</span> y</span></code></pre>
+</div>
+<p>Discuss how can we effectively convey the purpose and functionality
+of a function in a docstring, without going into excessive detail about
+its implementation?</p>
+</div>
+</div>
+</div>
+<p>Don’t reinvent the wheel. <strong>Provide links</strong> to further
+resources for users to take a deep dive into more complicated
+topics.</p>
+<div id="discussion7" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Discussion</h3>
+<div class="callout-content">
+<p>How can we link to external resources that can provide more in-depth
+information?</p>
+</div>
+</div>
+</div>
 <p>Be <strong>consistent</strong>. Decide a style of docstring and use
 that everywhere across your software project. If you’re working on a
 larger project with multiple developers, refer to the coding conventions
@@ -2030,6 +2122,7 @@ documentation generators.</p>
 </div>
 </div>
 </div>
+</div>
 </section><section><h2 class="section-heading" id="automatically-generate-docstrings">Automatically generate docstrings<a class="anchor" aria-label="anchor" href="#automatically-generate-docstrings"></a>
 </h2>
 <hr class="half-width">
@@ -2045,30 +2138,30 @@ def calculate_rectangle_area(width, height):
     return area</code></pre>
 <p>The result is the following docstring, in addition to some helpful
 descriptions of the content that it generated.</p>
-<div class="codewrapper sourceCode" id="cb15">
+<div class="codewrapper sourceCode" id="cb17">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a><span class="kw">def</span> calculate_rectangle_area(width, height):</span>
-<span id="cb15-2"><a href="#cb15-2" tabindex="-1"></a>  <span class="co">"""</span></span>
-<span id="cb15-3"><a href="#cb15-3" tabindex="-1"></a><span class="co">  This function calculates the area of a rectangle.</span></span>
-<span id="cb15-4"><a href="#cb15-4" tabindex="-1"></a></span>
-<span id="cb15-5"><a href="#cb15-5" tabindex="-1"></a><span class="co">  Args:</span></span>
-<span id="cb15-6"><a href="#cb15-6" tabindex="-1"></a><span class="co">      width (float): The width of the rectangle. Must be a positive number.</span></span>
-<span id="cb15-7"><a href="#cb15-7" tabindex="-1"></a><span class="co">      height (float): The height of the rectangle. Must be a positive number.</span></span>
-<span id="cb15-8"><a href="#cb15-8" tabindex="-1"></a></span>
-<span id="cb15-9"><a href="#cb15-9" tabindex="-1"></a><span class="co">  Returns:</span></span>
-<span id="cb15-10"><a href="#cb15-10" tabindex="-1"></a><span class="co">      float: The area of the rectangle. This will be a positive number.</span></span>
-<span id="cb15-11"><a href="#cb15-11" tabindex="-1"></a><span class="co">  """</span></span>
-<span id="cb15-12"><a href="#cb15-12" tabindex="-1"></a></span>
-<span id="cb15-13"><a href="#cb15-13" tabindex="-1"></a>  <span class="co"># Calculate the area</span></span>
-<span id="cb15-14"><a href="#cb15-14" tabindex="-1"></a>  area <span class="op">=</span> width <span class="op">*</span> height</span>
-<span id="cb15-15"><a href="#cb15-15" tabindex="-1"></a></span>
-<span id="cb15-16"><a href="#cb15-16" tabindex="-1"></a>  <span class="cf">return</span> area</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" tabindex="-1"></a><span class="kw">def</span> calculate_rectangle_area(width, height):</span>
+<span id="cb17-2"><a href="#cb17-2" tabindex="-1"></a>  <span class="co">"""</span></span>
+<span id="cb17-3"><a href="#cb17-3" tabindex="-1"></a><span class="co">  This function calculates the area of a rectangle.</span></span>
+<span id="cb17-4"><a href="#cb17-4" tabindex="-1"></a></span>
+<span id="cb17-5"><a href="#cb17-5" tabindex="-1"></a><span class="co">  Args:</span></span>
+<span id="cb17-6"><a href="#cb17-6" tabindex="-1"></a><span class="co">      width (float): The width of the rectangle. Must be a positive number.</span></span>
+<span id="cb17-7"><a href="#cb17-7" tabindex="-1"></a><span class="co">      height (float): The height of the rectangle. Must be a positive number.</span></span>
+<span id="cb17-8"><a href="#cb17-8" tabindex="-1"></a></span>
+<span id="cb17-9"><a href="#cb17-9" tabindex="-1"></a><span class="co">  Returns:</span></span>
+<span id="cb17-10"><a href="#cb17-10" tabindex="-1"></a><span class="co">      float: The area of the rectangle. This will be a positive number.</span></span>
+<span id="cb17-11"><a href="#cb17-11" tabindex="-1"></a><span class="co">  """</span></span>
+<span id="cb17-12"><a href="#cb17-12" tabindex="-1"></a></span>
+<span id="cb17-13"><a href="#cb17-13" tabindex="-1"></a>  <span class="co"># Calculate the area</span></span>
+<span id="cb17-14"><a href="#cb17-14" tabindex="-1"></a>  area <span class="op">=</span> width <span class="op">*</span> height</span>
+<span id="cb17-15"><a href="#cb17-15" tabindex="-1"></a></span>
+<span id="cb17-16"><a href="#cb17-16" tabindex="-1"></a>  <span class="cf">return</span> area</span></code></pre>
 </div>
 <p>This <abbr title="artificial intelligence">AI</abbr>-generated
 content contains a function summary, argument descriptions, and explains
 the return value as we discussed previously.</p>
-<div id="discussion4" class="callout discussion">
+<div id="discussion8" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
@@ -2089,7 +2182,7 @@ relevant to your research software?</li>
 <p>This can save you a lot of time, but as with any
 <abbr title="Large langauge model">LLM</abbr>-generated content, always
 check the output and ensure it’s correct!</p>
-<div id="discussion5" class="callout discussion">
+<div id="discussion9" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
@@ -2106,6 +2199,14 @@ risks?</p>
 </div>
 </div>
 </div>
+<p>Documentation strings make your code <strong>clearer to read</strong>
+and easier for other researchers to use. Also, they make your research
+software <strong>easier to maintain</strong> in the long run, saving
+time and resources. Good docstrings are clear and use <strong>everyday
+language</strong>.</p>
+<p>Well-documented, <strong>reusable research code</strong> depends upon
+good documentation strings. Research collaborators will benefit from
+<strong>clear explanations</strong> of the purpose of each function.</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -2115,23 +2216,13 @@ risks?</p>
 <div class="callout-content">
 <ul>
 <li>Docstrings are special comments that describe the <strong>purpose of
-a function</strong> and its inputs and outputs</li>
-<li>Documentation strings make your code <strong>clearer to
-read</strong> and easier for other researchers to use</li>
-<li>Documenting your functions make them <strong>easier to
-maintain</strong> in the long run.</li>
-<li>Well-documented, <strong>reusable research code</strong> depends
-upon good documentation strings</li>
-<li>Research collaborators will benefit from <strong>clear
-explanations</strong> of the purpose of each function</li>
+a function</strong> and its inputs and outputs.</li>
 <li>
 <strong>Structure your docstrings</strong> to convey more
-information, with a concise introduction</li>
-<li>Good docstrings are clear and use <strong>everyday
-language</strong>
-</li>
+information, with a concise introduction.</li>
 <li>Documentation strings allow you to break your documentation into
-bite-size chunks, with one overview comment per function.</li>
+<strong>bite-size chunks</strong>, with one overview comment per
+function.</li>
 </ul>
 </div>
 </div>
@@ -2220,7 +2311,7 @@ shown in a red font.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-1" class="tab-content">
-<div id="nav-tabpanel-1-Python" class="tab-pane show active" aria-labelledby="nav-tab-1-Python" role="tabpanel">
+<div id="nav-tabpanel-1-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-Python">
 <p>Without syntax highlighting:</p>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2264,7 +2355,7 @@ shown in a red font.</p>
 <span id="cb2-16"><a href="#cb2-16" tabindex="-1"></a>  <span class="cf">return</span> word_count</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-1-R" class="tab-pane" aria-labelledby="nav-tab-1-R" role="tabpanel">
+<div id="nav-tabpanel-1-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-R">
 <p>Without syntax highlighting:</p>
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">DEFAULT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2388,7 +2479,7 @@ it’s easy to interpret their purpose.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-2" class="tab-content">
-<div id="nav-tabpanel-2-Python" class="tab-pane show active" aria-labelledby="nav-tab-2-Python" role="tabpanel">
+<div id="nav-tabpanel-2-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-2-Python">
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -2400,7 +2491,7 @@ it’s easy to interpret their purpose.</p>
 <span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a>    <span class="cf">return</span> area</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-2-R" class="tab-pane" aria-labelledby="nav-tab-2-R" role="tabpanel">
+<div id="nav-tabpanel-2-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-R">
 <div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -2457,7 +2548,7 @@ variable with the same name as an inbuilt function such as
 </button>
 </div>
 </nav><div id="nav-tabContent-3" class="tab-content">
-<div id="nav-tabpanel-3-Python" class="tab-pane show active" aria-labelledby="nav-tab-3-Python" role="tabpanel">
+<div id="nav-tabpanel-3-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-3-Python">
 <p>Classes use capitalised words</p>
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2481,7 +2572,7 @@ variable with the same name as an inbuilt function such as
 Conventions</a> section of
 <acronym title="Python Enhancement Proposals">PEP</acronym> 8.</p>
 </div>
-<div id="nav-tabpanel-3-R" class="tab-pane" aria-labelledby="nav-tab-3-R" role="tabpanel">
+<div id="nav-tabpanel-3-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-3-R">
 <p>Classes use capitalised words</p>
 <div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2541,7 +2632,7 @@ start of a new line, like so:</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-4" class="tab-content">
-<div id="nav-tabpanel-4-Python" class="tab-pane show active" aria-labelledby="nav-tab-4-Python" role="tabpanel">
+<div id="nav-tabpanel-4-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-4-Python">
 <div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -2550,7 +2641,7 @@ start of a new line, like so:</p>
 <span id="cb13-3"><a href="#cb13-3" tabindex="-1"></a>age <span class="op">=+</span> <span class="dv">3</span></span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-4-R" class="tab-pane" aria-labelledby="nav-tab-4-R" role="tabpanel">
+<div id="nav-tabpanel-4-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-4-R">
 <div class="codewrapper sourceCode" id="cb14">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -2610,7 +2701,7 @@ they move through the system.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-5" class="tab-content">
-<div id="nav-tabpanel-5-Python" class="tab-pane show active" aria-labelledby="nav-tab-5-Python" role="tabpanel">
+<div id="nav-tabpanel-5-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-5-Python">
 <p>In the Python programming language, we can tell the user what type of
 data we expect each variable to contain by using the syntax below. This
 colon means that the <code>age</code> variable should contain a value
@@ -2624,7 +2715,7 @@ with the integer type, <code>int</code>.</p>
 of the Python Documentation and the <a href="https://mypy.readthedocs.io/en/stable/cheat_sheet_py3.html" class="external-link">Type
 hints cheat sheet</a> in the mypy documentation.</p>
 </div>
-<div id="nav-tabpanel-5-R" class="tab-pane" aria-labelledby="nav-tab-5-R" role="tabpanel">
+<div id="nav-tabpanel-5-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-5-R">
 <p>There is no type hinting feature in base R, although some packages
 are available that enable this. Here, the <code>L</code> symbol at the
 end of the number tells the R interpreter that this is an integer data
@@ -2663,7 +2754,7 @@ reader.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-6" class="tab-content">
-<div id="nav-tabpanel-6-Python" class="tab-pane show active" aria-labelledby="nav-tab-6-Python" role="tabpanel">
+<div id="nav-tabpanel-6-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-6-Python">
 <p>Below is the source code for a simple Python function that calculates
 the sum of two numbers. I’ve labelled each of the function arguments
 <code>a</code> and <code>b</code> with variable annotations that let you
@@ -2680,7 +2771,7 @@ declaration as <code>-&gt; int</code>.</p>
 <span id="cb17-3"><a href="#cb17-3" tabindex="-1"></a>    <span class="cf">return</span> a <span class="op">+</span> b</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-6-R" class="tab-pane" aria-labelledby="nav-tab-6-R" role="tabpanel">
+<div id="nav-tabpanel-6-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-6-R">
 <p>Below is the source code for a simple R function that calculates the
 sum of two numbers.</p>
 <p>In R, there is no inbuilt functionality for annotating the expected
@@ -3120,21 +3211,21 @@ create a virtual environment in a directory called
 </button>
 </div>
 </nav><div id="nav-tabContent-1" class="tab-content">
-<div id="nav-tabpanel-1-Windows" class="tab-pane show active" aria-labelledby="nav-tab-1-Windows" role="tabpanel">
+<div id="nav-tabpanel-1-Windows" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-Windows">
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> venv .venv</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-1-Linux" class="tab-pane" aria-labelledby="nav-tab-1-Linux" role="tabpanel">
+<div id="nav-tabpanel-1-Linux" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-Linux">
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="ex">python3</span> <span class="at">-m</span> venv .venv</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-1-macOS" class="tab-pane" aria-labelledby="nav-tab-1-macOS" role="tabpanel">
+<div id="nav-tabpanel-1-macOS" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-macOS">
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -3167,21 +3258,21 @@ the operating system you are using.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-2" class="tab-content">
-<div id="nav-tabpanel-2-Windows" class="tab-pane show active" aria-labelledby="nav-tab-2-Windows" role="tabpanel">
+<div id="nav-tabpanel-2-Windows" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-2-Windows">
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="ex">.venv\Scripts\activate</span></span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-2-Linux" class="tab-pane" aria-labelledby="nav-tab-2-Linux" role="tabpanel">
+<div id="nav-tabpanel-2-Linux" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-Linux">
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="bu">source</span> .venv/bin/activate</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-2-macOS" class="tab-pane" aria-labelledby="nav-tab-2-macOS" role="tabpanel">
+<div id="nav-tabpanel-2-macOS" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-macOS">
 <div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -3293,7 +3384,7 @@ directory for code to import.</p>
   What does this code mean?
   </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <p>The Python code uses <a href="https://docs.python.org/3/library/sys.html#sys.path" class="external-link"><code>sys.path</code></a>,
 a list of locations to search for code. By modifying the Python
@@ -3324,7 +3415,7 @@ module.</p>
   What does this code mean?
   </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
 <div class="accordion-body">
 <p>This <a href="https://docutils.sourceforge.io/rst.html" class="external-link">reStructuredText
 (reST)</a> markup language has the following elements:</p>
