@@ -24,7 +24,7 @@ It’s a common trope in the software engineering world that code is **read much
 
 ## Syntax highlighting
 
-Many text editors use syntax highlighting to display parts of your source code using different colours or fonts to signify the meaning of each word or symbol.
+Many text editors use **syntax highlighting** to display parts of your source code using different colours or fonts to signify the meaning of each word or symbol.
 For example, variable names may be given a bright blue colour, strings highighted in green, and numbers shown in a red font.
 
 Let's take a look to see its benefits:
@@ -130,7 +130,17 @@ count_word_occurrences <- function(filename, word_to_count) {
 
 Which bit of code is easier to read? What a difference a splash of colour makes! I know which development environment I'd rather work in.
 
-To work with our source code in a colourised way like this, use a text editor or IDE with a syntax highlighting feature such as Notepad++, VSCode, PyCharm, or RStudio.
+### Code editors
+
+To work with our source code in a colourised way like this, use a text editor or <abbr title="Integrated development environment">IDE</abbr> with a syntax highlighting feature such as Notepad++, VSCode, PyCharm, or RStudio.
+
+::::::::::::::::::::::::::::::::::::: challenge
+
+Try using some code editing software to apply syntax highlighting to your code.
+
+If you don't have access to an <abbr title="Integrated development environment">IDE</abbr>, you could try the Online syntax highlighting tool by Oleg Parashchenko which can colourise [R scripts](https://tohtml.com/r/) and [Python code](https://tohtml.com/python/).
+
+:::::::::::::::::::::::::::::::::::::
 
 ## Meaningful names
 
@@ -177,6 +187,15 @@ calculate_area <- function(width, height) {
 ```
 
 :::
+
+::::::::::::::::::::::::::::::::::::: discussion
+
+Try modifying your example code by renaming the variables and functions.
+
+- How much meaning can you include in these object names?
+- What are the limitations of this approach?
+
+:::::::::::::::::::::::::::::::::::::
 
 ### Naming conventions
 
@@ -262,6 +281,16 @@ age = age + 3
 :::
 
 It's best practice to use a very concise style when writing code comments. I recommend using active tense verbs.
+
+::::::::::::::::::::::::::::::::::::: discussion
+
+Try adding comments to your code.
+
+- Which parts of the code will most benefit from comments?
+- How long and detailed should comments be?
+- How would you refer someone to an external website for more information?
+
+:::::::::::::::::::::::::::::::::::::
 
 ## Type hints
 
@@ -375,3 +404,10 @@ It will take some time and effort to write these labels, but it will pay off in 
 - Label functions and variables with *type hints* to tell the user what data types are expected.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
+
+## Further resources
+
+To find out more about the topics covered in this episode, please refer to the following pages:
+
+- _The Hitchhiker's Guide to Python_ [Code Style](https://docs.python-guide.org/writing/style/)
+- [The tidyverse style guide](https://style.tidyverse.org/) for R
