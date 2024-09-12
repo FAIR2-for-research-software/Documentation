@@ -191,6 +191,7 @@
 <li><a href="#meaningful-names">Meaningful names</a></li>
 <li><a href="#comments">Comments</a></li>
 <li><a href="#type-hints">Type hints</a></li>
+<li><a href="#further-resources">Further resources</a></li>
         </ul></div><!--/div.accordion-body-->
     </div><!--/div.accordion-collapse-->
 
@@ -282,7 +283,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Code readability</h1>
-        <p>Last updated on 2024-08-16 |
+        <p>Last updated on 2024-09-12 |
 
         <a href="https://github.com/Joe-Heffer-Shef/FAIR4RS-Documentation/edit/main/episodes/readable.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -329,11 +330,11 @@ understand what it does. Also, when you maintain your code, or come back
 to it in the future, you’ll be grateful for the effort you made in
 making it easy to interpret and follow its logic.</p>
 <section><h2 class="section-heading" id="syntax-highlighting">Syntax highlighting<a class="anchor" aria-label="anchor" href="#syntax-highlighting"></a></h2>
-<hr class="half-width"><p>Many text editors use syntax highlighting to display parts of your
-source code using different colours or fonts to signify the meaning of
-each word or symbol. For example, variable names may be given a bright
-blue colour, strings highighted in green, and numbers shown in a red
-font.</p>
+<hr class="half-width"><p>Many text editors use <strong>syntax highlighting</strong> to display
+parts of your source code using different colours or fonts to signify
+the meaning of each word or symbol. For example, variable names may be
+given a bright blue colour, strings highighted in green, and numbers
+shown in a red font.</p>
 <p>Let’s take a look to see its benefits:</p>
 <div class="tabs">
 <nav><div id="nav-tab-1" class="nav nav-tabs" role="tablist">
@@ -449,9 +450,30 @@ font.</p>
 <p>Which bit of code is easier to read? What a difference a splash of
 colour makes! I know which development environment I’d rather work
 in.</p>
+<div class="section level3">
+<h3 id="code-editors">Code editors<a class="anchor" aria-label="anchor" href="#code-editors"></a></h3>
 <p>To work with our source code in a colourised way like this, use a
-text editor or IDE with a syntax highlighting feature such as Notepad++,
-VSCode, PyCharm, or RStudio.</p>
+text editor or
+<abbr title="Integrated development environment">IDE</abbr> with a
+syntax highlighting feature such as Notepad++, VSCode, PyCharm, or
+RStudio.</p>
+<div id="discussion1" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Challenge</h3>
+<div class="callout-content">
+<p>Try using some code editing software to apply syntax highlighting to
+your code.</p>
+<p>If you don’t have access to an
+<abbr title="Integrated development environment">IDE</abbr>, you could
+try the Online syntax highlighting tool by Oleg Parashchenko which can
+colourise <a href="https://tohtml.com/r/" class="external-link">R scripts</a> and <a href="https://tohtml.com/python/" class="external-link">Python code</a>.</p>
+</div>
+</div>
+</div>
+</div>
 </section><section><h2 class="section-heading" id="meaningful-names">Meaningful names<a class="anchor" aria-label="anchor" href="#meaningful-names"></a></h2>
 <hr class="half-width"><p>Our code should convey as much <strong>meaning</strong> as possible
 to the user or developer that’s trying to interpret it.</p>
@@ -516,6 +538,20 @@ it’s easy to interpret their purpose.</p>
 <span id="cb6-7"><a href="#cb6-7" tabindex="-1"></a>}</span></code></pre>
 </div>
 </div>
+</div>
+</div>
+<div id="discussion2" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Discussion</h3>
+<div class="callout-content">
+<p>Try modifying your example code by renaming the variables and
+functions.</p>
+<ul><li>How much meaning can you include in these object names?</li>
+<li>What are the limitations of this approach?</li>
+</ul></div>
 </div>
 </div>
 </div>
@@ -648,6 +684,21 @@ start of a new line, like so:</p>
 </div>
 <p>It’s best practice to use a very concise style when writing code
 comments. I recommend using active tense verbs.</p>
+<div id="discussion3" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Discussion</h3>
+<div class="callout-content">
+<p>Try adding comments to your code.</p>
+<ul><li>Which parts of the code will most benefit from comments?</li>
+<li>How long and detailed should comments be?</li>
+<li>How would you refer someone to an external website for more
+information?</li>
+</ul></div>
+</div>
+</div>
 </section><section><h2 class="section-heading" id="type-hints">Type hints<a class="anchor" aria-label="anchor" href="#type-hints"></a></h2>
 <hr class="half-width"><p>Type hints display the expected <em>type</em> of each object in your
 code. They are a kind of “documentation as code” that annotate the code
@@ -802,7 +853,7 @@ labels the types of the inputs and output of the function.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>None of these code examples will cause an error because type hints
 are just passive labels that document our code. They don’t enforce any
@@ -839,12 +890,20 @@ user what data types are expected.</li>
 </ul></div>
 </div>
 </div>
-<!--
+</div>
+</section><section><h2 class="section-heading" id="further-resources">Further resources<a class="anchor" aria-label="anchor" href="#further-resources"></a></h2>
+<hr class="half-width"><p>To find out more about the topics covered in this episode, please
+refer to the following pages:</p>
+<ul><li>
+<em>The Hitchhiker’s Guide to Python</em> <a href="https://docs.python-guide.org/writing/style/" class="external-link">Code Style</a>
+</li>
+<li>
+<a href="https://style.tidyverse.org/" class="external-link">The tidyverse style guide</a>
+for R</li>
+</ul><!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
- -->
-</div>
-</section></div> <!-- / div.lesson-content -->
+ --></section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="../instructor/docstrings.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
         <a class="chapter-link float-end" href="../instructor/sites.html">Next<i aria-hidden="true" class="small-arrow" data-feather="arrow-right"></i></a>
@@ -915,7 +974,7 @@ any links that you are not going to use.
   "url": "https://Joe-Heffer-Shef.github.io/FAIR4RS-Documentation/instructor/readable.html",
   "identifier": "https://Joe-Heffer-Shef.github.io/FAIR4RS-Documentation/instructor/readable.html",
   "dateCreated": "2024-05-20",
-  "dateModified": "2024-08-16",
+  "dateModified": "2024-09-12",
   "datePublished": "2024-09-12"
 }
 

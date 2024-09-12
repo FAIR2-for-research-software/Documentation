@@ -179,7 +179,7 @@
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
         <ul><li><a href="#how-do-we-describe-our-code">How do we describe our code?</a></li>
-<li><a href="#usage-examples">Usage examples</a></li>
+<li><a href="#documentation-strings">Documentation strings</a></li>
 <li><a href="#best-practices">Best practices</a></li>
 <li><a href="#automatically-generate-docstrings">Automatically generate docstrings</a></li>
 <li><a href="#further-resources">Further resources</a></li>
@@ -339,9 +339,8 @@ By documenting those functions effectively, we aim to <strong>explain
 their purpose</strong> to future users and maintainers of that code. We
 also need to describe all the expected inputs and outputs of the
 function.</p>
-<div class="section level3">
-<h3 id="documentation-strings">Documentation strings<a class="anchor" aria-label="anchor" href="#documentation-strings"></a></h3>
-<p>We describe functions by using a feature of many programming
+</section><section><h2 class="section-heading" id="documentation-strings">Documentation strings<a class="anchor" aria-label="anchor" href="#documentation-strings"></a></h2>
+<hr class="half-width"><p>We describe functions by using a feature of many programming
 languages called documentation strings, usually abbreviated to
 <strong>docstring</strong>. A documentation string is a piece of text
 that describes that piece of code and helps people to use it.</p>
@@ -377,7 +376,8 @@ sum of two numbers:</p>
 </div>
 </div>
 <div id="nav-tabpanel-1-R" class="tab-pane" aria-labelledby="nav-tab-1-R" role="tabpanel">
-<p>In R, we use a comment with a single quote <code>#'</code> to specify
+<p>In R, we use the <a href="https://roxygen2.r-lib.org/" class="external-link">roxygen2</a>
+package, where a comment with a single quote <code>#'</code> to specify
 a documentation string for a function.</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -532,8 +532,29 @@ yourself in the shoes of someone who encounters your code for the first
 time and needs a simple introduction that doesn’t assume any implied
 knowledge. The explanation will be very basic and seem obvious to you,
 but it may help a new user greatly.</p>
-<p>Next, we must describe the inputs and outputs of the function.</p>
-<p>We list all the input parameters, or arguments, like so:</p>
+<div class="section level3">
+<h3 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h3>
+<p>Next, we must describe the inputs and outputs of the function, its
+<em>arguments</em>.</p>
+<p>We list all the arguments, or input parameters, as shown in the code
+examples below. Each argument has a name and a brief description.</p>
+<div class="tabs">
+<nav><div id="nav-tab-3" class="nav nav-tabs" role="tablist">
+<button class="nav-link active" id="nav-tab-3-Python" name="Python" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-3-Python" type="button" role="tab" aria-controls="nav-tabpanel-3-Python" aria-selected="true">
+  <h3 class="tab-header" id="nav-tab-heading-3-Python">
+  Python
+  </h3>
+</button>
+<button class="nav-link" id="nav-tab-3-R" name="R" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-3-R" type="button" role="tab" aria-controls="nav-tabpanel-3-R" aria-selected="false">
+  <h3 class="tab-header" id="nav-tab-heading-3-R">
+  R
+  </h3>
+</button>
+</div>
+</nav><div id="nav-tabContent-3" class="tab-content">
+<div id="nav-tabpanel-3-Python" class="tab-pane show active" aria-labelledby="nav-tab-3-Python" role="tabpanel">
+<p>The argument name matches the variable name in the function
+signature, such as <code>add(x, y)</code> in this case.</p>
 <div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -542,45 +563,118 @@ but it may help a new user greatly.</p>
 <span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a><span class="co">    Calculate the sum of two numbers.</span></span>
 <span id="cb8-4"><a href="#cb8-4" tabindex="-1"></a></span>
 <span id="cb8-5"><a href="#cb8-5" tabindex="-1"></a><span class="co">    Args:</span></span>
-<span id="cb8-6"><a href="#cb8-6" tabindex="-1"></a><span class="co">        x: The first number to add. (float or int)</span></span>
-<span id="cb8-7"><a href="#cb8-7" tabindex="-1"></a><span class="co">        y: The second number to add. (float or int)</span></span>
+<span id="cb8-6"><a href="#cb8-6" tabindex="-1"></a><span class="co">        x: The first number to add.</span></span>
+<span id="cb8-7"><a href="#cb8-7" tabindex="-1"></a><span class="co">        y: The second number to add.</span></span>
 <span id="cb8-8"><a href="#cb8-8" tabindex="-1"></a><span class="co">    """</span></span>
 <span id="cb8-9"><a href="#cb8-9" tabindex="-1"></a>    <span class="cf">return</span> x <span class="op">+</span> y</span></code></pre>
+</div>
+</div>
+<div id="nav-tabpanel-3-R" class="tab-pane" aria-labelledby="nav-tab-3-R" role="tabpanel">
+<p>The argument name matches the variable name in the function
+signature, such as <code>function(x, y)</code> in this case.</p>
+<div class="codewrapper sourceCode" id="cb9">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co">#' Calculate the sum of two numbers.</span></span>
+<span><span class="co">#'</span></span>
+<span><span class="co">#' @param x The first number to add.</span></span>
+<span><span class="co">#' @param y The second number to add.</span></span>
+<span><span class="va">add</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="kw">return</span><span class="op">(</span><span class="va">x</span> <span class="op">+</span> <span class="va">y</span><span class="op">)</span></span>
+<span><span class="op">}</span></span></code></pre>
+</div>
+</div>
+</div>
 </div>
 <p>We have added an “arguments” (abbreviated to “args”) section to our
 docstring which lists the input parameters of the function and describes
 each one.</p>
+<div id="discussion1" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Challenge</h3>
+<div class="callout-content">
+<p>Add a description of each argument to a function in your code.</p>
+</div>
+</div>
+</div>
+</div>
+<div class="section level3">
+<h3 id="return-values">Return values<a class="anchor" aria-label="anchor" href="#return-values"></a></h3>
 <p>Finally, we describe the result of the function that is output by the
 return statement.</p>
-<div class="codewrapper sourceCode" id="cb9">
+<div class="tabs">
+<nav><div id="nav-tab-4" class="nav nav-tabs" role="tablist">
+<button class="nav-link active" id="nav-tab-4-Python" name="Python" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-4-Python" type="button" role="tab" aria-controls="nav-tabpanel-4-Python" aria-selected="true">
+  <h3 class="tab-header" id="nav-tab-heading-4-Python">
+  Python
+  </h3>
+</button>
+<button class="nav-link" id="nav-tab-4-R" name="R" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-4-R" type="button" role="tab" aria-controls="nav-tabpanel-4-R" aria-selected="false">
+  <h3 class="tab-header" id="nav-tab-heading-4-R">
+  R
+  </h3>
+</button>
+</div>
+</nav><div id="nav-tabContent-4" class="tab-content">
+<div id="nav-tabpanel-4-Python" class="tab-pane show active" aria-labelledby="nav-tab-4-Python" role="tabpanel">
+<div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a><span class="kw">def</span> add(x, y):</span>
-<span id="cb9-2"><a href="#cb9-2" tabindex="-1"></a>    <span class="co">"""</span></span>
-<span id="cb9-3"><a href="#cb9-3" tabindex="-1"></a><span class="co">    Calculate the sum of two numbers.</span></span>
-<span id="cb9-4"><a href="#cb9-4" tabindex="-1"></a></span>
-<span id="cb9-5"><a href="#cb9-5" tabindex="-1"></a><span class="co">    Args:</span></span>
-<span id="cb9-6"><a href="#cb9-6" tabindex="-1"></a><span class="co">        x: The first number to add. (float or int)</span></span>
-<span id="cb9-7"><a href="#cb9-7" tabindex="-1"></a><span class="co">        y: The second number to add. (float or int)</span></span>
-<span id="cb9-8"><a href="#cb9-8" tabindex="-1"></a></span>
-<span id="cb9-9"><a href="#cb9-9" tabindex="-1"></a><span class="co">    Returns:</span></span>
-<span id="cb9-10"><a href="#cb9-10" tabindex="-1"></a><span class="co">        The sum of x and y. (float or int)</span></span>
-<span id="cb9-11"><a href="#cb9-11" tabindex="-1"></a><span class="co">    """</span></span>
-<span id="cb9-12"><a href="#cb9-12" tabindex="-1"></a>    <span class="cf">return</span> x <span class="op">+</span> y</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="kw">def</span> add(x, y):</span>
+<span id="cb10-2"><a href="#cb10-2" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb10-3"><a href="#cb10-3" tabindex="-1"></a><span class="co">    Calculate the sum of two numbers.</span></span>
+<span id="cb10-4"><a href="#cb10-4" tabindex="-1"></a></span>
+<span id="cb10-5"><a href="#cb10-5" tabindex="-1"></a><span class="co">    Args:</span></span>
+<span id="cb10-6"><a href="#cb10-6" tabindex="-1"></a><span class="co">        x: The first number to add.</span></span>
+<span id="cb10-7"><a href="#cb10-7" tabindex="-1"></a><span class="co">        y: The second number to add.</span></span>
+<span id="cb10-8"><a href="#cb10-8" tabindex="-1"></a></span>
+<span id="cb10-9"><a href="#cb10-9" tabindex="-1"></a><span class="co">    Returns:</span></span>
+<span id="cb10-10"><a href="#cb10-10" tabindex="-1"></a><span class="co">        The sum of x and y.</span></span>
+<span id="cb10-11"><a href="#cb10-11" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb10-12"><a href="#cb10-12" tabindex="-1"></a>    <span class="cf">return</span> x <span class="op">+</span> y</span></code></pre>
+</div>
+</div>
+<div id="nav-tabpanel-4-R" class="tab-pane" aria-labelledby="nav-tab-4-R" role="tabpanel">
+<div class="codewrapper sourceCode" id="cb11">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co">#' Calculate the sum of two numbers.</span></span>
+<span><span class="co">#'</span></span>
+<span><span class="co">#' @param x The first number to add.</span></span>
+<span><span class="co">#' @param y The second number to add.</span></span>
+<span><span class="co">#' @return The sum of x and y.</span></span>
+<span><span class="va">add</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="kw">return</span><span class="op">(</span><span class="va">x</span> <span class="op">+</span> <span class="va">y</span><span class="op">)</span></span>
+<span><span class="op">}</span></span></code></pre>
+</div>
+</div>
+</div>
 </div>
 <p>This will help the user to understand what the function does and what
 they can expect to receive back when they call it. It can also be useful
 to explain any potential errors or exceptions that the function will
 raise if the inputs aren’t as expected, and how to deal with them.</p>
-<p>Help function in R and Python e.g.</p>
-<div class="codewrapper sourceCode" id="cb10">
-<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="bu">help</span>(<span class="bu">print</span>)</span></code></pre>
+<div id="discussion2" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Challenge</h3>
+<div class="callout-content">
+<p>Describe the return value of a function in a documentation
+string.</p>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="usage-examples">Usage examples<a class="anchor" aria-label="anchor" href="#usage-examples"></a></h2>
-<hr class="half-width"><p>We can also include demonstrations of how to use our code by
+</div>
+</div>
+<div class="section level3">
+<h3 id="usage-examples">Usage examples<a class="anchor" aria-label="anchor" href="#usage-examples"></a></h3>
+<p>We can also include demonstrations of how to use our code by
 providing code snippets. To do this, we write a collection of sample
 code that demonstrate how to use functions effectively in different
 scenarios.</p>
@@ -588,27 +682,79 @@ scenarios.</p>
 string. Each code example has a prefix of <code>&gt;&gt;&gt;</code>
 which represents the input prompt on the Python interpreter. Some code
 editors will provide syntax highlighting of these code snippets.</p>
-<div class="codewrapper sourceCode" id="cb11">
+<div class="tabs">
+<nav><div id="nav-tab-5" class="nav nav-tabs" role="tablist">
+<button class="nav-link active" id="nav-tab-5-Python" name="Python" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-5-Python" type="button" role="tab" aria-controls="nav-tabpanel-5-Python" aria-selected="true">
+  <h3 class="tab-header" id="nav-tab-heading-5-Python">
+  Python
+  </h3>
+</button>
+<button class="nav-link" id="nav-tab-5-R" name="R" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-5-R" type="button" role="tab" aria-controls="nav-tabpanel-5-R" aria-selected="false">
+  <h3 class="tab-header" id="nav-tab-heading-5-R">
+  R
+  </h3>
+</button>
+</div>
+</nav><div id="nav-tabContent-5" class="tab-content">
+<div id="nav-tabpanel-5-Python" class="tab-pane show active" aria-labelledby="nav-tab-5-Python" role="tabpanel">
+<div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="kw">def</span> add(x, y):</span>
-<span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a>    <span class="co">"""</span></span>
-<span id="cb11-3"><a href="#cb11-3" tabindex="-1"></a><span class="co">    Calculate the sum of two numbers.</span></span>
-<span id="cb11-4"><a href="#cb11-4" tabindex="-1"></a></span>
-<span id="cb11-5"><a href="#cb11-5" tabindex="-1"></a><span class="co">    Args:</span></span>
-<span id="cb11-6"><a href="#cb11-6" tabindex="-1"></a><span class="co">        x: The first number to add. (float or int)</span></span>
-<span id="cb11-7"><a href="#cb11-7" tabindex="-1"></a><span class="co">        y: The second number to add. (float or int)</span></span>
-<span id="cb11-8"><a href="#cb11-8" tabindex="-1"></a></span>
-<span id="cb11-9"><a href="#cb11-9" tabindex="-1"></a><span class="co">    Returns:</span></span>
-<span id="cb11-10"><a href="#cb11-10" tabindex="-1"></a><span class="co">        The sum of x and y. (float or int)</span></span>
-<span id="cb11-11"><a href="#cb11-11" tabindex="-1"></a><span class="co">        </span></span>
-<span id="cb11-12"><a href="#cb11-12" tabindex="-1"></a><span class="co">    Examples:    </span></span>
-<span id="cb11-13"><a href="#cb11-13" tabindex="-1"></a><span class="co">    &gt;&gt;&gt; add(1, 1)</span></span>
-<span id="cb11-14"><a href="#cb11-14" tabindex="-1"></a><span class="co">    2</span></span>
-<span id="cb11-15"><a href="#cb11-15" tabindex="-1"></a><span class="co">    &gt;&gt;&gt; add(1.3, 5.3)</span></span>
-<span id="cb11-16"><a href="#cb11-16" tabindex="-1"></a><span class="co">    6.6</span></span>
-<span id="cb11-17"><a href="#cb11-17" tabindex="-1"></a><span class="co">    """</span></span>
-<span id="cb11-18"><a href="#cb11-18" tabindex="-1"></a>    <span class="cf">return</span> x <span class="op">+</span> y</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a><span class="kw">def</span> add(x, y):</span>
+<span id="cb12-2"><a href="#cb12-2" tabindex="-1"></a>    <span class="co">"""</span></span>
+<span id="cb12-3"><a href="#cb12-3" tabindex="-1"></a><span class="co">    Calculate the sum of two numbers.</span></span>
+<span id="cb12-4"><a href="#cb12-4" tabindex="-1"></a></span>
+<span id="cb12-5"><a href="#cb12-5" tabindex="-1"></a><span class="co">    Args:</span></span>
+<span id="cb12-6"><a href="#cb12-6" tabindex="-1"></a><span class="co">        x: The first number to add.</span></span>
+<span id="cb12-7"><a href="#cb12-7" tabindex="-1"></a><span class="co">        y: The second number to add.</span></span>
+<span id="cb12-8"><a href="#cb12-8" tabindex="-1"></a></span>
+<span id="cb12-9"><a href="#cb12-9" tabindex="-1"></a><span class="co">    Returns:</span></span>
+<span id="cb12-10"><a href="#cb12-10" tabindex="-1"></a><span class="co">        The sum of x and y.</span></span>
+<span id="cb12-11"><a href="#cb12-11" tabindex="-1"></a><span class="co">        </span></span>
+<span id="cb12-12"><a href="#cb12-12" tabindex="-1"></a><span class="co">    Examples:    </span></span>
+<span id="cb12-13"><a href="#cb12-13" tabindex="-1"></a><span class="co">    &gt;&gt;&gt; add(1, 1)</span></span>
+<span id="cb12-14"><a href="#cb12-14" tabindex="-1"></a><span class="co">    2</span></span>
+<span id="cb12-15"><a href="#cb12-15" tabindex="-1"></a><span class="co">    &gt;&gt;&gt; add(1.3, 5.3)</span></span>
+<span id="cb12-16"><a href="#cb12-16" tabindex="-1"></a><span class="co">    6.6</span></span>
+<span id="cb12-17"><a href="#cb12-17" tabindex="-1"></a><span class="co">    """</span></span>
+<span id="cb12-18"><a href="#cb12-18" tabindex="-1"></a>    <span class="cf">return</span> x <span class="op">+</span> y</span></code></pre>
+</div>
+</div>
+<div id="nav-tabpanel-5-R" class="tab-pane" aria-labelledby="nav-tab-5-R" role="tabpanel">
+<p>For more information about writing R code examples within function
+documentation, please see the <a href="https://r-pkgs.org/man.html#sec-man-examples" class="external-link">Examples</a> section
+in the book <em>R Packages</em> by Hadley Wickham.</p>
+<div class="codewrapper sourceCode" id="cb13">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co">#' Add two numbers.</span></span>
+<span><span class="co">#'</span></span>
+<span><span class="co">#' @param x The first number to add.</span></span>
+<span><span class="co">#' @param y The second number to add.</span></span>
+<span><span class="co">#' @return The sum of `x` and `y`.</span></span>
+<span><span class="co">#'</span></span>
+<span><span class="co">#' @examples</span></span>
+<span><span class="co">#' add(1, 1)</span></span>
+<span><span class="co">#' add(1.3, 5.3)</span></span>
+<span><span class="va">add</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="kw">return</span><span class="op">(</span><span class="va">x</span> <span class="op">+</span> <span class="va">y</span><span class="op">)</span></span>
+<span><span class="op">}</span></span></code></pre>
+</div>
+</div>
+</div>
+</div>
+<div id="discussion3" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Challenge</h3>
+<div class="callout-content">
+<p>Write a brief code example within the documentation string in a
+function in your code.</p>
+</div>
+</div>
 </div>
 <div id="accordionSpoiler1" class="accordion spoiler-accordion accordion-flush">
 <div class="accordion-item">
@@ -617,8 +763,32 @@ editors will provide syntax highlighting of these code snippets.</p>
 </button>
 <div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
+<div class="tabs">
+<nav><div id="nav-tab-6" class="nav nav-tabs" role="tablist">
+<button class="nav-link active" id="nav-tab-6-Python" name="Python" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-6-Python" type="button" role="tab" aria-controls="nav-tabpanel-6-Python" aria-selected="true">
+  <h3 class="tab-header" id="nav-tab-heading-6-Python">
+  Python
+  </h3>
+</button>
+<button class="nav-link" id="nav-tab-6-R" name="R" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-6-R" type="button" role="tab" aria-controls="nav-tabpanel-6-R" aria-selected="false">
+  <h3 class="tab-header" id="nav-tab-heading-6-R">
+  R
+  </h3>
+</button>
+</div>
+</nav><div id="nav-tabContent-6" class="tab-content">
+<div id="nav-tabpanel-6-Python" class="tab-pane show active" aria-labelledby="nav-tab-6-Python" role="tabpanel">
 <p>These code examples can be used as automatic tests using the <a href="https://docs.python.org/3/library/doctest.html" class="external-link">doctest</a> module
 which is built into Python.</p>
+</div>
+<div id="nav-tabpanel-6-R" class="tab-pane" aria-labelledby="nav-tab-6-R" role="tabpanel">
+<p>In the R ecosystem, we can automatically test the examples in our
+documentation strings using the <a href="https://cran.r-project.org/web/packages/doctest/vignettes/doctest.html" class="external-link">doctest</a>
+package.</p>
+</div>
+</div>
+</div>
+</div>
 </div>
 </div>
 </div>
@@ -663,9 +833,9 @@ Style Guide</a> sets out a docstring format.</li>
 <a href="https://www.sphinx-doc.org/en/master/" class="external-link">Sphinx docstring
 format</a>, which has a <a href="https://numpydoc.readthedocs.io/en/latest/format.html" class="external-link">NumpyDoc
 extension</a> designed for scientific use.</li>
-</ul><p>It doesn’t <em>really</em> matter which one you select, as long as
-it’s used consistently across a project and it’s clear what the syntax
-means. Some standards are better-supported by other tools such as
+</ul><p>It doesn’t matter which one you select, as long as it’s used
+consistently across a project and it’s clear what the syntax means. Some
+standards are better-supported by other tools such as
 <abbr title="Integrated development environments">IDEs</abbr> and
 documentation generators.</p>
 </div>
@@ -673,8 +843,8 @@ documentation generators.</p>
 </div>
 </div>
 </section><section><h2 class="section-heading" id="automatically-generate-docstrings">Automatically generate docstrings<a class="anchor" aria-label="anchor" href="#automatically-generate-docstrings"></a></h2>
-<hr class="half-width"><p>Generative AI services such as Google Gemini can write docstrings
-automatically.</p>
+<hr class="half-width"><p>Generative AI services such as <a href="https://gemini.google.com/" class="external-link">Google Gemini</a> can read your code
+and write docstrings automatically, to a certain extent.</p>
 <p>To do this, ask the system to create a docstring and copy your code
 into the prompt text box. Below is an example prompt and the reply
 generated by the Google Gemini algorithm:</p>
@@ -683,30 +853,67 @@ generated by the Google Gemini algorithm:</p>
 def calculate_rectangle_area(width, height):
     area = width * height
     return area</code></pre>
-<p>The result is the follow docstring, in addition to some helpful
+<p>The result is the following docstring, in addition to some helpful
 descriptions of the content that it generated.</p>
-<div class="codewrapper sourceCode" id="cb13">
+<div class="codewrapper sourceCode" id="cb15">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="kw">def</span> calculate_rectangle_area(width, height):</span>
-<span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a>  <span class="co">"""</span></span>
-<span id="cb13-3"><a href="#cb13-3" tabindex="-1"></a><span class="co">  This function calculates the area of a rectangle.</span></span>
-<span id="cb13-4"><a href="#cb13-4" tabindex="-1"></a></span>
-<span id="cb13-5"><a href="#cb13-5" tabindex="-1"></a><span class="co">  Args:</span></span>
-<span id="cb13-6"><a href="#cb13-6" tabindex="-1"></a><span class="co">      width (float): The width of the rectangle. Must be a positive number.</span></span>
-<span id="cb13-7"><a href="#cb13-7" tabindex="-1"></a><span class="co">      height (float): The height of the rectangle. Must be a positive number.</span></span>
-<span id="cb13-8"><a href="#cb13-8" tabindex="-1"></a></span>
-<span id="cb13-9"><a href="#cb13-9" tabindex="-1"></a><span class="co">  Returns:</span></span>
-<span id="cb13-10"><a href="#cb13-10" tabindex="-1"></a><span class="co">      float: The area of the rectangle. This will be a positive number.</span></span>
-<span id="cb13-11"><a href="#cb13-11" tabindex="-1"></a><span class="co">  """</span></span>
-<span id="cb13-12"><a href="#cb13-12" tabindex="-1"></a></span>
-<span id="cb13-13"><a href="#cb13-13" tabindex="-1"></a>  <span class="co"># Calculate the area</span></span>
-<span id="cb13-14"><a href="#cb13-14" tabindex="-1"></a>  area <span class="op">=</span> width <span class="op">*</span> height</span>
-<span id="cb13-15"><a href="#cb13-15" tabindex="-1"></a></span>
-<span id="cb13-16"><a href="#cb13-16" tabindex="-1"></a>  <span class="cf">return</span> area</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a><span class="kw">def</span> calculate_rectangle_area(width, height):</span>
+<span id="cb15-2"><a href="#cb15-2" tabindex="-1"></a>  <span class="co">"""</span></span>
+<span id="cb15-3"><a href="#cb15-3" tabindex="-1"></a><span class="co">  This function calculates the area of a rectangle.</span></span>
+<span id="cb15-4"><a href="#cb15-4" tabindex="-1"></a></span>
+<span id="cb15-5"><a href="#cb15-5" tabindex="-1"></a><span class="co">  Args:</span></span>
+<span id="cb15-6"><a href="#cb15-6" tabindex="-1"></a><span class="co">      width (float): The width of the rectangle. Must be a positive number.</span></span>
+<span id="cb15-7"><a href="#cb15-7" tabindex="-1"></a><span class="co">      height (float): The height of the rectangle. Must be a positive number.</span></span>
+<span id="cb15-8"><a href="#cb15-8" tabindex="-1"></a></span>
+<span id="cb15-9"><a href="#cb15-9" tabindex="-1"></a><span class="co">  Returns:</span></span>
+<span id="cb15-10"><a href="#cb15-10" tabindex="-1"></a><span class="co">      float: The area of the rectangle. This will be a positive number.</span></span>
+<span id="cb15-11"><a href="#cb15-11" tabindex="-1"></a><span class="co">  """</span></span>
+<span id="cb15-12"><a href="#cb15-12" tabindex="-1"></a></span>
+<span id="cb15-13"><a href="#cb15-13" tabindex="-1"></a>  <span class="co"># Calculate the area</span></span>
+<span id="cb15-14"><a href="#cb15-14" tabindex="-1"></a>  area <span class="op">=</span> width <span class="op">*</span> height</span>
+<span id="cb15-15"><a href="#cb15-15" tabindex="-1"></a></span>
+<span id="cb15-16"><a href="#cb15-16" tabindex="-1"></a>  <span class="cf">return</span> area</span></code></pre>
 </div>
-<p>This can save you a lot of time, but as with any AI-generated
-content, always check the output and ensure it’s correct!</p>
+<p>This <abbr title="artificial intelligence">AI</abbr>-generated
+content contains a function summary, argument descriptions, and explains
+the return value as we discussed previously.</p>
+<div id="discussion4" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Challenge</h3>
+<div class="callout-content">
+<p>Try asking a generative AI service such as Google Gemini to read your
+code.</p>
+<ul><li>Ask it to generate documentation of different kinds.</li>
+<li>Request a review of your code. What does the bot think?</li>
+<li>Can the chat-bot create a diagram to illustrate a concept that is
+relevant to your research software?</li>
+</ul></div>
+</div>
+</div>
+<p>This can save you a lot of time, but as with any
+<abbr title="Large langauge model">LLM</abbr>-generated content, always
+check the output and ensure it’s correct!</p>
+<div id="discussion5" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Discussion</h3>
+<div class="callout-content">
+<p>What are the benefits and risks of using a large langauge model (LLM)
+service such as Google Gemini or OpenAI ChatGPT to interpret your code
+and produce content that you use in your research?</p>
+<p>How should we critically evaluate this material so that it can be
+used appropriately to improve the productivity of our research teams
+without jeopardising our ethics or integrity or causing security
+risks?</p>
+</div>
+</div>
+</div>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
