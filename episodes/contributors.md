@@ -21,13 +21,31 @@ exercises: 2
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Introduction
+## Collaborative research software development
 
-Most research software is written in a collaborative manner, involving multiple specialists from within a team or from multiple institutions. For the long-term health of a software package, it’s important to encourage potential contributors to get in touch and feel welcome to take part. Useful research software can take on a life of its own. For more information on planning the development of research software and project governance, see Module 1a.
+Often, in today's research environment, much analytics software is written in a **collaborative manner**, involving multiple specialists from within a team, or from multiple institutions. For the long-term health of a software package, it’s important to encourage potential contributors to get in touch and feel welcome to take part. Useful research software can take on a life of its own.
+
+::::::::::::::::::::::::::::::::::::: callout
+
+## Research software project management
+
+For more information on planning the development of research software and project governance, see Module 1a.
+
+:::::::::::::::::::::::::::::::::::::
 
 It’s often published using an open source licence, which means that all the code is publicly available and may be used and modified by anyone, within certain conditions (see module 1b to learn more about software licensing.)
 
 There's a lot more creating and managing a sustainable community aorund a research software project, but having a central piece of documentation for contributors is a great start!
+
+::::::::::::::::::::::::::::::::::::: discussion
+
+Consider these questions amongst the group:
+
+- How can we effectively foster a collaborative environment for research software development?
+- How can barriers to participation be removed for a diverse range of individuals and institutions?
+- What strategies can be implemented to ensure that all contributors feel valued and included?
+
+:::::::::::::::::::::::::::::::::::::
 
 ## Contribution guides
 
@@ -39,9 +57,19 @@ It’s important to explain how the project is managed so the process for evalua
 
 Contribution guides will save you time in the long run, because it provides an on-ramp for people to get involved, prevents them from getting confused, and reduces the amount of incorrectly-submitted bug reports or requests for change, etc.
 
+::::::::::::::::::::::::::::::::::::: discussion
+
+Discuss these issues amongst the group:
+
+- What essential components should be included in a comprehensive documentation for research software contributors?
+- How can we make onboarding new contributors a smooth and welcoming process, ensuring they have the necessary information and support to be successful?
+- How can we balance the need for clear guidelines with the desire to encourage creativity and innovation?
+
+:::::::::::::::::::::::::::::::::::::
+
 ### How to write contributor guidance
 
-The stanard practice for authoring a contribution guide for a software project is to create a file called `CONTRIBUTING.md` in the root folder of your project. This is a Markdown file that introduces new people to the project. It lets people know the ways they can take part in the research software project and what to do to get involved.
+The standard practice for authoring a contribution guide for a software project is to create a file called `CONTRIBUTING.md` in the root folder of your project. This is a Markdown file that introduces new people to the project. It lets people know the ways they can take part in the research software project and what to do to get involved.
 
 The specific contents of this file depend upon the kind of research project, but some useful information to provide typically includes:
 
@@ -103,6 +131,15 @@ An architecture diagram is an efficient way to provide a “map” to help devel
 Many projects following programming standards to manage code quality. A coding style guide will help to ensure consistency across all the code written as part of a collaborative project, which helps others to read and interpret the code, making it easier to maintain in the long run. The code style rules should cover things like the way to describe functions, how to indent code, and naming conventions for variables.
 
 This might include guidance and advice, or more strict rules as standards that are checked by a code linter. A code linter is an analysis tool that inspects code and checks for common errors and problems, producing a report for the developer to read and act upon. Common coding style standards include the PEP 8 style guide for the Python programming language and the tidyverse style guide in the R statistical language.
+
+::::::::::::::::::::::::::::::::::::: discussion
+
+Discuss these issues as a group:
+
+- Why are coding conventions important for collaborative research projects?
+- How can we establish and enforce coding style guidelines that promote consistency and readability?
+
+:::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
