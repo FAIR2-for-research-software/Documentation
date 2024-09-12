@@ -54,9 +54,11 @@ On code hosting platforms such as GitHub, the contribution guide will be created
 
 :::: challenge
 
-TODO 
-
 Create a new file called `CONTRIBUTING.md` and populate it with a few sentences.
+
+- What are the most important things for a new contributor to know?
+- What should a user do if they encounter a bug?
+- What are the common questions that a new developer might have when they work on this research software?
 
 ::::
 

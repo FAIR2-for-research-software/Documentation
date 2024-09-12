@@ -6,16 +6,16 @@ exercises: 2
 
 :::::::::::::::::::::::::::::::::::::: questions 
 
-- What is a documentation website for research software?
+- How do I present **comprehensive information** to users of my research software?
 - How do I generate a website containing a user guide to my code?
-- What should my documentation site contain?
+- What should a good documentation website contain?
 - How do I publish my software documentation on the internet?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Learn about documentation websites for software packages.
+- Learn about **documentation websites** for software packages.
 - Gain basic familiarity with some common website generation tools.
 - Understand the basics of structuring a documentation website.
 - Be able to set up a static site deployment workflow.
@@ -106,6 +106,13 @@ For more information about the wiki feature on GitHub, see [Documenting your pro
 
 :::
 
+
+### Documentation sites for R packages
+
+It's also possible to generate a documentation site to accompany R packages that you create. 
+For more information about this, please refer to the book *R Packages* by Hadley Wickham, which
+has a chapter on [documentation websites](https://r-pkgs.org/website.html).
+
 ### Sphinx
 
 [Sphinx](https://www.sphinx-doc.org/) is a tool for building documentation websites that is commonly used amongst developers of Python packages, although it's also compatible with other programming languages. It doesn't currently support packages written using the R statistical language.
@@ -124,11 +131,31 @@ Let's use Sphinx to create a documentation site for our Python code.
 
 ##### Installing Sphinx
 
-Navigate to the root folder of your code project. Create a virtual environment using [venv](https://docs.python.org/3/library/venv.html) which is a separate area in which to install the Sphinx package.
+Navigate to the root folder of your code project.
+Create a virtual environment using [venv](https://docs.python.org/3/library/venv.html) which is a separate area in which to install the Sphinx package.
+This command will create a virtual environment in a directory called `.venv/`
+
+::: group-tab
+
+### Windows
 
 ```bash
 python -m venv .venv
 ```
+
+### Linux
+
+```bash
+python3 -m venv .venv
+```
+
+### macOS
+
+```bash
+python -m venv .venv
+```
+
+:::
 
 This will create a subdirectory that contains the packages we'll need to complete the exercises in this section.
 
@@ -154,13 +181,13 @@ source .venv/bin/activate
 source .venv/bin/activate
 ```
 
+:::
+
 Use the Python package manager [pip](https://pip.pypa.io/en/stable/) to [install Sphinx](https://www.sphinx-doc.org/en/master/usage/installation.html).
 
 ```bash
 pip install sphinx
 ```
-
-:::
 
 ##### Start a new Sphinx project
 
@@ -178,15 +205,19 @@ This will initialise the configuration files for a new Sphinx site in a subdirec
 
 ::: callout
 
-To find out more about the Sphinx configuration files, please read their guide to [defining document structure](https://www.sphinx-doc.org/en/master/usage/quickstart.html#defining-document-structure) on the Sphinx documentation.
+### Sphinx options
+
+To find out more about the Sphinx configuration files,
+please read their guide to [defining document structure](https://www.sphinx-doc.org/en/master/usage/quickstart.html#defining-document-structure) on the Sphinx documentation.
 
 :::
 
 #### Building the site
 
-In this context, building means taking our collection of Sphinx files and converting them into the source code files that define a website. Sphinx will create HyperText Markup Language (HTML) files, which is the markup language for pages that display in a web browser commonly used on the internet.
+In this context, _building_ means taking our collection of Sphinx files and converting them into the source code files that define a website.
+Sphinx will create _HyperText Markup Language_ (HTML) files, which is the markup language for pages that display in a web browser commonly used on the internet.
 
-To build our site, we run the [sphinx-build](https://www.sphinx-doc.org/en/master/man/sphinx-build.html) command using the `-M` option to select HTML syntax as the output format.
+To build our site, we run the [sphinx-build](https://www.sphinx-doc.org/en/master/man/sphinx-build.html) command using the `-M` option to select <abbr title="HyperText Markup Language">HTML</abbr> syntax as the output format.
 
 ```bash
 sphinx-build -M html docs docs/_build
@@ -205,10 +236,9 @@ It can be useful to automatically populate our documentation sites by converting
 ##### Configuring Autodoc
 
 Let's set up the options for `autodoc`.
+(If you struggle with these steps, please refer to the [template project](https://github.com/Joe-Heffer-Shef/oddsong).)
 
-If you struggle with these steps, please refer to the [template project](https://github.com/Joe-Heffer-Shef/oddsong).
-
-Add the following lines to `docs/conf.py`
+Add the following lines to `docs/conf.py` which 
 
 ```python
 # Our Python code may be imported from the parent directory
@@ -217,14 +247,41 @@ import sys
 sys.path.insert(0, os.path.abspath('..'))
 ```
 
-This ensures that Sphinx can access our Python code.
+This ensures that Sphinx can access our Python code by pointing at the root directory of our project.
+The `..` syntax means "one folder up", which means `autodoc` will search in the root directory for code to import.
 
-Next, edit `docs/index.rst` and add the following lines:
+:::: spoiler
+
+### What does this code mean?
+
+The Python code uses [`sys.path`](https://docs.python.org/3/library/sys.html#sys.path), a list of locations to search for code.
+By modifying the Python _module search path_, we allow `autodoc` to locate and import our code modules from a specific directory that is not in the default search path.
+
+This is often necessary when working with project structures that involve multiple directories, helping the interpreter to find code that isn't installed in the standard library location.
+
+::::
+
+Next, edit `docs/index.rst` and add the following lines to instruct Sphinx to automatically generation documentation for our Python module.
 
 ```rst
 .. automodule:: oddsong.song
     :members:
 ```
+
+:::: spoiler
+
+### What does this code mean?
+
+This [reStructuredText (reST)](https://docutils.sourceforge.io/rst.html) markup language has the following elements:
+
+- `..` indicates a _directive_ within a <abbr title="reStructuredText">reST</abbr> document that is used to configure Sphinx.
+- `automodule::` indicates a specific directive to use `autodoc` to automatically generate documentation for a module.
+- `oddsong.song` is the path to our Python module, for which documentation will be created.
+- `:members:` is an optional argument for the automodule directive that instructs Sphinx to include documentation for all members (functions, classes, variables) defined within the specified module.
+
+For more information about <abbr title="reStructuredText">reST</abbr>, please read the [Introduction to reStructuredText](https://www.writethedocs.org/guide/writing/reStructuredText/) by _Write The Docs_.
+
+::::
 
 Now, when we build our site, Sphinx will scan the contents of the `oddsong` Python module and automatically generate a useful reference guide to our functions.
 
@@ -238,22 +295,13 @@ The result looks something like this:
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-## Automatically generated content
+## Automatically generate content
 
-Try using `autodoc`.
+Try using `autodoc` to analyise your own code and build a documentation site by following the steps above.
 
-:::::::::::::::: solution
+After the `sphinx-build` command has completed successfully, browse the contents of the `docs/_build/html` folder and discuss what you find.
 
-TODO
-
-:::::::::::::::::::::::::
 :::::::::::::::::::::::::::::::::::::::::::::::
-
-### Documentation sites for R packages
-
-It's also possible to generate a documentation site to accompany R packages that you create. 
-For more information about this, please refer to the book *R Packages* by Hadley Wickham, which
-has a chapter on [documentation websites](https://r-pkgs.org/website.html).
 
 ## Publishing
 
@@ -271,3 +319,11 @@ The detailed of setting up the deployment of your site to these platforms is bey
 - Documentation websites may be deployed to a hosting platform.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
+
+## Further resources
+
+Please review the following material which provides more information about some of the topics covered in this episode.
+
+- Sphinx [Getting Started](https://www.sphinx-doc.org/en/master/usage/quickstart.html)
+- _Write the Docs_ [Introduction to reStructuredText](https://www.writethedocs.org/guide/writing/reStructuredText/)
+- GitHub documentation [About wikis](https://docs.github.com/en/communities/documenting-your-project-with-wikis/about-wikis)
