@@ -92,19 +92,23 @@ nano oddsong/README.txt
 
 The essentials contents of a README file are:
 
-- The name of the software. This seems trivial, but a clear title and description of a piece of software will be essential for others to identify your software and differentiate it from others.
-- A brief introduction to your code, including links to relevant websites or contact details for the maintainers. - It should be clear who the target audience is for the software package.
-- Installation instructions or a link to further information published elsewhere.
-- Usage instructions, ideally including a “quick start” guide with a few simple examples to get people up and running with your software package.
+- The **name of the software**. This seems trivial, but a clear title and description of a piece of software will be essential for others to identify your software and differentiate it from others.
+- A **brief introduction** to your code, including links to relevant websites or contact details for the maintainers.
+- It should be clear who the **target audience** is for the software package.
+- **Installation instructions** or a link to further information published elsewhere.
+- **Usage instructions**, ideally including a “quick start” guide with a few simple examples to get people up and running with your software package.
 
 It can be useful to signpost to other, related useful software tools by providing links and explaining how other software is related or different to this project when it comes to addressing these kinds of research problems.
 
 ::: callout
 
-Put yourself in the shoes of a researcher who has encountered your software for the first time.
+## Walk a mile in the user's shoes
+
+Put yourself in the position of a researcher who has encountered your software for the first time.
 Consider, if you had to start from square one, how would you like the code to be introduced to you?
+
 Remember: things that are obvious to you and your colleagues may not be clear to others.
-What assumed knowledge must you explicitly explain to get them up to speed?
+What **assumed knowledge** must you explicitly explain to get them up to speed?
 
 :::
 
@@ -114,7 +118,7 @@ For research code, it’s often important to explain the context in which the so
 
 Provide instructions for installing your research software. These steps should be laid out in simple, clear language and organised in a step-by-step manner.
 
-::: challenge
+::: discussion
 
 Consider a research code project you've worked on.
 Discuss the technical prerequisites for that software or system.
@@ -140,13 +144,19 @@ Many users will benefit from a frequently asked questions (FAQ) or troubleshooti
 
 ::: callout
 
-The writing style should be concise, jargon-free, clear, and pitched at the appropriate level to the intended target audience. All technical terms and acronyms should be explained. However, don’t reinvent the wheel by defining all the terms used, instead link to a reliable external source or journal article.
+## Writing style
+
+The writing style should be concise, jargon-free, consistent, and pitched at the appropriate level to the intended target audience.
+All technical terms and acronyms should be explained.
+However, don’t reinvent the wheel by defining all the terms used, instead link to a reliable external source or journal article.
+
+For more information about good writing style, please refer to these [style guides](https://www.writethedocs.org/guide/writing/style-guides/#traditional-writing-style-guide-resources).
 
 :::
 
 Diagrams can be particularly useful to explain complex concepts and workflows. Screenshots may also provide a visual demonstration of how the software will work.
 
-::::::::::::::::::::::::::::::::: challenge
+::::::::::::::::::::::::::::::::: discussion
 
 Discuss with the group:
 
@@ -155,11 +165,27 @@ Discuss with the group:
 
 :::::::::::::::::::::::::::::::::
 
+Not all READMEs must follow this structure.
+Always adapt the format of your documentation to suit the specific needs of your audience.
+
 ## Markdown format
 
 Most people prefer to use a file format that allows you to create headers to organise the content into sections or chapters, which is much clearer for the reader.
 
-In this case, a Markdown document may be used. Markdown is a simple mark-up language that allows you to format your text using symbols to represent headers, bold text, bullet lists, etc. that are displayed to the user in an appealing way. The Markdown syntax will be converted into appealing visual styles that make your documentation more aesthetically pleasing and easier to read.
+In this case, a [Markdown](https://daringfireball.net/projects/markdown/) document may be used.
+Markdown is a simple _markup language_ that allows you to format your text using symbols to represent headers, bold text, bullet lists, etc. that are displayed to the user in an appealing way. The Markdown syntax will be converted into appealing visual styles that make your documentation more aesthetically pleasing and easier to read.
+
+:::: spoiler
+
+## What is a markup language?
+
+A [markup language](https://en.wikipedia.org/wiki/Markup_language) is a system of special characters that are used to _decorate_ or _format_ pieces of _plain text_.
+The syntax normally consists of symbols or _tags_ that are used to _encode_ text, which means _implying meaning_ to make it more information-rich.
+It can be used to structure a documented into sections to provide logical organisation so that it's easier to navigate.
+
+Typically, a markup language is edited in a similar way to a computer programming language, and is **rendered** into a document with various rich text formatting such as headers, bold face fonts, etc.
+
+::::
 
 ::::::::::::::::::::::::::::::::: challenge
 
@@ -303,6 +329,36 @@ Here are some commonly-used text formatting options that can be used with Markdo
 | `Code block`      | ``` `code block` ``` |
 | [Hyperlink](https://sheffield.ac.uk) | `[Hyperlink](https://sheffield.ac.uk)` |
 
+These may be used to add emphasis to parts of the text or highligh key words and phrases.
+Using text formatting makes your software documentation easier to skim-read, so researchers can quickly find the part of the text that's relevant for what they're working on.
+
+:::::::: challenge
+
+Identify several _key words_ in your README file. Highlight them in using a bold font face.
+
+:::: solution
+
+The Markdown syntax for bold font is to wrap the text in two asterixes `**`.
+This may be applied to single words or to phrases.
+
+For example:
+
+```markdown
+Identify a bird based on the **sound** of its call.
+```
+
+Identify a bird based on the **sound** of its call.
+
+```markdown
+**Identify a bird** based on the _sound of its call_.
+```
+
+**Identify a bird** based on the _sound of its call_.
+
+::::
+
+::::::::
+
 ### Block quotes
 
 We can create a citation with appealing formatting by using the blockquote syntax in Markdown, which is similar to the method used in email.
@@ -343,3 +399,9 @@ Remember, the README file is a first impression that research users will receive
  - Markdown is a recommended format for creating headers, bold text, bullet points, etc.
 
 ::::::
+
+## Further resources
+
+For more information about writing basic software documentation, please review the following materials:
+
+- Raphael Pierzina [Hi, my name is README!](https://www.writethedocs.org/videos/eu/2017/hi-my-name-is-readme-raphael-pierzina/)
