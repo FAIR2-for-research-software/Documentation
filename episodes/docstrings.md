@@ -129,7 +129,20 @@ Use the `help()` function to view the documentation string for a function.
 
 ::::::::::::::::: solution
 
-TODO
+Let's view the help text for an in-built [function `abs()`](https://docs.python.org/3/library/functions.html#abs) that finds the absolute value of a number.
+
+```python
+help(abs)
+```
+
+The following text will be printed to the screen@
+
+```output
+Help on built-in function abs in module builtins:
+
+abs(x, /)
+    Return the absolute value of the argument.
+```
 
 ::::::::::::::::::::::::::
 
