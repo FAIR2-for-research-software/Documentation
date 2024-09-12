@@ -327,3 +327,4 @@ Please review the following material which provides more information about some 
 - Sphinx [Getting Started](https://www.sphinx-doc.org/en/master/usage/quickstart.html)
 - _Write the Docs_ [Introduction to reStructuredText](https://www.writethedocs.org/guide/writing/reStructuredText/)
 - GitHub documentation [About wikis](https://docs.github.com/en/communities/documenting-your-project-with-wikis/about-wikis)
+- _Write the Docs_ [Tools for documentation writing](https://www.writethedocs.org/guide/tools/)
