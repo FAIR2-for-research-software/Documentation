@@ -22,7 +22,7 @@ exercises: 2
 
 ## Command line interfaces
 
-A command-line interface, usually abbreviated to CLI, is a terminal or prompt that accepts text input that instructs a computer what to do. They are used to start programs and perform actions within the computer's operating system.
+A command-line interface, usually abbreviated to <abbr title="Command-line interface">CLI</abbr>, is a terminal or prompt that accepts text input that instructs a computer what to do. They are used to start programs and perform actions within the computer's operating system.
 
 In this section, we'll introduce the concept of providing a command-line interface to our research code to make it easier to use and provide a well-documented "entry point" to our software.
 
@@ -30,7 +30,7 @@ In this section, we'll introduce the concept of providing a command-line interfa
 
 Command lines are a way of interacting with a digital system that go back to the early history of computing. They might seem old-fashioned because typing out commands means that there is no graphical component. It may seem restrictive because your mouse isn't used, but terminals have a lot of power because we can formulate our instructions to the computer by writing commands. We have a direct line to control our computer's operating system.
 
-It's a great way to talk to your computer because you can record the commands that you've run to provide a documented history of a research process. (We could record a video screen capture of your working procedure, but that's much less efficient.)
+It's a great way to "talk" to your computer because you can record the commands that you've run to provide a documented history of a research process. (We could record a video screen capture of your working procedure, but that's much less efficient.)
 
 Terminals are more efficient for running repetitive tasks and provide extra functionality for advanced users. They are an cost-effective way to provide a user interface for research software, as research teams often lack the resources and know-how to produce sophisticated graphical user interfaces.
 
@@ -244,6 +244,29 @@ Mandatory arguments to long options are mandatory for short options too.
 The output is a description of the `ls` command, instructions for using it, and a reference to each of the options or arguments available.
 
 :::
+
+::::::::::::::::::::::::::::::::::::: challenge
+
+Try the command line statements described above.
+
+- How would you seek further help if you encounter an error?
+- What response does the terminal provide? Is this what you expect?
+
+:::::::::::::::::::::::::::::::::::::
+
+## CLIs in R
+
+This rest of this episode is focussed on the Python programming language.
+
+R, while a powerful statistical computing language, doesn't have a built-in module specifically designed for creating <abbr title="Command-line interfaces">CLIs</abbr>. Unlike Python, this means that you'll need to use external packages or write your own functions to handle command-line arguments and options.
+
+However, there are several packages that can help you create to CLIs in R:
+
+- [optparse](https://trevorldavis.com/R/optparse/dev/)
+- [cli](https://cli.r-lib.org/)
+- [Rapp](https://github.com/r-lib/Rapp)
+
+These packages create <abbr title="Command-line interfaces">CLIs</abbr> for your R scripts, making them easier to distribute for others to use.
 
 ## CLIs in Python
 

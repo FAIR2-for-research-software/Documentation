@@ -22,7 +22,7 @@ exercises: 2
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Introduction
+## Documentation websites
 
 A documentation website is a user guide and reference manual for a library of research code. Up to now, we've looked at ways to put helpful notes in our code, but now we'll learn how to write a longer, more complete guide to the research tools you create.
 
@@ -34,25 +34,44 @@ To get an idea of this, here are some links documentation websites for widely-us
 - [ggplot2](https://ggplot2.tidyverse.org/index.html) is a plotting package for the R statistical language.
 - [scikit-learn](https://scikit-learn.org/stable/user_guide.html) is a machine learning library for the Python programming language.
 
+::::::::::::::::::::::::::::::::::::: discussion
+
+Evaluate these documentation sites.
+
+- What do you like about them?
+- How approachable are they as a new user?
+- What do you find difficult to understand in this material?
+
+:::::::::::::::::::::::::::::::::::::
+
+## Why create a website?
+
+There are many advantages to building a documentation site to provide a information-rich resource for researchers who use your code at institutions all around the world.
+
 ### Advantages
 
-There are many advantages to building a documentation site to provide a information-rich resource for researchers who use your code at institutions all around the world. These sites can work as hubs for collaboration, sharing the latest updates, and encouraging people to take up your system and get involved in improving it. The effort of setting one up will be rewarded in the long run because you will have created a valuable asset that will foster collaboration and knowledge sharing in your research community.
+These sites can work as hubs for collaboration, sharing the latest updates, and encouraging people to take up your system and get involved in improving it. The effort of setting one up will be rewarded in the long run because you will have created a valuable asset that will foster collaboration and knowledge sharing in your research community.
 
 A key foundation stone of modern digital research practices is the ability to replicate results by reproducing analysis workflows.  Clear, thorough documentation of the research code ensures that researchers can repeat processes and verify results and other people's outputs.
 
-Documementation sites are really useful for introducing new users to your software. It makes it much easier and faster for new users to get started using your software to boost their research. It's one of the most effective ways to create a user base that has a sophisticated understanding of the research code, which is essential for them to adapt it to the complex problems that often raise in research contexts.
+Documentation sites are really useful for introducing new users to your software. It makes it much easier and faster for new users to get started using your software to boost their research. It's one of the most effective ways to create a user base that has a sophisticated understanding of the research code, which is essential for them to adapt it to the complex problems that often raise in research contexts.
 
 They're also a valuable resource for your existing user base, enabling them to look up reference material or search the manual to find new capabilities they weren't aware of before. This will increase the potential for your software to accellerate the productivity of other research teams and boost scientific progress.
 
 ### When to use one
 
-Although the advantages are numerous, not all software packages require a comprehensive documentation website. However, for any code project that is growing in the number of collaborators, users, and technicala complexity, consider coordinating the team to write one as soon as possible to help the project grow in a healthy manner.
+Although the advantages are numerous, not all software packages require a comprehensive documentation website. However, for any code project that is growing in the number of collaborators, users, and technical complexity, consider coordinating the team to write one as soon as possible to help the project grow in a healthy manner.
 
-### Writing style
+::::::::::::::::::::::::::::::::::::: discussion
 
-Strive to use everyday, jargon-free language. It helps to set an approachable tone that encourages others to use the software and get involved with the project. This will en sure that the code is accesible to the widest possible layers of the research community and foster collaboration.
+When is it appropriate to establish a documentation website?
+Consider the following factors:
 
-Always consider the target audience of your documentation, because your user base may be unaware of some of the unstated assumptions and technical backgroud knowledge that you take for granted.
+- How many resources will it take to write and maintain?
+- How many end-users need the information?
+- Is there a simpler format that can convey the same information?
+
+:::::::::::::::::::::::::::::::::::::
 
 ## Contents
 
@@ -86,6 +105,13 @@ This prevents a situation where potential solutions to common issues do exist, b
 
 An appendix containing frequently asked questions (FAQs) is very useful to save yourself time in responding to common queries from the users of your code.
 
+
+## Writing style
+
+As we discussed in the [episode on READMEs](readmes.md), it's important to strive to use everyday, jargon-free language. It helps to set an approachable tone that encourages others to use the software and get involved with the project. This will en sure that the code is accesible to the widest possible layers of the research community and foster collaboration.
+
+Always consider the target audience of your documentation, because your user base may be unaware of some of the unstated assumptions and technical backgroud knowledge that you take for granted.
+
 ## Tools
 
 There are various tools available to build documentation sites for your research software.
@@ -101,6 +127,8 @@ As with readme files, the text that appears on GitHub is [formatted using Markdo
 To create a wiki, which is a simple, easy-to-edit web site, go to the main page of your code repository on GitHub and click on the Wiki button on the top menu. For a detailed walkthrough of this process, please read [adding or editing wiki pages](https://docs.github.com/en/communities/documenting-your-project-with-wikis/adding-or-editing-wiki-pages) on the GitHub documentation.
 
 ::: callout
+
+## GitHub Wikis
 
 For more information about the wiki feature on GitHub, see [Documenting your project with wikis](https://docs.github.com/en/communities/documenting-your-project-with-wikis) on the GitHub documentation.
 

@@ -27,7 +27,7 @@ If you’re publishing a research software package, one of the most common ways 
 
 We learned about _functions_ in an earlier module. Functions help us to break our code into smaller units that have a single purpose. By documenting those functions effectively, we aim to **explain their purpose** to future users and maintainers of that code. We also need to describe all the expected inputs and outputs of the function.
 
-### Documentation strings
+## Documentation strings
 
 We describe functions by using a feature of many programming languages called documentation strings, usually abbreviated to **docstring**. A documentation string is a piece of text that describes that piece of code and helps people to use it.
 
@@ -49,7 +49,7 @@ def add(x, y):
 
 ### R
 
-In R, we use a comment with a single quote `#'` to specify a documentation string for a function.
+In R, we use the [roxygen2](https://roxygen2.r-lib.org/) package, where a comment with a single quote `#'` to specify a documentation string for a function.
 
 ```R
 #' Calculate the sum of two numbers.
@@ -150,9 +150,18 @@ abs(x, /)
 
 The most important thing to include in a docstrings is an explanation of the purpose of this piece of code. To write a useful docstring, put yourself in the shoes of someone who encounters your code for the first time and needs a simple introduction that doesn’t assume any implied knowledge. The explanation will be very basic and seem obvious to you, but it may help a new user greatly.
 
-Next, we must describe the inputs and outputs of the function.
+### Arguments
 
-We list all the input parameters, or arguments, like so:
+Next, we must describe the inputs and outputs of the function, its _arguments_.
+
+We list all the arguments, or input parameters, as shown in the code examples below.
+Each argument has a name and a brief description.
+
+::: group-tab
+
+### Python
+
+The argument name matches the variable name in the function signature, such as `add(x, y)` in this case.
 
 ```python
 def add(x, y):
@@ -160,15 +169,43 @@ def add(x, y):
     Calculate the sum of two numbers.
 
     Args:
-        x: The first number to add. (float or int)
-        y: The second number to add. (float or int)
+        x: The first number to add.
+        y: The second number to add.
     """
     return x + y
 ```
+
+### R
+
+The argument name matches the variable name in the function signature, such as `function(x, y)` in this case.
+
+```R
+#' Calculate the sum of two numbers.
+#'
+#' @param x The first number to add.
+#' @param y The second number to add.
+add <- function(x, y) {
+  return(x + y)
+}
+```
+
+:::
 
 We have added an “arguments” (abbreviated to “args”) section to our docstring which lists the input parameters of the function and describes each one.
 
+::::::::::::::::::::::::::::::::: challenge
+
+Add a description of each argument to a function in your code.
+
+:::::::::::::::::::::::::::::::::
+
+### Return values
+
 Finally, we describe the result of the function that is output by the return statement.
+
+::: group-tab
+
+### Python
 
 ```python
 def add(x, y):
@@ -176,40 +213,59 @@ def add(x, y):
     Calculate the sum of two numbers.
 
     Args:
-        x: The first number to add. (float or int)
-        y: The second number to add. (float or int)
+        x: The first number to add.
+        y: The second number to add.
 
     Returns:
-        The sum of x and y. (float or int)
+        The sum of x and y.
     """
     return x + y
 ```
 
-This will help the user to understand what the function does and what they can expect to receive back when they call it. It can also be useful to explain any potential errors or exceptions that the function will raise if the inputs aren’t as expected, and how to deal with them.
+### R
 
-Help function in R and Python e.g.
-
-```python
-help(print)
+```R
+#' Calculate the sum of two numbers.
+#'
+#' @param x The first number to add.
+#' @param y The second number to add.
+#' @return The sum of x and y.
+add <- function(x, y) {
+  return(x + y)
+}
 ```
 
-## Usage examples
+:::
+
+This will help the user to understand what the function does and what they can expect to receive back when they call it. It can also be useful to explain any potential errors or exceptions that the function will raise if the inputs aren’t as expected, and how to deal with them.
+
+::::::::::::::::::::::::::::::::: challenge
+
+Describe the return value of a function in a documentation string.
+
+:::::::::::::::::::::::::::::::::
+
+### Usage examples
 
 We can also include demonstrations of how to use our code by providing code snippets. To do this, we write a collection of sample code that demonstrate how to use functions effectively in different scenarios.
 
 To do this, let's add an examples section to our documentation string. Each code example has a prefix of `>>>` which represents the input prompt on the Python interpreter. Some code editors will provide syntax highlighting of these code snippets.
 
+::: group-tab
+
+### Python
+
 ```python
 def add(x, y):
     """
     Calculate the sum of two numbers.
 
     Args:
-        x: The first number to add. (float or int)
-        y: The second number to add. (float or int)
+        x: The first number to add.
+        y: The second number to add.
 
     Returns:
-        The sum of x and y. (float or int)
+        The sum of x and y.
         
     Examples:    
     >>> add(1, 1)
@@ -220,11 +276,48 @@ def add(x, y):
     return x + y
 ```
 
+### R
+
+For more information about writing R code examples within function documentation, please see the [Examples](https://r-pkgs.org/man.html#sec-man-examples) section in the book _R Packages_ by Hadley Wickham.
+
+```R
+#' Add two numbers.
+#'
+#' @param x The first number to add.
+#' @param y The second number to add.
+#' @return The sum of `x` and `y`.
+#'
+#' @examples
+#' add(1, 1)
+#' add(1.3, 5.3)
+add <- function(x, y) {
+  return(x + y)
+}
+```
+
+:::
+
+::::::::::::::::::::::::::::::::: challenge
+
+Write a brief code example within the documentation string in a function in your code.
+
+:::::::::::::::::::::::::::::::::
+
 :::: spoiler
 
 ### Using docstrings to create automatic tests
 
+::: group-tab
+
+### Python
+
 These code examples can be used as automatic tests using the [doctest](https://docs.python.org/3/library/doctest.html) module which is built into Python.
+
+### R
+
+In the R ecosystem, we can automatically test the examples in our documentation strings using the [doctest](https://cran.r-project.org/web/packages/doctest/vignettes/doctest.html) package.
+
+:::
 
 ::::
 
@@ -248,15 +341,16 @@ A list of documentation string standards in Python:
  - The [Google Style Guide](https://google.github.io/styleguide/pyguide.html#381-docstrings) sets out a docstring format.
  - [Sphinx docstring format](https://www.sphinx-doc.org/en/master/), which has a [NumpyDoc extension](https://numpydoc.readthedocs.io/en/latest/format.html) designed for scientific use.
  
-It doesn't _really_ matter which one you select, as long as it's used consistently across a project and it's clear what the syntax means. Some standards are better-supported by other tools such as <abbr title="Integrated development environments">IDEs</abbr> and documentation generators.
+It doesn't matter which one you select, as long as it's used consistently across a project and it's clear what the syntax means. Some standards are better-supported by other tools such as <abbr title="Integrated development environments">IDEs</abbr> and documentation generators.
 
 ::::
 
 ## Automatically generate docstrings
 
-Generative AI services such as Google Gemini can write docstrings automatically.
+Generative AI services such as [Google Gemini](https://gemini.google.com/) can read your code and write docstrings automatically, to a certain extent.
 
-To do this, ask the system to create a docstring and copy your code into the prompt text box. Below is an example prompt and the reply generated by the Google Gemini algorithm:
+To do this, ask the system to create a docstring and copy your code into the prompt text box.
+Below is an example prompt and the reply generated by the Google Gemini algorithm:
 
 ```
 Please generate a docstring for this Python function:
@@ -266,7 +360,7 @@ def calculate_rectangle_area(width, height):
     return area
 ```
 
-The result is the follow docstring, in addition to some helpful descriptions of the content that it generated.
+The result is the following docstring, in addition to some helpful descriptions of the content that it generated.
 
 ```python
 def calculate_rectangle_area(width, height):
@@ -287,7 +381,27 @@ def calculate_rectangle_area(width, height):
   return area
 ```
 
-This can save you a lot of time, but as with any AI-generated content, always check the output and ensure it's correct!
+This <abbr title="artificial intelligence">AI</abbr>-generated content contains a function summary, argument descriptions, and explains the return value as we discussed previously.
+
+::::::::::::::::::::::::::::::::::::: challenge
+
+Try asking a generative AI service such as Google Gemini to read your code.
+
+- Ask it to generate documentation of different kinds.
+- Request a review of your code. What does the bot think?
+- Can the chat-bot create a diagram to illustrate a concept that is relevant to your research software?
+
+:::::::::::::::::::::::::::::::::::::
+
+This can save you a lot of time, but as with any <abbr title="Large langauge model">LLM</abbr>-generated content, always check the output and ensure it's correct!
+
+::::::::::::::::::::::::::::::::::::: discussion
+
+What are the benefits and risks of using a large langauge model (LLM) service such as Google Gemini or OpenAI ChatGPT to interpret your code and produce content that you use in your research?
+
+How should we critically evaluate this material so that it can be used appropriately to improve the productivity of our research teams without jeopardising our ethics or integrity or causing security risks?
+
+:::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
