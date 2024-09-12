@@ -381,7 +381,7 @@ def calculate_rectangle_area(width, height):
   return area
 ```
 
-This can save you a lot of time, but as with any AI-generated content, always check the output and ensure it's correct!
+This <abbr title="artificial intelligence">AI</abbr>-generated content contains a function summary, argument descriptions, and explains the return value as we discussed previously.
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
@@ -392,6 +392,8 @@ Try asking a generative AI service such as Google Gemini to read your code.
 - Can the chat-bot create a diagram to illustrate a concept that is relevant to your research software?
 
 :::::::::::::::::::::::::::::::::::::
+
+This can save you a lot of time, but as with any <abbr title="Large langauge model">LLM</abbr>-generated content, always check the output and ensure it's correct!
 
 ::::::::::::::::::::::::::::::::::::: discussion
 
