@@ -168,7 +168,29 @@ Discuss with the group:
 Not all READMEs must follow this structure.
 Always adapt the format of your documentation to suit the specific needs of your audience.
 
-## Markdown format
+## Accessibility
+
+Accessibility means **reducing barriers to use** of your research software or participation in the development community on the basis of expeirencing a disability or other social factors. When writing documentation for your code, consider how you can adapt your writing style and present information in a way that means that everyone can interact with it by expending the same amount of time and energy, regardless of their relative abilities.
+
+While this is a broad topic, some general tips to consider when authoring software documentation in a research context are:
+
+- **Global audience:** Explain ideas in a way that can be understood by people anywhere in the world, regardless of background. Be sensitive to cultural differences and avoid offensive language;
+- **Inclusivitiy:** Avoid biased language and value diversity e.g. when writing examples;
+- **Navigation:** Ensure that the documentation is compatible with assistive technologies like screen readers and keyboard navigation.
+
+:::: spoiler
+
+### More about Accessibility
+
+For more information on this topic, please see the following resources:
+
+- Alistair Duggin, [What we mean when we talk about accessibility](https://accessibility.blog.gov.uk/2016/05/16/what-we-mean-when-we-talk-about-accessibility-2/) defines the core concepts of accessibility.
+- Google developer documentation style guide, [Write accessible documentation](https://developers.google.com/style/accessibility) provides helpful examples.
+- Write the Docs, [Accessibility guidelines: for writing and beyond](https://www.writethedocs.org/guide/writing/accessibility/) lists many useful materials.
+
+::::
+
+## Text formatting
 
 Most people prefer to use a file format that allows you to create headers to organise the content into sections or chapters, which is much clearer for the reader.
 
