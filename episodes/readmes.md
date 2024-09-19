@@ -7,31 +7,30 @@ exercises: 2
 :::::::::::::::::::::::::::::::::::::: questions 
 
 - How do we **introduce** our software to new researchers and developers?
-- What is a README file?
-- How do I write a README for my research code?
-- What are the contents of a good README file?
+- How do I structure the basic notes for my research code?
+- What are the contents of good documentation?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Explain why and how to write a README file for research software
-- Learn how to structure a README file into sections
+- Explain why and how to write a **README file** for research software
+- Learn how to **structure** documentation into sections
 - Understand the important components of a good README
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ## What is a README file?
 
-A README file is the first thing a user sees when they find your software. It should give them an approachable overview of the package, define what’s possible to achieve with this code, and get them started on the right track to use the software effectively for their research.
+A README file is the **first thing a user sees** when they find your software. It should give them an approachable overview of the package, define what’s possible to achieve with this code, and get them started on the right track to use the software effectively for their research.
 
-A README contains a brief introduction to the code and shows them how to get started using it. For larger packages, the README forms a concise beginner guide and might link to a more detailed user guide that is located elsewhere.
+A README contains a **brief introduction** to the code and shows them how to get started using it. For larger packages, the README forms a concise beginner guide and might link to a more detailed user guide that is located elsewhere.
 
-The **audience** for a README file is the end user. It's important to consider _the person_ will read your documentation, and to see things from their point of view. It may be someone who is unfamiliar with certain technical terms, or a researcher will less experience of advanced computing. A good approach is to imagine writing a manual for a new user who has never seen this software before.
+The **audience** for a README file is the _end user_, such as a researcher. It's important to consider _the person_ will read your documentation, and to see things from their point of view. It may be someone who is unfamiliar with certain technical terms, or a researcher will less experience of advanced computing. A suitable approach is to imagine writing a manual for a new user who has never seen this software before.
 
 ## How to write a README
 
-To start writing a README file, the simplest way is to just create an empty text file called `README.txt` and start writing. This file should be located in the directory (or folder) that contains your software project. 
+To start writing a README file, the simplest way is to **create an empty text file** called `README.txt` and start writing. This file should be located in the directory (or folder) that contains your software project. 
 
 ::::::::::::::::::::::::::::::::: challenge
 
@@ -98,21 +97,27 @@ The essentials contents of a README file are:
 - **Installation instructions** or a link to further information published elsewhere.
 - **Usage instructions**, ideally including a “quick start” guide with a few simple examples to get people up and running with your software package.
 
-It can be useful to signpost to other, related useful software tools by providing links and explaining how other software is related or different to this project when it comes to addressing these kinds of research problems.
+It can be useful to **signpost** to related useful methods and software tools by providing links and explaining how other software is related or different to this project when it comes to addressing these kinds of research problems.
 
 ::: callout
 
 ## Walk a mile in the user's shoes
 
 Put yourself in the position of a researcher who has encountered your software for the first time.
-Consider, if you had to start from square one, how would you like the code to be introduced to you?
-
-Remember: things that are obvious to you and your colleagues may not be clear to others.
-What **assumed knowledge** must you explicitly explain to get them up to speed?
+Imagine that you had to start from square one, how would you like the code to be introduced to you?
 
 :::
 
-For research code, it’s often important to explain the context in which the software was written and the theory behind it. For example, many researchers write analysis packages or workflows that are based on previously-published research, statistical methods, or theoretical models for which citations can be provided. By including references to research papers we better help the users to understand the methods that are implemented by our software, which enables its users to properly cite their sources and increases the users’ confidence that you have applied those methods correctly.
+::: discussion
+
+Consider your field of research and the technologies you commonly use.
+
+- What things are obvious to you that may not be clear to others?
+- What **assumed knowledge** must you explain to new colleagues to get them up to speed?
+
+:::
+
+For research code, it’s often important to **explain the context** in which the software was written and the theory behind it. For example, many researchers write analysis packages or workflows that are based on previously-published research, statistical methods, or theoretical models for which **citations** can be provided. By including references to research papers we better help the users to understand the methods that are implemented by our software, which enables its users to properly cite their sources and increases the users’ confidence that you have applied those methods correctly.
 
 ### Installation instructions
 
@@ -132,15 +137,19 @@ Think about:
 
 :::
 
-For most research code, the user will need to install the programming language onto their computer, such as R or Python, so it’s useful to link to the download pages and provide a link to the package manager tools that are commonly used in those ecosystems. This might also include listing any prerequisites such as hardware or software that must be installed first, such as device drivers. 
+#### Installing prerequisites
+
+Most research code has several **dependencies**, such as libraries. The user will need to install the programming language onto their computer, such as R or Python, so it’s useful to link to the download pages and provide a link to the package manager tools that are commonly used in those ecosystems. This might also include listing any prerequisites such as hardware or software that must be installed first, such as device drivers. 
 
 Consider how the installation method might differ for users of other common operating systems, such as Windows, Linux, and Mac OS.
 
 ### User guide
 
-All software should include some short guidance on how to use it and what the main options and features are. This might be a “quick start” guide with simple examples of common use-cases, or a walkthrough that uses a sample data set. Explain how the software can be configured or customised, including examples of commonly-used options. If the software integrates with other tools or uses specific file formats for its input and output, it’s useful to explain this here too. It’s a good idea to include links to further documentation if available.
+All software should include some **short guidance on how to use it** and what the main options and features are. This might be a “quick start” guide with simple examples of common use-cases, or a walkthrough that uses a sample data set.
 
-Many users will benefit from a frequently asked questions (FAQ) or troubleshooting notes, which describes common error messages, explains why they occur, and the steps to resolve them.
+Explain how the software can be **configured or customised**, including examples of commonly-used options. If the software integrates with other tools or uses specific file formats for its input and output, it’s useful to explain this here too. It’s a good idea to include links to further documentation if available.
+
+Many users will benefit from a **frequently asked questions** (FAQs) or troubleshooting notes, which describes common error messages, explains why they occur, and the steps to resolve them.
 
 ::: callout
 
@@ -150,7 +159,7 @@ The writing style should be concise, jargon-free, consistent, and pitched at the
 All technical terms and acronyms should be explained.
 However, don’t reinvent the wheel by defining all the terms used, instead link to a reliable external source or journal article.
 
-For more information about good writing style, please refer to these [style guides](https://www.writethedocs.org/guide/writing/style-guides/#traditional-writing-style-guide-resources).
+For more information about the broad topic of improving your writing style, please review these [style guides](https://www.writethedocs.org/guide/writing/style-guides/#traditional-writing-style-guide-resources).
 
 :::
 
@@ -166,7 +175,7 @@ Discuss with the group:
 :::::::::::::::::::::::::::::::::
 
 Not all READMEs must follow this structure.
-Always adapt the format of your documentation to suit the specific needs of your audience.
+Always adapt the format of your documentation to suit the **specific needs** of your audience.
 
 ## Accessibility
 
@@ -192,10 +201,10 @@ For more information on this topic, please see the following resources:
 
 ## Text formatting
 
-Most people prefer to use a file format that allows you to create headers to organise the content into sections or chapters, which is much clearer for the reader.
+Most people prefer to use a file format that allows you to format text and create headers to organise the content into sections or chapters, which makes the content more **comprehensible for the reader**.
 
 In this case, a [Markdown](https://daringfireball.net/projects/markdown/) document may be used.
-Markdown is a simple _markup language_ that allows you to format your text using symbols to represent headers, bold text, bullet lists, etc. that are displayed to the user in an appealing way. The Markdown syntax will be converted into appealing visual styles that make your documentation more aesthetically pleasing and easier to read.
+Markdown is a simple _markup language_ that indicates into **semantic labelling** (such as emphasis and structure) and visual styles that make your documentation more aesthetically pleasing and easier to navigate. It allows you to format your text using symbols to represent headers, bold text, bullet lists, etc. that are displayed to the user using their screen or other device, depending upon accessibility requirements.
 
 :::: spoiler
 
@@ -253,27 +262,29 @@ mv README.txt README.md
 
 :::::::::::::::::::::::::::::::::::::::::::
 
-An example README file in Markdown format is shown below, in a file called `README.md` where .md is the file extension for Markdown files.
+An example README file in Markdown format is shown below, in a file called `README.md` where ".md" is the file extension for Markdown files.
 
 ### Section headers
 
-You can separate your document into hierarchical sections with headings using the `#` symbol. This makes your README easier to navigate. For example:
+You can separate your document into **hierarchical sections** with headings using the `#` symbol. This makes your README easier to navigate. For example:
 
 ```markdown
 # Birdsong identification tool
 
-This user guide provides instructions on how to use this birdsong identifier. The software is designed to assist users in identifying bird species based on their vocalisations.
+This user guide provides instructions on how to use this birdsong
+identifier. The software is designed to assist users in
+identifying bird species based on their vocalisations.
 
 # Installation
 
-To install this software...
+To install this software, follow the steps below...
 
 # Usage
 
-To use this package...
+To use this package, start by configuring...
 ```
 
-The “#” symbol means that line will be converted into a header and displayed to the reader in a large, bold font. This makes it easier for the reader to find the part of your text they're looking for, just like having chapters in a book.
+The hash `#` symbol means that line will be converted into a header and displayed to the reader in a large, bold font. This makes it easier for the reader to find the part of your text they're looking for, just like having chapters in a book.
 
 ::::::::::::::::::::::::::::::::: challenge
 
@@ -335,7 +346,7 @@ These subheadings help the users to navigate the document.
 
 :::::::::::::::::::::::::::::::::
 
-If your code is published on GitHub, the home page of your code repository will display the README.md file, including a navigation menu that is automatically created to easily select the section of the document to view.
+If your code is published on [GitHub](https://github.com), the home page of your code repository will [display the README file](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes), including a [table of contents](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes#auto-generated-table-of-contents-for-readme-files) that is automatically created to easily select the section of the document to view.
 
 !["This repository has a README file with chapters, making navigation easier."](fig/bootstrap-readme-chapters.png){alt="A screenshot of a GitHub repository with a drop-down navigation menu on the readme text box."}
 
@@ -343,13 +354,12 @@ If your code is published on GitHub, the home page of your code repository will 
 
 Here are some commonly-used text formatting options that can be used with Markdown syntax:
 
-| Text display      | Syntax              |
-| ----------------- | ------------------- |
-| **Bold font**     | `**Bold font**`     |
-| *Italic text*     | `*Italic text*`     |
-| <u>Underlined</u> | `<u>Underlined</u>` |
-| `Code block`      | ``` `code block` ``` |
-| [Hyperlink](https://sheffield.ac.uk) | `[Hyperlink](https://sheffield.ac.uk)` |
+| Meaning   | Example      | Syntax              |
+| ------- | ---------- | ------------------- |
+| Strong text  | **Eastern towhee**     | `**Eastern towhee**`     |
+| Emphasised text  | *Pipilo erythrophthalmus*     | `*Pipilo erythrophthalmus*`     |
+| Code block  | `name = "Pipilo erythrophthalmus"`      | ``` `name = "Pipilo erythrophthalmus"` ``` |
+| Hyperlink   |  [Eastern towhee](https://en.wikipedia.org/wiki/Eastern_towhee) | `[Eastern towhee](https://en.wikipedia.org/wiki/Eastern_towhee)` |
 
 These may be used to add emphasis to parts of the text or highligh key words and phrases.
 Using text formatting makes your software documentation easier to skim-read, so researchers can quickly find the part of the text that's relevant for what they're working on.
@@ -363,19 +373,21 @@ Identify several _key words_ in your README file. Highlight them in using a bold
 The Markdown syntax for bold font is to wrap the text in two asterixes `**`.
 This may be applied to single words or to phrases.
 
-For example:
+For example, we can strongly emphasise a single word:
 
 ```markdown
 Identify a bird based on the **sound** of its call.
 ```
 
-Identify a bird based on the **sound** of its call.
+> Identify a bird based on the **sound** of its call.
+
+Or emphasise a phrase:
 
 ```markdown
 **Identify a bird** based on the _sound of its call_.
 ```
 
-**Identify a bird** based on the _sound of its call_.
+> **Identify a bird** based on the *sound of its call*.
 
 ::::
 
@@ -386,22 +398,28 @@ Identify a bird based on the **sound** of its call.
 We can create a citation with appealing formatting by using the blockquote syntax in Markdown, which is similar to the method used in email.
 
 ```markdown
-> This text is part of a blockquote.
+> The eastern towhee (Pipilo erythrophthalmus) is a large New World
+> sparrow. The taxonomy of the towhees has been under debate in
+> recent decades, and formerly this bird and the spotted towhee
+> were considered a single species, the rufous-sided towhee.
 ```
 
 This will be rendered with the following apperearance:
 
-> This text is part of a blockquote.
+> The eastern towhee (Pipilo erythrophthalmus) is a large New World sparrow.
+> The taxonomy of the towhees has been under debate in recent decades,
+> and formerly this bird and the spotted towhee were considered a single species, the rufous-sided towhee.
+
+(This text was retrieved from the *Wikipedia* page on the [Eastern towhee
+](https://en.wikipedia.org/wiki/Eastern_towhee).)
 
 ### Code blocks
 
-If you'd like to present the user will examples of source code, use code fences to display the code in a special text box with syntax highlighting. For example:
+If you'd like to present the user will examples of source code, use [code fences](https://www.markdownguide.org/extended-syntax/#fenced-code-blocks) to display the code in a special text box with syntax highlighting. To do this, wrap the code in three backticks &#96;&#96;&#96;. For example:
 
-<code>
 ```
-pi = 3.14
+genus = "Struthio"
 ```
-</code>
 
 ::: callout
 
@@ -430,3 +448,4 @@ Use diagrams and screenshots for clarity.
 For more information about writing basic software documentation, please review the following materials:
 
 - Raphael Pierzina [Hi, my name is README!](https://www.writethedocs.org/videos/eu/2017/hi-my-name-is-readme-raphael-pierzina/)
+- Aleksandra Pawlik [Five top tips on documentation](https://www.software.ac.uk/guide/five-top-tips-documentation)

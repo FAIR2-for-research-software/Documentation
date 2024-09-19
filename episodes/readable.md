@@ -214,6 +214,18 @@ class Bird:
     pass
 ```
 
+```python
+class ConservationStatus:
+    """
+    IUCN Red List of Threatened Species
+    """
+    EX = "Extinct"
+    EW = "Extinct in the wild"
+    CR = "Critically Endangered"
+    EN = "Endangered"
+    LC = "Least Concern"
+```
+
 Variables use lower case with underscores
 
 ```python
