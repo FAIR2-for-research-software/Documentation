@@ -201,7 +201,7 @@ Try modifying your example code by renaming the variables and functions.
 
 The communities of developers that use each programming language usually follow a conventional approach when naming objects in their code.
 
-It's also a good idea not to use single-letter names such as `x` or `T` because it may not be clear to someone else what these represent. Also, avoid the common pitfall of naming a variable with the same name as an inbuilt function such as `sum()`.
+It's also a good idea not to use single-letter names such as `x` or `T` because it may not be clear to someone else what these represent. Also, avoid the common pitfall of naming a variable with the same name as an [in-built](https://docs.python.org/3/library/functions.html) [function](https://stat.ethz.ch/R-manual/R-devel/library/base/html/00Index.html) such as `sum()`.
 
 ::: group-tab
 
@@ -210,47 +210,53 @@ It's also a good idea not to use single-letter names such as `x` or `T` because 
 Classes use capitalised words
 
 ```python
-class VectorSpace:
+class Bird:
     pass
 ```
 
 Variables use lower case with underscores
 
 ```python
-my_user_name = "Joe"
+bird_name = "Blue jay"
 ```
 
 Constants are named using upper case with underscores
 
 ```python
-NEGATIVE_ONE = -1
+TAXONOMY_ORDER = "Passeriformes"
 ```
 
- the [Naming Conventions](https://peps.python.org/pep-0008/#naming-conventions) section of <acronym title="Python Enhancement Proposals">PEP</acronym> 8.
+ For more information about this aspect of coding style, please read the [Naming Conventions](https://peps.python.org/pep-0008/#naming-conventions) section of <acronym title="Python Enhancement Proposals">PEP</acronym> 8.
 
 ### R
 
 Classes use capitalised words
 
 ```R
-setClass("VectorSpace", representation = character())
+setClass("Bird", representation = character())
 ```
 
 Variables use lower case with underscores
 
 ```R
-my_user_name <- "Joe"
+bird_name <- "Blue jay"
 ```
 
 Constants are named using upper case with underscores
 
 ```R
-NEGATIVE_ONE <- -1
+TAXONOMY_ORDER <- "Passeriformes"
 ```
 
 For more information about this aspect of coding style, please read the [Tidyverse Style Guide](https://style.tidyverse.org/).
 
 :::
+
+:::: Challenge
+
+Try writing a simple example of a research-related script using the style conventions discussed above.
+
+::::
 
 Although these rules aren't strict, because your code will still run without error, it does help clarify your intentions by describing what type of variable or object is being referred to. Whatever you do, please try to follow a consistent style with your collaborators to avoid confusion.
 
@@ -264,19 +270,27 @@ To add comments to your code, use the `#` symbol at the start of a new line, lik
 
 ### Python
 
+Python [comments](https://docs.python.org/3/reference/lexical_analysis.html#comments) start with a hash character (`#`) and are ignored when the code runs.
+
 ```python
 # Add three to my age
 age = 21
-age =+ 3
+age += 3
 ```
 
+There's more information about [Python operators](https://docs.python.org/3/reference/lexical_analysis.html#operators) such as `+=` in the documentation for that programming language.
+
 ### R
+
+Python [comments](https://cran.r-project.org/doc/manuals/R-lang.html#Comments) start with a hash character (`#`) and are ignored when the code runs.
 
 ```R
 # Add three to my age
 age <- 21
 age = age + 3
 ```
+
+There's more information about [R operators](https://cran.r-project.org/doc/manuals/R-lang.html#Operators) in the documentation for that programming language.
 
 :::
 
@@ -395,7 +409,7 @@ None of these code examples will cause an error because type hints are just pass
 
 This is just a brief introduction to code annotation. For the keen coder, there are many more features and tools available to make your software easier for other people to understand and use.
 
-It will take some time and effort to write these labels, but it will pay off in the long run to think about variables tapes and make it easier to interpret how the code will behave as it operates. It's best practice to use an integrated development environment (IDE) that will check your type hints and inform you if it detects a problem with your source code.
+It will take some time and effort to write these labels, but it will pay off in the long run to think about variables types and make it easier to interpret how the code will behave as it operates. It's best practice to use an integrated development environment (IDE) that will check your type hints and inform you if it detects a problem with your source code.
 
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
