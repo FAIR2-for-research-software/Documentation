@@ -342,7 +342,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Code readability</h1>
-        <p>Last updated on 2024-09-12 |
+        <p>Last updated on 2024-09-19 |
 
         <a href="https://github.com/Joe-Heffer-Shef/FAIR4RS-Documentation/edit/main/episodes/readable.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -407,7 +407,7 @@ shown in a red font.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-1" class="tab-content">
-<div id="nav-tabpanel-1-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-Python">
+<div id="nav-tabpanel-1-Python" class="tab-pane show active" aria-labelledby="nav-tab-1-Python" role="tabpanel">
 <p>Without syntax highlighting:</p>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -451,7 +451,7 @@ shown in a red font.</p>
 <span id="cb2-16"><a href="#cb2-16" tabindex="-1"></a>  <span class="cf">return</span> word_count</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-1-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-R">
+<div id="nav-tabpanel-1-R" class="tab-pane" aria-labelledby="nav-tab-1-R" role="tabpanel">
 <p>Without syntax highlighting:</p>
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">DEFAULT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -570,7 +570,7 @@ it’s easy to interpret their purpose.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-2" class="tab-content">
-<div id="nav-tabpanel-2-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-2-Python">
+<div id="nav-tabpanel-2-Python" class="tab-pane show active" aria-labelledby="nav-tab-2-Python" role="tabpanel">
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -582,7 +582,7 @@ it’s easy to interpret their purpose.</p>
 <span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a>    <span class="cf">return</span> area</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-2-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-R">
+<div id="nav-tabpanel-2-R" class="tab-pane" aria-labelledby="nav-tab-2-R" role="tabpanel">
 <div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -620,8 +620,8 @@ code.</p>
 <p>It’s also a good idea not to use single-letter names such as
 <code>x</code> or <code>T</code> because it may not be clear to someone
 else what these represent. Also, avoid the common pitfall of naming a
-variable with the same name as an inbuilt function such as
-<code>sum()</code>.</p>
+variable with the same name as an <a href="https://docs.python.org/3/library/functions.html" class="external-link">in-built</a> <a href="https://stat.ethz.ch/R-manual/R-devel/library/base/html/00Index.html" class="external-link">function</a>
+such as <code>sum()</code>.</p>
 <div class="tabs">
 <nav><div id="nav-tab-3" class="nav nav-tabs" role="tablist">
 <button class="nav-link active" id="nav-tab-3-Python" name="Python" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-3-Python" type="button" role="tab" aria-controls="nav-tabpanel-3-Python" aria-selected="true">
@@ -636,57 +636,62 @@ variable with the same name as an inbuilt function such as
 </button>
 </div>
 </nav><div id="nav-tabContent-3" class="tab-content">
-<div id="nav-tabpanel-3-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-3-Python">
+<div id="nav-tabpanel-3-Python" class="tab-pane show active" aria-labelledby="nav-tab-3-Python" role="tabpanel">
 <p>Classes use capitalised words</p>
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="kw">class</span> VectorSpace:</span>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="kw">class</span> Bird:</span>
 <span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a>    <span class="cf">pass</span></span></code></pre>
 </div>
 <p>Variables use lower case with underscores</p>
 <div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a>my_user_name <span class="op">=</span> <span class="st">"Joe"</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a>bird_name <span class="op">=</span> <span class="st">"Blue jay"</span></span></code></pre>
 </div>
 <p>Constants are named using upper case with underscores</p>
 <div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a>NEGATIVE_ONE <span class="op">=</span> <span class="op">-</span><span class="dv">1</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a>TAXONOMY_ORDER <span class="op">=</span> <span class="st">"Passeriformes"</span></span></code></pre>
 </div>
-<p>the <a href="https://peps.python.org/pep-0008/#naming-conventions" class="external-link">Naming
+<p>For more information about this aspect of coding style, please read
+the <a href="https://peps.python.org/pep-0008/#naming-conventions" class="external-link">Naming
 Conventions</a> section of
 <acronym title="Python Enhancement Proposals">PEP</acronym> 8.</p>
 </div>
-<div id="nav-tabpanel-3-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-3-R">
+<div id="nav-tabpanel-3-R" class="tab-pane" aria-labelledby="nav-tab-3-R" role="tabpanel">
 <p>Classes use capitalised words</p>
 <div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="kw">setClass</span><span class="op">(</span><span class="st">"VectorSpace"</span>, representation <span class="op">=</span> <span class="fu">character</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></code></pre>
+<code class="sourceCode R"><span><span class="kw">setClass</span><span class="op">(</span><span class="st">"Bird"</span>, representation <span class="op">=</span> <span class="fu">character</span><span class="op">(</span><span class="op">)</span><span class="op">)</span></span></code></pre>
 </div>
 <p>Variables use lower case with underscores</p>
 <div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">my_user_name</span> <span class="op">&lt;-</span> <span class="st">"Joe"</span></span></code></pre>
+<code class="sourceCode R"><span><span class="va">bird_name</span> <span class="op">&lt;-</span> <span class="st">"Blue jay"</span></span></code></pre>
 </div>
 <p>Constants are named using upper case with underscores</p>
 <div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">NEGATIVE_ONE</span> <span class="op">&lt;-</span> <span class="op">-</span><span class="fl">1</span></span></code></pre>
+<code class="sourceCode R"><span><span class="va">TAXONOMY_ORDER</span> <span class="op">&lt;-</span> <span class="st">"Passeriformes"</span></span></code></pre>
 </div>
 <p>For more information about this aspect of coding style, please read
 the <a href="https://style.tidyverse.org/" class="external-link">Tidyverse Style
 Guide</a>.</p>
 </div>
 </div>
+</div>
+<div class="Challenge">
+<p>Try writing a simple example of a research-related script using the
+style conventions discussed above.</p>
 </div>
 <p>Although these rules aren’t strict, because your code will still run
 without error, it does help clarify your intentions by describing what
@@ -718,16 +723,25 @@ start of a new line, like so:</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-4" class="tab-content">
-<div id="nav-tabpanel-4-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-4-Python">
+<div id="nav-tabpanel-4-Python" class="tab-pane show active" aria-labelledby="nav-tab-4-Python" role="tabpanel">
+<p>Python <a href="https://docs.python.org/3/reference/lexical_analysis.html#comments" class="external-link">comments</a>
+start with a hash character (<code>#</code>) and are ignored when the
+code runs.</p>
 <div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="co"># Add three to my age</span></span>
 <span id="cb13-2"><a href="#cb13-2" tabindex="-1"></a>age <span class="op">=</span> <span class="dv">21</span></span>
-<span id="cb13-3"><a href="#cb13-3" tabindex="-1"></a>age <span class="op">=+</span> <span class="dv">3</span></span></code></pre>
+<span id="cb13-3"><a href="#cb13-3" tabindex="-1"></a>age <span class="op">+=</span> <span class="dv">3</span></span></code></pre>
 </div>
+<p>There’s more information about <a href="https://docs.python.org/3/reference/lexical_analysis.html#operators" class="external-link">Python
+operators</a> such as <code>+=</code> in the documentation for that
+programming language.</p>
 </div>
-<div id="nav-tabpanel-4-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-4-R">
+<div id="nav-tabpanel-4-R" class="tab-pane" aria-labelledby="nav-tab-4-R" role="tabpanel">
+<p>Python <a href="https://cran.r-project.org/doc/manuals/R-lang.html#Comments" class="external-link">comments</a>
+start with a hash character (<code>#</code>) and are ignored when the
+code runs.</p>
 <div class="codewrapper sourceCode" id="cb14">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -736,6 +750,8 @@ start of a new line, like so:</p>
 <span><span class="va">age</span> <span class="op">&lt;-</span> <span class="fl">21</span></span>
 <span><span class="va">age</span> <span class="op">=</span> <span class="va">age</span> <span class="op">+</span> <span class="fl">3</span></span></code></pre>
 </div>
+<p>There’s more information about <a href="https://cran.r-project.org/doc/manuals/R-lang.html#Operators" class="external-link">R
+operators</a> in the documentation for that programming language.</p>
 </div>
 </div>
 </div>
@@ -782,7 +798,7 @@ they move through the system.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-5" class="tab-content">
-<div id="nav-tabpanel-5-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-5-Python">
+<div id="nav-tabpanel-5-Python" class="tab-pane show active" aria-labelledby="nav-tab-5-Python" role="tabpanel">
 <p>In the Python programming language, we can tell the user what type of
 data we expect each variable to contain by using the syntax below. This
 colon means that the <code>age</code> variable should contain a value
@@ -796,7 +812,7 @@ with the integer type, <code>int</code>.</p>
 of the Python Documentation and the <a href="https://mypy.readthedocs.io/en/stable/cheat_sheet_py3.html" class="external-link">Type
 hints cheat sheet</a> in the mypy documentation.</p>
 </div>
-<div id="nav-tabpanel-5-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-5-R">
+<div id="nav-tabpanel-5-R" class="tab-pane" aria-labelledby="nav-tab-5-R" role="tabpanel">
 <p>There is no type hinting feature in base R, although some packages
 are available that enable this. Here, the <code>L</code> symbol at the
 end of the number tells the R interpreter that this is an integer data
@@ -834,7 +850,7 @@ reader.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-6" class="tab-content">
-<div id="nav-tabpanel-6-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-6-Python">
+<div id="nav-tabpanel-6-Python" class="tab-pane show active" aria-labelledby="nav-tab-6-Python" role="tabpanel">
 <p>Below is the source code for a simple Python function that calculates
 the sum of two numbers. I’ve labelled each of the function arguments
 <code>a</code> and <code>b</code> with variable annotations that let you
@@ -851,7 +867,7 @@ declaration as <code>-&gt; int</code>.</p>
 <span id="cb17-3"><a href="#cb17-3" tabindex="-1"></a>    <span class="cf">return</span> a <span class="op">+</span> b</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-6-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-6-R">
+<div id="nav-tabpanel-6-R" class="tab-pane" aria-labelledby="nav-tab-6-R" role="tabpanel">
 <p>Below is the source code for a simple R function that calculates the
 sum of two numbers.</p>
 <p>In R, there is no inbuilt functionality for annotating the expected
@@ -926,7 +942,7 @@ software without running it.</p>
 coder, there are many more features and tools available to make your
 software easier for other people to understand and use.</p>
 <p>It will take some time and effort to write these labels, but it will
-pay off in the long run to think about variables tapes and make it
+pay off in the long run to think about variables types and make it
 easier to interpret how the code will behave as it operates. It’s best
 practice to use an integrated development environment (IDE) that will
 check your type hints and inform you if it detects a problem with your
@@ -1031,7 +1047,7 @@ any links that you are not going to use.
   "url": "https://Joe-Heffer-Shef.github.io/FAIR4RS-Documentation/readable.html",
   "identifier": "https://Joe-Heffer-Shef.github.io/FAIR4RS-Documentation/readable.html",
   "dateCreated": "2024-05-20",
-  "dateModified": "2024-09-12",
+  "dateModified": "2024-09-19",
   "datePublished": "2024-09-19"
 }
 
