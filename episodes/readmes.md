@@ -415,11 +415,13 @@ This will be rendered with the following apperearance:
 
 ### Code blocks
 
-If you'd like to present the user will examples of source code, use [code fences](https://www.markdownguide.org/extended-syntax/#fenced-code-blocks) to display the code in a special text box with syntax highlighting. To do this, wrap the code in three backticks &#96;&#96;&#96;. For example:
+If you'd like to present the user will examples of source code, use [code fences](https://www.markdownguide.org/extended-syntax/#fenced-code-blocks) to display the code in a special text box with syntax highlighting. To do this, wrap the code in three backticks `` ` ``. For example:
 
+````markdown
 ```
 genus = "Struthio"
 ```
+````
 
 ::: callout
 
