@@ -260,7 +260,7 @@
 <div class="accordion accordion-flush" id="accordionFlush6">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading6">
-        <a href="sites.html">5. Documentation sites</a>
+        <a href="contributors.html">5. Contributor guidance</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -269,7 +269,7 @@
 <div class="accordion accordion-flush" id="accordionFlush7">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading7">
-        <a href="contributors.html">6. Contributor guidance</a>
+        <a href="sites.html">6. Documentation sites</a>
     </div><!--/div.accordion-header-->
 
   </div><!--/div.accordion-item-->
@@ -342,7 +342,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Writing README files</h1>
-        <p>Last updated on 2024-09-19 |
+        <p>Last updated on 2024-09-25 |
 
         <a href="https://github.com/FAIR2-for-research-software/Documentation/edit/main/episodes/readmes.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -363,9 +363,8 @@
 <h3 class="card-title">Questions</h3>
 <ul><li>How do we <strong>introduce</strong> our software to new researchers
 and developers?</li>
-<li>What is a README file?</li>
-<li>How do I write a README for my research code?</li>
-<li>What are the contents of a good README file?</li>
+<li>How do I structure the basic notes for my research code?</li>
+<li>What are the contents of good documentation?</li>
 </ul></div>
 </div>
 </div>
@@ -373,9 +372,10 @@ and developers?</li>
 <div class="card-body">
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
-<ul><li>Explain why and how to write a README file for research
-software</li>
-<li>Learn how to structure a README file into sections</li>
+<ul><li>Explain why and how to write a <strong>README file</strong> for
+research software</li>
+<li>Learn how to <strong>structure</strong> documentation into
+sections</li>
 <li>Understand the important components of a good README</li>
 </ul></div>
 </div>
@@ -383,26 +383,27 @@ software</li>
 </div>
 </div>
 <section><h2 class="section-heading" id="what-is-a-readme-file">What is a README file?<a class="anchor" aria-label="anchor" href="#what-is-a-readme-file"></a></h2>
-<hr class="half-width"><p>A README file is the first thing a user sees when they find your
-software. It should give them an approachable overview of the package,
-define what’s possible to achieve with this code, and get them started
-on the right track to use the software effectively for their
-research.</p>
-<p>A README contains a brief introduction to the code and shows them how
-to get started using it. For larger packages, the README forms a concise
-beginner guide and might link to a more detailed user guide that is
-located elsewhere.</p>
-<p>The <strong>audience</strong> for a README file is the end user. It’s
-important to consider <em>the person</em> will read your documentation,
-and to see things from their point of view. It may be someone who is
-unfamiliar with certain technical terms, or a researcher will less
-experience of advanced computing. A good approach is to imagine writing
-a manual for a new user who has never seen this software before.</p>
+<hr class="half-width"><p>A README file is the <strong>first thing a user sees</strong> when
+they find your software. It should give them an approachable overview of
+the package, define what’s possible to achieve with this code, and get
+them started on the right track to use the software effectively for
+their research.</p>
+<p>A README contains a <strong>brief introduction</strong> to the code
+and shows them how to get started using it. For larger packages, the
+README forms a concise beginner guide and might link to a more detailed
+user guide that is located elsewhere.</p>
+<p>The <strong>audience</strong> for a README file is the <em>end
+user</em>, such as a researcher. It’s important to consider <em>the
+person</em> will read your documentation, and to see things from their
+point of view. It may be someone who is unfamiliar with certain
+technical terms, or a researcher will less experience of advanced
+computing. A suitable approach is to imagine writing a manual for a new
+user who has never seen this software before.</p>
 </section><section><h2 class="section-heading" id="how-to-write-a-readme">How to write a README<a class="anchor" aria-label="anchor" href="#how-to-write-a-readme"></a></h2>
-<hr class="half-width"><p>To start writing a README file, the simplest way is to just create an
-empty text file called <code>README.txt</code> and start writing. This
-file should be located in the directory (or folder) that contains your
-software project.</p>
+<hr class="half-width"><p>To start writing a README file, the simplest way is to <strong>create
+an empty text file</strong> called <code>README.txt</code> and start
+writing. This file should be located in the directory (or folder) that
+contains your software project.</p>
 <div id="challenge1" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -420,7 +421,7 @@ contain your work. Then, start writing your README!</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Follow these general steps to create a README file. The specific
 details for each operating system are detailed below.</p>
@@ -448,7 +449,7 @@ details for each operating system are detailed below.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-1" class="tab-content">
-<div id="nav-tabpanel-1-Windows" class="tab-pane show active" aria-labelledby="nav-tab-1-Windows" role="tabpanel">
+<div id="nav-tabpanel-1-Windows" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-Windows">
 <ol style="list-style-type: decimal"><li>Open <a href="https://support.microsoft.com/en-gb/windows/find-and-open-file-explorer-ef370130-1cca-9dc5-e0df-2f7416fe1cb1" class="external-link">File
 Explorer</a> to browse the file system;</li>
 <li>In a folder, right click and select New → Folder;</li>
@@ -458,7 +459,7 @@ Document;</li>
 <li>Name the file <code>README.txt</code>;</li>
 <li>Double-click on the file to open it for editing.</li>
 </ol></div>
-<div id="nav-tabpanel-1-Linux" class="tab-pane" aria-labelledby="nav-tab-1-Linux" role="tabpanel">
+<div id="nav-tabpanel-1-Linux" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-Linux">
 <p>Use the <a href="https://help.ubuntu.com/stable/ubuntu-help/files-browse.html.en" class="external-link">File
 Manager</a> to create a new directory called <code>oddsong</code>.
 Inside that folder, create a new text file called
@@ -473,7 +474,7 @@ Inside that folder, create a new text file called
 <span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a><span class="fu">nano</span> oddsong/README.txt</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-1-MacOS" class="tab-pane" aria-labelledby="nav-tab-1-MacOS" role="tabpanel">
+<div id="nav-tabpanel-1-MacOS" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-MacOS">
 <p>Use the <a href="https://support.apple.com/en-gb/guide/mac-help/mchlp2605/mac" class="external-link">Finder</a>
 file manager to create a new directory called <code>oddsong</code>.
 Inside that folder, create a new text file called
@@ -509,10 +510,10 @@ information published elsewhere.</li>
 <strong>Usage instructions</strong>, ideally including a “quick
 start” guide with a few simple examples to get people up and running
 with your software package.</li>
-</ul><p>It can be useful to signpost to other, related useful software tools
-by providing links and explaining how other software is related or
-different to this project when it comes to addressing these kinds of
-research problems.</p>
+</ul><p>It can be useful to <strong>signpost</strong> to related useful
+methods and software tools by providing links and explaining how other
+software is related or different to this project when it comes to
+addressing these kinds of research problems.</p>
 <div id="walk-a-mile-in-the-users-shoes" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -521,29 +522,41 @@ research problems.</p>
 <h3 class="callout-title">Walk a mile in the user’s shoes</h3>
 <div class="callout-content">
 <p>Put yourself in the position of a researcher who has encountered your
-software for the first time. Consider, if you had to start from square
+software for the first time. Imagine that you had to start from square
 one, how would you like the code to be introduced to you?</p>
-<p>Remember: things that are obvious to you and your colleagues may not
-be clear to others. What <strong>assumed knowledge</strong> must you
-explicitly explain to get them up to speed?</p>
 </div>
 </div>
 </div>
-<p>For research code, it’s often important to explain the context in
-which the software was written and the theory behind it. For example,
-many researchers write analysis packages or workflows that are based on
-previously-published research, statistical methods, or theoretical
-models for which citations can be provided. By including references to
-research papers we better help the users to understand the methods that
-are implemented by our software, which enables its users to properly
-cite their sources and increases the users’ confidence that you have
-applied those methods correctly.</p>
+<div id="discussion1" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Discussion</h3>
+<div class="callout-content">
+<p>Consider your field of research and the technologies you commonly
+use.</p>
+<ul><li>What things are obvious to you that may not be clear to others?</li>
+<li>What <strong>assumed knowledge</strong> must you explain to new
+colleagues to get them up to speed?</li>
+</ul></div>
+</div>
+</div>
+<p>For research code, it’s often important to <strong>explain the
+context</strong> in which the software was written and the theory behind
+it. For example, many researchers write analysis packages or workflows
+that are based on previously-published research, statistical methods, or
+theoretical models for which <strong>citations</strong> can be provided.
+By including references to research papers we better help the users to
+understand the methods that are implemented by our software, which
+enables its users to properly cite their sources and increases the
+users’ confidence that you have applied those methods correctly.</p>
 <div class="section level3">
 <h3 id="installation-instructions">Installation instructions<a class="anchor" aria-label="anchor" href="#installation-instructions"></a></h3>
 <p>Provide instructions for installing your research software. These
 steps should be laid out in simple, clear language and organised in a
 step-by-step manner.</p>
-<div id="discussion1" class="callout discussion">
+<div id="discussion2" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
@@ -562,28 +575,34 @@ required?</li>
 </ul></div>
 </div>
 </div>
-<p>For most research code, the user will need to install the programming
-language onto their computer, such as R or Python, so it’s useful to
-link to the download pages and provide a link to the package manager
-tools that are commonly used in those ecosystems. This might also
-include listing any prerequisites such as hardware or software that must
-be installed first, such as device drivers.</p>
+<div class="section level4">
+<h4 id="installing-prerequisites">Installing prerequisites<a class="anchor" aria-label="anchor" href="#installing-prerequisites"></a></h4>
+<p>Most research code has several <strong>dependencies</strong>, such as
+libraries. The user will need to install the programming language onto
+their computer, such as R or Python, so it’s useful to link to the
+download pages and provide a link to the package manager tools that are
+commonly used in those ecosystems. This might also include listing any
+prerequisites such as hardware or software that must be installed first,
+such as device drivers.</p>
 <p>Consider how the installation method might differ for users of other
 common operating systems, such as Windows, Linux, and Mac OS.</p>
 </div>
+</div>
 <div class="section level3">
 <h3 id="user-guide">User guide<a class="anchor" aria-label="anchor" href="#user-guide"></a></h3>
-<p>All software should include some short guidance on how to use it and
-what the main options and features are. This might be a “quick start”
-guide with simple examples of common use-cases, or a walkthrough that
-uses a sample data set. Explain how the software can be configured or
-customised, including examples of commonly-used options. If the software
-integrates with other tools or uses specific file formats for its input
-and output, it’s useful to explain this here too. It’s a good idea to
-include links to further documentation if available.</p>
-<p>Many users will benefit from a frequently asked questions (FAQ) or
-troubleshooting notes, which describes common error messages, explains
-why they occur, and the steps to resolve them.</p>
+<p>All software should include some <strong>short guidance on how to use
+it</strong> and what the main options and features are. This might be a
+“quick start” guide with simple examples of common use-cases, or a
+walkthrough that uses a sample data set.</p>
+<p>Explain how the software can be <strong>configured or
+customised</strong>, including examples of commonly-used options. If the
+software integrates with other tools or uses specific file formats for
+its input and output, it’s useful to explain this here too. It’s a good
+idea to include links to further documentation if available.</p>
+<p>Many users will benefit from a <strong>frequently asked
+questions</strong> (FAQs) or troubleshooting notes, which describes
+common error messages, explains why they occur, and the steps to resolve
+them.</p>
 <div id="writing-style" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -596,8 +615,8 @@ pitched at the appropriate level to the intended target audience. All
 technical terms and acronyms should be explained. However, don’t
 reinvent the wheel by defining all the terms used, instead link to a
 reliable external source or journal article.</p>
-<p>For more information about good writing style, please refer to these
-<a href="https://www.writethedocs.org/guide/writing/style-guides/#traditional-writing-style-guide-resources" class="external-link">style
+<p>For more information about the broad topic of improving your writing
+style, please review these <a href="https://www.writethedocs.org/guide/writing/style-guides/#traditional-writing-style-guide-resources" class="external-link">style
 guides</a>.</p>
 </div>
 </div>
@@ -605,7 +624,7 @@ guides</a>.</p>
 <p>Diagrams can be particularly useful to explain complex concepts and
 workflows. Screenshots may also provide a visual demonstration of how
 the software will work.</p>
-<div id="discussion2" class="callout discussion">
+<div id="discussion3" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
@@ -623,7 +642,8 @@ walkthrough?</li>
 </div>
 </div>
 <p>Not all READMEs must follow this structure. Always adapt the format
-of your documentation to suit the specific needs of your audience.</p>
+of your documentation to suit the <strong>specific needs</strong> of
+your audience.</p>
 </div>
 </section><section><h2 class="section-heading" id="accessibility">Accessibility<a class="anchor" aria-label="anchor" href="#accessibility"></a></h2>
 <hr class="half-width"><p>Accessibility means <strong>reducing barriers to use</strong> of your
@@ -651,7 +671,7 @@ navigation.</li>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> More about Accessibility </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="accordion-body">
 <p>For more information on this topic, please see the following
 resources:</p>
@@ -667,22 +687,24 @@ guidelines: for writing and beyond</a> lists many useful materials.</li>
 </div>
 </div>
 </section><section><h2 class="section-heading" id="text-formatting">Text formatting<a class="anchor" aria-label="anchor" href="#text-formatting"></a></h2>
-<hr class="half-width"><p>Most people prefer to use a file format that allows you to create
-headers to organise the content into sections or chapters, which is much
-clearer for the reader.</p>
+<hr class="half-width"><p>Most people prefer to use a file format that allows you to format
+text and create headers to organise the content into sections or
+chapters, which makes the content more <strong>comprehensible for the
+reader</strong>.</p>
 <p>In this case, a <a href="https://daringfireball.net/projects/markdown/" class="external-link">Markdown</a>
 document may be used. Markdown is a simple <em>markup language</em> that
-allows you to format your text using symbols to represent headers, bold
-text, bullet lists, etc. that are displayed to the user in an appealing
-way. The Markdown syntax will be converted into appealing visual styles
-that make your documentation more aesthetically pleasing and easier to
-read.</p>
+indicates into <strong>semantic labelling</strong> (such as emphasis and
+structure) and visual styles that make your documentation more
+aesthetically pleasing and easier to navigate. It allows you to format
+your text using symbols to represent headers, bold text, bullet lists,
+etc. that are displayed to the user using their screen or other device,
+depending upon accessibility requirements.</p>
 <div id="accordionSpoiler2" class="accordion spoiler-accordion accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
   <h3 class="accordion-header" id="headingSpoiler2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> What is a markup language? </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
 <div class="accordion-body">
 <p>A <a href="https://en.wikipedia.org/wiki/Markup_language" class="external-link">markup
 language</a> is a system of special characters that are used to
@@ -717,7 +739,7 @@ formatting options.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>Follow these steps to rename <code>README.txt</code> to
 <code>README.md</code>.</p>
@@ -740,7 +762,7 @@ formatting options.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-2" class="tab-content">
-<div id="nav-tabpanel-2-Windows" class="tab-pane show active" aria-labelledby="nav-tab-2-Windows" role="tabpanel">
+<div id="nav-tabpanel-2-Windows" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-2-Windows">
 <p>Use <a href="https://support.microsoft.com/en-gb/windows/find-and-open-file-explorer-ef370130-1cca-9dc5-e0df-2f7416fe1cb1" class="external-link">File
 Explorer</a> to <a href="https://support.microsoft.com/en-gb/office/rename-a-file-baea7aab-760b-4ee0-af58-06e940d505a4" class="external-link">rename
 the file</a> from <code>README.txt</code> to <code>README.md</code>.</p>
@@ -748,7 +770,7 @@ the file</a> from <code>README.txt</code> to <code>README.md</code>.</p>
 <li>Right-click on <code>README.txt</code> and select “Rename”;</li>
 <li>Type <code>README.md</code>.</li>
 </ol></div>
-<div id="nav-tabpanel-2-Linux" class="tab-pane" aria-labelledby="nav-tab-2-Linux" role="tabpanel">
+<div id="nav-tabpanel-2-Linux" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-Linux">
 <p>Use the <a href="https://help.ubuntu.com/stable/ubuntu-help/files-browse.html.en" class="external-link">File
 Manager</a> to <a href="https://help.ubuntu.com/stable/ubuntu-help/files-rename.html.en" class="external-link">rename
 the file</a> from <code>README.txt</code> to <code>README.md</code>.</p>
@@ -759,7 +781,7 @@ the file</a> from <code>README.txt</code> to <code>README.md</code>.</p>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="fu">mv</span> README.txt README.md</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-2-MacOS" class="tab-pane" aria-labelledby="nav-tab-2-MacOS" role="tabpanel">
+<div id="nav-tabpanel-2-MacOS" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-MacOS">
 <p>Use the <a href="https://support.apple.com/en-gb/guide/mac-help/mchlp2605/mac" class="external-link">Finder</a>
 to <a href="https://support.apple.com/en-gb/guide/mac-help/mchlp1144/mac" class="external-link">rename
 the file</a> from <code>README.txt</code> to <code>README.md</code>.</p>
@@ -777,32 +799,34 @@ the file</a> from <code>README.txt</code> to <code>README.md</code>.</p>
 </div>
 </div>
 <p>An example README file in Markdown format is shown below, in a file
-called <code>README.md</code> where .md is the file extension for
+called <code>README.md</code> where “.md” is the file extension for
 Markdown files.</p>
 <div class="section level3">
 <h3 id="section-headers">Section headers<a class="anchor" aria-label="anchor" href="#section-headers"></a></h3>
-<p>You can separate your document into hierarchical sections with
-headings using the <code>#</code> symbol. This makes your README easier
-to navigate. For example:</p>
+<p>You can separate your document into <strong>hierarchical
+sections</strong> with headings using the <code>#</code> symbol. This
+makes your README easier to navigate. For example:</p>
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">MARKDOWN<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode markdown" tabindex="0"><code class="sourceCode markdown"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="fu"># Birdsong identification tool</span></span>
 <span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a></span>
-<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a>This user guide provides instructions on how to use this birdsong identifier. The software is designed to assist users in identifying bird species based on their vocalisations.</span>
-<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a></span>
-<span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a><span class="fu"># Installation</span></span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a>This user guide provides instructions on how to use this birdsong</span>
+<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a>identifier. The software is designed to assist users in</span>
+<span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a>identifying bird species based on their vocalisations.</span>
 <span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a></span>
-<span id="cb5-7"><a href="#cb5-7" tabindex="-1"></a>To install this software...</span>
+<span id="cb5-7"><a href="#cb5-7" tabindex="-1"></a><span class="fu"># Installation</span></span>
 <span id="cb5-8"><a href="#cb5-8" tabindex="-1"></a></span>
-<span id="cb5-9"><a href="#cb5-9" tabindex="-1"></a><span class="fu"># Usage</span></span>
+<span id="cb5-9"><a href="#cb5-9" tabindex="-1"></a>To install this software, follow the steps below...</span>
 <span id="cb5-10"><a href="#cb5-10" tabindex="-1"></a></span>
-<span id="cb5-11"><a href="#cb5-11" tabindex="-1"></a>To use this package...</span></code></pre>
+<span id="cb5-11"><a href="#cb5-11" tabindex="-1"></a><span class="fu"># Usage</span></span>
+<span id="cb5-12"><a href="#cb5-12" tabindex="-1"></a></span>
+<span id="cb5-13"><a href="#cb5-13" tabindex="-1"></a>To use this package, start by configuring...</span></code></pre>
 </div>
-<p>The “#” symbol means that line will be converted into a header and
-displayed to the reader in a large, bold font. This makes it easier for
-the reader to find the part of your text they’re looking for, just like
-having chapters in a book.</p>
+<p>The hash <code>#</code> symbol means that line will be converted into
+a header and displayed to the reader in a large, bold font. This makes
+it easier for the reader to find the part of your text they’re looking
+for, just like having chapters in a book.</p>
 <div id="challenge3" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -821,7 +845,7 @@ subsections by adding further subheadings?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <p>We can create the commonly-used headers used in READMEs by using the
 Markdown syntax shown below</p>
@@ -878,10 +902,11 @@ section header, <code>###</code> is a subsection header, etc.</p>
 </div>
 </div>
 </div>
-<p>If your code is published on GitHub, the home page of your code
-repository will display the README.md file, including a navigation menu
-that is automatically created to easily select the section of the
-document to view.</p>
+<p>If your code is published on <a href="https://github.com" class="external-link">GitHub</a>,
+the home page of your code repository will <a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes" class="external-link">display
+the README file</a>, including a <a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes#auto-generated-table-of-contents-for-readme-files" class="external-link">table
+of contents</a> that is automatically created to easily select the
+section of the document to view.</p>
 <figure><img src="fig/bootstrap-readme-chapters.png" alt="A screenshot of a GitHub repository with a drop-down navigation menu on the readme text box." class="figure mx-auto d-block"><div class="figcaption">“This repository has a README file with
 chapters, making navigation easier.”</div>
 </figure></div>
@@ -889,18 +914,22 @@ chapters, making navigation easier.”</div>
 <h3 id="text-formatting-1">Text formatting<a class="anchor" aria-label="anchor" href="#text-formatting-1"></a></h3>
 <p>Here are some commonly-used text formatting options that can be used
 with Markdown syntax:</p>
-<table class="table"><colgroup><col width="47%"><col width="52%"></colgroup><thead><tr class="header"><th>Text display</th>
+<table class="table"><colgroup><col width="19%"><col width="27%"><col width="52%"></colgroup><thead><tr class="header"><th>Meaning</th>
+<th>Example</th>
 <th>Syntax</th>
-</tr></thead><tbody><tr class="odd"><td><strong>Bold font</strong></td>
-<td><code>**Bold font**</code></td>
-</tr><tr class="even"><td><em>Italic text</em></td>
-<td><code>*Italic text*</code></td>
-</tr><tr class="odd"><td><u>Underlined</u></td>
-<td><code>&lt;u&gt;Underlined&lt;/u&gt;</code></td>
-</tr><tr class="even"><td><code>Code block</code></td>
-<td><code>`code block`</code></td>
-</tr><tr class="odd"><td><a href="https://sheffield.ac.uk" class="external-link">Hyperlink</a></td>
-<td><code>[Hyperlink](https://sheffield.ac.uk)</code></td>
+</tr></thead><tbody><tr class="odd"><td>Strong text</td>
+<td><strong>Eastern towhee</strong></td>
+<td><code>**Eastern towhee**</code></td>
+</tr><tr class="even"><td>Emphasised text</td>
+<td><em>Pipilo erythrophthalmus</em></td>
+<td><code>*Pipilo erythrophthalmus*</code></td>
+</tr><tr class="odd"><td>Code block</td>
+<td><code>name = "Pipilo erythrophthalmus"</code></td>
+<td><code>`name = "Pipilo erythrophthalmus"`</code></td>
+</tr><tr class="even"><td>Hyperlink</td>
+<td><a href="https://en.wikipedia.org/wiki/Eastern_towhee" class="external-link">Eastern
+towhee</a></td>
+<td><code>[Eastern towhee](https://en.wikipedia.org/wiki/Eastern_towhee)</code></td>
 </tr></tbody></table><p>These may be used to add emphasis to parts of the text or highligh
 key words and phrases. Using text formatting makes your software
 documentation easier to skim-read, so researchers can quickly find the
@@ -922,25 +951,30 @@ them in using a bold font face.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <p>The Markdown syntax for bold font is to wrap the text in two
 asterixes <code>**</code>. This may be applied to single words or to
 phrases.</p>
-<p>For example:</p>
+<p>For example, we can strongly emphasise a single word:</p>
 <div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">MARKDOWN<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode markdown" tabindex="0"><code class="sourceCode markdown"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a>Identify a bird based on the **sound** of its call.</span></code></pre>
 </div>
+<blockquote>
 <p>Identify a bird based on the <strong>sound</strong> of its call.</p>
+</blockquote>
+<p>Or emphasise a phrase:</p>
 <div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">MARKDOWN<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode markdown" tabindex="0"><code class="sourceCode markdown"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a>**Identify a bird** based on the _sound of its call_.</span></code></pre>
 </div>
+<blockquote>
 <p><strong>Identify a bird</strong> based on the <em>sound of its
 call</em>.</p>
+</blockquote>
 </div>
 </div>
 </div>
@@ -954,21 +988,35 @@ email.</p>
 <div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">MARKDOWN<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode markdown" tabindex="0"><code class="sourceCode markdown"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="at">&gt; This text is part of a blockquote.</span></span></code></pre>
+<pre class="sourceCode markdown" tabindex="0"><code class="sourceCode markdown"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a><span class="at">&gt; The eastern towhee (Pipilo erythrophthalmus) is a large New World</span></span>
+<span id="cb10-2"><a href="#cb10-2" tabindex="-1"></a><span class="at">&gt; sparrow. The taxonomy of the towhees has been under debate in</span></span>
+<span id="cb10-3"><a href="#cb10-3" tabindex="-1"></a><span class="at">&gt; recent decades, and formerly this bird and the spotted towhee</span></span>
+<span id="cb10-4"><a href="#cb10-4" tabindex="-1"></a><span class="at">&gt; were considered a single species, the rufous-sided towhee.</span></span></code></pre>
 </div>
 <p>This will be rendered with the following apperearance:</p>
 <blockquote>
-<p>This text is part of a blockquote.</p>
+<p>The eastern towhee (Pipilo erythrophthalmus) is a large New World
+sparrow. The taxonomy of the towhees has been under debate in recent
+decades, and formerly this bird and the spotted towhee were considered a
+single species, the rufous-sided towhee.</p>
 </blockquote>
+<p>(This text was retrieved from the <em>Wikipedia</em> page on the <a href="https://en.wikipedia.org/wiki/Eastern_towhee" class="external-link">Eastern
+towhee</a>.)</p>
 </div>
 <div class="section level3">
 <h3 id="code-blocks">Code blocks<a class="anchor" aria-label="anchor" href="#code-blocks"></a></h3>
 <p>If you’d like to present the user will examples of source code, use
-code fences to display the code in a special text box with syntax
-highlighting. For example:</p>
-<p><code></code></p>
-<pre><code><span><span class="va">pi</span> <span class="op">=</span> <span class="fl">3.14</span></span></code></pre>
-<p></p>
+<a href="https://www.markdownguide.org/extended-syntax/#fenced-code-blocks" class="external-link">code
+fences</a> to display the code in a special text box with syntax
+highlighting. To do this, wrap the code in three backticks
+<code>`</code>. For example:</p>
+<div class="codewrapper sourceCode" id="cb11">
+<h3 class="code-label">MARKDOWN<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode markdown" tabindex="0"><code class="sourceCode markdown"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="in">```</span></span>
+<span id="cb11-2"><a href="#cb11-2" tabindex="-1"></a><span class="in">genus = "Struthio"</span></span>
+<span id="cb11-3"><a href="#cb11-3" tabindex="-1"></a><span class="in">```</span></span></code></pre>
+</div>
 <div id="markdown" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -1010,6 +1058,9 @@ bullet points, etc.</li>
 please review the following materials:</p>
 <ul><li>Raphael Pierzina <a href="https://www.writethedocs.org/videos/eu/2017/hi-my-name-is-readme-raphael-pierzina/" class="external-link">Hi,
 my name is README!</a>
+</li>
+<li>Aleksandra Pawlik <a href="https://www.software.ac.uk/guide/five-top-tips-documentation" class="external-link">Five
+top tips on documentation</a>
 </li>
 </ul><!--
 Place links that you need to refer to multiple times across pages here. Delete
@@ -1085,7 +1136,7 @@ any links that you are not going to use.
   "url": "https://FAIR2-for-research-software.github.io/Documentation/readmes.html",
   "identifier": "https://FAIR2-for-research-software.github.io/Documentation/readmes.html",
   "dateCreated": "2024-05-20",
-  "dateModified": "2024-09-19",
+  "dateModified": "2024-09-25",
   "datePublished": "2024-09-25"
 }
 
