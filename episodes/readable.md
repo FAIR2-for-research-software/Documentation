@@ -207,11 +207,23 @@ It's also a good idea not to use single-letter names such as `x` or `T` because 
 
 ### Python
 
-Classes use capitalised words
+Classes use capitalised words, where each word in a phrase starts with an upper-case letter and there are no spaces between them.
 
 ```python
 class Bird:
     pass
+```
+
+```python
+class ConservationStatus:
+    """
+    IUCN Red List of Threatened Species
+    """
+    EX = "Extinct"
+    EW = "Extinct in the wild"
+    CR = "Critically Endangered"
+    EN = "Endangered"
+    LC = "Least Concern"
 ```
 
 Variables use lower case with underscores
@@ -234,6 +246,10 @@ Classes use capitalised words
 
 ```R
 setClass("Bird", representation = character())
+```
+
+```R
+setClass("ConservationStatus", representation = character())
 ```
 
 Variables use lower case with underscores
@@ -401,7 +417,7 @@ add('cheese', 'cake')
 
 :::::::::::::::: solution
 
-None of these code examples will cause an error because type hints are just passive labels that document our code. They don't enforce any type checking or rules that are asserted when the code is executed. This means that, while type hints are very useful for *static analysis* of code, where we learn something about a piece of software without running it.
+None of these code examples will cause an error because type hints are just **passive labels** that document our code. They don't enforce any type checking or rules that are asserted when the code is executed. This means that, while type hints are very useful for *static analysis* of code, where we learn something about a piece of software without running it.
 
 :::::::::::::::::::::::::
 

@@ -50,17 +50,17 @@ There are many advantages to building a documentation site to provide a informat
 
 ### Advantages
 
-These sites can work as hubs for collaboration, sharing the latest updates, and encouraging people to take up your system and get involved in improving it. The effort of setting one up will be rewarded in the long run because you will have created a valuable asset that will foster collaboration and knowledge sharing in your research community.
+These sites can work as **hubs for collaboration**, sharing the latest updates, and encouraging people to take up your system and get involved in improving it. The effort of setting one up will be rewarded in the long run because you will have created a valuable asset that will foster collaboration and knowledge sharing in your research community.
 
-A key foundation stone of modern digital research practices is the ability to replicate results by reproducing analysis workflows.  Clear, thorough documentation of the research code ensures that researchers can repeat processes and verify results and other people's outputs.
+A key foundation stone of modern digital research practices is the ability to **replicate results** by reproducing analytic workflows. Clear, thorough documentation of the research code ensures that researchers can repeat processes and verify results and other people's outputs.
 
-Documentation sites are really useful for introducing new users to your software. It makes it much easier and faster for new users to get started using your software to boost their research. It's one of the most effective ways to create a user base that has a sophisticated understanding of the research code, which is essential for them to adapt it to the complex problems that often raise in research contexts.
+Documentation sites are really useful for **introducing new users to your software**. It makes it much easier and faster for new users to get started using your software to boost their research. It's one of the most effective ways to create a user base that has a sophisticated understanding of the research code, which is essential for them to adapt it to the complex problems that often raise in research contexts.
 
-They're also a valuable resource for your existing user base, enabling them to look up reference material or search the manual to find new capabilities they weren't aware of before. This will increase the potential for your software to accellerate the productivity of other research teams and boost scientific progress.
+They're also a valuable resource for your existing user base, enabling them to look up reference material or search the manual to find new capabilities they weren't aware of before. This will increase the potential for your software to increase the productivity of other research teams.
 
 ### When to use one
 
-Although the advantages are numerous, not all software packages require a comprehensive documentation website. However, for any code project that is growing in the number of collaborators, users, and technical complexity, consider coordinating the team to write one as soon as possible to help the project grow in a healthy manner.
+Although the advantages are numerous, not all software packages require a comprehensive documentation website. However, for any code project that is growing in the number of collaborators, users, and technical complexity, consider coordinating the team to write one as soon as possible to help the project continue its' healthy growth.
 
 ::::::::::::::::::::::::::::::::::::: discussion
 
@@ -75,11 +75,11 @@ Consider the following factors:
 
 ## Contents
 
-Documentation pages contain comphrehensive information about a particular piece of research software. Think of it like a user manual for your car or an instruction guide for building a piece of furniature.
+Documentation pages contain **comphrehensive information** about a particular piece of research software. Think of it like a user manual for your car or an instruction guide for building a piece of furniature.
 
 ### Research context
 
-For research software, it may be important to explain the theoretical background or statistical methods that are used and explain the domain-specific assumptions that were made when the code was designed and written. It's good practice to provide a concise summary of the relevent concepts and link to external sources such as papers, books, and other websites for users to take a deeper dive into the principles and algorithms used.
+For research software, it may be important to explain the **theoretical background** or statistical methods that are used and explain the domain-specific assumptions that were made when the code was designed and written. It's good practice to provide a concise summary of the relevant concepts and link to external sources such as papers, books, and other websites for users to take a deeper dive into the principles and algorithms used.
 
 ### Installation instructions
 

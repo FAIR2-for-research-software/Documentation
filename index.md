@@ -2,14 +2,14 @@
 site: sandpaper::sandpaper_site
 ---
 
+This course teaches **researchers how to document their software** effectively, making it accessible and understandable to others.
 Well-documented software promotes reproducibility, maintainability, and increased research impact through wider adoption and citation.
-This course teaches researchers how to document their software effectively, making it accessible and understandable to others.
 It covers topics such as writing readable code and usage instructions.
 
 
 ## Course summary
 
-Software documentation helps you and others to use your software successfully in the future and to read your code ensuring that its value is sustained. This course introduces the different ways to provide other researchers with useful documentation for your software.
+Software documentation helps you and **others to use your software successfully** in the future and to read your code ensuring that its value is sustained. This course introduces the different ways to provide other researchers with useful documentation for your software.
 
 Research outputs often depend upon the code used to generate them. There are many advantages to making your code more readable. All kinds of research software, whether it’s code for data processing, analysis, and simulations, can be made more reproducible by providing clear context and instructions for using it.
 
@@ -19,7 +19,7 @@ Well-documented software is easier to maintain and has greater sustainability, w
 
 This module is part of the "Coding best practices" section of the FAIR4RS training course.
 
-This course will introduce you to the different ways we can provide guidance to future users and maintainers of our code. These coding best practices range from the very simple, such as leaving a few handy notes, to the complex, generating a reference website that includes tutorials and a detailed reference. The right approach for your projects will probably be a blend of these, and depends on the context and your audience.
+This module will introduce you to the different ways we can provide guidance to future users and maintainers of our code. These coding best practices range from the very simple, such as leaving a few handy notes, to the complex, generating a reference website that includes tutorials and a detailed reference. The right approach for your projects will probably be a blend of these, and depends on the context and your audience.
 
 ### Course contents
 

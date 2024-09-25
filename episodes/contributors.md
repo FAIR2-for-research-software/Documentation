@@ -49,11 +49,11 @@ Consider these questions amongst the group:
 
 ## Contribution guides
 
-Contribution guidelines help users and understand how they can help to improve the software, whether that’s by submitting bug reports, suggesting new features, or writing better code and documentation. All of these aspects are vital to produce reusable research software.
+Contribution guidelines help users and understand how they can **help to improve the software**, whether that’s by submitting bug reports, suggesting new features, or writing better code and documentation. All of these aspects are vital to produce reusable research software.
 
-Potential collaborators should be able to easily find out how to take part and contribute. Developers should be encouraged to use appropriate communication channels to ask questions and inform others of proposed software changes. The contact details for the project administrator or committee should be available and they should be welcome and responsive to any queries.
+Potential collaborators should be able to easily find out how to take part and contribute. Developers should be encouraged to use **appropriate communication channels** to ask questions and inform others of proposed software changes. The contact details for the project administrator or committee should be available and they should be welcome and responsive to any queries.
 
-It’s important to explain how the project is managed so the process for evaluating new features and getting them implemented is clear, such as the code review and approval process. For many projects, a ticket system may be used to raise issues and suggest new features. Software developers often propose new code by creating a branch on the version control system (such as Git) and requesting for those changes to be merged into the main codebase.
+It’s important to explain how the project is managed so the process for evaluating new features and getting them implemented is clear, such as the code review and approval process. For many projects, a **ticket system** may be used to raise issues and suggest new features. Software developers often propose new code by creating a branch on the version control system (such as Git) and requesting for those changes to be merged into the main codebase.
 
 Contribution guides will save you time in the long run, because it provides an on-ramp for people to get involved, prevents them from getting confused, and reduces the amount of incorrectly-submitted bug reports or requests for change, etc.
 
@@ -73,12 +73,12 @@ The standard practice for authoring a contribution guide for a software project 
 
 The specific contents of this file depend upon the kind of research project, but some useful information to provide typically includes:
 
-- An introduction to the organisation and structure of the code, possibly including diagrams.
-- Instructions to raising issues, suggesting new features, and proposing code changes.
-- Links to additional documentation that's hosted elsewhere, such as a code of conduct or discussion forum.
+- An introduction to the organisation and **structure of the code**, possibly including diagrams.
+- Instructions to **raising issues**, suggesting new features, and proposing code changes.
+- Links to **additional documentation** that's hosted elsewhere, such as a code of conduct or discussion forum.
 - A walkthrough to setting up a development environment, such as guidance on installing developer tools or other prerequisites.
 
-On code hosting platforms such as GitHub, the contribution guide will be created automatically using this `CONTRIBUTING.md` Markdown file.
+On code repository hosting platforms such as [GitHub](https://github.com), the [contribution guide](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/setting-guidelines-for-repository-contributors) will be created automatically using this `CONTRIBUTING.md` Markdown file.
 
 :::: challenge
 
@@ -92,11 +92,11 @@ Create a new file called `CONTRIBUTING.md` and populate it with a few sentences.
 
 ## Software project governance
 
-Project governance defines the scope and aims of a research software engineering project, and determines how decisions will be made and carried out. It sets out the processes and responsibilities that collaborators must understand to take part. This is something that should be considered when preparing a software management plan, as discussed in Module 1a of this course. This is important to make sure that questions of who does what, and how, are stated clearly so that everyone can understand and collaborate effectively to produce excellent research software. It's worthwhile to think about this early on in a project to avoid potential pitfalls later on!
+Project governance defines the **scope and aims** of a research software engineering project, and determines how decisions will be made and carried out. It sets out the **processes and responsibilities** that collaborators must understand to take part. This is something that should be considered when preparing a software management plan, as discussed in Module 1a of this course. This is important to make sure that questions of who does what, and how, are stated clearly so that everyone can understand and collaborate effectively to produce excellent research software. It's worthwhile to think about this early on in a project to avoid potential pitfalls later on!
 
 ### Code of conduct
 
-A code of conduct provides guidelines for the expected behaviour of people who are involved in the project. You may want to provide some general tips to create a productive community of researchers around the software, such as creating positive interactions between contributors, treat others with respect and dignity, and recommendations for processes for handling differences of opinion.
+A code of conduct provides **guidelines for the expected behaviour** of people who are involved in the project. You may want to provide some general tips to create a productive community of researchers around the software, such as creating positive interactions between contributors, treat others with respect and dignity, and recommendations for processes for handling differences of opinion.
 
 This has the following advantages:
 
@@ -106,9 +106,11 @@ This has the following advantages:
 
 For many working in a research context, there are additional considerations to ensure that institutional policies, ethics, and data protection regulations are carefully observed. These protocols are outside the scope of this document, but these factors should be clearly communicated to all contributors.
 
-:::: tip
+:::: callout
 
-Many open-source research software projects adopt the [Contributor Covenant](https://www.contributor-covenant.org/), which can also be customised to suit the needs of your collaborators.
+### Contributor Covenant
+
+Many open-source research software projects adopt the [Contributor Covenant](https://www.contributor-covenant.org/), which is a template charter that may be customised to suit the needs of your collaborators.
 
 ::::
 
@@ -122,15 +124,15 @@ For people who are contributing code to the project, they'll need the following 
 
 ### Technical documentation
 
-System documentation is important for new contributors to familiarise themselves with the codebase and as a reference for existing engineers. There should be a concise description of how the system works from a more technical perspective, with the intended audience being software developers, rather than the research users.
+System documentation is important for new contributors to **familiarise themselves with the codebase** and as a reference for existing engineers. There should be a concise description of how the system works from a more technical perspective, with the intended audience being software developers, rather than the research users.
 
-An architecture diagram is an efficient way to provide a “map” to help developers to understand and navigate a complex system.
+An **architecture diagram** is an efficient way to provide a “map” to help developers to understand and navigate a complex system.
 
 ### Coding conventions
 
-Many projects following programming standards to manage code quality. A coding style guide will help to ensure consistency across all the code written as part of a collaborative project, which helps others to read and interpret the code, making it easier to maintain in the long run. The code style rules should cover things like the way to describe functions, how to indent code, and naming conventions for variables.
+Many projects follow a set of programming standards to **manage code quality**. A coding style guide will help to ensure consistency across all the code written as part of a collaborative project, which helps others to read and interpret the code, making it easier to maintain in the long run. The code style rules should cover things like the way to describe functions, how to indent code, and naming conventions for variables.
 
-This might include guidance and advice, or more strict rules as standards that are checked by a code linter. A code linter is an analysis tool that inspects code and checks for common errors and problems, producing a report for the developer to read and act upon. Common coding style standards include the PEP 8 style guide for the Python programming language and the tidyverse style guide in the R statistical language.
+This might include guidance and advice, or more strict rules as standards that are checked by a **code linter**. A code linter is an analysis tool that inspects code and checks for common errors and problems, producing a report for the developer to read and act upon. Common coding style standards include the [PEP 8 style guide](https://peps.python.org/pep-0008/) for the Python programming language and the [tidyverse style guide](https://style.tidyverse.org/) in the R statistical language.
 
 ::::::::::::::::::::::::::::::::::::: discussion
 
