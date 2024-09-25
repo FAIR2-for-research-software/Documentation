@@ -2,4 +2,5 @@
 title: 'Instructor Notes'
 ---
 
-This is a placeholder file. Please add content here. 
+The presentation course of this course should be modified depending on the target audience.
+Many beginner coders in the research world will not need to know advanced skills such as how to automatically generate and deploy documentation websites, but some introductory material on this topic is here if required.
