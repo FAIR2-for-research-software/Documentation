@@ -45,6 +45,14 @@ For more information about these topics, please refer to the following modules:
 - **7a** Software repositories, DOIs, metadata, citation
 - **7b** Publishing a software paper
 
+## Feedback
+
+We would like to gather your valuable feedback on this module. Your insights will help us improve future offerings and ensure they meet the evolving needs of the research community at the University. Please take a few moments to **complete the [feedback survey](https://forms.gle/Ap3YTFMnoj8xHn8J9)**.
+
+In the survey, we ask about how relevant the content is for your area of interest, the quality of the instruction, and the usefulness of the materials provided. We also encourage you to share your suggestions for changing the course. Your feedback is crucial to our ongoing efforts to provide high-quality research training.
+
+**Thank you** for your time and participation.
+
 ::::::::::::::::::::::::::::::::::::: keypoints 
 
 ### Learning outcomes
