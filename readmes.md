@@ -423,6 +423,16 @@ genus = "Struthio"
 ```
 ````
 
+If you include the name of a programming language then the syntax will be highlighted appropriately, for example:
+
+````markdown
+```R
+genus = "Struthio"
+```
+````
+
+This makes your code examples easier to read.
+
 ::: callout
 
 ## Markdown
