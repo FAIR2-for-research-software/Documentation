@@ -460,4 +460,5 @@ Use diagrams and screenshots for clarity.
 For more information about writing basic software documentation, please review the following materials:
 
 - Raphael Pierzina [Hi, my name is README!](https://www.writethedocs.org/videos/eu/2017/hi-my-name-is-readme-raphael-pierzina/)
+- Kira Oakley [The Art of README](https://github.com/hackergrrl/art-of-readme/blob/master/README.md)
 - Aleksandra Pawlik [Five top tips on documentation](https://www.software.ac.uk/guide/five-top-tips-documentation)
