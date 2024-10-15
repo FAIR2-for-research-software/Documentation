@@ -222,6 +222,7 @@
         <ul><li><a href="#why-document-code">Why document code?</a></li>
 <li><a href="#why-document-software">Why document software?</a></li>
 <li><a href="#when-should-i-write-documentation">When should I write documentation?</a></li>
+<li><a href="#research-software-papers">Research software papers</a></li>
 <li><a href="#examples">Examples</a></li>
 <li><a href="#real-world-examples">Real-world examples</a></li>
         </ul></div><!--/div.accordion-body-->
@@ -342,7 +343,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Introduction</h1>
-        <p>Last updated on 2024-09-25 |
+        <p>Last updated on 2024-10-15 |
 
         <a href="https://github.com/FAIR2-for-research-software/Documentation/edit/main/episodes/introduction.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -491,6 +492,41 @@ clearly and in greater depth in the software documentation.
 <strong>Incorporate this feedback</strong> into the software
 documentation using the whichever method is most appropriate, following
 the guidance in this module.</p>
+</section><section><h2 class="section-heading" id="research-software-papers">Research software papers<a class="anchor" aria-label="anchor" href="#research-software-papers"></a></h2>
+<hr class="half-width"><p>You may decide to publish a description of your <strong>software as a
+paper</strong> in an academic journal. This is a kind of <a href="https://book.the-turing-way.org/communication/dif-articles/methods.html" class="external-link">methods
+paper</a>, which provides more detail on your research process than is
+possible in your main paper.</p>
+<p>A research software paper should provide a <strong>concise
+introduction</strong> to your code and explain how and why it was
+written. It may contain a detailed description of the technical design
+and how algorithms are implemente, providing transparency to other
+researchers and enabling better replicability of your results.</p>
+<p>For more information about writing these papers, which is beyond the
+scope of this course, please read <a href="https://doi.org/10.1371/journal.pcbi.1008390" class="external-link">Ten simple rules for
+writing a paper about scientific software</a> by Joseph Romano.</p>
+<div class="section level3 spoilers">
+<h3 id="software-journals">Software journals<a class="anchor" aria-label="anchor" href="#software-journals"></a></h3>
+<p>An increasing number of journals allow and encourage the publication
+of research software and open data. Some journals focus on a specific
+field, while others primarily publish research software of any kind.
+Some relevant journals include:</p>
+<ul><li>
+<a href="https://joss.theoj.org/" class="external-link"><em>The Journal of Open Source
+Software</em></a> is a peer-reviewed publications that provides academic
+citations for research code;</li>
+<li>
+<a href="https://www.nature.com/" class="external-link">Nature</a> has a category of <a href="https://www.nature.com/nature/articles?type=toolbox" class="external-link">Toolbox
+articles</a> that cover the technical side of research;</li>
+<li>
+<a href="https://openresearchsoftware.metajnl.com/" class="external-link">Journal of Open
+Research Software</a> is a peer-reviewed repository run by the <a href="https://www.software.ac.uk/" class="external-link">Software Sustainability
+Institute</a>.</li>
+</ul><p>For more information, please read <a href="https://www.software.ac.uk/top-tip/which-journals-should-i-publish-my-software" class="external-link">In
+which journals should I publish my software?</a> by Neil Chue Hong, the
+Director of the <a href="https://www.software.ac.uk/" class="external-link">Software
+Sustainability Institute</a>.</p>
+</div>
 </section><section><h2 class="section-heading" id="examples">Examples<a class="anchor" aria-label="anchor" href="#examples"></a></h2>
 <hr class="half-width"><p>Here are some examples of some code to perform some geometry. The
 first example could be improved in terms of its documentation and
@@ -513,7 +549,7 @@ what this code is for or why it was written.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-1" class="tab-content">
-<div id="nav-tabpanel-1-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-Python">
+<div id="nav-tabpanel-1-Python" class="tab-pane show active" aria-labelledby="nav-tab-1-Python" role="tabpanel">
 <p>This is some research code that is contained in a Python
 function.</p>
 <div class="codewrapper sourceCode" id="cb1">
@@ -524,7 +560,7 @@ function.</p>
 <span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a>  <span class="cf">return</span> x <span class="op">*</span> weird_num <span class="op">-</span> angle<span class="op">**</span><span class="dv">3</span> <span class="op">/</span> (weird_num <span class="op">*</span> <span class="dv">2</span>)</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-1-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-R">
+<div id="nav-tabpanel-1-R" class="tab-pane" aria-labelledby="nav-tab-1-R" role="tabpanel">
 <p>This is some research code that is contained in an R function.</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -580,7 +616,7 @@ this course, so don’t worry if they don’t make sense yet!)</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-2" class="tab-content">
-<div id="nav-tabpanel-2-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-2-Python">
+<div id="nav-tabpanel-2-Python" class="tab-pane show active" aria-labelledby="nav-tab-2-Python" role="tabpanel">
 <p>This is a function written in the Python programming language that
 calculates a mathematical result, the details of which aren’t relevant.
 This code has plenty of documentation to help us read and understand
@@ -616,7 +652,7 @@ it.</p>
 <span id="cb3-26"><a href="#cb3-26" tabindex="-1"></a>  <span class="cf">return</span> sin_value</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-2-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-R">
+<div id="nav-tabpanel-2-R" class="tab-pane" aria-labelledby="nav-tab-2-R" role="tabpanel">
 <p>This is a function written in the R programming language that
 calculates a mathematical result, the details of which aren’t relevant.
 This code has plenty of documentation to help us read and understand it.
@@ -813,7 +849,7 @@ any links that you are not going to use.
   "url": "https://FAIR2-for-research-software.github.io/Documentation/instructor/introduction.html",
   "identifier": "https://FAIR2-for-research-software.github.io/Documentation/instructor/introduction.html",
   "dateCreated": "2024-05-20",
-  "dateModified": "2024-09-25",
+  "dateModified": "2024-10-15",
   "datePublished": "2024-10-15"
 }
 
