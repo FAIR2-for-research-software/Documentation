@@ -74,7 +74,7 @@ This might include design notes, diagrams, or the various kinds of software docu
 
 You may decide to publish a description of your **software as a paper** in an academic journal. This is a kind of [methods paper](https://book.the-turing-way.org/communication/dif-articles/methods.html), which provides more detail on your research process than is possible in your main paper.
 
-A research software paper should provide a **concise introduction** to your code and explain why it was written. It may contain a detailed description of the technical design and how algorithms are implemente, providing transparency to other researchers and enabling better replicability of your results.
+A research software paper should provide a **concise introduction** to your code and explain how and why it was written. It may contain a detailed description of the technical design and how algorithms are implemente, providing transparency to other researchers and enabling better replicability of your results.
 
 For more information about writing these papers, which is beyond the scope of this course, please read [Ten simple rules for writing a paper about scientific software](https://doi.org/10.1371/journal.pcbi.1008390) by Joseph Romano.
 
