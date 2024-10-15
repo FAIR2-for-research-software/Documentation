@@ -70,6 +70,26 @@ This might include design notes, diagrams, or the various kinds of software docu
 
 **Keep in touch** with other developers and users of the research code and make a note of their feedback. Common questions and problems are a sign that there are issues that must be covered more clearly and in greater depth in the software documentation. **Incorporate this feedback** into the software documentation using the whichever method is most appropriate, following the guidance in this module.
 
+## Research software papers
+
+You may decide to publish a description of your **software as a paper** in an academic journal. This is a kind of [methods paper](https://book.the-turing-way.org/communication/dif-articles/methods.html), which provides more detail on your research process than is possible in your main paper.
+
+A research software paper should provide a **concise introduction** to your code and explain why it was written. It may contain a detailed description of the technical design and how algorithms are implemente, providing transparency to other researchers and enabling better replicability of your results.
+
+For more information about writing these papers, which is beyond the scope of this course, please read [Ten simple rules for writing a paper about scientific software](https://doi.org/10.1371/journal.pcbi.1008390) by Joseph Romano.
+
+:::: Software journals
+
+An increasing number of journals allow and encourage the publication of research software and open data. Some journals focus on a specific field, while others primarily publish research software of any kind. Some relevant journals include:
+
+- [*The Journal of Open Source Software*](https://joss.theoj.org/) is a peer-reviewed publications that provides academic citations for research code;
+- [Nature](https://www.nature.com/) has a category of [Toolbox articles](https://www.nature.com/nature/articles?type=toolbox) that cover the technical side of research;
+- [Journal of Open Research Software](https://openresearchsoftware.metajnl.com/) is a peer-reviewed repository run by the [Software Sustainability Institute](https://www.software.ac.uk/). 
+
+For more information, please read [In which journals should I publish my software?](https://www.software.ac.uk/top-tip/which-journals-should-i-publish-my-software) by Neil Chue Hong, the Director of the [Software Sustainability Institute](https://www.software.ac.uk/).
+
+::::
+
 ## Examples
 
 Here are some examples of some code to perform some geometry. The first example could be improved in terms of its documentation and readability, while the second one is much clearer.
