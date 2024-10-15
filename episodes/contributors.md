@@ -35,7 +35,7 @@ For more information on planning the development of research software and projec
 
 It’s often published using an open source licence, which means that all the code is publicly available and may be used and modified by anyone, within certain conditions (see module 1b to learn more about software licensing.)
 
-There's a lot more creating and managing a sustainable community aorund a research software project, but having a central piece of documentation for contributors is a great start!
+There's a lot more to creating and managing a sustainable community around a research software project, but having a central piece of documentation for contributors is a great start!
 
 ::::::::::::::::::::::::::::::::::::: discussion
 
