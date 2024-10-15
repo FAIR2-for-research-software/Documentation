@@ -78,7 +78,9 @@ A research software paper should provide a **concise introduction** to your code
 
 For more information about writing these papers, which is beyond the scope of this course, please read [Ten simple rules for writing a paper about scientific software](https://doi.org/10.1371/journal.pcbi.1008390) by Joseph Romano.
 
-:::: Software journals
+:::: spoilers
+
+### Software journals
 
 An increasing number of journals allow and encourage the publication of research software and open data. Some journals focus on a specific field, while others primarily publish research software of any kind. Some relevant journals include:
 
