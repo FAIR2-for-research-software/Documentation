@@ -45,6 +45,7 @@ contact: 'research-it@sheffield.ac.uk'
 # Order of episodes in your lesson
 episodes:
 - introduction.md
+- examples.md
 - readmes.md
 - docstrings.md
 - readable.md
