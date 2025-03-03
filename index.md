@@ -17,13 +17,13 @@ Well-documented software is easier to maintain and has greater **sustainability*
 
 ## Course overview
 
-This module is part of the "Coding best practices" section of the FAIR4RS training course.
+This module is part of the "Coding best practices" section of the [FAIR<sup>2</sup> training course](https://rse.shef.ac.uk/training/fair4rs/).
 
 This module will introduce you to the different ways we can provide guidance to future users and maintainers of our code. These coding best practices range from the very simple, such as leaving a few handy notes, to the complex, generating a reference website that includes tutorials and a detailed reference. The right approach for your projects will probably be a blend of these, and depends on the context and your audience.
 
 ### Course contents
 
-This course introduces the different ways to provide other researchers with useful documentation for your software.
+This course introduces some different ways to provide other researchers with useful documentation for your software.
 
 - Writing informative README files
   * Writing installation instructions
@@ -38,12 +38,14 @@ This course introduces the different ways to provide other researchers with usef
 
 ## Related modules
 
-There is information about publishing a software package and providing metadata and citation details in Modules 6 and 7 of this course.
+There is information about publishing a software package and providing metadata and citation details in Modules 6 and 7 of [this course](https://rse.shef.ac.uk/training/fair4rs/).
 For more information about these topics, please refer to the following modules:
 
 - **6** Packaging 
 - **7a** Software repositories, DOIs, metadata, citation
 - **7b** Publishing a software paper
+
+For the complete catalogue of training courses, please browse the [Research Computing Training](https://sites.google.com/sheffield.ac.uk/research-training/).
 
 ## Feedback
 
@@ -59,10 +61,10 @@ In the survey, we ask about how relevant the content is for your area of interes
 
 After completing this course, participants should be able to:
 
-- Write clear and concise software documentation that provides essential information to future users and maintainers;
-- Understand how to make their code more readable, clean, and well-structured;
-- Write clear installation instructions;
-- Write effective comments and doc-strings to explain the purpose of code;
+- Write clear and concise **software documentation** that provides essential information to future users and maintainers;
+- Understand how to make their **code more readable**, clean, and well-structured;
+- Write clear **installation instructions**;
+- Write **effective comments** and documentation strings to explain the purpose of code;
 - Automatically generate documentation websites from their code;
 - Create user-friendly command-line interfaces (CLIs) with clear descriptions of commands and options, along with help messages for individual parameters.
 
