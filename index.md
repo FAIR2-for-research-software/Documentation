@@ -11,9 +11,9 @@ It covers topics such as writing readable code and usage instructions.
 
 Software documentation helps you and **others to use your software successfully** in the future and to read your code ensuring that its value is sustained. This course introduces the different ways to provide other researchers with useful documentation for your software.
 
-Research outputs often depend upon the code used to generate them. There are many advantages to making your code more readable. All kinds of research software, whether it’s code for data processing, analysis, and simulations, can be made more reproducible by providing clear context and instructions for using it.
+Research outputs often depend upon the code used to generate them. There are many advantages to making your code more readable. **All kinds of research software**, whether it’s code for data processing, analysis, and simulations, can be made more reproducible by providing clear context and instructions for using it.
 
-Well-documented software is easier to maintain and has greater sustainability, which means it can continue to be used and modified for a longer period of time, despite changes in technology. If software is more reusable then it encourages others to use it for their research, increasing the number of citations of that software and its overall research impact.
+Well-documented software is easier to maintain and has greater **sustainability**, which means it can continue to be used and modified for a longer period of time, despite changes in technology. If software is more reusable then it encourages others to use it for their research, increasing the number of citations of that software and its overall **research impact**.
 
 ## Course overview
 
