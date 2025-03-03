@@ -28,8 +28,9 @@ and data analysis. To interact with R, the most popular tool is
 
 The Notepad text editor is installed by default on Windows. [Notepad++](https://notepad-plus-plus.org/) is a more powerful, open source editor that has a syntax highlighting feature.
 
-#### Python
+At the University of Sheffield, Notepad++ is available on University-managed computers in the [Software Centre](https://students.sheffield.ac.uk/it-services/software/university-applications) which is accessible via the shortcut on the desktop.
 
+#### Python
 
 There is a guide for [using Python on Windows](https://docs.python.org/3/using/windows.html) in the
 Python documentation. [Python Releases for Windows](https://www.python.org/downloads/windows/) are
@@ -61,7 +62,6 @@ the Python documentation.
 
 ::::::::::::::::::::::::
 
-
 :::::::::::::::: spoiler
 
 ### Linux
@@ -79,5 +79,20 @@ the Python documentation.
 #### R
 
 [Download R for Linux](https://cran.rstudio.com/) and [RStudio Desktop](https://posit.co/download/rstudio-desktop/).
+
+::::::::::::::::::::::::
+
+:::::::::::::::: spoiler
+
+### Web-based
+
+#### Google Colab
+
+[Google Colab](https://colab.research.google.com/) is a browser-based cloud notebook service.
+
+#### VSCode Web
+
+[Visual Studio Code for the Web](https://code.visualstudio.com/docs/editor/vscode-web) is a development environment that runs in a browser.
+It is available at [vscode.dev](https://vscode.dev/).
 
 ::::::::::::::::::::::::
