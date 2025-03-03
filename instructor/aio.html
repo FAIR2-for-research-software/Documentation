@@ -262,7 +262,7 @@
 <div class="accordion accordion-flush" id="accordionFlush3">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading3">
-        <a href="readmes.html">2. Writing README files</a>
+        <a href="examples.html">2. Examples</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -274,7 +274,7 @@
 <div class="accordion accordion-flush" id="accordionFlush4">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading4">
-        <a href="docstrings.html">3. Documentation strings</a>
+        <a href="readmes.html">3. Writing README files</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -286,7 +286,7 @@
 <div class="accordion accordion-flush" id="accordionFlush5">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading5">
-        <a href="readable.html">4. Code readability</a>
+        <a href="docstrings.html">4. Documentation strings</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -298,7 +298,7 @@
 <div class="accordion accordion-flush" id="accordionFlush6">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading6">
-        <a href="contributors.html">5. Contributor guidance</a>
+        <a href="readable.html">5. Code readability</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -310,7 +310,7 @@
 <div class="accordion accordion-flush" id="accordionFlush7">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading7">
-        <a href="sites.html">6. Documentation sites</a>
+        <a href="contributors.html">6. Contributor guidance</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -322,7 +322,19 @@
 <div class="accordion accordion-flush" id="accordionFlush8">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading8">
-        <a href="cli.html">7. Command line interfaces</a>
+        <a href="sites.html">7. Documentation sites</a>
+    </div>
+<!--/div.accordion-header-->
+
+  </div>
+<!--/div.accordion-item-->
+</div>
+<!--/div.accordion-flush-->
+
+<div class="accordion accordion-flush" id="accordionFlush9">
+  <div class="accordion-item">
+    <div class="accordion-header" id="flush-heading9">
+        <a href="cli.html">8. Command line interfaces</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -389,7 +401,7 @@
         
 <section id="aio-introduction"><p>Content from <a href="introduction.html">Introduction</a></p>
 <hr>
-<p>Last updated on 2024-10-15 |
+<p>Last updated on 2025-03-03 |
 
         <a href="https://github.com/FAIR2-for-research-software/Documentation/edit/main/episodes/introduction.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 12 minutes</p>
@@ -407,7 +419,6 @@
 <li>How do we <strong>provide information</strong> to users of our
 research software?</li>
 <li>Why is documenting code useful for researchers?</li>
-<li>What does well-documented software look like?</li>
 </ul>
 </div>
 </div>
@@ -420,37 +431,42 @@ research software?</li>
 <li>Understand the basic purpose of this course</li>
 <li>Learn the <strong>motivation</strong> for learning to document
 software</li>
-<li>Be introduced to good software documentation practices</li>
 </ul>
 </div>
 </div>
 </div>
 </div>
 </div>
-<section><h2 class="section-heading" id="why-document-code">Why document code?<a class="anchor" aria-label="anchor" href="#why-document-code"></a>
+<section><h2 class="section-heading" id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a>
 </h2>
 <hr class="half-width">
+<p>There are many kinds of research software, such as:</p>
+<ul>
+<li>Data processing workflows with multiple steps;</li>
+<li>A library of functions used within a research team to perform
+certain kinds of analysis;</li>
+<li>Tools designed to collect raw data in the field.</li>
+</ul>
 <p>No code is self-explanatory. It’s a tool we design, or, more often, a
-complex organism that develops as we use it, such as a library of
-functions used within a research team to perform certain kinds of
-analysis. To explain our code we must write <strong>software
+complex organism that develops as we use it with our colleagues. To
+explain our code we must write <strong>software
 documentation</strong>.</p>
-<p>These documents <strong>provide information</strong> about our
-programs for everyone involved in its development, use, and future
-re-use. Documentation may consist of text, tips within a computer
-environment, and diagrams that guide the user in using a (potentially
-complex) software tool. It explained how the software works why it
-behaves the way it does.</p>
-</section><section><h2 class="section-heading" id="why-document-software">Why document software?<a class="anchor" aria-label="anchor" href="#why-document-software"></a>
+<p>This <strong>provides information</strong> about our programs for
+everyone involved in its development, use, and future re-use.
+Documentation may consist of text, tips within a computer environment,
+and diagrams that guide the user in using a (potentially complex)
+software tool. It explains <em>how</em> the software works <em>why</em>
+it behaves the way it does.</p>
+</section><section><h2 class="section-heading" id="why-document-our-code">Why document our code?<a class="anchor" aria-label="anchor" href="#why-document-our-code"></a>
 </h2>
 <hr class="half-width">
-<p>It’s a common occurrence to get a software package, whether it’s
-written by ourselves, a colleague, or someone else, that’s
-near-impossible to use because it’s unclear what each function or tool
-does. Maybe we look at the source code itself, but we can’t make
-head-nor-tail of it. Maybe the only person who can use this software is
-the person who wrote it—unless you wrote it and forgot what you were
-thinking when you did!</p>
+<p>We often encounter software packages, whether written by ourselves, a
+colleague, or someone else, that’s difficult to use because it’s unclear
+what it does and how it works. Maybe we try to read the source code
+itself, but we can’t make head-nor-tail of it. Sometimes it seems like
+the only person who can use this software is the person who wrote it.
+Other times, you wrote the code forgot what you were thinking when you
+did!</p>
 <div id="discussion1" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
@@ -458,13 +474,14 @@ thinking when you did!</p>
 <div class="callout-inner">
 <h3 class="callout-title">Challenge</h3>
 <div class="callout-content">
-<p>Discuss positive or negative experiences with using research
-software:</p>
+<p><strong>Discuss positive and negative experiences</strong> with using
+research software. Think of times when you’ve used unfamiliar code or
+tools in your research projects in the past.</p>
 <ul>
-<li>What documentation was available?</li>
 <li>What challenges did you have picking up a new tool?</li>
-<li>What useful software-related information do you often refer to in
-your research projects?</li>
+<li>What documentation was available?</li>
+<li>What useful instruction manuals or reference guides do you often
+refer to in your research projects?</li>
 </ul>
 </div>
 </div>
@@ -474,21 +491,21 @@ your research projects?</li>
 </h3>
 <p>There are many <strong>advantages to writing guidance</strong> to go
 along with your research software. Software documentation helps yourself
-and others to use it successfully in the future and read your code
-ensuring that its value is sustained.</p>
+and others to use it successfully in the future. If others can read your
+code then that ensures that its value is sustained.</p>
 <p>Research outputs often <strong>depend upon the code</strong> used to
 generate them. Clarity and confidence are essential in using code to
 perform calculations, simulations, or data analysis. All kinds of
 research processes and analysis pipelines can be made more
 <strong>reproducible</strong> by providing clear context and
 instructions for using it.</p>
-<p>There are <strong>many advantages</strong> to making your code more
-readable. Well-documented software is easier to maintain and has greater
-<strong>sustainability</strong>, which means it can continue to be used
-and modified for a longer period of time, despite changes in technology.
-If software is more reusable then it encourages others to use it for
-their research, increasing the number of citations of that software and
-its overall research impact.</p>
+<p>There are many advantages to making your <strong>code more
+readable</strong>, too. Well-written software is easier to maintain and
+has greater <strong>sustainability</strong>. This means it can continue
+to be used and modified for a longer period of time, despite changes in
+technology. If software is more reusable then it encourages others to
+use it for their research, increasing the number of citations of that
+software and its overall <strong>research impact</strong>.</p>
 <div id="discussion2" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
@@ -500,67 +517,84 @@ its overall research impact.</p>
 software.</p>
 <ul>
 <li>How will it help you and your work?</li>
-<li>What benefits will these provide to your collaborators?</li>
+<li>What benefits will it provide to your collaborators?</li>
 <li>In what ways does documentation contribute to the wider research
 community?</li>
 </ul>
 </div>
 </div>
 </div>
-<p>In the long run, it can help you to develop your own software
+<p>In the long run, it can also help you to develop your own software
 engineering practice by getting into the habit of reflecting on what the
 <strong>purpose of the software</strong> is and to
 <strong>articulate</strong> what each component or module is for.</p>
 <p>Writing a useful software package that is well-documented and can be
 reused in the future means that your code could take on a life of its
-own, with benefits that extend beyond yourself to your collaborators and
-other researchers in the future. High-quality documentation is a key
-part of ensuring a healthy <strong>software lifecycle</strong>. It can
-make the different between accidentally creating an abandoned piece of
-“gradware” (a slang term for mysterious code that a former student wrote
-and nobody else can use) and a successful long-term software project
-with lasting impact.</p>
+own. The benefits can extend beyond yourself, to your collaborators and
+other researchers in the future.</p>
+<p>High-quality documentation is a key part of ensuring a healthy
+<strong>software lifecycle</strong>. It can make the different between
+accidentally creating an abandoned piece of “gradware” (a colloquial
+term for mysterious code that a former student wrote and nobody else can
+use) and a successful long-term software project with lasting
+impact.</p>
 </div>
 </section><section><h2 class="section-heading" id="when-should-i-write-documentation">When should I write documentation?<a class="anchor" aria-label="anchor" href="#when-should-i-write-documentation"></a>
 </h2>
 <hr class="half-width">
 <p>Now! Start writing and sharing documentation for your reseach code
 <strong>from the beginning</strong> of your project. It doesn’t have to
-be perfect straight away, but a first draft is more useful than nothing.
-It should be a consideration in your <em>software management plan</em>,
-which is a concept discussed in the Module 1a on Software Lifecycle
-Planning. Also, it’s never too late to start documentaing an old code
-project.</p>
-<p>This might include design notes, diagrams, or the various kinds of
-software documentation we’ll discuss in this module. The best practice
-for modern, collaborative research involving digital methods and tools
-is to document your processes <strong>early and often</strong>. Not only
-will writing notes about your code help other people to read and use
-that code, it will clarify your thought process as you design your
-system, focussing your work on the important parts of the task at
-hand.</p>
+be perfect straight away, but a first draft is more useful than
+nothing.</p>
+<p>The best practice for modern, collaborative research involving
+digital methods and tools is to document your processes <strong>early
+and often</strong>. Not only will writing notes about your code help
+other people to read and use that code, it will clarify your thought
+process as you design your system, focussing your work on the important
+parts of the task at hand.</p>
+<p>This might include any of the various kinds of software documentation
+we’ll discuss in this module, including:</p>
+<ul>
+<li>design notes and diagrams;</li>
+<li>a step-by-step tutorial for beginners;</li>
+<li>code comments.</li>
+</ul>
+<p>It should be a consideration in your <em>software management
+plan</em>, which is a concept discussed in the Module 1a on <a href="https://fair2-for-research-software.github.io/Software_Lifecycle_Planning/" class="external-link">Software
+Lifecycle Planning</a>. Also, it’s never too late to start documenting
+an old code project.</p>
 <p><strong>Keep in touch</strong> with other developers and users of the
 research code and make a note of their feedback. Common questions and
-problems are a sign that there are issues that must be covered more
+problems may indicate that there are issues that must be covered more
 clearly and in greater depth in the software documentation.
-<strong>Incorporate this feedback</strong> into the software
-documentation using the whichever method is most appropriate, following
-the guidance in this module.</p>
+<strong>Incorporate this feedback</strong> into your software
+documentation.</p>
 </section><section><h2 class="section-heading" id="research-software-papers">Research software papers<a class="anchor" aria-label="anchor" href="#research-software-papers"></a>
 </h2>
 <hr class="half-width">
-<p>You may decide to publish a description of your <strong>software as a
-paper</strong> in an academic journal. This is a kind of <a href="https://book.the-turing-way.org/communication/dif-articles/methods.html" class="external-link">methods
-paper</a>, which provides more detail on your research process than is
-possible in your main paper.</p>
-<p>A research software paper should provide a <strong>concise
-introduction</strong> to your code and explain how and why it was
-written. It may contain a detailed description of the technical design
-and how algorithms are implemente, providing transparency to other
-researchers and enabling better replicability of your results.</p>
+<p>You may decide to publish your code and a description of your
+<strong>software as a paper</strong> in an academic journal. This is a
+kind of <a href="https://book.the-turing-way.org/communication/dif-articles/methods.html" class="external-link">methods
+paper</a>, which provides more detail on your digital research processes
+than is possible in your main paper. This provides transparency to other
+researchers and improves the replicability of your results.</p>
+<p>A research software paper should provide:</p>
+<ul>
+<li>a concise <strong>introduction</strong> to your code;</li>
+<li>explain the <strong>motivation</strong> for creating the tool;</li>
+<li>describe <strong>how</strong> it was written;</li>
+<li>detail how <strong>algorithms</strong> are implemented;</li>
+<li>
+<strong>citations</strong> for other software libraries and methods
+that were used.</li>
+</ul>
+<p>It may also contain a detailed description of the technical
+design.</p>
 <p>For more information about writing these papers, which is beyond the
-scope of this course, please read <a href="https://doi.org/10.1371/journal.pcbi.1008390" class="external-link">Ten simple rules for
-writing a paper about scientific software</a> by Joseph Romano.</p>
+scope of this course, please consider starting to explore this subject
+by reading <a href="https://doi.org/10.1371/journal.pcbi.1008390" class="external-link">Ten
+simple rules for writing a paper about scientific software</a> by Joseph
+Romano.</p>
 <div id="accordionSpoiler1" class="accordion spoiler-accordion accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
@@ -569,7 +603,7 @@ writing a paper about scientific software</a> by Joseph Romano.</p>
   Software journals
   </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="accordion-body">
 <p>An increasing number of journals allow and encourage the publication
 of research software and open data. Some journals focus on a specific
@@ -581,11 +615,13 @@ Some relevant journals include:</p>
 Software</em></a> is a peer-reviewed publications that provides academic
 citations for research code;</li>
 <li>
-<a href="https://www.nature.com/" class="external-link">Nature</a> has a category of <a href="https://www.nature.com/nature/articles?type=toolbox" class="external-link">Toolbox
+<a href="https://www.nature.com/" class="external-link"><em>Nature</em></a> has a category
+of <a href="https://www.nature.com/nature/articles?type=toolbox" class="external-link">Toolbox
 articles</a> that cover the technical side of research;</li>
 <li>
-<a href="https://openresearchsoftware.metajnl.com/" class="external-link">Journal of Open
-Research Software</a> is a peer-reviewed repository run by the <a href="https://www.software.ac.uk/" class="external-link">Software Sustainability
+<a href="https://openresearchsoftware.metajnl.com/" class="external-link"><em>Journal of
+Open Research Software</em></a> is a peer-reviewed repository run by the
+<a href="https://www.software.ac.uk/" class="external-link">Software Sustainability
 Institute</a>.</li>
 </ul>
 <p>For more information, please read <a href="https://www.software.ac.uk/top-tip/which-journals-should-i-publish-my-software" class="external-link">In
@@ -596,12 +632,78 @@ Sustainability Institute</a>.</p>
 </div>
 </div>
 </div>
-</section><section><h2 class="section-heading" id="examples">Examples<a class="anchor" aria-label="anchor" href="#examples"></a>
+<div id="keypoints1" class="callout keypoints">
+<div class="callout-square">
+<i class="callout-icon" data-feather="key"></i>
+</div>
+<div class="callout-inner">
+<h3 class="callout-title">Key Points</h3>
+<div class="callout-content">
+<ul>
+<li>
+<strong>Reproducibility:</strong> Well-documented software is easier
+for other researchers to understand and use with confidence. It enables
+them to <strong>reproduce your results</strong> to replicate research
+findings, enabling others to validate them and building trust in your
+research outputs.</li>
+<li>
+<strong>Collaboration:</strong> Clear instructions enable other
+researchers to use and <strong>collaborate</strong> with your software
+and research projects.</li>
+<li>
+<strong>Knowledge transfer:</strong> Your software package will be
+easier to maintain in the long term if others are able to learn about it
+and look after it after the original developers move on.</li>
+</ul>
+</div>
+</div>
+</div>
+<!--
+Place links that you need to refer to multiple times across pages here. Delete
+any links that you are not going to use.
+ -->
+</section></section><section id="aio-examples"><p>Content from <a href="examples.html">Examples</a></p>
+<hr>
+<p>Last updated on 2025-03-03 |
+
+        <a href="https://github.com/FAIR2-for-research-software/Documentation/edit/main/episodes/examples.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
+<p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 12 minutes</p>
+<div class="text-end">
+          <button role="button" aria-pressed="false" tabindex="0" id="expand-code" class="pull-right" data-expand="Expand All Solutions " data-collapse="Collapse All Solutions "> Expand All Solutions <i aria-hidden="true" data-feather="plus"></i></button>
+        </div>
+<div class="overview card">
+<h2 class="card-header">Overview</h2>
+<div class="row g-0">
+<div class="col-md-4">
+<div class="card-body">
+<div class="inner">
+<h3 class="card-title">Questions</h3>
+<ul>
+<li>What does well-documented code look like?</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="col-md-8">
+<div class="card-body">
+<div class="inner bordered">
+<h3 class="card-title">Objectives</h3>
+<ul>
+<li>Be introduced to good software documentation practices</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<section><h2 class="section-heading" id="examples">Examples<a class="anchor" aria-label="anchor" href="#examples"></a>
 </h2>
 <hr class="half-width">
-<p>Here are some examples of some code to perform some geometry. The
-first example could be improved in terms of its documentation and
-readability, while the second one is much clearer.</p>
+<p>In this episode we’ll review some examples of research software and
+evaluate how readable and reusable it is.</p>
+<p>Here is some code to perform a geometrical calculation. The first
+example could be improved in terms of its documentation and readability,
+while the second one is much clearer.</p>
 <div class="section level3">
 <h3 id="example-of-no-documentation">Example of no documentation<a class="anchor" aria-label="anchor" href="#example-of-no-documentation"></a>
 </h3>
@@ -621,7 +723,7 @@ what this code is for or why it was written.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-1" class="tab-content">
-<div id="nav-tabpanel-1-Python" class="tab-pane show active" aria-labelledby="nav-tab-1-Python" role="tabpanel">
+<div id="nav-tabpanel-1-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-Python">
 <p>This is some research code that is contained in a Python
 function.</p>
 <div class="codewrapper sourceCode" id="cb1">
@@ -629,23 +731,23 @@ function.</p>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="kw">def</span> run(x):</span>
 <span id="cb1-2"><a href="#cb1-2" tabindex="-1"></a>  weird_num <span class="op">=</span> <span class="fl">1.234</span></span>
-<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a>  <span class="cf">return</span> x <span class="op">*</span> weird_num <span class="op">-</span> angle<span class="op">**</span><span class="dv">3</span> <span class="op">/</span> (weird_num <span class="op">*</span> <span class="dv">2</span>)</span></code></pre>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a>  <span class="cf">return</span> x <span class="op">*</span> weird_num <span class="op">-</span> ang<span class="op">**</span><span class="dv">3</span> <span class="op">/</span> (weird_num <span class="op">*</span> <span class="dv">2</span>)</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-1-R" class="tab-pane" aria-labelledby="nav-tab-1-R" role="tabpanel">
+<div id="nav-tabpanel-1-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-R">
 <p>This is some research code that is contained in an R function.</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode r" tabindex="0"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a>run <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
 <span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a>  weird_num <span class="ot">=</span> <span class="fl">1.234</span></span>
-<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a>  return x <span class="sc">*</span> weird_num <span class="sc">-</span> angle<span class="sc">**</span><span class="dv">3</span> <span class="sc">/</span> (weird_num <span class="sc">*</span> <span class="dv">2</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a>  return x <span class="sc">*</span> weird_num <span class="sc">-</span> ang<span class="sc">**</span><span class="dv">3</span> <span class="sc">/</span> (weird_num <span class="sc">*</span> <span class="dv">2</span>)</span>
 <span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a>}</span></code></pre>
 </div>
 </div>
 </div>
 </div>
-<div id="discussion3" class="callout discussion">
+<div id="discussion1" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
@@ -654,8 +756,8 @@ function.</p>
 <div class="callout-content">
 <p>Read and evaluate this code.</p>
 <ul>
-<li>Can you tell what the purpose of the function is?</li>
-<li>What is the meaning of the variables?</li>
+<li>What is the purpose of this function?</li>
+<li>What do the variables mean?</li>
 <li>Would you rely on this code in your research? Why, or why not?</li>
 </ul>
 </div>
@@ -691,7 +793,7 @@ this course, so don’t worry if they don’t make sense yet!)</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-2" class="tab-content">
-<div id="nav-tabpanel-2-Python" class="tab-pane show active" aria-labelledby="nav-tab-2-Python" role="tabpanel">
+<div id="nav-tabpanel-2-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-2-Python">
 <p>This is a function written in the Python programming language that
 calculates a mathematical result, the details of which aren’t relevant.
 This code has plenty of documentation to help us read and understand
@@ -703,37 +805,39 @@ it.</p>
 <span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a></span>
 <span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a><span class="kw">def</span> calculate_sine(angle: <span class="bu">float</span>) <span class="op">-&gt;</span> <span class="bu">float</span>:</span>
 <span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a>  <span class="co">"""</span></span>
-<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a><span class="co">  Calculates the sine of an angle using the first four terms of the Taylor series.</span></span>
-<span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a></span>
-<span id="cb3-7"><a href="#cb3-7" tabindex="-1"></a><span class="co">  This function uses the first four terms of the Taylor series for sine to approximate</span></span>
-<span id="cb3-8"><a href="#cb3-8" tabindex="-1"></a><span class="co">  the value. This is a simple and efficient method for most applications.</span></span>
-<span id="cb3-9"><a href="#cb3-9" tabindex="-1"></a></span>
-<span id="cb3-10"><a href="#cb3-10" tabindex="-1"></a><span class="co">  Args:</span></span>
-<span id="cb3-11"><a href="#cb3-11" tabindex="-1"></a><span class="co">      angle (float): The angle in radians.</span></span>
-<span id="cb3-12"><a href="#cb3-12" tabindex="-1"></a></span>
-<span id="cb3-13"><a href="#cb3-13" tabindex="-1"></a><span class="co">  Returns:</span></span>
-<span id="cb3-14"><a href="#cb3-14" tabindex="-1"></a><span class="co">      float: The sine of the angle (sin(angle)).</span></span>
-<span id="cb3-15"><a href="#cb3-15" tabindex="-1"></a><span class="co">  """</span></span>
-<span id="cb3-16"><a href="#cb3-16" tabindex="-1"></a>  sin_value <span class="op">=</span> angle</span>
-<span id="cb3-17"><a href="#cb3-17" tabindex="-1"></a></span>
-<span id="cb3-18"><a href="#cb3-18" tabindex="-1"></a>  <span class="co"># Iterate over the first four terms of the Taylor series for sine</span></span>
-<span id="cb3-19"><a href="#cb3-19" tabindex="-1"></a>  <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">5</span>):</span>
-<span id="cb3-20"><a href="#cb3-20" tabindex="-1"></a>    factorial <span class="op">=</span> math.factorial(<span class="dv">2</span> <span class="op">*</span> i)</span>
-<span id="cb3-21"><a href="#cb3-21" tabindex="-1"></a>    sign <span class="op">=</span> (<span class="op">-</span><span class="dv">1</span>) <span class="op">**</span> (i <span class="op">//</span> <span class="dv">2</span>)  <span class="co"># Alternate signs for sine terms</span></span>
-<span id="cb3-22"><a href="#cb3-22" tabindex="-1"></a></span>
-<span id="cb3-23"><a href="#cb3-23" tabindex="-1"></a>    <span class="co"># Add terms for sine</span></span>
-<span id="cb3-24"><a href="#cb3-24" tabindex="-1"></a>    sin_value <span class="op">+=</span> sign <span class="op">*</span> (angle <span class="op">**</span> (<span class="dv">2</span> <span class="op">*</span> i)) <span class="op">/</span> factorial</span>
-<span id="cb3-25"><a href="#cb3-25" tabindex="-1"></a></span>
-<span id="cb3-26"><a href="#cb3-26" tabindex="-1"></a>  <span class="cf">return</span> sin_value</span></code></pre>
+<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a><span class="co">  Calculates the sine of an angle using the first four terms</span></span>
+<span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a><span class="co">  of the Taylor series.</span></span>
+<span id="cb3-7"><a href="#cb3-7" tabindex="-1"></a></span>
+<span id="cb3-8"><a href="#cb3-8" tabindex="-1"></a><span class="co">  This function uses the first four terms of the Taylor</span></span>
+<span id="cb3-9"><a href="#cb3-9" tabindex="-1"></a><span class="co">  series for sine to approximate the value. This is a</span></span>
+<span id="cb3-10"><a href="#cb3-10" tabindex="-1"></a><span class="co">  simple and efficient method for most applications.</span></span>
+<span id="cb3-11"><a href="#cb3-11" tabindex="-1"></a></span>
+<span id="cb3-12"><a href="#cb3-12" tabindex="-1"></a><span class="co">  Args:</span></span>
+<span id="cb3-13"><a href="#cb3-13" tabindex="-1"></a><span class="co">      angle (float): The angle in radians.</span></span>
+<span id="cb3-14"><a href="#cb3-14" tabindex="-1"></a></span>
+<span id="cb3-15"><a href="#cb3-15" tabindex="-1"></a><span class="co">  Returns:</span></span>
+<span id="cb3-16"><a href="#cb3-16" tabindex="-1"></a><span class="co">      float: The sine of the angle (sin(angle)).</span></span>
+<span id="cb3-17"><a href="#cb3-17" tabindex="-1"></a><span class="co">  """</span></span>
+<span id="cb3-18"><a href="#cb3-18" tabindex="-1"></a>  sine_value <span class="op">=</span> angle</span>
+<span id="cb3-19"><a href="#cb3-19" tabindex="-1"></a></span>
+<span id="cb3-20"><a href="#cb3-20" tabindex="-1"></a>  <span class="co"># Iterate over the first four terms of the Taylor series for sine</span></span>
+<span id="cb3-21"><a href="#cb3-21" tabindex="-1"></a>  <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">5</span>):</span>
+<span id="cb3-22"><a href="#cb3-22" tabindex="-1"></a>    factorial <span class="op">=</span> math.factorial(<span class="dv">2</span> <span class="op">*</span> i)</span>
+<span id="cb3-23"><a href="#cb3-23" tabindex="-1"></a>    sign <span class="op">=</span> (<span class="op">-</span><span class="dv">1</span>) <span class="op">**</span> (i <span class="op">//</span> <span class="dv">2</span>)  <span class="co"># Alternate signs for sine terms</span></span>
+<span id="cb3-24"><a href="#cb3-24" tabindex="-1"></a></span>
+<span id="cb3-25"><a href="#cb3-25" tabindex="-1"></a>    <span class="co"># Add terms for sine</span></span>
+<span id="cb3-26"><a href="#cb3-26" tabindex="-1"></a>    sine_value <span class="op">+=</span> sign <span class="op">*</span> (angle <span class="op">**</span> (<span class="dv">2</span> <span class="op">*</span> i)) <span class="op">/</span> factorial</span>
+<span id="cb3-27"><a href="#cb3-27" tabindex="-1"></a></span>
+<span id="cb3-28"><a href="#cb3-28" tabindex="-1"></a>  <span class="cf">return</span> sine_value</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-2-R" class="tab-pane" aria-labelledby="nav-tab-2-R" role="tabpanel">
+<div id="nav-tabpanel-2-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-R">
 <p>This is a function written in the R programming language that
 calculates a mathematical result, the details of which aren’t relevant.
 This code has plenty of documentation to help us read and understand it.
 R uses the <a href="https://roxygen2.r-lib.org/index.html" class="external-link">roxygen2</a>
-package to build the docstrings into internal documentation and
-optionally external API documentation.</p>
+package to format documentation strings into our project
+documentation.</p>
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -742,14 +846,16 @@ optionally external API documentation.</p>
 <span><span class="co">#'</span></span>
 <span><span class="co">#' @description</span></span>
 <span><span class="co">#'</span></span>
-<span><span class="co">#' This function uses the first four terms of the Taylor series for sine to approximate</span></span>
-<span><span class="co">#' the value. This is a simple and efficient method for most applications.</span></span>
+<span><span class="co">#' This function uses the first four terms of the Taylor</span></span>
+<span><span class="co">#' series for sine to approximate</span></span>
+<span><span class="co">#' the value. This is a simple and efficient method for</span></span>
+<span><span class="co">#' most applications.</span></span>
 <span><span class="co">#'</span></span>
-<span><span class="co">#' @param angle</span></span>
+<span><span class="co">#' @param angle The angle in radians.</span></span>
 <span><span class="co">#'</span></span>
 <span><span class="co">#' @returns The sine of the angle (sun(angle)).</span></span>
 <span><span class="va">calculate_sine</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">angle</span><span class="op">)</span> <span class="op">{</span></span>
-<span>  <span class="va">sin_value</span> <span class="op">&lt;-</span> <span class="va">angle</span></span>
+<span>  <span class="va">sine_value</span> <span class="op">&lt;-</span> <span class="va">angle</span></span>
 <span></span>
 <span>  <span class="co"># Loop for the first four terms</span></span>
 <span>  <span class="kw">for</span> <span class="op">(</span><span class="va">i</span> <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span><span class="fl">4</span><span class="op">)</span> <span class="op">{</span></span>
@@ -757,7 +863,7 @@ optionally external API documentation.</p>
 <span>    <span class="va">sign</span> <span class="op">&lt;-</span> <span class="op">(</span><span class="op">-</span><span class="fl">1</span><span class="op">)</span><span class="op">^</span><span class="op">(</span><span class="va">i</span> <span class="op">%%</span> <span class="fl">2</span><span class="op">)</span>  <span class="co"># Alternate signs with modulo (%)</span></span>
 <span></span>
 <span>    <span class="co"># Add terms for sine</span></span>
-<span>    <span class="va">sin_value</span> <span class="op">&lt;-</span> <span class="va">sin_value</span> <span class="op">+</span> <span class="va">sign</span> <span class="op">*</span> <span class="op">(</span><span class="va">angle</span><span class="op">^</span><span class="op">(</span><span class="fl">2</span> <span class="op">*</span> <span class="va">i</span><span class="op">)</span><span class="op">)</span> <span class="op">/</span> <span class="va">factorial</span></span>
+<span>    <span class="va">sine_value</span> <span class="op">&lt;-</span> <span class="va">sine_value</span> <span class="op">+</span> <span class="va">sign</span> <span class="op">*</span> <span class="op">(</span><span class="va">angle</span><span class="op">^</span><span class="op">(</span><span class="fl">2</span> <span class="op">*</span> <span class="va">i</span><span class="op">)</span><span class="op">)</span> <span class="op">/</span> <span class="va">factorial</span></span>
 <span>  <span class="op">}</span></span>
 <span></span>
 <span>  <span class="kw">return</span><span class="op">(</span><span class="va">sin_value</span><span class="op">)</span></span>
@@ -766,7 +872,7 @@ optionally external API documentation.</p>
 </div>
 </div>
 </div>
-<div id="discussion4" class="callout discussion">
+<div id="discussion2" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
@@ -805,7 +911,7 @@ packages that are used in research.</p>
 <h3 id="numpy-user-guide">NumPy user guide<a class="anchor" aria-label="anchor" href="#numpy-user-guide"></a>
 </h3>
 <p>NumPy is a mathematical package for the Python programming language
-that’s used for linear algebra. The <a href="https://numpy.org/doc/2.0/user/index.html#user" class="external-link">NumPy User
+that’s used for quantitative computing and linear algebra. The <a href="https://numpy.org/doc/2.0/user/index.html#user" class="external-link">NumPy User
 Guide</a> is a <strong>thorough website</strong> that organised into
 sections that cover the different aspects of using that package.</p>
 <p>It includes a beginner’s guide, tutorials for different use-cases,
@@ -813,48 +919,62 @@ and in-depth write-ups of technical details of certain aspects of the
 code. Some of the content is written for a target audience with no
 assumed knowledge, while other parts are written as a reference for
 people with some background in mathematics and computer programming.</p>
+<p>If we want to read more about how to use a certain feature, there are
+documentation pages such as <a href="https://numpy.org/doc/stable/reference/generated/numpy.array.html" class="external-link">numpy.array</a>
+that describe purpose and the parameters of each function. If we’re in a
+Python interpreter shell, we can use the <a href="https://docs.python.org/3/library/functions.html#help" class="external-link"><code>help()</code>
+in-built function</a> to view the documentation:</p>
+<div class="codewrapper sourceCode" id="cb5">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="im">import</span> numpy</span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a><span class="bu">help</span>(numpy.array)</span></code></pre>
+</div>
+<pre><code>Help on built-in function array in module numpy:
+
+array(...)
+    array(object, dtype=None, *, copy=True, order='K', subok=False, ndmin=0,
+          like=None)
+
+    Create an array.
+
+    Parameters
+    ----------
+    object : array_like
+        An array, any object exposing the array interface, an object whose
+        ``__array__`` method returns an array, or any (nested) sequence.
+        If object is a scalar, a 0-dimensional array containing object is
+        returned.
+...</code></pre>
 </div>
 <div class="section level3">
 <h3 id="ggplot2-documentation-site">ggplot2 documentation site<a class="anchor" aria-label="anchor" href="#ggplot2-documentation-site"></a>
 </h3>
-<p>ggplot2 is a package for the R statistical language that generates
-data visualisations and graphics. The <a href="https://ggplot2.tidyverse.org/index.html" class="external-link">ggplot2
+<p><a href="https://cloud.r-project.org/web/packages/ggplot2/" class="external-link">ggplot2</a> is
+a package for the R statistical language that generates data
+visualisations and graphics. The <a href="https://ggplot2.tidyverse.org/index.html" class="external-link">ggplot2
 documentation</a> has a simple, accessible layout and <strong>walks a
 new user through</strong> installing and getting up-and-running with the
 tool. The page provides a “cheat sheet” which is a reference guide that
-lists commonly-used commands in an attractice two-page layout. The
+lists commonly-used commands in an attractive two-page layout. The
 documentation site is moderate in scope and links to several external
 resources, such as online courses hosted elsewhere.</p>
-<p>The source code is neatly organised into <a href="https://github.com/tidyverse/ggplot2/tree/main/R" class="external-link">R code files</a>
-in the repository. For example, the function <a href="https://github.com/tidyverse/ggplot2/blob/main/R/geom-point.R" class="external-link">geom_point()</a>
+<p>In R, we can view the documentation for each function by using the
+<code>?</code> syntax. For example, calling
+<code>?ggplot2::ggplot</code> will show the help text for that function
+or load the reference information in a web browser. Also, if we ever
+needed to read it, the source code is neatly organised into <a href="https://github.com/tidyverse/ggplot2/tree/main/R" class="external-link">R code files</a>
+in the repository. For example, the function <a href="https://github.com/tidyverse/ggplot2/blob/main/R/plot.R" class="external-link">ggplot()</a>
 includes an extensive description of the purpose and operation of that
 code, including a list of the parameters and examples of how to use
 it.</p>
-<div id="keypoints1" class="callout keypoints">
-<div class="callout-square">
-<i class="callout-icon" data-feather="key"></i>
-</div>
-<div class="callout-inner">
-<h3 class="callout-title">Key Points</h3>
-<div class="callout-content">
-<ul>
-<li>
-<strong>Reproducibility:</strong> Well-documented software is easier
-for other researchers to understand and use with confidence. It enables
-them to <strong>reproduce your results</strong> to replicate research
-findings, enabling others to validate them and building trust in your
-research outputs.</li>
-<li>
-<strong>Collaboration:</strong> Clear instructions enable other
-researchers to use and <strong>collaborate</strong> with your software
-and research projects.</li>
-<li>
-<strong>Knowledge transfer:</strong> Your software package will be
-easier to maintain in the long term if others are able to learn about it
-and look after it after the original developers move on.</li>
-</ul>
-</div>
-</div>
+<div class="codewrapper sourceCode" id="cb7">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">install.packages</span><span class="op">(</span><span class="st">"ggplot2"</span><span class="op">)</span></span>
+<span><span class="kw">library</span><span class="op">(</span><span class="va">ggplot2</span><span class="op">)</span></span>
+<span><span class="op">?</span><span class="va">ggplot2</span><span class="op">:</span><span class="va">ggplot</span></span></code></pre>
 </div>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
@@ -945,7 +1065,7 @@ contain your work. Then, start writing your README!</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>Follow these general steps to create a README file. The specific
 details for each operating system are detailed below.</p>
@@ -1214,7 +1334,7 @@ navigation.</li>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> More about Accessibility </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <p>For more information on this topic, please see the following
 resources:</p>
@@ -1251,7 +1371,7 @@ depending upon accessibility requirements.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
   <h3 class="accordion-header" id="headingSpoiler2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> What is a markup language? </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
 <div class="accordion-body">
 <p>A <a href="https://en.wikipedia.org/wiki/Markup_language" class="external-link">markup
 language</a> is a system of special characters that are used to
@@ -1286,7 +1406,7 @@ formatting options.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>Follow these steps to rename <code>README.txt</code> to
 <code>README.md</code>.</p>
@@ -1395,7 +1515,7 @@ subsections by adding further subheadings?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <p>We can create the commonly-used headers used in READMEs by using the
 Markdown syntax shown below</p>
@@ -1522,7 +1642,7 @@ them in using a bold font face.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <p>The Markdown syntax for bold font is to wrap the text in two
 asterixes <code>**</code>. This may be applied to single words or to
@@ -2512,7 +2632,7 @@ shown in a red font.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-1" class="tab-content">
-<div id="nav-tabpanel-1-Python" class="tab-pane show active" aria-labelledby="nav-tab-1-Python" role="tabpanel">
+<div id="nav-tabpanel-1-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-Python">
 <p>Without syntax highlighting:</p>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2556,7 +2676,7 @@ shown in a red font.</p>
 <span id="cb2-16"><a href="#cb2-16" tabindex="-1"></a>  <span class="cf">return</span> word_count</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-1-R" class="tab-pane" aria-labelledby="nav-tab-1-R" role="tabpanel">
+<div id="nav-tabpanel-1-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-R">
 <p>Without syntax highlighting:</p>
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">DEFAULT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2680,7 +2800,7 @@ it’s easy to interpret their purpose.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-2" class="tab-content">
-<div id="nav-tabpanel-2-Python" class="tab-pane show active" aria-labelledby="nav-tab-2-Python" role="tabpanel">
+<div id="nav-tabpanel-2-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-2-Python">
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -2692,7 +2812,7 @@ it’s easy to interpret their purpose.</p>
 <span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a>    <span class="cf">return</span> area</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-2-R" class="tab-pane" aria-labelledby="nav-tab-2-R" role="tabpanel">
+<div id="nav-tabpanel-2-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-R">
 <div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -2749,7 +2869,7 @@ such as <code>sum()</code>.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-3" class="tab-content">
-<div id="nav-tabpanel-3-Python" class="tab-pane show active" aria-labelledby="nav-tab-3-Python" role="tabpanel">
+<div id="nav-tabpanel-3-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-3-Python">
 <p>Classes use capitalised words, where each word in a phrase starts
 with an upper-case letter and there are no spaces between them.</p>
 <div class="codewrapper sourceCode" id="cb7">
@@ -2788,7 +2908,7 @@ the <a href="https://peps.python.org/pep-0008/#naming-conventions" class="extern
 Conventions</a> section of
 <acronym title="Python Enhancement Proposals">PEP</acronym> 8.</p>
 </div>
-<div id="nav-tabpanel-3-R" class="tab-pane" aria-labelledby="nav-tab-3-R" role="tabpanel">
+<div id="nav-tabpanel-3-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-3-R">
 <p>Classes use capitalised words</p>
 <div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2858,7 +2978,7 @@ start of a new line, like so:</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-4" class="tab-content">
-<div id="nav-tabpanel-4-Python" class="tab-pane show active" aria-labelledby="nav-tab-4-Python" role="tabpanel">
+<div id="nav-tabpanel-4-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-4-Python">
 <p>Python <a href="https://docs.python.org/3/reference/lexical_analysis.html#comments" class="external-link">comments</a>
 start with a hash character (<code>#</code>) and are ignored when the
 code runs.</p>
@@ -2873,7 +2993,7 @@ code runs.</p>
 operators</a> such as <code>+=</code> in the documentation for that
 programming language.</p>
 </div>
-<div id="nav-tabpanel-4-R" class="tab-pane" aria-labelledby="nav-tab-4-R" role="tabpanel">
+<div id="nav-tabpanel-4-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-4-R">
 <p>Python <a href="https://cran.r-project.org/doc/manuals/R-lang.html#Comments" class="external-link">comments</a>
 start with a hash character (<code>#</code>) and are ignored when the
 code runs.</p>
@@ -2938,7 +3058,7 @@ they move through the system.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-5" class="tab-content">
-<div id="nav-tabpanel-5-Python" class="tab-pane show active" aria-labelledby="nav-tab-5-Python" role="tabpanel">
+<div id="nav-tabpanel-5-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-5-Python">
 <p>In the Python programming language, we can tell the user what type of
 data we expect each variable to contain by using the syntax below. This
 colon means that the <code>age</code> variable should contain a value
@@ -2952,7 +3072,7 @@ with the integer type, <code>int</code>.</p>
 of the Python Documentation and the <a href="https://mypy.readthedocs.io/en/stable/cheat_sheet_py3.html" class="external-link">Type
 hints cheat sheet</a> in the mypy documentation.</p>
 </div>
-<div id="nav-tabpanel-5-R" class="tab-pane" aria-labelledby="nav-tab-5-R" role="tabpanel">
+<div id="nav-tabpanel-5-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-5-R">
 <p>There is no type hinting feature in base R, although some packages
 are available that enable this. Here, the <code>L</code> symbol at the
 end of the number tells the R interpreter that this is an integer data
@@ -2991,7 +3111,7 @@ reader.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-6" class="tab-content">
-<div id="nav-tabpanel-6-Python" class="tab-pane show active" aria-labelledby="nav-tab-6-Python" role="tabpanel">
+<div id="nav-tabpanel-6-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-6-Python">
 <p>Below is the source code for a simple Python function that calculates
 the sum of two numbers. I’ve labelled each of the function arguments
 <code>a</code> and <code>b</code> with variable annotations that let you
@@ -3008,7 +3128,7 @@ declaration as <code>-&gt; int</code>.</p>
 <span id="cb19-3"><a href="#cb19-3" tabindex="-1"></a>    <span class="cf">return</span> a <span class="op">+</span> b</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-6-R" class="tab-pane" aria-labelledby="nav-tab-6-R" role="tabpanel">
+<div id="nav-tabpanel-6-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-6-R">
 <p>Below is the source code for a simple R function that calculates the
 sum of two numbers.</p>
 <p>In R, there is no inbuilt functionality for annotating the expected
@@ -4376,7 +4496,7 @@ will do.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> What are arguments? </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <p>When using shell commands, we use the words <strong>option</strong>,
 <strong>flag</strong>, and <strong>arguments</strong> to describe
@@ -4557,7 +4677,7 @@ executed first.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
   <h3 class="accordion-header" id="headingSpoiler2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Why must our file be named __main__.py? </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
 <div class="accordion-body">
 <p>This is a mechanism that tells Python how we want users to interact
 with our software.</p>
@@ -4602,7 +4722,7 @@ Run this script from the command line. What happens when you run
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>When you run the <code>python -m oddsong</code> command, Python runs
 the <em>main module as a script</em>.</p>
@@ -4704,7 +4824,7 @@ happens in your temrinal?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>When we run our script as before, it will run like normal with no
 change in behaviour.</p>
@@ -4772,7 +4892,7 @@ interface.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <p>The code now looks something like that shown below.</p>
 <div class="codewrapper sourceCode" id="cb25">
@@ -4849,7 +4969,7 @@ happen in your CLI?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <p>We can achieve this in our example script by adding a
 <code>help</code> string.</p>
@@ -4924,7 +5044,7 @@ our help screen?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution5" aria-expanded="false" aria-controls="collapseSolution5">
   <h4 class="accordion-header" id="headingSolution5"> Show me the solution </h4>
 </button>
-<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
+<div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
 <div class="accordion-body">
 <p>We define the description when creating our argument parser
 object.</p>
@@ -5052,10 +5172,10 @@ any links that you are not going to use.
 
 
         <!--<p>Template licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/">CC-BY 4.0</a> by <a href="https://carpentries.org/">The Carpentries</a></p>-->
-        <!--<p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.16.11">sandpaper (0.16.11)</a>, <a href="https://github.com/carpentries/pegboard/tree/0.7.7">pegboard (0.7.7)</a>, and <a href="https://github.com/RSE-Sheffield/uos-varnish/tree/main">varnish (1.0.4)</a></p>-->
+        <!--<p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.16.11">sandpaper (0.16.11)</a>, <a href="https://github.com/carpentries/pegboard/tree/0.7.9">pegboard (0.7.9)</a>, and <a href="https://github.com/RSE-Sheffield/uos-varnish/tree/main">varnish (1.0.4)</a></p>-->
         <p><a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">Template licensed under CC-BY 4.0</a> by <a href="https://carpentries.org" class="external-link">The Carpentries</a></p>
         <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/0.16.11" class="external-link">sandpaper (0.16.11)</a>,
-        <a href="https://github.com/carpentries/pegboard/tree/0.7.7" class="external-link">pegboard (0.7.7)</a>,
+        <a href="https://github.com/carpentries/pegboard/tree/0.7.9" class="external-link">pegboard (0.7.9)</a>,
       and <a href="https://github.com/RSE-Sheffield/uos-varnish/tree/main" class="external-link">varnish (1.0.4) [UoS fork]</a>.</p>
 			</div>
 		</footer>
@@ -5079,8 +5199,8 @@ any links that you are not going to use.
   "url": "https://FAIR2-for-research-software.github.io/Documentation/instructor/aio.html",
   "identifier": "https://FAIR2-for-research-software.github.io/Documentation/instructor/aio.html",
   "dateCreated": "2024-05-20",
-  "dateModified": "2025-02-18",
-  "datePublished": "2025-02-18"
+  "dateModified": "2025-03-03",
+  "datePublished": "2025-03-03"
 }
 
   </script><script>
