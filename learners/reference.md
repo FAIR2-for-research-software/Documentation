@@ -57,6 +57,9 @@ Documentation site
 Linter
 : A system that analyses code for potential errors.
 
+Gradware
+: A computer program written by a former postgraduate student that has been abandoned without any documentation and is near-impossible to reuse or to replicate the results.
+
 ## Further resources
 
 - Write the Docs, [A beginner’s guide to writing documentation](https://www.writethedocs.org/guide/writing/beginners-guide-to-docs/)

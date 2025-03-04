@@ -38,7 +38,7 @@ This course introduces some different ways to provide other researchers with use
 
 ## Related modules
 
-There is information about publishing a software package and providing metadata and citation details in Modules 6 and 7 of [this course](https://rse.shef.ac.uk/training/fair4rs/).
+There is information about publishing a software package and providing metadata and citation details in Modules 6 and 7 of [this course](https://github.com/FAIR2-for-research-software).
 For more information about these topics, please refer to the following modules:
 
 - **6** Packaging 
