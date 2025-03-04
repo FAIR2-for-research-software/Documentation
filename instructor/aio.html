@@ -262,7 +262,7 @@
 <div class="accordion accordion-flush" id="accordionFlush3">
   <div class="accordion-item">
     <div class="accordion-header" id="flush-heading3">
-        <a href="examples.html">2. Examples</a>
+        <a href="examples.html">2. Documentation examples</a>
     </div>
 <!--/div.accordion-header-->
 
@@ -662,9 +662,9 @@ and look after it after the original developers move on.</li>
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
-</section></section><section id="aio-examples"><p>Content from <a href="examples.html">Examples</a></p>
+</section></section><section id="aio-examples"><p>Content from <a href="examples.html">Documentation examples</a></p>
 <hr>
-<p>Last updated on 2025-03-03 |
+<p>Last updated on 2025-03-04 |
 
         <a href="https://github.com/FAIR2-for-research-software/Documentation/edit/main/episodes/examples.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 12 minutes</p>
@@ -696,7 +696,7 @@ any links that you are not going to use.
 </div>
 </div>
 </div>
-<section><h2 class="section-heading" id="examples">Examples<a class="anchor" aria-label="anchor" href="#examples"></a>
+<section><h2 class="section-heading" id="code-examples">Code examples<a class="anchor" aria-label="anchor" href="#code-examples"></a>
 </h2>
 <hr class="half-width">
 <p>In this episode we’ll review some examples of research software and
@@ -983,7 +983,7 @@ any links that you are not going to use.
 </div>
 </section></section><section id="aio-readmes"><p>Content from <a href="readmes.html">Writing README files</a></p>
 <hr>
-<p>Last updated on 2024-10-14 |
+<p>Last updated on 2025-03-04 |
 
         <a href="https://github.com/FAIR2-for-research-software/Documentation/edit/main/episodes/readmes.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 12 minutes</p>
@@ -1034,6 +1034,39 @@ their research.</p>
 and shows them how to get started using it. For larger packages, the
 README forms a concise beginner guide and might link to a more detailed
 user guide that is located elsewhere.</p>
+<div id="accordionSpoiler1" class="accordion spoiler-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
+  <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> The etymology of the “Read Me” </h3>
+</button>
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div class="accordion-body">
+<p>The tradition of including a “Read Me” file <a href="https://medium.com/@NSomar/readme-md-history-and-components-a365aff07f10" class="external-link">originated
+with</a> computer programming in the 1970s and, particularly with the
+rise of open source software, has become a <em>de facto</em> standard in
+code documentation.</p>
+<p>The term “Read Me” recalls the potion that Alice finds in <em>Alice
+in Wonderland</em> by Lewis Carroll. In Chapter 1, Alice found a bottle
+labelled “Drink Me” and thinks to herself:</p>
+<blockquote>
+<p>It was all very well to say “Drink me,” but the wise little Alice was
+not going to do that in a hurry. “No, I’ll look first,” she said, “and
+see whether it’s marked ‘poison’ or not”; for she had read several nice
+little histories about children who had got burnt, and eaten up by wild
+beasts and other unpleasant things, all because they would not remember
+the simple rules their friends had taught them: such as, that a red-hot
+poker will burn you if you hold it too long; and that if you cut your
+finger very deeply with a knife, it usually bleeds; and she had never
+forgotten that, if you drink much from a bottle marked “poison,” it is
+almost certain to disagree with you, sooner or later.</p>
+</blockquote>
+<p>It is wise to follow’s Alice’s advice and check the “Read Me” before
+risking being eaten by wild beasts or other hazards of working with
+poorly documented research software.</p>
+</div>
+</div>
+</div>
+</div>
 <p>The <strong>audience</strong> for a README file is the <em>end
 user</em>, such as a researcher. It’s important to consider <em>the
 person</em> will read your documentation, and to see things from their
@@ -1046,8 +1079,8 @@ user who has never seen this software before.</p>
 <hr class="half-width">
 <p>To start writing a README file, the simplest way is to <strong>create
 an empty text file</strong> called <code>README.txt</code> and start
-writing. This file should be located in the directory (or folder) that
-contains your software project.</p>
+writing. This file should be located in the directory that contains your
+software project.</p>
 <div id="challenge1" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -1065,7 +1098,7 @@ contain your work. Then, start writing your README!</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>Follow these general steps to create a README file. The specific
 details for each operating system are detailed below.</p>
@@ -1095,7 +1128,7 @@ details for each operating system are detailed below.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-1" class="tab-content">
-<div id="nav-tabpanel-1-Windows" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-Windows">
+<div id="nav-tabpanel-1-Windows" class="tab-pane show active" aria-labelledby="nav-tab-1-Windows" role="tabpanel">
 <ol style="list-style-type: decimal">
 <li>Open <a href="https://support.microsoft.com/en-gb/windows/find-and-open-file-explorer-ef370130-1cca-9dc5-e0df-2f7416fe1cb1" class="external-link">File
 Explorer</a> to browse the file system;</li>
@@ -1107,7 +1140,7 @@ Document;</li>
 <li>Double-click on the file to open it for editing.</li>
 </ol>
 </div>
-<div id="nav-tabpanel-1-Linux" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-Linux">
+<div id="nav-tabpanel-1-Linux" class="tab-pane" aria-labelledby="nav-tab-1-Linux" role="tabpanel">
 <p>Use the <a href="https://help.ubuntu.com/stable/ubuntu-help/files-browse.html.en" class="external-link">File
 Manager</a> to create a new directory called <code>oddsong</code>.
 Inside that folder, create a new text file called
@@ -1122,7 +1155,7 @@ Inside that folder, create a new text file called
 <span id="cb1-4"><a href="#cb1-4" tabindex="-1"></a><span class="fu">nano</span> oddsong/README.txt</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-1-MacOS" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-MacOS">
+<div id="nav-tabpanel-1-MacOS" class="tab-pane" aria-labelledby="nav-tab-1-MacOS" role="tabpanel">
 <p>Use the <a href="https://support.apple.com/en-gb/guide/mac-help/mchlp2605/mac" class="external-link">Finder</a>
 file manager to create a new directory called <code>oddsong</code>.
 Inside that folder, create a new text file called
@@ -1143,14 +1176,20 @@ Inside that folder, create a new text file called
 </div>
 </div>
 </div>
-<p>The essentials contents of a README file are:</p>
+<div class="section level3">
+<h3 id="readme-contents">README contents<a class="anchor" aria-label="anchor" href="#readme-contents"></a>
+</h3>
+<p>The essentials contents of a README document are:</p>
 <ul>
 <li>The <strong>name of the software</strong>. This seems trivial, but a
 clear title and description of a piece of software will be essential for
 others to identify your software and differentiate it from others.</li>
 <li>A <strong>brief introduction</strong> to your code, including links
-to relevant websites or contact details for the maintainers.</li>
-<li>It should be clear who the <strong>target audience</strong> is for
+to relevant websites.</li>
+<li>
+<strong>Contact details</strong> for the authors and
+maintainers.</li>
+<li>A clear statement of who the <strong>target audience</strong> is for
 the software package.</li>
 <li>
 <strong>Installation instructions</strong> or a link to further
@@ -1164,6 +1203,9 @@ with your software package.</li>
 methods and software tools by providing links and explaining how other
 software is related or different to this project when it comes to
 addressing these kinds of research problems.</p>
+<p>You might also describe the contents of your project by giving an
+overview of the purpose of each file and directory. This is called a
+<strong>manifest</strong>.</p>
 <div id="walk-a-mile-in-the-users-shoes" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -1203,12 +1245,13 @@ By including references to research papers we better help the users to
 understand the methods that are implemented by our software, which
 enables its users to properly cite their sources and increases the
 users’ confidence that you have applied those methods correctly.</p>
+</div>
 <div class="section level3">
 <h3 id="installation-instructions">Installation instructions<a class="anchor" aria-label="anchor" href="#installation-instructions"></a>
 </h3>
-<p>Provide instructions for installing your research software. These
-steps should be laid out in simple, clear language and organised in a
-step-by-step manner.</p>
+<p>Good READMEs provide instructions for getting and setting up your
+research software. This guidance should be laid out in simple, clear
+language and organised in a step-by-step manner.</p>
 <div id="discussion2" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
@@ -1216,8 +1259,8 @@ step-by-step manner.</p>
 <div class="callout-inner">
 <h3 class="callout-title">Discussion</h3>
 <div class="callout-content">
-<p>Consider a research code project you’ve worked on. Discuss the
-technical prerequisites for that software or system. What would someone
+<p>Consider a research project you’ve worked on. Discuss the technical
+prerequisites for that software, tool, or system. What would someone
 need to do, when starting from a blank slate, to recreate that
 environment?</p>
 <p>Think about:</p>
@@ -1233,15 +1276,32 @@ required?</li>
 <div class="section level4">
 <h4 id="installing-prerequisites">Installing prerequisites<a class="anchor" aria-label="anchor" href="#installing-prerequisites"></a>
 </h4>
-<p>Most research code has several <strong>dependencies</strong>, such as
-libraries. The user will need to install the programming language onto
-their computer, such as R or Python, so it’s useful to link to the
+<p>Most research code has several <strong>dependencies</strong>, which
+are other software packages that are required for that tool to work. The
+user will often need to install the programming language onto their
+computer, such as R, MATLAB, or Python. It’s useful to link to the
 download pages and provide a link to the package manager tools that are
 commonly used in those ecosystems. This might also include listing any
 prerequisites such as hardware or software that must be installed first,
 such as device drivers.</p>
+<div id="accordionSpoiler2" class="accordion spoiler-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
+  <h3 class="accordion-header" id="headingSpoiler2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Software libraries </h3>
+</button>
+<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
+<div class="accordion-body">
+<p>In software development, a <strong>library</strong> is a collection
+of resources that can be used to help build a new tool. This might
+include other people’s code that is used to achieve commons tasks, such
+as displaying output or communicating over the internet.</p>
+</div>
+</div>
+</div>
+</div>
 <p>Consider how the installation method might differ for users of other
-common operating systems, such as Windows, Linux, and Mac OS.</p>
+common <strong>operating systems</strong>, such as Windows, Linux, and
+Mac OS.</p>
 </div>
 </div>
 <div class="section level3">
@@ -1255,11 +1315,11 @@ walkthrough that uses a sample data set.</p>
 customised</strong>, including examples of commonly-used options. If the
 software integrates with other tools or uses specific file formats for
 its input and output, it’s useful to explain this here too. It’s a good
-idea to include links to further documentation if available.</p>
+idea to include links to further references if available.</p>
 <p>Many users will benefit from a <strong>frequently asked
 questions</strong> (FAQs) or troubleshooting notes, which describes
-common error messages, explains why they occur, and the steps to resolve
-them.</p>
+common error messages, explains why they occur, and suggests ways to
+resolve them.</p>
 <div id="writing-style" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -1278,9 +1338,11 @@ guides</a>.</p>
 </div>
 </div>
 </div>
-<p>Diagrams can be particularly useful to explain complex concepts and
-workflows. Screenshots may also provide a visual demonstration of how
-the software will work.</p>
+<p><strong>Diagrams</strong> can be particularly useful to explain
+complex concepts and workflows. <strong>Screenshots</strong> may also
+provide a “show and tell” demonstration of how the software will work.
+Consider recording a screen-cast of someone setting up and using the
+software. This can be particularly beneficial for visual learners.</p>
 <div id="discussion3" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
@@ -1308,12 +1370,13 @@ your audience.</p>
 </h2>
 <hr class="half-width">
 <p>Accessibility means <strong>reducing barriers to use</strong> of your
-research software or participation in the development community on the
-basis of expeirencing a disability or other social factors. When writing
-documentation for your code, consider how you can adapt your writing
-style and present information in a way that means that everyone can
-interact with it by expending the same amount of time and energy,
-regardless of their relative abilities.</p>
+research software. There should be no avoidable blockers for
+participation in the development community for those experiencing a
+disability or other social factors. When writing documentation for your
+code, consider how you can adapt your writing style and present
+information in a way that means that everyone can interact with it by
+expending the same amount of time and energy, regardless of their
+relative abilities.</p>
 <p>While this is a broad topic, some general tips to consider when
 authoring software documentation in a research context are:</p>
 <ul>
@@ -1322,19 +1385,19 @@ authoring software documentation in a research context are:</p>
 understood by people anywhere in the world, regardless of background. Be
 sensitive to cultural differences and avoid offensive language;</li>
 <li>
-<strong>Inclusivitiy:</strong> Avoid biased language and value
+<strong>Inclusivity:</strong> Avoid biased language and value
 diversity e.g. when writing examples;</li>
 <li>
 <strong>Navigation:</strong> Ensure that the documentation is
 compatible with assistive technologies like screen readers and keyboard
 navigation.</li>
 </ul>
-<div id="accordionSpoiler1" class="accordion spoiler-accordion accordion-flush">
+<div id="accordionSpoiler3" class="accordion spoiler-accordion accordion-flush">
 <div class="accordion-item">
-<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
-  <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> More about Accessibility </h3>
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler3" aria-expanded="false" aria-controls="collapseSpoiler3">
+  <h3 class="accordion-header" id="headingSpoiler3">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> More about Accessibility </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler3" class="accordion-collapse collapse" aria-labelledby="headingSpoiler3" data-bs-parent="#accordionSpoiler3">
 <div class="accordion-body">
 <p>For more information on this topic, please see the following
 resources:</p>
@@ -1354,33 +1417,33 @@ guidelines: for writing and beyond</a> lists many useful materials.</li>
 </section><section><h2 class="section-heading" id="text-formatting">Text formatting<a class="anchor" aria-label="anchor" href="#text-formatting"></a>
 </h2>
 <hr class="half-width">
-<p>Most people prefer to use a file format that allows you to format
-text and create headers to organise the content into sections or
-chapters, which makes the content more <strong>comprehensible for the
-reader</strong>.</p>
-<p>In this case, a <a href="https://daringfireball.net/projects/markdown/" class="external-link">Markdown</a>
-document may be used. Markdown is a simple <em>markup language</em> that
-indicates into <strong>semantic labelling</strong> (such as emphasis and
-structure) and visual styles that make your documentation more
-aesthetically pleasing and easier to navigate. It allows you to format
-your text using symbols to represent headers, bold text, bullet lists,
-etc. that are displayed to the user using their screen or other device,
-depending upon accessibility requirements.</p>
-<div id="accordionSpoiler2" class="accordion spoiler-accordion accordion-flush">
+<p>Using a file format that allows you to format text and create headers
+makes the content more <strong>comprehensible</strong> for the reader.
+Organising a document into sections or chapters makes it easier to
+navigate and find the relevant information.</p>
+<p>In the software world, <strong><a href="https://daringfireball.net/projects/markdown/" class="external-link">Markdown</a>
+documents</strong> are a commonly-used file format for writing READMEs.
+Markdown is a simple <em>markup language</em> that lets us apply
+<strong>semantic labelling</strong> such as emphasis and structure to
+our text. These are displayed using visual styles that make your
+documentation more aesthetically pleasing and more navigable. It allows
+you to format your text using symbols to represent headers, bold text,
+bullet lists, etc. These are displayed to the user using their screen or
+other device, depending upon accessibility requirements.</p>
+<div id="accordionSpoiler4" class="accordion spoiler-accordion accordion-flush">
 <div class="accordion-item">
-<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
-  <h3 class="accordion-header" id="headingSpoiler2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> What is a markup language? </h3>
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler4" aria-expanded="false" aria-controls="collapseSpoiler4">
+  <h3 class="accordion-header" id="headingSpoiler4">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> What is a markup language? </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
+<div id="collapseSpoiler4" class="accordion-collapse collapse" aria-labelledby="headingSpoiler4" data-bs-parent="#accordionSpoiler4">
 <div class="accordion-body">
 <p>A <a href="https://en.wikipedia.org/wiki/Markup_language" class="external-link">markup
-language</a> is a system of special characters that are used to
-<em>decorate</em> or <em>format</em> pieces of <em>plain text</em>. The
-syntax normally consists of symbols or <em>tags</em> that are used to
-<em>encode</em> text, which means <em>implying meaning</em> to make it
-more information-rich. It can be used to structure a documented into
-sections to provide logical organisation so that it’s easier to
-navigate.</p>
+language</a> is a system of special characters that are used to decorate
+or format pieces of plain text. The syntax normally consists of symbols
+or <em>tags</em> that are used to <em>encode</em> text, that
+<strong>implies meaning</strong> to make it more information-rich. It
+can be used to structure a documented into sections to provide logical
+organisation so that it’s easier to navigate.</p>
 <p>Typically, a markup language is edited in a similar way to a computer
 programming language, and is <strong>rendered</strong> into a document
 with various rich text formatting such as headers, bold face fonts,
@@ -1396,8 +1459,8 @@ etc.</p>
 <div class="callout-inner">
 <h3 class="callout-title">Challenge</h3>
 <div class="callout-content">
-<p>Convert your README file to Markdown format to enable more advanced
-formatting options.</p>
+<p>Convert your README file to Markdown format to enable more formatting
+options.</p>
 </div>
 </div>
 </div>
@@ -1406,7 +1469,7 @@ formatting options.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>Follow these steps to rename <code>README.txt</code> to
 <code>README.md</code>.</p>
@@ -1429,7 +1492,7 @@ formatting options.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-2" class="tab-content">
-<div id="nav-tabpanel-2-Windows" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-2-Windows">
+<div id="nav-tabpanel-2-Windows" class="tab-pane show active" aria-labelledby="nav-tab-2-Windows" role="tabpanel">
 <p>Use <a href="https://support.microsoft.com/en-gb/windows/find-and-open-file-explorer-ef370130-1cca-9dc5-e0df-2f7416fe1cb1" class="external-link">File
 Explorer</a> to <a href="https://support.microsoft.com/en-gb/office/rename-a-file-baea7aab-760b-4ee0-af58-06e940d505a4" class="external-link">rename
 the file</a> from <code>README.txt</code> to <code>README.md</code>.</p>
@@ -1439,7 +1502,7 @@ the file</a> from <code>README.txt</code> to <code>README.md</code>.</p>
 <li>Type <code>README.md</code>.</li>
 </ol>
 </div>
-<div id="nav-tabpanel-2-Linux" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-Linux">
+<div id="nav-tabpanel-2-Linux" class="tab-pane" aria-labelledby="nav-tab-2-Linux" role="tabpanel">
 <p>Use the <a href="https://help.ubuntu.com/stable/ubuntu-help/files-browse.html.en" class="external-link">File
 Manager</a> to <a href="https://help.ubuntu.com/stable/ubuntu-help/files-rename.html.en" class="external-link">rename
 the file</a> from <code>README.txt</code> to <code>README.md</code>.</p>
@@ -1450,7 +1513,7 @@ the file</a> from <code>README.txt</code> to <code>README.md</code>.</p>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="fu">mv</span> README.txt README.md</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-2-MacOS" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-MacOS">
+<div id="nav-tabpanel-2-MacOS" class="tab-pane" aria-labelledby="nav-tab-2-MacOS" role="tabpanel">
 <p>Use the <a href="https://support.apple.com/en-gb/guide/mac-help/mchlp2605/mac" class="external-link">Finder</a>
 to <a href="https://support.apple.com/en-gb/guide/mac-help/mchlp1144/mac" class="external-link">rename
 the file</a> from <code>README.txt</code> to <code>README.md</code>.</p>
@@ -1468,8 +1531,8 @@ the file</a> from <code>README.txt</code> to <code>README.md</code>.</p>
 </div>
 </div>
 <p>An example README file in Markdown format is shown below, in a file
-called <code>README.md</code> where “.md” is the file extension for
-Markdown files.</p>
+called <code>README.md</code> where “.md” suffix is the filename
+extension for Markdown files.</p>
 <div class="section level3">
 <h3 id="section-headers">Section headers<a class="anchor" aria-label="anchor" href="#section-headers"></a>
 </h3>
@@ -1515,7 +1578,7 @@ subsections by adding further subheadings?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <p>We can create the commonly-used headers used in READMEs by using the
 Markdown syntax shown below</p>
@@ -1572,13 +1635,33 @@ section header, <code>###</code> is a subsection header, etc.</p>
 </div>
 </div>
 </div>
+</div>
+<div class="section level3">
+<h3 id="viewing-markdown-documents">Viewing Markdown documents<a class="anchor" aria-label="anchor" href="#viewing-markdown-documents"></a>
+</h3>
+<p>There are several ways to view the formatted Markdown document, where
+the syntax is rendered into a rich text document.</p>
+<ul>
+<li>Many code editors have an in-built Markdown viewer;
+<ul>
+<li>For Notepad++, the Markdown Panel <a href="https://npp-user-manual.org/docs/plugins/" class="external-link">plugin may be
+installed</a>.</li>
+</ul>
+</li>
+<li>
+<a href="https://markdownlivepreview.com/" class="external-link">Markdown Live Preview</a>
+is a web-based tool. Input your Markdown syntax in the left panel and
+the result will be displayed on the right-hand side.</li>
+<li>In <a href="https://colab.research.google.com/" class="external-link">Google Colab</a>,
+the Text cells use Markdown syntax for formatting.</li>
+</ul>
 <p>If your code is published on <a href="https://github.com" class="external-link">GitHub</a>,
 the home page of your code repository will <a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes" class="external-link">display
 the README file</a>, including a <a href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes#auto-generated-table-of-contents-for-readme-files" class="external-link">table
 of contents</a> that is automatically created to easily select the
 section of the document to view.</p>
-<figure><img src="../fig/bootstrap-readme-chapters.png" alt="A screenshot of a GitHub repository with a drop-down navigation menu on the readme text box." class="figure mx-auto d-block"><div class="figcaption">“This repository has a README file with
-chapters, making navigation easier.”</div>
+<figure><img src="../fig/bootstrap-readme-chapters.png" alt="A screenshot of a GitHub repository with a drop-down navigation menu on the readme text box." class="figure mx-auto d-block"><div class="figcaption">This repository has a README file with chapters,
+making navigation easier.</div>
 </figure>
 </div>
 <div class="section level3">
@@ -1617,14 +1700,15 @@ with Markdown syntax:</p>
 <td>Hyperlink</td>
 <td><a href="https://en.wikipedia.org/wiki/Eastern_towhee" class="external-link">Eastern
 towhee</a></td>
-<td><code>[Eastern towhee](https://en.wikipedia.org/wiki/Eastern_towhee)</code></td>
+<td><code>[Eastern towhee](https://w.wiki/DHi2)</code></td>
 </tr>
 </tbody>
 </table>
-<p>These may be used to add emphasis to parts of the text or highligh
+<p>These may be used to add emphasis to parts of the text or highlight
 key words and phrases. Using text formatting makes your software
-documentation easier to skim-read, so researchers can quickly find the
-part of the text that’s relevant for what they’re working on.</p>
+documentation easier to <strong>skim-read</strong>, so researchers can
+quickly find the part of the text that’s relevant for what they’re
+working on.</p>
 <div id="challenge4" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
@@ -1632,8 +1716,9 @@ part of the text that’s relevant for what they’re working on.</p>
 <div class="callout-inner">
 <h3 class="callout-title">Challenge</h3>
 <div class="callout-content">
-<p>Identify several <em>key words</em> in your README file. Highlight
-them in using a bold font face.</p>
+<p>Identify several <em>key words</em> in your README file. Apply the
+“strong text” syntax so they will be displayed using a bold font face or
+be given increased stress by a screen-reader.</p>
 </div>
 </div>
 </div>
@@ -1642,10 +1727,10 @@ them in using a bold font face.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <p>The Markdown syntax for bold font is to wrap the text in two
-asterixes <code>**</code>. This may be applied to single words or to
+asterisks <code>**</code>. This may be applied to single words or to
 phrases.</p>
 <p>For example, we can strongly emphasise a single word:</p>
 <div class="codewrapper sourceCode" id="cb8">
@@ -1693,12 +1778,12 @@ decades, and formerly this bird and the spotted towhee were considered a
 single species, the rufous-sided towhee.</p>
 </blockquote>
 <p>(This text was retrieved from the <em>Wikipedia</em> page on the <a href="https://en.wikipedia.org/wiki/Eastern_towhee" class="external-link">Eastern
-towhee</a>.)</p>
+towhee</a> bird.)</p>
 </div>
 <div class="section level3">
 <h3 id="code-blocks">Code blocks<a class="anchor" aria-label="anchor" href="#code-blocks"></a>
 </h3>
-<p>If you’d like to present the user will examples of source code, use
+<p>If you’d like to present the user with examples of source code, use
 <a href="https://www.markdownguide.org/extended-syntax/#fenced-code-blocks" class="external-link">code
 fences</a> to display the code in a special text box with syntax
 highlighting. To do this, wrap the code in three backticks
@@ -1716,7 +1801,7 @@ will be highlighted appropriately, for example:</p>
 <h3 class="code-label">MARKDOWN<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode markdown" tabindex="0"><code class="sourceCode markdown"><span id="cb12-1"><a href="#cb12-1" tabindex="-1"></a><span class="in">```R</span></span>
-<span id="cb12-2"><a href="#cb12-2" tabindex="-1"></a>genus <span class="ot">=</span> <span class="st">"Struthio"</span></span>
+<span id="cb12-2"><a href="#cb12-2" tabindex="-1"></a>genus <span class="ot">&lt;-</span> <span class="st">"Struthio"</span></span>
 <span id="cb12-3"><a href="#cb12-3" tabindex="-1"></a><span class="in">```</span></span></code></pre>
 </div>
 <p>This makes your code examples easier to read.</p>
@@ -1732,12 +1817,16 @@ for using this syntax.</p>
 </div>
 </div>
 </div>
+</div>
+</section><section><h2 class="section-heading" id="conclusion">Conclusion<a class="anchor" aria-label="anchor" href="#conclusion"></a>
+</h2>
+<hr class="half-width">
 <p>Remember, the README file is a <strong>first impression</strong> that
 research users will receive for your software. A README contains a brief
 description of the software, installation instructions, and a usage
 guide. Make them informative and user-friendly to enhance the research
 experience for others and foster collaboration. The writing style should
-be concide, clear, and explain technical terms. Use diagrams and
+be concise, clear, and explain technical terms. Use diagrams and
 screenshots for clarity.</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
@@ -1747,14 +1836,15 @@ screenshots for clarity.</p>
 <h3 class="callout-title">Key Points</h3>
 <div class="callout-content">
 <ul>
-<li>A README file serves as an introduction to your software, guiding
-users on installation, usage, and understanding its capabilities.</li>
-<li>Consider the user’s technical background; write clearly and avoid
-jargon.</li>
-<li>Markdown is a recommended format for creating headers, bold text,
-bullet points, etc.</li>
+<li>A README file serves as an <strong>introduction</strong> to your
+software, guiding users on installation, usage, and understanding its
+capabilities.</li>
+<li>Consider the user’s technical background; write clearly and
+<strong>avoid jargon</strong>.</li>
+<li>
+<strong>Markdown</strong> is a recommended format for creating
+headers, bold text, bullet points, etc.</li>
 </ul>
-</div>
 </div>
 </div>
 </div>
@@ -1772,6 +1862,8 @@ Art of README</a>
 </li>
 <li>Aleksandra Pawlik <a href="https://www.software.ac.uk/guide/five-top-tips-documentation" class="external-link">Five
 top tips on documentation</a>
+</li>
+<li>Wikipedia <a href="https://en.wikipedia.org/wiki/README" class="external-link">README</a>
 </li>
 </ul>
 <!--
@@ -1857,7 +1949,7 @@ principle is the same.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-1" class="tab-content">
-<div id="nav-tabpanel-1-Python" class="tab-pane show active" aria-labelledby="nav-tab-1-Python" role="tabpanel">
+<div id="nav-tabpanel-1-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-Python">
 <p>In Python, we put a string as the first line of a function (or other
 object.) For example, for a simple Python function that calculates the
 sum of two numbers:</p>
@@ -1871,7 +1963,7 @@ sum of two numbers:</p>
 <span id="cb1-5"><a href="#cb1-5" tabindex="-1"></a>    <span class="cf">return</span> x <span class="op">+</span> y</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-1-R" class="tab-pane" aria-labelledby="nav-tab-1-R" role="tabpanel">
+<div id="nav-tabpanel-1-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-R">
 <p>In R, we use the <a href="https://roxygen2.r-lib.org/" class="external-link">roxygen2</a>
 package, where a comment with a single quote <code>#'</code> to specify
 a documentation string for a function.</p>
@@ -1910,7 +2002,7 @@ provide the name of that species.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="tabs">
 <nav><div id="nav-tab-2" class="nav nav-tabs" role="tablist">
@@ -1926,7 +2018,7 @@ provide the name of that species.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-2" class="tab-content">
-<div id="nav-tabpanel-2-Python" class="tab-pane show active" aria-labelledby="nav-tab-2-Python" role="tabpanel">
+<div id="nav-tabpanel-2-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-2-Python">
 <ol style="list-style-type: decimal">
 <li>Create a new Python script by creating a file called
 <code>oddsong.py</code>;</li>
@@ -1947,7 +2039,7 @@ provide the name of that species.</p>
 <span id="cb3-8"><a href="#cb3-8" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">"Hirundo atrocaerulea"</span></span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-2-R" class="tab-pane" aria-labelledby="nav-tab-2-R" role="tabpanel">
+<div id="nav-tabpanel-2-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-R">
 <ol style="list-style-type: decimal">
 <li>Create a new R script by creating a file called
 <code>oddsong.R</code>;</li>
@@ -2004,7 +2096,7 @@ for a function.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>Let’s view the help text for an in-built <a href="https://docs.python.org/3/library/functions.html#abs" class="external-link">function
 <code>abs()</code></a> that finds the absolute value of a number.</p>
@@ -2065,7 +2157,7 @@ examples below. Each argument has a name and a brief description.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-3" class="tab-content">
-<div id="nav-tabpanel-3-Python" class="tab-pane show active" aria-labelledby="nav-tab-3-Python" role="tabpanel">
+<div id="nav-tabpanel-3-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-3-Python">
 <p>The argument name matches the variable name in the function
 signature, such as <code>add(x, y)</code> in this case.</p>
 <div class="codewrapper sourceCode" id="cb8">
@@ -2082,7 +2174,7 @@ signature, such as <code>add(x, y)</code> in this case.</p>
 <span id="cb8-9"><a href="#cb8-9" tabindex="-1"></a>    <span class="cf">return</span> x <span class="op">+</span> y</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-3-R" class="tab-pane" aria-labelledby="nav-tab-3-R" role="tabpanel">
+<div id="nav-tabpanel-3-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-3-R">
 <p>The argument name matches the variable name in the function
 signature, such as <code>function(x, y)</code> in this case.</p>
 <div class="codewrapper sourceCode" id="cb9">
@@ -2135,7 +2227,7 @@ return statement.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-4" class="tab-content">
-<div id="nav-tabpanel-4-Python" class="tab-pane show active" aria-labelledby="nav-tab-4-Python" role="tabpanel">
+<div id="nav-tabpanel-4-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-4-Python">
 <div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -2153,7 +2245,7 @@ return statement.</p>
 <span id="cb10-12"><a href="#cb10-12" tabindex="-1"></a>    <span class="cf">return</span> x <span class="op">+</span> y</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-4-R" class="tab-pane" aria-labelledby="nav-tab-4-R" role="tabpanel">
+<div id="nav-tabpanel-4-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-4-R">
 <div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -2213,7 +2305,7 @@ editors will provide syntax highlighting of these code snippets.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-5" class="tab-content">
-<div id="nav-tabpanel-5-Python" class="tab-pane show active" aria-labelledby="nav-tab-5-Python" role="tabpanel">
+<div id="nav-tabpanel-5-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-5-Python">
 <div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -2237,7 +2329,7 @@ editors will provide syntax highlighting of these code snippets.</p>
 <span id="cb12-18"><a href="#cb12-18" tabindex="-1"></a>    <span class="cf">return</span> x <span class="op">+</span> y</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-5-R" class="tab-pane" aria-labelledby="nav-tab-5-R" role="tabpanel">
+<div id="nav-tabpanel-5-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-5-R">
 <p>For more information about writing R code examples within function
 documentation, please see the <a href="https://r-pkgs.org/man.html#sec-man-examples" class="external-link">Examples</a> section
 in the book <em>R Packages</em> by Hadley Wickham.</p>
@@ -2278,7 +2370,7 @@ function in your code.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Using docstrings to create automatic tests </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="accordion-body">
 <div class="tabs">
 <nav><div id="nav-tab-6" class="nav nav-tabs" role="tablist">
@@ -2294,11 +2386,11 @@ function in your code.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-6" class="tab-content">
-<div id="nav-tabpanel-6-Python" class="tab-pane show active" aria-labelledby="nav-tab-6-Python" role="tabpanel">
+<div id="nav-tabpanel-6-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-6-Python">
 <p>These code examples can be used as automatic tests using the <a href="https://docs.python.org/3/library/doctest.html" class="external-link">doctest</a> module
 which is built into Python.</p>
 </div>
-<div id="nav-tabpanel-6-R" class="tab-pane" aria-labelledby="nav-tab-6-R" role="tabpanel">
+<div id="nav-tabpanel-6-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-6-R">
 <p>In the R ecosystem, we can automatically test the examples in our
 documentation strings using the <a href="https://cran.r-project.org/web/packages/doctest/vignettes/doctest.html" class="external-link">doctest</a>
 package.</p>
@@ -2415,7 +2507,7 @@ and, if in doubt, follow the style of existing code.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
   <h3 class="accordion-header" id="headingSpoiler2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Docstring conventions </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
 <div class="accordion-body">
 <p>There are several different <strong>standards</strong> for
 documentation strings. A standard is a convention that determines how
@@ -2632,7 +2724,7 @@ shown in a red font.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-1" class="tab-content">
-<div id="nav-tabpanel-1-Python" class="tab-pane show active" aria-labelledby="nav-tab-1-Python" role="tabpanel">
+<div id="nav-tabpanel-1-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-Python">
 <p>Without syntax highlighting:</p>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2676,7 +2768,7 @@ shown in a red font.</p>
 <span id="cb2-16"><a href="#cb2-16" tabindex="-1"></a>  <span class="cf">return</span> word_count</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-1-R" class="tab-pane" aria-labelledby="nav-tab-1-R" role="tabpanel">
+<div id="nav-tabpanel-1-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-R">
 <p>Without syntax highlighting:</p>
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">DEFAULT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2800,7 +2892,7 @@ it’s easy to interpret their purpose.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-2" class="tab-content">
-<div id="nav-tabpanel-2-Python" class="tab-pane show active" aria-labelledby="nav-tab-2-Python" role="tabpanel">
+<div id="nav-tabpanel-2-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-2-Python">
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -2812,7 +2904,7 @@ it’s easy to interpret their purpose.</p>
 <span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a>    <span class="cf">return</span> area</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-2-R" class="tab-pane" aria-labelledby="nav-tab-2-R" role="tabpanel">
+<div id="nav-tabpanel-2-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-R">
 <div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -2869,7 +2961,7 @@ such as <code>sum()</code>.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-3" class="tab-content">
-<div id="nav-tabpanel-3-Python" class="tab-pane show active" aria-labelledby="nav-tab-3-Python" role="tabpanel">
+<div id="nav-tabpanel-3-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-3-Python">
 <p>Classes use capitalised words, where each word in a phrase starts
 with an upper-case letter and there are no spaces between them.</p>
 <div class="codewrapper sourceCode" id="cb7">
@@ -2908,7 +3000,7 @@ the <a href="https://peps.python.org/pep-0008/#naming-conventions" class="extern
 Conventions</a> section of
 <acronym title="Python Enhancement Proposals">PEP</acronym> 8.</p>
 </div>
-<div id="nav-tabpanel-3-R" class="tab-pane" aria-labelledby="nav-tab-3-R" role="tabpanel">
+<div id="nav-tabpanel-3-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-3-R">
 <p>Classes use capitalised words</p>
 <div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -2978,7 +3070,7 @@ start of a new line, like so:</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-4" class="tab-content">
-<div id="nav-tabpanel-4-Python" class="tab-pane show active" aria-labelledby="nav-tab-4-Python" role="tabpanel">
+<div id="nav-tabpanel-4-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-4-Python">
 <p>Python <a href="https://docs.python.org/3/reference/lexical_analysis.html#comments" class="external-link">comments</a>
 start with a hash character (<code>#</code>) and are ignored when the
 code runs.</p>
@@ -2993,7 +3085,7 @@ code runs.</p>
 operators</a> such as <code>+=</code> in the documentation for that
 programming language.</p>
 </div>
-<div id="nav-tabpanel-4-R" class="tab-pane" aria-labelledby="nav-tab-4-R" role="tabpanel">
+<div id="nav-tabpanel-4-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-4-R">
 <p>Python <a href="https://cran.r-project.org/doc/manuals/R-lang.html#Comments" class="external-link">comments</a>
 start with a hash character (<code>#</code>) and are ignored when the
 code runs.</p>
@@ -3058,7 +3150,7 @@ they move through the system.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-5" class="tab-content">
-<div id="nav-tabpanel-5-Python" class="tab-pane show active" aria-labelledby="nav-tab-5-Python" role="tabpanel">
+<div id="nav-tabpanel-5-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-5-Python">
 <p>In the Python programming language, we can tell the user what type of
 data we expect each variable to contain by using the syntax below. This
 colon means that the <code>age</code> variable should contain a value
@@ -3072,7 +3164,7 @@ with the integer type, <code>int</code>.</p>
 of the Python Documentation and the <a href="https://mypy.readthedocs.io/en/stable/cheat_sheet_py3.html" class="external-link">Type
 hints cheat sheet</a> in the mypy documentation.</p>
 </div>
-<div id="nav-tabpanel-5-R" class="tab-pane" aria-labelledby="nav-tab-5-R" role="tabpanel">
+<div id="nav-tabpanel-5-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-5-R">
 <p>There is no type hinting feature in base R, although some packages
 are available that enable this. Here, the <code>L</code> symbol at the
 end of the number tells the R interpreter that this is an integer data
@@ -3111,7 +3203,7 @@ reader.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-6" class="tab-content">
-<div id="nav-tabpanel-6-Python" class="tab-pane show active" aria-labelledby="nav-tab-6-Python" role="tabpanel">
+<div id="nav-tabpanel-6-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-6-Python">
 <p>Below is the source code for a simple Python function that calculates
 the sum of two numbers. I’ve labelled each of the function arguments
 <code>a</code> and <code>b</code> with variable annotations that let you
@@ -3128,7 +3220,7 @@ declaration as <code>-&gt; int</code>.</p>
 <span id="cb19-3"><a href="#cb19-3" tabindex="-1"></a>    <span class="cf">return</span> a <span class="op">+</span> b</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-6-R" class="tab-pane" aria-labelledby="nav-tab-6-R" role="tabpanel">
+<div id="nav-tabpanel-6-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-6-R">
 <p>Below is the source code for a simple R function that calculates the
 sum of two numbers.</p>
 <p>In R, there is no inbuilt functionality for annotating the expected
@@ -3187,7 +3279,7 @@ labels the types of the inputs and output of the function.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>None of these code examples will cause an error because type hints
 are just <strong>passive labels</strong> that document our code. They
@@ -4092,7 +4184,7 @@ directory for code to import.</p>
   What does this code mean?
   </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="accordion-body">
 <p>The Python code uses <a href="https://docs.python.org/3/library/sys.html#sys.path" class="external-link"><code>sys.path</code></a>,
 a list of locations to search for code. By modifying the Python
@@ -4123,7 +4215,7 @@ module.</p>
   What does this code mean?
   </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
 <div class="accordion-body">
 <p>This <a href="https://docutils.sourceforge.io/rst.html" class="external-link">reStructuredText
 (reST)</a> markup language has the following elements:</p>
@@ -4496,7 +4588,7 @@ will do.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> What are arguments? </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <p>When using shell commands, we use the words <strong>option</strong>,
 <strong>flag</strong>, and <strong>arguments</strong> to describe
@@ -4677,7 +4769,7 @@ executed first.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
   <h3 class="accordion-header" id="headingSpoiler2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Why must our file be named __main__.py? </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
 <div class="accordion-body">
 <p>This is a mechanism that tells Python how we want users to interact
 with our software.</p>
@@ -4722,7 +4814,7 @@ Run this script from the command line. What happens when you run
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>When you run the <code>python -m oddsong</code> command, Python runs
 the <em>main module as a script</em>.</p>
@@ -4824,7 +4916,7 @@ happens in your temrinal?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>When we run our script as before, it will run like normal with no
 change in behaviour.</p>
@@ -4892,7 +4984,7 @@ interface.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <p>The code now looks something like that shown below.</p>
 <div class="codewrapper sourceCode" id="cb25">
@@ -4969,7 +5061,7 @@ happen in your CLI?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <p>We can achieve this in our example script by adding a
 <code>help</code> string.</p>
@@ -5044,7 +5136,7 @@ our help screen?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution5" aria-expanded="false" aria-controls="collapseSolution5">
   <h4 class="accordion-header" id="headingSolution5"> Show me the solution </h4>
 </button>
-<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
+<div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
 <div class="accordion-body">
 <p>We define the description when creating our argument parser
 object.</p>
