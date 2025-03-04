@@ -1,5 +1,5 @@
 ---
-title: "Examples"
+title: "Documentation examples"
 teaching: 10
 exercises: 2
 ---
@@ -16,7 +16,7 @@ exercises: 2
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Examples
+## Code examples
 
 In this episode we'll review some examples of research software and evaluate how readable and reusable it is.
 
