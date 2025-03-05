@@ -423,6 +423,8 @@ None of these code examples will cause an error because type hints are just **pa
 
 :::::::::::::::::::::::::::::::::::::::::::::::
 
+## Conclusion
+
 This is just a brief introduction to code annotation. For the keen coder, there are many more features and tools available to make your software easier for other people to understand and use.
 
 It will take some time and effort to write these labels, but it will pay off in the long run to think about variables types and make it easier to interpret how the code will behave as it operates. It's best practice to use an integrated development environment (IDE) that will check your type hints and inform you if it detects a problem with your source code.

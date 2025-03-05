@@ -29,7 +29,7 @@ Often, in today's research environment, much analytics software is written in a 
 
 ## Research software project management
 
-For more information on planning the development of research software and project governance, see Module 1a.
+For more information on planning the development of research software and project governance, see Module 1a on [Software Management Planning](https://fair2-for-research-software.github.io/Software_Lifecycle_Planning/).
 
 :::::::::::::::::::::::::::::::::::::
 
