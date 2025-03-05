@@ -80,7 +80,7 @@ It may help to **write the docstring first** to help work through what the purpo
 ::::::::::::::::::::::::::::::::: challenge
 
 Write a documentation string for a function.
-Create a script called `oddsong` and define a function named `identify()` that'll be used to identify bird songs by inspecting an audio file to provide the name of that species.
+Create a script called `oddsong` and define a function named `identify()` that will be used to identify bird songs by inspecting an audio file to provide the name of that species.
 
 ::::::::::::::::: solution
 
@@ -88,10 +88,10 @@ Create a script called `oddsong` and define a function named `identify()` that'l
 
 ### Python
 
-1. Create a new Python script by creating a file called `oddsong.py`;
-2. Open the file for editing;
-3. Create a new function called `identify()`;
-4. Write a string that describes the code.
+1. Create a new Python script by creating a file called `oddsong.py`
+2. Open the file for editing
+3. Create a new function called `identify()`
+4. Write a string that describes the code
 
 ```python
 def identify(audio_file):
@@ -106,10 +106,10 @@ def identify(audio_file):
 
 ### R
 
-1. Create a new R script by creating a file called `oddsong.R`;
-2. Open the file for editing;
-3. Create a new function called `identify()`;
-4. Write a string that describes the code.
+1. Create a new R script by creating a file called `R/identify.R`
+2. Open the file for editing
+3. Create a new function called `identify()`
+4. Write a string that describes the code
 
 ```R
 #' Identify a bird based on the sound of its call.
@@ -121,21 +121,79 @@ identify <- function(audio_file) {
 }
 ```
 
+See also the [example R script](https://github.com/Joe-Heffer-Shef/oddsong/blob/main/R/identify.R).
+
 :::
 
 ::::::::::::::::::::::::::
 
 :::::::::::::::::::::::::::::::::::::::::::
 
-In this code, the function uses the normal Python syntax, except a string has been included below the function definition. The contents of that string will be displayed to users in their development environment or by running the help function like so:
+### Viewing docstrings
 
-```output
->>> help(add)
-Help on function add in module __main__:
+We can view documentation strings for a function by using the `?` operator or `help()` function in R and the  [`help` built-in function](https://docs.python.org/3/library/functions.html#help) in Python. 
 
-add(x, y)
-    Calculate the sum of two numbers.
+::: group-tab 
+
+### Python
+
+The contents of that string will be displayed to users in their development environment or by running the `help` function like so:
+
+```python
+help(sum)
 ```
+
+```
+Help on built-in function sum in module builtins:
+
+sum(iterable, /, start=0)
+    Return the sum of a 'start' value (default: 0) plus an iterable of numbers
+
+    When the iterable is empty, return the start value.
+    This function is intended specifically for use with numeric values and may
+    reject non-numeric types.
+```
+
+For more help with specific Python functions, check the documentation for the [Python Standard library](https://docs.python.org/3/library/) or for the particular package you're using.
+
+### R
+
+In R, we use the `help()` function to display the user manual for a function. For example, to view the documentation for the [in-built `sum()` function](https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/sum), we would call:
+
+```R
+help(sum)
+```
+
+```
+sum                    package:base                    R Documentation
+
+Sum of Vector Elements
+
+Description:
+
+     ‘sum’ returns the sum of all the values present in its arguments.
+
+Usage:
+
+     sum(..., na.rm = FALSE)
+
+Arguments:
+
+     ...: numeric or complex or logical vectors.
+
+   na.rm: logical.  Should missing values (including ‘NaN’) be removed?
+
+Details:
+
+     This is a generic function: methods can be defined for it directly
+...
+```
+
+If the content is too big to fit on the screen then you'll need to press the space bar to proceed through the pages of text.
+
+For more information, see [Getting Help with R](https://www.r-project.org/help.html) in the R documentation.
+
+:::
 
 ::::::::::::::::::::::::::::::::: challenge
 
@@ -145,11 +203,15 @@ Use the `help()` function to view the documentation string for a function.
 
 Let's view the help text for an in-built [function `abs()`](https://docs.python.org/3/library/functions.html#abs) that finds the absolute value of a number.
 
+::: group-tab
+
+### Python
+
 ```python
 help(abs)
 ```
 
-The following text will be printed to the screen@
+The following text will be printed to the screen
 
 ```output
 Help on built-in function abs in module builtins:
@@ -157,6 +219,49 @@ Help on built-in function abs in module builtins:
 abs(x, /)
     Return the absolute value of the argument.
 ```
+
+### R
+
+```R
+help(abs)
+```
+
+The following text will be printed to the screen
+
+```output
+abs                    package:base                    R Documentation
+
+Miscellaneous Mathematical Functions
+
+Description:
+
+     ‘abs(x)’ computes the absolute value of x, ‘sqrt(x)’ computes the
+     (principal) square root of x, sqrt{x}.
+
+     The naming follows the standard for computer languages such as C
+     or Fortran.
+
+Usage:
+
+     abs(x)
+     sqrt(x)
+
+Arguments:
+
+       x: a numeric or ‘complex’ vector or array.
+
+Details:
+
+     These are internal generic primitive functions: methods can be
+     defined for them individually or via the ‘Math’ group generic.
+     For complex arguments (and the default method), ‘z’, ‘abs(z) ==
+     Mod(z)’ and ‘sqrt(z) == z^0.5’.
+
+     ‘abs(x)’ returns an ‘integer’ vector when ‘x’ is ‘integer’ or
+...
+```
+
+If the content is too big to fit on the screen then you'll need to press the space bar to proceed through the pages of text.
 
 ::::::::::::::::::::::::::
 
