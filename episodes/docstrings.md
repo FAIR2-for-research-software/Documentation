@@ -22,20 +22,9 @@ exercises: 2
 
 ## How do we describe our code?
 
-If you’re publishing a research software package, one of the most common ways that its users will learn to interact with the code is by reading the documentation **for each individual function**.
+### Describing functions
 
-We learned about _functions_ in an earlier [module on software design principles](https://fair2-for-research-software.github.io/FAIR_Code_design/). Functions help us to break our code into smaller units that have a single purpose.
-
-```mermaid
----
-title: Functions are reusable routines
----
-graph LR
-    A[Input parameter A] --> f{"Function Logic\nf(A, B, C)"}
-    B[Input parameter B] --> f
-    C[Input parameter C] --> f
-    f --> Output[Return value];
-```
+If you’re publishing a research software package, one of the most common ways that its users will learn to interact with the code is by reading the documentation **for each individual function**. We learned about _functions_ in an earlier [module on software design principles](https://fair2-for-research-software.github.io/FAIR_Code_design/). Functions help us to break our code into smaller units that have a single purpose.
 
 By documenting those functions effectively, we aim to **explain their purpose** to future users and maintainers of that code. We also need to describe all the expected inputs and outputs of the functions.
 
@@ -152,7 +141,7 @@ sum(iterable, /, start=0)
     reject non-numeric types.
 ```
 
-For more help with specific Python functions, check the documentation for the [Python Standard library](https://docs.python.org/3/library/) or for the particular package you're using.
+For more help with specific Python functions, check the documentation for the [Python Standard library](https://docs.python.org/3/library/) or for the particular package you're using.
 
 ### R
 
@@ -267,20 +256,20 @@ If the content is too big to fit on the screen then you'll need to press the spa
 
 :::::::::::::::::::::::::::::::::::::::::::
 
-The most important thing to include in a docstrings is an explanation of the purpose of this piece of code.
-To write a useful docstring, put yourself in the shoes of someone who encounters your code for the first time and needs a simple introduction that doesn’t assume any implied knowledge. The explanation will be very basic and seem obvious to you, but it may help a new user greatly.
+The most important thing to include in a docstring is an explanation of the **purpose** of this piece of code.
+To write a useful docstring, put yourself in the shoes of someone who encounters your code for the first time. They need a simple introduction that doesn’t assume too much implied knowledge. The explanation may seem obvious to you, but it may help a new user greatly.
 
 ::: discussion
 
-How can we tailor our docstrings to different audiences, such as new users and experienced developers?
+How can we **tailor** our documentation strings to **different audiences**, such as new users and experienced developers?
 
 :::
 
 ### Arguments
 
-Next, we must describe the inputs and outputs of the function, its _arguments_.
+Next, we must describe the inputs to the function, its _arguments_ or ***parameters***.
 
-We list all the arguments, or input parameters, as shown in the code examples below.
+We list the input parameters in the code examples below.
 Each argument has a name and a brief description.
 
 ::: group-tab
@@ -325,15 +314,51 @@ Add a description of each argument to a function in your code.
 
 Run `help()` and evaluate the output.
 
-:::::::::::::::::::::::::::::::::
-
-### Return values
-
-Finally, we describe the result of the function that is output by the return statement.
+:::: solution
 
 ::: group-tab
 
 ### Python
+
+```python
+def identify(audio_file: str) -> str:
+    """
+    Identify a bird based on the sound of its call.
+
+    Args:
+        audio_file: The path of an audio file.
+    """
+    print("Identifying bird vocalisation...")
+    return "Hirundo atrocaerulea"
+```
+
+### R
+
+```R
+#' Identify a bird based on the sound of its call.
+#'
+#' @param audio_file The path of the sound file
+identify <- function(audio_file) {
+    print("Identifying bird vocalisation...")   
+    return("Hirundo atrocaerulea")
+}
+```
+
+:::
+
+::::
+
+:::::::::::::::::::::::::::::::::
+
+### Return values
+
+Finally, we describe the output of the function. The **return value** is defined by the `return` statement in our function code block.
+
+::: group-tab
+
+### Python
+
+In the Python programming language, we conventionally use the "Returns:" section to describe the function output.
 
 ```python
 def add(x, y):
@@ -352,6 +377,8 @@ def add(x, y):
 
 ### R
 
+In R, when using [roxygen2](https://roxygen2.r-lib.org/), the "@return" section describes the function output.
+
 ```R
 #' Calculate the sum of two numbers.
 #'
@@ -365,7 +392,9 @@ add <- function(x, y) {
 
 :::
 
-This will help the user to understand what the function does and what they can expect to receive back when they call it. It can also be useful to explain any potential errors or exceptions that the function will raise if the inputs aren’t as expected, and how to deal with them.
+This will help the user to understand what the function does and what they can expect to receive back when they call it.
+
+It can also be useful to explain any potential errors or exceptions that the function will raise if the inputs aren’t as expected, and how to deal with them.
 
 ::::::::::::::::::::::::::::::::: challenge
 
@@ -373,17 +402,59 @@ Describe the return value of a function in a documentation string.
 
 Run `help()` and evaluate the output.
 
+:::: solution
+
+::: group-tab
+
+### Python
+
+```python
+def identify(audio_file: str) -> str:
+    """
+    Identify a bird based on the sound of its call.
+
+    Args:
+        audio_file: The path of an audio file.
+
+    Returns:
+        The name of the bird species.
+    """
+    print("Identifying bird vocalisation...")
+    return "Hirundo atrocaerulea"
+```
+
+### R
+
+```R
+#' Identify a bird based on the sound of its call.
+#'
+#' @param audio_file The path of the sound file
+#' @returns The name of the bird species.
+identify <- function(audio_file) {
+
+    print("Identifying bird vocalisation...")
+    
+    return("Hirundo atrocaerulea")
+}
+```
+
+:::
+
+::::
+
 :::::::::::::::::::::::::::::::::
 
 ### Usage examples
 
 We can also include demonstrations of how to use our code by providing code snippets. To do this, we write a collection of sample code that demonstrate how to use functions effectively in different scenarios.
 
-To do this, let's add an examples section to our documentation string. Each code example has a prefix of `>>>` which represents the input prompt on the Python interpreter. Some code editors will provide syntax highlighting of these code snippets.
+To do this, let's add an **examples section** to our documentation string. 
 
 ::: group-tab
 
 ### Python
+
+Each code example has a prefix of `>>>` which represents the input prompt on the Python interpreter. Some code editors will provide syntax highlighting of these code snippets.
 
 ```python
 def add(x, y):
@@ -406,9 +477,11 @@ def add(x, y):
     return x + y
 ```
 
+For more information about including code examples and test cases in docstrings, please read about the [doctest](https://docs.python.org/3/library/doctest.html) module  in the Python documentation.
+
 ### R
 
-For more information about writing R code examples within function documentation, please see the [Examples](https://r-pkgs.org/man.html#sec-man-examples) section in the book _R Packages_ by Hadley Wickham.
+The code examples section of the docstring is prefixed by `@examples`.
 
 ```R
 #' Add two numbers.
@@ -425,17 +498,59 @@ add <- function(x, y) {
 }
 ```
 
+For more information about writing R code examples within function documentation, please see the [Examples](https://r-pkgs.org/man.html#sec-man-examples) section in the book _R Packages_ by Hadley Wickham.
+
 :::
 
 ::::::::::::::::::::::::::::::::: challenge
 
 Write a brief code example within the documentation string in a function in your code.
 
+:::: solution
+
+::: group-tab
+
+### Python
+
+```python
+def identify(audio_file: str) -> str:
+    """
+    Identify a bird based on the sound of its call.
+
+	Examples:
+	>>> identify("~/recordings/hirundo.wav")
+	"Hirundo atrocaerulea"
+    """   
+    print("Identifying bird vocalisation...")
+    return "Hirundo atrocaerulea"
+```
+
+### R
+
+```R
+#' Identify a bird based on the sound of its call.
+#'
+#' @examples
+#' identify("~/recordings/hirundo.wav")
+identify <- function(audio_file) {
+
+    print("Identifying bird vocalisation...")
+    
+    return("Hirundo atrocaerulea")
+}
+```
+
+
+
+::::
+
 :::::::::::::::::::::::::::::::::
 
 :::: spoiler
 
 ### Using docstrings to create automatic tests
+
+We can use the code examples inside docstrings to define test cases that are used in automatic software testing.
 
 ::: group-tab
 
@@ -453,7 +568,7 @@ In the R ecosystem, we can automatically test the examples in our documentation 
 
 ## Best practices
 
-This section contains some tips for writing useful documentation strings.
+This section contains some **tips** for writing useful documentation strings.
 
 ### Prioritisation
 
@@ -469,9 +584,11 @@ Tips:
 Consider this documentation string:
 
 ```python
-def calculate_something(a, b, c):
-    """Does stuff with a, b, and c."""
-    # ... implementation ...
+def identify(audio_file):
+    """
+    Process sound recording.
+    """
+    ...
 ```
 
 What problems do you notice? How could we improve this?
@@ -486,11 +603,12 @@ As with any software documentation, **avoid jargon** where possible.
 
 ::: discussion
 
-Read the following documentation string:
+Read the following documentation string, which is very wordy:
 
 ```python
 def add(x, y):
-    """Adds two numbers together, which are the x and y arguents of this function.
+    """
+    Adds two numbers together, which are the x and y arguents of this function.
 
     This function takes two numbers as input and returns their sum.
     The addition is performed using the built-in `+` operator.
@@ -505,7 +623,7 @@ def add(x, y):
     return x + y
 ```
 
-Discuss how can we effectively convey the purpose and functionality of a function in a docstring, without going into excessive detail about its implementation?
+**Discuss** how can we effectively convey the purpose and functionality of a function in a docstring, without going into excessive detail about its implementation?
 
 :::
 
@@ -537,7 +655,7 @@ It doesn't matter which one you select, as long as it's used consistently across
 
 ## Automatically generate docstrings
 
-Generative AI services such as [Google Gemini](https://gemini.google.com/) can read your code and write docstrings automatically, to a certain extent.
+Generative large language model (LLM) services such as [Google Gemini](https://gemini.google.com/) can read your code and write docstrings automatically, to a certain extent.
 
 To do this, ask the system to create a docstring and copy your code into the prompt text box.
 Below is an example prompt and the reply generated by the Google Gemini algorithm:
@@ -575,15 +693,15 @@ This <abbr title="artificial intelligence">AI</abbr>-generated content contains 
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-Try asking a generative AI service such as Google Gemini to read your code.
+Try asking a generative artificial intelligence service such as [Google Gemini](https://gemini.google.com/) to read your code.
 
 - Ask it to generate documentation of different kinds.
 - Request a review of your code. What does the bot think?
-- Can the chat-bot create a diagram to illustrate a concept that is relevant to your research software?
+- Can the chatbot create a diagram to illustrate a concept that is relevant to your research software?
 
 :::::::::::::::::::::::::::::::::::::
 
-This can save you a lot of time, but as with any <abbr title="Large langauge model">LLM</abbr>-generated content, always check the output and ensure it's correct!
+This can save you a lot of time, but as with any <abbr title="Large language model">LLM</abbr>-generated content, **always check the output** and ensure it's correct!
 
 ::::::::::::::::::::::::::::::::::::: discussion
 
@@ -593,9 +711,11 @@ How should we critically evaluate this material so that it can be used appropria
 
 :::::::::::::::::::::::::::::::::::::
 
+## Conclusion
+
 Documentation strings make your code **clearer to read** and easier for other researchers to use.
 Also, they make your research software **easier to maintain** in the long run, saving time and resources.
-Good docstrings are clear and use **everyday language**.
+Good docstrings use a clear writing style and **everyday language**.
 
 Well-documented, **reusable research code** depends upon good documentation strings.
 Research collaborators will benefit from **clear explanations** of the purpose of each function.
@@ -612,5 +732,11 @@ Research collaborators will benefit from **clear explanations** of the purpose o
 
 To find out more about documentation strings, please refer to the following resources:
 
+Python
+
 - Python [PEP 8 Documentation Strings](https://peps.python.org/pep-0008/#documentation-strings)
-- [Numpy style guide](https://numpydoc.readthedocs.io/en/latest/format.html) describes the syntax and best practices for docstrings in the Numpy project.
+- [NumPy style guide](https://numpydoc.readthedocs.io/en/latest/format.html) describes the syntax and best practices for docstrings in the NumPy project.
+
+R
+
+* [Function documentation](https://r-pkgs.org/man.html) in *R Packages* by Hadley Wickham
