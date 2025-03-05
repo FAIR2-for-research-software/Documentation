@@ -16,7 +16,7 @@ exercises: 2
 
 - Understand the **purpose** of documentation strings
 - Learn **how to write** documentation strings that will be useful for other researchers
-- Introduce ways to describe the **parameters** and return values of functions
+- Introduce ways to describe the **parameters** and **return values** of functions
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -24,11 +24,26 @@ exercises: 2
 
 If you’re publishing a research software package, one of the most common ways that its users will learn to interact with the code is by reading the documentation **for each individual function**.
 
-We learned about _functions_ in an earlier module on software design principles. Functions help us to break our code into smaller units that have a single purpose. By documenting those functions effectively, we aim to **explain their purpose** to future users and maintainers of that code. We also need to describe all the expected inputs and outputs of the function.
+We learned about _functions_ in an earlier [module on software design principles](https://fair2-for-research-software.github.io/FAIR_Code_design/). Functions help us to break our code into smaller units that have a single purpose.
+
+```mermaid
+---
+title: Functions are reusable routines
+---
+graph LR
+    A[Input parameter A] --> f{"Function Logic\nf(A, B, C)"}
+    B[Input parameter B] --> f
+    C[Input parameter C] --> f
+    f --> Output[Return value];
+```
+
+
+
+By documenting those functions effectively, we aim to **explain their purpose** to future users and maintainers of that code. We also need to describe all the expected inputs and outputs of the functions.
 
 ## Documentation strings
 
-We describe functions by using a feature of many programming languages called documentation strings, usually abbreviated to **docstring**. A documentation string is a piece of text that describes that piece of code and helps people to use it.
+We describe functions by using a feature of many programming languages called **documentation strings**, which is sometimes abbreviated to "docstring". A documentation string is a piece of text that describes a part of your code and helps other people to use it effectively.
 
 To make a docstring, we write special comments in our code using syntax which is specific to each programming language, although the principle is the same.
 
@@ -48,7 +63,7 @@ def add(x, y):
 
 ### R
 
-In R, we use the [roxygen2](https://roxygen2.r-lib.org/) package, where a comment with a single quote `#'` to specify a documentation string for a function.
+In R, we use the [roxygen2](https://roxygen2.r-lib.org/) package, where a comment with a single quote `#'` specifies a documentation string for a function.
 
 ```R
 #' Calculate the sum of two numbers.
@@ -410,7 +425,7 @@ A list of documentation string standards in Python:
  - The [PEP 257](https://peps.python.org/pep-0257/) docstring standard was designed by the maintainers of the Python programming langauge.
  - The [Google Style Guide](https://google.github.io/styleguide/pyguide.html#381-docstrings) sets out a docstring format.
  - [Sphinx docstring format](https://www.sphinx-doc.org/en/master/), which has a [NumpyDoc extension](https://numpydoc.readthedocs.io/en/latest/format.html) designed for scientific use.
- 
+
 It doesn't matter which one you select, as long as it's used consistently across a project and it's clear what the syntax means. Some standards are better-supported by other tools such as <abbr title="Integrated development environments">IDEs</abbr> and documentation generators.
 
 ::::
