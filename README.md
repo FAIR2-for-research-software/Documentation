@@ -2,7 +2,7 @@
 
 # Research Software Documentation
 
-This repository contains a course on documenting research software that is part of the [training provision for research computing](https://sites.google.com/sheffield.ac.uk/research-training/) at the University of Sheffield.
+This repository contains a [training module on documenting research software](https://fair2-for-research-software.github.io/Documentation/) that is part of the [training provision for research computing](https://sites.google.com/sheffield.ac.uk/research-training/) at the University of Sheffield and developed as part of the [FAIR<sup>2</sup> for research software](https://rse.shef.ac.uk/training/fair4rs/) course.
 
 ## Course description
 
