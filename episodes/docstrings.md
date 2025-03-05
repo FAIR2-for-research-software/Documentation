@@ -37,8 +37,6 @@ graph LR
     f --> Output[Return value];
 ```
 
-
-
 By documenting those functions effectively, we aim to **explain their purpose** to future users and maintainers of that code. We also need to describe all the expected inputs and outputs of the functions.
 
 ## Documentation strings
@@ -262,6 +260,8 @@ Details:
 ```
 
 If the content is too big to fit on the screen then you'll need to press the space bar to proceed through the pages of text.
+
+:::
 
 ::::::::::::::::::::::::::
 
