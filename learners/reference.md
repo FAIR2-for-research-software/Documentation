@@ -60,6 +60,9 @@ Linter
 Gradware
 : A computer program written by a former postgraduate student that has been abandoned without any documentation and is near-impossible to reuse or to replicate the results.
 
+Codebase
+: The collection of source code files that makes up a software package.
+
 ## Further resources
 
 - Write the Docs, [A beginner’s guide to writing documentation](https://www.writethedocs.org/guide/writing/beginners-guide-to-docs/)
