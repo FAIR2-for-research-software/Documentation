@@ -116,7 +116,9 @@ Many open-source research software projects adopt the [Contributor Covenant](htt
 
 ## Developer notes
 
-For people who are contributing code to the project, they'll need the following information:
+It's useful to write guidance for software engineers who will contribute new features and improvements to the research software. Unlike the README file, this documentation is aimed at new software developers, rather than end-users of the software package. They should be able to create a "development environment" that allows them to modify the codebase as well as run it.
+
+For people who are contributing technical skills to the project, they'll need the following information:
 
 - Which version control system is being used. Typically, this will be `git` or similar tools, as discussed in Module 2 of this course.
 - How to add automatic tests and whether a testing framework is in place.
