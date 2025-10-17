@@ -340,7 +340,7 @@ if __name__ == "__main__":
 
 When the user executes our CLI, Python will know to run the `main()` function and execute our research code. In this case, our research code hasn't been written yet, so we'll just show a message on the screen for now.
 
-The logical statement `if __name__ == "__main__"` means that the `main()` function will *only* run when the code is run from the comand line as the [top-level code environment](https://docs.python.org/3/library/__main__.html#what-is-the-top-level-code-environment).
+The logical statement `if __name__ == "__main__"` means that the `main()` function will *only* run when the code is run from the command line as the [top-level code environment](https://docs.python.org/3/library/__main__.html#what-is-the-top-level-code-environment).
 
 ### CLI documentation
 
@@ -382,7 +382,7 @@ Now let's ask for help! Run the following command to view the usage instructions
 python -m oddsong --help
 ```
 
-What should we see when using the `--help` flag? What happens in your temrinal?
+What should we see when using the `--help` flag? What happens in your terminal?
 
 ::: solution
 

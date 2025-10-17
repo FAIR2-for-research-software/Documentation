@@ -147,7 +147,7 @@ Discuss these issues as a group:
 
 ::::::::::::::::::::::::::::::::::::: keypoints
 
-- **Encourage collaboration:** There are **many ways to contribute** to a research software project, including bug reoprts, feature suggests, design discussions, documentation, and software engineering.
+- **Encourage collaboration:** There are **many ways to contribute** to a research software project, including bug reports, feature suggests, design discussions, documentation, and software engineering.
 - **Clear processes:** Explain the process for making changes and having them included into the code
 - **Bug reports:** Create simple ways for users to report issues and have these problems resolved in a timely manner.
 - **Communication:** Create appropriate communication channels so that design discussions and proposed changes may be worked through transparently.

@@ -28,7 +28,7 @@ There are many kinds of research software, such as:
 
 No code is self-explanatory. It’s a tool we design, or, more often, a complex organism that develops as we use it with our colleagues. To explain our code we must write **software documentation**.
 
-This **provides information** about our programs for everyone involved in its development, use, and future re-use. Documentation may consist of text, tips within a computer environment, and diagrams that guide the user in using a (potentially complex) software tool. It explains *how* the software works *why* it behaves the way it does.
+This **provides information** about our programs for everyone involved in its development, use, and future reuse. Documentation may consist of text, tips within a computer environment, and diagrams that guide the user in using a (potentially complex) software tool. It explains *how* the software works *why* it behaves the way it does.
 
 ## Why document our code?
 
@@ -70,7 +70,7 @@ High-quality documentation is a key part of ensuring a healthy **software lifecy
 
 ## When should I write documentation?
 
-Now! Start writing and sharing documentation for your reseach code **from the beginning** of your project. It doesn't have to be perfect straight away, but a first draft is more useful than nothing.
+Now! Start writing and sharing documentation for your research code **from the beginning** of your project. It doesn't have to be perfect straight away, but a first draft is more useful than nothing.
 
 The best practice for modern, collaborative research involving digital methods and tools is to document your processes **early and often**. Not only will writing notes about your code help other people to read and use that code, it will clarify your thought process as you design your system, focussing your work on the important parts of the task at hand.
 

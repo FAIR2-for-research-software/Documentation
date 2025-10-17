@@ -75,7 +75,7 @@ Consider the following factors:
 
 ## Contents
 
-Documentation pages contain **comphrehensive information** about a particular piece of research software. Think of it like a user manual for your car or an instruction guide for building a piece of furniature.
+Documentation pages contain **comprehensive information** about a particular piece of research software. Think of it like a user manual for your car or an instruction guide for building a piece of furniature.
 
 ### Research context
 
@@ -93,7 +93,7 @@ A series of code examples to demonstrate how to use the software in different co
 
 ### User reference
 
-If you have written functions that are intended to be use in other reseachers' code, then an on-depth explaination of these procedures is essential reference material. In the world of software engineering, these detailed appendices are called <acronym title="Application Programming Interfaces">API</acronym> references, which list each function and describe how the arguments may be used to control how the code works. This content may be automatically generated from the documentation strings.
+If you have written functions that are intended to be use in other researchers' code, then an on-depth explanation of these procedures is essential reference material. In the world of software engineering, these detailed appendices are called <acronym title="Application Programming Interfaces">API</acronym> references, which list each function and describe how the arguments may be used to control how the code works. This content may be automatically generated from the documentation strings.
 
 ### Troubleshooting
 
@@ -108,9 +108,9 @@ An appendix containing frequently asked questions (FAQs) is very useful to save 
 
 ## Writing style
 
-As we discussed in the [episode on READMEs](readmes.md), it's important to strive to use everyday, jargon-free language. It helps to set an approachable tone that encourages others to use the software and get involved with the project. This will en sure that the code is accesible to the widest possible layers of the research community and foster collaboration.
+As we discussed in the [episode on READMEs](readmes.md), it's important to strive to use everyday, jargon-free language. It helps to set an approachable tone that encourages others to use the software and get involved with the project. This will en sure that the code is accessible to the widest possible layers of the research community and foster collaboration.
 
-Always consider the target audience of your documentation, because your user base may be unaware of some of the unstated assumptions and technical backgroud knowledge that you take for granted.
+Always consider the target audience of your documentation, because your user base may be unaware of some of the unstated assumptions and technical background knowledge that you take for granted.
 
 ## Tools
 

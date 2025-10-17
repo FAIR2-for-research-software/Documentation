@@ -608,7 +608,7 @@ Read the following documentation string, which is very wordy:
 ```python
 def add(x, y):
     """
-    Adds two numbers together, which are the x and y arguents of this function.
+    Adds two numbers together, which are the x and y arguments of this function.
 
     This function takes two numbers as input and returns their sum.
     The addition is performed using the built-in `+` operator.
@@ -645,7 +645,8 @@ There are several different **standards** for documentation strings. A standard 
 
 A list of documentation string standards in Python:
 
- - The [PEP 257](https://peps.python.org/pep-0257/) docstring standard was designed by the maintainers of the Python programming langauge.
+ - The [PEP 257](https://peps.python.org/pep-0257/) docstring standard was designed by the maintainers of the Python
+   programming language.
  - The [Google Style Guide](https://google.github.io/styleguide/pyguide.html#381-docstrings) sets out a docstring format.
  - [Sphinx docstring format](https://www.sphinx-doc.org/en/master/), which has a [NumpyDoc extension](https://numpydoc.readthedocs.io/en/latest/format.html) designed for scientific use.
 
@@ -705,7 +706,7 @@ This can save you a lot of time, but as with any <abbr title="Large language mod
 
 ::::::::::::::::::::::::::::::::::::: discussion
 
-What are the benefits and risks of using a large langauge model (LLM) service such as Google Gemini or OpenAI ChatGPT to interpret your code and produce content that you use in your research?
+What are the benefits and risks of using a Large Language Model (LLM) service such as Google Gemini or OpenAI ChatGPT to interpret your code and produce content that you use in your research?
 
 How should we critically evaluate this material so that it can be used appropriately to improve the productivity of our research teams without jeopardising our ethics or integrity or causing security risks?
 

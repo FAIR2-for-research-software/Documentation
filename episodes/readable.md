@@ -25,7 +25,7 @@ It’s a common trope in the software engineering world that code is **read much
 ## Syntax highlighting
 
 Many text editors use **syntax highlighting** to display parts of your source code using different colours or fonts to signify the meaning of each word or symbol.
-For example, variable names may be given a bright blue colour, strings highighted in green, and numbers shown in a red font.
+For example, variable names may be given a bright blue colour, strings highlighted in green, and numbers shown in a red font.
 
 Let's take a look to see its benefits:
 
@@ -431,7 +431,7 @@ It will take some time and effort to write these labels, but it will pay off in 
 
 ::::::::::::::::::::::::::::::::::::: keypoints
 
-- Try to inject as much *meaning* into your source code as possible by naming things clearly and succintly.
+- Try to inject as much *meaning* into your source code as possible by naming things clearly and succinctly.
 - Use comments to explain your rationale&mdash;even if the code seems obvious to you know, think of the future benefits!
 - Label functions and variables with *type hints* to tell the user what data types are expected.
 
