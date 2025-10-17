@@ -16,6 +16,6 @@ Thank you to the following people for their help in producing and testing this m
 - Joe Heffer
 - Farhad Allian
 - Christopher Wild
-- Neil Shepherd
+- Neil Shephard
 
 See the full [list of contributors](https://github.com/FAIR2-for-research-software/Documentation/graphs/contributors).
