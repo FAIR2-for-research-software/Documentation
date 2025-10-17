@@ -486,9 +486,9 @@ Use diagrams and screenshots for clarity.
 
 :::::: keypoints
 
- - A README file serves as an **introduction** to your software, guiding users on installation, usage, and understanding its capabilities.
- - Consider the user's technical background; write clearly and **avoid jargon**.
- - **Markdown** is a recommended format for creating headers, bold text, bullet points, etc.
+- A README file serves as an **introduction** to your software, guiding users on installation, usage, and understanding its capabilities.
+- Consider the user's technical background; write clearly and **avoid jargon**.
+- **Markdown** is a recommended format for creating headers, bold text, bullet points, etc.
 
 ::::::
 

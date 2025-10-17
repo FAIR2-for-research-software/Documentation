@@ -645,10 +645,10 @@ There are several different **standards** for documentation strings. A standard 
 
 A list of documentation string standards in Python:
 
- - The [PEP 257](https://peps.python.org/pep-0257/) docstring standard was designed by the maintainers of the Python
+- The [PEP 257](https://peps.python.org/pep-0257/) docstring standard was designed by the maintainers of the Python
    programming language.
- - The [Google Style Guide](https://google.github.io/styleguide/pyguide.html#381-docstrings) sets out a docstring format.
- - [Sphinx docstring format](https://www.sphinx-doc.org/en/master/), which has a [NumpyDoc extension](https://numpydoc.readthedocs.io/en/latest/format.html) designed for scientific use.
+- The [Google Style Guide](https://google.github.io/styleguide/pyguide.html#381-docstrings) sets out a docstring format.
+- [Sphinx docstring format](https://www.sphinx-doc.org/en/master/), which has a [NumpyDoc extension](https://numpydoc.readthedocs.io/en/latest/format.html) designed for scientific use.
 
 It doesn't matter which one you select, as long as it's used consistently across a project and it's clear what the syntax means. Some standards are better-supported by other tools such as <abbr title="Integrated development environments">IDEs</abbr> and documentation generators.
 
