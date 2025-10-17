@@ -1,10 +1,10 @@
-## Contributing
+# Contributing
 
 We welcome contributions to this open educational resource: fixes to
 existing material, bug reports, and reviews of proposed changes are all
 welcome.
 
-### Contributor Agreement
+## Contributor Agreement
 
 By contributing, you agree that we may redistribute your work under [our
 license](LICENSE.md). In exchange, we will address your issues and/or assess
@@ -30,7 +30,7 @@ our [code of conduct](CODE_OF_CONDUCT.md).
 Note: if you want to build the website locally, please refer to [The Workbench
 documentation][template-doc].
 
-### Using GitHub
+## Using GitHub
 
 If you choose to contribute via GitHub, you may want to look at [How to
 Contribute to an Open Source Project on GitHub][how-contribute]. In brief, we

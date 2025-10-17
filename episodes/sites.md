@@ -268,7 +268,7 @@ Sphinx](https://www.sphinx-doc.org/en/master/usage/installation.html).
 pip install sphinx
 ```
 
-##### Start a new Sphinx project
+#### Start a new Sphinx project
 
 Sphinx includes a command to set up a new project called
 [sphinx-quickstart](https://www.sphinx-doc.org/en/master/man/sphinx-quickstart.html). Navigate to your project's root
