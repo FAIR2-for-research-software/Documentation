@@ -6,7 +6,11 @@ config:
     tables: false
   html:
     allowed_elements:
+      - abbr
+      - acronym
       - div
+      - kbd
+      - sup
   no-duplicate-heading: false
 
 globs:
