@@ -40,7 +40,7 @@ It is wise to follow's Alice's advice and check the "Read Me" before risking bei
 
 ::::
 
-The **audience** for a README file is the _end user_, such as a researcher. It's important to consider _the person_ will read your documentation, and to see things from their point of view. It may be someone who is unfamiliar with certain technical terms, or a researcher will less experience of advanced computing. A suitable approach is to imagine writing a manual for a new user who has never seen this software before.
+The **audience** for a README file is the *end user*, such as a researcher. It's important to consider *the person* will read your documentation, and to see things from their point of view. It may be someone who is unfamiliar with certain technical terms, or a researcher will less experience of advanced computing. A suitable approach is to imagine writing a manual for a new user who has never seen this software before.
 
 ## How to write a README
 
@@ -55,7 +55,7 @@ Let's create a new code project. Create a new, empty directory to contain your w
 Follow these general steps to create a README file.
 The specific details for each operating system are detailed below.
 
-1. Create a directory to contain your project. We call this the _root directory_;
+1. Create a directory to contain your project. We call this the *root directory*;
 2. In that directory, create a new text file;
 3. Name the file `README.txt`;
 4. Open the file for editing&mdash;start writing your documentation!
@@ -231,14 +231,14 @@ For more information on this topic, please see the following resources:
 Using a file format that allows you to format text and create headers makes the content more **comprehensible** for the reader. Organising a document into sections or chapters makes it easier to navigate and find the relevant information.
 
 In the software world, **[Markdown](https://daringfireball.net/projects/markdown/) documents** are a commonly-used file format for writing READMEs.
-Markdown is a simple _markup language_ that lets us apply **semantic labelling** such as emphasis and structure to our text. These are displayed using visual styles that make your documentation more aesthetically pleasing and more navigable. It allows you to format your text using symbols to represent headers, bold text, bullet lists, etc. These are displayed to the user using their screen or other device, depending upon accessibility requirements.
+Markdown is a simple *markup language* that lets us apply **semantic labelling** such as emphasis and structure to our text. These are displayed using visual styles that make your documentation more aesthetically pleasing and more navigable. It allows you to format your text using symbols to represent headers, bold text, bullet lists, etc. These are displayed to the user using their screen or other device, depending upon accessibility requirements.
 
 :::: spoiler
 
 ## What is a markup language?
 
 A [markup language](https://en.wikipedia.org/wiki/Markup_language) is a system of special characters that are used to decorate or format pieces of plain text.
-The syntax normally consists of symbols or _tags_ that are used to _encode_ text, that **implies meaning** to make it more information-rich.
+The syntax normally consists of symbols or *tags* that are used to *encode* text, that **implies meaning** to make it more information-rich.
 It can be used to structure a documented into sections to provide logical organisation so that it's easier to navigate.
 
 Typically, a markup language is edited in a similar way to a computer programming language, and is **rendered** into a document with various rich text formatting such as headers, bold face fonts, etc.
@@ -339,7 +339,7 @@ To use this tool...
 
 This gives some basic structure to the document, which we'll flesh out later.
 
-We can further subdivide the content by using _header levels_, where each subheading uses an additional `#` symbol. For example, `#` is a top-level heading, `##` is a section header, `###` is a subsection header, etc.
+We can further subdivide the content by using *header levels*, where each subheading uses an additional `#` symbol. For example, `#` is a top-level heading, `##` is a section header, `###` is a subsection header, etc.
 
 ```markdown
 # Title
@@ -402,7 +402,7 @@ Using text formatting makes your software documentation easier to **skim-read**,
 
 :::::::: challenge
 
-Identify several _key words_ in your README file. Apply the "strong text" syntax so they will be displayed using a bold font face or be given increased stress by a screen-reader.
+Identify several *key words* in your README file. Apply the "strong text" syntax so they will be displayed using a bold font face or be given increased stress by a screen-reader.
 
 :::: solution
 

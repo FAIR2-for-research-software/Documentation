@@ -441,5 +441,5 @@ It will take some time and effort to write these labels, but it will pay off in 
 
 To find out more about the topics covered in this episode, please refer to the following pages:
 
-- _The Hitchhiker's Guide to Python_ [Code Style](https://docs.python-guide.org/writing/style/)
+- *The Hitchhiker's Guide to Python* [Code Style](https://docs.python-guide.org/writing/style/)
 - [The tidyverse style guide](https://style.tidyverse.org/) for R

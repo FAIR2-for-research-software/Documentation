@@ -267,7 +267,7 @@ How can we **tailor** our documentation strings to **different audiences**, such
 
 ### Arguments
 
-Next, we must describe the inputs to the function, its _arguments_ or ***parameters***.
+Next, we must describe the inputs to the function, its _arguments_ or _**parameters**_.
 
 We list the input parameters in the code examples below.
 Each argument has a name and a brief description.

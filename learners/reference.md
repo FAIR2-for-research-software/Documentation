@@ -67,5 +67,5 @@ Codebase
 
 - Write the Docs, [A beginner’s guide to writing documentation](https://www.writethedocs.org/guide/writing/beginners-guide-to-docs/)
 - S. Druskat and S. Harriet, *Software Sustainability Institute* [What are best practices for research software documentation?](https://www.software.ac.uk/blog/what-are-best-practices-research-software-documentation)
-- [_Diataxis_](https://diataxis.fr/) A systematic approach to technical documentation authoring.
+- [*Diataxis*](https://diataxis.fr/) A systematic approach to technical documentation authoring.
 - Code Refinery [How to document your research software](https://coderefinery.github.io/documentation/)
