@@ -24,21 +24,29 @@ exercises: 2
 
 ### Describing functions
 
-If you’re publishing a research software package, one of the most common ways that its users will learn to interact with the code is by reading the documentation **for each individual function**. We learned about _functions_ in an earlier [module on software design principles](https://fair2-for-research-software.github.io/FAIR_Code_design/). Functions help us to break our code into smaller units that have a single purpose.
+If you’re publishing a research software package, one of the most common ways that its users will learn to interact with
+the code is by reading the documentation **for each individual function**. We learned about _functions_ in an earlier
+[module on software design principles](https://fair2-for-research-software.github.io/FAIR_Code_design/). Functions help
+us to break our code into smaller units that have a single purpose.
 
-By documenting those functions effectively, we aim to **explain their purpose** to future users and maintainers of that code. We also need to describe all the expected inputs and outputs of the functions.
+By documenting those functions effectively, we aim to **explain their purpose** to future users and maintainers of that
+code. We also need to describe all the expected inputs and outputs of the functions.
 
 ## Documentation strings
 
-We describe functions by using a feature of many programming languages called **documentation strings**, which is sometimes abbreviated to "docstring". A documentation string is a piece of text that describes a part of your code and helps other people to use it effectively.
+We describe functions by using a feature of many programming languages called **documentation strings**, which is
+sometimes abbreviated to "docstring". A documentation string is a piece of text that describes a part of your code and
+helps other people to use it effectively.
 
-To make a docstring, we write special comments in our code using syntax which is specific to each programming language, although the principle is the same.
+To make a docstring, we write special comments in our code using syntax which is specific to each programming language,
+although the principle is the same.
 
 ::: group-tab
 
 ### Python
 
-In Python, we put a string as the first line of a function (or other object.) For example, for a simple Python function that calculates the sum of two numbers:
+In Python, we put a string as the first line of a function (or other object.) For example, for a simple Python function
+that calculates the sum of two numbers:
 
 ```python
 def add(x, y):
@@ -50,7 +58,8 @@ def add(x, y):
 
 ### R
 
-In R, we use the [roxygen2](https://roxygen2.r-lib.org/) package, where a comment with a single quote `#'` specifies a documentation string for a function.
+In R, we use the [roxygen2](https://roxygen2.r-lib.org/) package, where a comment with a single quote `#'` specifies a
+documentation string for a function.
 
 ```R
 #' Calculate the sum of two numbers.
@@ -61,13 +70,13 @@ add <- function(x, y) {
 
 :::
 
-Whenever you add functionality to a code project, consider wrapping it up into a function.
-It may help to **write the docstring first** to help work through what the purpose of your new code is before you start!
+Whenever you add functionality to a code project, consider wrapping it up into a function.  It may help to **write the
+docstring first** to help work through what the purpose of your new code is before you start!
 
 ::::::::::::::::::::::::::::::::: challenge
 
-Write a documentation string for a function.
-Create a script called `oddsong` and define a function named `identify()` that will be used to identify bird songs by inspecting an audio file to provide the name of that species.
+Write a documentation string for a function.  Create a script called `oddsong` and define a function named `identify()`
+that will be used to identify bird songs by inspecting an audio file to provide the name of that species.
 
 ::::::::::::::::: solution
 
@@ -118,13 +127,15 @@ See also the [example R script](https://github.com/Joe-Heffer-Shef/oddsong/blob/
 
 ### Viewing docstrings
 
-We can view documentation strings for a function by using the `?` operator or `help()` function in R and the  [`help` built-in function](https://docs.python.org/3/library/functions.html#help) in Python.
+We can view documentation strings for a function by using the `?` operator or `help()` function in R and the [`help`
+built-in function](https://docs.python.org/3/library/functions.html#help) in Python.
 
 ::: group-tab
 
 ### Python
 
-The contents of that string will be displayed to users in their development environment or by running the `help` function like so:
+The contents of that string will be displayed to users in their development environment or by running the `help`
+function like so:
 
 ```python
 help(sum)
@@ -141,11 +152,13 @@ sum(iterable, /, start=0)
     reject non-numeric types.
 ```
 
-For more help with specific Python functions, check the documentation for the [Python Standard library](https://docs.python.org/3/library/) or for the particular package you're using.
+For more help with specific Python functions, check the documentation for the [Python Standard
+library](https://docs.python.org/3/library/) or for the particular package you're using.
 
 ### R
 
-In R, we use the `help()` function to display the user manual for a function. For example, to view the documentation for the [in-built `sum()` function](https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/sum), we would call:
+In R, we use the `help()` function to display the user manual for a function. For example, to view the documentation for
+the [in-built `sum()` function](https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/sum), we would call:
 
 ```R
 help(sum)
@@ -176,7 +189,8 @@ Details:
 ...
 ```
 
-If the content is too big to fit on the screen then you'll need to press the space bar to proceed through the pages of text.
+If the content is too big to fit on the screen then you'll need to press the space bar to proceed through the pages of
+text.
 
 For more information, see [Getting Help with R](https://www.r-project.org/help.html) in the R documentation.
 
@@ -188,7 +202,8 @@ Use the `help()` function to view the documentation string for a function.
 
 ::::::::::::::::: solution
 
-Let's view the help text for an in-built [function `abs()`](https://docs.python.org/3/library/functions.html#abs) that finds the absolute value of a number.
+Let's view the help text for an in-built [function `abs()`](https://docs.python.org/3/library/functions.html#abs) that
+finds the absolute value of a number.
 
 ::: group-tab
 
@@ -248,7 +263,8 @@ Details:
 ...
 ```
 
-If the content is too big to fit on the screen then you'll need to press the space bar to proceed through the pages of text.
+If the content is too big to fit on the screen then you'll need to press the space bar to proceed through the pages of
+text.
 
 :::
 
@@ -256,12 +272,15 @@ If the content is too big to fit on the screen then you'll need to press the spa
 
 :::::::::::::::::::::::::::::::::::::::::::
 
-The most important thing to include in a docstring is an explanation of the **purpose** of this piece of code.
-To write a useful docstring, put yourself in the shoes of someone who encounters your code for the first time. They need a simple introduction that doesn’t assume too much implied knowledge. The explanation may seem obvious to you, but it may help a new user greatly.
+The most important thing to include in a docstring is an explanation of the **purpose** of this piece of code.  To write
+a useful docstring, put yourself in the shoes of someone who encounters your code for the first time. They need a simple
+introduction that doesn’t assume too much implied knowledge. The explanation may seem obvious to you, but it may help a
+new user greatly.
 
 ::: discussion
 
-How can we **tailor** our documentation strings to **different audiences**, such as new users and experienced developers?
+How can we **tailor** our documentation strings to **different audiences**, such as new users and experienced
+developers?
 
 :::
 
@@ -269,8 +288,7 @@ How can we **tailor** our documentation strings to **different audiences**, such
 
 Next, we must describe the inputs to the function, its _arguments_ or _**parameters**_.
 
-We list the input parameters in the code examples below.
-Each argument has a name and a brief description.
+We list the input parameters in the code examples below.  Each argument has a name and a brief description.
 
 ::: group-tab
 
@@ -306,7 +324,8 @@ add <- function(x, y) {
 
 :::
 
-We have added an “arguments” (abbreviated to “args”) section to our docstring which lists the input parameters of the function and describes each one.
+We have added an “arguments” (abbreviated to “args”) section to our docstring which lists the input parameters of the
+function and describes each one.
 
 ::::::::::::::::::::::::::::::::: challenge
 
@@ -352,7 +371,8 @@ identify <- function(audio_file) {
 
 ### Return values
 
-Finally, we describe the output of the function. The **return value** is defined by the `return` statement in our function code block.
+Finally, we describe the output of the function. The **return value** is defined by the `return` statement in our
+function code block.
 
 ::: group-tab
 
@@ -394,7 +414,8 @@ add <- function(x, y) {
 
 This will help the user to understand what the function does and what they can expect to receive back when they call it.
 
-It can also be useful to explain any potential errors or exceptions that the function will raise if the inputs aren’t as expected, and how to deal with them.
+It can also be useful to explain any potential errors or exceptions that the function will raise if the inputs aren’t as
+expected, and how to deal with them.
 
 ::::::::::::::::::::::::::::::::: challenge
 
@@ -446,7 +467,8 @@ identify <- function(audio_file) {
 
 ### Usage examples
 
-We can also include demonstrations of how to use our code by providing code snippets. To do this, we write a collection of sample code that demonstrate how to use functions effectively in different scenarios.
+We can also include demonstrations of how to use our code by providing code snippets. To do this, we write a collection
+of sample code that demonstrate how to use functions effectively in different scenarios.
 
 To do this, let's add an **examples section** to our documentation string.
 
@@ -454,7 +476,8 @@ To do this, let's add an **examples section** to our documentation string.
 
 ### Python
 
-Each code example has a prefix of `>>>` which represents the input prompt on the Python interpreter. Some code editors will provide syntax highlighting of these code snippets.
+Each code example has a prefix of `>>>` which represents the input prompt on the Python interpreter. Some code editors
+will provide syntax highlighting of these code snippets.
 
 ```python
 def add(x, y):
@@ -477,7 +500,8 @@ def add(x, y):
     return x + y
 ```
 
-For more information about including code examples and test cases in docstrings, please read about the [doctest](https://docs.python.org/3/library/doctest.html) module  in the Python documentation.
+For more information about including code examples and test cases in docstrings, please read about the
+[doctest](https://docs.python.org/3/library/doctest.html) module in the Python documentation.
 
 ### R
 
@@ -498,7 +522,8 @@ add <- function(x, y) {
 }
 ```
 
-For more information about writing R code examples within function documentation, please see the [Examples](https://r-pkgs.org/man.html#sec-man-examples) section in the book _R Packages_ by Hadley Wickham.
+For more information about writing R code examples within function documentation, please see the
+[Examples](https://r-pkgs.org/man.html#sec-man-examples) section in the book _R Packages_ by Hadley Wickham.
 
 :::
 
@@ -558,11 +583,13 @@ We can use the code examples inside docstrings to define test cases that are use
 
 ### Python
 
-These code examples can be used as automatic tests using the [doctest](https://docs.python.org/3/library/doctest.html) module which is built into Python.
+These code examples can be used as automatic tests using the [doctest](https://docs.python.org/3/library/doctest.html)
+module which is built into Python.
 
 ### R
 
-In the R ecosystem, we can automatically test the examples in our documentation strings using the [doctest](https://cran.r-project.org/web/packages/doctest/vignettes/doctest.html) package.
+In the R ecosystem, we can automatically test the examples in our documentation strings using the
+[doctest](https://cran.r-project.org/web/packages/doctest/vignettes/doctest.html) package.
 
 :::
 
@@ -574,7 +601,10 @@ This section contains some **tips** for writing useful documentation strings.
 
 ### Prioritisation
 
-Focus on the **purpose and functionality** of the code, rather than getting bogged down in the details of how it works. Explain what the function **does**, rather then the specific implementation, because this might change over time. A function encapsulates an isolated part of a system, which can be used as a black box by other parts of the system or the end user, who in many cases only needs to understand its inputs and outputs.
+Focus on the **purpose and functionality** of the code, rather than getting bogged down in the details of how it
+works. Explain what the function **does**, rather then the specific implementation, because this might change over
+time. A function encapsulates an isolated part of a system, which can be used as a black box by other parts of the
+system or the end user, who in many cases only needs to understand its inputs and outputs.
 
 Tips:
 
@@ -625,11 +655,13 @@ def add(x, y):
     return x + y
 ```
 
-**Discuss** how can we effectively convey the purpose and functionality of a function in a docstring, without going into excessive detail about its implementation?
+**Discuss** how can we effectively convey the purpose and functionality of a function in a docstring, without going into
+excessive detail about its implementation?
 
 :::
 
-Don't reinvent the wheel. **Provide links** to further resources for users to take a deep dive into more complicated topics.
+Don't reinvent the wheel. **Provide links** to further resources for users to take a deep dive into more complicated
+topics.
 
 ::: discussion
 
@@ -637,31 +669,38 @@ How can we link to external resources that can provide more in-depth information
 
 :::
 
-Be **consistent**. Decide a style of docstring and use that everywhere across your software project. If you're working on a larger project with multiple developers, refer to the coding conventions and, if in doubt, follow the style of existing code.
+Be **consistent**. Decide a style of docstring and use that everywhere across your software project. If you're working
+on a larger project with multiple developers, refer to the coding conventions and, if in doubt, follow the style of
+existing code.
 
 :::: spoiler
 
 ### Docstring conventions
 
-There are several different **standards** for documentation strings. A standard is a convention that determines how the docstrings will be organised and the syntax that is used to represent the arguments, data types, etc.
+There are several different **standards** for documentation strings. A standard is a convention that determines how the
+docstrings will be organised and the syntax that is used to represent the arguments, data types, etc.
 
 A list of documentation string standards in Python:
 
 - The [PEP 257](https://peps.python.org/pep-0257/) docstring standard was designed by the maintainers of the Python
    programming language.
 - The [Google Style Guide](https://google.github.io/styleguide/pyguide.html#381-docstrings) sets out a docstring format.
-- [Sphinx docstring format](https://www.sphinx-doc.org/en/master/), which has a [NumpyDoc extension](https://numpydoc.readthedocs.io/en/latest/format.html) designed for scientific use.
+- [Sphinx docstring format](https://www.sphinx-doc.org/en/master/), which has a [NumpyDoc
+  extension](https://numpydoc.readthedocs.io/en/latest/format.html) designed for scientific use.
 
-It doesn't matter which one you select, as long as it's used consistently across a project and it's clear what the syntax means. Some standards are better-supported by other tools such as <abbr title="Integrated development environments">IDEs</abbr> and documentation generators.
+It doesn't matter which one you select, as long as it's used consistently across a project and it's clear what the
+syntax means. Some standards are better-supported by other tools such as <abbr title="Integrated development
+environments">IDEs</abbr> and documentation generators.
 
 ::::
 
 ## Automatically generate docstrings
 
-Generative large language model (LLM) services such as [Google Gemini](https://gemini.google.com/) can read your code and write docstrings automatically, to a certain extent.
+Generative large language model (LLM) services such as [Google Gemini](https://gemini.google.com/) can read your code
+and write docstrings automatically, to a certain extent.
 
-To do this, ask the system to create a docstring and copy your code into the prompt text box.
-Below is an example prompt and the reply generated by the Google Gemini algorithm:
+To do this, ask the system to create a docstring and copy your code into the prompt text box.  Below is an example
+prompt and the reply generated by the Google Gemini algorithm:
 
 ```
 Please generate a docstring for this Python function:
@@ -692,11 +731,13 @@ def calculate_rectangle_area(width, height):
   return area
 ```
 
-This <abbr title="artificial intelligence">AI</abbr>-generated content contains a function summary, argument descriptions, and explains the return value as we discussed previously.
+This <abbr title="artificial intelligence">AI</abbr>-generated content contains a function summary, argument
+descriptions, and explains the return value as we discussed previously.
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
-Try asking a generative artificial intelligence service such as [Google Gemini](https://gemini.google.com/) to read your code.
+Try asking a generative artificial intelligence service such as [Google Gemini](https://gemini.google.com/) to read your
+code.
 
 - Ask it to generate documentation of different kinds.
 - Request a review of your code. What does the bot think?
@@ -704,30 +745,34 @@ Try asking a generative artificial intelligence service such as [Google Gemini](
 
 :::::::::::::::::::::::::::::::::::::
 
-This can save you a lot of time, but as with any <abbr title="Large language model">LLM</abbr>-generated content, **always check the output** and ensure it's correct!
+This can save you a lot of time, but as with any <abbr title="Large language model">LLM</abbr>-generated content,
+**always check the output** and ensure it's correct!
 
 ::::::::::::::::::::::::::::::::::::: discussion
 
-What are the benefits and risks of using a Large Language Model (LLM) service such as Google Gemini or OpenAI ChatGPT to interpret your code and produce content that you use in your research?
+What are the benefits and risks of using a Large Language Model (LLM) service such as Google Gemini or OpenAI ChatGPT to
+interpret your code and produce content that you use in your research?
 
-How should we critically evaluate this material so that it can be used appropriately to improve the productivity of our research teams without jeopardising our ethics or integrity or causing security risks?
+How should we critically evaluate this material so that it can be used appropriately to improve the productivity of our
+research teams without jeopardising our ethics or integrity or causing security risks?
 
 :::::::::::::::::::::::::::::::::::::
 
 ## Conclusion
 
-Documentation strings make your code **clearer to read** and easier for other researchers to use.
-Also, they make your research software **easier to maintain** in the long run, saving time and resources.
-Good docstrings use a clear writing style and **everyday language**.
+Documentation strings make your code **clearer to read** and easier for other researchers to use.  Also, they make your
+research software **easier to maintain** in the long run, saving time and resources.  Good docstrings use a clear
+writing style and **everyday language**.
 
-Well-documented, **reusable research code** depends upon good documentation strings.
-Research collaborators will benefit from **clear explanations** of the purpose of each function.
+Well-documented, **reusable research code** depends upon good documentation strings.  Research collaborators will
+benefit from **clear explanations** of the purpose of each function.
 
 ::::::::::::::::::::::::::::::::::::: keypoints
 
 - Docstrings are special comments that describe the **purpose of a function** and its inputs and outputs.
 - **Structure your docstrings** to convey more information, with a concise introduction.
-- Documentation strings allow you to break your documentation into **bite-size chunks**, with one overview comment per function.
+- Documentation strings allow you to break your documentation into **bite-size chunks**, with one overview comment per
+  function.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -738,7 +783,8 @@ To find out more about documentation strings, please refer to the following reso
 Python
 
 - Python [PEP 8 Documentation Strings](https://peps.python.org/pep-0008/#documentation-strings)
-- [NumPy style guide](https://numpydoc.readthedocs.io/en/latest/format.html) describes the syntax and best practices for docstrings in the NumPy project.
+- [NumPy style guide](https://numpydoc.readthedocs.io/en/latest/format.html) describes the syntax and best practices for
+  docstrings in the NumPy project.
 
 R
 

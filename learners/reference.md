@@ -19,7 +19,8 @@ Editor
 : A software tool for modifying plain text files
 
 IDE
-: An *Integrated Development Environment* is a powerful source code editor and debugging tool designed for software engineers
+: An *Integrated Development Environment* is a powerful source code editor and debugging tool designed for software
+  engineers
 
 Developer
 : A software engineer who's contributing to a softare project
@@ -37,7 +38,9 @@ Type
 : The data structure that defines the set of values that a variable may contain.
 
 Static analysis
-: "a software verification activity that analyses source code for quality, reliability, and security without executing the code." &mdash; MATLAB "[What Is Static Code Analysis?](https://uk.mathworks.com/discovery/static-code-analysis.html)"
+: "a software verification activity that analyses source code for quality, reliability, and security without executing
+  the code." &mdash; MATLAB "[What Is Static Code
+  Analysis?](https://uk.mathworks.com/discovery/static-code-analysis.html)"
 
 Command-line interface (CLI)
 : A way of running software by typing text instructions into a terminal
@@ -58,14 +61,17 @@ Linter
 : A system that analyses code for potential errors.
 
 Gradware
-: A computer program written by a former postgraduate student that has been abandoned without any documentation and is near-impossible to reuse or to replicate the results.
+: A computer program written by a former postgraduate student that has been abandoned without any documentation and is
+  near-impossible to reuse or to replicate the results.
 
 Codebase
 : The collection of source code files that makes up a software package.
 
 ## Further resources
 
-- Write the Docs, [A beginner’s guide to writing documentation](https://www.writethedocs.org/guide/writing/beginners-guide-to-docs/)
-- S. Druskat and S. Harriet, *Software Sustainability Institute* [What are best practices for research software documentation?](https://www.software.ac.uk/blog/what-are-best-practices-research-software-documentation)
+- Write the Docs, [A beginner’s guide to writing
+  documentation](https://www.writethedocs.org/guide/writing/beginners-guide-to-docs/)
+- S. Druskat and S. Harriet, *Software Sustainability Institute* [What are best practices for research software
+  documentation?](https://www.software.ac.uk/blog/what-are-best-practices-research-software-documentation)
 - [*Diataxis*](https://diataxis.fr/) A systematic approach to technical documentation authoring.
 - Code Refinery [How to document your research software](https://coderefinery.github.io/documentation/)
