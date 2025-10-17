@@ -30,7 +30,6 @@ The Notepad text editor is installed by default on Windows. [Notepad++](https://
 
 #### Python
 
-
 There is a guide for [using Python on Windows](https://docs.python.org/3/using/windows.html) in the
 Python documentation. [Python Releases for Windows](https://www.python.org/downloads/windows/) are
 available at [Python.org](https://python.org).
@@ -60,7 +59,6 @@ the Python documentation.
 [Download R for macOS](https://cran.rstudio.com/bin/macosx/) and [RStudio Desktop](https://posit.co/download/rstudio-desktop/).
 
 ::::::::::::::::::::::::
-
 
 :::::::::::::::: spoiler
 

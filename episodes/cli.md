@@ -217,7 +217,6 @@ Mandatory arguments to long options are mandatory for short options too.
 
 The output is a description of the `ls` command, instructions for using it, and a reference to each of the options or arguments available.
 
-
 ### Mac OS
 
 In the macOS command line, we use the `--help` argument to instruct the computer to print the help information that that command. To see helpful reference information for using the `ls` command, run:

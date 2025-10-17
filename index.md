@@ -6,7 +6,6 @@ This course teaches **researchers how to document their software** effectively, 
 Well-documented software promotes reproducibility, maintainability, and increased research impact through wider adoption and citation.
 The episodes in this module cover topics such as writing readable code and providing usage instructions.
 
-
 ## Course summary
 
 Software documentation helps you and **others to use your software successfully** in the future and to read your code ensuring that its value is sustained. This course introduces the different ways to provide other researchers with useful documentation for your software.
@@ -69,4 +68,3 @@ After completing this course, participants should be able to:
 - Create user-friendly command-line interfaces (CLIs) with clear descriptions of commands and options, along with help messages for individual parameters.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
-

@@ -121,4 +121,3 @@ For more information, please read [In which journals should I publish my softwar
  - **Knowledge transfer:** Your software package will be easier to maintain in the long term if others are able to learn about it and look after it after the original developers move on.
 
 ::::::
-

@@ -105,7 +105,6 @@ This prevents a situation where potential solutions to common issues do exist, b
 
 An appendix containing frequently asked questions (FAQs) is very useful to save yourself time in responding to common queries from the users of your code.
 
-
 ## Writing style
 
 As we discussed in the [episode on READMEs](readmes.md), it's important to strive to use everyday, jargon-free language. It helps to set an approachable tone that encourages others to use the software and get involved with the project. This will en sure that the code is accessible to the widest possible layers of the research community and foster collaboration.
@@ -133,7 +132,6 @@ To create a wiki, which is a simple, easy-to-edit web site, go to the main page 
 For more information about the wiki feature on GitHub, see [Documenting your project with wikis](https://docs.github.com/en/communities/documenting-your-project-with-wikis) on the GitHub documentation.
 
 :::
-
 
 ### Documentation sites for R packages
 
@@ -227,9 +225,9 @@ sphinx-quickstart docs --no-sep --ext-autodoc
 
 This will initialise the configuration files for a new Sphinx site in a subdirectory called `docs/` and prompt you to enter the following options:
 
-* Project name: Birdsong Identifier
-* Author name(s): Bill Oddie
-* Project release []: 1.0
+- Project name: Birdsong Identifier
+- Author name(s): Bill Oddie
+- Project release []: 1.0
 
 ::: callout
 
@@ -242,8 +240,8 @@ please read their guide to [defining document structure](https://www.sphinx-doc.
 
 #### Building the site
 
-In this context, _building_ means taking our collection of Sphinx files and converting them into the source code files that define a website.
-Sphinx will create _HyperText Markup Language_ (HTML) files, which is the markup language for pages that display in a web browser commonly used on the internet.
+In this context, *building* means taking our collection of Sphinx files and converting them into the source code files that define a website.
+Sphinx will create *HyperText Markup Language* (HTML) files, which is the markup language for pages that display in a web browser commonly used on the internet.
 
 To build our site, we run the [sphinx-build](https://www.sphinx-doc.org/en/master/man/sphinx-build.html) command using the `-M` option to select <abbr title="HyperText Markup Language">HTML</abbr> syntax as the output format.
 
@@ -283,7 +281,7 @@ The `..` syntax means "one folder up", which means `autodoc` will search in the 
 ### What does this code mean?
 
 The Python code uses [`sys.path`](https://docs.python.org/3/library/sys.html#sys.path), a list of locations to search for code.
-By modifying the Python _module search path_, we allow `autodoc` to locate and import our code modules from a specific directory that is not in the default search path.
+By modifying the Python *module search path*, we allow `autodoc` to locate and import our code modules from a specific directory that is not in the default search path.
 
 This is often necessary when working with project structures that involve multiple directories, helping the interpreter to find code that isn't installed in the standard library location.
 
@@ -302,12 +300,12 @@ Next, edit `docs/index.rst` and add the following lines to instruct Sphinx to au
 
 This [reStructuredText (reST)](https://docutils.sourceforge.io/rst.html) markup language has the following elements:
 
-- `..` indicates a _directive_ within a <abbr title="reStructuredText">reST</abbr> document that is used to configure Sphinx.
+- `..` indicates a *directive* within a <abbr title="reStructuredText">reST</abbr> document that is used to configure Sphinx.
 - `automodule::` indicates a specific directive to use `autodoc` to automatically generate documentation for a module.
 - `oddsong.song` is the path to our Python module, for which documentation will be created.
 - `:members:` is an optional argument for the automodule directive that instructs Sphinx to include documentation for all members (functions, classes, variables) defined within the specified module.
 
-For more information about <abbr title="reStructuredText">reST</abbr>, please read the [Introduction to reStructuredText](https://www.writethedocs.org/guide/writing/reStructuredText/) by _Write The Docs_.
+For more information about <abbr title="reStructuredText">reST</abbr>, please read the [Introduction to reStructuredText](https://www.writethedocs.org/guide/writing/reStructuredText/) by *Write The Docs*.
 
 ::::
 
@@ -353,6 +351,6 @@ The detailed of setting up the deployment of your site to these platforms is bey
 Please review the following material which provides more information about some of the topics covered in this episode.
 
 - Sphinx [Getting Started](https://www.sphinx-doc.org/en/master/usage/quickstart.html)
-- _Write the Docs_ [Introduction to reStructuredText](https://www.writethedocs.org/guide/writing/reStructuredText/)
+- *Write the Docs* [Introduction to reStructuredText](https://www.writethedocs.org/guide/writing/reStructuredText/)
 - GitHub documentation [About wikis](https://docs.github.com/en/communities/documenting-your-project-with-wikis/about-wikis)
-- _Write the Docs_ [Tools for documentation writing](https://www.writethedocs.org/guide/tools/)
+- *Write the Docs* [Tools for documentation writing](https://www.writethedocs.org/guide/tools/)

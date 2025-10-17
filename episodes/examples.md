@@ -214,6 +214,4 @@ library(ggplot2)
 ?ggplot2:ggplot
 ```
 
-
-
 [roxygen2]: https://roxygen2.r-lib.org/index.html
