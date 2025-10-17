@@ -70,4 +70,3 @@ After completing this course, participants should be able to:
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-[workbench]: https://carpentries.github.io/sandpaper-docs

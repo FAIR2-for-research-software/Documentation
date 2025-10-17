@@ -122,4 +122,3 @@ For more information, please read [In which journals should I publish my softwar
 
 ::::::
 
-[roxygen2]: https://roxygen2.r-lib.org/index.html
