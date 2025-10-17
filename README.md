@@ -1,3 +1,5 @@
+# FAIR<sup>2</sup> Documentation
+
 [![01 Build and Deploy
 Site](https://github.com/Joe-Heffer-Shef/FAIR4RS-Documentation/actions/workflows/sandpaper-main.yaml/badge.svg)](https://github.com/Joe-Heffer-Shef/FAIR4RS-Documentation/actions/workflows/sandpaper-main.yaml)
 

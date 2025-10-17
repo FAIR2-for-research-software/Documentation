@@ -23,5 +23,7 @@ ignores:
 - "site/**/*.md"
 - ".github/**/*.md"
 - "renv/**/*.md"
+- "index.md"
+- "README.md"
 
 fix: true
