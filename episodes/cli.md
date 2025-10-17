@@ -644,7 +644,7 @@ options:
 By default, the usage message is generated automatically based on the arguments of our script. For our example, the
 usage instructions look like this:
 
-```
+```bash
 usage: oddsong.py [-h] [-c CATEGORY]
 ```
 

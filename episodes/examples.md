@@ -196,7 +196,7 @@ import numpy
 help(numpy.array)
 ```
 
-```
+```python
 Help on built-in function array in module numpy:
 
 array(...)
