@@ -512,18 +512,20 @@ Write a brief code example within the documentation string in a function in your
 
 ### Python
 
+<!-- markdownlint-disable code-block-style -->
 ```python
 def identify(audio_file: str) -> str:
     """
     Identify a bird based on the sound of its call.
 
-	Examples:
-	>>> identify("~/recordings/hirundo.wav")
-	"Hirundo atrocaerulea"
+    Examples:
+    >>> identify("~/recordings/hirundo.wav")
+    "Hirundo atrocaerulea"
     """
     print("Identifying bird vocalisation...")
     return "Hirundo atrocaerulea"
 ```
+<!-- markdownlint-enable code-block-style -->
 
 ### R
 
