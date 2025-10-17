@@ -197,7 +197,7 @@ The output is a description of the `dir` command, instructions for using it, and
 In the Linux command line, we use the `--help` argument to instruct the computer to print the help information that that command. To see helpful reference information for using the `ls` command, run:
 
 ```bash
-$ ls --help
+ls --help
 ```
 
 The result of this command will be printed to the screen.
@@ -222,7 +222,7 @@ The output is a description of the `ls` command, instructions for using it, and 
 In the macOS command line, we use the `--help` argument to instruct the computer to print the help information that that command. To see helpful reference information for using the `ls` command, run:
 
 ```bash
-$ ls --help
+ls --help
 ```
 
 The result of this command will be printed to the screen.
