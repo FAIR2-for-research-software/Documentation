@@ -740,4 +740,4 @@ Python
 
 R
 
-* [Function documentation](https://r-pkgs.org/man.html) in *R Packages* by Hadley Wickham
+- [Function documentation](https://r-pkgs.org/man.html) in _R Packages_ by Hadley Wickham

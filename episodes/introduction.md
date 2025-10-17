@@ -22,9 +22,9 @@ exercises: 2
 
 There are many kinds of research software, such as:
 
-* Data processing workflows with multiple steps;
-* A library of functions used within a research team to perform certain kinds of analysis;
-* Tools designed to collect raw data in the field.
+- Data processing workflows with multiple steps;
+- A library of functions used within a research team to perform certain kinds of analysis;
+- Tools designed to collect raw data in the field.
 
 No code is self-explanatory. It’s a tool we design, or, more often, a complex organism that develops as we use it with our colleagues. To explain our code we must write **software documentation**.
 
@@ -76,9 +76,9 @@ The best practice for modern, collaborative research involving digital methods a
 
 This might include any of the various kinds of software documentation we'll discuss in this module, including:
 
-* design notes and diagrams;
-* a step-by-step tutorial for beginners;
-* code comments.
+- design notes and diagrams;
+- a step-by-step tutorial for beginners;
+- code comments.
 
 It should be a consideration in your _software management plan_, which is a concept discussed in the Module 1a on [Software Lifecycle Planning](https://fair2-for-research-software.github.io/Software_Lifecycle_Planning/). Also, it's never too late to start documenting an old code project.
 
@@ -116,8 +116,8 @@ For more information, please read [In which journals should I publish my softwar
 
 :::::: keypoints
 
- - **Reproducibility:** Well-documented software is easier for other researchers to understand and use with confidence. It enables them to **reproduce your results** to replicate research findings, enabling others to validate them and building trust in your research outputs.
- - **Collaboration:** Clear instructions enable other researchers to use and **collaborate** with your software and research projects.
- - **Knowledge transfer:** Your software package will be easier to maintain in the long term if others are able to learn about it and look after it after the original developers move on.
+- **Reproducibility:** Well-documented software is easier for other researchers to understand and use with confidence. It enables them to **reproduce your results** to replicate research findings, enabling others to validate them and building trust in your research outputs.
+- **Collaboration:** Clear instructions enable other researchers to use and **collaborate** with your software and research projects.
+- **Knowledge transfer:** Your software package will be easier to maintain in the long term if others are able to learn about it and look after it after the original developers move on.
 
 ::::::

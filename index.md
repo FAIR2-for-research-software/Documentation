@@ -25,13 +25,13 @@ This module will introduce you to the different ways we can provide guidance to 
 This course introduces some different ways to provide other researchers with useful documentation for your software.
 
 - Writing informative README files
-  * Writing installation instructions
-  * Writing usage instructions
-  * Writing contribution guidelines
+  - Writing installation instructions
+  - Writing usage instructions
+  - Writing contribution guidelines
 - Improving code readability
-  * Doc-strings for functions
-  * Usage examples for functions
-  * Type hints
+  - Doc-strings for functions
+  - Usage examples for functions
+  - Type hints
 - Publishing documentation websites
 - Command line interfaces with usage instructions
 

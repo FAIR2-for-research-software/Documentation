@@ -377,10 +377,10 @@ These subheadings help the users to navigate the document.
 
 There are several ways to view the formatted Markdown document, where the syntax is rendered into a rich text document.
 
-* Many code editors have an in-built Markdown viewer;
-  * For Notepad++, the Markdown Panel [plugin may be installed](https://npp-user-manual.org/docs/plugins/).
-* [Markdown Live Preview](https://markdownlivepreview.com/) is a web-based tool. Input your Markdown syntax in the left panel and the result will be displayed on the right-hand side.
-* In [Google Colab](https://colab.research.google.com/), the Text cells use Markdown syntax for formatting.
+- Many code editors have an in-built Markdown viewer;
+  - For Notepad++, the Markdown Panel [plugin may be installed](https://npp-user-manual.org/docs/plugins/).
+- [Markdown Live Preview](https://markdownlivepreview.com/) is a web-based tool. Input your Markdown syntax in the left panel and the result will be displayed on the right-hand side.
+- In [Google Colab](https://colab.research.google.com/), the Text cells use Markdown syntax for formatting.
 
 If your code is published on [GitHub](https://github.com), the home page of your code repository will [display the README file](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes), including a [table of contents](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes#auto-generated-table-of-contents-for-readme-files) that is automatically created to easily select the section of the document to view.
 
