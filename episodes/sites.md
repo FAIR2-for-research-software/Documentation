@@ -4,7 +4,7 @@ teaching: 10
 exercises: 2
 ---
 
-:::::::::::::::::::::::::::::::::::::: questions 
+:::::::::::::::::::::::::::::::::::::: questions
 
 - How do I present **comprehensive information** to users of my research software?
 - How do I generate a website containing a user guide to my code?
@@ -137,7 +137,7 @@ For more information about the wiki feature on GitHub, see [Documenting your pro
 
 ### Documentation sites for R packages
 
-It's also possible to generate a documentation site to accompany R packages that you create. 
+It's also possible to generate a documentation site to accompany R packages that you create.
 For more information about this, please refer to the book *R Packages* by Hadley Wickham, which
 has a chapter on [documentation websites](https://r-pkgs.org/website.html).
 
@@ -219,7 +219,7 @@ pip install sphinx
 
 ##### Start a new Sphinx project
 
-Sphinx includes a command to set up a new project called [sphinx-quickstart](https://www.sphinx-doc.org/en/master/man/sphinx-quickstart.html). Navigate to your project's root folder and run the following command. 
+Sphinx includes a command to set up a new project called [sphinx-quickstart](https://www.sphinx-doc.org/en/master/man/sphinx-quickstart.html). Navigate to your project's root folder and run the following command.
 
 ```bash
 sphinx-quickstart docs --no-sep --ext-autodoc
@@ -266,7 +266,7 @@ It can be useful to automatically populate our documentation sites by converting
 Let's set up the options for `autodoc`.
 (If you struggle with these steps, please refer to the [template project](https://github.com/Joe-Heffer-Shef/oddsong).)
 
-Add the following lines to `docs/conf.py` which 
+Add the following lines to `docs/conf.py` which
 
 ```python
 # Our Python code may be imported from the parent directory
@@ -339,7 +339,7 @@ There are several hosting services that can be used to publish your documentatio
 
 The detailed of setting up the deployment of your site to these platforms is beyond the scope of this course.
 
-::::::::::::::::::::::::::::::::::::: keypoints 
+::::::::::::::::::::::::::::::::::::: keypoints
 
 - Structured documentation websites are very useful for users to learn to use all kinds of digital systems, ensuring its successful adoption by the wider research community.
 - Documentation sites contain comprehensive installation instructions, user guides, and troubleshooting tips.

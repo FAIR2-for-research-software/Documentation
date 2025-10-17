@@ -52,7 +52,7 @@ TextEdit is installed by default on Mac OS.
 
 #### Python
 
-Please read the guide on [using Python on a Mac](https://docs.python.org/3/using/mac.html) in 
+Please read the guide on [using Python on a Mac](https://docs.python.org/3/using/mac.html) in
 the Python documentation.
 
 #### R
@@ -73,7 +73,7 @@ other text editors may be available, such as Gedit or Kate.
 
 #### Python
 
-Please read the guide on [using Python on Unix platforms](https://docs.python.org/3/using/unix.html) in 
+Please read the guide on [using Python on Unix platforms](https://docs.python.org/3/using/unix.html) in
 the Python documentation.
 
 #### R

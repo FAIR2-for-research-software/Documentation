@@ -4,7 +4,7 @@ teaching: 10
 exercises: 2
 ---
 
-:::::::::::::::::::::::::::::::::::::: questions 
+:::::::::::::::::::::::::::::::::::::: questions
 
 - What is code readability?
 - How do I make my code easier to interpret?
@@ -84,15 +84,15 @@ Without syntax highlighting:
 count_word_occurrences <- function(filename, word_to_count) {
   text_file <- file(filename, "r")
   word_count <- 0
-  
+
   # Read the file line by line using a loop
   for (line in readLines(text_file)) {
     # Convert the line to lowercase for case-insensitive counting
     line <- tolower(line)
-    
+
     # Split the line into words
     words <- strsplit(line, split = " ")[[1]]  # Extract the first element (vector of words)
-    
+
     # Count the occurrences of the word in the current line
     word_count <- word_count + sum(words == word_to_count)
   }
@@ -109,15 +109,15 @@ With syntax highlighting:
 count_word_occurrences <- function(filename, word_to_count) {
   text_file <- file(filename, "r")
   word_count <- 0
-  
+
   # Read the file line by line using a loop
   for (line in readLines(text_file)) {
     # Convert the line to lowercase for case-insensitive counting
     line <- tolower(line)
-    
+
     # Split the line into words
     words <- strsplit(line, split = " ")[[1]]  # Extract the first element (vector of words)
-    
+
     # Count the occurrences of the word in the current line
     word_count <- word_count + sum(words == word_to_count)
   }
@@ -429,7 +429,7 @@ This is just a brief introduction to code annotation. For the keen coder, there 
 
 It will take some time and effort to write these labels, but it will pay off in the long run to think about variables types and make it easier to interpret how the code will behave as it operates. It's best practice to use an integrated development environment (IDE) that will check your type hints and inform you if it detects a problem with your source code.
 
-::::::::::::::::::::::::::::::::::::: keypoints 
+::::::::::::::::::::::::::::::::::::: keypoints
 
 - Try to inject as much *meaning* into your source code as possible by naming things clearly and succintly.
 - Use comments to explain your rationale&mdash;even if the code seems obvious to you know, think of the future benefits!

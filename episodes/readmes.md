@@ -4,7 +4,7 @@ teaching: 10
 exercises: 2
 ---
 
-:::::::::::::::::::::::::::::::::::::: questions 
+:::::::::::::::::::::::::::::::::::::: questions
 
 - How do we **introduce** our software to new researchers and developers?
 - How do I structure the basic notes for my research code?
@@ -44,7 +44,7 @@ The **audience** for a README file is the _end user_, such as a researcher. It's
 
 ## How to write a README
 
-To start writing a README file, the simplest way is to **create an empty text file** called `README.txt` and start writing. This file should be located in the directory that contains your software project. 
+To start writing a README file, the simplest way is to **create an empty text file** called `README.txt` and start writing. This file should be located in the directory that contains your software project.
 
 ::::::::::::::::::::::::::::::::: challenge
 

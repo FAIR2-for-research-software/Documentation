@@ -96,7 +96,7 @@ A research software paper should provide:
 - detail how **algorithms** are implemented;
 - **citations** for other software libraries and methods that were used.
 
-It may also contain a detailed description of the technical design. 
+It may also contain a detailed description of the technical design.
 
 For more information about writing these papers, which is beyond the scope of this course, please consider starting to explore this subject by reading [Ten simple rules for writing a paper about scientific software](https://doi.org/10.1371/journal.pcbi.1008390) by Joseph Romano.
 
@@ -108,7 +108,7 @@ An increasing number of journals allow and encourage the publication of research
 
 - [*The Journal of Open Source Software*](https://joss.theoj.org/) is a peer-reviewed publications that provides academic citations for research code;
 - [*Nature*](https://www.nature.com/) has a category of [Toolbox articles](https://www.nature.com/nature/articles?type=toolbox) that cover the technical side of research;
-- [*Journal of Open Research Software*](https://openresearchsoftware.metajnl.com/) is a peer-reviewed repository run by the [Software Sustainability Institute](https://www.software.ac.uk/). 
+- [*Journal of Open Research Software*](https://openresearchsoftware.metajnl.com/) is a peer-reviewed repository run by the [Software Sustainability Institute](https://www.software.ac.uk/).
 
 For more information, please read [In which journals should I publish my software?](https://www.software.ac.uk/top-tip/which-journals-should-i-publish-my-software) by Neil Chue Hong, the Director of the [Software Sustainability Institute](https://www.software.ac.uk/).
 

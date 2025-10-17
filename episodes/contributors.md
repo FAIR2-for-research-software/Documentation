@@ -4,7 +4,7 @@ teaching: 10
 exercises: 2
 ---
 
-:::::::::::::::::::::::::::::::::::::: questions 
+:::::::::::::::::::::::::::::::::::::: questions
 
 - How do I introduce **new contributors** to my research software project?
 - What is the best way to **communicate processes** such as bug reporting?
@@ -15,7 +15,7 @@ exercises: 2
 ::::::::::::::::::::::::::::::::::::: objectives
 
 - Learn to write a **contribution guide** for research code
-- Learn about software **coding standards** 
+- Learn about software **coding standards**
 - Implement ways to **facilitate communication** between researchers that are engaged in the project
 - Provide a high-level **understanding of an existing codebase**
 
@@ -145,7 +145,7 @@ Discuss these issues as a group:
 
 :::::::::::::::::::::::::::::::::::::
 
-::::::::::::::::::::::::::::::::::::: keypoints 
+::::::::::::::::::::::::::::::::::::: keypoints
 
 - **Encourage collaboration:** There are **many ways to contribute** to a research software project, including bug reoprts, feature suggests, design discussions, documentation, and software engineering.
 - **Clear processes:** Explain the process for making changes and having them included into the code

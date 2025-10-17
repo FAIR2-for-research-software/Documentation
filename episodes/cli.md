@@ -4,7 +4,7 @@ teaching: 10
 exercises: 2
 ---
 
-:::::::::::::::::::::::::::::::::::::: questions 
+:::::::::::::::::::::::::::::::::::::: questions
 
 - What is a command-line interface (CLI)?
 - Why are they useful for making software easier to use for researchers?
@@ -83,7 +83,7 @@ Please read [Open or quit Terminal on Mac](https://support.apple.com/en-gb/guide
 
 ### Example commands
 
-An example of a CLI command is a simple text command that performs some action or interacts with the computer operating system. 
+An example of a CLI command is a simple text command that performs some action or interacts with the computer operating system.
 
 Let's examine a simple one-word command that lists the files in the current directory.
 
@@ -287,7 +287,7 @@ This is a mechanism that tells Python how we want users to interact with our sof
 
 To find out more, please read the [\_\_main\_\_.py](https://docs.python.org/3/library/__main__.html#main-py-in-python-packages) section in the Python documentation.
 
-To run our code *as a script* we use the Python `-m` option that runs a module as a script. 
+To run our code *as a script* we use the Python `-m` option that runs a module as a script.
 
 ```bash
 python -m oddsong
@@ -472,7 +472,7 @@ To provide a concise explanation for each parameter we use the `help` argument o
 
 ```python
 # Add the category argument
-parser.add_argument('-c', '--category', 
+parser.add_argument('-c', '--category',
     help="The type of bird call e.g. alarm, contact, flight")
 ```
 
@@ -587,7 +587,7 @@ In most cases, this will do the job. If you want to overwrite this message then 
 
 There are several [other options](https://docs.python.org/3/library/argparse.html#argparse.ArgumentParser) to customise your CLI, but we've covered here the primary ways to document your research software to make it easier to use by your collaborators and other researchers.
 
-::::::::::::::::::::::::::::::::::::: keypoints 
+::::::::::::::::::::::::::::::::::::: keypoints
 
 - Command line interfaces (CLIs) are terminal commands that provide an easy-to-use entry point to a software package.
 - Researchers can use CLIs to make their research code easier to use by providing well-documented options, hiding the complexity of the software.

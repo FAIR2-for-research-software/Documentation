@@ -4,7 +4,7 @@ teaching: 10
 exercises: 2
 ---
 
-:::::::::::::::::::::::::::::::::::::: questions 
+:::::::::::::::::::::::::::::::::::::: questions
 
 - How do we **describe our code**?
 - How can we **annotate functions** in our research code?
@@ -34,7 +34,7 @@ We describe functions by using a feature of many programming languages called **
 
 To make a docstring, we write special comments in our code using syntax which is specific to each programming language, although the principle is the same.
 
-::: group-tab 
+::: group-tab
 
 ### Python
 
@@ -85,9 +85,9 @@ def identify(audio_file):
     """
     Identify a bird based on the sound of its call.
     """
-    
+
     print("Identifying bird vocalisation...")
-    
+
     return "Hirundo atrocaerulea"
 ```
 
@@ -103,7 +103,7 @@ def identify(audio_file):
 identify <- function(audio_file) {
 
     print("Identifying bird vocalisation...")
-    
+
     return("Hirundo atrocaerulea")
 }
 ```
@@ -118,9 +118,9 @@ See also the [example R script](https://github.com/Joe-Heffer-Shef/oddsong/blob/
 
 ### Viewing docstrings
 
-We can view documentation strings for a function by using the `?` operator or `help()` function in R and the  [`help` built-in function](https://docs.python.org/3/library/functions.html#help) in Python. 
+We can view documentation strings for a function by using the `?` operator or `help()` function in R and the  [`help` built-in function](https://docs.python.org/3/library/functions.html#help) in Python.
 
-::: group-tab 
+::: group-tab
 
 ### Python
 
@@ -339,7 +339,7 @@ def identify(audio_file: str) -> str:
 #'
 #' @param audio_file The path of the sound file
 identify <- function(audio_file) {
-    print("Identifying bird vocalisation...")   
+    print("Identifying bird vocalisation...")
     return("Hirundo atrocaerulea")
 }
 ```
@@ -433,7 +433,7 @@ def identify(audio_file: str) -> str:
 identify <- function(audio_file) {
 
     print("Identifying bird vocalisation...")
-    
+
     return("Hirundo atrocaerulea")
 }
 ```
@@ -448,7 +448,7 @@ identify <- function(audio_file) {
 
 We can also include demonstrations of how to use our code by providing code snippets. To do this, we write a collection of sample code that demonstrate how to use functions effectively in different scenarios.
 
-To do this, let's add an **examples section** to our documentation string. 
+To do this, let's add an **examples section** to our documentation string.
 
 ::: group-tab
 
@@ -467,8 +467,8 @@ def add(x, y):
 
     Returns:
         The sum of x and y.
-        
-    Examples:    
+
+    Examples:
     >>> add(1, 1)
     2
     >>> add(1.3, 5.3)
@@ -520,7 +520,7 @@ def identify(audio_file: str) -> str:
 	Examples:
 	>>> identify("~/recordings/hirundo.wav")
 	"Hirundo atrocaerulea"
-    """   
+    """
     print("Identifying bird vocalisation...")
     return "Hirundo atrocaerulea"
 ```
@@ -535,7 +535,7 @@ def identify(audio_file: str) -> str:
 identify <- function(audio_file) {
 
     print("Identifying bird vocalisation...")
-    
+
     return("Hirundo atrocaerulea")
 }
 ```
@@ -720,7 +720,7 @@ Good docstrings use a clear writing style and **everyday language**.
 Well-documented, **reusable research code** depends upon good documentation strings.
 Research collaborators will benefit from **clear explanations** of the purpose of each function.
 
-::::::::::::::::::::::::::::::::::::: keypoints 
+::::::::::::::::::::::::::::::::::::: keypoints
 
 - Docstrings are special comments that describe the **purpose of a function** and its inputs and outputs.
 - **Structure your docstrings** to convey more information, with a concise introduction.
