@@ -42,8 +42,8 @@ This workflow does the following:
 
 #### Caching
 
-This workflow has two caches; one cache is for the lesson infrastructure and
-the other is for the the lesson dependencies if the lesson contains rendered
+This workflow has two caches; one cache is for the lesson infrastructure and 
+the other is for the lesson dependencies if the lesson contains rendered
 content. These caches are invalidated by new versions of the infrastructure and
 the `renv.lock` file, respectively. If there is a problem with the cache,
 manual invaliation is necessary. You will need maintain access to the repository
