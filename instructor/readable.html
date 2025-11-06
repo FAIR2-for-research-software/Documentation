@@ -352,7 +352,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Code readability</h1>
-        <p>Last updated on 2025-03-05 |
+        <p>Last updated on 2025-11-06 |
 
         <a href="https://github.com/FAIR2-for-research-software/Documentation/edit/main/episodes/readable.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -402,7 +402,7 @@ making it easy to interpret and follow its logic.</p>
 <hr class="half-width"><p>Many text editors use <strong>syntax highlighting</strong> to display
 parts of your source code using different colours or fonts to signify
 the meaning of each word or symbol. For example, variable names may be
-given a bright blue colour, strings highighted in green, and numbers
+given a bright blue colour, strings highlighted in green, and numbers
 shown in a red font.</p>
 <p>Let’s take a look to see its benefits:</p>
 <div class="tabs">
@@ -472,15 +472,15 @@ shown in a red font.</p>
 <span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a>count_word_occurrences &lt;- function(filename, word_to_count) {</span>
 <span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a>  text_file &lt;- file(filename, "r")</span>
 <span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a>  word_count &lt;- 0</span>
-<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a>  </span>
+<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a></span>
 <span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a>  # Read the file line by line using a loop</span>
 <span id="cb3-7"><a href="#cb3-7" tabindex="-1"></a>  for (line in readLines(text_file)) {</span>
 <span id="cb3-8"><a href="#cb3-8" tabindex="-1"></a>    # Convert the line to lowercase for case-insensitive counting</span>
 <span id="cb3-9"><a href="#cb3-9" tabindex="-1"></a>    line &lt;- tolower(line)</span>
-<span id="cb3-10"><a href="#cb3-10" tabindex="-1"></a>    </span>
+<span id="cb3-10"><a href="#cb3-10" tabindex="-1"></a></span>
 <span id="cb3-11"><a href="#cb3-11" tabindex="-1"></a>    # Split the line into words</span>
 <span id="cb3-12"><a href="#cb3-12" tabindex="-1"></a>    words &lt;- strsplit(line, split = " ")[[1]]  # Extract the first element (vector of words)</span>
-<span id="cb3-13"><a href="#cb3-13" tabindex="-1"></a>    </span>
+<span id="cb3-13"><a href="#cb3-13" tabindex="-1"></a></span>
 <span id="cb3-14"><a href="#cb3-14" tabindex="-1"></a>    # Count the occurrences of the word in the current line</span>
 <span id="cb3-15"><a href="#cb3-15" tabindex="-1"></a>    word_count &lt;- word_count + sum(words == word_to_count)</span>
 <span id="cb3-16"><a href="#cb3-16" tabindex="-1"></a>  }</span>
@@ -492,26 +492,23 @@ shown in a red font.</p>
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># Function to count word occurrences in a text file</span></span>
-<span><span class="va">count_word_occurrences</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">filename</span>, <span class="va">word_to_count</span><span class="op">)</span> <span class="op">{</span></span>
-<span>  <span class="va">text_file</span> <span class="op">&lt;-</span> <span class="fu">file</span><span class="op">(</span><span class="va">filename</span>, <span class="st">"r"</span><span class="op">)</span></span>
-<span>  <span class="va">word_count</span> <span class="op">&lt;-</span> <span class="fl">0</span></span>
-<span>  </span>
-<span>  <span class="co"># Read the file line by line using a loop</span></span>
-<span>  <span class="kw">for</span> <span class="op">(</span><span class="va">line</span> <span class="kw">in</span> <span class="fu">readLines</span><span class="op">(</span><span class="va">text_file</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
-<span>    <span class="co"># Convert the line to lowercase for case-insensitive counting</span></span>
-<span>    <span class="va">line</span> <span class="op">&lt;-</span> <span class="fu">tolower</span><span class="op">(</span><span class="va">line</span><span class="op">)</span></span>
-<span>    </span>
-<span>    <span class="co"># Split the line into words</span></span>
-<span>    <span class="va">words</span> <span class="op">&lt;-</span> <span class="fu">strsplit</span><span class="op">(</span><span class="va">line</span>, split <span class="op">=</span> <span class="st">" "</span><span class="op">)</span><span class="op">[[</span><span class="fl">1</span><span class="op">]</span><span class="op">]</span>  <span class="co"># Extract the first element (vector of words)</span></span>
-<span>    </span>
-<span>    <span class="co"># Count the occurrences of the word in the current line</span></span>
-<span>    <span class="va">word_count</span> <span class="op">&lt;-</span> <span class="va">word_count</span> <span class="op">+</span> <span class="fu">sum</span><span class="op">(</span><span class="va">words</span> <span class="op">==</span> <span class="va">word_to_count</span><span class="op">)</span></span>
-<span>  <span class="op">}</span></span>
-<span>  <span class="fu">close</span><span class="op">(</span><span class="va">text_file</span><span class="op">)</span></span>
-<span>  <span class="kw">return</span><span class="op">(</span><span class="va">word_count</span><span class="op">)</span></span>
-<span><span class="op">}</span></span></code></pre>
+<pre class="sourceCode r" tabindex="0"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="co"># Function to count word occurrences in a text file</span></span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a>count_word_occurrences <span class="ot">&lt;-</span> <span class="cf">function</span>(filename, word_to_count) { text_file <span class="ot">&lt;-</span> <span class="fu">file</span>(filename, <span class="st">"r"</span>) word_count <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a>  <span class="co"># Read the file line by line using a loop</span></span>
+<span id="cb4-5"><a href="#cb4-5" tabindex="-1"></a>  <span class="cf">for</span> (line <span class="cf">in</span> <span class="fu">readLines</span>(text_file)) {</span>
+<span id="cb4-6"><a href="#cb4-6" tabindex="-1"></a>    <span class="co"># Convert the line to lowercase for case-insensitive counting</span></span>
+<span id="cb4-7"><a href="#cb4-7" tabindex="-1"></a>    line <span class="ot">&lt;-</span> <span class="fu">tolower</span>(line)</span>
+<span id="cb4-8"><a href="#cb4-8" tabindex="-1"></a></span>
+<span id="cb4-9"><a href="#cb4-9" tabindex="-1"></a>    <span class="co"># Split the line into words</span></span>
+<span id="cb4-10"><a href="#cb4-10" tabindex="-1"></a>    words <span class="ot">&lt;-</span> <span class="fu">strsplit</span>(line, <span class="at">split =</span> <span class="st">" "</span>)[[<span class="dv">1</span>]]  <span class="co"># Extract the first element (vector of words)</span></span>
+<span id="cb4-11"><a href="#cb4-11" tabindex="-1"></a></span>
+<span id="cb4-12"><a href="#cb4-12" tabindex="-1"></a>    <span class="co"># Count the occurrences of the word in the current line</span></span>
+<span id="cb4-13"><a href="#cb4-13" tabindex="-1"></a>    word_count <span class="ot">&lt;-</span> word_count <span class="sc">+</span> <span class="fu">sum</span>(words <span class="sc">==</span> word_to_count)</span>
+<span id="cb4-14"><a href="#cb4-14" tabindex="-1"></a>  }</span>
+<span id="cb4-15"><a href="#cb4-15" tabindex="-1"></a>  <span class="fu">close</span>(text_file)</span>
+<span id="cb4-16"><a href="#cb4-16" tabindex="-1"></a>  <span class="fu">return</span>(word_count)</span>
+<span id="cb4-17"><a href="#cb4-17" tabindex="-1"></a>}</span></code></pre>
 </div>
 </div>
 </div>
@@ -522,10 +519,9 @@ in.</p>
 <div class="section level3">
 <h3 id="code-editors">Code editors<a class="anchor" aria-label="anchor" href="#code-editors"></a></h3>
 <p>To work with our source code in a colourised way like this, use a
-text editor or
-<abbr title="Integrated development environment">IDE</abbr> with a
-syntax highlighting feature such as Notepad++, VSCode, PyCharm, or
-RStudio.</p>
+text editor or <abbr title="Integrated development
+environment">IDE</abbr> with a syntax highlighting feature such as
+Notepad++, VSCode, PyCharm, or RStudio.</p>
 <div id="discussion1" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
@@ -685,8 +681,8 @@ with an upper-case letter and there are no spaces between them.</p>
 </div>
 <p>For more information about this aspect of coding style, please read
 the <a href="https://peps.python.org/pep-0008/#naming-conventions" class="external-link">Naming
-Conventions</a> section of
-<acronym title="Python Enhancement Proposals">PEP</acronym> 8.</p>
+Conventions</a> section of <acronym title="Python Enhancement
+ Proposals">PEP</acronym> 8.</p>
 </div>
 <div id="nav-tabpanel-3-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-3-R">
 <p>Classes use capitalised words</p>
@@ -960,7 +956,7 @@ labels the types of the inputs and output of the function.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>None of these code examples will cause an error because type hints
 are just <strong>passive labels</strong> that document our code. They
@@ -991,7 +987,7 @@ source code.</p>
 <div class="callout-inner">
 <div class="callout-content">
 <ul><li>Try to inject as much <em>meaning</em> into your source code as
-possible by naming things clearly and succintly.</li>
+possible by naming things clearly and succinctly.</li>
 <li>Use comments to explain your rationale—even if the code seems
 obvious to you know, think of the future benefits!</li>
 <li>Label functions and variables with <em>type hints</em> to tell the
@@ -1082,8 +1078,8 @@ any links that you are not going to use.
   "url": "https://FAIR2-for-research-software.github.io/Documentation/instructor/readable.html",
   "identifier": "https://FAIR2-for-research-software.github.io/Documentation/instructor/readable.html",
   "dateCreated": "2024-05-20",
-  "dateModified": "2025-03-05",
-  "datePublished": "2025-11-04"
+  "dateModified": "2025-11-06",
+  "datePublished": "2025-11-06"
 }
 
   </script><script>

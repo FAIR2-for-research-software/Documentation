@@ -399,7 +399,7 @@
         
 <section id="aio-introduction"><p>Content from <a href="introduction.html">Introduction</a></p>
 <hr>
-<p>Last updated on 2025-03-03 |
+<p>Last updated on 2025-11-06 |
 
         <a href="https://github.com/FAIR2-for-research-software/Documentation/edit/main/episodes/introduction.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -449,7 +449,7 @@ complex organism that develops as we use it with our colleagues. To
 explain our code we must write <strong>software
 documentation</strong>.</p>
 <p>This <strong>provides information</strong> about our programs for
-everyone involved in its development, use, and future re-use.
+everyone involved in its development, use, and future reuse.
 Documentation may consist of text, tips within a computer environment,
 and diagrams that guide the user in using a (potentially complex)
 software tool. It explains <em>how</em> the software works <em>why</em>
@@ -541,7 +541,7 @@ impact.</p>
 </section><section><h2 class="section-heading" id="when-should-i-write-documentation">When should I write documentation?<a class="anchor" aria-label="anchor" href="#when-should-i-write-documentation"></a>
 </h2>
 <hr class="half-width">
-<p>Now! Start writing and sharing documentation for your reseach code
+<p>Now! Start writing and sharing documentation for your research code
 <strong>from the beginning</strong> of your project. It doesn’t have to
 be perfect straight away, but a first draft is more useful than
 nothing.</p>
@@ -602,7 +602,7 @@ Romano.</p>
   Software journals
   </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="accordion-body">
 <p>An increasing number of journals allow and encourage the publication
 of research software and open data. Some journals focus on a specific
@@ -663,7 +663,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-examples"><p>Content from <a href="examples.html">Documentation examples</a></p>
 <hr>
-<p>Last updated on 2025-03-04 |
+<p>Last updated on 2025-11-06 |
 
         <a href="https://github.com/FAIR2-for-research-software/Documentation/edit/main/episodes/examples.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -721,7 +721,7 @@ what this code is for or why it was written.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-1" class="tab-content">
-<div id="nav-tabpanel-1-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-Python">
+<div id="nav-tabpanel-1-Python" class="tab-pane show active" aria-labelledby="nav-tab-1-Python" role="tabpanel">
 <p>This is some research code that is contained in a Python
 function.</p>
 <div class="codewrapper sourceCode" id="cb1">
@@ -732,7 +732,7 @@ function.</p>
 <span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a>  <span class="cf">return</span> x <span class="op">*</span> weird_num <span class="op">-</span> ang<span class="op">**</span><span class="dv">3</span> <span class="op">/</span> (weird_num <span class="op">*</span> <span class="dv">2</span>)</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-1-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-R">
+<div id="nav-tabpanel-1-R" class="tab-pane" aria-labelledby="nav-tab-1-R" role="tabpanel">
 <p>This is some research code that is contained in an R function.</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -792,7 +792,7 @@ this course, so don’t worry if they don’t make sense yet!)</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-2" class="tab-content">
-<div id="nav-tabpanel-2-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-2-Python">
+<div id="nav-tabpanel-2-Python" class="tab-pane show active" aria-labelledby="nav-tab-2-Python" role="tabpanel">
 <p>This is a function written in the Python programming language that
 calculates a mathematical result, the details of which aren’t relevant.
 This code has plenty of documentation to help us read and understand
@@ -830,7 +830,7 @@ it.</p>
 <span id="cb3-28"><a href="#cb3-28" tabindex="-1"></a>  <span class="cf">return</span> sine_value</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-2-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-R">
+<div id="nav-tabpanel-2-R" class="tab-pane" aria-labelledby="nav-tab-2-R" role="tabpanel">
 <p>This is a function written in the R programming language that
 calculates a mathematical result, the details of which aren’t relevant.
 This code has plenty of documentation to help us read and understand it.
@@ -929,22 +929,26 @@ in-built function</a> to view the documentation:</p>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="im">import</span> numpy</span>
 <span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a><span class="bu">help</span>(numpy.array)</span></code></pre>
 </div>
-<pre><code>Help on built-in function array in module numpy:
-
-array(...)
-    array(object, dtype=None, *, copy=True, order='K', subok=False, ndmin=0,
-          like=None)
-
-    Create an array.
-
-    Parameters
-    ----------
-    object : array_like
-        An array, any object exposing the array interface, an object whose
-        ``__array__`` method returns an array, or any (nested) sequence.
-        If object is a scalar, a 0-dimensional array containing object is
-        returned.
-...</code></pre>
+<div class="codewrapper sourceCode" id="cb6">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a>Help on built<span class="op">-</span><span class="kw">in</span> function array <span class="kw">in</span> module numpy:</span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a>array(...)</span>
+<span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a>    array(<span class="bu">object</span>, dtype<span class="op">=</span><span class="va">None</span>, <span class="op">*</span>, copy<span class="op">=</span><span class="va">True</span>, order<span class="op">=</span><span class="st">'K'</span>, subok<span class="op">=</span><span class="va">False</span>, ndmin<span class="op">=</span><span class="dv">0</span>,</span>
+<span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a>          like<span class="op">=</span><span class="va">None</span>)</span>
+<span id="cb6-6"><a href="#cb6-6" tabindex="-1"></a></span>
+<span id="cb6-7"><a href="#cb6-7" tabindex="-1"></a>    Create an array.</span>
+<span id="cb6-8"><a href="#cb6-8" tabindex="-1"></a></span>
+<span id="cb6-9"><a href="#cb6-9" tabindex="-1"></a>    Parameters</span>
+<span id="cb6-10"><a href="#cb6-10" tabindex="-1"></a>    <span class="op">----------</span></span>
+<span id="cb6-11"><a href="#cb6-11" tabindex="-1"></a>    <span class="bu">object</span> : array_like</span>
+<span id="cb6-12"><a href="#cb6-12" tabindex="-1"></a>        An array, <span class="bu">any</span> <span class="bu">object</span> exposing the array interface, an <span class="bu">object</span> whose</span>
+<span id="cb6-13"><a href="#cb6-13" tabindex="-1"></a>        ``__array__`` method returns an array, <span class="kw">or</span> <span class="bu">any</span> (nested) sequence.</span>
+<span id="cb6-14"><a href="#cb6-14" tabindex="-1"></a>        If <span class="bu">object</span> <span class="kw">is</span> a scalar, a <span class="dv">0</span><span class="op">-</span>dimensional array containing <span class="bu">object</span> <span class="kw">is</span></span>
+<span id="cb6-15"><a href="#cb6-15" tabindex="-1"></a>        returned.</span>
+<span id="cb6-16"><a href="#cb6-16" tabindex="-1"></a>...</span></code></pre>
+</div>
 </div>
 <div class="section level3">
 <h3 id="ggplot2-documentation-site">ggplot2 documentation site<a class="anchor" aria-label="anchor" href="#ggplot2-documentation-site"></a>
@@ -982,7 +986,7 @@ any links that you are not going to use.
 </div>
 </section></section><section id="aio-readmes"><p>Content from <a href="readmes.html">Writing README files</a></p>
 <hr>
-<p>Last updated on 2025-03-04 |
+<p>Last updated on 2025-11-06 |
 
         <a href="https://github.com/FAIR2-for-research-software/Documentation/edit/main/episodes/readmes.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -1876,7 +1880,7 @@ Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  --></section></section><section id="aio-docstrings"><p>Content from <a href="docstrings.html">Documentation strings</a></p>
 <hr>
-<p>Last updated on 2025-03-05 |
+<p>Last updated on 2025-11-06 |
 
         <a href="https://github.com/FAIR2-for-research-software/Documentation/edit/main/episodes/docstrings.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -2045,9 +2049,9 @@ provide the name of that species.</p>
 <span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a>    <span class="co">"""</span></span>
 <span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a><span class="co">    Identify a bird based on the sound of its call.</span></span>
 <span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a><span class="co">    """</span></span>
-<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a>    </span>
+<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a></span>
 <span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Identifying bird vocalisation..."</span>)</span>
-<span id="cb3-7"><a href="#cb3-7" tabindex="-1"></a>    </span>
+<span id="cb3-7"><a href="#cb3-7" tabindex="-1"></a></span>
 <span id="cb3-8"><a href="#cb3-8" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">"Hirundo atrocaerulea"</span></span></code></pre>
 </div>
 </div>
@@ -2069,7 +2073,7 @@ provide the name of that species.</p>
 <span><span class="va">identify</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">audio_file</span><span class="op">)</span> <span class="op">{</span></span>
 <span></span>
 <span>    <span class="fu">print</span><span class="op">(</span><span class="st">"Identifying bird vocalisation..."</span><span class="op">)</span></span>
-<span>    </span>
+<span></span>
 <span>    <span class="kw">return</span><span class="op">(</span><span class="st">"Hirundo atrocaerulea"</span><span class="op">)</span></span>
 <span><span class="op">}</span></span></code></pre>
 </div>
@@ -2111,14 +2115,18 @@ like so:</p>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="bu">help</span>(<span class="bu">sum</span>)</span></code></pre>
 </div>
-<pre><code>Help on built-in function sum in module builtins:
-
-sum(iterable, /, start=0)
-    Return the sum of a 'start' value (default: 0) plus an iterable of numbers
-
-    When the iterable is empty, return the start value.
-    This function is intended specifically for use with numeric values and may
-    reject non-numeric types.</code></pre>
+<div class="codewrapper sourceCode" id="cb6">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a>Help on built<span class="op">-</span><span class="kw">in</span> function <span class="bu">sum</span> <span class="kw">in</span> module builtins:</span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a><span class="bu">sum</span>(iterable, <span class="op">/</span>, start<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a>    Return the <span class="bu">sum</span> of a <span class="st">'start'</span> value (default: <span class="dv">0</span>) plus an iterable of numbers</span>
+<span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a></span>
+<span id="cb6-6"><a href="#cb6-6" tabindex="-1"></a>    When the iterable <span class="kw">is</span> empty, <span class="cf">return</span> the start value.</span>
+<span id="cb6-7"><a href="#cb6-7" tabindex="-1"></a>    This function <span class="kw">is</span> intended specifically <span class="cf">for</span> use <span class="cf">with</span> numeric values <span class="kw">and</span> may</span>
+<span id="cb6-8"><a href="#cb6-8" tabindex="-1"></a>    reject non<span class="op">-</span>numeric types.</span></code></pre>
+</div>
 <p>For more help with specific Python functions, check the documentation
 for the <a href="https://docs.python.org/3/library/" class="external-link">Python Standard
 library</a> or for the particular package you’re using.</p>
@@ -2133,28 +2141,32 @@ manual for a function. For example, to view the documentation for the <a href="h
 <pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">help</span><span class="op">(</span><span class="va">sum</span><span class="op">)</span></span></code></pre>
 </div>
-<pre><code>sum                    package:base                    R Documentation
-
-Sum of Vector Elements
-
-Description:
-
-     ‘sum’ returns the sum of all the values present in its arguments.
-
-Usage:
-
-     sum(..., na.rm = FALSE)
-
-Arguments:
-
-     ...: numeric or complex or logical vectors.
-
-   na.rm: logical.  Should missing values (including ‘NaN’) be removed?
-
-Details:
-
-     This is a generic function: methods can be defined for it directly
-...</code></pre>
+<div class="codewrapper sourceCode" id="cb8">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode r" tabindex="0"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a>sum                    package<span class="sc">:</span>base                    R Documentation</span>
+<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a>Sum of Vector Elements</span>
+<span id="cb8-4"><a href="#cb8-4" tabindex="-1"></a></span>
+<span id="cb8-5"><a href="#cb8-5" tabindex="-1"></a>Description<span class="sc">:</span></span>
+<span id="cb8-6"><a href="#cb8-6" tabindex="-1"></a></span>
+<span id="cb8-7"><a href="#cb8-7" tabindex="-1"></a>     ‘sum’ returns the sum of all the values present <span class="cf">in</span> its arguments.</span>
+<span id="cb8-8"><a href="#cb8-8" tabindex="-1"></a></span>
+<span id="cb8-9"><a href="#cb8-9" tabindex="-1"></a>Usage<span class="sc">:</span></span>
+<span id="cb8-10"><a href="#cb8-10" tabindex="-1"></a></span>
+<span id="cb8-11"><a href="#cb8-11" tabindex="-1"></a>     <span class="fu">sum</span>(..., <span class="at">na.rm =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb8-12"><a href="#cb8-12" tabindex="-1"></a></span>
+<span id="cb8-13"><a href="#cb8-13" tabindex="-1"></a>Arguments<span class="sc">:</span></span>
+<span id="cb8-14"><a href="#cb8-14" tabindex="-1"></a></span>
+<span id="cb8-15"><a href="#cb8-15" tabindex="-1"></a>     ...<span class="sc">:</span> numeric or complex or logical vectors.</span>
+<span id="cb8-16"><a href="#cb8-16" tabindex="-1"></a></span>
+<span id="cb8-17"><a href="#cb8-17" tabindex="-1"></a>   na.rm<span class="sc">:</span> logical.  Should missing <span class="fu">values</span> (including ‘NaN’) be removed?</span>
+<span id="cb8-18"><a href="#cb8-18" tabindex="-1"></a></span>
+<span id="cb8-19"><a href="#cb8-19" tabindex="-1"></a>Details<span class="sc">:</span></span>
+<span id="cb8-20"><a href="#cb8-20" tabindex="-1"></a></span>
+<span id="cb8-21"><a href="#cb8-21" tabindex="-1"></a>     This is a generic <span class="cf">function</span><span class="sc">:</span> methods can be defined <span class="cf">for</span> it directly</span>
+<span id="cb8-22"><a href="#cb8-22" tabindex="-1"></a>...</span></code></pre>
+</div>
 <p>If the content is too big to fit on the screen then you’ll need to
 press the space bar to proceed through the pages of text.</p>
 <p>For more information, see <a href="https://www.r-project.org/help.html" class="external-link">Getting Help with R</a> in
@@ -2289,7 +2301,7 @@ developers?</p>
 <h3 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a>
 </h3>
 <p>Next, we must describe the inputs to the function, its
-<em>arguments</em> or <strong><em>parameters</em></strong>.</p>
+<em>arguments</em> or <em><strong>parameters</strong></em>.</p>
 <p>We list the input parameters in the code examples below. Each
 argument has a name and a brief description.</p>
 <div class="tabs">
@@ -2402,7 +2414,7 @@ each one.</p>
 <span><span class="co">#'</span></span>
 <span><span class="co">#' @param audio_file The path of the sound file</span></span>
 <span><span class="va">identify</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">audio_file</span><span class="op">)</span> <span class="op">{</span></span>
-<span>    <span class="fu">print</span><span class="op">(</span><span class="st">"Identifying bird vocalisation..."</span><span class="op">)</span>   </span>
+<span>    <span class="fu">print</span><span class="op">(</span><span class="st">"Identifying bird vocalisation..."</span><span class="op">)</span></span>
 <span>    <span class="kw">return</span><span class="op">(</span><span class="st">"Hirundo atrocaerulea"</span><span class="op">)</span></span>
 <span><span class="op">}</span></span></code></pre>
 </div>
@@ -2544,7 +2556,7 @@ string.</p>
 <span><span class="va">identify</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">audio_file</span><span class="op">)</span> <span class="op">{</span></span>
 <span></span>
 <span>    <span class="fu">print</span><span class="op">(</span><span class="st">"Identifying bird vocalisation..."</span><span class="op">)</span></span>
-<span>    </span>
+<span></span>
 <span>    <span class="kw">return</span><span class="op">(</span><span class="st">"Hirundo atrocaerulea"</span><span class="op">)</span></span>
 <span><span class="op">}</span></span></code></pre>
 </div>
@@ -2596,8 +2608,8 @@ will provide syntax highlighting of these code snippets.</p>
 <span id="cb21-8"><a href="#cb21-8" tabindex="-1"></a></span>
 <span id="cb21-9"><a href="#cb21-9" tabindex="-1"></a><span class="co">    Returns:</span></span>
 <span id="cb21-10"><a href="#cb21-10" tabindex="-1"></a><span class="co">        The sum of x and y.</span></span>
-<span id="cb21-11"><a href="#cb21-11" tabindex="-1"></a><span class="co">        </span></span>
-<span id="cb21-12"><a href="#cb21-12" tabindex="-1"></a><span class="co">    Examples:    </span></span>
+<span id="cb21-11"><a href="#cb21-11" tabindex="-1"></a></span>
+<span id="cb21-12"><a href="#cb21-12" tabindex="-1"></a><span class="co">    Examples:</span></span>
 <span id="cb21-13"><a href="#cb21-13" tabindex="-1"></a><span class="co">    &gt;&gt;&gt; add(1, 1)</span></span>
 <span id="cb21-14"><a href="#cb21-14" tabindex="-1"></a><span class="co">    2</span></span>
 <span id="cb21-15"><a href="#cb21-15" tabindex="-1"></a><span class="co">    &gt;&gt;&gt; add(1.3, 5.3)</span></span>
@@ -2677,10 +2689,10 @@ function in your code.</p>
 <span id="cb23-2"><a href="#cb23-2" tabindex="-1"></a>    <span class="co">"""</span></span>
 <span id="cb23-3"><a href="#cb23-3" tabindex="-1"></a><span class="co">    Identify a bird based on the sound of its call.</span></span>
 <span id="cb23-4"><a href="#cb23-4" tabindex="-1"></a></span>
-<span id="cb23-5"><a href="#cb23-5" tabindex="-1"></a><span class="co">	Examples:</span></span>
-<span id="cb23-6"><a href="#cb23-6" tabindex="-1"></a><span class="co">	&gt;&gt;&gt; identify("~/recordings/hirundo.wav")</span></span>
-<span id="cb23-7"><a href="#cb23-7" tabindex="-1"></a><span class="co">	"Hirundo atrocaerulea"</span></span>
-<span id="cb23-8"><a href="#cb23-8" tabindex="-1"></a><span class="co">    """</span>   </span>
+<span id="cb23-5"><a href="#cb23-5" tabindex="-1"></a><span class="co">    Examples:</span></span>
+<span id="cb23-6"><a href="#cb23-6" tabindex="-1"></a><span class="co">    &gt;&gt;&gt; identify("~/recordings/hirundo.wav")</span></span>
+<span id="cb23-7"><a href="#cb23-7" tabindex="-1"></a><span class="co">    "Hirundo atrocaerulea"</span></span>
+<span id="cb23-8"><a href="#cb23-8" tabindex="-1"></a><span class="co">    """</span></span>
 <span id="cb23-9"><a href="#cb23-9" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Identifying bird vocalisation..."</span>)</span>
 <span id="cb23-10"><a href="#cb23-10" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">"Hirundo atrocaerulea"</span></span></code></pre>
 </div>
@@ -2697,7 +2709,7 @@ function in your code.</p>
 <span><span class="va">identify</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">audio_file</span><span class="op">)</span> <span class="op">{</span></span>
 <span></span>
 <span>    <span class="fu">print</span><span class="op">(</span><span class="st">"Identifying bird vocalisation..."</span><span class="op">)</span></span>
-<span>    </span>
+<span></span>
 <span>    <span class="kw">return</span><span class="op">(</span><span class="st">"Hirundo atrocaerulea"</span><span class="op">)</span></span>
 <span><span class="op">}</span></span></code></pre>
 </div>
@@ -2811,7 +2823,7 @@ where possible.</p>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" tabindex="-1"></a><span class="kw">def</span> add(x, y):</span>
 <span id="cb26-2"><a href="#cb26-2" tabindex="-1"></a>    <span class="co">"""</span></span>
-<span id="cb26-3"><a href="#cb26-3" tabindex="-1"></a><span class="co">    Adds two numbers together, which are the x and y arguents of this function.</span></span>
+<span id="cb26-3"><a href="#cb26-3" tabindex="-1"></a><span class="co">    Adds two numbers together, which are the x and y arguments of this function.</span></span>
 <span id="cb26-4"><a href="#cb26-4" tabindex="-1"></a></span>
 <span id="cb26-5"><a href="#cb26-5" tabindex="-1"></a><span class="co">    This function takes two numbers as input and returns their sum.</span></span>
 <span id="cb26-6"><a href="#cb26-6" tabindex="-1"></a><span class="co">    The addition is performed using the built-in `+` operator.</span></span>
@@ -2865,7 +2877,7 @@ represent the arguments, data types, etc.</p>
 <ul>
 <li>The <a href="https://peps.python.org/pep-0257/" class="external-link">PEP 257</a>
 docstring standard was designed by the maintainers of the Python
-programming langauge.</li>
+programming language.</li>
 <li>The <a href="https://google.github.io/styleguide/pyguide.html#381-docstrings" class="external-link">Google
 Style Guide</a> sets out a docstring format.</li>
 <li>
@@ -2876,8 +2888,8 @@ extension</a> designed for scientific use.</li>
 <p>It doesn’t matter which one you select, as long as it’s used
 consistently across a project and it’s clear what the syntax means. Some
 standards are better-supported by other tools such as
-<abbr title="Integrated development environments">IDEs</abbr> and
-documentation generators.</p>
+<abbr title="Integrated development
+environments">IDEs</abbr> and documentation generators.</p>
 </div>
 </div>
 </div>
@@ -2891,11 +2903,15 @@ and write docstrings automatically, to a certain extent.</p>
 <p>To do this, ask the system to create a docstring and copy your code
 into the prompt text box. Below is an example prompt and the reply
 generated by the Google Gemini algorithm:</p>
-<pre><code>Please generate a docstring for this Python function:
-
-def calculate_rectangle_area(width, height):
-    area = width * height
-    return area</code></pre>
+<div class="codewrapper sourceCode" id="cb27">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb27-1"><a href="#cb27-1" tabindex="-1"></a><span class="ex">Please</span> generate a docstring for this Python function:</span>
+<span id="cb27-2"><a href="#cb27-2" tabindex="-1"></a></span>
+<span id="cb27-3"><a href="#cb27-3" tabindex="-1"></a><span class="ex">def</span> calculate_rectangle_area<span class="er">(</span><span class="ex">width,</span> height<span class="kw">)</span><span class="bu">:</span></span>
+<span id="cb27-4"><a href="#cb27-4" tabindex="-1"></a>    <span class="ex">area</span> = width <span class="pp">*</span> height</span>
+<span id="cb27-5"><a href="#cb27-5" tabindex="-1"></a>    <span class="cf">return</span> <span class="ex">area</span></span></code></pre>
+</div>
 <p>The result is the following docstring, in addition to some helpful
 descriptions of the content that it generated.</p>
 <div class="codewrapper sourceCode" id="cb28">
@@ -2950,7 +2966,7 @@ relevant to your research software?</li>
 <span class="callout-header">Discussion</span>
 <div class="callout-inner">
 <div class="callout-content">
-<p>What are the benefits and risks of using a large langauge model (LLM)
+<p>What are the benefits and risks of using a Large Language Model (LLM)
 service such as Google Gemini or OpenAI ChatGPT to interpret your code
 and produce content that you use in your research?</p>
 <p>How should we critically evaluate this material so that it can be
@@ -3017,7 +3033,7 @@ Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  --></section></section><section id="aio-readable"><p>Content from <a href="readable.html">Code readability</a></p>
 <hr>
-<p>Last updated on 2025-03-05 |
+<p>Last updated on 2025-11-06 |
 
         <a href="https://github.com/FAIR2-for-research-software/Documentation/edit/main/episodes/readable.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -3065,7 +3081,7 @@ making it easy to interpret and follow its logic.</p>
 <p>Many text editors use <strong>syntax highlighting</strong> to display
 parts of your source code using different colours or fonts to signify
 the meaning of each word or symbol. For example, variable names may be
-given a bright blue colour, strings highighted in green, and numbers
+given a bright blue colour, strings highlighted in green, and numbers
 shown in a red font.</p>
 <p>Let’s take a look to see its benefits:</p>
 <div class="tabs">
@@ -3135,15 +3151,15 @@ shown in a red font.</p>
 <span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a>count_word_occurrences &lt;- function(filename, word_to_count) {</span>
 <span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a>  text_file &lt;- file(filename, "r")</span>
 <span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a>  word_count &lt;- 0</span>
-<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a>  </span>
+<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a></span>
 <span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a>  # Read the file line by line using a loop</span>
 <span id="cb3-7"><a href="#cb3-7" tabindex="-1"></a>  for (line in readLines(text_file)) {</span>
 <span id="cb3-8"><a href="#cb3-8" tabindex="-1"></a>    # Convert the line to lowercase for case-insensitive counting</span>
 <span id="cb3-9"><a href="#cb3-9" tabindex="-1"></a>    line &lt;- tolower(line)</span>
-<span id="cb3-10"><a href="#cb3-10" tabindex="-1"></a>    </span>
+<span id="cb3-10"><a href="#cb3-10" tabindex="-1"></a></span>
 <span id="cb3-11"><a href="#cb3-11" tabindex="-1"></a>    # Split the line into words</span>
 <span id="cb3-12"><a href="#cb3-12" tabindex="-1"></a>    words &lt;- strsplit(line, split = " ")[[1]]  # Extract the first element (vector of words)</span>
-<span id="cb3-13"><a href="#cb3-13" tabindex="-1"></a>    </span>
+<span id="cb3-13"><a href="#cb3-13" tabindex="-1"></a></span>
 <span id="cb3-14"><a href="#cb3-14" tabindex="-1"></a>    # Count the occurrences of the word in the current line</span>
 <span id="cb3-15"><a href="#cb3-15" tabindex="-1"></a>    word_count &lt;- word_count + sum(words == word_to_count)</span>
 <span id="cb3-16"><a href="#cb3-16" tabindex="-1"></a>  }</span>
@@ -3155,26 +3171,23 @@ shown in a red font.</p>
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co"># Function to count word occurrences in a text file</span></span>
-<span><span class="va">count_word_occurrences</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">filename</span>, <span class="va">word_to_count</span><span class="op">)</span> <span class="op">{</span></span>
-<span>  <span class="va">text_file</span> <span class="op">&lt;-</span> <span class="fu">file</span><span class="op">(</span><span class="va">filename</span>, <span class="st">"r"</span><span class="op">)</span></span>
-<span>  <span class="va">word_count</span> <span class="op">&lt;-</span> <span class="fl">0</span></span>
-<span>  </span>
-<span>  <span class="co"># Read the file line by line using a loop</span></span>
-<span>  <span class="kw">for</span> <span class="op">(</span><span class="va">line</span> <span class="kw">in</span> <span class="fu">readLines</span><span class="op">(</span><span class="va">text_file</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
-<span>    <span class="co"># Convert the line to lowercase for case-insensitive counting</span></span>
-<span>    <span class="va">line</span> <span class="op">&lt;-</span> <span class="fu">tolower</span><span class="op">(</span><span class="va">line</span><span class="op">)</span></span>
-<span>    </span>
-<span>    <span class="co"># Split the line into words</span></span>
-<span>    <span class="va">words</span> <span class="op">&lt;-</span> <span class="fu">strsplit</span><span class="op">(</span><span class="va">line</span>, split <span class="op">=</span> <span class="st">" "</span><span class="op">)</span><span class="op">[[</span><span class="fl">1</span><span class="op">]</span><span class="op">]</span>  <span class="co"># Extract the first element (vector of words)</span></span>
-<span>    </span>
-<span>    <span class="co"># Count the occurrences of the word in the current line</span></span>
-<span>    <span class="va">word_count</span> <span class="op">&lt;-</span> <span class="va">word_count</span> <span class="op">+</span> <span class="fu">sum</span><span class="op">(</span><span class="va">words</span> <span class="op">==</span> <span class="va">word_to_count</span><span class="op">)</span></span>
-<span>  <span class="op">}</span></span>
-<span>  <span class="fu">close</span><span class="op">(</span><span class="va">text_file</span><span class="op">)</span></span>
-<span>  <span class="kw">return</span><span class="op">(</span><span class="va">word_count</span><span class="op">)</span></span>
-<span><span class="op">}</span></span></code></pre>
+<pre class="sourceCode r" tabindex="0"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="co"># Function to count word occurrences in a text file</span></span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a>count_word_occurrences <span class="ot">&lt;-</span> <span class="cf">function</span>(filename, word_to_count) { text_file <span class="ot">&lt;-</span> <span class="fu">file</span>(filename, <span class="st">"r"</span>) word_count <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a></span>
+<span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a>  <span class="co"># Read the file line by line using a loop</span></span>
+<span id="cb4-5"><a href="#cb4-5" tabindex="-1"></a>  <span class="cf">for</span> (line <span class="cf">in</span> <span class="fu">readLines</span>(text_file)) {</span>
+<span id="cb4-6"><a href="#cb4-6" tabindex="-1"></a>    <span class="co"># Convert the line to lowercase for case-insensitive counting</span></span>
+<span id="cb4-7"><a href="#cb4-7" tabindex="-1"></a>    line <span class="ot">&lt;-</span> <span class="fu">tolower</span>(line)</span>
+<span id="cb4-8"><a href="#cb4-8" tabindex="-1"></a></span>
+<span id="cb4-9"><a href="#cb4-9" tabindex="-1"></a>    <span class="co"># Split the line into words</span></span>
+<span id="cb4-10"><a href="#cb4-10" tabindex="-1"></a>    words <span class="ot">&lt;-</span> <span class="fu">strsplit</span>(line, <span class="at">split =</span> <span class="st">" "</span>)[[<span class="dv">1</span>]]  <span class="co"># Extract the first element (vector of words)</span></span>
+<span id="cb4-11"><a href="#cb4-11" tabindex="-1"></a></span>
+<span id="cb4-12"><a href="#cb4-12" tabindex="-1"></a>    <span class="co"># Count the occurrences of the word in the current line</span></span>
+<span id="cb4-13"><a href="#cb4-13" tabindex="-1"></a>    word_count <span class="ot">&lt;-</span> word_count <span class="sc">+</span> <span class="fu">sum</span>(words <span class="sc">==</span> word_to_count)</span>
+<span id="cb4-14"><a href="#cb4-14" tabindex="-1"></a>  }</span>
+<span id="cb4-15"><a href="#cb4-15" tabindex="-1"></a>  <span class="fu">close</span>(text_file)</span>
+<span id="cb4-16"><a href="#cb4-16" tabindex="-1"></a>  <span class="fu">return</span>(word_count)</span>
+<span id="cb4-17"><a href="#cb4-17" tabindex="-1"></a>}</span></code></pre>
 </div>
 </div>
 </div>
@@ -3186,10 +3199,9 @@ in.</p>
 <h3 id="code-editors">Code editors<a class="anchor" aria-label="anchor" href="#code-editors"></a>
 </h3>
 <p>To work with our source code in a colourised way like this, use a
-text editor or
-<abbr title="Integrated development environment">IDE</abbr> with a
-syntax highlighting feature such as Notepad++, VSCode, PyCharm, or
-RStudio.</p>
+text editor or <abbr title="Integrated development
+environment">IDE</abbr> with a syntax highlighting feature such as
+Notepad++, VSCode, PyCharm, or RStudio.</p>
 <div id="discussion1" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
@@ -3356,8 +3368,8 @@ with an upper-case letter and there are no spaces between them.</p>
 </div>
 <p>For more information about this aspect of coding style, please read
 the <a href="https://peps.python.org/pep-0008/#naming-conventions" class="external-link">Naming
-Conventions</a> section of
-<acronym title="Python Enhancement Proposals">PEP</acronym> 8.</p>
+Conventions</a> section of <acronym title="Python Enhancement
+ Proposals">PEP</acronym> 8.</p>
 </div>
 <div id="nav-tabpanel-3-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-3-R">
 <p>Classes use capitalised words</p>
@@ -3639,7 +3651,7 @@ labels the types of the inputs and output of the function.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>None of these code examples will cause an error because type hints
 are just <strong>passive labels</strong> that document our code. They
@@ -3673,7 +3685,7 @@ source code.</p>
 <div class="callout-content">
 <ul>
 <li>Try to inject as much <em>meaning</em> into your source code as
-possible by naming things clearly and succintly.</li>
+possible by naming things clearly and succinctly.</li>
 <li>Use comments to explain your rationale—even if the code seems
 obvious to you know, think of the future benefits!</li>
 <li>Label functions and variables with <em>type hints</em> to tell the
@@ -3700,7 +3712,7 @@ Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  --></section></section><section id="aio-contributors"><p>Content from <a href="contributors.html">Contributor guidance</a></p>
 <hr>
-<p>Last updated on 2025-03-06 |
+<p>Last updated on 2025-11-06 |
 
         <a href="https://github.com/FAIR2-for-research-software/Documentation/edit/main/episodes/contributors.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -4017,7 +4029,7 @@ promote consistency and readability?</li>
 <li>
 <strong>Encourage collaboration:</strong> There are <strong>many
 ways to contribute</strong> to a research software project, including
-bug reoprts, feature suggests, design discussions, documentation, and
+bug reports, feature suggests, design discussions, documentation, and
 software engineering.</li>
 <li>
 <strong>Clear processes:</strong> Explain the process for making
@@ -4056,7 +4068,7 @@ Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  --></section></section><section id="aio-sites"><p>Content from <a href="sites.html">Documentation sites</a></p>
 <hr>
-<p>Last updated on 2024-09-25 |
+<p>Last updated on 2025-11-06 |
 
         <a href="https://github.com/FAIR2-for-research-software/Documentation/edit/main/episodes/sites.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -4198,7 +4210,7 @@ the following factors:</p>
 </section><section><h2 class="section-heading" id="contents">Contents<a class="anchor" aria-label="anchor" href="#contents"></a>
 </h2>
 <hr class="half-width">
-<p>Documentation pages contain <strong>comphrehensive
+<p>Documentation pages contain <strong>comprehensive
 information</strong> about a particular piece of research software.
 Think of it like a user manual for your car or an instruction guide for
 building a piece of furniature.</p>
@@ -4237,7 +4249,7 @@ goals.</p>
 <h3 id="user-reference">User reference<a class="anchor" aria-label="anchor" href="#user-reference"></a>
 </h3>
 <p>If you have written functions that are intended to be use in other
-reseachers’ code, then an on-depth explaination of these procedures is
+researchers’ code, then an on-depth explanation of these procedures is
 essential reference material. In the world of software engineering,
 these detailed appendices are called
 <acronym title="Application Programming Interfaces">API</acronym>
@@ -4271,11 +4283,11 @@ users of your code.</p>
 it’s important to strive to use everyday, jargon-free language. It helps
 to set an approachable tone that encourages others to use the software
 and get involved with the project. This will en sure that the code is
-accesible to the widest possible layers of the research community and
+accessible to the widest possible layers of the research community and
 foster collaboration.</p>
 <p>Always consider the target audience of your documentation, because
 your user base may be unaware of some of the unstated assumptions and
-technical backgroud knowledge that you take for granted.</p>
+technical background knowledge that you take for granted.</p>
 </section><section><h2 class="section-heading" id="tools">Tools<a class="anchor" aria-label="anchor" href="#tools"></a>
 </h2>
 <hr class="half-width">
@@ -4461,9 +4473,10 @@ Sphinx</a>.</p>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="ex">pip</span> install sphinx</span></code></pre>
 </div>
 </div>
-<div class="section level5">
-<h5 id="start-a-new-sphinx-project">Start a new Sphinx project<a class="anchor" aria-label="anchor" href="#start-a-new-sphinx-project"></a>
-</h5>
+</div>
+<div class="section level4">
+<h4 id="start-a-new-sphinx-project">Start a new Sphinx project<a class="anchor" aria-label="anchor" href="#start-a-new-sphinx-project"></a>
+</h4>
 <p>Sphinx includes a command to set up a new project called <a href="https://www.sphinx-doc.org/en/master/man/sphinx-quickstart.html" class="external-link">sphinx-quickstart</a>.
 Navigate to your project’s root folder and run the following
 command.</p>
@@ -4491,7 +4504,6 @@ following options:</p>
 <p>To find out more about the Sphinx configuration files, please read
 their guide to <a href="https://www.sphinx-doc.org/en/master/usage/quickstart.html#defining-document-structure" class="external-link">defining
 document structure</a> on the Sphinx documentation.</p>
-</div>
 </div>
 </div>
 </div>
@@ -4557,7 +4569,7 @@ directory for code to import.</p>
   What does this code mean?
   </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="accordion-body">
 <p>The Python code uses <a href="https://docs.python.org/3/library/sys.html#sys.path" class="external-link"><code>sys.path</code></a>,
 a list of locations to search for code. By modifying the Python
@@ -4588,7 +4600,7 @@ module.</p>
   What does this code mean?
   </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
 <div class="accordion-body">
 <p>This <a href="https://docutils.sourceforge.io/rst.html" class="external-link">reStructuredText
 (reST)</a> markup language has the following elements:</p>
@@ -4705,7 +4717,7 @@ Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  --></section></section><section id="aio-cli"><p>Content from <a href="cli.html">Command line interfaces</a></p>
 <hr>
-<p>Last updated on 2024-09-12 |
+<p>Last updated on 2025-11-06 |
 
         <a href="https://github.com/FAIR2-for-research-software/Documentation/edit/main/episodes/cli.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -4961,7 +4973,7 @@ will do.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> What are arguments? </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="accordion-body">
 <p>When using shell commands, we use the words <strong>option</strong>,
 <strong>flag</strong>, and <strong>arguments</strong> to describe
@@ -5033,7 +5045,7 @@ command, run:</p>
 <div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="ex">$</span> ls <span class="at">--help</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" tabindex="-1"></a><span class="fu">ls</span> <span class="at">--help</span></span></code></pre>
 </div>
 <p>The result of this command will be printed to the screen.</p>
 <div class="codewrapper">
@@ -5062,7 +5074,7 @@ command, run:</p>
 <div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="ex">$</span> ls <span class="at">--help</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" tabindex="-1"></a><span class="fu">ls</span> <span class="at">--help</span></span></code></pre>
 </div>
 <p>The result of this command will be printed to the screen.</p>
 <div class="codewrapper">
@@ -5143,7 +5155,7 @@ executed first.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
   <h3 class="accordion-header" id="headingSpoiler2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Why must our file be named __main__.py? </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
 <div class="accordion-body">
 <p>This is a mechanism that tells Python how we want users to interact
 with our software.</p>
@@ -5189,7 +5201,7 @@ Run this script from the command line. What happens when you run
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>When you run the <code>python -m oddsong</code> command, Python runs
 the <em>main module as a script</em>.</p>
@@ -5229,7 +5241,7 @@ case, our research code hasn’t been written yet, so we’ll just show a
 message on the screen for now.</p>
 <p>The logical statement <code>if __name__ == "__main__"</code> means
 that the <code>main()</code> function will <em>only</em> run when the
-code is run from the comand line as the <a href="https://docs.python.org/3/library/__main__.html#what-is-the-top-level-code-environment" class="external-link">top-level
+code is run from the command line as the <a href="https://docs.python.org/3/library/__main__.html#what-is-the-top-level-code-environment" class="external-link">top-level
 code environment</a>.</p>
 </div>
 <div class="section level3">
@@ -5283,7 +5295,7 @@ instructions:</p>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb21-1"><a href="#cb21-1" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> oddsong <span class="at">--help</span></span></code></pre>
 </div>
 <p>What should we see when using the <code>--help</code> flag? What
-happens in your temrinal?</p>
+happens in your terminal?</p>
 </div>
 </div>
 </div>
@@ -5292,7 +5304,7 @@ happens in your temrinal?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>When we run our script as before, it will run like normal with no
 change in behaviour.</p>
@@ -5361,7 +5373,7 @@ interface.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <p>The code now looks something like that shown below.</p>
 <div class="codewrapper sourceCode" id="cb25">
@@ -5414,7 +5426,7 @@ function</a> as shown below.</p>
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb27-1"><a href="#cb27-1" tabindex="-1"></a><span class="co"># Add the category argument</span></span>
-<span id="cb27-2"><a href="#cb27-2" tabindex="-1"></a>parser.add_argument(<span class="st">'-c'</span>, <span class="st">'--category'</span>, </span>
+<span id="cb27-2"><a href="#cb27-2" tabindex="-1"></a>parser.add_argument(<span class="st">'-c'</span>, <span class="st">'--category'</span>,</span>
 <span id="cb27-3"><a href="#cb27-3" tabindex="-1"></a>    <span class="bu">help</span><span class="op">=</span><span class="st">"The type of bird call e.g. alarm, contact, flight"</span>)</span></code></pre>
 </div>
 <p>This text should briefly describe the purpose of the argument,
@@ -5439,7 +5451,7 @@ happen in your CLI?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <p>We can achieve this in our example script by adding a
 <code>help</code> string.</p>
@@ -5515,7 +5527,7 @@ our help screen?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution5" aria-expanded="false" aria-controls="collapseSolution5">
   <h4 class="accordion-header" id="headingSolution5"> Show me the solution </h4>
 </button>
-<div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
+<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
 <div class="accordion-body">
 <p>We define the description when creating our argument parser
 object.</p>
@@ -5562,7 +5574,11 @@ object.</p>
 <p>By default, the usage message is generated automatically based on the
 arguments of our script. For our example, the usage instructions look
 like this:</p>
-<pre><code>usage: oddsong.py [-h] [-c CATEGORY]</code></pre>
+<div class="codewrapper sourceCode" id="cb33">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb33-1"><a href="#cb33-1" tabindex="-1"></a><span class="ex">usage:</span> oddsong.py <span class="pp">[-</span><span class="ss">h</span><span class="pp">]</span> [-c CATEGORY]</span></code></pre>
+</div>
 <p>In most cases, this will do the job. If you want to overwrite this
 message then use the <a href="https://docs.python.org/3/library/argparse.html#usage" class="external-link"><code>usage</code>
 parameter</a> when creating the argument parser object.</p>
@@ -5670,8 +5686,8 @@ any links that you are not going to use.
   "url": "https://FAIR2-for-research-software.github.io/Documentation/aio.html",
   "identifier": "https://FAIR2-for-research-software.github.io/Documentation/aio.html",
   "dateCreated": "2024-05-20",
-  "dateModified": "2025-11-04",
-  "datePublished": "2025-11-04"
+  "dateModified": "2025-11-06",
+  "datePublished": "2025-11-06"
 }
 
   </script><script>

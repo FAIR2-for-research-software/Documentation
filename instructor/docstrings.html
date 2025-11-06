@@ -352,7 +352,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Documentation strings</h1>
-        <p>Last updated on 2025-03-05 |
+        <p>Last updated on 2025-11-06 |
 
         <a href="https://github.com/FAIR2-for-research-software/Documentation/edit/main/episodes/docstrings.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -518,9 +518,9 @@ provide the name of that species.</p>
 <span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a>    <span class="co">"""</span></span>
 <span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a><span class="co">    Identify a bird based on the sound of its call.</span></span>
 <span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a><span class="co">    """</span></span>
-<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a>    </span>
+<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a></span>
 <span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Identifying bird vocalisation..."</span>)</span>
-<span id="cb3-7"><a href="#cb3-7" tabindex="-1"></a>    </span>
+<span id="cb3-7"><a href="#cb3-7" tabindex="-1"></a></span>
 <span id="cb3-8"><a href="#cb3-8" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">"Hirundo atrocaerulea"</span></span></code></pre>
 </div>
 </div>
@@ -540,7 +540,7 @@ provide the name of that species.</p>
 <span><span class="va">identify</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">audio_file</span><span class="op">)</span> <span class="op">{</span></span>
 <span></span>
 <span>    <span class="fu">print</span><span class="op">(</span><span class="st">"Identifying bird vocalisation..."</span><span class="op">)</span></span>
-<span>    </span>
+<span></span>
 <span>    <span class="kw">return</span><span class="op">(</span><span class="st">"Hirundo atrocaerulea"</span><span class="op">)</span></span>
 <span><span class="op">}</span></span></code></pre>
 </div>
@@ -581,14 +581,18 @@ like so:</p>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="bu">help</span>(<span class="bu">sum</span>)</span></code></pre>
 </div>
-<pre><code>Help on built-in function sum in module builtins:
-
-sum(iterable, /, start=0)
-    Return the sum of a 'start' value (default: 0) plus an iterable of numbers
-
-    When the iterable is empty, return the start value.
-    This function is intended specifically for use with numeric values and may
-    reject non-numeric types.</code></pre>
+<div class="codewrapper sourceCode" id="cb6">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a>Help on built<span class="op">-</span><span class="kw">in</span> function <span class="bu">sum</span> <span class="kw">in</span> module builtins:</span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a><span class="bu">sum</span>(iterable, <span class="op">/</span>, start<span class="op">=</span><span class="dv">0</span>)</span>
+<span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a>    Return the <span class="bu">sum</span> of a <span class="st">'start'</span> value (default: <span class="dv">0</span>) plus an iterable of numbers</span>
+<span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a></span>
+<span id="cb6-6"><a href="#cb6-6" tabindex="-1"></a>    When the iterable <span class="kw">is</span> empty, <span class="cf">return</span> the start value.</span>
+<span id="cb6-7"><a href="#cb6-7" tabindex="-1"></a>    This function <span class="kw">is</span> intended specifically <span class="cf">for</span> use <span class="cf">with</span> numeric values <span class="kw">and</span> may</span>
+<span id="cb6-8"><a href="#cb6-8" tabindex="-1"></a>    reject non<span class="op">-</span>numeric types.</span></code></pre>
+</div>
 <p>For more help with specific Python functions, check the documentation
 for the <a href="https://docs.python.org/3/library/" class="external-link">Python Standard
 library</a> or for the particular package you’re using.</p>
@@ -603,28 +607,32 @@ manual for a function. For example, to view the documentation for the <a href="h
 <pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">help</span><span class="op">(</span><span class="va">sum</span><span class="op">)</span></span></code></pre>
 </div>
-<pre><code>sum                    package:base                    R Documentation
-
-Sum of Vector Elements
-
-Description:
-
-     ‘sum’ returns the sum of all the values present in its arguments.
-
-Usage:
-
-     sum(..., na.rm = FALSE)
-
-Arguments:
-
-     ...: numeric or complex or logical vectors.
-
-   na.rm: logical.  Should missing values (including ‘NaN’) be removed?
-
-Details:
-
-     This is a generic function: methods can be defined for it directly
-...</code></pre>
+<div class="codewrapper sourceCode" id="cb8">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode r" tabindex="0"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a>sum                    package<span class="sc">:</span>base                    R Documentation</span>
+<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a></span>
+<span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a>Sum of Vector Elements</span>
+<span id="cb8-4"><a href="#cb8-4" tabindex="-1"></a></span>
+<span id="cb8-5"><a href="#cb8-5" tabindex="-1"></a>Description<span class="sc">:</span></span>
+<span id="cb8-6"><a href="#cb8-6" tabindex="-1"></a></span>
+<span id="cb8-7"><a href="#cb8-7" tabindex="-1"></a>     ‘sum’ returns the sum of all the values present <span class="cf">in</span> its arguments.</span>
+<span id="cb8-8"><a href="#cb8-8" tabindex="-1"></a></span>
+<span id="cb8-9"><a href="#cb8-9" tabindex="-1"></a>Usage<span class="sc">:</span></span>
+<span id="cb8-10"><a href="#cb8-10" tabindex="-1"></a></span>
+<span id="cb8-11"><a href="#cb8-11" tabindex="-1"></a>     <span class="fu">sum</span>(..., <span class="at">na.rm =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb8-12"><a href="#cb8-12" tabindex="-1"></a></span>
+<span id="cb8-13"><a href="#cb8-13" tabindex="-1"></a>Arguments<span class="sc">:</span></span>
+<span id="cb8-14"><a href="#cb8-14" tabindex="-1"></a></span>
+<span id="cb8-15"><a href="#cb8-15" tabindex="-1"></a>     ...<span class="sc">:</span> numeric or complex or logical vectors.</span>
+<span id="cb8-16"><a href="#cb8-16" tabindex="-1"></a></span>
+<span id="cb8-17"><a href="#cb8-17" tabindex="-1"></a>   na.rm<span class="sc">:</span> logical.  Should missing <span class="fu">values</span> (including ‘NaN’) be removed?</span>
+<span id="cb8-18"><a href="#cb8-18" tabindex="-1"></a></span>
+<span id="cb8-19"><a href="#cb8-19" tabindex="-1"></a>Details<span class="sc">:</span></span>
+<span id="cb8-20"><a href="#cb8-20" tabindex="-1"></a></span>
+<span id="cb8-21"><a href="#cb8-21" tabindex="-1"></a>     This is a generic <span class="cf">function</span><span class="sc">:</span> methods can be defined <span class="cf">for</span> it directly</span>
+<span id="cb8-22"><a href="#cb8-22" tabindex="-1"></a>...</span></code></pre>
+</div>
 <p>If the content is too big to fit on the screen then you’ll need to
 press the space bar to proceed through the pages of text.</p>
 <p>For more information, see <a href="https://www.r-project.org/help.html" class="external-link">Getting Help with R</a> in
@@ -758,7 +766,7 @@ developers?</p>
 <div class="section level3">
 <h3 id="arguments">Arguments<a class="anchor" aria-label="anchor" href="#arguments"></a></h3>
 <p>Next, we must describe the inputs to the function, its
-<em>arguments</em> or <strong><em>parameters</em></strong>.</p>
+<em>arguments</em> or <em><strong>parameters</strong></em>.</p>
 <p>We list the input parameters in the code examples below. Each
 argument has a name and a brief description.</p>
 <div class="tabs">
@@ -871,7 +879,7 @@ each one.</p>
 <span><span class="co">#'</span></span>
 <span><span class="co">#' @param audio_file The path of the sound file</span></span>
 <span><span class="va">identify</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">audio_file</span><span class="op">)</span> <span class="op">{</span></span>
-<span>    <span class="fu">print</span><span class="op">(</span><span class="st">"Identifying bird vocalisation..."</span><span class="op">)</span>   </span>
+<span>    <span class="fu">print</span><span class="op">(</span><span class="st">"Identifying bird vocalisation..."</span><span class="op">)</span></span>
 <span>    <span class="kw">return</span><span class="op">(</span><span class="st">"Hirundo atrocaerulea"</span><span class="op">)</span></span>
 <span><span class="op">}</span></span></code></pre>
 </div>
@@ -1012,7 +1020,7 @@ string.</p>
 <span><span class="va">identify</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">audio_file</span><span class="op">)</span> <span class="op">{</span></span>
 <span></span>
 <span>    <span class="fu">print</span><span class="op">(</span><span class="st">"Identifying bird vocalisation..."</span><span class="op">)</span></span>
-<span>    </span>
+<span></span>
 <span>    <span class="kw">return</span><span class="op">(</span><span class="st">"Hirundo atrocaerulea"</span><span class="op">)</span></span>
 <span><span class="op">}</span></span></code></pre>
 </div>
@@ -1063,8 +1071,8 @@ will provide syntax highlighting of these code snippets.</p>
 <span id="cb21-8"><a href="#cb21-8" tabindex="-1"></a></span>
 <span id="cb21-9"><a href="#cb21-9" tabindex="-1"></a><span class="co">    Returns:</span></span>
 <span id="cb21-10"><a href="#cb21-10" tabindex="-1"></a><span class="co">        The sum of x and y.</span></span>
-<span id="cb21-11"><a href="#cb21-11" tabindex="-1"></a><span class="co">        </span></span>
-<span id="cb21-12"><a href="#cb21-12" tabindex="-1"></a><span class="co">    Examples:    </span></span>
+<span id="cb21-11"><a href="#cb21-11" tabindex="-1"></a></span>
+<span id="cb21-12"><a href="#cb21-12" tabindex="-1"></a><span class="co">    Examples:</span></span>
 <span id="cb21-13"><a href="#cb21-13" tabindex="-1"></a><span class="co">    &gt;&gt;&gt; add(1, 1)</span></span>
 <span id="cb21-14"><a href="#cb21-14" tabindex="-1"></a><span class="co">    2</span></span>
 <span id="cb21-15"><a href="#cb21-15" tabindex="-1"></a><span class="co">    &gt;&gt;&gt; add(1.3, 5.3)</span></span>
@@ -1144,10 +1152,10 @@ function in your code.</p>
 <span id="cb23-2"><a href="#cb23-2" tabindex="-1"></a>    <span class="co">"""</span></span>
 <span id="cb23-3"><a href="#cb23-3" tabindex="-1"></a><span class="co">    Identify a bird based on the sound of its call.</span></span>
 <span id="cb23-4"><a href="#cb23-4" tabindex="-1"></a></span>
-<span id="cb23-5"><a href="#cb23-5" tabindex="-1"></a><span class="co">	Examples:</span></span>
-<span id="cb23-6"><a href="#cb23-6" tabindex="-1"></a><span class="co">	&gt;&gt;&gt; identify("~/recordings/hirundo.wav")</span></span>
-<span id="cb23-7"><a href="#cb23-7" tabindex="-1"></a><span class="co">	"Hirundo atrocaerulea"</span></span>
-<span id="cb23-8"><a href="#cb23-8" tabindex="-1"></a><span class="co">    """</span>   </span>
+<span id="cb23-5"><a href="#cb23-5" tabindex="-1"></a><span class="co">    Examples:</span></span>
+<span id="cb23-6"><a href="#cb23-6" tabindex="-1"></a><span class="co">    &gt;&gt;&gt; identify("~/recordings/hirundo.wav")</span></span>
+<span id="cb23-7"><a href="#cb23-7" tabindex="-1"></a><span class="co">    "Hirundo atrocaerulea"</span></span>
+<span id="cb23-8"><a href="#cb23-8" tabindex="-1"></a><span class="co">    """</span></span>
 <span id="cb23-9"><a href="#cb23-9" tabindex="-1"></a>    <span class="bu">print</span>(<span class="st">"Identifying bird vocalisation..."</span>)</span>
 <span id="cb23-10"><a href="#cb23-10" tabindex="-1"></a>    <span class="cf">return</span> <span class="st">"Hirundo atrocaerulea"</span></span></code></pre>
 </div>
@@ -1164,7 +1172,7 @@ function in your code.</p>
 <span><span class="va">identify</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">audio_file</span><span class="op">)</span> <span class="op">{</span></span>
 <span></span>
 <span>    <span class="fu">print</span><span class="op">(</span><span class="st">"Identifying bird vocalisation..."</span><span class="op">)</span></span>
-<span>    </span>
+<span></span>
 <span>    <span class="kw">return</span><span class="op">(</span><span class="st">"Hirundo atrocaerulea"</span><span class="op">)</span></span>
 <span><span class="op">}</span></span></code></pre>
 </div>
@@ -1272,7 +1280,7 @@ where possible.</p>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" tabindex="-1"></a><span class="kw">def</span> add(x, y):</span>
 <span id="cb26-2"><a href="#cb26-2" tabindex="-1"></a>    <span class="co">"""</span></span>
-<span id="cb26-3"><a href="#cb26-3" tabindex="-1"></a><span class="co">    Adds two numbers together, which are the x and y arguents of this function.</span></span>
+<span id="cb26-3"><a href="#cb26-3" tabindex="-1"></a><span class="co">    Adds two numbers together, which are the x and y arguments of this function.</span></span>
 <span id="cb26-4"><a href="#cb26-4" tabindex="-1"></a></span>
 <span id="cb26-5"><a href="#cb26-5" tabindex="-1"></a><span class="co">    This function takes two numbers as input and returns their sum.</span></span>
 <span id="cb26-6"><a href="#cb26-6" tabindex="-1"></a><span class="co">    The addition is performed using the built-in `+` operator.</span></span>
@@ -1325,7 +1333,7 @@ represent the arguments, data types, etc.</p>
 <p>A list of documentation string standards in Python:</p>
 <ul><li>The <a href="https://peps.python.org/pep-0257/" class="external-link">PEP 257</a>
 docstring standard was designed by the maintainers of the Python
-programming langauge.</li>
+programming language.</li>
 <li>The <a href="https://google.github.io/styleguide/pyguide.html#381-docstrings" class="external-link">Google
 Style Guide</a> sets out a docstring format.</li>
 <li>
@@ -1335,8 +1343,8 @@ extension</a> designed for scientific use.</li>
 </ul><p>It doesn’t matter which one you select, as long as it’s used
 consistently across a project and it’s clear what the syntax means. Some
 standards are better-supported by other tools such as
-<abbr title="Integrated development environments">IDEs</abbr> and
-documentation generators.</p>
+<abbr title="Integrated development
+environments">IDEs</abbr> and documentation generators.</p>
 </div>
 </div>
 </div>
@@ -1348,11 +1356,15 @@ and write docstrings automatically, to a certain extent.</p>
 <p>To do this, ask the system to create a docstring and copy your code
 into the prompt text box. Below is an example prompt and the reply
 generated by the Google Gemini algorithm:</p>
-<pre><code>Please generate a docstring for this Python function:
-
-def calculate_rectangle_area(width, height):
-    area = width * height
-    return area</code></pre>
+<div class="codewrapper sourceCode" id="cb27">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb27-1"><a href="#cb27-1" tabindex="-1"></a><span class="ex">Please</span> generate a docstring for this Python function:</span>
+<span id="cb27-2"><a href="#cb27-2" tabindex="-1"></a></span>
+<span id="cb27-3"><a href="#cb27-3" tabindex="-1"></a><span class="ex">def</span> calculate_rectangle_area<span class="er">(</span><span class="ex">width,</span> height<span class="kw">)</span><span class="bu">:</span></span>
+<span id="cb27-4"><a href="#cb27-4" tabindex="-1"></a>    <span class="ex">area</span> = width <span class="pp">*</span> height</span>
+<span id="cb27-5"><a href="#cb27-5" tabindex="-1"></a>    <span class="cf">return</span> <span class="ex">area</span></span></code></pre>
+</div>
 <p>The result is the following docstring, in addition to some helpful
 descriptions of the content that it generated.</p>
 <div class="codewrapper sourceCode" id="cb28">
@@ -1405,7 +1417,7 @@ relevant to your research software?</li>
 <span class="callout-header">Discussion</span>
 <div class="callout-inner">
 <div class="callout-content">
-<p>What are the benefits and risks of using a large langauge model (LLM)
+<p>What are the benefits and risks of using a Large Language Model (LLM)
 service such as Google Gemini or OpenAI ChatGPT to interpret your code
 and produce content that you use in your research?</p>
 <p>How should we critically evaluate this material so that it can be
@@ -1531,8 +1543,8 @@ any links that you are not going to use.
   "url": "https://FAIR2-for-research-software.github.io/Documentation/instructor/docstrings.html",
   "identifier": "https://FAIR2-for-research-software.github.io/Documentation/instructor/docstrings.html",
   "dateCreated": "2024-05-20",
-  "dateModified": "2025-03-05",
-  "datePublished": "2025-11-04"
+  "dateModified": "2025-11-06",
+  "datePublished": "2025-11-06"
 }
 
   </script><script>

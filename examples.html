@@ -348,7 +348,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Documentation examples</h1>
-        <p>Last updated on 2025-03-04 |
+        <p>Last updated on 2025-11-06 |
 
         <a href="https://github.com/FAIR2-for-research-software/Documentation/edit/main/episodes/examples.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -405,7 +405,7 @@ what this code is for or why it was written.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-1" class="tab-content">
-<div id="nav-tabpanel-1-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-Python">
+<div id="nav-tabpanel-1-Python" class="tab-pane show active" aria-labelledby="nav-tab-1-Python" role="tabpanel">
 <p>This is some research code that is contained in a Python
 function.</p>
 <div class="codewrapper sourceCode" id="cb1">
@@ -416,7 +416,7 @@ function.</p>
 <span id="cb1-3"><a href="#cb1-3" tabindex="-1"></a>  <span class="cf">return</span> x <span class="op">*</span> weird_num <span class="op">-</span> ang<span class="op">**</span><span class="dv">3</span> <span class="op">/</span> (weird_num <span class="op">*</span> <span class="dv">2</span>)</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-1-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-R">
+<div id="nav-tabpanel-1-R" class="tab-pane" aria-labelledby="nav-tab-1-R" role="tabpanel">
 <p>This is some research code that is contained in an R function.</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -473,7 +473,7 @@ this course, so don’t worry if they don’t make sense yet!)</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-2" class="tab-content">
-<div id="nav-tabpanel-2-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-2-Python">
+<div id="nav-tabpanel-2-Python" class="tab-pane show active" aria-labelledby="nav-tab-2-Python" role="tabpanel">
 <p>This is a function written in the Python programming language that
 calculates a mathematical result, the details of which aren’t relevant.
 This code has plenty of documentation to help us read and understand
@@ -511,7 +511,7 @@ it.</p>
 <span id="cb3-28"><a href="#cb3-28" tabindex="-1"></a>  <span class="cf">return</span> sine_value</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-2-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-R">
+<div id="nav-tabpanel-2-R" class="tab-pane" aria-labelledby="nav-tab-2-R" role="tabpanel">
 <p>This is a function written in the R programming language that
 calculates a mathematical result, the details of which aren’t relevant.
 This code has plenty of documentation to help us read and understand it.
@@ -605,22 +605,26 @@ in-built function</a> to view the documentation:</p>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="im">import</span> numpy</span>
 <span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a><span class="bu">help</span>(numpy.array)</span></code></pre>
 </div>
-<pre><code>Help on built-in function array in module numpy:
-
-array(...)
-    array(object, dtype=None, *, copy=True, order='K', subok=False, ndmin=0,
-          like=None)
-
-    Create an array.
-
-    Parameters
-    ----------
-    object : array_like
-        An array, any object exposing the array interface, an object whose
-        ``__array__`` method returns an array, or any (nested) sequence.
-        If object is a scalar, a 0-dimensional array containing object is
-        returned.
-...</code></pre>
+<div class="codewrapper sourceCode" id="cb6">
+<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a>Help on built<span class="op">-</span><span class="kw">in</span> function array <span class="kw">in</span> module numpy:</span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a></span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a>array(...)</span>
+<span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a>    array(<span class="bu">object</span>, dtype<span class="op">=</span><span class="va">None</span>, <span class="op">*</span>, copy<span class="op">=</span><span class="va">True</span>, order<span class="op">=</span><span class="st">'K'</span>, subok<span class="op">=</span><span class="va">False</span>, ndmin<span class="op">=</span><span class="dv">0</span>,</span>
+<span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a>          like<span class="op">=</span><span class="va">None</span>)</span>
+<span id="cb6-6"><a href="#cb6-6" tabindex="-1"></a></span>
+<span id="cb6-7"><a href="#cb6-7" tabindex="-1"></a>    Create an array.</span>
+<span id="cb6-8"><a href="#cb6-8" tabindex="-1"></a></span>
+<span id="cb6-9"><a href="#cb6-9" tabindex="-1"></a>    Parameters</span>
+<span id="cb6-10"><a href="#cb6-10" tabindex="-1"></a>    <span class="op">----------</span></span>
+<span id="cb6-11"><a href="#cb6-11" tabindex="-1"></a>    <span class="bu">object</span> : array_like</span>
+<span id="cb6-12"><a href="#cb6-12" tabindex="-1"></a>        An array, <span class="bu">any</span> <span class="bu">object</span> exposing the array interface, an <span class="bu">object</span> whose</span>
+<span id="cb6-13"><a href="#cb6-13" tabindex="-1"></a>        ``__array__`` method returns an array, <span class="kw">or</span> <span class="bu">any</span> (nested) sequence.</span>
+<span id="cb6-14"><a href="#cb6-14" tabindex="-1"></a>        If <span class="bu">object</span> <span class="kw">is</span> a scalar, a <span class="dv">0</span><span class="op">-</span>dimensional array containing <span class="bu">object</span> <span class="kw">is</span></span>
+<span id="cb6-15"><a href="#cb6-15" tabindex="-1"></a>        returned.</span>
+<span id="cb6-16"><a href="#cb6-16" tabindex="-1"></a>...</span></code></pre>
+</div>
 </div>
 <div class="section level3">
 <h3 id="ggplot2-documentation-site">ggplot2 documentation site<a class="anchor" aria-label="anchor" href="#ggplot2-documentation-site"></a></h3>
@@ -726,8 +730,8 @@ any links that you are not going to use.
   "url": "https://FAIR2-for-research-software.github.io/Documentation/examples.html",
   "identifier": "https://FAIR2-for-research-software.github.io/Documentation/examples.html",
   "dateCreated": "2024-05-20",
-  "dateModified": "2025-03-04",
-  "datePublished": "2025-11-04"
+  "dateModified": "2025-11-06",
+  "datePublished": "2025-11-06"
 }
 
   </script><script>
