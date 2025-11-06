@@ -1,0 +1,22 @@
+# Ignore the following commits when attributing blame
+# Please consider adding a short comment with date and reason the commit should be ignored
+
+# 2025-10-17 - Linting with pre-commit hooks
+# markdownlint-cli2
+52b230546605f87bf79c7ed51d402c478a1f5b69
+b0735e9e6fdea3260511d5daa37c3d54411a2b96
+bac5415340216fcf9b33ce58141797b6417c2709
+df6ed5be208975a0edfbf1ba6c097fa2a0091493
+ac7b8972f0671b157aea9d1b861523eef524a6ba
+51e5366cc8133ff65e7f023d28aeeb4df80e8d69
+fc12f4ccbaba69332736aaa5a182d5e119cacbf0
+e2e3df79a5ce01c0ba81b0e8b048d3c1cfdaace2
+c98df0c81e209c2f83d0a651ab38b21cda5c9a79
+7a393d027d9a27c1c6e5b9bdb02170b7435b75ee
+78cc32e576f16aec917b4cca43239ab690364c75
+a81cd405888e3d47d8e8a3efab899597fc6c67fb
+# codespell
+031d2fe51572dd79d117bb682f8783c1065d727d
+# pre-commit linting
+848f2e433c8925257f86879e00a4dd565aecbdbc
+70935034b3d24e861fceb82298c05355bdeb9560

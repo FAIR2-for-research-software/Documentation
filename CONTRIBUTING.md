@@ -1,10 +1,10 @@
-## Contributing
+# Contributing
 
 We welcome contributions to this open educational resource: fixes to
 existing material, bug reports, and reviews of proposed changes are all
 welcome.
 
-### Contributor Agreement
+## Contributor Agreement
 
 By contributing, you agree that we may redistribute your work under [our
 license](LICENSE.md). In exchange, we will address your issues and/or assess
@@ -30,7 +30,7 @@ our [code of conduct](CODE_OF_CONDUCT.md).
 Note: if you want to build the website locally, please refer to [The Workbench
 documentation][template-doc].
 
-### Using GitHub
+## Using GitHub
 
 If you choose to contribute via GitHub, you may want to look at [How to
 Contribute to an Open Source Project on GitHub][how-contribute]. In brief, we
@@ -49,19 +49,8 @@ NB: The published copy of the lesson is usually in the `main` branch.
 [repo]: https://github.com/Joe-Heffer-Shef/FAIR_Code_design
 [repo-issues]: https://github.com/Joe-Heffer-Shef/FAIR_Code_design/issues
 [contact]: mailto:j.heffer@sheffield.ac.uk
-[cp-site]: https://carpentries.org/
-[dc-issues]: https://github.com/issues?q=user%3Adatacarpentry
-[dc-lessons]: https://datacarpentry.org/lessons/
-[dc-site]: https://datacarpentry.org/
-[discuss-list]: https://carpentries.topicbox.com/groups/discuss
 [github]: https://github.com
 [github-flow]: https://guides.github.com/introduction/flow/
 [github-join]: https://github.com/join
 [how-contribute]: https://egghead.io/courses/how-to-contribute-to-an-open-source-project-on-github
-[issues]: https://carpentries.org/help-wanted-issues/
-[lc-issues]: https://github.com/issues?q=user%3ALibraryCarpentry
-[swc-issues]: https://github.com/issues?q=user%3Aswcarpentry
-[swc-lessons]: https://software-carpentry.org/lessons/
-[swc-site]: https://software-carpentry.org/
-[lc-site]: https://librarycarpentry.org/
 [template-doc]: https://carpentries.github.io/workbench/

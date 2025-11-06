@@ -13,9 +13,9 @@ Services&mdash;Research & Innovation IT](https://www.sheffield.ac.uk/it-services
 
 Thank you to the following people for their help in producing and testing this module.
 
- - Joe Heffer
- - Farhad Allian
- - Christopher Wild
- - Neil Shepherd
+- Joe Heffer
+- Farhad Allian
+- Christopher Wild
+- Neil Shephard
 
 See the full [list of contributors](https://github.com/FAIR2-for-research-software/Documentation/graphs/contributors).
