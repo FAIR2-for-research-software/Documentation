@@ -16,5 +16,5 @@
 "instructors/instructor-notes.md" "39e2d944ffa20a3bc40beaa5a45340d9" "site/built/instructor-notes.md" "2025-11-06"
 "learners/acknowledgements.md" "bf0bc3426bc000522325ab6719770eaf" "site/built/acknowledgements.md" "2025-11-06"
 "learners/reference.md" "41c23f943a2fd00b0ac2dc6ae8616423" "site/built/reference.md" "2025-11-06"
-"learners/setup.md" "85866bcf41348315e6f2bbc77ad15d56" "site/built/setup.md" "2025-11-06"
+"learners/setup.md" "3c9c6c707996a9c8c78270484e4c3e97" "site/built/setup.md" "2026-02-03"
 "profiles/learner-profiles.md" "5d5191242d8b1138d1f975b348bcdbd7" "site/built/learner-profiles.md" "2025-11-06"
