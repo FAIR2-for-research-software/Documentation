@@ -50,6 +50,8 @@ Evaluate these documentation sites.
 
 :::::::::::::::::::::::::::::::::::::
 
+Keep these impressions in mind as we explore what makes a good documentation site and how to build one.
+
 ## Why create a website?
 
 There are many advantages to building a documentation site to provide a information-rich resource for researchers who
@@ -82,13 +84,25 @@ coordinating the team to write one as soon as possible to help the project conti
 
 ::::::::::::::::::::::::::::::::::::: discussion
 
-When is it appropriate to establish a documentation website?  Consider the following factors:
+When is it appropriate to establish a documentation website? Consider the following factors:
 
 - How many resources will it take to write and maintain?
 - How many end-users need the information?
 - Is there a simpler format that can convey the same information?
 
 :::::::::::::::::::::::::::::::::::::
+
+Once you've decided to create a documentation site, the next step is to decide what to put in it and how to write it.
+
+## Writing style
+
+As we discussed in the [episode on READMEs](readmes.md), it's important to strive to use everyday, jargon-free
+language. It helps to set an approachable tone that encourages others to use the software and get involved with the
+project. This will ensure that the code is accessible to the widest possible layers of the research community and
+foster collaboration.
+
+Always consider the target audience of your documentation, because your user base may be unaware of some of the unstated
+assumptions and technical background knowledge that you take for granted.
 
 ## Contents
 
@@ -138,19 +152,10 @@ the exclusive knowledge of a few individuals and are hard to find.
 An appendix containing frequently asked questions (FAQs) is very useful to save yourself time in responding to common
 queries from the users of your code.
 
-## Writing style
-
-As we discussed in the [episode on READMEs](readmes.md), it's important to strive to use everyday, jargon-free
-language. It helps to set an approachable tone that encourages others to use the software and get involved with the
-project. This will ensure that the code is accessible to the widest possible layers of the research community and
-foster collaboration.
-
-Always consider the target audience of your documentation, because your user base may be unaware of some of the unstated
-assumptions and technical background knowledge that you take for granted.
-
 ## Tools
 
-There are various tools available to build documentation sites for your research software.
+There are various tools available to build documentation sites for your research software. The right choice depends on
+your programming language, the complexity of your project, and how much control you need over the site's appearance.
 
 ### GitHub Wiki
 
@@ -178,13 +183,28 @@ wikis](https://docs.github.com/en/communities/documenting-your-project-with-wiki
 
 :::
 
-### Documentation sites for R packages
+::::::::::::::::::::::::::::::::::::: challenge
 
-It's also possible to generate a documentation site to accompany R packages that you create.  For more information about
+## Create a wiki page
+
+Navigate to your code repository on GitHub and create a wiki. Add a page that describes how to install your software.
+
+Consider what information a new user would need to get started. How does it feel to write for that audience?
+
+:::::::::::::::::::::::::::::::::::::::::::::::
+
+### Standalone site generators
+
+For projects that need more structure, customisation, or automatic generation of content from code, standalone site
+generator tools are a good choice.
+
+#### Documentation sites for R packages
+
+It's also possible to generate a documentation site to accompany R packages that you create. For more information about
 this, please refer to the book *R Packages* by Hadley Wickham, which has a chapter on [documentation
 websites](https://r-pkgs.org/website.html).
 
-### Sphinx
+#### Sphinx
 
 [Sphinx](https://www.sphinx-doc.org/) is a tool for building documentation websites that is commonly used amongst
 developers of Python packages, although it's also compatible with other programming languages. It doesn't currently
@@ -202,11 +222,11 @@ Sphinx documentation.
 
 :::
 
-#### Getting started
+##### Getting started
 
 Let's use Sphinx to create a documentation site for our Python code.
 
-##### Installing Sphinx
+###### Installing Sphinx
 
 Navigate to the root folder of your code project.  Create a virtual environment using
 [venv](https://docs.python.org/3/library/venv.html) which is a separate area in which to install the Sphinx package.
@@ -268,7 +288,7 @@ Sphinx](https://www.sphinx-doc.org/en/master/usage/installation.html).
 pip install sphinx
 ```
 
-#### Start a new Sphinx project
+##### Start a new Sphinx project
 
 Sphinx includes a command to set up a new project called
 [sphinx-quickstart](https://www.sphinx-doc.org/en/master/man/sphinx-quickstart.html). Navigate to your project's root
@@ -295,7 +315,7 @@ documentation.
 
 :::
 
-#### Building the site
+##### Building the site
 
 In this context, *building* means taking our collection of Sphinx files and converting them into the source code files
 that define a website.  Sphinx will create *HyperText Markup Language* (HTML) files, which is the markup language for
@@ -315,13 +335,13 @@ your handiwork.
 
 ![The Sphinx homepage for our documentation site](fig/sphinx-build-screenshot.png "Sphinx")
 
-#### Autodoc
+##### Autodoc
 
 It can be useful to automatically populate our documentation sites by converting our [documentation
 strings](docstrings.md) into formatted text. We can achieve this using the
 [autodoc](https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html) plugin for Sphinx.
 
-##### Configuring Autodoc
+###### Configuring Autodoc
 
 Let's set up the options for `autodoc`.  (If you struggle with these steps, please refer to the [template
 project](https://github.com/Joe-Heffer-Shef/oddsong).)
@@ -404,11 +424,25 @@ discuss what you find.
 Now that you've started writing your documentation website, there are various ways to upload it to the internet so that
 others can read it.
 
-There are several hosting services that can be used to publish your documentation site, such as [GitHub
-Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages) and [Read the
-Docs](https://about.readthedocs.com/).
+**[GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages)** is a free
+hosting service built into GitHub. It can automatically build and publish your site whenever you push changes to your
+repository, making it a convenient choice if your code is already hosted on GitHub.
 
-The detailed of setting up the deployment of your site to these platforms is beyond the scope of this course.
+**[Read the Docs](https://about.readthedocs.com/)** is a dedicated documentation hosting platform that integrates with
+Sphinx and other generators. It automatically rebuilds your documentation when you push new commits and provides
+versioned documentation so users can browse the docs for older releases of your software.
+
+::: callout
+
+## Choosing a hosting platform
+
+Both platforms offer free tiers for open-source projects. GitHub Pages is simpler to set up, while Read the Docs
+provides more documentation-specific features such as version switching and search.
+
+:::
+
+The detailed steps for configuring deployment to these platforms are beyond the scope of this course, but both provide
+clear guides to get you started.
 
 ::::::::::::::::::::::::::::::::::::: keypoints
 
