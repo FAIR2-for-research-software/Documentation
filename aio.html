@@ -601,7 +601,7 @@ Romano.</p>
   Software journals
   </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="accordion-body">
 <p>An increasing number of journals allow and encourage the publication
 of research software and open data. Some journals focus on a specific
@@ -3650,7 +3650,7 @@ labels the types of the inputs and output of the function.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>None of these code examples will cause an error because type hints
 are just <strong>passive labels</strong> that document our code. They
@@ -4147,6 +4147,8 @@ is a machine learning library for the Python programming language.</li>
 </div>
 </div>
 </div>
+<p>Keep these impressions in mind as we explore what makes a good
+documentation site and how to build one.</p>
 </section><section><h2 class="section-heading" id="why-create-a-website">Why create a website?<a class="anchor" aria-label="anchor" href="#why-create-a-website"></a>
 </h2>
 <hr class="half-width">
@@ -4205,7 +4207,21 @@ the following factors:</p>
 </div>
 </div>
 </div>
+<p>Once you’ve decided to create a documentation site, the next step is
+to decide what to put in it and how to write it.</p>
 </div>
+</section><section><h2 class="section-heading" id="writing-style">Writing style<a class="anchor" aria-label="anchor" href="#writing-style"></a>
+</h2>
+<hr class="half-width">
+<p>As we discussed in the <a href="readmes.html">episode on READMEs</a>,
+it’s important to strive to use everyday, jargon-free language. It helps
+to set an approachable tone that encourages others to use the software
+and get involved with the project. This will ensure that the code is
+accessible to the widest possible layers of the research community and
+foster collaboration.</p>
+<p>Always consider the target audience of your documentation, because
+your user base may be unaware of some of the unstated assumptions and
+technical background knowledge that you take for granted.</p>
 </section><section><h2 class="section-heading" id="contents">Contents<a class="anchor" aria-label="anchor" href="#contents"></a>
 </h2>
 <hr class="half-width">
@@ -4275,23 +4291,13 @@ knowledge of a few individuals and are hard to find.</p>
 useful to save yourself time in responding to common queries from the
 users of your code.</p>
 </div>
-</section><section><h2 class="section-heading" id="writing-style">Writing style<a class="anchor" aria-label="anchor" href="#writing-style"></a>
-</h2>
-<hr class="half-width">
-<p>As we discussed in the <a href="readmes.html">episode on READMEs</a>,
-it’s important to strive to use everyday, jargon-free language. It helps
-to set an approachable tone that encourages others to use the software
-and get involved with the project. This will ensure that the code is
-accessible to the widest possible layers of the research community and
-foster collaboration.</p>
-<p>Always consider the target audience of your documentation, because
-your user base may be unaware of some of the unstated assumptions and
-technical background knowledge that you take for granted.</p>
 </section><section><h2 class="section-heading" id="tools">Tools<a class="anchor" aria-label="anchor" href="#tools"></a>
 </h2>
 <hr class="half-width">
 <p>There are various tools available to build documentation sites for
-your research software.</p>
+your research software. The right choice depends on your programming
+language, the complexity of your project, and how much control you need
+over the site’s appearance.</p>
 <div class="section level3">
 <h3 id="github-wiki">GitHub Wiki<a class="anchor" aria-label="anchor" href="#github-wiki"></a>
 </h3>
@@ -4325,20 +4331,41 @@ your project with wikis</a> on the GitHub documentation.</p>
 </div>
 </div>
 </div>
+<div id="create-a-wiki-page" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<span class="callout-header">Discussion</span>
+<div id="create-a-wiki-page" class="callout-inner">
+<h3 class="callout-title">Create a wiki page</h3>
+<div class="callout-content">
+<p>Navigate to your code repository on GitHub and create a wiki. Add a
+page that describes how to install your software.</p>
+<p>Consider what information a new user would need to get started. How
+does it feel to write for that audience?</p>
+</div>
+</div>
+</div>
 </div>
 </div>
 <div class="section level3">
-<h3 id="documentation-sites-for-r-packages">Documentation sites for R packages<a class="anchor" aria-label="anchor" href="#documentation-sites-for-r-packages"></a>
+<h3 id="standalone-site-generators">Standalone site generators<a class="anchor" aria-label="anchor" href="#standalone-site-generators"></a>
 </h3>
+<p>For projects that need more structure, customisation, or automatic
+generation of content from code, standalone site generator tools are a
+good choice.</p>
+<div class="section level4">
+<h4 id="documentation-sites-for-r-packages">Documentation sites for R packages<a class="anchor" aria-label="anchor" href="#documentation-sites-for-r-packages"></a>
+</h4>
 <p>It’s also possible to generate a documentation site to accompany R
 packages that you create. For more information about this, please refer
 to the book <em>R Packages</em> by Hadley Wickham, which has a chapter
 on <a href="https://r-pkgs.org/website.html" class="external-link">documentation
 websites</a>.</p>
 </div>
-<div class="section level3">
-<h3 id="sphinx">Sphinx<a class="anchor" aria-label="anchor" href="#sphinx"></a>
-</h3>
+<div class="section level4">
+<h4 id="sphinx">Sphinx<a class="anchor" aria-label="anchor" href="#sphinx"></a>
+</h4>
 <p><a href="https://www.sphinx-doc.org/" class="external-link">Sphinx</a> is a tool for
 building documentation websites that is commonly used amongst developers
 of Python packages, although it’s also compatible with other programming
@@ -4362,14 +4389,14 @@ project</a> in the Sphinx documentation.</p>
 </div>
 </div>
 </div>
-<div class="section level4">
-<h4 id="getting-started-1">Getting started<a class="anchor" aria-label="anchor" href="#getting-started-1"></a>
-</h4>
+<div class="section level5">
+<h5 id="getting-started-1">Getting started<a class="anchor" aria-label="anchor" href="#getting-started-1"></a>
+</h5>
 <p>Let’s use Sphinx to create a documentation site for our Python
 code.</p>
-<div class="section level5">
-<h5 id="installing-sphinx">Installing Sphinx<a class="anchor" aria-label="anchor" href="#installing-sphinx"></a>
-</h5>
+<div class="section level6">
+<h6 id="installing-sphinx">Installing Sphinx<a class="anchor" aria-label="anchor" href="#installing-sphinx"></a>
+</h6>
 <p>Navigate to the root folder of your code project. Create a virtual
 environment using <a href="https://docs.python.org/3/library/venv.html" class="external-link">venv</a> which is a
 separate area in which to install the Sphinx package. This command will
@@ -4473,9 +4500,9 @@ Sphinx</a>.</p>
 </div>
 </div>
 </div>
-<div class="section level4">
-<h4 id="start-a-new-sphinx-project">Start a new Sphinx project<a class="anchor" aria-label="anchor" href="#start-a-new-sphinx-project"></a>
-</h4>
+<div class="section level5">
+<h5 id="start-a-new-sphinx-project">Start a new Sphinx project<a class="anchor" aria-label="anchor" href="#start-a-new-sphinx-project"></a>
+</h5>
 <p>Sphinx includes a command to set up a new project called <a href="https://www.sphinx-doc.org/en/master/man/sphinx-quickstart.html" class="external-link">sphinx-quickstart</a>.
 Navigate to your project’s root folder and run the following
 command.</p>
@@ -4507,9 +4534,9 @@ document structure</a> on the Sphinx documentation.</p>
 </div>
 </div>
 </div>
-<div class="section level4">
-<h4 id="building-the-site">Building the site<a class="anchor" aria-label="anchor" href="#building-the-site"></a>
-</h4>
+<div class="section level5">
+<h5 id="building-the-site">Building the site<a class="anchor" aria-label="anchor" href="#building-the-site"></a>
+</h5>
 <p>In this context, <em>building</em> means taking our collection of
 Sphinx files and converting them into the source code files that define
 a website. Sphinx will create <em>HyperText Markup Language</em> (HTML)
@@ -4534,16 +4561,16 @@ handiwork.</p>
 site</div>
 </figure>
 </div>
-<div class="section level4">
-<h4 id="autodoc">Autodoc<a class="anchor" aria-label="anchor" href="#autodoc"></a>
-</h4>
+<div class="section level5">
+<h5 id="autodoc">Autodoc<a class="anchor" aria-label="anchor" href="#autodoc"></a>
+</h5>
 <p>It can be useful to automatically populate our documentation sites by
 converting our <a href="docstrings.html">documentation strings</a> into
 formatted text. We can achieve this using the <a href="https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html" class="external-link">autodoc</a>
 plugin for Sphinx.</p>
-<div class="section level5">
-<h5 id="configuring-autodoc">Configuring Autodoc<a class="anchor" aria-label="anchor" href="#configuring-autodoc"></a>
-</h5>
+<div class="section level6">
+<h6 id="configuring-autodoc">Configuring Autodoc<a class="anchor" aria-label="anchor" href="#configuring-autodoc"></a>
+</h6>
 <p>Let’s set up the options for <code>autodoc</code>. (If you struggle
 with these steps, please refer to the <a href="https://github.com/Joe-Heffer-Shef/oddsong" class="external-link">template
 project</a>.)</p>
@@ -4658,18 +4685,42 @@ folder and discuss what you find.</p>
 </div>
 </div>
 </div>
+</div>
 </section><section><h2 class="section-heading" id="publishing">Publishing<a class="anchor" aria-label="anchor" href="#publishing"></a>
 </h2>
 <hr class="half-width">
 <p>Now that you’ve started writing your documentation website, there are
 various ways to upload it to the internet so that others can read
 it.</p>
-<p>There are several hosting services that can be used to publish your
-documentation site, such as <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages" class="external-link">GitHub
-Pages</a> and <a href="https://about.readthedocs.com/" class="external-link">Read the
-Docs</a>.</p>
-<p>The detailed of setting up the deployment of your site to these
-platforms is beyond the scope of this course.</p>
+<p><strong><a href="https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages" class="external-link">GitHub
+Pages</a></strong> is a free hosting service built into GitHub. It can
+automatically build and publish your site whenever you push changes to
+your repository, making it a convenient choice if your code is already
+hosted on GitHub.</p>
+<p><strong><a href="https://about.readthedocs.com/" class="external-link">Read the
+Docs</a></strong> is a dedicated documentation hosting platform that
+integrates with Sphinx and other generators. It automatically rebuilds
+your documentation when you push new commits and provides versioned
+documentation so users can browse the docs for older releases of your
+software.</p>
+<div id="choosing-a-hosting-platform" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="choosing-a-hosting-platform" class="callout-inner">
+<h3 class="callout-title">Choosing a hosting platform</h3>
+<div class="callout-content">
+<p>Both platforms offer free tiers for open-source projects. GitHub
+Pages is simpler to set up, while Read the Docs provides more
+documentation-specific features such as version switching and
+search.</p>
+</div>
+</div>
+</div>
+<p>The detailed steps for configuring deployment to these platforms are
+beyond the scope of this course, but both provide clear guides to get
+you started.</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
