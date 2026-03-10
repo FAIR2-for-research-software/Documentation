@@ -1,4 +1,5 @@
 "file" "checksum" "built" "date"
+"CLAUDE.md" "ee03d23193a47e29c88dc73851761ee0" "site/built/CLAUDE.md" "2026-03-10"
 "CODE_OF_CONDUCT.md" "6276ce61bd9c6aa26d0efaa7ea706a96" "site/built/CODE_OF_CONDUCT.md" "2025-11-06"
 "LICENSE.md" "76d644261211c9c01c3f0a4ab5958fec" "site/built/LICENSE.md" "2025-11-06"
 "SECURITY.md" "8a8cea030aafe5b2e6cce068b9f4b23c" "site/built/SECURITY.md" "2024-05-21"
