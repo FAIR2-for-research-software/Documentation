@@ -98,7 +98,7 @@ These steps may be achieved using the terminal as follows:
 ```bash
 mkdir oddsong
 touch oddsong/README.txt
-echo "This is my code" >> my_project/oddsong.txt
+echo "This is my code" >> oddsong/README.txt
 nano oddsong/README.txt
 ```
 
@@ -112,7 +112,7 @@ These steps may be achieved using the terminal as follows:
 ```bash
 mkdir oddsong
 touch oddsong/README.txt
-echo "This is my code" >> my_project/oddsong.txt
+echo "This is my code" >> oddsong/README.txt
 nano oddsong/README.txt
 ```
 
