@@ -2,6 +2,10 @@
 title: 'Instructor Notes'
 ---
 
+## Slides
+
+The slides for this lesson are available on [Google Slides](https://docs.google.com/presentation/d/1XFIGfwBwOAxAW1strp3riXYyqFfw7AoQhg1LLKKvT8k/edit?usp=sharing).
+
 The presentation course of this course should be modified depending on the target audience.
 
 Many beginner coders in the research world will not need to know advanced skills such as how to automatically generate
