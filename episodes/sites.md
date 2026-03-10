@@ -441,8 +441,87 @@ provides more documentation-specific features such as version switching and sear
 
 :::
 
-The detailed steps for configuring deployment to these platforms are beyond the scope of this course, but both provide
-clear guides to get you started.
+### GitHub Pages
+
+::: prereq
+
+## Before you start
+
+Your repository must be **public** (or you must have a GitHub Pro account) and already pushed to GitHub.
+
+:::
+
+#### Enable GitHub Pages
+
+In your repository on GitHub, go to **Settings → Pages** and set the **Source** to **GitHub Actions**.
+
+#### Create the workflow file
+
+Create the file `.github/workflows/docs.yml` in your repository with the following contents:
+
+```yaml
+name: Docs
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+      - run: pip install sphinx
+      - run: sphinx-build -M html docs docs/_build
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: docs/_build/html
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
+```
+
+#### Update `.gitignore`
+
+Add `docs/_build/` to your `.gitignore` file so the local build output is not committed to the repository.
+
+#### Push and verify
+
+Stage and commit the new workflow file, then push to GitHub:
+
+```bash
+git add .github/workflows/docs.yml .gitignore
+git commit -m "Add GitHub Pages deployment workflow"
+git push
+```
+
+Open the **Actions** tab in your repository to watch the workflow run. Once it completes successfully, the published URL
+will appear under **Settings → Pages**.
+
+::: challenge
+
+## Publish your Sphinx site
+
+Follow the steps above to publish the Sphinx documentation site you built earlier to GitHub Pages.
+
+Once the workflow has run successfully, share the URL with a neighbour and check that each other's sites are accessible.
+
+:::
 
 ::::::::::::::::::::::::::::::::::::: keypoints
 
@@ -450,7 +529,7 @@ clear guides to get you started.
   successful adoption by the wider research community.
 - Documentation sites contain comprehensive installation instructions, user guides, and troubleshooting tips.
 - There are several libraries that may be used to generate documentation sites.
-- Documentation websites may be deployed to a hosting platform.
+- Documentation websites can be deployed automatically to GitHub Pages using a GitHub Actions workflow.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
