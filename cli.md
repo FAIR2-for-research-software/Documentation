@@ -16,7 +16,7 @@ exercises: 2
 
 - Learn what a command-line interface is
 - Understand the benefits of <acronym title="command-line interfaces">CLIs</acronym> for making research code more
-  accessible?
+  accessible
 - Gain a basic familiarity with the `argparse` module in Python
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
