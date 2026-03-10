@@ -28,7 +28,7 @@ A documentation website is a user guide and reference manual for a library of re
 ways to put helpful notes in our code, but now we'll learn how to write a longer, more complete guide to the research
 tools you create.
 
-A documentation site bring all your user guidance into one place. This kind of resource may be prepared for research
+A documentation site brings all your user guidance into one place. This kind of resource may be prepared for research
 software and will usually contain an introduction, installation instructions, a user guide, troubleshooting tips, and an
 in-depth reference section.
 
@@ -68,7 +68,7 @@ verify results and other people's outputs.
 Documentation sites are really useful for **introducing new users to your software**. It makes it much easier and faster
 for new users to get started using your software to boost their research. It's one of the most effective ways to create
 a user base that has a sophisticated understanding of the research code, which is essential for them to adapt it to the
-complex problems that often raise in research contexts.
+complex problems that often arise in research contexts.
 
 They're also a valuable resource for your existing user base, enabling them to look up reference material or search the
 manual to find new capabilities they weren't aware of before. This will increase the potential for your software to
@@ -78,7 +78,7 @@ increase the productivity of other research teams.
 
 Although the advantages are numerous, not all software packages require a comprehensive documentation website. However,
 for any code project that is growing in the number of collaborators, users, and technical complexity, consider
-coordinating the team to write one as soon as possible to help the project continue its' healthy growth.
+coordinating the team to write one as soon as possible to help the project continue its healthy growth.
 
 ::::::::::::::::::::::::::::::::::::: discussion
 
@@ -93,7 +93,7 @@ When is it appropriate to establish a documentation website?  Consider the follo
 ## Contents
 
 Documentation pages contain **comprehensive information** about a particular piece of research software. Think of it
-like a user manual for your car or an instruction guide for building a piece of furniature.
+like a user manual for your car or an instruction guide for building a piece of furniture.
 
 ### Research context
 
@@ -118,7 +118,7 @@ get off the ground in implementing common research workflows to achieve their sp
 
 ### User reference
 
-If you have written functions that are intended to be use in other researchers' code, then an on-depth explanation of
+If you have written functions that are intended to be use in other researchers' code, then an in-depth explanation of
 these procedures is essential reference material. In the world of software engineering, these detailed appendices are
 called <acronym title="Application Programming Interfaces">API</acronym> references, which list each function and
 describe how the arguments may be used to control how the code works. This content may be automatically generated from
@@ -130,7 +130,7 @@ As issues come up with your research code, and are eventually resolved and clari
 troubles and make them available to the entire user base in your documentation site. This will help users to identify
 and fix common misunderstandings and technical problems they may run into when utilising your code.
 
-This prevents a situation where potential solutions to common issues do exist, but are scattered around the internet are
+This prevents a situation where potential solutions to common issues do exist, but are scattered around the internet and are
 the exclusive knowledge of a few individuals and are hard to find.
 
 ### FAQs
@@ -142,7 +142,7 @@ queries from the users of your code.
 
 As we discussed in the [episode on READMEs](readmes.md), it's important to strive to use everyday, jargon-free
 language. It helps to set an approachable tone that encourages others to use the software and get involved with the
-project. This will en sure that the code is accessible to the widest possible layers of the research community and
+project. This will ensure that the code is accessible to the widest possible layers of the research community and
 foster collaboration.
 
 Always consider the target audience of your documentation, because your user base may be unaware of some of the unstated
@@ -154,7 +154,7 @@ There are various tools available to build documentation sites for your research
 
 ### GitHub Wiki
 
-If you are publishing your code on GitHub, which is a web service that hosts costs repositories, then one of the easiest
+If you are publishing your code on GitHub, which is a web service that hosts code repositories, then one of the easiest
 ways to create a documentation site is to use the wiki feature on that platform. This is a great way to write detailed,
 structured documents containing long-form content that describes aspects of your software. What's more, it's available
 alongside your code so your documentation and software are located in one place.
@@ -190,7 +190,7 @@ websites](https://r-pkgs.org/website.html).
 developers of Python packages, although it's also compatible with other programming languages. It doesn't currently
 support packages written using the R statistical language.
 
-Sphinx is a documentation generator tool takes plain text files that use a markup syntax (such as reStructuredText or
+Sphinx is a documentation generator tool that takes plain text files that use a markup syntax (such as reStructuredText or
 Markdown) for formatting the content of your documentation site and transforms them into various output formats, ready
 to be published on the internet. It has a number of useful features, but in this module we'll learn the basics to
 document our research code.
