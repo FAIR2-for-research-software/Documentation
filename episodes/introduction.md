@@ -18,6 +18,14 @@ exercises: 2
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+::: prereq
+
+## Slides
+
+The slides for this lesson are available on [Google Slides](https://docs.google.com/presentation/d/1XFIGfwBwOAxAW1strp3riXYyqFfw7AoQhg1LLKKvT8k/edit?usp=sharing).
+
+:::
+
 ## Introduction
 
 There are many kinds of research software, such as:
