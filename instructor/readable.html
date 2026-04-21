@@ -254,7 +254,7 @@
       </button>
     </div><!--/div.accordion-header-->
 
-    <div id="flush-collapsecurrent" class="accordion-collapse collapse show" aria-labelledby="flush-headingcurrent" data-bs-parent="#accordionFlushcurrent">
+    <div id="flush-collapsecurrent" class="accordion-collapse collapse show" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
         <ul><li><a href="#syntax-highlighting">Syntax highlighting</a></li>
 <li><a href="#meaningful-names">Meaningful names</a></li>
@@ -446,22 +446,22 @@ shown in a red font.</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" tabindex="-1"></a><span class="kw">def</span> count_word_occurrences(filename, word_to_count):</span>
-<span id="cb2-2"><a href="#cb2-2" tabindex="-1"></a>  <span class="co">"""</span></span>
-<span id="cb2-3"><a href="#cb2-3" tabindex="-1"></a><span class="co">  This function counts the number of times a specific word appears in a text file.</span></span>
-<span id="cb2-4"><a href="#cb2-4" tabindex="-1"></a><span class="co">  """</span></span>
-<span id="cb2-5"><a href="#cb2-5" tabindex="-1"></a>  word_count <span class="op">=</span> <span class="dv">0</span></span>
-<span id="cb2-6"><a href="#cb2-6" tabindex="-1"></a>  <span class="co"># Read the file line by line</span></span>
-<span id="cb2-7"><a href="#cb2-7" tabindex="-1"></a>  <span class="cf">with</span> <span class="bu">open</span>(filename, <span class="st">"r"</span>) <span class="im">as</span> text_file:</span>
-<span id="cb2-8"><a href="#cb2-8" tabindex="-1"></a>    <span class="cf">for</span> line <span class="kw">in</span> text_file:</span>
-<span id="cb2-9"><a href="#cb2-9" tabindex="-1"></a>        <span class="co"># Convert the line to lowercase for case-insensitive counting</span></span>
-<span id="cb2-10"><a href="#cb2-10" tabindex="-1"></a>        line <span class="op">=</span> line.lower()</span>
-<span id="cb2-11"><a href="#cb2-11" tabindex="-1"></a>        words <span class="op">=</span> line.split()</span>
-<span id="cb2-12"><a href="#cb2-12" tabindex="-1"></a></span>
-<span id="cb2-13"><a href="#cb2-13" tabindex="-1"></a>        <span class="co"># Count the occurrences of the word in the current line</span></span>
-<span id="cb2-14"><a href="#cb2-14" tabindex="-1"></a>        word_count <span class="op">+=</span> words.count(word_to_count)</span>
-<span id="cb2-15"><a href="#cb2-15" tabindex="-1"></a></span>
-<span id="cb2-16"><a href="#cb2-16" tabindex="-1"></a>  <span class="cf">return</span> word_count</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" tabindex="-1" aria-label="code-block-2-1"></a><span class="kw">def</span> count_word_occurrences(filename, word_to_count):</span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1" aria-label="code-block-2-2"></a>  <span class="co">"""</span></span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1" aria-label="code-block-2-3"></a><span class="co">  This function counts the number of times a specific word appears in a text file.</span></span>
+<span id="cb2-4"><a href="#cb2-4" tabindex="-1" aria-label="code-block-2-4"></a><span class="co">  """</span></span>
+<span id="cb2-5"><a href="#cb2-5" tabindex="-1" aria-label="code-block-2-5"></a>  word_count <span class="op">=</span> <span class="dv">0</span></span>
+<span id="cb2-6"><a href="#cb2-6" tabindex="-1" aria-label="code-block-2-6"></a>  <span class="co"># Read the file line by line</span></span>
+<span id="cb2-7"><a href="#cb2-7" tabindex="-1" aria-label="code-block-2-7"></a>  <span class="cf">with</span> <span class="bu">open</span>(filename, <span class="st">"r"</span>) <span class="im">as</span> text_file:</span>
+<span id="cb2-8"><a href="#cb2-8" tabindex="-1" aria-label="code-block-2-8"></a>    <span class="cf">for</span> line <span class="kw">in</span> text_file:</span>
+<span id="cb2-9"><a href="#cb2-9" tabindex="-1" aria-label="code-block-2-9"></a>        <span class="co"># Convert the line to lowercase for case-insensitive counting</span></span>
+<span id="cb2-10"><a href="#cb2-10" tabindex="-1" aria-label="code-block-2-10"></a>        line <span class="op">=</span> line.lower()</span>
+<span id="cb2-11"><a href="#cb2-11" tabindex="-1" aria-label="code-block-2-11"></a>        words <span class="op">=</span> line.split()</span>
+<span id="cb2-12"><a href="#cb2-12" tabindex="-1" aria-label="code-block-2-12"></a></span>
+<span id="cb2-13"><a href="#cb2-13" tabindex="-1" aria-label="code-block-2-13"></a>        <span class="co"># Count the occurrences of the word in the current line</span></span>
+<span id="cb2-14"><a href="#cb2-14" tabindex="-1" aria-label="code-block-2-14"></a>        word_count <span class="op">+=</span> words.count(word_to_count)</span>
+<span id="cb2-15"><a href="#cb2-15" tabindex="-1" aria-label="code-block-2-15"></a></span>
+<span id="cb2-16"><a href="#cb2-16" tabindex="-1" aria-label="code-block-2-16"></a>  <span class="cf">return</span> word_count</span></code></pre>
 </div>
 </div>
 <div id="nav-tabpanel-1-R" class="tab-pane" aria-labelledby="nav-tab-1-R" role="tabpanel">
@@ -469,47 +469,47 @@ shown in a red font.</p>
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">DEFAULT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode default" tabindex="0"><code class="sourceCode default"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a>#' Function to count word occurrences in a text file</span>
-<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a>count_word_occurrences &lt;- function(filename, word_to_count) {</span>
-<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a>  text_file &lt;- file(filename, "r")</span>
-<span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a>  word_count &lt;- 0</span>
-<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a></span>
-<span id="cb3-6"><a href="#cb3-6" tabindex="-1"></a>  # Read the file line by line using a loop</span>
-<span id="cb3-7"><a href="#cb3-7" tabindex="-1"></a>  for (line in readLines(text_file)) {</span>
-<span id="cb3-8"><a href="#cb3-8" tabindex="-1"></a>    # Convert the line to lowercase for case-insensitive counting</span>
-<span id="cb3-9"><a href="#cb3-9" tabindex="-1"></a>    line &lt;- tolower(line)</span>
-<span id="cb3-10"><a href="#cb3-10" tabindex="-1"></a></span>
-<span id="cb3-11"><a href="#cb3-11" tabindex="-1"></a>    # Split the line into words</span>
-<span id="cb3-12"><a href="#cb3-12" tabindex="-1"></a>    words &lt;- strsplit(line, split = " ")[[1]]  # Extract the first element (vector of words)</span>
-<span id="cb3-13"><a href="#cb3-13" tabindex="-1"></a></span>
-<span id="cb3-14"><a href="#cb3-14" tabindex="-1"></a>    # Count the occurrences of the word in the current line</span>
-<span id="cb3-15"><a href="#cb3-15" tabindex="-1"></a>    word_count &lt;- word_count + sum(words == word_to_count)</span>
-<span id="cb3-16"><a href="#cb3-16" tabindex="-1"></a>  }</span>
-<span id="cb3-17"><a href="#cb3-17" tabindex="-1"></a>  close(text_file)</span>
-<span id="cb3-18"><a href="#cb3-18" tabindex="-1"></a>  return(word_count)</span>
-<span id="cb3-19"><a href="#cb3-19" tabindex="-1"></a>}</span></code></pre>
+<pre class="sourceCode default" tabindex="0"><code class="sourceCode default"><span id="cb3-1"><a href="#cb3-1" tabindex="-1" aria-label="code-block-3-1"></a>#' Function to count word occurrences in a text file</span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1" aria-label="code-block-3-2"></a>count_word_occurrences &lt;- function(filename, word_to_count) {</span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1" aria-label="code-block-3-3"></a>  text_file &lt;- file(filename, "r")</span>
+<span id="cb3-4"><a href="#cb3-4" tabindex="-1" aria-label="code-block-3-4"></a>  word_count &lt;- 0</span>
+<span id="cb3-5"><a href="#cb3-5" tabindex="-1" aria-label="code-block-3-5"></a></span>
+<span id="cb3-6"><a href="#cb3-6" tabindex="-1" aria-label="code-block-3-6"></a>  # Read the file line by line using a loop</span>
+<span id="cb3-7"><a href="#cb3-7" tabindex="-1" aria-label="code-block-3-7"></a>  for (line in readLines(text_file)) {</span>
+<span id="cb3-8"><a href="#cb3-8" tabindex="-1" aria-label="code-block-3-8"></a>    # Convert the line to lowercase for case-insensitive counting</span>
+<span id="cb3-9"><a href="#cb3-9" tabindex="-1" aria-label="code-block-3-9"></a>    line &lt;- tolower(line)</span>
+<span id="cb3-10"><a href="#cb3-10" tabindex="-1" aria-label="code-block-3-10"></a></span>
+<span id="cb3-11"><a href="#cb3-11" tabindex="-1" aria-label="code-block-3-11"></a>    # Split the line into words</span>
+<span id="cb3-12"><a href="#cb3-12" tabindex="-1" aria-label="code-block-3-12"></a>    words &lt;- strsplit(line, split = " ")[[1]]  # Extract the first element (vector of words)</span>
+<span id="cb3-13"><a href="#cb3-13" tabindex="-1" aria-label="code-block-3-13"></a></span>
+<span id="cb3-14"><a href="#cb3-14" tabindex="-1" aria-label="code-block-3-14"></a>    # Count the occurrences of the word in the current line</span>
+<span id="cb3-15"><a href="#cb3-15" tabindex="-1" aria-label="code-block-3-15"></a>    word_count &lt;- word_count + sum(words == word_to_count)</span>
+<span id="cb3-16"><a href="#cb3-16" tabindex="-1" aria-label="code-block-3-16"></a>  }</span>
+<span id="cb3-17"><a href="#cb3-17" tabindex="-1" aria-label="code-block-3-17"></a>  close(text_file)</span>
+<span id="cb3-18"><a href="#cb3-18" tabindex="-1" aria-label="code-block-3-18"></a>  return(word_count)</span>
+<span id="cb3-19"><a href="#cb3-19" tabindex="-1" aria-label="code-block-3-19"></a>}</span></code></pre>
 </div>
 <p>With syntax highlighting:</p>
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode r" tabindex="0"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" tabindex="-1"></a><span class="co"># Function to count word occurrences in a text file</span></span>
-<span id="cb4-2"><a href="#cb4-2" tabindex="-1"></a>count_word_occurrences <span class="ot">&lt;-</span> <span class="cf">function</span>(filename, word_to_count) { text_file <span class="ot">&lt;-</span> <span class="fu">file</span>(filename, <span class="st">"r"</span>) word_count <span class="ot">&lt;-</span> <span class="dv">0</span></span>
-<span id="cb4-3"><a href="#cb4-3" tabindex="-1"></a></span>
-<span id="cb4-4"><a href="#cb4-4" tabindex="-1"></a>  <span class="co"># Read the file line by line using a loop</span></span>
-<span id="cb4-5"><a href="#cb4-5" tabindex="-1"></a>  <span class="cf">for</span> (line <span class="cf">in</span> <span class="fu">readLines</span>(text_file)) {</span>
-<span id="cb4-6"><a href="#cb4-6" tabindex="-1"></a>    <span class="co"># Convert the line to lowercase for case-insensitive counting</span></span>
-<span id="cb4-7"><a href="#cb4-7" tabindex="-1"></a>    line <span class="ot">&lt;-</span> <span class="fu">tolower</span>(line)</span>
-<span id="cb4-8"><a href="#cb4-8" tabindex="-1"></a></span>
-<span id="cb4-9"><a href="#cb4-9" tabindex="-1"></a>    <span class="co"># Split the line into words</span></span>
-<span id="cb4-10"><a href="#cb4-10" tabindex="-1"></a>    words <span class="ot">&lt;-</span> <span class="fu">strsplit</span>(line, <span class="at">split =</span> <span class="st">" "</span>)[[<span class="dv">1</span>]]  <span class="co"># Extract the first element (vector of words)</span></span>
-<span id="cb4-11"><a href="#cb4-11" tabindex="-1"></a></span>
-<span id="cb4-12"><a href="#cb4-12" tabindex="-1"></a>    <span class="co"># Count the occurrences of the word in the current line</span></span>
-<span id="cb4-13"><a href="#cb4-13" tabindex="-1"></a>    word_count <span class="ot">&lt;-</span> word_count <span class="sc">+</span> <span class="fu">sum</span>(words <span class="sc">==</span> word_to_count)</span>
-<span id="cb4-14"><a href="#cb4-14" tabindex="-1"></a>  }</span>
-<span id="cb4-15"><a href="#cb4-15" tabindex="-1"></a>  <span class="fu">close</span>(text_file)</span>
-<span id="cb4-16"><a href="#cb4-16" tabindex="-1"></a>  <span class="fu">return</span>(word_count)</span>
-<span id="cb4-17"><a href="#cb4-17" tabindex="-1"></a>}</span></code></pre>
+<pre class="sourceCode r" tabindex="0"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" tabindex="-1" aria-label="code-block-4-1"></a><span class="co"># Function to count word occurrences in a text file</span></span>
+<span id="cb4-2"><a href="#cb4-2" tabindex="-1" aria-label="code-block-4-2"></a>count_word_occurrences <span class="ot">&lt;-</span> <span class="cf">function</span>(filename, word_to_count) { text_file <span class="ot">&lt;-</span> <span class="fu">file</span>(filename, <span class="st">"r"</span>) word_count <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb4-3"><a href="#cb4-3" tabindex="-1" aria-label="code-block-4-3"></a></span>
+<span id="cb4-4"><a href="#cb4-4" tabindex="-1" aria-label="code-block-4-4"></a>  <span class="co"># Read the file line by line using a loop</span></span>
+<span id="cb4-5"><a href="#cb4-5" tabindex="-1" aria-label="code-block-4-5"></a>  <span class="cf">for</span> (line <span class="cf">in</span> <span class="fu">readLines</span>(text_file)) {</span>
+<span id="cb4-6"><a href="#cb4-6" tabindex="-1" aria-label="code-block-4-6"></a>    <span class="co"># Convert the line to lowercase for case-insensitive counting</span></span>
+<span id="cb4-7"><a href="#cb4-7" tabindex="-1" aria-label="code-block-4-7"></a>    line <span class="ot">&lt;-</span> <span class="fu">tolower</span>(line)</span>
+<span id="cb4-8"><a href="#cb4-8" tabindex="-1" aria-label="code-block-4-8"></a></span>
+<span id="cb4-9"><a href="#cb4-9" tabindex="-1" aria-label="code-block-4-9"></a>    <span class="co"># Split the line into words</span></span>
+<span id="cb4-10"><a href="#cb4-10" tabindex="-1" aria-label="code-block-4-10"></a>    words <span class="ot">&lt;-</span> <span class="fu">strsplit</span>(line, <span class="at">split =</span> <span class="st">" "</span>)[[<span class="dv">1</span>]]  <span class="co"># Extract the first element (vector of words)</span></span>
+<span id="cb4-11"><a href="#cb4-11" tabindex="-1" aria-label="code-block-4-11"></a></span>
+<span id="cb4-12"><a href="#cb4-12" tabindex="-1" aria-label="code-block-4-12"></a>    <span class="co"># Count the occurrences of the word in the current line</span></span>
+<span id="cb4-13"><a href="#cb4-13" tabindex="-1" aria-label="code-block-4-13"></a>    word_count <span class="ot">&lt;-</span> word_count <span class="sc">+</span> <span class="fu">sum</span>(words <span class="sc">==</span> word_to_count)</span>
+<span id="cb4-14"><a href="#cb4-14" tabindex="-1" aria-label="code-block-4-14"></a>  }</span>
+<span id="cb4-15"><a href="#cb4-15" tabindex="-1" aria-label="code-block-4-15"></a>  <span class="fu">close</span>(text_file)</span>
+<span id="cb4-16"><a href="#cb4-16" tabindex="-1" aria-label="code-block-4-16"></a>  <span class="fu">return</span>(word_count)</span>
+<span id="cb4-17"><a href="#cb4-17" tabindex="-1" aria-label="code-block-4-17"></a>}</span></code></pre>
 </div>
 </div>
 </div>
@@ -584,25 +584,25 @@ it’s easy to interpret their purpose.</p>
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="kw">def</span> calculate_area(width, height):</span>
-<span id="cb5-2"><a href="#cb5-2" tabindex="-1"></a>    <span class="co">"""</span></span>
-<span id="cb5-3"><a href="#cb5-3" tabindex="-1"></a><span class="co">    Work out the surface area of a rectangle with the specified dimensions.</span></span>
-<span id="cb5-4"><a href="#cb5-4" tabindex="-1"></a><span class="co">    """</span></span>
-<span id="cb5-5"><a href="#cb5-5" tabindex="-1"></a>    area <span class="op">=</span> width <span class="op">*</span> height</span>
-<span id="cb5-6"><a href="#cb5-6" tabindex="-1"></a>    <span class="cf">return</span> area</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" tabindex="-1" aria-label="code-block-5-1"></a><span class="kw">def</span> calculate_area(width, height):</span>
+<span id="cb5-2"><a href="#cb5-2" tabindex="-1" aria-label="code-block-5-2"></a>    <span class="co">"""</span></span>
+<span id="cb5-3"><a href="#cb5-3" tabindex="-1" aria-label="code-block-5-3"></a><span class="co">    Work out the surface area of a rectangle with the specified dimensions.</span></span>
+<span id="cb5-4"><a href="#cb5-4" tabindex="-1" aria-label="code-block-5-4"></a><span class="co">    """</span></span>
+<span id="cb5-5"><a href="#cb5-5" tabindex="-1" aria-label="code-block-5-5"></a>    area <span class="op">=</span> width <span class="op">*</span> height</span>
+<span id="cb5-6"><a href="#cb5-6" tabindex="-1" aria-label="code-block-5-6"></a>    <span class="cf">return</span> area</span></code></pre>
 </div>
 </div>
 <div id="nav-tabpanel-2-R" class="tab-pane" aria-labelledby="nav-tab-2-R" role="tabpanel">
 <div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode r" tabindex="0"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" tabindex="-1"></a>calculate_area <span class="ot">&lt;-</span> <span class="cf">function</span>(width, height) {</span>
-<span id="cb6-2"><a href="#cb6-2" tabindex="-1"></a>  <span class="st">"""</span></span>
-<span id="cb6-3"><a href="#cb6-3" tabindex="-1"></a><span class="st">  Work out the surface area of a rectangle with the specified dimensions.</span></span>
-<span id="cb6-4"><a href="#cb6-4" tabindex="-1"></a><span class="st">  """</span></span>
-<span id="cb6-5"><a href="#cb6-5" tabindex="-1"></a>  area <span class="ot">&lt;-</span> width <span class="sc">*</span> height</span>
-<span id="cb6-6"><a href="#cb6-6" tabindex="-1"></a>  <span class="fu">return</span>(area)</span>
-<span id="cb6-7"><a href="#cb6-7" tabindex="-1"></a>}</span></code></pre>
+<pre class="sourceCode r" tabindex="0"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" tabindex="-1" aria-label="code-block-6-1"></a>calculate_area <span class="ot">&lt;-</span> <span class="cf">function</span>(width, height) {</span>
+<span id="cb6-2"><a href="#cb6-2" tabindex="-1" aria-label="code-block-6-2"></a>  <span class="st">"""</span></span>
+<span id="cb6-3"><a href="#cb6-3" tabindex="-1" aria-label="code-block-6-3"></a><span class="st">  Work out the surface area of a rectangle with the specified dimensions.</span></span>
+<span id="cb6-4"><a href="#cb6-4" tabindex="-1" aria-label="code-block-6-4"></a><span class="st">  """</span></span>
+<span id="cb6-5"><a href="#cb6-5" tabindex="-1" aria-label="code-block-6-5"></a>  area <span class="ot">&lt;-</span> width <span class="sc">*</span> height</span>
+<span id="cb6-6"><a href="#cb6-6" tabindex="-1" aria-label="code-block-6-6"></a>  <span class="fu">return</span>(area)</span>
+<span id="cb6-7"><a href="#cb6-7" tabindex="-1" aria-label="code-block-6-7"></a>}</span></code></pre>
 </div>
 </div>
 </div>
@@ -652,33 +652,33 @@ with an upper-case letter and there are no spaces between them.</p>
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" tabindex="-1"></a><span class="kw">class</span> Bird:</span>
-<span id="cb7-2"><a href="#cb7-2" tabindex="-1"></a>    <span class="cf">pass</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" tabindex="-1" aria-label="code-block-7-1"></a><span class="kw">class</span> Bird:</span>
+<span id="cb7-2"><a href="#cb7-2" tabindex="-1" aria-label="code-block-7-2"></a>    <span class="cf">pass</span></span></code></pre>
 </div>
 <div class="codewrapper sourceCode" id="cb8">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" tabindex="-1"></a><span class="kw">class</span> ConservationStatus:</span>
-<span id="cb8-2"><a href="#cb8-2" tabindex="-1"></a>    <span class="co">"""</span></span>
-<span id="cb8-3"><a href="#cb8-3" tabindex="-1"></a><span class="co">    IUCN Red List of Threatened Species</span></span>
-<span id="cb8-4"><a href="#cb8-4" tabindex="-1"></a><span class="co">    """</span></span>
-<span id="cb8-5"><a href="#cb8-5" tabindex="-1"></a>    EX <span class="op">=</span> <span class="st">"Extinct"</span></span>
-<span id="cb8-6"><a href="#cb8-6" tabindex="-1"></a>    EW <span class="op">=</span> <span class="st">"Extinct in the wild"</span></span>
-<span id="cb8-7"><a href="#cb8-7" tabindex="-1"></a>    CR <span class="op">=</span> <span class="st">"Critically Endangered"</span></span>
-<span id="cb8-8"><a href="#cb8-8" tabindex="-1"></a>    EN <span class="op">=</span> <span class="st">"Endangered"</span></span>
-<span id="cb8-9"><a href="#cb8-9" tabindex="-1"></a>    LC <span class="op">=</span> <span class="st">"Least Concern"</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" tabindex="-1" aria-label="code-block-8-1"></a><span class="kw">class</span> ConservationStatus:</span>
+<span id="cb8-2"><a href="#cb8-2" tabindex="-1" aria-label="code-block-8-2"></a>    <span class="co">"""</span></span>
+<span id="cb8-3"><a href="#cb8-3" tabindex="-1" aria-label="code-block-8-3"></a><span class="co">    IUCN Red List of Threatened Species</span></span>
+<span id="cb8-4"><a href="#cb8-4" tabindex="-1" aria-label="code-block-8-4"></a><span class="co">    """</span></span>
+<span id="cb8-5"><a href="#cb8-5" tabindex="-1" aria-label="code-block-8-5"></a>    EX <span class="op">=</span> <span class="st">"Extinct"</span></span>
+<span id="cb8-6"><a href="#cb8-6" tabindex="-1" aria-label="code-block-8-6"></a>    EW <span class="op">=</span> <span class="st">"Extinct in the wild"</span></span>
+<span id="cb8-7"><a href="#cb8-7" tabindex="-1" aria-label="code-block-8-7"></a>    CR <span class="op">=</span> <span class="st">"Critically Endangered"</span></span>
+<span id="cb8-8"><a href="#cb8-8" tabindex="-1" aria-label="code-block-8-8"></a>    EN <span class="op">=</span> <span class="st">"Endangered"</span></span>
+<span id="cb8-9"><a href="#cb8-9" tabindex="-1" aria-label="code-block-8-9"></a>    LC <span class="op">=</span> <span class="st">"Least Concern"</span></span></code></pre>
 </div>
 <p>Variables use lower case with underscores</p>
 <div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" tabindex="-1"></a>bird_name <span class="op">=</span> <span class="st">"Blue jay"</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" tabindex="-1" aria-label="code-block-9-1"></a>bird_name <span class="op">=</span> <span class="st">"Blue jay"</span></span></code></pre>
 </div>
 <p>Constants are named using upper case with underscores</p>
 <div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" tabindex="-1"></a>TAXONOMY_ORDER <span class="op">=</span> <span class="st">"Passeriformes"</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" tabindex="-1" aria-label="code-block-10-1"></a>TAXONOMY_ORDER <span class="op">=</span> <span class="st">"Passeriformes"</span></span></code></pre>
 </div>
 <p>For more information about this aspect of coding style, please read
 the <a href="https://peps.python.org/pep-0008/#naming-conventions" class="external-link">Naming
@@ -760,9 +760,9 @@ code runs.</p>
 <div class="codewrapper sourceCode" id="cb15">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" tabindex="-1"></a><span class="co"># Add three to my age</span></span>
-<span id="cb15-2"><a href="#cb15-2" tabindex="-1"></a>age <span class="op">=</span> <span class="dv">21</span></span>
-<span id="cb15-3"><a href="#cb15-3" tabindex="-1"></a>age <span class="op">+=</span> <span class="dv">3</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb15-1"><a href="#cb15-1" tabindex="-1" aria-label="code-block-15-1"></a><span class="co"># Add three to my age</span></span>
+<span id="cb15-2"><a href="#cb15-2" tabindex="-1" aria-label="code-block-15-2"></a>age <span class="op">=</span> <span class="dv">21</span></span>
+<span id="cb15-3"><a href="#cb15-3" tabindex="-1" aria-label="code-block-15-3"></a>age <span class="op">+=</span> <span class="dv">3</span></span></code></pre>
 </div>
 <p>There’s more information about <a href="https://docs.python.org/3/reference/lexical_analysis.html#operators" class="external-link">Python
 operators</a> such as <code>+=</code> in the documentation for that
@@ -836,7 +836,7 @@ with the integer type, <code>int</code>.</p>
 <div class="codewrapper sourceCode" id="cb17">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" tabindex="-1"></a>age: <span class="bu">int</span> <span class="op">=</span> <span class="dv">21</span></span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" tabindex="-1" aria-label="code-block-17-1"></a>age: <span class="bu">int</span> <span class="op">=</span> <span class="dv">21</span></span></code></pre>
 </div>
 <p>For more information, please see the <a href="https://docs.python.org/3/library/typing.html" class="external-link">typing section</a>
 of the Python Documentation and the <a href="https://mypy.readthedocs.io/en/stable/cheat_sheet_py3.html" class="external-link">Type
@@ -892,9 +892,9 @@ declaration as <code>-&gt; int</code>.</p>
 <div class="codewrapper sourceCode" id="cb19">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" tabindex="-1"></a><span class="kw">def</span> add(a: <span class="bu">int</span>, b: <span class="bu">int</span>) <span class="op">-&gt;</span> <span class="bu">int</span>:</span>
-<span id="cb19-2"><a href="#cb19-2" tabindex="-1"></a>    <span class="co">"""Add two numbers"""</span></span>
-<span id="cb19-3"><a href="#cb19-3" tabindex="-1"></a>    <span class="cf">return</span> a <span class="op">+</span> b</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" tabindex="-1" aria-label="code-block-19-1"></a><span class="kw">def</span> add(a: <span class="bu">int</span>, b: <span class="bu">int</span>) <span class="op">-&gt;</span> <span class="bu">int</span>:</span>
+<span id="cb19-2"><a href="#cb19-2" tabindex="-1" aria-label="code-block-19-2"></a>    <span class="co">"""Add two numbers"""</span></span>
+<span id="cb19-3"><a href="#cb19-3" tabindex="-1" aria-label="code-block-19-3"></a>    <span class="cf">return</span> a <span class="op">+</span> b</span></code></pre>
 </div>
 </div>
 <div id="nav-tabpanel-6-R" class="tab-pane" aria-labelledby="nav-tab-6-R" role="tabpanel">
@@ -935,19 +935,19 @@ labels the types of the inputs and output of the function.</p>
 <div class="codewrapper sourceCode" id="cb21">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" tabindex="-1"></a>add(<span class="dv">42</span>, <span class="dv">1</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" tabindex="-1" aria-label="code-block-21-1"></a>add(<span class="dv">42</span>, <span class="dv">1</span>)</span></code></pre>
 </div>
 <p>What about this code?</p>
 <div class="codewrapper sourceCode" id="cb22">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" tabindex="-1"></a>add(<span class="fl">42.5</span>, <span class="fl">1e5</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" tabindex="-1" aria-label="code-block-22-1"></a>add(<span class="fl">42.5</span>, <span class="fl">1e5</span>)</span></code></pre>
 </div>
 <p>Will an error occur when we use strings as the input arguments?</p>
 <div class="codewrapper sourceCode" id="cb23">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" tabindex="-1"></a>add(<span class="st">'cheese'</span>, <span class="st">'cake'</span>)</span></code></pre>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb23-1"><a href="#cb23-1" tabindex="-1" aria-label="code-block-23-1"></a>add(<span class="st">'cheese'</span>, <span class="st">'cake'</span>)</span></code></pre>
 </div>
 </div>
 </div>
@@ -1051,7 +1051,7 @@ any links that you are not going to use.
         <p>Materials licensed under <a href="LICENSE.html">CC-BY 4.0</a> by the authors</p>
 
         <p>Template licensed under <a href="https://creativecommons.org/licenses/by-sa/4.0/" class="external-link">CC-BY 4.0</a> by <a href="https://carpentries.org/" class="external-link">The Carpentries</a></p>
-        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/" class="external-link">sandpaper (0.20.0)</a>, <a href="https://github.com/carpentries/pegboard/tree/" class="external-link">pegboard (0.7.9)</a>, and <a href="https://github.com/RSE-Sheffield/uos-varnish/tree/main" class="external-link">varnish (1.0.7)</a> [UoS fork]</p>
+        <p>Built with <a href="https://github.com/carpentries/sandpaper/tree/" class="external-link">sandpaper (0.20.1)</a>, <a href="https://github.com/carpentries/pegboard/tree/" class="external-link">pegboard (0.7.9)</a>, and <a href="https://github.com/RSE-Sheffield/uos-varnish/tree/main" class="external-link">varnish (1.0.7)</a> [UoS fork]</p>
 		</div>
 		</footer></div> <!-- / div.container -->
 	<div id="to-top">
@@ -1074,7 +1074,7 @@ any links that you are not going to use.
   "identifier": "https://FAIR2-for-research-software.github.io/Documentation/instructor/readable.html",
   "dateCreated": "2024-05-20",
   "dateModified": "2025-11-06",
-  "datePublished": "2026-04-14"
+  "datePublished": "2026-04-21"
 }
 
   </script><script>
