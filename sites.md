@@ -132,7 +132,7 @@ get off the ground in implementing common research workflows to achieve their sp
 
 ### User reference
 
-If you have written functions that are intended to be use in other researchers' code, then an in-depth explanation of
+If you have written functions that are intended to be used in other researchers' code, then an in-depth explanation of
 these procedures is essential reference material. In the world of software engineering, these detailed appendices are
 called <acronym title="Application Programming Interfaces">API</acronym> references, which list each function and
 describe how the arguments may be used to control how the code works. This content may be automatically generated from
