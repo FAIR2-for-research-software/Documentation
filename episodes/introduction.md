@@ -7,16 +7,16 @@ exercises: 2
 :::::::::::::::::::::::::::::::::::::: questions
 
 - How do we **provide information** to users of our research software?
-- Why is documenting code useful for researchers?
-- When should we start writing documentation for our code?
+- Why is documenting code **useful for researchers**?
+- **When should we start** writing documentation for our code?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Describe at least three benefits of documenting research software
-- Explain when in a project's lifecycle documentation should begin
-- Identify the kinds of documentation this module will cover
+- Describe at least three **benefits** of documenting research software
+- Explain when in the **project lifecycle** documentation should begin
+- Identify the **kinds of documentation** this module will cover
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
