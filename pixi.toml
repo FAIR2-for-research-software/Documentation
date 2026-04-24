@@ -4,6 +4,7 @@ channels = ["conda-forge"]
 platforms = ["linux-64", "osx-arm64", "osx-64", "win-64"]
 
 [dependencies]
+codespell = "*"
 git = "*"
 pre-commit = "*"
 r-sandpaper = "*"
@@ -14,3 +15,4 @@ serve = "Rscript -e 'sandpaper::serve()'"
 build = "Rscript -e 'sandpaper::build_lesson()'"
 check = "Rscript -e 'sandpaper::check_lesson()'"
 lint = "pre-commit run --all-files"
+spellcheck = "codespell --skip='.github,site'"
