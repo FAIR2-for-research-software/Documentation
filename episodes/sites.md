@@ -375,7 +375,7 @@ This makes it very fast to see the effect of your writing.
 mkdocs serve
 ```
 
-Open your web browser to <http://127.0.0.1:8000> to view your documentation site. Leave this command running while you
+Open your web browser to `http://127.0.0.1:8000` to view your documentation site. Leave this command running while you
 work — any time you save a Markdown file, the browser will reload with your changes. Press `Ctrl+C` to stop the server.
 
 ##### Building the site
@@ -395,7 +395,7 @@ MkDocs will load our files from the `docs/` directory and output the built HTML 
 The file `site/index.html` contains the home page of your new documentation site! Open that file to view your
 handiwork.
 
-![The MkDocs home page for our documentation site](fig/mkdocs-index.png "MkDocs")
+![The MkDocs home page for our documentation site](fig/mkdocs-index.png){alt="MkDocs home page with default theme."}
 
 ##### Automatic reference generation
 
@@ -435,7 +435,7 @@ useful reference guide to our functions.
 mkdocs build
 ```
 
-![Python documentation strings rendered as HTML by mkdocstrings](fig/mkdocs-reference.png "Auto-generated API reference")
+![Python documentation strings rendered as HTML by mkdocstrings](fig/mkdocs-reference.png){alt="API reference page."}
 
 ::::::::::::::::::::::::::::::::::::: challenge
 

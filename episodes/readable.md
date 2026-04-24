@@ -285,7 +285,7 @@ Guide](https://style.tidyverse.org/).
 
 :::
 
-:::: Challenge
+:::: challenge
 
 Try writing a simple example of a research-related script using the style conventions discussed above.
 
