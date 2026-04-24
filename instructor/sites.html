@@ -619,26 +619,19 @@ does it feel to write for that audience?</p>
 generation of content from code, standalone site generator tools are a
 good choice.</p>
 <div class="section level4">
-<h4 id="documentation-sites-for-r-packages">Documentation sites for R packages<a class="anchor" aria-label="anchor" href="#documentation-sites-for-r-packages"></a></h4>
-<p>It’s also possible to generate a documentation site to accompany R
-packages that you create. For more information about this, please refer
-to the book <em>R Packages</em> by Hadley Wickham, which has a chapter
-on <a href="https://r-pkgs.org/website.html" class="external-link">documentation
-websites</a>.</p>
-</div>
-<div class="section level4">
-<h4 id="sphinx">Sphinx<a class="anchor" aria-label="anchor" href="#sphinx"></a></h4>
-<p><a href="https://www.sphinx-doc.org/" class="external-link">Sphinx</a> is a tool for
-building documentation websites that is commonly used amongst developers
-of Python packages, although it’s also compatible with other programming
-languages. It doesn’t currently support packages written using the R
-statistical language.</p>
-<p>Sphinx is a documentation generator tool that takes plain text files
-that use a markup syntax (such as reStructuredText or Markdown) for
-formatting the content of your documentation site and transforms them
-into various output formats, ready to be published on the internet. It
-has a number of useful features, but in this module we’ll learn the
-basics to document our research code.</p>
+<h4 id="mkdocs">MkDocs<a class="anchor" aria-label="anchor" href="#mkdocs"></a></h4>
+<p><a href="https://www.mkdocs.org/" class="external-link">MkDocs</a> is a tool for building
+documentation websites that is popular amongst developers of Python
+packages, although it can be used to document code written in any
+programming language. It takes a collection of Markdown files and turns
+them into a polished static website ready to publish on the
+internet.</p>
+<p>MkDocs is designed to be simple to set up: a single configuration
+file (<code>mkdocs.yml</code>) controls the site, and all of your
+content is written in plain Markdown — the same syntax you used for your
+readme files. The <a href="https://mkdocstrings.github.io/" class="external-link">mkdocstrings</a> plugin can
+automatically generate reference pages from your code’s documentation
+strings.</p>
 <div id="callout2" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
@@ -646,20 +639,44 @@ basics to document our research code.</p>
 <span class="callout-header">Callout</span>
 <div class="callout-inner">
 <div class="callout-content">
-<p>For a more in-depth guide, please see <a href="https://www.sphinx-doc.org/en/master/tutorial/" class="external-link">Build your first
-project</a> in the Sphinx documentation.</p>
+<p>For a more in-depth guide, please see <a href="https://www.mkdocs.org/getting-started/" class="external-link">Getting Started</a> in
+the MkDocs documentation.</p>
+</div>
+</div>
+</div>
+<div id="accordionSpoiler1" class="accordion spoiler-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
+  <h3 class="accordion-header" id="headingSpoiler1">
+  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>
+  Documenting R packages
+  </h3>
+</button>
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div class="accordion-body">
+<p>MkDocs itself is language-agnostic — it simply converts Markdown into
+a website, so you can use it to write prose documentation for code in
+any language, including R. However, the <code>mkdocstrings</code> plugin
+used below to auto-generate reference material only understands
+Python.</p>
+<p>If you are documenting an R package, the standard tool is <strong><a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a></strong>, which generates
+a documentation site directly from your package’s
+<code>DESCRIPTION</code> file, vignettes, and function documentation.
+For a full walkthrough, see the <a href="https://r-pkgs.org/website.html" class="external-link">Website</a> chapter of <em>R
+Packages</em> by Hadley Wickham and Jennifer Bryan.</p>
+</div>
 </div>
 </div>
 </div>
 <div class="section level5">
 <h5 id="getting-started-1">Getting started<a class="anchor" aria-label="anchor" href="#getting-started-1"></a></h5>
-<p>Let’s use Sphinx to create a documentation site for our Python
+<p>Let’s use MkDocs to create a documentation site for our Python
 code.</p>
 <div class="section level6">
-<h6 id="installing-sphinx">Installing Sphinx<a class="anchor" aria-label="anchor" href="#installing-sphinx"></a></h6>
+<h6 id="installing-mkdocs">Installing MkDocs<a class="anchor" aria-label="anchor" href="#installing-mkdocs"></a></h6>
 <p>Navigate to the root folder of your code project. Create a virtual
 environment using <a href="https://docs.python.org/3/library/venv.html" class="external-link">venv</a> which is a
-separate area in which to install the Sphinx package. This command will
+separate area in which to install the MkDocs package. This command will
 create a virtual environment in a directory called
 <code>.venv/</code></p>
 <div class="tabs">
@@ -751,172 +768,204 @@ the operating system you are using.</p>
 </div>
 </div>
 </div>
-<p>Use the Python package manager <a href="https://pip.pypa.io/en/stable/" class="external-link">pip</a> to <a href="https://www.sphinx-doc.org/en/master/usage/installation.html" class="external-link">install
-Sphinx</a>.</p>
+<p>Use the Python package manager <a href="https://pip.pypa.io/en/stable/" class="external-link">pip</a> to <a href="https://www.mkdocs.org/user-guide/installation/" class="external-link">install
+MkDocs</a>, along with the <code>mkdocstrings</code> plugin for
+generating reference material from Python code.</p>
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" tabindex="-1" aria-label="code-block-7-1"></a><span class="ex">pip</span> install sphinx</span></code></pre>
-</div>
-</div>
-</div>
-<div class="section level5">
-<h5 id="start-a-new-sphinx-project">Start a new Sphinx project<a class="anchor" aria-label="anchor" href="#start-a-new-sphinx-project"></a></h5>
-<p>Sphinx includes a command to set up a new project called <a href="https://www.sphinx-doc.org/en/master/man/sphinx-quickstart.html" class="external-link">sphinx-quickstart</a>.
-Navigate to your project’s root folder and run the following
-command.</p>
-<div class="codewrapper sourceCode" id="cb8">
-<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" tabindex="-1" aria-label="code-block-8-1"></a><span class="ex">sphinx-quickstart</span> docs <span class="at">--no-sep</span> <span class="at">--ext-autodoc</span></span></code></pre>
-</div>
-<p>This will initialise the configuration files for a new Sphinx site in
-a subdirectory called <code>docs/</code> and prompt you to enter the
-following options:</p>
-<ul><li>Project name: Birdsong Identifier</li>
-<li>Author name(s): Bill Oddie</li>
-<li>Project release []: 1.0</li>
-</ul><div id="sphinx-options" class="callout">
-<div class="callout-square">
-<i class="callout-icon" data-feather="bell"></i>
-</div>
-<span class="callout-header">Callout</span>
-<div id="sphinx-options" class="callout-inner">
-<h3 class="callout-title">Sphinx options</h3>
-<div class="callout-content">
-<p>To find out more about the Sphinx configuration files, please read
-their guide to <a href="https://www.sphinx-doc.org/en/master/usage/quickstart.html#defining-document-structure" class="external-link">defining
-document structure</a> on the Sphinx documentation.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="section level5">
-<h5 id="building-the-site">Building the site<a class="anchor" aria-label="anchor" href="#building-the-site"></a></h5>
-<p>In this context, <em>building</em> means taking our collection of
-Sphinx files and converting them into the source code files that define
-a website. Sphinx will create <em>HyperText Markup Language</em> (HTML)
-files, which is the markup language for pages that display in a web
-browser commonly used on the internet.</p>
-<p>To build our site, we run the <a href="https://www.sphinx-doc.org/en/master/man/sphinx-build.html" class="external-link">sphinx-build</a>
-command using the <code>-M</code> option to select
-<abbr title="HyperText Markup Language">HTML</abbr> syntax as the output
-format.</p>
-<div class="codewrapper sourceCode" id="cb9">
-<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" tabindex="-1" aria-label="code-block-9-1"></a><span class="ex">sphinx-build</span> <span class="at">-M</span> html docs docs/_build</span></code></pre>
-</div>
-<p>Sphinx will load our files from the <code>docs/</code> directory and
-output the built HTML files in the <code>docs/_build</code>
-directory.</p>
-<p>The file <code>docs/_build/html/index.html</code> contains the home
-page of your new documentation site! Open that file to view your
-handiwork.</p>
-<figure><img src="../fig/sphinx-build-screenshot.png" title="Sphinx" alt="The Sphinx homepage for our documentation site" class="figure mx-auto d-block"><div class="figcaption">The Sphinx homepage for our documentation
-site</div>
-</figure></div>
-<div class="section level5">
-<h5 id="autodoc">Autodoc<a class="anchor" aria-label="anchor" href="#autodoc"></a></h5>
-<p>It can be useful to automatically populate our documentation sites by
-converting our <a href="docstrings.html">documentation strings</a> into
-formatted text. We can achieve this using the <a href="https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html" class="external-link">autodoc</a>
-plugin for Sphinx.</p>
-<div class="section level6">
-<h6 id="configuring-autodoc">Configuring Autodoc<a class="anchor" aria-label="anchor" href="#configuring-autodoc"></a></h6>
-<p>Let’s set up the options for <code>autodoc</code>. (If you struggle
-with these steps, please refer to the <a href="https://github.com/Joe-Heffer-Shef/oddsong" class="external-link">template
-project</a>.)</p>
-<p>Add the following lines to <code>docs/conf.py</code> which</p>
-<div class="codewrapper sourceCode" id="cb10">
-<h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" tabindex="-1" aria-label="code-block-10-1"></a><span class="co"># Our Python code may be imported from the parent directory</span></span>
-<span id="cb10-2"><a href="#cb10-2" tabindex="-1" aria-label="code-block-10-2"></a><span class="im">import</span> os</span>
-<span id="cb10-3"><a href="#cb10-3" tabindex="-1" aria-label="code-block-10-3"></a><span class="im">import</span> sys</span>
-<span id="cb10-4"><a href="#cb10-4" tabindex="-1" aria-label="code-block-10-4"></a>sys.path.insert(<span class="dv">0</span>, os.path.abspath(<span class="st">'..'</span>))</span></code></pre>
-</div>
-<p>This ensures that Sphinx can access our Python code by pointing at
-the root directory of our project. The <code>..</code> syntax means “one
-folder up”, which means <code>autodoc</code> will search in the root
-directory for code to import.</p>
-<div id="accordionSpoiler1" class="accordion spoiler-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
-  <h3 class="accordion-header" id="headingSpoiler1">
-  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>
-  What does this code mean?
-  </h3>
-</button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
-<div class="accordion-body">
-<p>The Python code uses <a href="https://docs.python.org/3/library/sys.html#sys.path" class="external-link"><code>sys.path</code></a>,
-a list of locations to search for code. By modifying the Python
-<em>module search path</em>, we allow <code>autodoc</code> to locate and
-import our code modules from a specific directory that is not in the
-default search path.</p>
-<p>This is often necessary when working with project structures that
-involve multiple directories, helping the interpreter to find code that
-isn’t installed in the standard library location.</p>
-</div>
-</div>
-</div>
-</div>
-<p>Next, edit <code>docs/index.rst</code> and add the following lines to
-instruct Sphinx to automatically generation documentation for our Python
-module.</p>
-<div class="codewrapper sourceCode" id="cb11">
-<h3 class="code-label">RST<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="sourceCode rst" tabindex="0"><code class="sourceCode rest"><span id="cb11-1"><a href="#cb11-1" tabindex="-1" aria-label="code-block-11-1"></a><span class="dt">.. automodule:: </span>oddsong.song</span>
-<span id="cb11-2"><a href="#cb11-2" tabindex="-1" aria-label="code-block-11-2"></a>    <span class="fu">:members:</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" tabindex="-1" aria-label="code-block-7-1"></a><span class="ex">pip</span> install <span class="st">"mkdocs==1.*"</span> <span class="st">"mkdocstrings[python]"</span></span></code></pre>
 </div>
 <div id="accordionSpoiler2" class="accordion spoiler-accordion accordion-flush">
 <div class="accordion-item">
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
   <h3 class="accordion-header" id="headingSpoiler2">
   <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>
-  What does this code mean?
+  Why pin MkDocs to version 1?
   </h3>
 </button>
 <div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
 <div class="accordion-body">
-<p>This <a href="https://docutils.sourceforge.io/rst.html" class="external-link">reStructuredText
-(reST)</a> markup language has the following elements:</p>
+<p>MkDocs 2.0 is on the horizon (see the <a href="https://squidfunk.github.io/mkdocs-material/blog/2026/02/18/mkdocs-2.0/" class="external-link">MkDocs
+2.0 announcement</a>) and introduces changes that may break the
+configuration used in this episode. Pinning the installation to the
+<code>1.x</code> series (<code>"mkdocs==1.*"</code>) ensures that the
+commands and <code>mkdocs.yml</code> shown here continue to work as
+written.</p>
+<p>When you run <code>mkdocs</code> with a 1.x release, you may see a
+warning about the upcoming 2.0 release. To silence it, set the following
+environment variable before running MkDocs:</p>
+<div class="codewrapper sourceCode" id="cb8">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" tabindex="-1" aria-label="code-block-8-1"></a><span class="bu">export</span> <span class="va">NO_MKDOCS_2_WARNING</span><span class="op">=</span>1</span></code></pre>
+</div>
+<p>Once you’re comfortable with MkDocs and ready to upgrade, drop the
+version pin and follow the official migration guide.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="section level5">
+<h5 id="start-a-new-mkdocs-project">Start a new MkDocs project<a class="anchor" aria-label="anchor" href="#start-a-new-mkdocs-project"></a></h5>
+<p>MkDocs includes a command to scaffold a new project. Navigate to your
+project’s root folder and run the following command.</p>
+<div class="codewrapper sourceCode" id="cb9">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" tabindex="-1" aria-label="code-block-9-1"></a><span class="ex">mkdocs</span> new .</span></code></pre>
+</div>
+<p>This creates two things:</p>
 <ul><li>
-<code>..</code> indicates a <em>directive</em> within a
-<abbr title="reStructuredText">reST</abbr> document that is used to
-configure Sphinx.</li>
+<code>mkdocs.yml</code> — the configuration file for your site.</li>
 <li>
-<code>automodule::</code> indicates a specific directive to use
-<code>autodoc</code> to automatically generate documentation for a
-module.</li>
+<code>docs/index.md</code> — a starting page containing placeholder
+content, written in Markdown.</li>
+</ul><p>Your documentation content lives inside the <code>docs/</code>
+folder. You can add as many Markdown files as you like, and they will
+become pages of your site.</p>
+<div class="section level6">
+<h6 id="configure-the-site-and-plugins">Configure the site and plugins<a class="anchor" aria-label="anchor" href="#configure-the-site-and-plugins"></a></h6>
+<p>Open <code>mkdocs.yml</code> and replace its contents with the
+following:</p>
+<div class="codewrapper sourceCode" id="cb10">
+<h3 class="code-label">YAML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode yaml" tabindex="0"><code class="sourceCode yaml"><span id="cb10-1"><a href="#cb10-1" tabindex="-1" aria-label="code-block-10-1"></a><span class="fu">site_name</span><span class="kw">:</span><span class="at"> Birdsong Identifier</span></span>
+<span id="cb10-2"><a href="#cb10-2" tabindex="-1" aria-label="code-block-10-2"></a><span class="fu">plugins</span><span class="kw">:</span></span>
+<span id="cb10-3"><a href="#cb10-3" tabindex="-1" aria-label="code-block-10-3"></a><span class="at">  </span><span class="kw">-</span><span class="at"> search</span></span>
+<span id="cb10-4"><a href="#cb10-4" tabindex="-1" aria-label="code-block-10-4"></a><span class="at">  </span><span class="kw">-</span><span class="at"> mkdocstrings</span></span></code></pre>
+</div>
+<div id="accordionSpoiler3" class="accordion spoiler-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler3" aria-expanded="false" aria-controls="collapseSpoiler3">
+  <h3 class="accordion-header" id="headingSpoiler3">
+  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>
+  What does this configuration mean?
+  </h3>
+</button>
+<div id="collapseSpoiler3" class="accordion-collapse collapse" aria-labelledby="headingSpoiler3" data-bs-parent="#accordionSpoiler3">
+<div class="accordion-body">
+<ul><li>
+<code>site_name</code> sets the title that appears in the site’s
+header and browser tab.</li>
 <li>
-<code>oddsong.song</code> is the path to our Python module, for
-which documentation will be created.</li>
-<li>
-<code>:members:</code> is an optional argument for the automodule
-directive that instructs Sphinx to include documentation for all members
-(functions, classes, variables) defined within the specified
-module.</li>
-</ul><p>For more information about
-<abbr title="reStructuredText">reST</abbr>, please read the <a href="https://www.writethedocs.org/guide/writing/reStructuredText/" class="external-link">Introduction
-to reStructuredText</a> by <em>Write The Docs</em>.</p>
+<code>plugins</code> is a list of extensions that add features.
+<code>search</code> enables a full-text search index, and
+<code>mkdocstrings</code> lets you pull documentation directly from your
+Python source code.</li>
+</ul></div>
+</div>
+</div>
+</div>
+<div id="mkdocs-options" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="mkdocs-options" class="callout-inner">
+<h3 class="callout-title">MkDocs options</h3>
+<div class="callout-content">
+<p>To find out more about the MkDocs configuration file, please read the
+<a href="https://www.mkdocs.org/user-guide/configuration/" class="external-link">Configuration
+documentation</a>.</p>
 </div>
 </div>
 </div>
 </div>
-<p>Now, when we build our site, Sphinx will scan the contents of the
-<code>oddsong</code> Python module and automatically generate a useful
-reference guide to our functions.</p>
+</div>
+<div class="section level5">
+<h5 id="previewing-the-site-locally">Previewing the site locally<a class="anchor" aria-label="anchor" href="#previewing-the-site-locally"></a></h5>
+<p>MkDocs includes a built-in development server that rebuilds and
+refreshes the site automatically as you edit files. This makes it very
+fast to see the effect of your writing.</p>
+<div class="codewrapper sourceCode" id="cb11">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" tabindex="-1" aria-label="code-block-11-1"></a><span class="ex">mkdocs</span> serve</span></code></pre>
+</div>
+<p>Open your web browser to <a href="http://127.0.0.1:8000" class="external-link uri">http://127.0.0.1:8000</a> to view your documentation site.
+Leave this command running while you work — any time you save a Markdown
+file, the browser will reload with your changes. Press
+<code>Ctrl+C</code> to stop the server.</p>
+</div>
+<div class="section level5">
+<h5 id="building-the-site">Building the site<a class="anchor" aria-label="anchor" href="#building-the-site"></a></h5>
+<p>In this context, <em>building</em> means taking our collection of
+Markdown files and converting them into the source code files that
+define a website. MkDocs will create <em>HyperText Markup Language</em>
+(HTML) files, which is the markup language for pages that display in a
+web browser commonly used on the internet.</p>
+<p>To build our site, we run the following command.</p>
 <div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" tabindex="-1" aria-label="code-block-12-1"></a><span class="ex">sphinx-build</span> <span class="at">-M</span> html docs docs/_build</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" tabindex="-1" aria-label="code-block-12-1"></a><span class="ex">mkdocs</span> build</span></code></pre>
 </div>
-<p>The result looks something like this:</p>
-<figure><img src="../fig/oddsong-autodoc.png" title="A Python function documentation string" alt="Python documentation string rendered as HTML" class="figure mx-auto d-block"><div class="figcaption">Python documentation string rendered as
-HTML</div>
+<p>MkDocs will load our files from the <code>docs/</code> directory and
+output the built HTML files into a directory called
+<code>site/</code>.</p>
+<p>The file <code>site/index.html</code> contains the home page of your
+new documentation site! Open that file to view your handiwork.</p>
+<figure><img src="../fig/mkdocs-index.png" title="MkDocs" alt="The MkDocs home page for our documentation site" class="figure mx-auto d-block"><div class="figcaption">The MkDocs home page for our documentation
+site</div>
+</figure></div>
+<div class="section level5">
+<h5 id="automatic-reference-generation">Automatic reference generation<a class="anchor" aria-label="anchor" href="#automatic-reference-generation"></a></h5>
+<p>It can be useful to automatically populate our documentation sites by
+converting our <a href="docstrings.html">documentation strings</a> into
+formatted text. We can achieve this using the <a href="https://mkdocstrings.github.io/" class="external-link">mkdocstrings</a> plugin, which we
+already installed and enabled in <code>mkdocs.yml</code>.</p>
+<div class="section level6">
+<h6 id="adding-a-reference-page">Adding a reference page<a class="anchor" aria-label="anchor" href="#adding-a-reference-page"></a></h6>
+<p>Create a new file <code>docs/reference.md</code> with the following
+contents.</p>
+<div class="codewrapper sourceCode" id="cb13">
+<h3 class="code-label">MARKDOWN<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode markdown" tabindex="0"><code class="sourceCode markdown"><span id="cb13-1"><a href="#cb13-1" tabindex="-1" aria-label="code-block-13-1"></a><span class="fu"># Reference</span></span>
+<span id="cb13-2"><a href="#cb13-2" tabindex="-1" aria-label="code-block-13-2"></a></span>
+<span id="cb13-3"><a href="#cb13-3" tabindex="-1" aria-label="code-block-13-3"></a>::: oddsong.song</span></code></pre>
+</div>
+<div id="accordionSpoiler4" class="accordion spoiler-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler4" aria-expanded="false" aria-controls="collapseSpoiler4">
+  <h3 class="accordion-header" id="headingSpoiler4">
+  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>
+  What does this code mean?
+  </h3>
+</button>
+<div id="collapseSpoiler4" class="accordion-collapse collapse" aria-labelledby="headingSpoiler4" data-bs-parent="#accordionSpoiler4">
+<div class="accordion-body">
+<p>The <code>mkdocstrings</code> plugin uses a special Markdown syntax
+to inject generated documentation into a page:</p>
+<ul><li>
+<code>:::</code> is the directive that tells
+<code>mkdocstrings</code> to pull in documentation.</li>
+<li>
+<code>oddsong.song</code> is the dotted path to the Python module we
+want to document.</li>
+</ul><p>By default, <code>mkdocstrings</code> includes all public functions,
+classes, and variables in the module, rendered from their documentation
+strings. For more options (such as filtering members or customising the
+layout), see the <a href="https://mkdocstrings.github.io/python/" class="external-link">mkdocstrings Python
+handler documentation</a>.</p>
+</div>
+</div>
+</div>
+</div>
+<p>Now, when we build our site, MkDocs will scan the contents of the
+<code>oddsong</code> Python module and automatically generate a useful
+reference guide to our functions.</p>
+<div class="codewrapper sourceCode" id="cb14">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" tabindex="-1" aria-label="code-block-14-1"></a><span class="ex">mkdocs</span> build</span></code></pre>
+</div>
+<figure><img src="../fig/mkdocs-reference.png" title="Auto-generated API reference" alt="Python documentation strings rendered as HTML by mkdocstrings" class="figure mx-auto d-block"><div class="figcaption">Python documentation strings rendered as HTML by
+mkdocstrings</div>
 </figure><div id="automatically-generate-content" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
@@ -925,11 +974,11 @@ HTML</div>
 <div id="automatically-generate-content" class="callout-inner">
 <h3 class="callout-title">Automatically generate content</h3>
 <div class="callout-content">
-<p>Try using <code>autodoc</code> to analyse your own code and build a
-documentation site by following the steps above.</p>
-<p>After the <code>sphinx-build</code> command has completed
-successfully, browse the contents of the <code>docs/_build/html</code>
-folder and discuss what you find.</p>
+<p>Try using <code>mkdocstrings</code> to analyse your own code and
+build a documentation site by following the steps above.</p>
+<p>After the <code>mkdocs build</code> command has completed
+successfully, browse the contents of the <code>site/</code> folder and
+discuss what you find.</p>
 </div>
 </div>
 </div>
@@ -941,35 +990,136 @@ folder and discuss what you find.</p>
 <hr class="half-width"><p>Now that you’ve started writing your documentation website, there are
 various ways to upload it to the internet so that others can read
 it.</p>
-<p><strong><a href="https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages" class="external-link">GitHub
-Pages</a></strong> is a free hosting service built into GitHub. It can
+<p>In this episode, we’ll focus on <strong><a href="https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages" class="external-link">GitHub
+Pages</a></strong>, a free hosting service built into GitHub. It can
 automatically build and publish your site whenever you push changes to
 your repository, making it a convenient choice if your code is already
 hosted on GitHub.</p>
-<p><strong><a href="https://about.readthedocs.com/" class="external-link">Read the
+<div id="accordionSpoiler5" class="accordion spoiler-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler5" aria-expanded="false" aria-controls="collapseSpoiler5">
+  <h3 class="accordion-header" id="headingSpoiler5">
+  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>
+  Other hosting services
+  </h3>
+</button>
+<div id="collapseSpoiler5" class="accordion-collapse collapse" aria-labelledby="headingSpoiler5" data-bs-parent="#accordionSpoiler5">
+<div class="accordion-body">
+<p>GitHub Pages is not the only option. Other hosting services popular
+with researchers include:</p>
+<ul><li>
+<strong><a href="https://about.readthedocs.com/" class="external-link">Read the
 Docs</a></strong> is a dedicated documentation hosting platform that
-integrates with Sphinx and other generators. It automatically rebuilds
+supports MkDocs and other popular generators. It automatically rebuilds
 your documentation when you push new commits and provides versioned
 documentation so users can browse the docs for older releases of your
-software.</p>
-<div id="choosing-a-hosting-platform" class="callout">
-<div class="callout-square">
-<i class="callout-icon" data-feather="bell"></i>
-</div>
-<span class="callout-header">Callout</span>
-<div id="choosing-a-hosting-platform" class="callout-inner">
-<h3 class="callout-title">Choosing a hosting platform</h3>
-<div class="callout-content">
-<p>Both platforms offer free tiers for open-source projects. GitHub
-Pages is simpler to set up, while Read the Docs provides more
-documentation-specific features such as version switching and
+software.</li>
+<li>
+<strong><a href="https://docs.gitlab.com/user/project/pages/" class="external-link">GitLab
+Pages</a></strong> is the equivalent of GitHub Pages for projects hosted
+on GitLab, including self-hosted GitLab instances that some universities
+run for their researchers.</li>
+<li>
+<strong><a href="https://www.netlify.com/" class="external-link">Netlify</a></strong> and
+<strong><a href="https://pages.cloudflare.com/" class="external-link">Cloudflare
+Pages</a></strong> are general static-site hosts with free tiers that
+work well for documentation built with MkDocs or similar tools.</li>
+</ul><p>All of these platforms offer free tiers for open-source projects.
+GitHub Pages is the simplest to set up when your code already lives on
+GitHub, while Read the Docs provides more documentation-specific
+features such as version switching and a documentation-focused
 search.</p>
 </div>
 </div>
 </div>
-<p>The detailed steps for configuring deployment to these platforms are
-beyond the scope of this course, but both provide clear guides to get
-you started.</p>
+</div>
+<div class="section level3">
+<h3 id="github-pages">GitHub Pages<a class="anchor" aria-label="anchor" href="#github-pages"></a></h3>
+<div id="before-you-start" class="callout prereq">
+<div class="callout-square">
+<i class="callout-icon" data-feather="check"></i>
+</div>
+<span class="callout-header">Prerequisite</span>
+<div id="before-you-start" class="callout-inner">
+<h3 class="callout-title">Before you start</h3>
+<div class="callout-content">
+<p>Your repository must be <strong>public</strong> (or you must have a
+GitHub Pro account) and already pushed to GitHub.</p>
+</div>
+</div>
+</div>
+<p>MkDocs provides a built-in command to publish your site to GitHub
+Pages. From your project’s root folder, run:</p>
+<div class="codewrapper sourceCode" id="cb15">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" tabindex="-1" aria-label="code-block-15-1"></a><span class="ex">mkdocs</span> gh-deploy</span></code></pre>
+</div>
+<p>This builds your site and pushes the output to a branch called
+<code>gh-pages</code> on your GitHub repository. GitHub Pages will then
+serve the site from that branch.</p>
+<p>Once the command completes, the published URL is shown in the
+terminal output. You can also find it under <strong>Settings →
+Pages</strong> in your repository.</p>
+<div id="automating-deployment" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="automating-deployment" class="callout-inner">
+<h3 class="callout-title">Automating deployment</h3>
+<div class="callout-content">
+<p>Running <code>mkdocs gh-deploy</code> manually works well for small
+projects, but for collaborative repositories it’s common to automate
+this with a GitHub Actions workflow that rebuilds and redeploys the site
+on every push to <code>main</code>. Configuring Actions is beyond the
+scope of this episode — see <a href="https://www.mkdocs.org/user-guide/deploying-your-docs/" class="external-link">Deploying
+your docs</a> in the MkDocs documentation for an example workflow.</p>
+</div>
+</div>
+</div>
+<div id="check-your-pages-settings" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="check-your-pages-settings" class="callout-inner">
+<h3 class="callout-title">Check your Pages settings</h3>
+<div class="callout-content">
+<p>The <code>mkdocs gh-deploy</code> command pushes your built site to a
+branch called <code>gh-pages</code>, but it does not configure the
+GitHub Pages settings for you. For a brand-new repository, GitHub will
+usually enable Pages automatically the first time this branch is pushed,
+and your site will appear within a minute or two.</p>
+<p>If your site does not appear, go to <strong>Settings → Pages</strong>
+on your repository and check that the source is set to <em>Deploy from a
+branch</em>, with the branch set to <code>gh-pages</code> and the folder
+set to <code>/ (root)</code>. For more details, see <a href="https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site" class="external-link">Configuring
+a publishing source for your GitHub Pages site</a> in the GitHub
+documentation.</p>
+</div>
+</div>
+</div>
+<div class="section level4">
+<h4 id="update--gitignore">Update <code>.gitignore</code>
+<a class="anchor" aria-label="anchor" href="#update--gitignore"></a></h4>
+<p>Add <code>site/</code> to your <code>.gitignore</code> file so the
+local build output is not committed to the repository.</p>
+<div id="publish-your-mkdocs-site" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<span class="callout-header">Discussion</span>
+<div id="publish-your-mkdocs-site" class="callout-inner">
+<h3 class="callout-title">Publish your MkDocs site</h3>
+<div class="callout-content">
+<p>Follow the steps above to publish the MkDocs documentation site you
+built earlier to GitHub Pages.</p>
+<p>Once the workflow has run successfully, share the URL with a
+neighbour and check that each other’s sites are accessible.</p>
+</div>
+</div>
+</div>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -984,20 +1134,20 @@ the wider research community.</li>
 user guides, and troubleshooting tips.</li>
 <li>There are several libraries that may be used to generate
 documentation sites.</li>
-<li>Documentation websites may be deployed to a hosting platform.</li>
+<li>Documentation websites can be published to GitHub Pages using the
+<code>mkdocs gh-deploy</code> command.</li>
 </ul></div>
+</div>
+</div>
 </div>
 </div>
 </section><section><h2 class="section-heading" id="further-resources">Further resources<a class="anchor" aria-label="anchor" href="#further-resources"></a></h2>
 <hr class="half-width"><p>Please review the following material which provides more information
 about some of the topics covered in this episode.</p>
-<ul><li>Sphinx <a href="https://www.sphinx-doc.org/en/master/usage/quickstart.html" class="external-link">Getting
+<ul><li>MkDocs <a href="https://www.mkdocs.org/getting-started/" class="external-link">Getting
 Started</a>
 </li>
-<li>
-<em>Write the Docs</em> <a href="https://www.writethedocs.org/guide/writing/reStructuredText/" class="external-link">Introduction
-to reStructuredText</a>
-</li>
+<li><a href="https://mkdocstrings.github.io/" class="external-link">mkdocstrings</a></li>
 <li>GitHub documentation <a href="https://docs.github.com/en/communities/documenting-your-project-with-wikis/about-wikis" class="external-link">About
 wikis</a>
 </li>
