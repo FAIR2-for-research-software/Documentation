@@ -7,18 +7,20 @@ exercises: 2
 :::::::::::::::::::::::::::::::::::::: questions
 
 - How do we **provide information** to users of our research software?
-- Why is documenting code useful for researchers?
+- Why is documenting code **useful for researchers**?
+- **When should we start** writing documentation for our code?
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Understand the basic purpose of this course
-- Learn the **motivation** for learning to document software
+- Describe at least three **benefits** of documenting research software
+- Explain when in the **project lifecycle** documentation should begin
+- Identify the **kinds of documentation** this module will cover
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-## Introduction
+## What is research software documentation?
 
 There are many kinds of research software, such as:
 
@@ -26,30 +28,19 @@ There are many kinds of research software, such as:
 - A library of functions used within a research team to perform certain kinds of analysis;
 - Tools designed to collect raw data in the field.
 
-No code is self-explanatory. It’s a tool we design, or, more often, a complex organism that develops as we use it with
-our colleagues. To explain our code we must write **software documentation**.
+Code is rarely self-explanatory. It is a tool we design and extend over time, often alongside colleagues. To explain
+our code we must write **software documentation**.
 
-This **provides information** about our programs for everyone involved in its development, use, and future
-reuse. Documentation may consist of text, tips within a computer environment, and diagrams that guide the user in using
-a (potentially complex) software tool. It explains *how* the software works *why* it behaves the way it does.
+Documentation **provides information** about our programs for everyone involved in their development, use, and future
+reuse. It may consist of text, tips within a computer environment, and diagrams that guide the user in using a
+(potentially complex) software tool. It explains *how* the software works *and* *why* it behaves the way it does.
 
 ## Why document our code?
 
-We often encounter software packages, whether written by ourselves, a colleague, or someone else, that’s difficult to
-use because it’s unclear what it does and how it works. Maybe we try to read the source code itself, but we can’t make
+We often encounter software packages, whether written by ourselves, a colleague, or someone else, that's difficult to
+use because it's unclear what it does and how it works. Maybe we try to read the source code itself, but we can't make
 head-nor-tail of it. Sometimes it seems like the only person who can use this software is the person who wrote it. Other
-times, you wrote the code forgot what you were thinking when you did!
-
-:::: challenge
-
-**Discuss positive and negative experiences** with using research software. Think of times when you've used unfamiliar
-code or tools in your research projects in the past.
-
-- What challenges did you have picking up a new tool?
-- What documentation was available?
-- What useful instruction manuals or reference guides do you often refer to in your research projects?
-
-::::
+times, you wrote the code and forgot what you were thinking when you did!
 
 ### Advantages of good documentation
 
@@ -64,15 +55,15 @@ be made more **reproducible** by providing clear context and instructions for us
 There are many advantages to making your **code more readable**, too. Well-written software is easier to maintain and
 has greater **sustainability**. This means it can continue to be used and modified for a longer period of time, despite
 changes in technology. If software is more reusable then it encourages others to use it for their research, increasing
-the number of citations of that software and its overall **research impact**.
+its visibility and **research impact**.
 
 :::: challenge
 
-Discuss the benefits of writing documentation for your research software.
+Think of a time you picked up unfamiliar research code — your own from months ago, or someone else's.
 
-- How will it help you and your work?
-- What benefits will it provide to your collaborators?
-- In what ways does documentation contribute to the wider research community?
+- What made it easy or hard to use?
+- What documentation was available, and what was missing?
+- If you had written that code, what documentation would have helped future users most?
 
 ::::
 
@@ -83,9 +74,9 @@ Writing a useful software package that is well-documented and can be reused in t
 take on a life of its own. The benefits can extend beyond yourself, to your collaborators and other researchers in the
 future.
 
-High-quality documentation is a key part of ensuring a healthy **software lifecycle**. It can make the different between
-accidentally creating an abandoned piece of "gradware" (a colloquial term for mysterious code that a former student
-wrote and nobody else can use) and a successful long-term software project with lasting impact.
+High-quality documentation is a key part of ensuring a healthy **software lifecycle**. It can make the difference
+between accidentally creating an abandoned piece of code (sometimes called *gradware* — code a former student wrote
+that nobody else can use) and a successful long-term software project with lasting impact.
 
 ## When should I write documentation?
 
@@ -112,44 +103,12 @@ software documentation. **Incorporate this feedback** into your software documen
 
 ## Research software papers
 
-You may decide to publish your code and a description of your **software as a paper** in an academic journal. This is a
-kind of [methods paper](https://book.the-turing-way.org/communication/dif-articles/methods.html), which provides more
-detail on your digital research processes than is possible in your main paper. This provides transparency to other
-researchers and improves the replicability of your results.
+Some researchers choose to publish a description of their code as a **software paper** in an academic journal — a kind
+of [methods paper](https://book.the-turing-way.org/communication/dif-articles/methods.html) that improves the
+transparency and replicability of computational results.
 
-A research software paper should provide:
-
-- a concise **introduction** to your code;
-- explain the **motivation** for creating the tool;
-- describe **how** it was written;
-- detail how **algorithms** are implemented;
-- **citations** for other software libraries and methods that were used.
-
-It may also contain a detailed description of the technical design.
-
-For more information about writing these papers, which is beyond the scope of this course, please consider starting to
-explore this subject by reading [Ten simple rules for writing a paper about scientific
-software](https://doi.org/10.1371/journal.pcbi.1008390) by Joseph Romano.
-
-:::: spoiler
-
-### Software journals
-
-An increasing number of journals allow and encourage the publication of research software and open data. Some journals
-focus on a specific field, while others primarily publish research software of any kind. Some relevant journals include:
-
-- [*The Journal of Open Source Software*](https://joss.theoj.org/) is a peer-reviewed publications that provides
-  academic citations for research code;
-- [*Nature*](https://www.nature.com/) has a category of [Toolbox
-  articles](https://www.nature.com/nature/articles?type=toolbox) that cover the technical side of research;
-- [*Journal of Open Research Software*](https://openresearchsoftware.metajnl.com/) is a peer-reviewed repository run by
-  the [Software Sustainability Institute](https://www.software.ac.uk/).
-
-For more information, please read [In which journals should I publish my
-software?](https://www.software.ac.uk/top-tip/which-journals-should-i-publish-my-software) by Neil Chue Hong, the
-Director of the [Software Sustainability Institute](https://www.software.ac.uk/).
-
-::::
+This is beyond the scope of this module. The FAIR² programme covers it separately in the **Publishing software papers**
+module — see the [FAIR² course page](https://rse.shef.ac.uk/training/fair4rs/) for details and registration.
 
 :::::: keypoints
 
@@ -160,5 +119,7 @@ Director of the [Software Sustainability Institute](https://www.software.ac.uk/)
   research projects.
 - **Knowledge transfer:** Your software package will be easier to maintain in the long term if others are able to learn
   about it and look after it after the original developers move on.
+- **Sustainability:** Readable, documented code is easier to maintain and reuse, extending the useful life of your
+  software.
 
 ::::::
