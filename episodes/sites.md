@@ -204,32 +204,32 @@ It's also possible to generate a documentation site to accompany R packages that
 this, please refer to the book *R Packages* by Hadley Wickham, which has a chapter on [documentation
 websites](https://r-pkgs.org/website.html).
 
-#### Sphinx
+#### MkDocs
 
-[Sphinx](https://www.sphinx-doc.org/) is a tool for building documentation websites that is commonly used amongst
-developers of Python packages, although it's also compatible with other programming languages. It doesn't currently
-support packages written using the R statistical language.
+[MkDocs](https://www.mkdocs.org/) is a tool for building documentation websites that is popular amongst developers of
+Python packages, although it can be used to document code written in any programming language. It takes a collection of
+Markdown files and turns them into a polished static website ready to publish on the internet.
 
-Sphinx is a documentation generator tool that takes plain text files that use a markup syntax (such as reStructuredText or
-Markdown) for formatting the content of your documentation site and transforms them into various output formats, ready
-to be published on the internet. It has a number of useful features, but in this module we'll learn the basics to
-document our research code.
+MkDocs is designed to be simple to set up: a single configuration file (`mkdocs.yml`) controls the site, and all of
+your content is written in plain Markdown — the same syntax you used for your readme files. The
+[mkdocstrings](https://mkdocstrings.github.io/) plugin can automatically generate reference pages from your code's
+documentation strings.
 
 ::: callout
 
-For a more in-depth guide, please see [Build your first project](https://www.sphinx-doc.org/en/master/tutorial/) in the
-Sphinx documentation.
+For a more in-depth guide, please see [Getting Started](https://www.mkdocs.org/getting-started/) in the MkDocs
+documentation.
 
 :::
 
 ##### Getting started
 
-Let's use Sphinx to create a documentation site for our Python code.
+Let's use MkDocs to create a documentation site for our Python code.
 
-###### Installing Sphinx
+###### Installing MkDocs
 
 Navigate to the root folder of your code project.  Create a virtual environment using
-[venv](https://docs.python.org/3/library/venv.html) which is a separate area in which to install the Sphinx package.
+[venv](https://docs.python.org/3/library/venv.html) which is a separate area in which to install the MkDocs package.
 This command will create a virtual environment in a directory called `.venv/`
 
 ::: group-tab
@@ -282,140 +282,156 @@ source .venv/bin/activate
 :::
 
 Use the Python package manager [pip](https://pip.pypa.io/en/stable/) to [install
-Sphinx](https://www.sphinx-doc.org/en/master/usage/installation.html).
+MkDocs](https://www.mkdocs.org/user-guide/installation/), along with the `mkdocstrings` plugin for generating
+reference material from Python code.
 
 ```bash
-pip install sphinx
+pip install "mkdocs==1.*" "mkdocstrings[python]"
 ```
 
-##### Start a new Sphinx project
+:::: spoiler
 
-Sphinx includes a command to set up a new project called
-[sphinx-quickstart](https://www.sphinx-doc.org/en/master/man/sphinx-quickstart.html). Navigate to your project's root
-folder and run the following command.
+### Why pin MkDocs to version 1?
+
+MkDocs 2.0 is on the horizon (see the [MkDocs 2.0
+announcement](https://squidfunk.github.io/mkdocs-material/blog/2026/02/18/mkdocs-2.0/)) and introduces changes that
+may break the configuration used in this episode. Pinning the installation to the `1.x` series (`"mkdocs==1.*"`)
+ensures that the commands and `mkdocs.yml` shown here continue to work as written.
+
+When you run `mkdocs` with a 1.x release, you may see a warning about the upcoming 2.0 release. To silence it, set
+the following environment variable before running MkDocs:
 
 ```bash
-sphinx-quickstart docs --no-sep --ext-autodoc
+export NO_MKDOCS_2_WARNING=1
 ```
 
-This will initialise the configuration files for a new Sphinx site in a subdirectory called `docs/` and prompt you to
-enter the following options:
+Once you're comfortable with MkDocs and ready to upgrade, drop the version pin and follow the official migration
+guide.
 
-- Project name: Birdsong Identifier
-- Author name(s): Bill Oddie
-- Project release []: 1.0
+::::
+
+##### Start a new MkDocs project
+
+MkDocs includes a command to scaffold a new project. Navigate to your project's root folder and run the following
+command.
+
+```bash
+mkdocs new .
+```
+
+This creates two things:
+
+- `mkdocs.yml` — the configuration file for your site.
+- `docs/index.md` — a starting page containing placeholder content, written in Markdown.
+
+Your documentation content lives inside the `docs/` folder. You can add as many Markdown files as you like, and they
+will become pages of your site.
+
+###### Configure the site and plugins
+
+Open `mkdocs.yml` and replace its contents with the following:
+
+```yaml
+site_name: Birdsong Identifier
+plugins:
+  - search
+  - mkdocstrings
+```
+
+:::: spoiler
+
+### What does this configuration mean?
+
+- `site_name` sets the title that appears in the site's header and browser tab.
+- `plugins` is a list of extensions that add features. `search` enables a full-text search index, and `mkdocstrings`
+  lets you pull documentation directly from your Python source code.
+
+::::
 
 ::: callout
 
-### Sphinx options
+### MkDocs options
 
-To find out more about the Sphinx configuration files, please read their guide to [defining document
-structure](https://www.sphinx-doc.org/en/master/usage/quickstart.html#defining-document-structure) on the Sphinx
-documentation.
+To find out more about the MkDocs configuration file, please read the [Configuration
+documentation](https://www.mkdocs.org/user-guide/configuration/).
 
 :::
 
-##### Building the site
+##### Previewing the site locally
 
-In this context, *building* means taking our collection of Sphinx files and converting them into the source code files
-that define a website.  Sphinx will create *HyperText Markup Language* (HTML) files, which is the markup language for
-pages that display in a web browser commonly used on the internet.
-
-To build our site, we run the [sphinx-build](https://www.sphinx-doc.org/en/master/man/sphinx-build.html) command using
-the `-M` option to select <abbr title="HyperText Markup Language">HTML</abbr> syntax as the output format.
+MkDocs includes a built-in development server that rebuilds and refreshes the site automatically as you edit files.
+This makes it very fast to see the effect of your writing.
 
 ```bash
-sphinx-build -M html docs docs/_build
+mkdocs serve
 ```
 
-Sphinx will load our files from the `docs/` directory and output the built HTML files in the `docs/_build` directory.
+Open your web browser to <http://127.0.0.1:8000> to view your documentation site. Leave this command running while you
+work — any time you save a Markdown file, the browser will reload with your changes. Press `Ctrl+C` to stop the server.
 
-The file `docs/_build/html/index.html` contains the home page of your new documentation site! Open that file to view
-your handiwork.
+##### Building the site
 
-![The Sphinx homepage for our documentation site](fig/sphinx-build-screenshot.png "Sphinx")
+In this context, *building* means taking our collection of Markdown files and converting them into the source code
+files that define a website.  MkDocs will create *HyperText Markup Language* (HTML) files, which is the markup
+language for pages that display in a web browser commonly used on the internet.
 
-##### Autodoc
+To build our site, we run the following command.
+
+```bash
+mkdocs build
+```
+
+MkDocs will load our files from the `docs/` directory and output the built HTML files into a directory called `site/`.
+
+The file `site/index.html` contains the home page of your new documentation site! Open that file to view your
+handiwork.
+
+##### Automatic reference generation
 
 It can be useful to automatically populate our documentation sites by converting our [documentation
 strings](docstrings.md) into formatted text. We can achieve this using the
-[autodoc](https://www.sphinx-doc.org/en/master/usage/extensions/autodoc.html) plugin for Sphinx.
+[mkdocstrings](https://mkdocstrings.github.io/) plugin, which we already installed and enabled in `mkdocs.yml`.
 
-###### Configuring Autodoc
+###### Adding a reference page
 
-Let's set up the options for `autodoc`.  (If you struggle with these steps, please refer to the [template
-project](https://github.com/Joe-Heffer-Shef/oddsong).)
+Create a new file `docs/reference.md` with the following contents.
 
-Add the following lines to `docs/conf.py` which
+```markdown
+# Reference
 
-```python
-# Our Python code may be imported from the parent directory
-import os
-import sys
-sys.path.insert(0, os.path.abspath('..'))
-```
-
-This ensures that Sphinx can access our Python code by pointing at the root directory of our project.  The `..` syntax
-means "one folder up", which means `autodoc` will search in the root directory for code to import.
-
-:::: spoiler
-
-### What does this code mean?
-
-The Python code uses [`sys.path`](https://docs.python.org/3/library/sys.html#sys.path), a list of locations to search
-for code.  By modifying the Python *module search path*, we allow `autodoc` to locate and import our code modules from a
-specific directory that is not in the default search path.
-
-This is often necessary when working with project structures that involve multiple directories, helping the interpreter
-to find code that isn't installed in the standard library location.
-
-::::
-
-Next, edit `docs/index.rst` and add the following lines to instruct Sphinx to automatically generation documentation for
-our Python module.
-
-```rst
-.. automodule:: oddsong.song
-    :members:
+::: oddsong.song
 ```
 
 :::: spoiler
 
 ### What does this code mean?
 
-This [reStructuredText (reST)](https://docutils.sourceforge.io/rst.html) markup language has the following elements:
+The `mkdocstrings` plugin uses a special Markdown syntax to inject generated documentation into a page:
 
-- `..` indicates a *directive* within a <abbr title="reStructuredText">reST</abbr> document that is used to configure
-  Sphinx.
-- `automodule::` indicates a specific directive to use `autodoc` to automatically generate documentation for a module.
-- `oddsong.song` is the path to our Python module, for which documentation will be created.
-- `:members:` is an optional argument for the automodule directive that instructs Sphinx to include documentation for
-  all members (functions, classes, variables) defined within the specified module.
+- `:::` is the directive that tells `mkdocstrings` to pull in documentation.
+- `oddsong.song` is the dotted path to the Python module we want to document.
 
-For more information about <abbr title="reStructuredText">reST</abbr>, please read the [Introduction to
-reStructuredText](https://www.writethedocs.org/guide/writing/reStructuredText/) by *Write The Docs*.
+By default, `mkdocstrings` includes all public functions, classes, and variables in the module, rendered from their
+documentation strings. For more options (such as filtering members or customising the layout), see the [mkdocstrings
+Python handler documentation](https://mkdocstrings.github.io/python/).
 
 ::::
 
-Now, when we build our site, Sphinx will scan the contents of the `oddsong` Python module and automatically generate a
+Now, when we build our site, MkDocs will scan the contents of the `oddsong` Python module and automatically generate a
 useful reference guide to our functions.
 
 ```bash
-sphinx-build -M html docs docs/_build
+mkdocs build
 ```
-
-The result looks something like this:
-
-![Python documentation string rendered as HTML](fig/oddsong-autodoc.png "A Python function documentation string")
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
 ## Automatically generate content
 
-Try using `autodoc` to analyse your own code and build a documentation site by following the steps above.
+Try using `mkdocstrings` to analyse your own code and build a documentation site by following the steps above.
 
-After the `sphinx-build` command has completed successfully, browse the contents of the `docs/_build/html` folder and
-discuss what you find.
+After the `mkdocs build` command has completed successfully, browse the contents of the `site/` folder and discuss what
+you find.
 
 :::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -424,22 +440,30 @@ discuss what you find.
 Now that you've started writing your documentation website, there are various ways to upload it to the internet so that
 others can read it.
 
-**[GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages)** is a free
+In this episode, we'll focus on
+**[GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/about-github-pages)**, a free
 hosting service built into GitHub. It can automatically build and publish your site whenever you push changes to your
 repository, making it a convenient choice if your code is already hosted on GitHub.
 
-**[Read the Docs](https://about.readthedocs.com/)** is a dedicated documentation hosting platform that integrates with
-Sphinx and other generators. It automatically rebuilds your documentation when you push new commits and provides
-versioned documentation so users can browse the docs for older releases of your software.
+:::: spoiler
 
-::: callout
+## Other hosting services
 
-## Choosing a hosting platform
+GitHub Pages is not the only option. Other hosting services popular with researchers include:
 
-Both platforms offer free tiers for open-source projects. GitHub Pages is simpler to set up, while Read the Docs
-provides more documentation-specific features such as version switching and search.
+- **[Read the Docs](https://about.readthedocs.com/)** is a dedicated documentation hosting platform that supports
+  MkDocs and other popular generators. It automatically rebuilds your documentation when you push new commits and
+  provides versioned documentation so users can browse the docs for older releases of your software.
+- **[GitLab Pages](https://docs.gitlab.com/user/project/pages/)** is the equivalent of GitHub Pages for projects
+  hosted on GitLab, including self-hosted GitLab instances that some universities run for their researchers.
+- **[Netlify](https://www.netlify.com/)** and **[Cloudflare Pages](https://pages.cloudflare.com/)** are general
+  static-site hosts with free tiers that work well for documentation built with MkDocs or similar tools.
 
-:::
+All of these platforms offer free tiers for open-source projects. GitHub Pages is the simplest to set up when your
+code already lives on GitHub, while Read the Docs provides more documentation-specific features such as version
+switching and a documentation-focused search.
+
+::::
 
 ### GitHub Pages
 
@@ -451,73 +475,27 @@ Your repository must be **public** (or you must have a GitHub Pro account) and a
 
 :::
 
-#### Enable GitHub Pages
+MkDocs provides a built-in command to publish your site to GitHub Pages. From your project's root folder, run:
 
-In your repository on GitHub, go to **Settings → Pages** and set the **Source** to **GitHub Actions**.
-
-#### Create the workflow file
-
-Create the file `.github/workflows/docs.yml` in your repository with the following contents:
-
-```yaml
-name: Docs
-
-on:
-  push:
-    branches: [main]
-
-permissions:
-  contents: read
-  pages: write
-  id-token: write
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
-        with:
-          python-version: '3.x'
-      - run: pip install sphinx
-      - run: sphinx-build -M html docs docs/_build
-      - uses: actions/upload-pages-artifact@v3
-        with:
-          path: docs/_build/html
-
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-    steps:
-      - id: deployment
-        uses: actions/deploy-pages@v4
+```bash
+mkdocs gh-deploy
 ```
+
+This builds your site and pushes the output to a branch called `gh-pages` on your GitHub repository. GitHub Pages will
+then serve the site from that branch.
+
+Once the command completes, the published URL is shown in the terminal output. You can also find it under **Settings →
+Pages** in your repository.
 
 #### Update `.gitignore`
 
-Add `docs/_build/` to your `.gitignore` file so the local build output is not committed to the repository.
-
-#### Push and verify
-
-Stage and commit the new workflow file, then push to GitHub:
-
-```bash
-git add .github/workflows/docs.yml .gitignore
-git commit -m "Add GitHub Pages deployment workflow"
-git push
-```
-
-Open the **Actions** tab in your repository to watch the workflow run. Once it completes successfully, the published URL
-will appear under **Settings → Pages**.
+Add `site/` to your `.gitignore` file so the local build output is not committed to the repository.
 
 ::: challenge
 
-## Publish your Sphinx site
+## Publish your MkDocs site
 
-Follow the steps above to publish the Sphinx documentation site you built earlier to GitHub Pages.
+Follow the steps above to publish the MkDocs documentation site you built earlier to GitHub Pages.
 
 Once the workflow has run successfully, share the URL with a neighbour and check that each other's sites are accessible.
 
@@ -529,7 +507,7 @@ Once the workflow has run successfully, share the URL with a neighbour and check
   successful adoption by the wider research community.
 - Documentation sites contain comprehensive installation instructions, user guides, and troubleshooting tips.
 - There are several libraries that may be used to generate documentation sites.
-- Documentation websites can be deployed automatically to GitHub Pages using a GitHub Actions workflow.
+- Documentation websites can be published to GitHub Pages using the `mkdocs gh-deploy` command.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -537,8 +515,8 @@ Once the workflow has run successfully, share the URL with a neighbour and check
 
 Please review the following material which provides more information about some of the topics covered in this episode.
 
-- Sphinx [Getting Started](https://www.sphinx-doc.org/en/master/usage/quickstart.html)
-- *Write the Docs* [Introduction to reStructuredText](https://www.writethedocs.org/guide/writing/reStructuredText/)
+- MkDocs [Getting Started](https://www.mkdocs.org/getting-started/)
+- [mkdocstrings](https://mkdocstrings.github.io/)
 - GitHub documentation [About
   wikis](https://docs.github.com/en/communities/documenting-your-project-with-wikis/about-wikis)
 - *Write the Docs* [Tools for documentation writing](https://www.writethedocs.org/guide/tools/)
