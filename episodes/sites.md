@@ -198,12 +198,6 @@ Consider what information a new user would need to get started. How does it feel
 For projects that need more structure, customisation, or automatic generation of content from code, standalone site
 generator tools are a good choice.
 
-#### Documentation sites for R packages
-
-It's also possible to generate a documentation site to accompany R packages that you create. For more information about
-this, please refer to the book *R Packages* by Hadley Wickham, which has a chapter on [documentation
-websites](https://r-pkgs.org/website.html).
-
 #### MkDocs
 
 [MkDocs](https://www.mkdocs.org/) is a tool for building documentation websites that is popular amongst developers of
@@ -221,6 +215,21 @@ For a more in-depth guide, please see [Getting Started](https://www.mkdocs.org/g
 documentation.
 
 :::
+
+:::: spoiler
+
+### Documenting R packages
+
+MkDocs itself is language-agnostic — it simply converts Markdown into a website, so you can use it to write prose
+documentation for code in any language, including R. However, the `mkdocstrings` plugin used below to auto-generate
+reference material only understands Python.
+
+If you are documenting an R package, the standard tool is **[pkgdown](https://pkgdown.r-lib.org/)**, which generates
+a documentation site directly from your package's `DESCRIPTION` file, vignettes, and function documentation. For a
+full walkthrough, see the [Website](https://r-pkgs.org/website.html) chapter of *R Packages* by Hadley Wickham and
+Jennifer Bryan.
+
+::::
 
 ##### Getting started
 
