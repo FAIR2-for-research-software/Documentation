@@ -4,6 +4,7 @@ config:
     line_length: 120
     code_blocks: false
     tables: false
+    images: false
   html:
     allowed_elements:
       - abbr
