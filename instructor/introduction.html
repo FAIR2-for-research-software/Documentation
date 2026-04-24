@@ -220,7 +220,7 @@
 
     <div id="flush-collapsecurrent" class="accordion-collapse collapse show" data-bs-parent="#accordionFlushcurrent">
       <div class="accordion-body">
-        <ul><li><a href="#introduction">Introduction</a></li>
+        <ul><li><a href="#what-is-research-software-documentation">What is research software documentation?</a></li>
 <li><a href="#why-document-our-code">Why document our code?</a></li>
 <li><a href="#when-should-i-write-documentation">When should I write documentation?</a></li>
 <li><a href="#research-software-papers">Research software papers</a></li>
@@ -351,7 +351,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Introduction</h1>
-        <p>Last updated on 2026-03-10 |
+        <p>Last updated on 2026-04-24 |
 
         <a href="https://github.com/FAIR2-for-research-software/Documentation/edit/main/episodes/introduction.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -374,7 +374,11 @@
 <h3 class="card-title">Questions</h3>
 <ul><li>How do we <strong>provide information</strong> to users of our
 research software?</li>
-<li>Why is documenting code useful for researchers?</li>
+<li>Why is documenting code <strong>useful for
+researchers</strong>?</li>
+<li>
+<strong>When should we start</strong> writing documentation for our
+code?</li>
 </ul></div>
 </div>
 </div>
@@ -382,56 +386,40 @@ research software?</li>
 <div class="card-body">
 <div class="inner bordered">
 <h3 class="card-title">Objectives</h3>
-<ul><li>Understand the basic purpose of this course</li>
-<li>Learn the <strong>motivation</strong> for learning to document
-software</li>
+<ul><li>Describe at least three <strong>benefits</strong> of documenting
+research software</li>
+<li>Explain when in the <strong>project lifecycle</strong> documentation
+should begin</li>
+<li>Identify the <strong>kinds of documentation</strong> this module
+will cover</li>
 </ul></div>
 </div>
 </div>
 </div>
 </div>
-<section><h2 class="section-heading" id="introduction">Introduction<a class="anchor" aria-label="anchor" href="#introduction"></a></h2>
+<section><h2 class="section-heading" id="what-is-research-software-documentation">What is research software documentation?<a class="anchor" aria-label="anchor" href="#what-is-research-software-documentation"></a></h2>
 <hr class="half-width"><p>There are many kinds of research software, such as:</p>
 <ul><li>Data processing workflows with multiple steps;</li>
 <li>A library of functions used within a research team to perform
 certain kinds of analysis;</li>
 <li>Tools designed to collect raw data in the field.</li>
-</ul><p>No code is self-explanatory. It’s a tool we design, or, more often, a
-complex organism that develops as we use it with our colleagues. To
-explain our code we must write <strong>software
-documentation</strong>.</p>
-<p>This <strong>provides information</strong> about our programs for
-everyone involved in its development, use, and future reuse.
-Documentation may consist of text, tips within a computer environment,
-and diagrams that guide the user in using a (potentially complex)
-software tool. It explains <em>how</em> the software works <em>why</em>
-it behaves the way it does.</p>
+</ul><p>Code is rarely self-explanatory. It is a tool we design and extend
+over time, often alongside colleagues. To explain our code we must write
+<strong>software documentation</strong>.</p>
+<p>Documentation <strong>provides information</strong> about our
+programs for everyone involved in their development, use, and future
+reuse. It may consist of text, tips within a computer environment, and
+diagrams that guide the user in using a (potentially complex) software
+tool. It explains <em>how</em> the software works <em>and</em>
+<em>why</em> it behaves the way it does.</p>
 </section><section><h2 class="section-heading" id="why-document-our-code">Why document our code?<a class="anchor" aria-label="anchor" href="#why-document-our-code"></a></h2>
 <hr class="half-width"><p>We often encounter software packages, whether written by ourselves, a
 colleague, or someone else, that’s difficult to use because it’s unclear
 what it does and how it works. Maybe we try to read the source code
 itself, but we can’t make head-nor-tail of it. Sometimes it seems like
 the only person who can use this software is the person who wrote it.
-Other times, you wrote the code forgot what you were thinking when you
-did!</p>
-<div id="discussion1" class="callout discussion">
-<div class="callout-square">
-<i class="callout-icon" data-feather="message-circle"></i>
-</div>
-<span class="callout-header">Discussion</span>
-<div class="callout-inner">
-<h3 class="callout-title">Challenge</h3>
-<div class="callout-content">
-<p><strong>Discuss positive and negative experiences</strong> with using
-research software. Think of times when you’ve used unfamiliar code or
-tools in your research projects in the past.</p>
-<ul><li>What challenges did you have picking up a new tool?</li>
-<li>What documentation was available?</li>
-<li>What useful instruction manuals or reference guides do you often
-refer to in your research projects?</li>
-</ul></div>
-</div>
-</div>
+Other times, you wrote the code and forgot what you were thinking when
+you did!</p>
 <div class="section level3">
 <h3 id="advantages-of-good-documentation">Advantages of good documentation<a class="anchor" aria-label="anchor" href="#advantages-of-good-documentation"></a></h3>
 <p>There are many <strong>advantages to writing guidance</strong> to go
@@ -449,9 +437,9 @@ readable</strong>, too. Well-written software is easier to maintain and
 has greater <strong>sustainability</strong>. This means it can continue
 to be used and modified for a longer period of time, despite changes in
 technology. If software is more reusable then it encourages others to
-use it for their research, increasing the number of citations of that
-software and its overall <strong>research impact</strong>.</p>
-<div id="discussion2" class="callout discussion">
+use it for their research, increasing its visibility and
+<strong>research impact</strong>.</p>
+<div id="discussion1" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
@@ -459,12 +447,12 @@ software and its overall <strong>research impact</strong>.</p>
 <div class="callout-inner">
 <h3 class="callout-title">Challenge</h3>
 <div class="callout-content">
-<p>Discuss the benefits of writing documentation for your research
-software.</p>
-<ul><li>How will it help you and your work?</li>
-<li>What benefits will it provide to your collaborators?</li>
-<li>In what ways does documentation contribute to the wider research
-community?</li>
+<p>Think of a time you picked up unfamiliar research code — your own
+from months ago, or someone else’s.</p>
+<ul><li>What made it easy or hard to use?</li>
+<li>What documentation was available, and what was missing?</li>
+<li>If you had written that code, what documentation would have helped
+future users most?</li>
 </ul></div>
 </div>
 </div>
@@ -477,9 +465,9 @@ reused in the future means that your code could take on a life of its
 own. The benefits can extend beyond yourself, to your collaborators and
 other researchers in the future.</p>
 <p>High-quality documentation is a key part of ensuring a healthy
-<strong>software lifecycle</strong>. It can make the different between
-accidentally creating an abandoned piece of “gradware” (a colloquial
-term for mysterious code that a former student wrote and nobody else can
+<strong>software lifecycle</strong>. It can make the difference between
+accidentally creating an abandoned piece of code (sometimes called
+<em>gradware</em> — code a former student wrote that nobody else can
 use) and a successful long-term software project with lasting
 impact.</p>
 </div>
@@ -510,62 +498,14 @@ clearly and in greater depth in the software documentation.
 <strong>Incorporate this feedback</strong> into your software
 documentation.</p>
 </section><section><h2 class="section-heading" id="research-software-papers">Research software papers<a class="anchor" aria-label="anchor" href="#research-software-papers"></a></h2>
-<hr class="half-width"><p>You may decide to publish your code and a description of your
-<strong>software as a paper</strong> in an academic journal. This is a
-kind of <a href="https://book.the-turing-way.org/communication/dif-articles/methods.html" class="external-link">methods
-paper</a>, which provides more detail on your digital research processes
-than is possible in your main paper. This provides transparency to other
-researchers and improves the replicability of your results.</p>
-<p>A research software paper should provide:</p>
-<ul><li>a concise <strong>introduction</strong> to your code;</li>
-<li>explain the <strong>motivation</strong> for creating the tool;</li>
-<li>describe <strong>how</strong> it was written;</li>
-<li>detail how <strong>algorithms</strong> are implemented;</li>
-<li>
-<strong>citations</strong> for other software libraries and methods
-that were used.</li>
-</ul><p>It may also contain a detailed description of the technical
-design.</p>
-<p>For more information about writing these papers, which is beyond the
-scope of this course, please consider starting to explore this subject
-by reading <a href="https://doi.org/10.1371/journal.pcbi.1008390" class="external-link">Ten
-simple rules for writing a paper about scientific software</a> by Joseph
-Romano.</p>
-<div id="accordionSpoiler1" class="accordion spoiler-accordion accordion-flush">
-<div class="accordion-item">
-<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
-  <h3 class="accordion-header" id="headingSpoiler1">
-  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>
-  Software journals
-  </h3>
-</button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
-<div class="accordion-body">
-<p>An increasing number of journals allow and encourage the publication
-of research software and open data. Some journals focus on a specific
-field, while others primarily publish research software of any kind.
-Some relevant journals include:</p>
-<ul><li>
-<a href="https://joss.theoj.org/" class="external-link"><em>The Journal of Open Source
-Software</em></a> is a peer-reviewed publications that provides academic
-citations for research code;</li>
-<li>
-<a href="https://www.nature.com/" class="external-link"><em>Nature</em></a> has a category
-of <a href="https://www.nature.com/nature/articles?type=toolbox" class="external-link">Toolbox
-articles</a> that cover the technical side of research;</li>
-<li>
-<a href="https://openresearchsoftware.metajnl.com/" class="external-link"><em>Journal of
-Open Research Software</em></a> is a peer-reviewed repository run by the
-<a href="https://www.software.ac.uk/" class="external-link">Software Sustainability
-Institute</a>.</li>
-</ul><p>For more information, please read <a href="https://www.software.ac.uk/top-tip/which-journals-should-i-publish-my-software" class="external-link">In
-which journals should I publish my software?</a> by Neil Chue Hong, the
-Director of the <a href="https://www.software.ac.uk/" class="external-link">Software
-Sustainability Institute</a>.</p>
-</div>
-</div>
-</div>
-</div>
+<hr class="half-width"><p>Some researchers choose to publish a description of their code as a
+<strong>software paper</strong> in an academic journal — a kind of <a href="https://book.the-turing-way.org/communication/dif-articles/methods.html" class="external-link">methods
+paper</a> that improves the transparency and replicability of
+computational results.</p>
+<p>This is beyond the scope of this module. The FAIR² programme covers
+it separately in the <strong>Publishing software papers</strong> module
+— see the <a href="https://rse.shef.ac.uk/training/fair4rs/" class="external-link">FAIR²
+course page</a> for details and registration.</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -587,6 +527,9 @@ and research projects.</li>
 <strong>Knowledge transfer:</strong> Your software package will be
 easier to maintain in the long term if others are able to learn about it
 and look after it after the original developers move on.</li>
+<li>
+<strong>Sustainability:</strong> Readable, documented code is easier
+to maintain and reuse, extending the useful life of your software.</li>
 </ul></div>
 </div>
 </div>
@@ -659,7 +602,7 @@ any links that you are not going to use.
   "url": "https://FAIR2-for-research-software.github.io/Documentation/instructor/introduction.html",
   "identifier": "https://FAIR2-for-research-software.github.io/Documentation/instructor/introduction.html",
   "dateCreated": "2024-05-20",
-  "dateModified": "2026-03-10",
+  "dateModified": "2026-04-24",
   "datePublished": "2026-04-24"
 }
 
