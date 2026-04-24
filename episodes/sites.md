@@ -144,8 +144,8 @@ As issues come up with your research code, and are eventually resolved and clari
 troubles and make them available to the entire user base in your documentation site. This will help users to identify
 and fix common misunderstandings and technical problems they may run into when utilising your code.
 
-This prevents a situation where potential solutions to common issues do exist, but are scattered around the internet and are
-the exclusive knowledge of a few individuals and are hard to find.
+This prevents a situation where potential solutions to common issues do exist, but are scattered around the
+internet and are the exclusive knowledge of a few individuals and are hard to find.
 
 ### FAQs
 
@@ -412,7 +412,7 @@ The result looks something like this:
 
 ## Automatically generate content
 
-Try using `autodoc` to analyise your own code and build a documentation site by following the steps above.
+Try using `autodoc` to analyse your own code and build a documentation site by following the steps above.
 
 After the `sphinx-build` command has completed successfully, browse the contents of the `docs/_build/html` folder and
 discuss what you find.

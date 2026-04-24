@@ -12,6 +12,7 @@ config:
       - kbd
       - sup
   no-duplicate-heading: false
+  heading-increment: false
 
 globs:
 
@@ -23,6 +24,7 @@ ignores:
 - "site/**/*.md"
 - ".github/**/*.md"
 - "renv/**/*.md"
+- ".pixi/**/*.md"
 - "index.md"
 - "README.md"
 

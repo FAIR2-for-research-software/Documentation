@@ -27,8 +27,40 @@ our [code of conduct](CODE_OF_CONDUCT.md).
    you can submit a pull request (PR). Instructions for doing this are
    [included below](#using-github).
 
-Note: if you want to build the website locally, please refer to [The Workbench
-documentation][template-doc].
+## Local development environment
+
+The lesson site is built with [The Carpentries Workbench][template-doc].
+
+Install [Pixi](https://pixi.sh), then from the repository root run:
+
+```bash
+pixi install   # install R and Workbench packages (first time only)
+pixi run serve # preview the site at http://localhost:4321
+```
+
+Other tasks:
+
+| Command | Description |
+|---|---|
+| `pixi run build` | Build the static site into `site/` |
+| `pixi run check` | Validate lesson structure |
+
+The `pixi.lock` file pins all package versions — run `pixi install` after
+pulling changes to keep your environment in sync.
+
+## Linting
+
+After running `pixi install`, activate the pre-commit hooks (one-time setup):
+
+```bash
+pixi run pre-commit install
+```
+
+Hooks run automatically on `git commit`. To run all checks manually:
+
+```bash
+pixi run lint
+```
 
 ## Using GitHub
 

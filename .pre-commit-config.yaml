@@ -22,6 +22,7 @@ repos:
   rev: v2.4.1
   hooks:
     - id: codespell
+      exclude: "^.github/"
 ci:
   autofix_prs: true
   autofix_commit_msg: '[pre-commit.ci] Fixing issues with pre-commit'

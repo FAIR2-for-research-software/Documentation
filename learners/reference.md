@@ -23,7 +23,7 @@ IDE
   engineers
 
 Developer
-: A software engineer who's contributing to a softare project
+: A software engineer who's contributing to a software project
 
 Codebase
 : All the code, functions, and files within a software project
