@@ -395,6 +395,8 @@ MkDocs will load our files from the `docs/` directory and output the built HTML 
 The file `site/index.html` contains the home page of your new documentation site! Open that file to view your
 handiwork.
 
+![The MkDocs home page for our documentation site](fig/mkdocs-index.png "MkDocs")
+
 ##### Automatic reference generation
 
 It can be useful to automatically populate our documentation sites by converting our [documentation
@@ -432,6 +434,8 @@ useful reference guide to our functions.
 ```bash
 mkdocs build
 ```
+
+![Python documentation strings rendered as HTML by mkdocstrings](fig/mkdocs-reference.png "Auto-generated API reference")
 
 ::::::::::::::::::::::::::::::::::::: challenge
 
@@ -495,6 +499,17 @@ then serve the site from that branch.
 
 Once the command completes, the published URL is shown in the terminal output. You can also find it under **Settings →
 Pages** in your repository.
+
+::: callout
+
+### Automating deployment
+
+Running `mkdocs gh-deploy` manually works well for small projects, but for collaborative repositories it's common to
+automate this with a GitHub Actions workflow that rebuilds and redeploys the site on every push to `main`. Configuring
+Actions is beyond the scope of this episode — see [Deploying your
+docs](https://www.mkdocs.org/user-guide/deploying-your-docs/) in the MkDocs documentation for an example workflow.
+
+:::
 
 ::: callout
 
