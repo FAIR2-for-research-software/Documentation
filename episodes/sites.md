@@ -487,6 +487,22 @@ then serve the site from that branch.
 Once the command completes, the published URL is shown in the terminal output. You can also find it under **Settings →
 Pages** in your repository.
 
+::: callout
+
+## Check your Pages settings
+
+The `mkdocs gh-deploy` command pushes your built site to a branch called `gh-pages`, but it does not configure the
+GitHub Pages settings for you. For a brand-new repository, GitHub will usually enable Pages automatically the first
+time this branch is pushed, and your site will appear within a minute or two.
+
+If your site does not appear, go to **Settings → Pages** on your repository and check that the source is set to
+*Deploy from a branch*, with the branch set to `gh-pages` and the folder set to `/ (root)`. For more details, see
+[Configuring a publishing source for your GitHub Pages
+site](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)
+in the GitHub documentation.
+
+:::
+
 #### Update `.gitignore`
 
 Add `site/` to your `.gitignore` file so the local build output is not committed to the repository.
