@@ -353,7 +353,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Code readability</h1>
-        <p>Last updated on 2025-11-06 |
+        <p>Last updated on 2026-04-24 |
 
         <a href="https://github.com/FAIR2-for-research-software/Documentation/edit/main/episodes/readable.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -418,7 +418,7 @@ shown in a red font.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-1" class="tab-content">
-<div id="nav-tabpanel-1-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-Python">
+<div id="nav-tabpanel-1-Python" class="tab-pane show active" aria-labelledby="nav-tab-1-Python" role="tabpanel">
 <p>Without syntax highlighting:</p>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -462,7 +462,7 @@ shown in a red font.</p>
 <span id="cb2-16"><a href="#cb2-16" tabindex="-1" aria-label="code-block-2-16"></a>  <span class="cf">return</span> word_count</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-1-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-R">
+<div id="nav-tabpanel-1-R" class="tab-pane" aria-labelledby="nav-tab-1-R" role="tabpanel">
 <p>Without syntax highlighting:</p>
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">DEFAULT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -491,23 +491,26 @@ shown in a red font.</p>
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode r" tabindex="0"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" tabindex="-1" aria-label="code-block-4-1"></a><span class="co"># Function to count word occurrences in a text file</span></span>
-<span id="cb4-2"><a href="#cb4-2" tabindex="-1" aria-label="code-block-4-2"></a>count_word_occurrences <span class="ot">&lt;-</span> <span class="cf">function</span>(filename, word_to_count) { text_file <span class="ot">&lt;-</span> <span class="fu">file</span>(filename, <span class="st">"r"</span>) word_count <span class="ot">&lt;-</span> <span class="dv">0</span></span>
-<span id="cb4-3"><a href="#cb4-3" tabindex="-1" aria-label="code-block-4-3"></a></span>
-<span id="cb4-4"><a href="#cb4-4" tabindex="-1" aria-label="code-block-4-4"></a>  <span class="co"># Read the file line by line using a loop</span></span>
-<span id="cb4-5"><a href="#cb4-5" tabindex="-1" aria-label="code-block-4-5"></a>  <span class="cf">for</span> (line <span class="cf">in</span> <span class="fu">readLines</span>(text_file)) {</span>
-<span id="cb4-6"><a href="#cb4-6" tabindex="-1" aria-label="code-block-4-6"></a>    <span class="co"># Convert the line to lowercase for case-insensitive counting</span></span>
-<span id="cb4-7"><a href="#cb4-7" tabindex="-1" aria-label="code-block-4-7"></a>    line <span class="ot">&lt;-</span> <span class="fu">tolower</span>(line)</span>
-<span id="cb4-8"><a href="#cb4-8" tabindex="-1" aria-label="code-block-4-8"></a></span>
-<span id="cb4-9"><a href="#cb4-9" tabindex="-1" aria-label="code-block-4-9"></a>    <span class="co"># Split the line into words</span></span>
-<span id="cb4-10"><a href="#cb4-10" tabindex="-1" aria-label="code-block-4-10"></a>    words <span class="ot">&lt;-</span> <span class="fu">strsplit</span>(line, <span class="at">split =</span> <span class="st">" "</span>)[[<span class="dv">1</span>]]  <span class="co"># Extract the first element (vector of words)</span></span>
-<span id="cb4-11"><a href="#cb4-11" tabindex="-1" aria-label="code-block-4-11"></a></span>
-<span id="cb4-12"><a href="#cb4-12" tabindex="-1" aria-label="code-block-4-12"></a>    <span class="co"># Count the occurrences of the word in the current line</span></span>
-<span id="cb4-13"><a href="#cb4-13" tabindex="-1" aria-label="code-block-4-13"></a>    word_count <span class="ot">&lt;-</span> word_count <span class="sc">+</span> <span class="fu">sum</span>(words <span class="sc">==</span> word_to_count)</span>
-<span id="cb4-14"><a href="#cb4-14" tabindex="-1" aria-label="code-block-4-14"></a>  }</span>
-<span id="cb4-15"><a href="#cb4-15" tabindex="-1" aria-label="code-block-4-15"></a>  <span class="fu">close</span>(text_file)</span>
-<span id="cb4-16"><a href="#cb4-16" tabindex="-1" aria-label="code-block-4-16"></a>  <span class="fu">return</span>(word_count)</span>
-<span id="cb4-17"><a href="#cb4-17" tabindex="-1" aria-label="code-block-4-17"></a>}</span></code></pre>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="co"># Function to count word occurrences in a text file</span></span>
+<span><span class="va">count_word_occurrences</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">filename</span>, <span class="va">word_to_count</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="va">text_file</span> <span class="op">&lt;-</span> <span class="fu">file</span><span class="op">(</span><span class="va">filename</span>, <span class="st">"r"</span><span class="op">)</span></span>
+<span>  <span class="va">word_count</span> <span class="op">&lt;-</span> <span class="fl">0</span></span>
+<span></span>
+<span>  <span class="co"># Read the file line by line using a loop</span></span>
+<span>  <span class="kw">for</span> <span class="op">(</span><span class="va">line</span> <span class="kw">in</span> <span class="fu">readLines</span><span class="op">(</span><span class="va">text_file</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
+<span>    <span class="co"># Convert the line to lowercase for case-insensitive counting</span></span>
+<span>    <span class="va">line</span> <span class="op">&lt;-</span> <span class="fu">tolower</span><span class="op">(</span><span class="va">line</span><span class="op">)</span></span>
+<span></span>
+<span>    <span class="co"># Split the line into words</span></span>
+<span>    <span class="va">words</span> <span class="op">&lt;-</span> <span class="fu">strsplit</span><span class="op">(</span><span class="va">line</span>, split <span class="op">=</span> <span class="st">" "</span><span class="op">)</span><span class="op">[[</span><span class="fl">1</span><span class="op">]</span><span class="op">]</span>  <span class="co"># Extract the first element (vector of words)</span></span>
+<span></span>
+<span>    <span class="co"># Count the occurrences of the word in the current line</span></span>
+<span>    <span class="va">word_count</span> <span class="op">&lt;-</span> <span class="va">word_count</span> <span class="op">+</span> <span class="fu">sum</span><span class="op">(</span><span class="va">words</span> <span class="op">==</span> <span class="va">word_to_count</span><span class="op">)</span></span>
+<span>  <span class="op">}</span></span>
+<span>  <span class="fu">close</span><span class="op">(</span><span class="va">text_file</span><span class="op">)</span></span>
+<span>  <span class="kw">return</span><span class="op">(</span><span class="va">word_count</span><span class="op">)</span></span>
+<span><span class="op">}</span></span></code></pre>
 </div>
 </div>
 </div>
@@ -578,7 +581,7 @@ it’s easy to interpret their purpose.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-2" class="tab-content">
-<div id="nav-tabpanel-2-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-2-Python">
+<div id="nav-tabpanel-2-Python" class="tab-pane show active" aria-labelledby="nav-tab-2-Python" role="tabpanel">
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -590,7 +593,7 @@ it’s easy to interpret their purpose.</p>
 <span id="cb5-6"><a href="#cb5-6" tabindex="-1" aria-label="code-block-5-6"></a>    <span class="cf">return</span> area</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-2-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-R">
+<div id="nav-tabpanel-2-R" class="tab-pane" aria-labelledby="nav-tab-2-R" role="tabpanel">
 <div class="codewrapper sourceCode" id="cb6">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -644,7 +647,7 @@ such as <code>sum()</code>.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-3" class="tab-content">
-<div id="nav-tabpanel-3-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-3-Python">
+<div id="nav-tabpanel-3-Python" class="tab-pane show active" aria-labelledby="nav-tab-3-Python" role="tabpanel">
 <p>Classes use capitalised words, where each word in a phrase starts
 with an upper-case letter and there are no spaces between them.</p>
 <div class="codewrapper sourceCode" id="cb7">
@@ -683,7 +686,7 @@ the <a href="https://peps.python.org/pep-0008/#naming-conventions" class="extern
 Conventions</a> section of <acronym title="Python Enhancement
  Proposals">PEP</acronym> 8.</p>
 </div>
-<div id="nav-tabpanel-3-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-3-R">
+<div id="nav-tabpanel-3-R" class="tab-pane" aria-labelledby="nav-tab-3-R" role="tabpanel">
 <p>Classes use capitalised words</p>
 <div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -751,7 +754,7 @@ start of a new line, like so:</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-4" class="tab-content">
-<div id="nav-tabpanel-4-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-4-Python">
+<div id="nav-tabpanel-4-Python" class="tab-pane show active" aria-labelledby="nav-tab-4-Python" role="tabpanel">
 <p>Python <a href="https://docs.python.org/3/reference/lexical_analysis.html#comments" class="external-link">comments</a>
 start with a hash character (<code>#</code>) and are ignored when the
 code runs.</p>
@@ -766,7 +769,7 @@ code runs.</p>
 operators</a> such as <code>+=</code> in the documentation for that
 programming language.</p>
 </div>
-<div id="nav-tabpanel-4-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-4-R">
+<div id="nav-tabpanel-4-R" class="tab-pane" aria-labelledby="nav-tab-4-R" role="tabpanel">
 <p>Python <a href="https://cran.r-project.org/doc/manuals/R-lang.html#Comments" class="external-link">comments</a>
 start with a hash character (<code>#</code>) and are ignored when the
 code runs.</p>
@@ -826,7 +829,7 @@ they move through the system.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-5" class="tab-content">
-<div id="nav-tabpanel-5-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-5-Python">
+<div id="nav-tabpanel-5-Python" class="tab-pane show active" aria-labelledby="nav-tab-5-Python" role="tabpanel">
 <p>In the Python programming language, we can tell the user what type of
 data we expect each variable to contain by using the syntax below. This
 colon means that the <code>age</code> variable should contain a value
@@ -840,7 +843,7 @@ with the integer type, <code>int</code>.</p>
 of the Python Documentation and the <a href="https://mypy.readthedocs.io/en/stable/cheat_sheet_py3.html" class="external-link">Type
 hints cheat sheet</a> in the mypy documentation.</p>
 </div>
-<div id="nav-tabpanel-5-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-5-R">
+<div id="nav-tabpanel-5-R" class="tab-pane" aria-labelledby="nav-tab-5-R" role="tabpanel">
 <p>There is no type hinting feature in base R, although some packages
 are available that enable this. Here, the <code>L</code> symbol at the
 end of the number tells the R interpreter that this is an integer data
@@ -878,7 +881,7 @@ reader.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-6" class="tab-content">
-<div id="nav-tabpanel-6-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-6-Python">
+<div id="nav-tabpanel-6-Python" class="tab-pane show active" aria-labelledby="nav-tab-6-Python" role="tabpanel">
 <p>Below is the source code for a simple Python function that calculates
 the sum of two numbers. I’ve labelled each of the function arguments
 <code>a</code> and <code>b</code> with variable annotations that let you
@@ -895,7 +898,7 @@ declaration as <code>-&gt; int</code>.</p>
 <span id="cb19-3"><a href="#cb19-3" tabindex="-1" aria-label="code-block-19-3"></a>    <span class="cf">return</span> a <span class="op">+</span> b</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-6-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-6-R">
+<div id="nav-tabpanel-6-R" class="tab-pane" aria-labelledby="nav-tab-6-R" role="tabpanel">
 <p>Below is the source code for a simple R function that calculates the
 sum of two numbers.</p>
 <p>In R, there is no inbuilt functionality for annotating the expected
@@ -1071,7 +1074,7 @@ any links that you are not going to use.
   "url": "https://FAIR2-for-research-software.github.io/Documentation/readable.html",
   "identifier": "https://FAIR2-for-research-software.github.io/Documentation/readable.html",
   "dateCreated": "2024-05-20",
-  "dateModified": "2025-11-06",
+  "dateModified": "2026-04-24",
   "datePublished": "2026-04-24"
 }
 
