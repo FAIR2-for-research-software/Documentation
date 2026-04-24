@@ -30,7 +30,9 @@ Desktop](https://posit.co/download/rstudio-desktop/).
 The Notepad text editor is installed by default on Windows. [Notepad++](https://notepad-plus-plus.org/) is a more
 powerful, open source editor that has a syntax highlighting feature.
 
-At the University of Sheffield, Notepad++ is available on University-managed computers in the [Software Centre](https://students.sheffield.ac.uk/it-services/software/university-applications) which is accessible via the shortcut on the desktop.
+At the University of Sheffield, Notepad++ is available on University-managed computers in the
+[Software Centre](https://students.sheffield.ac.uk/it-services/software/university-applications)
+which is accessible via the shortcut on the desktop.
 
 #### Python
 
@@ -94,7 +96,8 @@ documentation.
 
 #### VSCode Web
 
-[Visual Studio Code for the Web](https://code.visualstudio.com/docs/editor/vscode-web) is a development environment that runs in a browser.
+[Visual Studio Code for the Web](https://code.visualstudio.com/docs/editor/vscode-web) is a development environment
+that runs in a browser.
 It is available at [vscode.dev](https://vscode.dev/).
 
 ::::::::::::::::::::::::
