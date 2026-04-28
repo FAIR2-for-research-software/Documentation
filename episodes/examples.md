@@ -19,13 +19,14 @@ exercises: 2
 ## Code examples
 
 In this episode we'll review some examples of research software and evaluate how readable and reusable it is.
-
-Here is some code to perform a geometrical calculation. The first example could be improved in terms of its
-documentation and readability, while the second one is much clearer.
+The examples are deliberately small and illustrative: the same documentation principles apply to any research
+code, whether you're working with text and corpora, qualitative coding, survey data, clinical records, or
+quantitative measurements.
 
 ### Example of no documentation
 
-Here's an example of some code that does... something. It's not clear what this code is for or why it was written.
+Here is some code intended to process a piece of text. What does this code do? It's not clear what the code
+is for or why it was written.
 
 ::: group-tab
 
@@ -35,8 +36,8 @@ This is some research code that is contained in a Python function.
 
 ```python
 def run(x):
-  weird_num = 1.234
-  return x * weird_num - ang**3 / (weird_num * 2)
+  weird_num = 0.85
+  return len(x.split(sep)) * weird_num - skipped
 ```
 
 ### R
@@ -45,8 +46,8 @@ This is some research code that is contained in an R function.
 
 ```R
 run <- function(x) {
-  weird_num = 1.234
-  return x * weird_num - ang**3 / (weird_num * 2)
+  weird_num = 0.85
+  return length(strsplit(x, sep)[[1]]) * weird_num - skipped
 }
 ```
 
@@ -62,90 +63,84 @@ Read and evaluate this code.
 
 ::::
 
-This is a function with a name that doesn't explain what the code will do. There are no comments or notes to explain
-what the author intended to achieve. The variable names don't clarify anything either: what does `x` mean in this
-context? Where would I go to find out more about `weird_num`? This is effectively a "magic" number that is arbitrarily
-stated but unexplained.
+The function name doesn't explain what the code does, and there are no comments or notes to clarify the author's
+intent. The variable names don't help either: what does `x` represent? Where would we look to find out more about
+`weird_num`? It's effectively a "magic" number, stated arbitrarily and left unexplained. The logic of the
+expression is equally cryptic.
 
-The logic of the calculation is also... rather cryptic.
-
-Maybe the code works, maybe it doesn't; but it could be made clearer and easier to maintain and modify in the future.
+In fact a closer read shows the code can't even run as written: `sep` and `skipped` are referenced but never
+defined. Without documentation, mistakes like that are easy to overlook until something breaks.
 
 ### Well-documented example
 
-Now let's look at an example of best practices in documenting research software. (These code snippets are part of the
-end-product of this course, so don't worry if they don't make sense yet!)
+Now let's look at an example of best practices in documenting research software. (These snippets come from the end
+product of this course, so don't worry if they don't make sense yet.)
 
 ::: group-tab
 
 ### Python
 
-This is a function written in the Python programming language that calculates a mathematical result, the details of
-which aren't relevant. This code has plenty of documentation to help us read and understand it.
+This is a Python function that processes a piece of text. The specifics of the calculation aren't important
+here&mdash;what matters is that the code carries plenty of documentation to help us read and understand it.
+The same conventions apply whether the function counts words, codes interview responses, summarises survey
+data, or computes statistics.
 
 ```python
-import math
+def count_words(text: str) -> int:
+    """
+    Counts the number of words in a piece of text.
 
-def calculate_sine(angle: float) -> float:
-  """
-  Calculates the sine of an angle using the first four terms
-  of the Taylor series.
+    Words are taken to be sequences of characters separated by
+    whitespace, which is a useful first approximation for tasks
+    such as document summarisation, readability checks, or corpus
+    analysis.
 
-  This function uses the first four terms of the Taylor
-  series for sine to approximate the value. This is a
-  simple and efficient method for most applications.
+    Args:
+        text (str): The text to count words in.
 
-  Args:
-      angle (float): The angle in radians.
+    Returns:
+        int: The number of words in the text.
 
-  Returns:
-      float: The sine of the angle (sin(angle)).
-  """
-  sine_value = angle
+    Examples:
+        >>> count_words("the quick brown fox")
+        4
+        >>> count_words("hello   world")
+        2
+    """
+    # Split on any run of whitespace; empty tokens are discarded
+    words = text.split()
 
-  # Iterate over the first four terms of the Taylor series for sine
-  for i in range(1, 5):
-    factorial = math.factorial(2 * i)
-    sign = (-1) ** (i // 2)  # Alternate signs for sine terms
-
-    # Add terms for sine
-    sine_value += sign * (angle ** (2 * i)) / factorial
-
-  return sine_value
+    return len(words)
 ```
 
 ### R
 
-This is a function written in the R programming language that calculates a mathematical result, the details of which
-aren't relevant. This code has plenty of documentation to help us read and understand it. R uses the
-[roxygen2][roxygen2] package to format documentation strings into our project documentation.
+Here is the same task written in R. Again, the specifics of the calculation are incidental; the point is the
+documentation that surrounds the code. R uses the [roxygen2][roxygen2] package to format documentation strings
+into our project documentation.
 
 ```R
-#' Calculate the sine of an angle
+#' Count the words in a piece of text
 #'
 #' @description
+#' Counts the number of words in a piece of text. Words are taken
+#' to be sequences of characters separated by whitespace, which is
+#' a useful first approximation for tasks such as document
+#' summarisation, readability checks, or corpus analysis.
 #'
-#' This function uses the first four terms of the Taylor
-#' series for sine to approximate
-#' the value. This is a simple and efficient method for
-#' most applications.
+#' @param text The text to count words in.
 #'
-#' @param angle The angle in radians.
+#' @returns The number of words in the text.
 #'
-#' @returns The sine of the angle (sin(angle)).
-calculate_sine <- function(angle) {
-  sine_value <- angle
+#' @examples
+#' count_words("the quick brown fox")
+#' count_words("hello   world")
+count_words <- function(text) {
+  # Split on any run of whitespace; empty tokens are discarded
+  words <- strsplit(text, "\\s+")[[1]]
+  words <- words[words != ""]
 
-  # Loop for the first four terms
-  for (i in 1:4) {
-    factorial <- factorial(2 * i)
-    sign <- (-1)^(i %% 2)  # Alternate signs with modulo (%)
-
-    # Add terms for sine
-    sine_value <- sine_value + sign * (angle^(2 * i)) / factorial
-  }
-
-  return(sine_value)
+  return(length(words))
 }
 ```
 
@@ -161,30 +156,32 @@ Read and evaluate this code.
 
 ::::
 
-This time, the function name is a verb that describes what the code will attempt to do. The description of the function
-is also written out clearly in a note for the user. There are comment lines (starting with `#`) that explain the
-mathematical method used. Each variable has a descriptive, human-readable name, making the code more intuitive to
-read. An existing library is used to calculate the factorial, which means we can look up the usage for the `factorial()`
-function elsewhere.
+This time, the function name is a verb that describes what the code does. A clear description spells out the
+purpose for the reader, and comment lines (starting with `#`) explain how the calculation works. Each variable
+has a descriptive, human-readable name, and built-in language features handle the splitting of the text, so a
+reader can look up `split()` or `strsplit()` elsewhere rather than puzzling over a bespoke implementation.
 
-This approach means that our code is much **easier to interpret**, maintain, and make changes to in the future.
+The result is code that is much **easier to interpret**, maintain, and modify in the future.
 
-Of course, there may be some syntax in this example that is unfamiliar to you&mdash;but don't worry, we'll learn the
-basics in this course!
+Some of the syntax in this example may be unfamiliar&mdash;that's fine. We'll cover the basics as the course
+progresses.
 
 ## Real-world examples
 
-Let's review real-world examples of the documentation for software packages that are used in research.
+Let's review real-world examples of the documentation for software packages that are used in research. The two
+examples below come from the quantitative-sciences mainstream, but the same documentation patterns turn up in
+tools used right across the disciplines&mdash;for example text-analysis libraries such as [spaCy][spacy] or
+[quanteda][quanteda], and many qualitative-data and digital-humanities packages.
 
 ### NumPy user guide
 
-NumPy is a mathematical package for the Python programming language that's used for quantitative computing and linear
-algebra.  The [NumPy User Guide](https://numpy.org/doc/2.0/user/index.html#user) is a **thorough website** that
-organised into sections that cover the different aspects of using that package.
+NumPy is a mathematical package for Python, widely used for quantitative computing and linear algebra. The
+[NumPy User Guide](https://numpy.org/doc/2.0/user/index.html#user) is a **thorough website**, organised into sections
+that cover different aspects of the package.
 
-It includes a beginner's guide, tutorials for different use-cases, and in-depth write-ups of technical details of
-certain aspects of the code.  Some of the content is written for a target audience with no assumed knowledge, while
-other parts are written as a reference for people with some background in mathematics and computer programming.
+It includes a beginner's guide, tutorials for common use cases, and in-depth write-ups of specific technical details.
+Some content assumes no prior knowledge; other parts serve as a reference for readers with a background in mathematics
+or programming.
 
 If we want to read more about how to use a certain feature, there are documentation pages such as
 [numpy.array](https://numpy.org/doc/stable/reference/generated/numpy.array.html) that describe purpose and the
@@ -217,12 +214,11 @@ array(...)
 
 ### ggplot2 documentation site
 
-[ggplot2](https://cloud.r-project.org/web/packages/ggplot2/) is a package for the R statistical language that generates
-data visualisations and graphics.  The [ggplot2 documentation](https://ggplot2.tidyverse.org/index.html) has a simple,
-accessible layout and **walks a new user through** installing and getting up-and-running with the tool.  The page
-provides a "cheat sheet" which is a reference guide that lists commonly-used commands in an attractive two-page layout.
-The documentation site is moderate in scope and links to several external resources, such as online courses hosted
-elsewhere.
+[ggplot2](https://cloud.r-project.org/web/packages/ggplot2/) is a package for the R statistical language that produces
+data visualisations and graphics. The [ggplot2 documentation](https://ggplot2.tidyverse.org/index.html) has a simple,
+accessible layout that **walks a new user through** installing the package and getting up and running. It also
+provides a "cheat sheet": a reference guide that lists commonly used commands in an attractive two-page layout. The
+documentation is moderate in scope and links out to further resources, such as online courses hosted elsewhere.
 
 In R, we can view the documentation for each function by using the `?` syntax. For example, calling `?ggplot2::ggplot`
 will show the help text for that function or load the reference information in a web browser. Also, if we ever needed to
@@ -234,7 +230,12 @@ how to use it.
 ```R
 install.packages("ggplot2")
 library(ggplot2)
-?ggplot2:ggplot
+?ggplot2::ggplot
 ```
 
+![The RStudio Help panel for the ggplot function.](./fig/r-ggplot-help.png){alt='A screenshot of the user guide for the
+ggplot2 ggplot function in RStudio.'}
+
 [roxygen2]: https://roxygen2.r-lib.org/index.html
+[spacy]: https://spacy.io/
+[quanteda]: https://quanteda.io/
