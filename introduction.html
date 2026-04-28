@@ -351,7 +351,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Introduction</h1>
-        <p>Last updated on 2026-04-24 |
+        <p>Last updated on 2026-04-28 |
 
         <a href="https://github.com/FAIR2-for-research-software/Documentation/edit/main/episodes/introduction.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -396,47 +396,44 @@ will cover</li>
 </div>
 </div>
 <section><h2 class="section-heading" id="what-is-research-software-documentation">What is research software documentation?<a class="anchor" aria-label="anchor" href="#what-is-research-software-documentation"></a></h2>
-<hr class="half-width"><p>There are many kinds of research software, such as:</p>
-<ul><li>Data processing workflows with multiple steps;</li>
-<li>A library of functions used within a research team to perform
-certain kinds of analysis;</li>
-<li>Tools designed to collect raw data in the field.</li>
+<hr class="half-width"><p>Research software comes in many forms, such as:</p>
+<ul><li>data processing workflows with multiple steps;</li>
+<li>a library of functions used within a research team for a particular
+kind of analysis;</li>
+<li>tools designed to collect raw data in the field.</li>
 </ul><p>Code is rarely self-explanatory. It is a tool we design and extend
-over time, often alongside colleagues. To explain our code we must write
-<strong>software documentation</strong>.</p>
+over time, often alongside colleagues. To explain how our code works we
+write <strong>software documentation</strong>.</p>
 <p>Documentation <strong>provides information</strong> about our
 programs for everyone involved in their development, use, and future
-reuse. It may consist of text, tips within a computer environment, and
-diagrams that guide the user in using a (potentially complex) software
-tool. It explains <em>how</em> the software works <em>and</em>
-<em>why</em> it behaves the way it does.</p>
+reuse. It can take the form of written text, tips embedded in a computer
+environment, or diagrams that guide the user through a (potentially
+complex) software tool. Good documentation explains both <em>how</em>
+the software works and <em>why</em> it behaves the way it does.</p>
 </section><section><h2 class="section-heading" id="why-document-our-code">Why document our code?<a class="anchor" aria-label="anchor" href="#why-document-our-code"></a></h2>
-<hr class="half-width"><p>We often encounter software packages, whether written by ourselves, a
-colleague, or someone else, that’s difficult to use because it’s unclear
-what it does and how it works. Maybe we try to read the source code
-itself, but we can’t make head-nor-tail of it. Sometimes it seems like
-the only person who can use this software is the person who wrote it.
-Other times, you wrote the code and forgot what you were thinking when
-you did!</p>
+<hr class="half-width"><p>We have all encountered software — whether written by ourselves, a
+colleague, or a stranger — that is hard to use because it is unclear
+what it does or how it works. Reading the source code may not help;
+sometimes it seems that only the original author can use it. And
+sometimes that author is you, six months ago, with no memory of what you
+were thinking at the time.</p>
 <div class="section level3">
 <h3 id="advantages-of-good-documentation">Advantages of good documentation<a class="anchor" aria-label="anchor" href="#advantages-of-good-documentation"></a></h3>
-<p>There are many <strong>advantages to writing guidance</strong> to go
-along with your research software. Software documentation helps yourself
-and others to use it successfully in the future. If others can read your
-code then that ensures that its value is sustained.</p>
+<p>There are many <strong>advantages to writing guidance</strong>
+alongside your research software. Documentation helps you and others to
+use the code successfully in the future, and it ensures that the value
+of your work is sustained.</p>
 <p>Research outputs often <strong>depend upon the code</strong> used to
-generate them. Clarity and confidence are essential in using code to
-perform calculations, simulations, or data analysis. All kinds of
-research processes and analysis pipelines can be made more
-<strong>reproducible</strong> by providing clear context and
-instructions for using it.</p>
-<p>There are many advantages to making your <strong>code more
-readable</strong>, too. Well-written software is easier to maintain and
-has greater <strong>sustainability</strong>. This means it can continue
-to be used and modified for a longer period of time, despite changes in
-technology. If software is more reusable then it encourages others to
-use it for their research, increasing its visibility and
-<strong>research impact</strong>.</p>
+generate them, so clarity and confidence are essential when that code
+performs calculations, simulations, or data analysis. Clear context and
+instructions make research processes and analysis pipelines more
+<strong>reproducible</strong>.</p>
+<p>There are also benefits to making your <strong>code more
+readable</strong>. Well-written software is easier to maintain and has
+greater <strong>sustainability</strong>, meaning it can continue to be
+used and modified for longer despite changes in technology. Reusable
+software encourages others to apply it to their own research, increasing
+its visibility and <strong>research impact</strong>.</p>
 <div id="discussion1" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
@@ -454,56 +451,51 @@ future users most?</li>
 </ul></div>
 </div>
 </div>
-<p>In the long run, it can also help you to develop your own software
-engineering practice by getting into the habit of reflecting on what the
-<strong>purpose of the software</strong> is and to
-<strong>articulate</strong> what each component or module is for.</p>
-<p>Writing a useful software package that is well-documented and can be
-reused in the future means that your code could take on a life of its
-own. The benefits can extend beyond yourself, to your collaborators and
-other researchers in the future.</p>
-<p>High-quality documentation is a key part of ensuring a healthy
+<p>In the long run, writing documentation also helps you to develop your
+own software engineering practice. It builds the habit of reflecting on
+the <strong>purpose of the software</strong> and
+<strong>articulating</strong> what each component or module is for.</p>
+<p>A well-documented, reusable software package can take on a life of
+its own, with benefits extending beyond yourself to your collaborators
+and other researchers in the future.</p>
+<p>High-quality documentation is a key part of a healthy
 <strong>software lifecycle</strong>. It can make the difference between
-accidentally creating an abandoned piece of code (sometimes called
-<em>gradware</em> — code a former student wrote that nobody else can
-use) and a successful long-term software project with lasting
-impact.</p>
+an abandoned piece of code (sometimes called <em>gradware</em>, code a
+former student wrote that nobody else can use) and a successful
+long-term software project with lasting impact.</p>
 </div>
 </section><section><h2 class="section-heading" id="when-should-i-write-documentation">When should I write documentation?<a class="anchor" aria-label="anchor" href="#when-should-i-write-documentation"></a></h2>
 <hr class="half-width"><p>Now! Start writing and sharing documentation for your research code
-<strong>from the beginning</strong> of your project. It doesn’t have to
-be perfect straight away, but a first draft is more useful than
-nothing.</p>
-<p>The best practice for modern, collaborative research involving
-digital methods and tools is to document your processes <strong>early
-and often</strong>. Not only will writing notes about your code help
-other people to read and use that code, it will clarify your thought
-process as you design your system, focussing your work on the important
-parts of the task at hand.</p>
-<p>This might include any of the various kinds of software documentation
-we’ll discuss in this module, including:</p>
+<strong>from the beginning</strong> of your project. A first draft does
+not need to be perfect: anything is more useful than nothing.</p>
+<p>The best practice for modern, collaborative research is to document
+your processes <strong>early and often</strong>. Notes about your code
+help other people read and use it, and they clarify your own thinking as
+you design the system, focussing your work on the important parts of the
+task at hand.</p>
+<p>This might include any of the kinds of software documentation we will
+discuss in this module, such as:</p>
 <ul><li>design notes and diagrams;</li>
 <li>a step-by-step tutorial for beginners;</li>
 <li>code comments.</li>
-</ul><p>It should be a consideration in your <em>software management
-plan</em>, which is a concept discussed in the Module 1a on <a href="https://fair2-for-research-software.github.io/Software_Lifecycle_Planning/" class="external-link">Software
-Lifecycle Planning</a>. Also, it’s never too late to start documenting
-an old code project.</p>
+</ul><p>Documentation should also be a consideration in your <em>software
+management plan</em>, a concept covered in Module 1a on <a href="https://fair2-for-research-software.github.io/Software_Lifecycle_Planning/" class="external-link">Software
+Lifecycle Planning</a>. And it is never too late to start documenting an
+older code project.</p>
 <p><strong>Keep in touch</strong> with other developers and users of the
-research code and make a note of their feedback. Common questions and
-problems may indicate that there are issues that must be covered more
-clearly and in greater depth in the software documentation.
-<strong>Incorporate this feedback</strong> into your software
-documentation.</p>
+research code, and note their feedback. Recurring questions and problems
+often signal areas that need to be covered more clearly or in greater
+depth. <strong>Incorporate this feedback</strong> into your
+documentation as the project evolves.</p>
 </section><section><h2 class="section-heading" id="research-software-papers">Research software papers<a class="anchor" aria-label="anchor" href="#research-software-papers"></a></h2>
 <hr class="half-width"><p>Some researchers choose to publish a description of their code as a
-<strong>software paper</strong> in an academic journal — a kind of <a href="https://book.the-turing-way.org/communication/dif-articles/methods.html" class="external-link">methods
+<strong>software paper</strong> in an academic journal, a kind of <a href="https://book.the-turing-way.org/communication/dif-articles/methods.html" class="external-link">methods
 paper</a> that improves the transparency and replicability of
 computational results.</p>
 <p>This is beyond the scope of this module. The FAIR² programme covers
-it separately in the <strong>Publishing software papers</strong> module
-— see the <a href="https://rse.shef.ac.uk/training/fair4rs/" class="external-link">FAIR²
-course page</a> for details and registration.</p>
+it separately in the <strong>Publishing software papers</strong> module.
+See the <a href="https://rse.shef.ac.uk/training/fair4rs/" class="external-link">FAIR² course
+page</a> for details and registration.</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -513,18 +505,17 @@ course page</a> for details and registration.</p>
 <div class="callout-content">
 <ul><li>
 <strong>Reproducibility:</strong> Well-documented software is easier
-for other researchers to understand and use with confidence. It enables
-them to <strong>reproduce your results</strong> to replicate research
-findings, enabling others to validate them and building trust in your
-research outputs.</li>
+for other researchers to understand and use with confidence, enabling
+them to <strong>reproduce your results</strong>, validate findings, and
+build trust in your research outputs.</li>
 <li>
 <strong>Collaboration:</strong> Clear instructions enable other
 researchers to use and <strong>collaborate</strong> with your software
 and research projects.</li>
 <li>
-<strong>Knowledge transfer:</strong> Your software package will be
-easier to maintain in the long term if others are able to learn about it
-and look after it after the original developers move on.</li>
+<strong>Knowledge transfer:</strong> Your software will be easier to
+maintain in the long term if others can learn about it and take it on
+after the original developers move on.</li>
 <li>
 <strong>Sustainability:</strong> Readable, documented code is easier
 to maintain and reuse, extending the useful life of your software.</li>
@@ -600,7 +591,7 @@ any links that you are not going to use.
   "url": "https://FAIR2-for-research-software.github.io/Documentation/introduction.html",
   "identifier": "https://FAIR2-for-research-software.github.io/Documentation/introduction.html",
   "dateCreated": "2024-05-20",
-  "dateModified": "2026-04-24",
+  "dateModified": "2026-04-28",
   "datePublished": "2026-04-28"
 }
 

@@ -400,7 +400,7 @@
         
 <section id="aio-introduction"><p>Content from <a href="introduction.html">Introduction</a></p>
 <hr>
-<p>Last updated on 2026-04-24 |
+<p>Last updated on 2026-04-28 |
 
         <a href="https://github.com/FAIR2-for-research-software/Documentation/edit/main/episodes/introduction.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <p>Estimated time: <i aria-hidden="true" data-feather="clock"></i> 12 minutes</p>
@@ -446,52 +446,49 @@ will cover</li>
 <section><h2 class="section-heading" id="what-is-research-software-documentation">What is research software documentation?<a class="anchor" aria-label="anchor" href="#what-is-research-software-documentation"></a>
 </h2>
 <hr class="half-width">
-<p>There are many kinds of research software, such as:</p>
+<p>Research software comes in many forms, such as:</p>
 <ul>
-<li>Data processing workflows with multiple steps;</li>
-<li>A library of functions used within a research team to perform
-certain kinds of analysis;</li>
-<li>Tools designed to collect raw data in the field.</li>
+<li>data processing workflows with multiple steps;</li>
+<li>a library of functions used within a research team for a particular
+kind of analysis;</li>
+<li>tools designed to collect raw data in the field.</li>
 </ul>
 <p>Code is rarely self-explanatory. It is a tool we design and extend
-over time, often alongside colleagues. To explain our code we must write
-<strong>software documentation</strong>.</p>
+over time, often alongside colleagues. To explain how our code works we
+write <strong>software documentation</strong>.</p>
 <p>Documentation <strong>provides information</strong> about our
 programs for everyone involved in their development, use, and future
-reuse. It may consist of text, tips within a computer environment, and
-diagrams that guide the user in using a (potentially complex) software
-tool. It explains <em>how</em> the software works <em>and</em>
-<em>why</em> it behaves the way it does.</p>
+reuse. It can take the form of written text, tips embedded in a computer
+environment, or diagrams that guide the user through a (potentially
+complex) software tool. Good documentation explains both <em>how</em>
+the software works and <em>why</em> it behaves the way it does.</p>
 </section><section><h2 class="section-heading" id="why-document-our-code">Why document our code?<a class="anchor" aria-label="anchor" href="#why-document-our-code"></a>
 </h2>
 <hr class="half-width">
-<p>We often encounter software packages, whether written by ourselves, a
-colleague, or someone else, that’s difficult to use because it’s unclear
-what it does and how it works. Maybe we try to read the source code
-itself, but we can’t make head-nor-tail of it. Sometimes it seems like
-the only person who can use this software is the person who wrote it.
-Other times, you wrote the code and forgot what you were thinking when
-you did!</p>
+<p>We have all encountered software — whether written by ourselves, a
+colleague, or a stranger — that is hard to use because it is unclear
+what it does or how it works. Reading the source code may not help;
+sometimes it seems that only the original author can use it. And
+sometimes that author is you, six months ago, with no memory of what you
+were thinking at the time.</p>
 <div class="section level3">
 <h3 id="advantages-of-good-documentation">Advantages of good documentation<a class="anchor" aria-label="anchor" href="#advantages-of-good-documentation"></a>
 </h3>
-<p>There are many <strong>advantages to writing guidance</strong> to go
-along with your research software. Software documentation helps yourself
-and others to use it successfully in the future. If others can read your
-code then that ensures that its value is sustained.</p>
+<p>There are many <strong>advantages to writing guidance</strong>
+alongside your research software. Documentation helps you and others to
+use the code successfully in the future, and it ensures that the value
+of your work is sustained.</p>
 <p>Research outputs often <strong>depend upon the code</strong> used to
-generate them. Clarity and confidence are essential in using code to
-perform calculations, simulations, or data analysis. All kinds of
-research processes and analysis pipelines can be made more
-<strong>reproducible</strong> by providing clear context and
-instructions for using it.</p>
-<p>There are many advantages to making your <strong>code more
-readable</strong>, too. Well-written software is easier to maintain and
-has greater <strong>sustainability</strong>. This means it can continue
-to be used and modified for a longer period of time, despite changes in
-technology. If software is more reusable then it encourages others to
-use it for their research, increasing its visibility and
-<strong>research impact</strong>.</p>
+generate them, so clarity and confidence are essential when that code
+performs calculations, simulations, or data analysis. Clear context and
+instructions make research processes and analysis pipelines more
+<strong>reproducible</strong>.</p>
+<p>There are also benefits to making your <strong>code more
+readable</strong>. Well-written software is easier to maintain and has
+greater <strong>sustainability</strong>, meaning it can continue to be
+used and modified for longer despite changes in technology. Reusable
+software encourages others to apply it to their own research, increasing
+its visibility and <strong>research impact</strong>.</p>
 <div id="discussion1" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
@@ -511,62 +508,57 @@ future users most?</li>
 </div>
 </div>
 </div>
-<p>In the long run, it can also help you to develop your own software
-engineering practice by getting into the habit of reflecting on what the
-<strong>purpose of the software</strong> is and to
-<strong>articulate</strong> what each component or module is for.</p>
-<p>Writing a useful software package that is well-documented and can be
-reused in the future means that your code could take on a life of its
-own. The benefits can extend beyond yourself, to your collaborators and
-other researchers in the future.</p>
-<p>High-quality documentation is a key part of ensuring a healthy
+<p>In the long run, writing documentation also helps you to develop your
+own software engineering practice. It builds the habit of reflecting on
+the <strong>purpose of the software</strong> and
+<strong>articulating</strong> what each component or module is for.</p>
+<p>A well-documented, reusable software package can take on a life of
+its own, with benefits extending beyond yourself to your collaborators
+and other researchers in the future.</p>
+<p>High-quality documentation is a key part of a healthy
 <strong>software lifecycle</strong>. It can make the difference between
-accidentally creating an abandoned piece of code (sometimes called
-<em>gradware</em> — code a former student wrote that nobody else can
-use) and a successful long-term software project with lasting
-impact.</p>
+an abandoned piece of code (sometimes called <em>gradware</em>, code a
+former student wrote that nobody else can use) and a successful
+long-term software project with lasting impact.</p>
 </div>
 </section><section><h2 class="section-heading" id="when-should-i-write-documentation">When should I write documentation?<a class="anchor" aria-label="anchor" href="#when-should-i-write-documentation"></a>
 </h2>
 <hr class="half-width">
 <p>Now! Start writing and sharing documentation for your research code
-<strong>from the beginning</strong> of your project. It doesn’t have to
-be perfect straight away, but a first draft is more useful than
-nothing.</p>
-<p>The best practice for modern, collaborative research involving
-digital methods and tools is to document your processes <strong>early
-and often</strong>. Not only will writing notes about your code help
-other people to read and use that code, it will clarify your thought
-process as you design your system, focussing your work on the important
-parts of the task at hand.</p>
-<p>This might include any of the various kinds of software documentation
-we’ll discuss in this module, including:</p>
+<strong>from the beginning</strong> of your project. A first draft does
+not need to be perfect: anything is more useful than nothing.</p>
+<p>The best practice for modern, collaborative research is to document
+your processes <strong>early and often</strong>. Notes about your code
+help other people read and use it, and they clarify your own thinking as
+you design the system, focussing your work on the important parts of the
+task at hand.</p>
+<p>This might include any of the kinds of software documentation we will
+discuss in this module, such as:</p>
 <ul>
 <li>design notes and diagrams;</li>
 <li>a step-by-step tutorial for beginners;</li>
 <li>code comments.</li>
 </ul>
-<p>It should be a consideration in your <em>software management
-plan</em>, which is a concept discussed in the Module 1a on <a href="https://fair2-for-research-software.github.io/Software_Lifecycle_Planning/" class="external-link">Software
-Lifecycle Planning</a>. Also, it’s never too late to start documenting
-an old code project.</p>
+<p>Documentation should also be a consideration in your <em>software
+management plan</em>, a concept covered in Module 1a on <a href="https://fair2-for-research-software.github.io/Software_Lifecycle_Planning/" class="external-link">Software
+Lifecycle Planning</a>. And it is never too late to start documenting an
+older code project.</p>
 <p><strong>Keep in touch</strong> with other developers and users of the
-research code and make a note of their feedback. Common questions and
-problems may indicate that there are issues that must be covered more
-clearly and in greater depth in the software documentation.
-<strong>Incorporate this feedback</strong> into your software
-documentation.</p>
+research code, and note their feedback. Recurring questions and problems
+often signal areas that need to be covered more clearly or in greater
+depth. <strong>Incorporate this feedback</strong> into your
+documentation as the project evolves.</p>
 </section><section><h2 class="section-heading" id="research-software-papers">Research software papers<a class="anchor" aria-label="anchor" href="#research-software-papers"></a>
 </h2>
 <hr class="half-width">
 <p>Some researchers choose to publish a description of their code as a
-<strong>software paper</strong> in an academic journal — a kind of <a href="https://book.the-turing-way.org/communication/dif-articles/methods.html" class="external-link">methods
+<strong>software paper</strong> in an academic journal, a kind of <a href="https://book.the-turing-way.org/communication/dif-articles/methods.html" class="external-link">methods
 paper</a> that improves the transparency and replicability of
 computational results.</p>
 <p>This is beyond the scope of this module. The FAIR² programme covers
-it separately in the <strong>Publishing software papers</strong> module
-— see the <a href="https://rse.shef.ac.uk/training/fair4rs/" class="external-link">FAIR²
-course page</a> for details and registration.</p>
+it separately in the <strong>Publishing software papers</strong> module.
+See the <a href="https://rse.shef.ac.uk/training/fair4rs/" class="external-link">FAIR² course
+page</a> for details and registration.</p>
 <div id="keypoints1" class="callout keypoints">
 <div class="callout-square">
 <i class="callout-icon" data-feather="key"></i>
@@ -577,18 +569,17 @@ course page</a> for details and registration.</p>
 <ul>
 <li>
 <strong>Reproducibility:</strong> Well-documented software is easier
-for other researchers to understand and use with confidence. It enables
-them to <strong>reproduce your results</strong> to replicate research
-findings, enabling others to validate them and building trust in your
-research outputs.</li>
+for other researchers to understand and use with confidence, enabling
+them to <strong>reproduce your results</strong>, validate findings, and
+build trust in your research outputs.</li>
 <li>
 <strong>Collaboration:</strong> Clear instructions enable other
 researchers to use and <strong>collaborate</strong> with your software
 and research projects.</li>
 <li>
-<strong>Knowledge transfer:</strong> Your software package will be
-easier to maintain in the long term if others are able to learn about it
-and look after it after the original developers move on.</li>
+<strong>Knowledge transfer:</strong> Your software will be easier to
+maintain in the long term if others can learn about it and take it on
+after the original developers move on.</li>
 <li>
 <strong>Sustainability:</strong> Readable, documented code is easier
 to maintain and reuse, extending the useful life of your software.</li>
@@ -661,7 +652,7 @@ what this code is for or why it was written.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-1" class="tab-content">
-<div id="nav-tabpanel-1-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-Python">
+<div id="nav-tabpanel-1-Python" class="tab-pane show active" aria-labelledby="nav-tab-1-Python" role="tabpanel">
 <p>This is some research code that is contained in a Python
 function.</p>
 <div class="codewrapper sourceCode" id="cb1">
@@ -672,7 +663,7 @@ function.</p>
 <span id="cb1-3"><a href="#cb1-3" tabindex="-1" aria-label="code-block-1-3"></a>  <span class="cf">return</span> x <span class="op">*</span> weird_num <span class="op">-</span> ang<span class="op">**</span><span class="dv">3</span> <span class="op">/</span> (weird_num <span class="op">*</span> <span class="dv">2</span>)</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-1-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-R">
+<div id="nav-tabpanel-1-R" class="tab-pane" aria-labelledby="nav-tab-1-R" role="tabpanel">
 <p>This is some research code that is contained in an R function.</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -732,7 +723,7 @@ this course, so don’t worry if they don’t make sense yet!)</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-2" class="tab-content">
-<div id="nav-tabpanel-2-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-2-Python">
+<div id="nav-tabpanel-2-Python" class="tab-pane show active" aria-labelledby="nav-tab-2-Python" role="tabpanel">
 <p>This is a function written in the Python programming language that
 calculates a mathematical result, the details of which aren’t relevant.
 This code has plenty of documentation to help us read and understand
@@ -770,7 +761,7 @@ it.</p>
 <span id="cb3-28"><a href="#cb3-28" tabindex="-1" aria-label="code-block-3-28"></a>  <span class="cf">return</span> sine_value</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-2-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-R">
+<div id="nav-tabpanel-2-R" class="tab-pane" aria-labelledby="nav-tab-2-R" role="tabpanel">
 <p>This is a function written in the R programming language that
 calculates a mathematical result, the details of which aren’t relevant.
 This code has plenty of documentation to help us read and understand it.
@@ -1072,7 +1063,7 @@ details for each operating system are detailed below.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-1" class="tab-content">
-<div id="nav-tabpanel-1-Windows" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-Windows">
+<div id="nav-tabpanel-1-Windows" class="tab-pane show active" aria-labelledby="nav-tab-1-Windows" role="tabpanel">
 <ol style="list-style-type: decimal">
 <li>Open <a href="https://support.microsoft.com/en-gb/windows/find-and-open-file-explorer-ef370130-1cca-9dc5-e0df-2f7416fe1cb1" class="external-link">File
 Explorer</a> to browse the file system;</li>
@@ -1084,7 +1075,7 @@ Document;</li>
 <li>Double-click on the file to open it for editing.</li>
 </ol>
 </div>
-<div id="nav-tabpanel-1-Linux" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-Linux">
+<div id="nav-tabpanel-1-Linux" class="tab-pane" aria-labelledby="nav-tab-1-Linux" role="tabpanel">
 <p>Use the <a href="https://help.ubuntu.com/stable/ubuntu-help/files-browse.html.en" class="external-link">File
 Manager</a> to create a new directory called <code>oddsong</code>.
 Inside that folder, create a new text file called
@@ -1099,7 +1090,7 @@ Inside that folder, create a new text file called
 <span id="cb1-4"><a href="#cb1-4" tabindex="-1" aria-label="code-block-1-4"></a><span class="fu">nano</span> oddsong/README.txt</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-1-MacOS" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-MacOS">
+<div id="nav-tabpanel-1-MacOS" class="tab-pane" aria-labelledby="nav-tab-1-MacOS" role="tabpanel">
 <p>Use the <a href="https://support.apple.com/en-gb/guide/mac-help/mchlp2605/mac" class="external-link">Finder</a>
 file manager to create a new directory called <code>oddsong</code>.
 Inside that folder, create a new text file called
@@ -1439,7 +1430,7 @@ options.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-2" class="tab-content">
-<div id="nav-tabpanel-2-Windows" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-2-Windows">
+<div id="nav-tabpanel-2-Windows" class="tab-pane show active" aria-labelledby="nav-tab-2-Windows" role="tabpanel">
 <p>Use <a href="https://support.microsoft.com/en-gb/windows/find-and-open-file-explorer-ef370130-1cca-9dc5-e0df-2f7416fe1cb1" class="external-link">File
 Explorer</a> to <a href="https://support.microsoft.com/en-gb/office/rename-a-file-baea7aab-760b-4ee0-af58-06e940d505a4" class="external-link">rename
 the file</a> from <code>README.txt</code> to <code>README.md</code>.</p>
@@ -1449,7 +1440,7 @@ the file</a> from <code>README.txt</code> to <code>README.md</code>.</p>
 <li>Type <code>README.md</code>.</li>
 </ol>
 </div>
-<div id="nav-tabpanel-2-Linux" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-Linux">
+<div id="nav-tabpanel-2-Linux" class="tab-pane" aria-labelledby="nav-tab-2-Linux" role="tabpanel">
 <p>Use the <a href="https://help.ubuntu.com/stable/ubuntu-help/files-browse.html.en" class="external-link">File
 Manager</a> to <a href="https://help.ubuntu.com/stable/ubuntu-help/files-rename.html.en" class="external-link">rename
 the file</a> from <code>README.txt</code> to <code>README.md</code>.</p>
@@ -1460,7 +1451,7 @@ the file</a> from <code>README.txt</code> to <code>README.md</code>.</p>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1" aria-label="code-block-3-1"></a><span class="fu">mv</span> README.txt README.md</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-2-MacOS" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-MacOS">
+<div id="nav-tabpanel-2-MacOS" class="tab-pane" aria-labelledby="nav-tab-2-MacOS" role="tabpanel">
 <p>Use the <a href="https://support.apple.com/en-gb/guide/mac-help/mchlp2605/mac" class="external-link">Finder</a>
 to <a href="https://support.apple.com/en-gb/guide/mac-help/mchlp1144/mac" class="external-link">rename
 the file</a> from <code>README.txt</code> to <code>README.md</code>.</p>
@@ -1958,7 +1949,7 @@ provide the name of that species.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="tabs">
 <nav><div id="nav-tab-2" class="nav nav-tabs" role="tablist">
@@ -2134,7 +2125,7 @@ for a function.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>Let’s view the help text for an in-built <a href="https://docs.python.org/3/library/functions.html#abs" class="external-link">function
 <code>abs()</code></a> that finds the absolute value of a number.</p>
@@ -2316,7 +2307,7 @@ each one.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <div class="tabs">
 <nav><div id="nav-tab-6" class="nav nav-tabs" role="tablist">
@@ -2452,7 +2443,7 @@ string.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <div class="tabs">
 <nav><div id="nav-tab-8" class="nav nav-tabs" role="tablist">
@@ -2607,7 +2598,7 @@ function in your code.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution5" aria-expanded="false" aria-controls="collapseSolution5">
   <h4 class="accordion-header" id="headingSolution5"> Show me the solution </h4>
 </button>
-<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
+<div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
 <div class="accordion-body">
 <div class="tabs">
 <nav><div id="nav-tab-10" class="nav nav-tabs" role="tablist">
@@ -2667,7 +2658,7 @@ function in your code.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Using docstrings to create automatic tests </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <p>We can use the code examples inside docstrings to define test cases
 that are used in automatic software testing.</p>
@@ -2809,7 +2800,7 @@ and, if in doubt, follow the style of existing code.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
   <h3 class="accordion-header" id="headingSpoiler2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Docstring conventions </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
 <div class="accordion-body">
 <p>There are several different <strong>standards</strong> for
 documentation strings. A standard is a convention that determines how
@@ -4347,7 +4338,7 @@ the MkDocs documentation.</p>
   Documenting R packages
   </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="accordion-body">
 <p>MkDocs itself is language-agnostic — it simply converts Markdown into
 a website, so you can use it to write prose documentation for code in
@@ -4481,7 +4472,7 @@ generating reference material from Python code.</p>
   Why pin MkDocs to version 1?
   </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
 <div class="accordion-body">
 <p>MkDocs 2.0 is on the horizon (see the <a href="https://squidfunk.github.io/mkdocs-material/blog/2026/02/18/mkdocs-2.0/" class="external-link">MkDocs
 2.0 announcement</a>) and introduces changes that may break the
@@ -4547,7 +4538,7 @@ following:</p>
   What does this configuration mean?
   </h3>
 </button>
-<div id="collapseSpoiler3" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler3" aria-labelledby="headingSpoiler3">
+<div id="collapseSpoiler3" class="accordion-collapse collapse" aria-labelledby="headingSpoiler3" data-bs-parent="#accordionSpoiler3">
 <div class="accordion-body">
 <ul>
 <li>
@@ -4645,7 +4636,7 @@ contents.</p>
   What does this code mean?
   </h3>
 </button>
-<div id="collapseSpoiler4" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler4" aria-labelledby="headingSpoiler4">
+<div id="collapseSpoiler4" class="accordion-collapse collapse" aria-labelledby="headingSpoiler4" data-bs-parent="#accordionSpoiler4">
 <div class="accordion-body">
 <p>The <code>mkdocstrings</code> plugin uses a special Markdown syntax
 to inject generated documentation into a page:</p>
@@ -4715,7 +4706,7 @@ hosted on GitHub.</p>
   Other hosting services
   </h3>
 </button>
-<div id="collapseSpoiler5" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler5" aria-labelledby="headingSpoiler5">
+<div id="collapseSpoiler5" class="accordion-collapse collapse" aria-labelledby="headingSpoiler5" data-bs-parent="#accordionSpoiler5">
 <div class="accordion-body">
 <p>GitHub Pages is not the only option. Other hosting services popular
 with researchers include:</p>
@@ -4990,7 +4981,7 @@ but they work in basically the same way.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-1" class="tab-content">
-<div id="nav-tabpanel-1-Windows" class="tab-pane show active" aria-labelledby="nav-tab-1-Windows" role="tabpanel">
+<div id="nav-tabpanel-1-Windows" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-Windows">
 <p>On Windows operating systems, press the Windows key and type in
 “command”. The start menu will find the “Command Prompt” app. Press
 <kbd>Enter</kbd> or click on the Command Prompt icon to launch the
@@ -5010,7 +5001,7 @@ something like this:</p>
 <p>For more information, see the <a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands" class="external-link">Windows
 Commands</a> page on the Windows Server documentation.</p>
 </div>
-<div id="nav-tabpanel-1-Linux" class="tab-pane" aria-labelledby="nav-tab-1-Linux" role="tabpanel">
+<div id="nav-tabpanel-1-Linux" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-Linux">
 <p>On Ubuntu, press <kbd>Ctrl + Alt + T</kbd> to open a terminal.</p>
 <p>You can also open Dash and search for “Terminal”. For detailed
 instructions, please read <a href="https://ubuntu.com/tutorials/command-line-for-beginners#3-opening-a-terminal" class="external-link">Opening
@@ -5025,7 +5016,7 @@ where the dollar sign <code>$</code> means “type here”.</p>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1" aria-label="code-block-2-1"></a><span class="ex">bob@myUbuntuPC:~$</span></span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-1-MacOS" class="tab-pane" aria-labelledby="nav-tab-1-MacOS" role="tabpanel">
+<div id="nav-tabpanel-1-MacOS" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-MacOS">
 <p>Please read <a href="https://support.apple.com/en-gb/guide/terminal/apd5265185d-f365-44cb-8b09-71a064a42125/mac" class="external-link">Open
 or quit Terminal on Mac</a> on the <a href="https://support.apple.com/en-gb/guide/terminal/welcome/mac" class="external-link">Terminal
 User Guide</a> for macOS.</p>
@@ -5059,7 +5050,7 @@ current directory.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-2" class="tab-content">
-<div id="nav-tabpanel-2-Windows" class="tab-pane show active" aria-labelledby="nav-tab-2-Windows" role="tabpanel">
+<div id="nav-tabpanel-2-Windows" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-2-Windows">
 <p>On Windows, the <a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/dir" class="external-link">dir</a>
 command is used to list the contents of a directory. When you enter this
 command and press <kbd>Enter</kbd></p>
@@ -5089,7 +5080,7 @@ single file called <code>README.txt</code>. The date and time that each
 file was last modified is shown, along with the file size, which is 12
 bytes in this case.</p>
 </div>
-<div id="nav-tabpanel-2-Linux" class="tab-pane" aria-labelledby="nav-tab-2-Linux" role="tabpanel">
+<div id="nav-tabpanel-2-Linux" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-Linux">
 <p>To show the contents of a directory on a Linux system, we use the <a href="https://manpages.ubuntu.com/manpages/noble/man1/ls.1plan9.html" class="external-link"><code>ls</code>
 command</a> which lists information about the files in the current
 location.</p>
@@ -5106,7 +5097,7 @@ folder.</p>
 <pre class="output" tabindex="0"><code><span><span class="va">README.txt</span></span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-2-MacOS" class="tab-pane" aria-labelledby="nav-tab-2-MacOS" role="tabpanel">
+<div id="nav-tabpanel-2-MacOS" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-MacOS">
 <p>The macOS terminal is very similar to the Linux one. To show the
 contents of a directory on a Linux system, we use the <a href="https://support.apple.com/en-gb/guide/terminal/apdb66b5242-0d18-49fc-9c47-a2498b7c91d5/2.14/mac/14.0" class="external-link"><code>ls</code>
 command</a> which lists information about the files in the current
@@ -5168,7 +5159,7 @@ that command and the inputs used to initialise our code.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-3" class="tab-content">
-<div id="nav-tabpanel-3-Windows" class="tab-pane show active" aria-labelledby="nav-tab-3-Windows" role="tabpanel">
+<div id="nav-tabpanel-3-Windows" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-3-Windows">
 <p>In the Windows command line, we use the <code>/?</code> argument to
 instruct the computer to print the help information that that command.
 To see helpful reference information for using the <code>dir</code>
@@ -5203,7 +5194,7 @@ DIR [drive:][path][filename] [/A[[:]attributes]] [/B] [/C] [/D] [/L] [/N]
 instructions for using it, and a reference to each of the options or
 arguments available.</p>
 </div>
-<div id="nav-tabpanel-3-Linux" class="tab-pane" aria-labelledby="nav-tab-3-Linux" role="tabpanel">
+<div id="nav-tabpanel-3-Linux" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-3-Linux">
 <p>In the Linux command line, we use the <code>--help</code> argument to
 instruct the computer to print the help information that that command.
 To see helpful reference information for using the <code>ls</code>
@@ -5232,7 +5223,7 @@ Mandatory arguments to long options are mandatory for short options too.
 instructions for using it, and a reference to each of the options or
 arguments available.</p>
 </div>
-<div id="nav-tabpanel-3-MacOS" class="tab-pane" aria-labelledby="nav-tab-3-MacOS" role="tabpanel">
+<div id="nav-tabpanel-3-MacOS" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-3-MacOS">
 <p>In the macOS command line, we use the <code>--help</code> argument to
 instruct the computer to print the help information that that command.
 To see helpful reference information for using the <code>ls</code>
