@@ -4,22 +4,20 @@ title: Setup
 
 ## Sample code
 
-There is an example project contained in a code repository that is hosted on GitHub at
-[Joe-Heffer-Shef/oddsong](https://github.com/Joe-Heffer-Shef/oddsong).  As we proceed through the course, we'll create a
-collection of scripts similar to this.  Please feel free to refer to this example to help you engage with the course
-contents.
+An example project is available on GitHub at
+[Joe-Heffer-Shef/oddsong](https://github.com/Joe-Heffer-Shef/oddsong). Throughout the course, we will build a similar
+collection of scripts. Refer to this example as you work through the course.
 
 ## Software Setup
 
-This course may be completed using *either* the Python programming language **or** the R statistical package.  Please
-use the tool that you prefer.
+You can complete this course using *either* Python **or** R — choose whichever you prefer.
 
-[Python](https://python.org) is a popular language for research computing, and great for general-purpose programming as
-well. We will be using some of the inbuilt functionality of Python 3.
+[Python](https://python.org) is a popular general-purpose language widely used in research computing.
+This course uses the built-in functionality of Python 3.
 
-The [R programming language](https://cran.rstudio.com/) is a statistical package that is designed for data exploration,
-visualization, and data analysis. To interact with R, the most popular tool is [RStudio
-Desktop](https://posit.co/download/rstudio-desktop/).
+The [R programming language](https://cran.rstudio.com/) is a statistical package designed for data exploration,
+visualization, and data analysis. The most popular tool for working with R is
+[RStudio Desktop](https://posit.co/download/rstudio-desktop/).
 
 :::::::::::::::: spoiler
 
@@ -27,23 +25,26 @@ Desktop](https://posit.co/download/rstudio-desktop/).
 
 #### Text editor
 
-The Notepad text editor is installed by default on Windows. [Notepad++](https://notepad-plus-plus.org/) is a more
-powerful, open source editor that has a syntax highlighting feature.
+[Visual Studio Code](https://code.visualstudio.com/) is a free, open-source editor with excellent support for Python,
+R, and many other languages. It is the recommended editor for this course.
 
-At the University of Sheffield, Notepad++ is available on University-managed computers in the
+Notepad is installed by default on Windows. [Notepad++](https://notepad-plus-plus.org/) is a more powerful, open-source
+alternative with syntax highlighting.
+
+At the University of Sheffield, Notepad++, Visual Studio Code, and
+[RStudio Desktop](https://posit.co/download/rstudio-desktop/) are available on managed computers via the
 [Software Centre](https://students.sheffield.ac.uk/it-services/software/university-applications)
-which is accessible via the shortcut on the desktop.
+desktop shortcut.
 
 #### Python
 
-There is a guide for [using Python on Windows](https://docs.python.org/3/using/windows.html) in the
-Python documentation. [Python Releases for Windows](https://www.python.org/downloads/windows/) are
-available at [Python.org](https://python.org).
+See the [using Python on Windows](https://docs.python.org/3/using/windows.html) guide in the Python documentation.
+[Python Releases for Windows](https://www.python.org/downloads/windows/) are available at [Python.org](https://python.org).
 
 #### R
 
-[Download R for Windows.](https://cran.rstudio.com/bin/windows/) We will use base R and some libraries that offer
-additional functionality required for this course.
+[Download R for Windows.](https://cran.rstudio.com/bin/windows/) We will use base R together with a few additional
+libraries needed for this course.
 
 ::::::::::::::::::::::::
 
@@ -53,16 +54,19 @@ additional functionality required for this course.
 
 #### Text editor
 
-TextEdit is installed by default on Mac OS.
+[Visual Studio Code](https://code.visualstudio.com/) is a free, open-source editor with excellent support for Python,
+R, and many other languages. It is the recommended editor for this course.
+
+TextEdit is installed by default on macOS.
 
 #### Python
 
-Please read the guide on [using Python on a Mac](https://docs.python.org/3/using/mac.html) in the Python documentation.
+See the [using Python on a Mac](https://docs.python.org/3/using/mac.html) guide in the Python documentation.
 
 #### R
 
-[Download R for macOS](https://cran.rstudio.com/bin/macosx/) and [RStudio
-Desktop](https://posit.co/download/rstudio-desktop/).
+[Download R for macOS](https://cran.rstudio.com/bin/macosx/) and
+[RStudio Desktop](https://posit.co/download/rstudio-desktop/).
 
 ::::::::::::::::::::::::
 
@@ -72,13 +76,15 @@ Desktop](https://posit.co/download/rstudio-desktop/).
 
 #### Text editor
 
-GNOME Text Editor is the default app on Ubuntu since version 22.10. On other distributions, other text editors may be
-available, such as Gedit or Kate.
+[Visual Studio Code](https://code.visualstudio.com/) is a free, open-source editor with excellent support for Python,
+R, and many other languages. It is the recommended editor for this course.
+
+GNOME Text Editor is the default editor on Ubuntu 22.10 and later. Other distributions ship alternatives such as Gedit
+or Kate.
 
 #### Python
 
-Please read the guide on [using Python on Unix platforms](https://docs.python.org/3/using/unix.html) in the Python
-documentation.
+See the [using Python on Unix platforms](https://docs.python.org/3/using/unix.html) guide in the Python documentation.
 
 #### R
 
@@ -96,8 +102,7 @@ documentation.
 
 #### VSCode Web
 
-[Visual Studio Code for the Web](https://code.visualstudio.com/docs/editor/vscode-web) is a development environment
-that runs in a browser.
-It is available at [vscode.dev](https://vscode.dev/).
+[Visual Studio Code for the Web](https://code.visualstudio.com/docs/editor/vscode-web) is a browser-based development
+environment, available at [vscode.dev](https://vscode.dev/).
 
 ::::::::::::::::::::::::
