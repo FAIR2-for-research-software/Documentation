@@ -25,10 +25,14 @@ visualization, and data analysis. The most popular tool for working with R is
 
 #### Text editor
 
+[Visual Studio Code](https://code.visualstudio.com/) is a free, open-source editor with excellent support for Python,
+R, and many other languages. It is the recommended editor for this course.
+
 Notepad is installed by default on Windows. [Notepad++](https://notepad-plus-plus.org/) is a more powerful, open-source
 alternative with syntax highlighting.
 
-At the University of Sheffield, Notepad++ is available on managed computers via the
+At the University of Sheffield, Notepad++, Visual Studio Code, and
+[RStudio Desktop](https://posit.co/download/rstudio-desktop/) are available on managed computers via the
 [Software Centre](https://students.sheffield.ac.uk/it-services/software/university-applications)
 desktop shortcut.
 
@@ -50,6 +54,9 @@ libraries needed for this course.
 
 #### Text editor
 
+[Visual Studio Code](https://code.visualstudio.com/) is a free, open-source editor with excellent support for Python,
+R, and many other languages. It is the recommended editor for this course.
+
 TextEdit is installed by default on macOS.
 
 #### Python
@@ -68,6 +75,9 @@ See the [using Python on a Mac](https://docs.python.org/3/using/mac.html) guide 
 ### Linux
 
 #### Text editor
+
+[Visual Studio Code](https://code.visualstudio.com/) is a free, open-source editor with excellent support for Python,
+R, and many other languages. It is the recommended editor for this course.
 
 GNOME Text Editor is the default editor on Ubuntu 22.10 and later. Other distributions ship alternatives such as Gedit
 or Kate.
