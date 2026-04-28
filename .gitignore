@@ -40,3 +40,5 @@ renv.lock
 # Notepad++ backup file
 *.bak
 .Rproj
+venv/
+.venv/
