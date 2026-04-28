@@ -590,7 +590,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-examples"><p>Content from <a href="examples.html">Documentation examples</a></p>
 <hr>
-<p>Last updated on 2026-04-24 |
+<p>Last updated on 2026-04-28 |
 
         <a href="https://github.com/FAIR2-for-research-software/Documentation/edit/main/episodes/examples.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -625,15 +625,15 @@ any links that you are not going to use.
 </h2>
 <hr class="half-width">
 <p>In this episode we’ll review some examples of research software and
-evaluate how readable and reusable it is.</p>
-<p>Here is some code to perform a geometrical calculation. The first
-example could be improved in terms of its documentation and readability,
-while the second one is much clearer.</p>
+evaluate how readable and reusable it is. The examples are deliberately
+small and illustrative: the same documentation principles apply to any
+research code, whether you’re working with text and corpora, qualitative
+coding, survey data, clinical records, or quantitative measurements.</p>
 <div class="section level3">
 <h3 id="example-of-no-documentation">Example of no documentation<a class="anchor" aria-label="anchor" href="#example-of-no-documentation"></a>
 </h3>
-<p>Here’s an example of some code that does… something. It’s not clear
-what this code is for or why it was written.</p>
+<p>Here is some code intended to process a piece of text. What does this
+code do? It’s not clear what the code is for or why it was written.</p>
 <div class="tabs">
 <nav><div id="nav-tab-1" class="nav nav-tabs" role="tablist">
 <button class="nav-link active" id="nav-tab-1-Python" name="Python" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-1-Python" type="button" role="tab" aria-controls="nav-tabpanel-1-Python" aria-selected="true">
@@ -648,25 +648,25 @@ what this code is for or why it was written.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-1" class="tab-content">
-<div id="nav-tabpanel-1-Python" class="tab-pane show active" aria-labelledby="nav-tab-1-Python" role="tabpanel">
+<div id="nav-tabpanel-1-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-Python">
 <p>This is some research code that is contained in a Python
 function.</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" tabindex="-1" aria-label="code-block-1-1"></a><span class="kw">def</span> run(x):</span>
-<span id="cb1-2"><a href="#cb1-2" tabindex="-1" aria-label="code-block-1-2"></a>  weird_num <span class="op">=</span> <span class="fl">1.234</span></span>
-<span id="cb1-3"><a href="#cb1-3" tabindex="-1" aria-label="code-block-1-3"></a>  <span class="cf">return</span> x <span class="op">*</span> weird_num <span class="op">-</span> ang<span class="op">**</span><span class="dv">3</span> <span class="op">/</span> (weird_num <span class="op">*</span> <span class="dv">2</span>)</span></code></pre>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1" aria-label="code-block-1-2"></a>  weird_num <span class="op">=</span> <span class="fl">0.85</span></span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1" aria-label="code-block-1-3"></a>  <span class="cf">return</span> <span class="bu">len</span>(x.split(sep)) <span class="op">*</span> weird_num <span class="op">-</span> skipped</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-1-R" class="tab-pane" aria-labelledby="nav-tab-1-R" role="tabpanel">
+<div id="nav-tabpanel-1-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-R">
 <p>This is some research code that is contained in an R function.</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode r" tabindex="0"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" tabindex="-1" aria-label="code-block-2-1"></a>run <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
-<span id="cb2-2"><a href="#cb2-2" tabindex="-1" aria-label="code-block-2-2"></a>  weird_num <span class="ot">=</span> <span class="fl">1.234</span></span>
-<span id="cb2-3"><a href="#cb2-3" tabindex="-1" aria-label="code-block-2-3"></a>  return x <span class="sc">*</span> weird_num <span class="sc">-</span> ang<span class="sc">**</span><span class="dv">3</span> <span class="sc">/</span> (weird_num <span class="sc">*</span> <span class="dv">2</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1" aria-label="code-block-2-2"></a>  weird_num <span class="ot">=</span> <span class="fl">0.85</span></span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1" aria-label="code-block-2-3"></a>  return <span class="fu">length</span>(<span class="fu">strsplit</span>(x, sep)[[<span class="dv">1</span>]]) <span class="sc">*</span> weird_num <span class="sc">-</span> skipped</span>
 <span id="cb2-4"><a href="#cb2-4" tabindex="-1" aria-label="code-block-2-4"></a>}</span></code></pre>
 </div>
 </div>
@@ -689,22 +689,23 @@ function.</p>
 </div>
 </div>
 </div>
-<p>This is a function with a name that doesn’t explain what the code
-will do. There are no comments or notes to explain what the author
-intended to achieve. The variable names don’t clarify anything either:
-what does <code>x</code> mean in this context? Where would I go to find
-out more about <code>weird_num</code>? This is effectively a “magic”
-number that is arbitrarily stated but unexplained.</p>
-<p>The logic of the calculation is also… rather cryptic.</p>
-<p>Maybe the code works, maybe it doesn’t; but it could be made clearer
-and easier to maintain and modify in the future.</p>
+<p>The function name doesn’t explain what the code does, and there are
+no comments or notes to clarify the author’s intent. The variable names
+don’t help either: what does <code>x</code> represent? Where would we
+look to find out more about <code>weird_num</code>? It’s effectively a
+“magic” number, stated arbitrarily and left unexplained. The logic of
+the expression is equally cryptic.</p>
+<p>In fact a closer read shows the code can’t even run as written:
+<code>sep</code> and <code>skipped</code> are referenced but never
+defined. Without documentation, mistakes like that are easy to overlook
+until something breaks.</p>
 </div>
 <div class="section level3">
 <h3 id="well-documented-example">Well-documented example<a class="anchor" aria-label="anchor" href="#well-documented-example"></a>
 </h3>
 <p>Now let’s look at an example of best practices in documenting
-research software. (These code snippets are part of the end-product of
-this course, so don’t worry if they don’t make sense yet!)</p>
+research software. (These snippets come from the end product of this
+course, so don’t worry if they don’t make sense yet.)</p>
 <div class="tabs">
 <nav><div id="nav-tab-2" class="nav nav-tabs" role="tablist">
 <button class="nav-link active" id="nav-tab-2-Python" name="Python" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-2-Python" type="button" role="tab" aria-controls="nav-tabpanel-2-Python" aria-selected="true">
@@ -719,80 +720,72 @@ this course, so don’t worry if they don’t make sense yet!)</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-2" class="tab-content">
-<div id="nav-tabpanel-2-Python" class="tab-pane show active" aria-labelledby="nav-tab-2-Python" role="tabpanel">
-<p>This is a function written in the Python programming language that
-calculates a mathematical result, the details of which aren’t relevant.
-This code has plenty of documentation to help us read and understand
-it.</p>
+<div id="nav-tabpanel-2-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-2-Python">
+<p>This is a Python function that processes a piece of text. The
+specifics of the calculation aren’t important here—what matters is that
+the code carries plenty of documentation to help us read and understand
+it. The same conventions apply whether the function counts words, codes
+interview responses, summarises survey data, or computes statistics.</p>
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" tabindex="-1" aria-label="code-block-3-1"></a><span class="im">import</span> math</span>
-<span id="cb3-2"><a href="#cb3-2" tabindex="-1" aria-label="code-block-3-2"></a></span>
-<span id="cb3-3"><a href="#cb3-3" tabindex="-1" aria-label="code-block-3-3"></a><span class="kw">def</span> calculate_sine(angle: <span class="bu">float</span>) <span class="op">-&gt;</span> <span class="bu">float</span>:</span>
-<span id="cb3-4"><a href="#cb3-4" tabindex="-1" aria-label="code-block-3-4"></a>  <span class="co">"""</span></span>
-<span id="cb3-5"><a href="#cb3-5" tabindex="-1" aria-label="code-block-3-5"></a><span class="co">  Calculates the sine of an angle using the first four terms</span></span>
-<span id="cb3-6"><a href="#cb3-6" tabindex="-1" aria-label="code-block-3-6"></a><span class="co">  of the Taylor series.</span></span>
-<span id="cb3-7"><a href="#cb3-7" tabindex="-1" aria-label="code-block-3-7"></a></span>
-<span id="cb3-8"><a href="#cb3-8" tabindex="-1" aria-label="code-block-3-8"></a><span class="co">  This function uses the first four terms of the Taylor</span></span>
-<span id="cb3-9"><a href="#cb3-9" tabindex="-1" aria-label="code-block-3-9"></a><span class="co">  series for sine to approximate the value. This is a</span></span>
-<span id="cb3-10"><a href="#cb3-10" tabindex="-1" aria-label="code-block-3-10"></a><span class="co">  simple and efficient method for most applications.</span></span>
-<span id="cb3-11"><a href="#cb3-11" tabindex="-1" aria-label="code-block-3-11"></a></span>
-<span id="cb3-12"><a href="#cb3-12" tabindex="-1" aria-label="code-block-3-12"></a><span class="co">  Args:</span></span>
-<span id="cb3-13"><a href="#cb3-13" tabindex="-1" aria-label="code-block-3-13"></a><span class="co">      angle (float): The angle in radians.</span></span>
-<span id="cb3-14"><a href="#cb3-14" tabindex="-1" aria-label="code-block-3-14"></a></span>
-<span id="cb3-15"><a href="#cb3-15" tabindex="-1" aria-label="code-block-3-15"></a><span class="co">  Returns:</span></span>
-<span id="cb3-16"><a href="#cb3-16" tabindex="-1" aria-label="code-block-3-16"></a><span class="co">      float: The sine of the angle (sin(angle)).</span></span>
-<span id="cb3-17"><a href="#cb3-17" tabindex="-1" aria-label="code-block-3-17"></a><span class="co">  """</span></span>
-<span id="cb3-18"><a href="#cb3-18" tabindex="-1" aria-label="code-block-3-18"></a>  sine_value <span class="op">=</span> angle</span>
-<span id="cb3-19"><a href="#cb3-19" tabindex="-1" aria-label="code-block-3-19"></a></span>
-<span id="cb3-20"><a href="#cb3-20" tabindex="-1" aria-label="code-block-3-20"></a>  <span class="co"># Iterate over the first four terms of the Taylor series for sine</span></span>
-<span id="cb3-21"><a href="#cb3-21" tabindex="-1" aria-label="code-block-3-21"></a>  <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">5</span>):</span>
-<span id="cb3-22"><a href="#cb3-22" tabindex="-1" aria-label="code-block-3-22"></a>    factorial <span class="op">=</span> math.factorial(<span class="dv">2</span> <span class="op">*</span> i)</span>
-<span id="cb3-23"><a href="#cb3-23" tabindex="-1" aria-label="code-block-3-23"></a>    sign <span class="op">=</span> (<span class="op">-</span><span class="dv">1</span>) <span class="op">**</span> (i <span class="op">//</span> <span class="dv">2</span>)  <span class="co"># Alternate signs for sine terms</span></span>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" tabindex="-1" aria-label="code-block-3-1"></a><span class="kw">def</span> count_words(text: <span class="bu">str</span>) <span class="op">-&gt;</span> <span class="bu">int</span>:</span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1" aria-label="code-block-3-2"></a>    <span class="co">"""</span></span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1" aria-label="code-block-3-3"></a><span class="co">    Counts the number of words in a piece of text.</span></span>
+<span id="cb3-4"><a href="#cb3-4" tabindex="-1" aria-label="code-block-3-4"></a></span>
+<span id="cb3-5"><a href="#cb3-5" tabindex="-1" aria-label="code-block-3-5"></a><span class="co">    Words are taken to be sequences of characters separated by</span></span>
+<span id="cb3-6"><a href="#cb3-6" tabindex="-1" aria-label="code-block-3-6"></a><span class="co">    whitespace, which is a useful first approximation for tasks</span></span>
+<span id="cb3-7"><a href="#cb3-7" tabindex="-1" aria-label="code-block-3-7"></a><span class="co">    such as document summarisation, readability checks, or corpus</span></span>
+<span id="cb3-8"><a href="#cb3-8" tabindex="-1" aria-label="code-block-3-8"></a><span class="co">    analysis.</span></span>
+<span id="cb3-9"><a href="#cb3-9" tabindex="-1" aria-label="code-block-3-9"></a></span>
+<span id="cb3-10"><a href="#cb3-10" tabindex="-1" aria-label="code-block-3-10"></a><span class="co">    Args:</span></span>
+<span id="cb3-11"><a href="#cb3-11" tabindex="-1" aria-label="code-block-3-11"></a><span class="co">        text (str): The text to count words in.</span></span>
+<span id="cb3-12"><a href="#cb3-12" tabindex="-1" aria-label="code-block-3-12"></a></span>
+<span id="cb3-13"><a href="#cb3-13" tabindex="-1" aria-label="code-block-3-13"></a><span class="co">    Returns:</span></span>
+<span id="cb3-14"><a href="#cb3-14" tabindex="-1" aria-label="code-block-3-14"></a><span class="co">        int: The number of words in the text.</span></span>
+<span id="cb3-15"><a href="#cb3-15" tabindex="-1" aria-label="code-block-3-15"></a></span>
+<span id="cb3-16"><a href="#cb3-16" tabindex="-1" aria-label="code-block-3-16"></a><span class="co">    Examples:</span></span>
+<span id="cb3-17"><a href="#cb3-17" tabindex="-1" aria-label="code-block-3-17"></a><span class="co">        &gt;&gt;&gt; count_words("the quick brown fox")</span></span>
+<span id="cb3-18"><a href="#cb3-18" tabindex="-1" aria-label="code-block-3-18"></a><span class="co">        4</span></span>
+<span id="cb3-19"><a href="#cb3-19" tabindex="-1" aria-label="code-block-3-19"></a><span class="co">        &gt;&gt;&gt; count_words("hello   world")</span></span>
+<span id="cb3-20"><a href="#cb3-20" tabindex="-1" aria-label="code-block-3-20"></a><span class="co">        2</span></span>
+<span id="cb3-21"><a href="#cb3-21" tabindex="-1" aria-label="code-block-3-21"></a><span class="co">    """</span></span>
+<span id="cb3-22"><a href="#cb3-22" tabindex="-1" aria-label="code-block-3-22"></a>    <span class="co"># Split on any run of whitespace; empty tokens are discarded</span></span>
+<span id="cb3-23"><a href="#cb3-23" tabindex="-1" aria-label="code-block-3-23"></a>    words <span class="op">=</span> text.split()</span>
 <span id="cb3-24"><a href="#cb3-24" tabindex="-1" aria-label="code-block-3-24"></a></span>
-<span id="cb3-25"><a href="#cb3-25" tabindex="-1" aria-label="code-block-3-25"></a>    <span class="co"># Add terms for sine</span></span>
-<span id="cb3-26"><a href="#cb3-26" tabindex="-1" aria-label="code-block-3-26"></a>    sine_value <span class="op">+=</span> sign <span class="op">*</span> (angle <span class="op">**</span> (<span class="dv">2</span> <span class="op">*</span> i)) <span class="op">/</span> factorial</span>
-<span id="cb3-27"><a href="#cb3-27" tabindex="-1" aria-label="code-block-3-27"></a></span>
-<span id="cb3-28"><a href="#cb3-28" tabindex="-1" aria-label="code-block-3-28"></a>  <span class="cf">return</span> sine_value</span></code></pre>
+<span id="cb3-25"><a href="#cb3-25" tabindex="-1" aria-label="code-block-3-25"></a>    <span class="cf">return</span> <span class="bu">len</span>(words)</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-2-R" class="tab-pane" aria-labelledby="nav-tab-2-R" role="tabpanel">
-<p>This is a function written in the R programming language that
-calculates a mathematical result, the details of which aren’t relevant.
-This code has plenty of documentation to help us read and understand it.
-R uses the <a href="https://roxygen2.r-lib.org/index.html" class="external-link">roxygen2</a>
-package to format documentation strings into our project
-documentation.</p>
+<div id="nav-tabpanel-2-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-R">
+<p>Here is the same task written in R. Again, the specifics of the
+calculation are incidental; the point is the documentation that
+surrounds the code. R uses the <a href="https://roxygen2.r-lib.org/index.html" class="external-link">roxygen2</a> package to
+format documentation strings into our project documentation.</p>
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co">#' Calculate the sine of an angle</span></span>
+<code class="sourceCode R"><span><span class="co">#' Count the words in a piece of text</span></span>
 <span><span class="co">#'</span></span>
 <span><span class="co">#' @description</span></span>
+<span><span class="co">#' Counts the number of words in a piece of text. Words are taken</span></span>
+<span><span class="co">#' to be sequences of characters separated by whitespace, which is</span></span>
+<span><span class="co">#' a useful first approximation for tasks such as document</span></span>
+<span><span class="co">#' summarisation, readability checks, or corpus analysis.</span></span>
 <span><span class="co">#'</span></span>
-<span><span class="co">#' This function uses the first four terms of the Taylor</span></span>
-<span><span class="co">#' series for sine to approximate</span></span>
-<span><span class="co">#' the value. This is a simple and efficient method for</span></span>
-<span><span class="co">#' most applications.</span></span>
+<span><span class="co">#' @param text The text to count words in.</span></span>
 <span><span class="co">#'</span></span>
-<span><span class="co">#' @param angle The angle in radians.</span></span>
+<span><span class="co">#' @returns The number of words in the text.</span></span>
 <span><span class="co">#'</span></span>
-<span><span class="co">#' @returns The sine of the angle (sin(angle)).</span></span>
-<span><span class="va">calculate_sine</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">angle</span><span class="op">)</span> <span class="op">{</span></span>
-<span>  <span class="va">sine_value</span> <span class="op">&lt;-</span> <span class="va">angle</span></span>
+<span><span class="co">#' @examples</span></span>
+<span><span class="co">#' count_words("the quick brown fox")</span></span>
+<span><span class="co">#' count_words("hello   world")</span></span>
+<span><span class="va">count_words</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">text</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="co"># Split on any run of whitespace; empty tokens are discarded</span></span>
+<span>  <span class="va">words</span> <span class="op">&lt;-</span> <span class="fu">strsplit</span><span class="op">(</span><span class="va">text</span>, <span class="st">"\\s+"</span><span class="op">)</span><span class="op">[[</span><span class="fl">1</span><span class="op">]</span><span class="op">]</span></span>
+<span>  <span class="va">words</span> <span class="op">&lt;-</span> <span class="va">words</span><span class="op">[</span><span class="va">words</span> <span class="op">!=</span> <span class="st">""</span><span class="op">]</span></span>
 <span></span>
-<span>  <span class="co"># Loop for the first four terms</span></span>
-<span>  <span class="kw">for</span> <span class="op">(</span><span class="va">i</span> <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span><span class="fl">4</span><span class="op">)</span> <span class="op">{</span></span>
-<span>    <span class="va">factorial</span> <span class="op">&lt;-</span> <span class="fu">factorial</span><span class="op">(</span><span class="fl">2</span> <span class="op">*</span> <span class="va">i</span><span class="op">)</span></span>
-<span>    <span class="va">sign</span> <span class="op">&lt;-</span> <span class="op">(</span><span class="op">-</span><span class="fl">1</span><span class="op">)</span><span class="op">^</span><span class="op">(</span><span class="va">i</span> <span class="op">%%</span> <span class="fl">2</span><span class="op">)</span>  <span class="co"># Alternate signs with modulo (%)</span></span>
-<span></span>
-<span>    <span class="co"># Add terms for sine</span></span>
-<span>    <span class="va">sine_value</span> <span class="op">&lt;-</span> <span class="va">sine_value</span> <span class="op">+</span> <span class="va">sign</span> <span class="op">*</span> <span class="op">(</span><span class="va">angle</span><span class="op">^</span><span class="op">(</span><span class="fl">2</span> <span class="op">*</span> <span class="va">i</span><span class="op">)</span><span class="op">)</span> <span class="op">/</span> <span class="va">factorial</span></span>
-<span>  <span class="op">}</span></span>
-<span></span>
-<span>  <span class="kw">return</span><span class="op">(</span><span class="va">sine_value</span><span class="op">)</span></span>
+<span>  <span class="kw">return</span><span class="op">(</span><span class="fu">length</span><span class="op">(</span><span class="va">words</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="op">}</span></span></code></pre>
 </div>
 </div>
@@ -815,36 +808,38 @@ documentation.</p>
 </div>
 </div>
 <p>This time, the function name is a verb that describes what the code
-will attempt to do. The description of the function is also written out
-clearly in a note for the user. There are comment lines (starting with
-<code>#</code>) that explain the mathematical method used. Each variable
-has a descriptive, human-readable name, making the code more intuitive
-to read. An existing library is used to calculate the factorial, which
-means we can look up the usage for the <code>factorial()</code> function
-elsewhere.</p>
-<p>This approach means that our code is much <strong>easier to
-interpret</strong>, maintain, and make changes to in the future.</p>
-<p>Of course, there may be some syntax in this example that is
-unfamiliar to you—but don’t worry, we’ll learn the basics in this
-course!</p>
+does. A clear description spells out the purpose for the reader, and
+comment lines (starting with <code>#</code>) explain how the calculation
+works. Each variable has a descriptive, human-readable name, and
+built-in language features handle the splitting of the text, so a reader
+can look up <code>split()</code> or <code>strsplit()</code> elsewhere
+rather than puzzling over a bespoke implementation.</p>
+<p>The result is code that is much <strong>easier to interpret</strong>,
+maintain, and modify in the future.</p>
+<p>Some of the syntax in this example may be unfamiliar—that’s fine.
+We’ll cover the basics as the course progresses.</p>
 </div>
 </section><section><h2 class="section-heading" id="real-world-examples">Real-world examples<a class="anchor" aria-label="anchor" href="#real-world-examples"></a>
 </h2>
 <hr class="half-width">
 <p>Let’s review real-world examples of the documentation for software
-packages that are used in research.</p>
+packages that are used in research. The two examples below come from the
+quantitative-sciences mainstream, but the same documentation patterns
+turn up in tools used right across the disciplines—for example
+text-analysis libraries such as <a href="https://spacy.io/" class="external-link">spaCy</a> or
+<a href="https://quanteda.io/" class="external-link">quanteda</a>, and many qualitative-data
+and digital-humanities packages.</p>
 <div class="section level3">
 <h3 id="numpy-user-guide">NumPy user guide<a class="anchor" aria-label="anchor" href="#numpy-user-guide"></a>
 </h3>
-<p>NumPy is a mathematical package for the Python programming language
-that’s used for quantitative computing and linear algebra. The <a href="https://numpy.org/doc/2.0/user/index.html#user" class="external-link">NumPy User
-Guide</a> is a <strong>thorough website</strong> that organised into
-sections that cover the different aspects of using that package.</p>
-<p>It includes a beginner’s guide, tutorials for different use-cases,
-and in-depth write-ups of technical details of certain aspects of the
-code. Some of the content is written for a target audience with no
-assumed knowledge, while other parts are written as a reference for
-people with some background in mathematics and computer programming.</p>
+<p>NumPy is a mathematical package for Python, widely used for
+quantitative computing and linear algebra. The <a href="https://numpy.org/doc/2.0/user/index.html#user" class="external-link">NumPy User
+Guide</a> is a <strong>thorough website</strong>, organised into
+sections that cover different aspects of the package.</p>
+<p>It includes a beginner’s guide, tutorials for common use cases, and
+in-depth write-ups of specific technical details. Some content assumes
+no prior knowledge; other parts serve as a reference for readers with a
+background in mathematics or programming.</p>
 <p>If we want to read more about how to use a certain feature, there are
 documentation pages such as <a href="https://numpy.org/doc/stable/reference/generated/numpy.array.html" class="external-link">numpy.array</a>
 that describe purpose and the parameters of each function. If we’re in a
@@ -881,14 +876,14 @@ in-built function</a> to view the documentation:</p>
 <h3 id="ggplot2-documentation-site">ggplot2 documentation site<a class="anchor" aria-label="anchor" href="#ggplot2-documentation-site"></a>
 </h3>
 <p><a href="https://cloud.r-project.org/web/packages/ggplot2/" class="external-link">ggplot2</a> is
-a package for the R statistical language that generates data
+a package for the R statistical language that produces data
 visualisations and graphics. The <a href="https://ggplot2.tidyverse.org/index.html" class="external-link">ggplot2
-documentation</a> has a simple, accessible layout and <strong>walks a
-new user through</strong> installing and getting up-and-running with the
-tool. The page provides a “cheat sheet” which is a reference guide that
-lists commonly-used commands in an attractive two-page layout. The
-documentation site is moderate in scope and links to several external
-resources, such as online courses hosted elsewhere.</p>
+documentation</a> has a simple, accessible layout that <strong>walks a
+new user through</strong> installing the package and getting up and
+running. It also provides a “cheat sheet”: a reference guide that lists
+commonly used commands in an attractive two-page layout. The
+documentation is moderate in scope and links out to further resources,
+such as online courses hosted elsewhere.</p>
 <p>In R, we can view the documentation for each function by using the
 <code>?</code> syntax. For example, calling
 <code>?ggplot2::ggplot</code> will show the help text for that function
@@ -904,9 +899,11 @@ it.</p>
 <pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">install.packages</span><span class="op">(</span><span class="st">"ggplot2"</span><span class="op">)</span></span>
 <span><span class="kw">library</span><span class="op">(</span><span class="va">ggplot2</span><span class="op">)</span></span>
-<span><span class="op">?</span><span class="va">ggplot2</span><span class="op">:</span><span class="va">ggplot</span></span></code></pre>
+<span><span class="op">?</span><span class="fu">ggplot2</span><span class="fu">::</span><span class="va">ggplot</span></span></code></pre>
 </div>
-<!--
+<figure><img src="./fig/r-ggplot-help.png" alt="A screenshot of the user guide for the ggplot2 ggplot function in RStudio." class="figure mx-auto d-block"><div class="figcaption">The RStudio Help panel for the ggplot
+function.</div>
+</figure><!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
@@ -1058,7 +1055,7 @@ details for each operating system are detailed below.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-1" class="tab-content">
-<div id="nav-tabpanel-1-Windows" class="tab-pane show active" aria-labelledby="nav-tab-1-Windows" role="tabpanel">
+<div id="nav-tabpanel-1-Windows" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-Windows">
 <ol style="list-style-type: decimal">
 <li>Open <a href="https://support.microsoft.com/en-gb/windows/find-and-open-file-explorer-ef370130-1cca-9dc5-e0df-2f7416fe1cb1" class="external-link">File
 Explorer</a> to browse the file system;</li>
@@ -1070,7 +1067,7 @@ Document;</li>
 <li>Double-click on the file to open it for editing.</li>
 </ol>
 </div>
-<div id="nav-tabpanel-1-Linux" class="tab-pane" aria-labelledby="nav-tab-1-Linux" role="tabpanel">
+<div id="nav-tabpanel-1-Linux" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-Linux">
 <p>Use the <a href="https://help.ubuntu.com/stable/ubuntu-help/files-browse.html.en" class="external-link">File
 Manager</a> to create a new directory called <code>oddsong</code>.
 Inside that folder, create a new text file called
@@ -1085,7 +1082,7 @@ Inside that folder, create a new text file called
 <span id="cb1-4"><a href="#cb1-4" tabindex="-1" aria-label="code-block-1-4"></a><span class="fu">nano</span> oddsong/README.txt</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-1-MacOS" class="tab-pane" aria-labelledby="nav-tab-1-MacOS" role="tabpanel">
+<div id="nav-tabpanel-1-MacOS" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-MacOS">
 <p>Use the <a href="https://support.apple.com/en-gb/guide/mac-help/mchlp2605/mac" class="external-link">Finder</a>
 file manager to create a new directory called <code>oddsong</code>.
 Inside that folder, create a new text file called
@@ -1425,7 +1422,7 @@ options.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-2" class="tab-content">
-<div id="nav-tabpanel-2-Windows" class="tab-pane show active" aria-labelledby="nav-tab-2-Windows" role="tabpanel">
+<div id="nav-tabpanel-2-Windows" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-2-Windows">
 <p>Use <a href="https://support.microsoft.com/en-gb/windows/find-and-open-file-explorer-ef370130-1cca-9dc5-e0df-2f7416fe1cb1" class="external-link">File
 Explorer</a> to <a href="https://support.microsoft.com/en-gb/office/rename-a-file-baea7aab-760b-4ee0-af58-06e940d505a4" class="external-link">rename
 the file</a> from <code>README.txt</code> to <code>README.md</code>.</p>
@@ -1435,7 +1432,7 @@ the file</a> from <code>README.txt</code> to <code>README.md</code>.</p>
 <li>Type <code>README.md</code>.</li>
 </ol>
 </div>
-<div id="nav-tabpanel-2-Linux" class="tab-pane" aria-labelledby="nav-tab-2-Linux" role="tabpanel">
+<div id="nav-tabpanel-2-Linux" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-Linux">
 <p>Use the <a href="https://help.ubuntu.com/stable/ubuntu-help/files-browse.html.en" class="external-link">File
 Manager</a> to <a href="https://help.ubuntu.com/stable/ubuntu-help/files-rename.html.en" class="external-link">rename
 the file</a> from <code>README.txt</code> to <code>README.md</code>.</p>
@@ -1446,7 +1443,7 @@ the file</a> from <code>README.txt</code> to <code>README.md</code>.</p>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1" aria-label="code-block-3-1"></a><span class="fu">mv</span> README.txt README.md</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-2-MacOS" class="tab-pane" aria-labelledby="nav-tab-2-MacOS" role="tabpanel">
+<div id="nav-tabpanel-2-MacOS" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-MacOS">
 <p>Use the <a href="https://support.apple.com/en-gb/guide/mac-help/mchlp2605/mac" class="external-link">Finder</a>
 to <a href="https://support.apple.com/en-gb/guide/mac-help/mchlp1144/mac" class="external-link">rename
 the file</a> from <code>README.txt</code> to <code>README.md</code>.</p>
@@ -1889,7 +1886,7 @@ principle is the same.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-1" class="tab-content">
-<div id="nav-tabpanel-1-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-Python">
+<div id="nav-tabpanel-1-Python" class="tab-pane show active" aria-labelledby="nav-tab-1-Python" role="tabpanel">
 <p>In Python, we put a string as the first line of a function (or other
 object.) For example, for a simple Python function that calculates the
 sum of two numbers:</p>
@@ -1903,7 +1900,7 @@ sum of two numbers:</p>
 <span id="cb1-5"><a href="#cb1-5" tabindex="-1" aria-label="code-block-1-5"></a>    <span class="cf">return</span> x <span class="op">+</span> y</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-1-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-R">
+<div id="nav-tabpanel-1-R" class="tab-pane" aria-labelledby="nav-tab-1-R" role="tabpanel">
 <p>In R, we use the <a href="https://roxygen2.r-lib.org/" class="external-link">roxygen2</a>
 package, where a comment with a single quote <code>#'</code> specifies a
 documentation string for a function.</p>
@@ -1943,7 +1940,7 @@ provide the name of that species.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="tabs">
 <nav><div id="nav-tab-2" class="nav nav-tabs" role="tablist">
@@ -1959,7 +1956,7 @@ provide the name of that species.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-2" class="tab-content">
-<div id="nav-tabpanel-2-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-2-Python">
+<div id="nav-tabpanel-2-Python" class="tab-pane show active" aria-labelledby="nav-tab-2-Python" role="tabpanel">
 <ol style="list-style-type: decimal">
 <li>Create a new Python script by creating a file called
 <code>oddsong.py</code>
@@ -1982,7 +1979,7 @@ provide the name of that species.</p>
 <span id="cb3-8"><a href="#cb3-8" tabindex="-1" aria-label="code-block-3-8"></a>    <span class="cf">return</span> <span class="st">"Hirundo atrocaerulea"</span></span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-2-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-R">
+<div id="nav-tabpanel-2-R" class="tab-pane" aria-labelledby="nav-tab-2-R" role="tabpanel">
 <ol style="list-style-type: decimal">
 <li>Create a new R script by creating a file called
 <code>R/identify.R</code>
@@ -2033,7 +2030,7 @@ built-in function</a> in Python.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-3" class="tab-content">
-<div id="nav-tabpanel-3-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-3-Python">
+<div id="nav-tabpanel-3-Python" class="tab-pane show active" aria-labelledby="nav-tab-3-Python" role="tabpanel">
 <p>The contents of that string will be displayed to users in their
 development environment or by running the <code>help</code> function
 like so:</p>
@@ -2058,7 +2055,7 @@ like so:</p>
 for the <a href="https://docs.python.org/3/library/" class="external-link">Python Standard
 library</a> or for the particular package you’re using.</p>
 </div>
-<div id="nav-tabpanel-3-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-3-R">
+<div id="nav-tabpanel-3-R" class="tab-pane" aria-labelledby="nav-tab-3-R" role="tabpanel">
 <p>In R, we use the <code>help()</code> function to display the user
 manual for a function. For example, to view the documentation for the <a href="https://www.rdocumentation.org/packages/base/versions/3.6.2/topics/sum" class="external-link">in-built
 <code>sum()</code> function</a>, we would call:</p>
@@ -2119,7 +2116,7 @@ for a function.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>Let’s view the help text for an in-built <a href="https://docs.python.org/3/library/functions.html#abs" class="external-link">function
 <code>abs()</code></a> that finds the absolute value of a number.</p>
@@ -2137,7 +2134,7 @@ for a function.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-4" class="tab-content">
-<div id="nav-tabpanel-4-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-4-Python">
+<div id="nav-tabpanel-4-Python" class="tab-pane show active" aria-labelledby="nav-tab-4-Python" role="tabpanel">
 <div class="codewrapper sourceCode" id="cb9">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -2153,7 +2150,7 @@ abs(x, /)
     Return the absolute value of the argument.</code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-4-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-4-R">
+<div id="nav-tabpanel-4-R" class="tab-pane" aria-labelledby="nav-tab-4-R" role="tabpanel">
 <div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -2245,7 +2242,7 @@ argument has a name and a brief description.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-5" class="tab-content">
-<div id="nav-tabpanel-5-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-5-Python">
+<div id="nav-tabpanel-5-Python" class="tab-pane show active" aria-labelledby="nav-tab-5-Python" role="tabpanel">
 <p>The argument name matches the variable name in the function
 signature, such as <code>add(x, y)</code> in this case.</p>
 <div class="codewrapper sourceCode" id="cb13">
@@ -2262,7 +2259,7 @@ signature, such as <code>add(x, y)</code> in this case.</p>
 <span id="cb13-9"><a href="#cb13-9" tabindex="-1" aria-label="code-block-13-9"></a>    <span class="cf">return</span> x <span class="op">+</span> y</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-5-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-5-R">
+<div id="nav-tabpanel-5-R" class="tab-pane" aria-labelledby="nav-tab-5-R" role="tabpanel">
 <p>The argument name matches the variable name in the function
 signature, such as <code>function(x, y)</code> in this case.</p>
 <div class="codewrapper sourceCode" id="cb14">
@@ -2301,7 +2298,7 @@ each one.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <div class="tabs">
 <nav><div id="nav-tab-6" class="nav nav-tabs" role="tablist">
@@ -2317,7 +2314,7 @@ each one.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-6" class="tab-content">
-<div id="nav-tabpanel-6-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-6-Python">
+<div id="nav-tabpanel-6-Python" class="tab-pane show active" aria-labelledby="nav-tab-6-Python" role="tabpanel">
 <div class="codewrapper sourceCode" id="cb15">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -2332,7 +2329,7 @@ each one.</p>
 <span id="cb15-9"><a href="#cb15-9" tabindex="-1" aria-label="code-block-15-9"></a>    <span class="cf">return</span> <span class="st">"Hirundo atrocaerulea"</span></span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-6-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-6-R">
+<div id="nav-tabpanel-6-R" class="tab-pane" aria-labelledby="nav-tab-6-R" role="tabpanel">
 <div class="codewrapper sourceCode" id="cb16">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -2373,7 +2370,7 @@ function code block.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-7" class="tab-content">
-<div id="nav-tabpanel-7-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-7-Python">
+<div id="nav-tabpanel-7-Python" class="tab-pane show active" aria-labelledby="nav-tab-7-Python" role="tabpanel">
 <p>In the Python programming language, we conventionally use the
 “Returns:” section to describe the function output.</p>
 <div class="codewrapper sourceCode" id="cb17">
@@ -2393,7 +2390,7 @@ function code block.</p>
 <span id="cb17-12"><a href="#cb17-12" tabindex="-1" aria-label="code-block-17-12"></a>    <span class="cf">return</span> x <span class="op">+</span> y</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-7-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-7-R">
+<div id="nav-tabpanel-7-R" class="tab-pane" aria-labelledby="nav-tab-7-R" role="tabpanel">
 <p>In R, when using <a href="https://roxygen2.r-lib.org/" class="external-link">roxygen2</a>,
 the “<span class="citation">@return</span>” section describes the
 function output.</p>
@@ -2437,7 +2434,7 @@ string.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <div class="tabs">
 <nav><div id="nav-tab-8" class="nav nav-tabs" role="tablist">
@@ -2453,7 +2450,7 @@ string.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-8" class="tab-content">
-<div id="nav-tabpanel-8-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-8-Python">
+<div id="nav-tabpanel-8-Python" class="tab-pane show active" aria-labelledby="nav-tab-8-Python" role="tabpanel">
 <div class="codewrapper sourceCode" id="cb19">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -2471,7 +2468,7 @@ string.</p>
 <span id="cb19-12"><a href="#cb19-12" tabindex="-1" aria-label="code-block-19-12"></a>    <span class="cf">return</span> <span class="st">"Hirundo atrocaerulea"</span></span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-8-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-8-R">
+<div id="nav-tabpanel-8-R" class="tab-pane" aria-labelledby="nav-tab-8-R" role="tabpanel">
 <div class="codewrapper sourceCode" id="cb20">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -2518,7 +2515,7 @@ documentation string.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-9" class="tab-content">
-<div id="nav-tabpanel-9-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-9-Python">
+<div id="nav-tabpanel-9-Python" class="tab-pane show active" aria-labelledby="nav-tab-9-Python" role="tabpanel">
 <p>Each code example has a prefix of <code>&gt;&gt;&gt;</code> which
 represents the input prompt on the Python interpreter. Some code editors
 will provide syntax highlighting of these code snippets.</p>
@@ -2548,7 +2545,7 @@ will provide syntax highlighting of these code snippets.</p>
 docstrings, please read about the <a href="https://docs.python.org/3/library/doctest.html" class="external-link">doctest</a> module
 in the Python documentation.</p>
 </div>
-<div id="nav-tabpanel-9-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-9-R">
+<div id="nav-tabpanel-9-R" class="tab-pane" aria-labelledby="nav-tab-9-R" role="tabpanel">
 <p>The code examples section of the docstring is prefixed by
 <code>@examples</code>.</p>
 <div class="codewrapper sourceCode" id="cb22">
@@ -2592,7 +2589,7 @@ function in your code.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution5" aria-expanded="false" aria-controls="collapseSolution5">
   <h4 class="accordion-header" id="headingSolution5"> Show me the solution </h4>
 </button>
-<div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
+<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
 <div class="accordion-body">
 <div class="tabs">
 <nav><div id="nav-tab-10" class="nav nav-tabs" role="tablist">
@@ -2608,7 +2605,7 @@ function in your code.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-10" class="tab-content">
-<div id="nav-tabpanel-10-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-10-Python">
+<div id="nav-tabpanel-10-Python" class="tab-pane show active" aria-labelledby="nav-tab-10-Python" role="tabpanel">
 <div class="codewrapper sourceCode" id="cb23">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -2624,7 +2621,7 @@ function in your code.</p>
 <span id="cb23-10"><a href="#cb23-10" tabindex="-1" aria-label="code-block-23-10"></a>    <span class="cf">return</span> <span class="st">"Hirundo atrocaerulea"</span></span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-10-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-10-R">
+<div id="nav-tabpanel-10-R" class="tab-pane" aria-labelledby="nav-tab-10-R" role="tabpanel">
 <div class="codewrapper sourceCode" id="cb24">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
@@ -2652,7 +2649,7 @@ function in your code.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Using docstrings to create automatic tests </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="accordion-body">
 <p>We can use the code examples inside docstrings to define test cases
 that are used in automatic software testing.</p>
@@ -2670,11 +2667,11 @@ that are used in automatic software testing.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-11" class="tab-content">
-<div id="nav-tabpanel-11-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-11-Python">
+<div id="nav-tabpanel-11-Python" class="tab-pane show active" aria-labelledby="nav-tab-11-Python" role="tabpanel">
 <p>These code examples can be used as automatic tests using the <a href="https://docs.python.org/3/library/doctest.html" class="external-link">doctest</a> module
 which is built into Python.</p>
 </div>
-<div id="nav-tabpanel-11-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-11-R">
+<div id="nav-tabpanel-11-R" class="tab-pane" aria-labelledby="nav-tab-11-R" role="tabpanel">
 <p>In the R ecosystem, we can automatically test the examples in our
 documentation strings using the <a href="https://cran.r-project.org/web/packages/doctest/vignettes/doctest.html" class="external-link">doctest</a>
 package.</p>
@@ -2794,7 +2791,7 @@ and, if in doubt, follow the style of existing code.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
   <h3 class="accordion-header" id="headingSpoiler2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Docstring conventions </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
 <div class="accordion-body">
 <p>There are several different <strong>standards</strong> for
 documentation strings. A standard is a convention that determines how
@@ -3590,7 +3587,7 @@ labels the types of the inputs and output of the function.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <p>None of these code examples will cause an error because type hints
 are just <strong>passive labels</strong> that document our code. They
@@ -4329,7 +4326,7 @@ the MkDocs documentation.</p>
   Documenting R packages
   </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <p>MkDocs itself is language-agnostic — it simply converts Markdown into
 a website, so you can use it to write prose documentation for code in
@@ -4463,7 +4460,7 @@ generating reference material from Python code.</p>
   Why pin MkDocs to version 1?
   </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
 <div class="accordion-body">
 <p>MkDocs 2.0 is on the horizon (see the <a href="https://squidfunk.github.io/mkdocs-material/blog/2026/02/18/mkdocs-2.0/" class="external-link">MkDocs
 2.0 announcement</a>) and introduces changes that may break the
@@ -4529,7 +4526,7 @@ following:</p>
   What does this configuration mean?
   </h3>
 </button>
-<div id="collapseSpoiler3" class="accordion-collapse collapse" aria-labelledby="headingSpoiler3" data-bs-parent="#accordionSpoiler3">
+<div id="collapseSpoiler3" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler3" aria-labelledby="headingSpoiler3">
 <div class="accordion-body">
 <ul>
 <li>
@@ -4627,7 +4624,7 @@ contents.</p>
   What does this code mean?
   </h3>
 </button>
-<div id="collapseSpoiler4" class="accordion-collapse collapse" aria-labelledby="headingSpoiler4" data-bs-parent="#accordionSpoiler4">
+<div id="collapseSpoiler4" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler4" aria-labelledby="headingSpoiler4">
 <div class="accordion-body">
 <p>The <code>mkdocstrings</code> plugin uses a special Markdown syntax
 to inject generated documentation into a page:</p>
@@ -4697,7 +4694,7 @@ hosted on GitHub.</p>
   Other hosting services
   </h3>
 </button>
-<div id="collapseSpoiler5" class="accordion-collapse collapse" aria-labelledby="headingSpoiler5" data-bs-parent="#accordionSpoiler5">
+<div id="collapseSpoiler5" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler5" aria-labelledby="headingSpoiler5">
 <div class="accordion-body">
 <p>GitHub Pages is not the only option. Other hosting services popular
 with researchers include:</p>
@@ -4971,7 +4968,7 @@ but they work in basically the same way.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-1" class="tab-content">
-<div id="nav-tabpanel-1-Windows" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-Windows">
+<div id="nav-tabpanel-1-Windows" class="tab-pane show active" aria-labelledby="nav-tab-1-Windows" role="tabpanel">
 <p>On Windows operating systems, press the Windows key and type in
 “command”. The start menu will find the “Command Prompt” app. Press
 <kbd>Enter</kbd> or click on the Command Prompt icon to launch the
@@ -4991,7 +4988,7 @@ something like this:</p>
 <p>For more information, see the <a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/windows-commands" class="external-link">Windows
 Commands</a> page on the Windows Server documentation.</p>
 </div>
-<div id="nav-tabpanel-1-Linux" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-Linux">
+<div id="nav-tabpanel-1-Linux" class="tab-pane" aria-labelledby="nav-tab-1-Linux" role="tabpanel">
 <p>On Ubuntu, press <kbd>Ctrl + Alt + T</kbd> to open a terminal.</p>
 <p>You can also open Dash and search for “Terminal”. For detailed
 instructions, please read <a href="https://ubuntu.com/tutorials/command-line-for-beginners#3-opening-a-terminal" class="external-link">Opening
@@ -5006,7 +5003,7 @@ where the dollar sign <code>$</code> means “type here”.</p>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" tabindex="-1" aria-label="code-block-2-1"></a><span class="ex">bob@myUbuntuPC:~$</span></span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-1-MacOS" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-MacOS">
+<div id="nav-tabpanel-1-MacOS" class="tab-pane" aria-labelledby="nav-tab-1-MacOS" role="tabpanel">
 <p>Please read <a href="https://support.apple.com/en-gb/guide/terminal/apd5265185d-f365-44cb-8b09-71a064a42125/mac" class="external-link">Open
 or quit Terminal on Mac</a> on the <a href="https://support.apple.com/en-gb/guide/terminal/welcome/mac" class="external-link">Terminal
 User Guide</a> for macOS.</p>
@@ -5040,7 +5037,7 @@ current directory.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-2" class="tab-content">
-<div id="nav-tabpanel-2-Windows" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-2-Windows">
+<div id="nav-tabpanel-2-Windows" class="tab-pane show active" aria-labelledby="nav-tab-2-Windows" role="tabpanel">
 <p>On Windows, the <a href="https://learn.microsoft.com/en-us/windows-server/administration/windows-commands/dir" class="external-link">dir</a>
 command is used to list the contents of a directory. When you enter this
 command and press <kbd>Enter</kbd></p>
@@ -5070,7 +5067,7 @@ single file called <code>README.txt</code>. The date and time that each
 file was last modified is shown, along with the file size, which is 12
 bytes in this case.</p>
 </div>
-<div id="nav-tabpanel-2-Linux" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-Linux">
+<div id="nav-tabpanel-2-Linux" class="tab-pane" aria-labelledby="nav-tab-2-Linux" role="tabpanel">
 <p>To show the contents of a directory on a Linux system, we use the <a href="https://manpages.ubuntu.com/manpages/noble/man1/ls.1plan9.html" class="external-link"><code>ls</code>
 command</a> which lists information about the files in the current
 location.</p>
@@ -5087,7 +5084,7 @@ folder.</p>
 <pre class="output" tabindex="0"><code><span><span class="va">README.txt</span></span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-2-MacOS" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-MacOS">
+<div id="nav-tabpanel-2-MacOS" class="tab-pane" aria-labelledby="nav-tab-2-MacOS" role="tabpanel">
 <p>The macOS terminal is very similar to the Linux one. To show the
 contents of a directory on a Linux system, we use the <a href="https://support.apple.com/en-gb/guide/terminal/apdb66b5242-0d18-49fc-9c47-a2498b7c91d5/2.14/mac/14.0" class="external-link"><code>ls</code>
 command</a> which lists information about the files in the current
@@ -5120,7 +5117,7 @@ will do.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> What are arguments? </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
 <div class="accordion-body">
 <p>When using shell commands, we use the words <strong>option</strong>,
 <strong>flag</strong>, and <strong>arguments</strong> to describe
@@ -5149,7 +5146,7 @@ that command and the inputs used to initialise our code.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-3" class="tab-content">
-<div id="nav-tabpanel-3-Windows" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-3-Windows">
+<div id="nav-tabpanel-3-Windows" class="tab-pane show active" aria-labelledby="nav-tab-3-Windows" role="tabpanel">
 <p>In the Windows command line, we use the <code>/?</code> argument to
 instruct the computer to print the help information that that command.
 To see helpful reference information for using the <code>dir</code>
@@ -5184,7 +5181,7 @@ DIR [drive:][path][filename] [/A[[:]attributes]] [/B] [/C] [/D] [/L] [/N]
 instructions for using it, and a reference to each of the options or
 arguments available.</p>
 </div>
-<div id="nav-tabpanel-3-Linux" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-3-Linux">
+<div id="nav-tabpanel-3-Linux" class="tab-pane" aria-labelledby="nav-tab-3-Linux" role="tabpanel">
 <p>In the Linux command line, we use the <code>--help</code> argument to
 instruct the computer to print the help information that that command.
 To see helpful reference information for using the <code>ls</code>
@@ -5213,7 +5210,7 @@ Mandatory arguments to long options are mandatory for short options too.
 instructions for using it, and a reference to each of the options or
 arguments available.</p>
 </div>
-<div id="nav-tabpanel-3-MacOS" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-3-MacOS">
+<div id="nav-tabpanel-3-MacOS" class="tab-pane" aria-labelledby="nav-tab-3-MacOS" role="tabpanel">
 <p>In the macOS command line, we use the <code>--help</code> argument to
 instruct the computer to print the help information that that command.
 To see helpful reference information for using the <code>ls</code>
@@ -5302,7 +5299,7 @@ executed first.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
   <h3 class="accordion-header" id="headingSpoiler2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Why must our file be named __main__.py? </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
 <div class="accordion-body">
 <p>This is a mechanism that tells Python how we want users to interact
 with our software.</p>
@@ -5348,7 +5345,7 @@ Run this script from the command line. What happens when you run
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <p>When you run the <code>python -m oddsong</code> command, Python runs
 the <em>main module as a script</em>.</p>
@@ -5451,7 +5448,7 @@ happens in your terminal?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>When we run our script as before, it will run like normal with no
 change in behaviour.</p>
@@ -5520,7 +5517,7 @@ interface.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
 <div class="accordion-body">
 <p>The code now looks something like that shown below.</p>
 <div class="codewrapper sourceCode" id="cb25">
@@ -5598,7 +5595,7 @@ happen in your CLI?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
 <div class="accordion-body">
 <p>We can achieve this in our example script by adding a
 <code>help</code> string.</p>
@@ -5674,7 +5671,7 @@ our help screen?</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution5" aria-expanded="false" aria-controls="collapseSolution5">
   <h4 class="accordion-header" id="headingSolution5"> Show me the solution </h4>
 </button>
-<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
+<div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
 <div class="accordion-body">
 <p>We define the description when creating our argument parser
 object.</p>

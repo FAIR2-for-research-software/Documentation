@@ -349,7 +349,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Documentation examples</h1>
-        <p>Last updated on 2026-04-24 |
+        <p>Last updated on 2026-04-28 |
 
         <a href="https://github.com/FAIR2-for-research-software/Documentation/edit/main/episodes/examples.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -386,14 +386,14 @@
 </div>
 <section><h2 class="section-heading" id="code-examples">Code examples<a class="anchor" aria-label="anchor" href="#code-examples"></a></h2>
 <hr class="half-width"><p>In this episode we’ll review some examples of research software and
-evaluate how readable and reusable it is.</p>
-<p>Here is some code to perform a geometrical calculation. The first
-example could be improved in terms of its documentation and readability,
-while the second one is much clearer.</p>
+evaluate how readable and reusable it is. The examples are deliberately
+small and illustrative: the same documentation principles apply to any
+research code, whether you’re working with text and corpora, qualitative
+coding, survey data, clinical records, or quantitative measurements.</p>
 <div class="section level3">
 <h3 id="example-of-no-documentation">Example of no documentation<a class="anchor" aria-label="anchor" href="#example-of-no-documentation"></a></h3>
-<p>Here’s an example of some code that does… something. It’s not clear
-what this code is for or why it was written.</p>
+<p>Here is some code intended to process a piece of text. What does this
+code do? It’s not clear what the code is for or why it was written.</p>
 <div class="tabs">
 <nav><div id="nav-tab-1" class="nav nav-tabs" role="tablist">
 <button class="nav-link active" id="nav-tab-1-Python" name="Python" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-1-Python" type="button" role="tab" aria-controls="nav-tabpanel-1-Python" aria-selected="true">
@@ -408,25 +408,25 @@ what this code is for or why it was written.</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-1" class="tab-content">
-<div id="nav-tabpanel-1-Python" class="tab-pane show active" aria-labelledby="nav-tab-1-Python" role="tabpanel">
+<div id="nav-tabpanel-1-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-Python">
 <p>This is some research code that is contained in a Python
 function.</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" tabindex="-1" aria-label="code-block-1-1"></a><span class="kw">def</span> run(x):</span>
-<span id="cb1-2"><a href="#cb1-2" tabindex="-1" aria-label="code-block-1-2"></a>  weird_num <span class="op">=</span> <span class="fl">1.234</span></span>
-<span id="cb1-3"><a href="#cb1-3" tabindex="-1" aria-label="code-block-1-3"></a>  <span class="cf">return</span> x <span class="op">*</span> weird_num <span class="op">-</span> ang<span class="op">**</span><span class="dv">3</span> <span class="op">/</span> (weird_num <span class="op">*</span> <span class="dv">2</span>)</span></code></pre>
+<span id="cb1-2"><a href="#cb1-2" tabindex="-1" aria-label="code-block-1-2"></a>  weird_num <span class="op">=</span> <span class="fl">0.85</span></span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1" aria-label="code-block-1-3"></a>  <span class="cf">return</span> <span class="bu">len</span>(x.split(sep)) <span class="op">*</span> weird_num <span class="op">-</span> skipped</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-1-R" class="tab-pane" aria-labelledby="nav-tab-1-R" role="tabpanel">
+<div id="nav-tabpanel-1-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-R">
 <p>This is some research code that is contained in an R function.</p>
 <div class="codewrapper sourceCode" id="cb2">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="sourceCode r" tabindex="0"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" tabindex="-1" aria-label="code-block-2-1"></a>run <span class="ot">&lt;-</span> <span class="cf">function</span>(x) {</span>
-<span id="cb2-2"><a href="#cb2-2" tabindex="-1" aria-label="code-block-2-2"></a>  weird_num <span class="ot">=</span> <span class="fl">1.234</span></span>
-<span id="cb2-3"><a href="#cb2-3" tabindex="-1" aria-label="code-block-2-3"></a>  return x <span class="sc">*</span> weird_num <span class="sc">-</span> ang<span class="sc">**</span><span class="dv">3</span> <span class="sc">/</span> (weird_num <span class="sc">*</span> <span class="dv">2</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" tabindex="-1" aria-label="code-block-2-2"></a>  weird_num <span class="ot">=</span> <span class="fl">0.85</span></span>
+<span id="cb2-3"><a href="#cb2-3" tabindex="-1" aria-label="code-block-2-3"></a>  return <span class="fu">length</span>(<span class="fu">strsplit</span>(x, sep)[[<span class="dv">1</span>]]) <span class="sc">*</span> weird_num <span class="sc">-</span> skipped</span>
 <span id="cb2-4"><a href="#cb2-4" tabindex="-1" aria-label="code-block-2-4"></a>}</span></code></pre>
 </div>
 </div>
@@ -447,21 +447,22 @@ function.</p>
 </ul></div>
 </div>
 </div>
-<p>This is a function with a name that doesn’t explain what the code
-will do. There are no comments or notes to explain what the author
-intended to achieve. The variable names don’t clarify anything either:
-what does <code>x</code> mean in this context? Where would I go to find
-out more about <code>weird_num</code>? This is effectively a “magic”
-number that is arbitrarily stated but unexplained.</p>
-<p>The logic of the calculation is also… rather cryptic.</p>
-<p>Maybe the code works, maybe it doesn’t; but it could be made clearer
-and easier to maintain and modify in the future.</p>
+<p>The function name doesn’t explain what the code does, and there are
+no comments or notes to clarify the author’s intent. The variable names
+don’t help either: what does <code>x</code> represent? Where would we
+look to find out more about <code>weird_num</code>? It’s effectively a
+“magic” number, stated arbitrarily and left unexplained. The logic of
+the expression is equally cryptic.</p>
+<p>In fact a closer read shows the code can’t even run as written:
+<code>sep</code> and <code>skipped</code> are referenced but never
+defined. Without documentation, mistakes like that are easy to overlook
+until something breaks.</p>
 </div>
 <div class="section level3">
 <h3 id="well-documented-example">Well-documented example<a class="anchor" aria-label="anchor" href="#well-documented-example"></a></h3>
 <p>Now let’s look at an example of best practices in documenting
-research software. (These code snippets are part of the end-product of
-this course, so don’t worry if they don’t make sense yet!)</p>
+research software. (These snippets come from the end product of this
+course, so don’t worry if they don’t make sense yet.)</p>
 <div class="tabs">
 <nav><div id="nav-tab-2" class="nav nav-tabs" role="tablist">
 <button class="nav-link active" id="nav-tab-2-Python" name="Python" data-bs-toggle="tab" data-bs-target="#nav-tabpanel-2-Python" type="button" role="tab" aria-controls="nav-tabpanel-2-Python" aria-selected="true">
@@ -476,80 +477,72 @@ this course, so don’t worry if they don’t make sense yet!)</p>
 </button>
 </div>
 </nav><div id="nav-tabContent-2" class="tab-content">
-<div id="nav-tabpanel-2-Python" class="tab-pane show active" aria-labelledby="nav-tab-2-Python" role="tabpanel">
-<p>This is a function written in the Python programming language that
-calculates a mathematical result, the details of which aren’t relevant.
-This code has plenty of documentation to help us read and understand
-it.</p>
+<div id="nav-tabpanel-2-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-2-Python">
+<p>This is a Python function that processes a piece of text. The
+specifics of the calculation aren’t important here—what matters is that
+the code carries plenty of documentation to help us read and understand
+it. The same conventions apply whether the function counts words, codes
+interview responses, summarises survey data, or computes statistics.</p>
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" tabindex="-1" aria-label="code-block-3-1"></a><span class="im">import</span> math</span>
-<span id="cb3-2"><a href="#cb3-2" tabindex="-1" aria-label="code-block-3-2"></a></span>
-<span id="cb3-3"><a href="#cb3-3" tabindex="-1" aria-label="code-block-3-3"></a><span class="kw">def</span> calculate_sine(angle: <span class="bu">float</span>) <span class="op">-&gt;</span> <span class="bu">float</span>:</span>
-<span id="cb3-4"><a href="#cb3-4" tabindex="-1" aria-label="code-block-3-4"></a>  <span class="co">"""</span></span>
-<span id="cb3-5"><a href="#cb3-5" tabindex="-1" aria-label="code-block-3-5"></a><span class="co">  Calculates the sine of an angle using the first four terms</span></span>
-<span id="cb3-6"><a href="#cb3-6" tabindex="-1" aria-label="code-block-3-6"></a><span class="co">  of the Taylor series.</span></span>
-<span id="cb3-7"><a href="#cb3-7" tabindex="-1" aria-label="code-block-3-7"></a></span>
-<span id="cb3-8"><a href="#cb3-8" tabindex="-1" aria-label="code-block-3-8"></a><span class="co">  This function uses the first four terms of the Taylor</span></span>
-<span id="cb3-9"><a href="#cb3-9" tabindex="-1" aria-label="code-block-3-9"></a><span class="co">  series for sine to approximate the value. This is a</span></span>
-<span id="cb3-10"><a href="#cb3-10" tabindex="-1" aria-label="code-block-3-10"></a><span class="co">  simple and efficient method for most applications.</span></span>
-<span id="cb3-11"><a href="#cb3-11" tabindex="-1" aria-label="code-block-3-11"></a></span>
-<span id="cb3-12"><a href="#cb3-12" tabindex="-1" aria-label="code-block-3-12"></a><span class="co">  Args:</span></span>
-<span id="cb3-13"><a href="#cb3-13" tabindex="-1" aria-label="code-block-3-13"></a><span class="co">      angle (float): The angle in radians.</span></span>
-<span id="cb3-14"><a href="#cb3-14" tabindex="-1" aria-label="code-block-3-14"></a></span>
-<span id="cb3-15"><a href="#cb3-15" tabindex="-1" aria-label="code-block-3-15"></a><span class="co">  Returns:</span></span>
-<span id="cb3-16"><a href="#cb3-16" tabindex="-1" aria-label="code-block-3-16"></a><span class="co">      float: The sine of the angle (sin(angle)).</span></span>
-<span id="cb3-17"><a href="#cb3-17" tabindex="-1" aria-label="code-block-3-17"></a><span class="co">  """</span></span>
-<span id="cb3-18"><a href="#cb3-18" tabindex="-1" aria-label="code-block-3-18"></a>  sine_value <span class="op">=</span> angle</span>
-<span id="cb3-19"><a href="#cb3-19" tabindex="-1" aria-label="code-block-3-19"></a></span>
-<span id="cb3-20"><a href="#cb3-20" tabindex="-1" aria-label="code-block-3-20"></a>  <span class="co"># Iterate over the first four terms of the Taylor series for sine</span></span>
-<span id="cb3-21"><a href="#cb3-21" tabindex="-1" aria-label="code-block-3-21"></a>  <span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">1</span>, <span class="dv">5</span>):</span>
-<span id="cb3-22"><a href="#cb3-22" tabindex="-1" aria-label="code-block-3-22"></a>    factorial <span class="op">=</span> math.factorial(<span class="dv">2</span> <span class="op">*</span> i)</span>
-<span id="cb3-23"><a href="#cb3-23" tabindex="-1" aria-label="code-block-3-23"></a>    sign <span class="op">=</span> (<span class="op">-</span><span class="dv">1</span>) <span class="op">**</span> (i <span class="op">//</span> <span class="dv">2</span>)  <span class="co"># Alternate signs for sine terms</span></span>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" tabindex="-1" aria-label="code-block-3-1"></a><span class="kw">def</span> count_words(text: <span class="bu">str</span>) <span class="op">-&gt;</span> <span class="bu">int</span>:</span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1" aria-label="code-block-3-2"></a>    <span class="co">"""</span></span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1" aria-label="code-block-3-3"></a><span class="co">    Counts the number of words in a piece of text.</span></span>
+<span id="cb3-4"><a href="#cb3-4" tabindex="-1" aria-label="code-block-3-4"></a></span>
+<span id="cb3-5"><a href="#cb3-5" tabindex="-1" aria-label="code-block-3-5"></a><span class="co">    Words are taken to be sequences of characters separated by</span></span>
+<span id="cb3-6"><a href="#cb3-6" tabindex="-1" aria-label="code-block-3-6"></a><span class="co">    whitespace, which is a useful first approximation for tasks</span></span>
+<span id="cb3-7"><a href="#cb3-7" tabindex="-1" aria-label="code-block-3-7"></a><span class="co">    such as document summarisation, readability checks, or corpus</span></span>
+<span id="cb3-8"><a href="#cb3-8" tabindex="-1" aria-label="code-block-3-8"></a><span class="co">    analysis.</span></span>
+<span id="cb3-9"><a href="#cb3-9" tabindex="-1" aria-label="code-block-3-9"></a></span>
+<span id="cb3-10"><a href="#cb3-10" tabindex="-1" aria-label="code-block-3-10"></a><span class="co">    Args:</span></span>
+<span id="cb3-11"><a href="#cb3-11" tabindex="-1" aria-label="code-block-3-11"></a><span class="co">        text (str): The text to count words in.</span></span>
+<span id="cb3-12"><a href="#cb3-12" tabindex="-1" aria-label="code-block-3-12"></a></span>
+<span id="cb3-13"><a href="#cb3-13" tabindex="-1" aria-label="code-block-3-13"></a><span class="co">    Returns:</span></span>
+<span id="cb3-14"><a href="#cb3-14" tabindex="-1" aria-label="code-block-3-14"></a><span class="co">        int: The number of words in the text.</span></span>
+<span id="cb3-15"><a href="#cb3-15" tabindex="-1" aria-label="code-block-3-15"></a></span>
+<span id="cb3-16"><a href="#cb3-16" tabindex="-1" aria-label="code-block-3-16"></a><span class="co">    Examples:</span></span>
+<span id="cb3-17"><a href="#cb3-17" tabindex="-1" aria-label="code-block-3-17"></a><span class="co">        &gt;&gt;&gt; count_words("the quick brown fox")</span></span>
+<span id="cb3-18"><a href="#cb3-18" tabindex="-1" aria-label="code-block-3-18"></a><span class="co">        4</span></span>
+<span id="cb3-19"><a href="#cb3-19" tabindex="-1" aria-label="code-block-3-19"></a><span class="co">        &gt;&gt;&gt; count_words("hello   world")</span></span>
+<span id="cb3-20"><a href="#cb3-20" tabindex="-1" aria-label="code-block-3-20"></a><span class="co">        2</span></span>
+<span id="cb3-21"><a href="#cb3-21" tabindex="-1" aria-label="code-block-3-21"></a><span class="co">    """</span></span>
+<span id="cb3-22"><a href="#cb3-22" tabindex="-1" aria-label="code-block-3-22"></a>    <span class="co"># Split on any run of whitespace; empty tokens are discarded</span></span>
+<span id="cb3-23"><a href="#cb3-23" tabindex="-1" aria-label="code-block-3-23"></a>    words <span class="op">=</span> text.split()</span>
 <span id="cb3-24"><a href="#cb3-24" tabindex="-1" aria-label="code-block-3-24"></a></span>
-<span id="cb3-25"><a href="#cb3-25" tabindex="-1" aria-label="code-block-3-25"></a>    <span class="co"># Add terms for sine</span></span>
-<span id="cb3-26"><a href="#cb3-26" tabindex="-1" aria-label="code-block-3-26"></a>    sine_value <span class="op">+=</span> sign <span class="op">*</span> (angle <span class="op">**</span> (<span class="dv">2</span> <span class="op">*</span> i)) <span class="op">/</span> factorial</span>
-<span id="cb3-27"><a href="#cb3-27" tabindex="-1" aria-label="code-block-3-27"></a></span>
-<span id="cb3-28"><a href="#cb3-28" tabindex="-1" aria-label="code-block-3-28"></a>  <span class="cf">return</span> sine_value</span></code></pre>
+<span id="cb3-25"><a href="#cb3-25" tabindex="-1" aria-label="code-block-3-25"></a>    <span class="cf">return</span> <span class="bu">len</span>(words)</span></code></pre>
 </div>
 </div>
-<div id="nav-tabpanel-2-R" class="tab-pane" aria-labelledby="nav-tab-2-R" role="tabpanel">
-<p>This is a function written in the R programming language that
-calculates a mathematical result, the details of which aren’t relevant.
-This code has plenty of documentation to help us read and understand it.
-R uses the <a href="https://roxygen2.r-lib.org/index.html" class="external-link">roxygen2</a>
-package to format documentation strings into our project
-documentation.</p>
+<div id="nav-tabpanel-2-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-2-R">
+<p>Here is the same task written in R. Again, the specifics of the
+calculation are incidental; the point is the documentation that
+surrounds the code. R uses the <a href="https://roxygen2.r-lib.org/index.html" class="external-link">roxygen2</a> package to
+format documentation strings into our project documentation.</p>
 <div class="codewrapper sourceCode" id="cb4">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co">#' Calculate the sine of an angle</span></span>
+<code class="sourceCode R"><span><span class="co">#' Count the words in a piece of text</span></span>
 <span><span class="co">#'</span></span>
 <span><span class="co">#' @description</span></span>
+<span><span class="co">#' Counts the number of words in a piece of text. Words are taken</span></span>
+<span><span class="co">#' to be sequences of characters separated by whitespace, which is</span></span>
+<span><span class="co">#' a useful first approximation for tasks such as document</span></span>
+<span><span class="co">#' summarisation, readability checks, or corpus analysis.</span></span>
 <span><span class="co">#'</span></span>
-<span><span class="co">#' This function uses the first four terms of the Taylor</span></span>
-<span><span class="co">#' series for sine to approximate</span></span>
-<span><span class="co">#' the value. This is a simple and efficient method for</span></span>
-<span><span class="co">#' most applications.</span></span>
+<span><span class="co">#' @param text The text to count words in.</span></span>
 <span><span class="co">#'</span></span>
-<span><span class="co">#' @param angle The angle in radians.</span></span>
+<span><span class="co">#' @returns The number of words in the text.</span></span>
 <span><span class="co">#'</span></span>
-<span><span class="co">#' @returns The sine of the angle (sin(angle)).</span></span>
-<span><span class="va">calculate_sine</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">angle</span><span class="op">)</span> <span class="op">{</span></span>
-<span>  <span class="va">sine_value</span> <span class="op">&lt;-</span> <span class="va">angle</span></span>
+<span><span class="co">#' @examples</span></span>
+<span><span class="co">#' count_words("the quick brown fox")</span></span>
+<span><span class="co">#' count_words("hello   world")</span></span>
+<span><span class="va">count_words</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">text</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="co"># Split on any run of whitespace; empty tokens are discarded</span></span>
+<span>  <span class="va">words</span> <span class="op">&lt;-</span> <span class="fu">strsplit</span><span class="op">(</span><span class="va">text</span>, <span class="st">"\\s+"</span><span class="op">)</span><span class="op">[[</span><span class="fl">1</span><span class="op">]</span><span class="op">]</span></span>
+<span>  <span class="va">words</span> <span class="op">&lt;-</span> <span class="va">words</span><span class="op">[</span><span class="va">words</span> <span class="op">!=</span> <span class="st">""</span><span class="op">]</span></span>
 <span></span>
-<span>  <span class="co"># Loop for the first four terms</span></span>
-<span>  <span class="kw">for</span> <span class="op">(</span><span class="va">i</span> <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span><span class="fl">4</span><span class="op">)</span> <span class="op">{</span></span>
-<span>    <span class="va">factorial</span> <span class="op">&lt;-</span> <span class="fu">factorial</span><span class="op">(</span><span class="fl">2</span> <span class="op">*</span> <span class="va">i</span><span class="op">)</span></span>
-<span>    <span class="va">sign</span> <span class="op">&lt;-</span> <span class="op">(</span><span class="op">-</span><span class="fl">1</span><span class="op">)</span><span class="op">^</span><span class="op">(</span><span class="va">i</span> <span class="op">%%</span> <span class="fl">2</span><span class="op">)</span>  <span class="co"># Alternate signs with modulo (%)</span></span>
-<span></span>
-<span>    <span class="co"># Add terms for sine</span></span>
-<span>    <span class="va">sine_value</span> <span class="op">&lt;-</span> <span class="va">sine_value</span> <span class="op">+</span> <span class="va">sign</span> <span class="op">*</span> <span class="op">(</span><span class="va">angle</span><span class="op">^</span><span class="op">(</span><span class="fl">2</span> <span class="op">*</span> <span class="va">i</span><span class="op">)</span><span class="op">)</span> <span class="op">/</span> <span class="va">factorial</span></span>
-<span>  <span class="op">}</span></span>
-<span></span>
-<span>  <span class="kw">return</span><span class="op">(</span><span class="va">sine_value</span><span class="op">)</span></span>
+<span>  <span class="kw">return</span><span class="op">(</span><span class="fu">length</span><span class="op">(</span><span class="va">words</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="op">}</span></span></code></pre>
 </div>
 </div>
@@ -570,33 +563,35 @@ documentation.</p>
 </div>
 </div>
 <p>This time, the function name is a verb that describes what the code
-will attempt to do. The description of the function is also written out
-clearly in a note for the user. There are comment lines (starting with
-<code>#</code>) that explain the mathematical method used. Each variable
-has a descriptive, human-readable name, making the code more intuitive
-to read. An existing library is used to calculate the factorial, which
-means we can look up the usage for the <code>factorial()</code> function
-elsewhere.</p>
-<p>This approach means that our code is much <strong>easier to
-interpret</strong>, maintain, and make changes to in the future.</p>
-<p>Of course, there may be some syntax in this example that is
-unfamiliar to you—but don’t worry, we’ll learn the basics in this
-course!</p>
+does. A clear description spells out the purpose for the reader, and
+comment lines (starting with <code>#</code>) explain how the calculation
+works. Each variable has a descriptive, human-readable name, and
+built-in language features handle the splitting of the text, so a reader
+can look up <code>split()</code> or <code>strsplit()</code> elsewhere
+rather than puzzling over a bespoke implementation.</p>
+<p>The result is code that is much <strong>easier to interpret</strong>,
+maintain, and modify in the future.</p>
+<p>Some of the syntax in this example may be unfamiliar—that’s fine.
+We’ll cover the basics as the course progresses.</p>
 </div>
 </section><section><h2 class="section-heading" id="real-world-examples">Real-world examples<a class="anchor" aria-label="anchor" href="#real-world-examples"></a></h2>
 <hr class="half-width"><p>Let’s review real-world examples of the documentation for software
-packages that are used in research.</p>
+packages that are used in research. The two examples below come from the
+quantitative-sciences mainstream, but the same documentation patterns
+turn up in tools used right across the disciplines—for example
+text-analysis libraries such as <a href="https://spacy.io/" class="external-link">spaCy</a> or
+<a href="https://quanteda.io/" class="external-link">quanteda</a>, and many qualitative-data
+and digital-humanities packages.</p>
 <div class="section level3">
 <h3 id="numpy-user-guide">NumPy user guide<a class="anchor" aria-label="anchor" href="#numpy-user-guide"></a></h3>
-<p>NumPy is a mathematical package for the Python programming language
-that’s used for quantitative computing and linear algebra. The <a href="https://numpy.org/doc/2.0/user/index.html#user" class="external-link">NumPy User
-Guide</a> is a <strong>thorough website</strong> that organised into
-sections that cover the different aspects of using that package.</p>
-<p>It includes a beginner’s guide, tutorials for different use-cases,
-and in-depth write-ups of technical details of certain aspects of the
-code. Some of the content is written for a target audience with no
-assumed knowledge, while other parts are written as a reference for
-people with some background in mathematics and computer programming.</p>
+<p>NumPy is a mathematical package for Python, widely used for
+quantitative computing and linear algebra. The <a href="https://numpy.org/doc/2.0/user/index.html#user" class="external-link">NumPy User
+Guide</a> is a <strong>thorough website</strong>, organised into
+sections that cover different aspects of the package.</p>
+<p>It includes a beginner’s guide, tutorials for common use cases, and
+in-depth write-ups of specific technical details. Some content assumes
+no prior knowledge; other parts serve as a reference for readers with a
+background in mathematics or programming.</p>
 <p>If we want to read more about how to use a certain feature, there are
 documentation pages such as <a href="https://numpy.org/doc/stable/reference/generated/numpy.array.html" class="external-link">numpy.array</a>
 that describe purpose and the parameters of each function. If we’re in a
@@ -632,14 +627,14 @@ in-built function</a> to view the documentation:</p>
 <div class="section level3">
 <h3 id="ggplot2-documentation-site">ggplot2 documentation site<a class="anchor" aria-label="anchor" href="#ggplot2-documentation-site"></a></h3>
 <p><a href="https://cloud.r-project.org/web/packages/ggplot2/" class="external-link">ggplot2</a> is
-a package for the R statistical language that generates data
+a package for the R statistical language that produces data
 visualisations and graphics. The <a href="https://ggplot2.tidyverse.org/index.html" class="external-link">ggplot2
-documentation</a> has a simple, accessible layout and <strong>walks a
-new user through</strong> installing and getting up-and-running with the
-tool. The page provides a “cheat sheet” which is a reference guide that
-lists commonly-used commands in an attractive two-page layout. The
-documentation site is moderate in scope and links to several external
-resources, such as online courses hosted elsewhere.</p>
+documentation</a> has a simple, accessible layout that <strong>walks a
+new user through</strong> installing the package and getting up and
+running. It also provides a “cheat sheet”: a reference guide that lists
+commonly used commands in an attractive two-page layout. The
+documentation is moderate in scope and links out to further resources,
+such as online courses hosted elsewhere.</p>
 <p>In R, we can view the documentation for each function by using the
 <code>?</code> syntax. For example, calling
 <code>?ggplot2::ggplot</code> will show the help text for that function
@@ -655,13 +650,14 @@ it.</p>
 <pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">install.packages</span><span class="op">(</span><span class="st">"ggplot2"</span><span class="op">)</span></span>
 <span><span class="kw">library</span><span class="op">(</span><span class="va">ggplot2</span><span class="op">)</span></span>
-<span><span class="op">?</span><span class="va">ggplot2</span><span class="op">:</span><span class="va">ggplot</span></span></code></pre>
+<span><span class="op">?</span><span class="fu">ggplot2</span><span class="fu">::</span><span class="va">ggplot</span></span></code></pre>
 </div>
-<!--
+<figure><img src=".././fig/r-ggplot-help.png" alt="A screenshot of the user guide for the ggplot2 ggplot function in RStudio." class="figure mx-auto d-block"><div class="figcaption">The RStudio Help panel for the ggplot
+function.</div>
+</figure><!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
- -->
-</div>
+ --></div>
 </section></div> <!-- / div.lesson-content -->
     </main><!-- / main#main-content.main-content --><nav class="bottom-pagination mx-md-4" aria-label="Previous and Next Chapter"><div class="d-block d-sm-block d-md-none">
         <a class="chapter-link" href="../instructor/introduction.html"><i aria-hidden="true" class="small-arrow" data-feather="arrow-left"></i>Previous</a>
@@ -727,7 +723,7 @@ any links that you are not going to use.
   "url": "https://FAIR2-for-research-software.github.io/Documentation/instructor/examples.html",
   "identifier": "https://FAIR2-for-research-software.github.io/Documentation/instructor/examples.html",
   "dateCreated": "2024-05-20",
-  "dateModified": "2026-04-24",
+  "dateModified": "2026-04-28",
   "datePublished": "2026-04-28"
 }
 
