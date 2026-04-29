@@ -396,22 +396,105 @@
     <main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Instructor Notes</h1>
         
+
+<p>The presentation of this course should be adapted to the target
+audience. Beginner researchers may not need advanced topics such as
+automatically generating and deploying documentation websites; those
+episodes can be skipped, but the material is included here if
+required.</p>
 <section><h2 class="section-heading" id="slides">Slides<a class="anchor" aria-label="anchor" href="#slides"></a>
 </h2>
 <hr class="half-width">
 <p>The slides for this lesson are available on <a href="https://docs.google.com/presentation/d/1XFIGfwBwOAxAW1strp3riXYyqFfw7AoQhg1LLKKvT8k/edit?usp=sharing" class="external-link">Google
 Slides</a>.</p>
-<p>The presentation course of this course should be modified depending
-on the target audience.</p>
-<p>Many beginner coders in the research world will not need to know
-advanced skills such as how to automatically generate and deploy
-documentation websites, but some introductory material on this topic is
-here if required. In most cases, <strong>only present episodes one to
-four</strong> during the workshop.</p>
+</section><section><h2 class="section-heading" id="system-setup">System Setup<a class="anchor" aria-label="anchor" href="#system-setup"></a>
+</h2>
+<hr class="half-width">
+<p>Run through the following pre-flight checks with learners at the
+start of the session. The learner-facing <a href="index.html#setup">Setup
+page</a> has full installation instructions.</p>
+<div class="section level3">
+<h3 id="github">GitHub<a class="anchor" aria-label="anchor" href="#github"></a>
+</h3>
+<p>Ensure all learners are logged into <a href="https://github.com" class="external-link">GitHub</a>. This is needed to access the <a href="https://github.com/Joe-Heffer-Shef/oddsong" class="external-link">example repository</a>
+and to raise questions or issues during the workshop. Learners without
+an account can <a href="https://github.com/signup" class="external-link">sign up for
+free</a>.</p>
+</div>
+<div class="section level3">
+<h3 id="visual-studio-code">Visual Studio Code<a class="anchor" aria-label="anchor" href="#visual-studio-code"></a>
+</h3>
+<p>Verify that <a href="https://code.visualstudio.com/" class="external-link">Visual Studio
+Code</a> opens and that the appropriate language extension is installed
+and active:</p>
+<ul>
+<li>
+<strong>Python</strong>: the <a href="https://marketplace.visualstudio.com/items?itemName=ms-python.python" class="external-link">Python
+extension</a> by Microsoft.</li>
+<li>
+<strong>R</strong>: the <a href="https://marketplace.visualstudio.com/items?itemName=REditorSupport.r" class="external-link">R
+extension</a> by REditorSupport.</li>
+</ul>
+<p>Show learners how to open a project folder via <strong>File → Open
+Folder</strong>.</p>
+</div>
+<div class="section level3">
+<h3 id="virtual-environment-python">Virtual Environment (Python)<a class="anchor" aria-label="anchor" href="#virtual-environment-python"></a>
+</h3>
+<p>For Python learners, verify they can create and activate a virtual
+environment before installing any packages.</p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1" aria-label="code-block-1-1"></a><span class="ex">python</span> <span class="at">-m</span> venv .venv</span></code></pre>
+</div>
+<p>Activation command by platform:</p>
+<table class="table">
+<thead><tr>
+<th>Platform</th>
+<th>Command</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>macOS / Linux</td>
+<td><code>source .venv/bin/activate</code></td>
+</tr>
+<tr>
+<td>Windows (Command Prompt)</td>
+<td><code>.venv\Scripts\activate.bat</code></td>
+</tr>
+<tr>
+<td>Windows (PowerShell)</td>
+<td><code>.venv\Scripts\Activate.ps1</code></td>
+</tr>
+</tbody>
+</table>
+<p>The shell prompt should show <code>(.venv)</code> once the
+environment is active.</p>
+<p><strong>Note:</strong> Python must be available (any distribution,
+including Anaconda) for learners who will use <code>mkdocs</code> to
+build documentation websites. Confirm this early — learners without
+Python cannot complete that episode.</p>
+</div>
+<div class="section level3">
+<h3 id="package-installation-r">Package Installation (R)<a class="anchor" aria-label="anchor" href="#package-installation-r"></a>
+</h3>
+<p>R learners do not need a virtual environment. Confirm that R and the
+R extension for VS Code are working, then check that learners can
+install packages with <code>install.packages()</code>.</p>
+<p>If the workshop uses <code>renv</code> for reproducible environments,
+verify that learners can run:</p>
+<div class="codewrapper sourceCode" id="cb2">
+<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="downlit sourceCode r">
+<code class="sourceCode R"><span><span class="fu">renv</span><span class="fu">::</span><span class="fu">restore</span><span class="op">(</span><span class="op">)</span></span></code></pre>
+</div>
 <!--
 Place links that you need to refer to multiple times across pages here. Delete
 any links that you are not going to use.
  -->
+</div>
 </section><section id="aggregate-instructor-notes"></section>
 </div>
     </main>
@@ -467,8 +550,8 @@ any links that you are not going to use.
   "url": "https://FAIR2-for-research-software.github.io/Documentation/instructor-notes.html",
   "identifier": "https://FAIR2-for-research-software.github.io/Documentation/instructor-notes.html",
   "dateCreated": "2024-05-20",
-  "dateModified": "2026-04-28",
-  "datePublished": "2026-04-28"
+  "dateModified": "2026-04-29",
+  "datePublished": "2026-04-29"
 }
 
   </script><script>
