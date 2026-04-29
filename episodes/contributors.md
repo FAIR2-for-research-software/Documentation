@@ -143,12 +143,30 @@ For many working in a research context, there are additional considerations to e
 ethics, and data protection regulations are carefully observed. These protocols are outside the scope of this document,
 but these factors should be clearly communicated to all contributors.
 
+When you place a `CODE_OF_CONDUCT.md` file in the root of your repository, GitHub will recognise it as a [community
+health file](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/creating-a-default-community-health-file)
+and render it as a dedicated tab on the repository's home page, making it easy for contributors to find.
+
 :::: callout
 
 ### Contributor Covenant
 
 Many open-source research software projects adopt the [Contributor Covenant](https://www.contributor-covenant.org/),
 which is a template charter that may be customised to suit the needs of your collaborators.
+
+::::
+
+:::: challenge
+
+Create a new file called `CODE_OF_CONDUCT.md` in the root of your project and draft a short code of conduct for your
+contributors.
+
+- What behaviours do you want to encourage in your community?
+- What behaviours are unacceptable?
+- How should people report concerns, and who is responsible for responding?
+
+You may wish to start from the [Contributor Covenant](https://www.contributor-covenant.org/) template and adapt it to
+suit your project.
 
 ::::
 

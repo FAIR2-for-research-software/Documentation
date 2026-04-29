@@ -138,7 +138,7 @@ I'd rather work in.
 ### Code editors
 
 To work with our source code in a colourised way like this, use a text editor or <abbr title="Integrated development
-environment">IDE</abbr> with a syntax highlighting feature such as Notepad++, VSCode, PyCharm, or RStudio.
+environment">IDE</abbr> with a syntax highlighting feature such as VSCode, PyCharm, or RStudio.
 
 ::::::::::::::::::::::::::::::::::::: challenge
 

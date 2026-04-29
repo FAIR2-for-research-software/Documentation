@@ -449,8 +449,7 @@ These subheadings help the users to navigate the document.
 
 There are several ways to view the formatted Markdown document, where the syntax is rendered into a rich text document.
 
-- Many code editors have an in-built Markdown viewer;
-  - For Notepad++, the Markdown Panel [plugin may be installed](https://npp-user-manual.org/docs/plugins/).
+- Many code editors have an in-built Markdown viewer.
 - [Markdown Live Preview](https://markdownlivepreview.com/) is a web-based tool. Input your Markdown syntax in the left
   panel and the result will be displayed on the right-hand side.
 - In [Google Colab](https://colab.research.google.com/), the Text cells use Markdown syntax for formatting.
