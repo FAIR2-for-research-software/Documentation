@@ -353,7 +353,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Documentation strings</h1>
-        <p>Last updated on 2025-11-06 |
+        <p>Last updated on 2026-04-29 |
 
         <a href="https://github.com/FAIR2-for-research-software/Documentation/edit/main/episodes/docstrings.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -410,6 +410,11 @@ into smaller units that have a single purpose.</p>
 their purpose</strong> to future users and maintainers of that code. We
 also need to describe all the expected inputs and outputs of the
 functions.</p>
+<p>Throughout this episode we’ll build up a small piece of fictional
+research software called <strong>OddSong</strong>, a birdsong identifier
+that classifies bird species from audio recordings. The code lives in a
+file called <code>oddsong.py</code> (or <code>R/identify.R</code> for
+the R version) which we will reuse in the next episode on <a href="sites.html">documentation sites</a>.</p>
 </div>
 </section><section><h2 class="section-heading" id="documentation-strings">Documentation strings<a class="anchor" aria-label="anchor" href="#documentation-strings"></a></h2>
 <hr class="half-width"><p>We describe functions by using a feature of many programming
@@ -436,16 +441,16 @@ principle is the same.</p>
 </nav><div id="nav-tabContent-1" class="tab-content">
 <div id="nav-tabpanel-1-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-1-Python">
 <p>In Python, we put a string as the first line of a function (or other
-object.) For example, for a simple Python function that calculates the
-sum of two numbers:</p>
+object.) For example, for a simple Python function that counts the total
+bird calls heard across two recording sessions:</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" tabindex="-1" aria-label="code-block-1-1"></a><span class="kw">def</span> add(x, y):</span>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" tabindex="-1" aria-label="code-block-1-1"></a><span class="kw">def</span> count_calls(morning, evening):</span>
 <span id="cb1-2"><a href="#cb1-2" tabindex="-1" aria-label="code-block-1-2"></a>    <span class="co">"""</span></span>
-<span id="cb1-3"><a href="#cb1-3" tabindex="-1" aria-label="code-block-1-3"></a><span class="co">    Calculate the sum of two numbers.</span></span>
+<span id="cb1-3"><a href="#cb1-3" tabindex="-1" aria-label="code-block-1-3"></a><span class="co">    Count the total bird calls from two recording sessions.</span></span>
 <span id="cb1-4"><a href="#cb1-4" tabindex="-1" aria-label="code-block-1-4"></a><span class="co">    """</span></span>
-<span id="cb1-5"><a href="#cb1-5" tabindex="-1" aria-label="code-block-1-5"></a>    <span class="cf">return</span> x <span class="op">+</span> y</span></code></pre>
+<span id="cb1-5"><a href="#cb1-5" tabindex="-1" aria-label="code-block-1-5"></a>    <span class="cf">return</span> morning <span class="op">+</span> evening</span></code></pre>
 </div>
 </div>
 <div id="nav-tabpanel-1-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-1-R">
@@ -456,9 +461,9 @@ documentation string for a function.</p>
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co">#' Calculate the sum of two numbers.</span></span>
-<span><span class="va">add</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span><span class="op">)</span> <span class="op">{</span></span>
-<span>  <span class="kw">return</span><span class="op">(</span><span class="va">x</span> <span class="op">+</span> <span class="va">y</span><span class="op">)</span></span>
+<code class="sourceCode R"><span><span class="co">#' Count the total bird calls from two recording sessions.</span></span>
+<span><span class="va">count_calls</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">morning</span>, <span class="va">evening</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="kw">return</span><span class="op">(</span><span class="va">morning</span> <span class="op">+</span> <span class="va">evening</span><span class="op">)</span></span>
 <span><span class="op">}</span></span></code></pre>
 </div>
 </div>
@@ -488,7 +493,7 @@ provide the name of that species.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1"> Show me the solution </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="tabs">
 <nav><div id="nav-tab-2" class="nav nav-tabs" role="tablist">
@@ -659,7 +664,7 @@ for a function.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2"> Show me the solution </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>Let’s view the help text for an in-built <a href="https://docs.python.org/3/library/functions.html#abs" class="external-link">function
 <code>abs()</code></a> that finds the absolute value of a number.</p>
@@ -786,34 +791,36 @@ argument has a name and a brief description.</p>
 </nav><div id="nav-tabContent-5" class="tab-content">
 <div id="nav-tabpanel-5-Python" class="tab-pane show active" role="tabpanel" aria-labelledby="nav-tab-5-Python">
 <p>The argument name matches the variable name in the function
-signature, such as <code>add(x, y)</code> in this case.</p>
+signature, such as <code>count_calls(morning, evening)</code> in this
+case.</p>
 <div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" tabindex="-1" aria-label="code-block-13-1"></a><span class="kw">def</span> add(x, y):</span>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb13-1"><a href="#cb13-1" tabindex="-1" aria-label="code-block-13-1"></a><span class="kw">def</span> count_calls(morning, evening):</span>
 <span id="cb13-2"><a href="#cb13-2" tabindex="-1" aria-label="code-block-13-2"></a>    <span class="co">"""</span></span>
-<span id="cb13-3"><a href="#cb13-3" tabindex="-1" aria-label="code-block-13-3"></a><span class="co">    Calculate the sum of two numbers.</span></span>
+<span id="cb13-3"><a href="#cb13-3" tabindex="-1" aria-label="code-block-13-3"></a><span class="co">    Count the total bird calls from two recording sessions.</span></span>
 <span id="cb13-4"><a href="#cb13-4" tabindex="-1" aria-label="code-block-13-4"></a></span>
 <span id="cb13-5"><a href="#cb13-5" tabindex="-1" aria-label="code-block-13-5"></a><span class="co">    Args:</span></span>
-<span id="cb13-6"><a href="#cb13-6" tabindex="-1" aria-label="code-block-13-6"></a><span class="co">        x: The first number to add.</span></span>
-<span id="cb13-7"><a href="#cb13-7" tabindex="-1" aria-label="code-block-13-7"></a><span class="co">        y: The second number to add.</span></span>
+<span id="cb13-6"><a href="#cb13-6" tabindex="-1" aria-label="code-block-13-6"></a><span class="co">        morning: The number of calls counted in the morning session.</span></span>
+<span id="cb13-7"><a href="#cb13-7" tabindex="-1" aria-label="code-block-13-7"></a><span class="co">        evening: The number of calls counted in the evening session.</span></span>
 <span id="cb13-8"><a href="#cb13-8" tabindex="-1" aria-label="code-block-13-8"></a><span class="co">    """</span></span>
-<span id="cb13-9"><a href="#cb13-9" tabindex="-1" aria-label="code-block-13-9"></a>    <span class="cf">return</span> x <span class="op">+</span> y</span></code></pre>
+<span id="cb13-9"><a href="#cb13-9" tabindex="-1" aria-label="code-block-13-9"></a>    <span class="cf">return</span> morning <span class="op">+</span> evening</span></code></pre>
 </div>
 </div>
 <div id="nav-tabpanel-5-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-5-R">
 <p>The argument name matches the variable name in the function
-signature, such as <code>function(x, y)</code> in this case.</p>
+signature, such as <code>function(morning, evening)</code> in this
+case.</p>
 <div class="codewrapper sourceCode" id="cb14">
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co">#' Calculate the sum of two numbers.</span></span>
+<code class="sourceCode R"><span><span class="co">#' Count the total bird calls from two recording sessions.</span></span>
 <span><span class="co">#'</span></span>
-<span><span class="co">#' @param x The first number to add.</span></span>
-<span><span class="co">#' @param y The second number to add.</span></span>
-<span><span class="va">add</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span><span class="op">)</span> <span class="op">{</span></span>
-<span>  <span class="kw">return</span><span class="op">(</span><span class="va">x</span> <span class="op">+</span> <span class="va">y</span><span class="op">)</span></span>
+<span><span class="co">#' @param morning The number of calls counted in the morning session.</span></span>
+<span><span class="co">#' @param evening The number of calls counted in the evening session.</span></span>
+<span><span class="va">count_calls</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">morning</span>, <span class="va">evening</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="kw">return</span><span class="op">(</span><span class="va">morning</span> <span class="op">+</span> <span class="va">evening</span><span class="op">)</span></span>
 <span><span class="op">}</span></span></code></pre>
 </div>
 </div>
@@ -840,7 +847,7 @@ each one.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution3" aria-expanded="false" aria-controls="collapseSolution3">
   <h4 class="accordion-header" id="headingSolution3"> Show me the solution </h4>
 </button>
-<div id="collapseSolution3" class="accordion-collapse collapse" data-bs-parent="#accordionSolution3" aria-labelledby="headingSolution3">
+<div id="collapseSolution3" class="accordion-collapse collapse" aria-labelledby="headingSolution3" data-bs-parent="#accordionSolution3">
 <div class="accordion-body">
 <div class="tabs">
 <nav><div id="nav-tab-6" class="nav nav-tabs" role="tablist">
@@ -917,18 +924,18 @@ function code block.</p>
 <div class="codewrapper sourceCode" id="cb17">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" tabindex="-1" aria-label="code-block-17-1"></a><span class="kw">def</span> add(x, y):</span>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb17-1"><a href="#cb17-1" tabindex="-1" aria-label="code-block-17-1"></a><span class="kw">def</span> count_calls(morning, evening):</span>
 <span id="cb17-2"><a href="#cb17-2" tabindex="-1" aria-label="code-block-17-2"></a>    <span class="co">"""</span></span>
-<span id="cb17-3"><a href="#cb17-3" tabindex="-1" aria-label="code-block-17-3"></a><span class="co">    Calculate the sum of two numbers.</span></span>
+<span id="cb17-3"><a href="#cb17-3" tabindex="-1" aria-label="code-block-17-3"></a><span class="co">    Count the total bird calls from two recording sessions.</span></span>
 <span id="cb17-4"><a href="#cb17-4" tabindex="-1" aria-label="code-block-17-4"></a></span>
 <span id="cb17-5"><a href="#cb17-5" tabindex="-1" aria-label="code-block-17-5"></a><span class="co">    Args:</span></span>
-<span id="cb17-6"><a href="#cb17-6" tabindex="-1" aria-label="code-block-17-6"></a><span class="co">        x: The first number to add.</span></span>
-<span id="cb17-7"><a href="#cb17-7" tabindex="-1" aria-label="code-block-17-7"></a><span class="co">        y: The second number to add.</span></span>
+<span id="cb17-6"><a href="#cb17-6" tabindex="-1" aria-label="code-block-17-6"></a><span class="co">        morning: The number of calls counted in the morning session.</span></span>
+<span id="cb17-7"><a href="#cb17-7" tabindex="-1" aria-label="code-block-17-7"></a><span class="co">        evening: The number of calls counted in the evening session.</span></span>
 <span id="cb17-8"><a href="#cb17-8" tabindex="-1" aria-label="code-block-17-8"></a></span>
 <span id="cb17-9"><a href="#cb17-9" tabindex="-1" aria-label="code-block-17-9"></a><span class="co">    Returns:</span></span>
-<span id="cb17-10"><a href="#cb17-10" tabindex="-1" aria-label="code-block-17-10"></a><span class="co">        The sum of x and y.</span></span>
+<span id="cb17-10"><a href="#cb17-10" tabindex="-1" aria-label="code-block-17-10"></a><span class="co">        The total number of bird calls across both sessions.</span></span>
 <span id="cb17-11"><a href="#cb17-11" tabindex="-1" aria-label="code-block-17-11"></a><span class="co">    """</span></span>
-<span id="cb17-12"><a href="#cb17-12" tabindex="-1" aria-label="code-block-17-12"></a>    <span class="cf">return</span> x <span class="op">+</span> y</span></code></pre>
+<span id="cb17-12"><a href="#cb17-12" tabindex="-1" aria-label="code-block-17-12"></a>    <span class="cf">return</span> morning <span class="op">+</span> evening</span></code></pre>
 </div>
 </div>
 <div id="nav-tabpanel-7-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-7-R">
@@ -939,13 +946,13 @@ function output.</p>
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co">#' Calculate the sum of two numbers.</span></span>
+<code class="sourceCode R"><span><span class="co">#' Count the total bird calls from two recording sessions.</span></span>
 <span><span class="co">#'</span></span>
-<span><span class="co">#' @param x The first number to add.</span></span>
-<span><span class="co">#' @param y The second number to add.</span></span>
-<span><span class="co">#' @return The sum of x and y.</span></span>
-<span><span class="va">add</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span><span class="op">)</span> <span class="op">{</span></span>
-<span>  <span class="kw">return</span><span class="op">(</span><span class="va">x</span> <span class="op">+</span> <span class="va">y</span><span class="op">)</span></span>
+<span><span class="co">#' @param morning The number of calls counted in the morning session.</span></span>
+<span><span class="co">#' @param evening The number of calls counted in the evening session.</span></span>
+<span><span class="co">#' @return The total number of bird calls across both sessions.</span></span>
+<span><span class="va">count_calls</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">morning</span>, <span class="va">evening</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="kw">return</span><span class="op">(</span><span class="va">morning</span> <span class="op">+</span> <span class="va">evening</span><span class="op">)</span></span>
 <span><span class="op">}</span></span></code></pre>
 </div>
 </div>
@@ -975,7 +982,7 @@ string.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution4" aria-expanded="false" aria-controls="collapseSolution4">
   <h4 class="accordion-header" id="headingSolution4"> Show me the solution </h4>
 </button>
-<div id="collapseSolution4" class="accordion-collapse collapse" data-bs-parent="#accordionSolution4" aria-labelledby="headingSolution4">
+<div id="collapseSolution4" class="accordion-collapse collapse" aria-labelledby="headingSolution4" data-bs-parent="#accordionSolution4">
 <div class="accordion-body">
 <div class="tabs">
 <nav><div id="nav-tab-8" class="nav nav-tabs" role="tablist">
@@ -1062,24 +1069,24 @@ will provide syntax highlighting of these code snippets.</p>
 <div class="codewrapper sourceCode" id="cb21">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" tabindex="-1" aria-label="code-block-21-1"></a><span class="kw">def</span> add(x, y):</span>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb21-1"><a href="#cb21-1" tabindex="-1" aria-label="code-block-21-1"></a><span class="kw">def</span> count_calls(morning, evening):</span>
 <span id="cb21-2"><a href="#cb21-2" tabindex="-1" aria-label="code-block-21-2"></a>    <span class="co">"""</span></span>
-<span id="cb21-3"><a href="#cb21-3" tabindex="-1" aria-label="code-block-21-3"></a><span class="co">    Calculate the sum of two numbers.</span></span>
+<span id="cb21-3"><a href="#cb21-3" tabindex="-1" aria-label="code-block-21-3"></a><span class="co">    Count the total bird calls from two recording sessions.</span></span>
 <span id="cb21-4"><a href="#cb21-4" tabindex="-1" aria-label="code-block-21-4"></a></span>
 <span id="cb21-5"><a href="#cb21-5" tabindex="-1" aria-label="code-block-21-5"></a><span class="co">    Args:</span></span>
-<span id="cb21-6"><a href="#cb21-6" tabindex="-1" aria-label="code-block-21-6"></a><span class="co">        x: The first number to add.</span></span>
-<span id="cb21-7"><a href="#cb21-7" tabindex="-1" aria-label="code-block-21-7"></a><span class="co">        y: The second number to add.</span></span>
+<span id="cb21-6"><a href="#cb21-6" tabindex="-1" aria-label="code-block-21-6"></a><span class="co">        morning: The number of calls counted in the morning session.</span></span>
+<span id="cb21-7"><a href="#cb21-7" tabindex="-1" aria-label="code-block-21-7"></a><span class="co">        evening: The number of calls counted in the evening session.</span></span>
 <span id="cb21-8"><a href="#cb21-8" tabindex="-1" aria-label="code-block-21-8"></a></span>
 <span id="cb21-9"><a href="#cb21-9" tabindex="-1" aria-label="code-block-21-9"></a><span class="co">    Returns:</span></span>
-<span id="cb21-10"><a href="#cb21-10" tabindex="-1" aria-label="code-block-21-10"></a><span class="co">        The sum of x and y.</span></span>
+<span id="cb21-10"><a href="#cb21-10" tabindex="-1" aria-label="code-block-21-10"></a><span class="co">        The total number of bird calls across both sessions.</span></span>
 <span id="cb21-11"><a href="#cb21-11" tabindex="-1" aria-label="code-block-21-11"></a></span>
 <span id="cb21-12"><a href="#cb21-12" tabindex="-1" aria-label="code-block-21-12"></a><span class="co">    Examples:</span></span>
-<span id="cb21-13"><a href="#cb21-13" tabindex="-1" aria-label="code-block-21-13"></a><span class="co">    &gt;&gt;&gt; add(1, 1)</span></span>
-<span id="cb21-14"><a href="#cb21-14" tabindex="-1" aria-label="code-block-21-14"></a><span class="co">    2</span></span>
-<span id="cb21-15"><a href="#cb21-15" tabindex="-1" aria-label="code-block-21-15"></a><span class="co">    &gt;&gt;&gt; add(1.3, 5.3)</span></span>
-<span id="cb21-16"><a href="#cb21-16" tabindex="-1" aria-label="code-block-21-16"></a><span class="co">    6.6</span></span>
+<span id="cb21-13"><a href="#cb21-13" tabindex="-1" aria-label="code-block-21-13"></a><span class="co">    &gt;&gt;&gt; count_calls(3, 5)</span></span>
+<span id="cb21-14"><a href="#cb21-14" tabindex="-1" aria-label="code-block-21-14"></a><span class="co">    8</span></span>
+<span id="cb21-15"><a href="#cb21-15" tabindex="-1" aria-label="code-block-21-15"></a><span class="co">    &gt;&gt;&gt; count_calls(12, 7)</span></span>
+<span id="cb21-16"><a href="#cb21-16" tabindex="-1" aria-label="code-block-21-16"></a><span class="co">    19</span></span>
 <span id="cb21-17"><a href="#cb21-17" tabindex="-1" aria-label="code-block-21-17"></a><span class="co">    """</span></span>
-<span id="cb21-18"><a href="#cb21-18" tabindex="-1" aria-label="code-block-21-18"></a>    <span class="cf">return</span> x <span class="op">+</span> y</span></code></pre>
+<span id="cb21-18"><a href="#cb21-18" tabindex="-1" aria-label="code-block-21-18"></a>    <span class="cf">return</span> morning <span class="op">+</span> evening</span></code></pre>
 </div>
 <p>For more information about including code examples and test cases in
 docstrings, please read about the <a href="https://docs.python.org/3/library/doctest.html" class="external-link">doctest</a> module
@@ -1092,17 +1099,17 @@ in the Python documentation.</p>
 <h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
 <pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="co">#' Add two numbers.</span></span>
+<code class="sourceCode R"><span><span class="co">#' Count the total bird calls from two recording sessions.</span></span>
 <span><span class="co">#'</span></span>
-<span><span class="co">#' @param x The first number to add.</span></span>
-<span><span class="co">#' @param y The second number to add.</span></span>
-<span><span class="co">#' @return The sum of `x` and `y`.</span></span>
+<span><span class="co">#' @param morning The number of calls counted in the morning session.</span></span>
+<span><span class="co">#' @param evening The number of calls counted in the evening session.</span></span>
+<span><span class="co">#' @return The total number of bird calls across both sessions.</span></span>
 <span><span class="co">#'</span></span>
 <span><span class="co">#' @examples</span></span>
-<span><span class="co">#' add(1, 1)</span></span>
-<span><span class="co">#' add(1.3, 5.3)</span></span>
-<span><span class="va">add</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">x</span>, <span class="va">y</span><span class="op">)</span> <span class="op">{</span></span>
-<span>  <span class="kw">return</span><span class="op">(</span><span class="va">x</span> <span class="op">+</span> <span class="va">y</span><span class="op">)</span></span>
+<span><span class="co">#' count_calls(3, 5)</span></span>
+<span><span class="co">#' count_calls(12, 7)</span></span>
+<span><span class="va">count_calls</span> <span class="op">&lt;-</span> <span class="kw">function</span><span class="op">(</span><span class="va">morning</span>, <span class="va">evening</span><span class="op">)</span> <span class="op">{</span></span>
+<span>  <span class="kw">return</span><span class="op">(</span><span class="va">morning</span> <span class="op">+</span> <span class="va">evening</span><span class="op">)</span></span>
 <span><span class="op">}</span></span></code></pre>
 </div>
 <p>For more information about writing R code examples within function
@@ -1129,7 +1136,7 @@ function in your code.</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution5" aria-expanded="false" aria-controls="collapseSolution5">
   <h4 class="accordion-header" id="headingSolution5"> Show me the solution </h4>
 </button>
-<div id="collapseSolution5" class="accordion-collapse collapse" data-bs-parent="#accordionSolution5" aria-labelledby="headingSolution5">
+<div id="collapseSolution5" class="accordion-collapse collapse" aria-labelledby="headingSolution5" data-bs-parent="#accordionSolution5">
 <div class="accordion-body">
 <div class="tabs">
 <nav><div id="nav-tab-10" class="nav nav-tabs" role="tablist">
@@ -1153,12 +1160,18 @@ function in your code.</p>
 <span id="cb23-2"><a href="#cb23-2" tabindex="-1" aria-label="code-block-23-2"></a>    <span class="co">"""</span></span>
 <span id="cb23-3"><a href="#cb23-3" tabindex="-1" aria-label="code-block-23-3"></a><span class="co">    Identify a bird based on the sound of its call.</span></span>
 <span id="cb23-4"><a href="#cb23-4" tabindex="-1" aria-label="code-block-23-4"></a></span>
-<span id="cb23-5"><a href="#cb23-5" tabindex="-1" aria-label="code-block-23-5"></a><span class="co">    Examples:</span></span>
-<span id="cb23-6"><a href="#cb23-6" tabindex="-1" aria-label="code-block-23-6"></a><span class="co">    &gt;&gt;&gt; identify("~/recordings/hirundo.wav")</span></span>
-<span id="cb23-7"><a href="#cb23-7" tabindex="-1" aria-label="code-block-23-7"></a><span class="co">    "Hirundo atrocaerulea"</span></span>
-<span id="cb23-8"><a href="#cb23-8" tabindex="-1" aria-label="code-block-23-8"></a><span class="co">    """</span></span>
-<span id="cb23-9"><a href="#cb23-9" tabindex="-1" aria-label="code-block-23-9"></a>    <span class="bu">print</span>(<span class="st">"Identifying bird vocalisation..."</span>)</span>
-<span id="cb23-10"><a href="#cb23-10" tabindex="-1" aria-label="code-block-23-10"></a>    <span class="cf">return</span> <span class="st">"Hirundo atrocaerulea"</span></span></code></pre>
+<span id="cb23-5"><a href="#cb23-5" tabindex="-1" aria-label="code-block-23-5"></a><span class="co">    Args:</span></span>
+<span id="cb23-6"><a href="#cb23-6" tabindex="-1" aria-label="code-block-23-6"></a><span class="co">        audio_file: The path of an audio file.</span></span>
+<span id="cb23-7"><a href="#cb23-7" tabindex="-1" aria-label="code-block-23-7"></a></span>
+<span id="cb23-8"><a href="#cb23-8" tabindex="-1" aria-label="code-block-23-8"></a><span class="co">    Returns:</span></span>
+<span id="cb23-9"><a href="#cb23-9" tabindex="-1" aria-label="code-block-23-9"></a><span class="co">        The name of the bird species.</span></span>
+<span id="cb23-10"><a href="#cb23-10" tabindex="-1" aria-label="code-block-23-10"></a></span>
+<span id="cb23-11"><a href="#cb23-11" tabindex="-1" aria-label="code-block-23-11"></a><span class="co">    Examples:</span></span>
+<span id="cb23-12"><a href="#cb23-12" tabindex="-1" aria-label="code-block-23-12"></a><span class="co">    &gt;&gt;&gt; identify("~/recordings/hirundo.wav")</span></span>
+<span id="cb23-13"><a href="#cb23-13" tabindex="-1" aria-label="code-block-23-13"></a><span class="co">    "Hirundo atrocaerulea"</span></span>
+<span id="cb23-14"><a href="#cb23-14" tabindex="-1" aria-label="code-block-23-14"></a><span class="co">    """</span></span>
+<span id="cb23-15"><a href="#cb23-15" tabindex="-1" aria-label="code-block-23-15"></a>    <span class="bu">print</span>(<span class="st">"Identifying bird vocalisation..."</span>)</span>
+<span id="cb23-16"><a href="#cb23-16" tabindex="-1" aria-label="code-block-23-16"></a>    <span class="cf">return</span> <span class="st">"Hirundo atrocaerulea"</span></span></code></pre>
 </div>
 </div>
 <div id="nav-tabpanel-10-R" class="tab-pane" role="tabpanel" aria-labelledby="nav-tab-10-R">
@@ -1167,6 +1180,9 @@ function in your code.</p>
 </h3>
 <pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">#' Identify a bird based on the sound of its call.</span></span>
+<span><span class="co">#'</span></span>
+<span><span class="co">#' @param audio_file The path of the sound file</span></span>
+<span><span class="co">#' @returns The name of the bird species.</span></span>
 <span><span class="co">#'</span></span>
 <span><span class="co">#' @examples</span></span>
 <span><span class="co">#' identify("~/recordings/hirundo.wav")</span></span>
@@ -1189,7 +1205,7 @@ function in your code.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Using docstrings to create automatic tests </h3>
 </button>
-<div id="collapseSpoiler1" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler1" aria-labelledby="headingSpoiler1">
+<div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
 <div class="accordion-body">
 <p>We can use the code examples inside docstrings to define test cases
 that are used in automatic software testing.</p>
@@ -1279,21 +1295,22 @@ where possible.</p>
 <div class="codewrapper sourceCode" id="cb26">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" tabindex="-1" aria-label="code-block-26-1"></a><span class="kw">def</span> add(x, y):</span>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" tabindex="-1" aria-label="code-block-26-1"></a><span class="kw">def</span> count_calls(morning, evening):</span>
 <span id="cb26-2"><a href="#cb26-2" tabindex="-1" aria-label="code-block-26-2"></a>    <span class="co">"""</span></span>
-<span id="cb26-3"><a href="#cb26-3" tabindex="-1" aria-label="code-block-26-3"></a><span class="co">    Adds two numbers together, which are the x and y arguments of this function.</span></span>
-<span id="cb26-4"><a href="#cb26-4" tabindex="-1" aria-label="code-block-26-4"></a></span>
-<span id="cb26-5"><a href="#cb26-5" tabindex="-1" aria-label="code-block-26-5"></a><span class="co">    This function takes two numbers as input and returns their sum.</span></span>
-<span id="cb26-6"><a href="#cb26-6" tabindex="-1" aria-label="code-block-26-6"></a><span class="co">    The addition is performed using the built-in `+` operator.</span></span>
-<span id="cb26-7"><a href="#cb26-7" tabindex="-1" aria-label="code-block-26-7"></a></span>
-<span id="cb26-8"><a href="#cb26-8" tabindex="-1" aria-label="code-block-26-8"></a><span class="co">    Args:</span></span>
-<span id="cb26-9"><a href="#cb26-9" tabindex="-1" aria-label="code-block-26-9"></a><span class="co">        x: The first number to add to the second number, y.</span></span>
-<span id="cb26-10"><a href="#cb26-10" tabindex="-1" aria-label="code-block-26-10"></a><span class="co">        y: The second number to add to the first number, x.</span></span>
-<span id="cb26-11"><a href="#cb26-11" tabindex="-1" aria-label="code-block-26-11"></a></span>
-<span id="cb26-12"><a href="#cb26-12" tabindex="-1" aria-label="code-block-26-12"></a><span class="co">    Returns:</span></span>
-<span id="cb26-13"><a href="#cb26-13" tabindex="-1" aria-label="code-block-26-13"></a><span class="co">        The sum of x and y, which are summed using the addition operator.</span></span>
-<span id="cb26-14"><a href="#cb26-14" tabindex="-1" aria-label="code-block-26-14"></a><span class="co">    """</span></span>
-<span id="cb26-15"><a href="#cb26-15" tabindex="-1" aria-label="code-block-26-15"></a>    <span class="cf">return</span> x <span class="op">+</span> y</span></code></pre>
+<span id="cb26-3"><a href="#cb26-3" tabindex="-1" aria-label="code-block-26-3"></a><span class="co">    Counts the total bird calls from two recording sessions, which are the morning and evening arguments</span></span>
+<span id="cb26-4"><a href="#cb26-4" tabindex="-1" aria-label="code-block-26-4"></a><span class="co">    of this function.</span></span>
+<span id="cb26-5"><a href="#cb26-5" tabindex="-1" aria-label="code-block-26-5"></a></span>
+<span id="cb26-6"><a href="#cb26-6" tabindex="-1" aria-label="code-block-26-6"></a><span class="co">    This function takes two numbers as input and returns their sum.</span></span>
+<span id="cb26-7"><a href="#cb26-7" tabindex="-1" aria-label="code-block-26-7"></a><span class="co">    The addition is performed using the built-in `+` operator.</span></span>
+<span id="cb26-8"><a href="#cb26-8" tabindex="-1" aria-label="code-block-26-8"></a></span>
+<span id="cb26-9"><a href="#cb26-9" tabindex="-1" aria-label="code-block-26-9"></a><span class="co">    Args:</span></span>
+<span id="cb26-10"><a href="#cb26-10" tabindex="-1" aria-label="code-block-26-10"></a><span class="co">        morning: The first number to add to the second number, evening.</span></span>
+<span id="cb26-11"><a href="#cb26-11" tabindex="-1" aria-label="code-block-26-11"></a><span class="co">        evening: The second number to add to the first number, morning.</span></span>
+<span id="cb26-12"><a href="#cb26-12" tabindex="-1" aria-label="code-block-26-12"></a></span>
+<span id="cb26-13"><a href="#cb26-13" tabindex="-1" aria-label="code-block-26-13"></a><span class="co">    Returns:</span></span>
+<span id="cb26-14"><a href="#cb26-14" tabindex="-1" aria-label="code-block-26-14"></a><span class="co">        The sum of morning and evening, which are summed using the addition operator.</span></span>
+<span id="cb26-15"><a href="#cb26-15" tabindex="-1" aria-label="code-block-26-15"></a><span class="co">    """</span></span>
+<span id="cb26-16"><a href="#cb26-16" tabindex="-1" aria-label="code-block-26-16"></a>    <span class="cf">return</span> morning <span class="op">+</span> evening</span></code></pre>
 </div>
 <p><strong>Discuss</strong> how can we effectively convey the purpose
 and functionality of a function in a docstring, without going into
@@ -1325,7 +1342,7 @@ and, if in doubt, follow the style of existing code.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
   <h3 class="accordion-header" id="headingSpoiler2">  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div> Docstring conventions </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" data-bs-parent="#accordionSpoiler2" aria-labelledby="headingSpoiler2">
+<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
 <div class="accordion-body">
 <p>There are several different <strong>standards</strong> for
 documentation strings. A standard is a convention that determines how
@@ -1362,31 +1379,31 @@ generated by the Google Gemini algorithm:</p>
 </h3>
 <pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb27-1"><a href="#cb27-1" tabindex="-1" aria-label="code-block-27-1"></a><span class="ex">Please</span> generate a docstring for this Python function:</span>
 <span id="cb27-2"><a href="#cb27-2" tabindex="-1" aria-label="code-block-27-2"></a></span>
-<span id="cb27-3"><a href="#cb27-3" tabindex="-1" aria-label="code-block-27-3"></a><span class="ex">def</span> calculate_rectangle_area<span class="er">(</span><span class="ex">width,</span> height<span class="kw">)</span><span class="bu">:</span></span>
-<span id="cb27-4"><a href="#cb27-4" tabindex="-1" aria-label="code-block-27-4"></a>    <span class="ex">area</span> = width <span class="pp">*</span> height</span>
-<span id="cb27-5"><a href="#cb27-5" tabindex="-1" aria-label="code-block-27-5"></a>    <span class="cf">return</span> <span class="ex">area</span></span></code></pre>
+<span id="cb27-3"><a href="#cb27-3" tabindex="-1" aria-label="code-block-27-3"></a><span class="ex">def</span> calculate_call_rate<span class="er">(</span><span class="ex">call_count,</span> duration_minutes<span class="kw">)</span><span class="bu">:</span></span>
+<span id="cb27-4"><a href="#cb27-4" tabindex="-1" aria-label="code-block-27-4"></a>    <span class="ex">rate</span> = call_count / duration_minutes</span>
+<span id="cb27-5"><a href="#cb27-5" tabindex="-1" aria-label="code-block-27-5"></a>    <span class="cf">return</span> <span class="ex">rate</span></span></code></pre>
 </div>
 <p>The result is the following docstring, in addition to some helpful
 descriptions of the content that it generated.</p>
 <div class="codewrapper sourceCode" id="cb28">
 <h3 class="code-label">PYTHON<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" tabindex="-1" aria-label="code-block-28-1"></a><span class="kw">def</span> calculate_rectangle_area(width, height):</span>
+<pre class="sourceCode python" tabindex="0"><code class="sourceCode python"><span id="cb28-1"><a href="#cb28-1" tabindex="-1" aria-label="code-block-28-1"></a><span class="kw">def</span> calculate_call_rate(call_count, duration_minutes):</span>
 <span id="cb28-2"><a href="#cb28-2" tabindex="-1" aria-label="code-block-28-2"></a>  <span class="co">"""</span></span>
-<span id="cb28-3"><a href="#cb28-3" tabindex="-1" aria-label="code-block-28-3"></a><span class="co">  This function calculates the area of a rectangle.</span></span>
+<span id="cb28-3"><a href="#cb28-3" tabindex="-1" aria-label="code-block-28-3"></a><span class="co">  This function calculates the rate of bird calls per minute in a recording.</span></span>
 <span id="cb28-4"><a href="#cb28-4" tabindex="-1" aria-label="code-block-28-4"></a></span>
 <span id="cb28-5"><a href="#cb28-5" tabindex="-1" aria-label="code-block-28-5"></a><span class="co">  Args:</span></span>
-<span id="cb28-6"><a href="#cb28-6" tabindex="-1" aria-label="code-block-28-6"></a><span class="co">      width (float): The width of the rectangle. Must be a positive number.</span></span>
-<span id="cb28-7"><a href="#cb28-7" tabindex="-1" aria-label="code-block-28-7"></a><span class="co">      height (float): The height of the rectangle. Must be a positive number.</span></span>
+<span id="cb28-6"><a href="#cb28-6" tabindex="-1" aria-label="code-block-28-6"></a><span class="co">      call_count (int): The number of bird calls observed in the recording. Must be a non-negative number.</span></span>
+<span id="cb28-7"><a href="#cb28-7" tabindex="-1" aria-label="code-block-28-7"></a><span class="co">      duration_minutes (float): The length of the recording in minutes. Must be a positive number.</span></span>
 <span id="cb28-8"><a href="#cb28-8" tabindex="-1" aria-label="code-block-28-8"></a></span>
 <span id="cb28-9"><a href="#cb28-9" tabindex="-1" aria-label="code-block-28-9"></a><span class="co">  Returns:</span></span>
-<span id="cb28-10"><a href="#cb28-10" tabindex="-1" aria-label="code-block-28-10"></a><span class="co">      float: The area of the rectangle. This will be a positive number.</span></span>
+<span id="cb28-10"><a href="#cb28-10" tabindex="-1" aria-label="code-block-28-10"></a><span class="co">      float: The rate of bird calls per minute.</span></span>
 <span id="cb28-11"><a href="#cb28-11" tabindex="-1" aria-label="code-block-28-11"></a><span class="co">  """</span></span>
 <span id="cb28-12"><a href="#cb28-12" tabindex="-1" aria-label="code-block-28-12"></a></span>
-<span id="cb28-13"><a href="#cb28-13" tabindex="-1" aria-label="code-block-28-13"></a>  <span class="co"># Calculate the area</span></span>
-<span id="cb28-14"><a href="#cb28-14" tabindex="-1" aria-label="code-block-28-14"></a>  area <span class="op">=</span> width <span class="op">*</span> height</span>
+<span id="cb28-13"><a href="#cb28-13" tabindex="-1" aria-label="code-block-28-13"></a>  <span class="co"># Calculate the rate</span></span>
+<span id="cb28-14"><a href="#cb28-14" tabindex="-1" aria-label="code-block-28-14"></a>  rate <span class="op">=</span> call_count <span class="op">/</span> duration_minutes</span>
 <span id="cb28-15"><a href="#cb28-15" tabindex="-1" aria-label="code-block-28-15"></a></span>
-<span id="cb28-16"><a href="#cb28-16" tabindex="-1" aria-label="code-block-28-16"></a>  <span class="cf">return</span> area</span></code></pre>
+<span id="cb28-16"><a href="#cb28-16" tabindex="-1" aria-label="code-block-28-16"></a>  <span class="cf">return</span> rate</span></code></pre>
 </div>
 <p>This <abbr title="artificial intelligence">AI</abbr>-generated
 content contains a function summary, argument descriptions, and explains
@@ -1538,7 +1555,7 @@ any links that you are not going to use.
   "url": "https://FAIR2-for-research-software.github.io/Documentation/instructor/docstrings.html",
   "identifier": "https://FAIR2-for-research-software.github.io/Documentation/instructor/docstrings.html",
   "dateCreated": "2024-05-20",
-  "dateModified": "2025-11-06",
+  "dateModified": "2026-04-29",
   "datePublished": "2026-04-29"
 }
 
