@@ -14,6 +14,8 @@ This course uses [GitHub](https://github.com/) to host and share code. Please
 [sign up for a free GitHub account](https://github.com/signup) if you do not already have one, and
 [sign in](https://github.com/login) before the course begins.
 
+See the [GitHub module of the FAIR4RS course](https://rse.shef.ac.uk/training/fair4rs/) for further guidance.
+
 ## Software Setup
 
 You can complete this course using *either* Python **or** R — choose whichever you prefer.
