@@ -218,6 +218,23 @@ documentation.
 
 :::: spoiler
 
+### Helpful VS Code extensions for documentation work
+
+If you're following along in [Visual Studio Code](https://code.visualstudio.com/), two extensions make editing the
+files in this episode noticeably easier:
+
+- **[Markdown All in One](https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one)** — adds a
+  side-by-side live preview (`Ctrl + Shift + V`), table-of-contents generation, and automatic list continuation while
+  you edit the files in `docs/`.
+- **[YAML](https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml)** by Red Hat — provides schema
+  validation and key completion for `mkdocs.yml`, which helps catch indentation mistakes early.
+
+Both extensions can be installed from the Extensions view (`Ctrl + Shift + X`).
+
+::::
+
+:::: spoiler
+
 ### Documenting R packages
 
 MkDocs itself is language-agnostic — it simply converts Markdown into a website, so you can use it to write prose
@@ -234,6 +251,22 @@ Jennifer Bryan.
 ##### Getting started
 
 Let's use MkDocs to create a documentation site for our Python code.
+
+::: callout
+
+### Working in VS Code
+
+If you're using [Visual Studio Code](https://code.visualstudio.com/) (the recommended editor for this course), the
+upcoming steps fit naturally into a single window:
+
+- Open your project with **File → Open Folder…** so the file explorer, editor, and terminal all share the same
+  workspace.
+- Open the integrated terminal with **Terminal → New Terminal** or **Ctrl + \`** (backtick) — every terminal
+  command in this episode can be run there.
+- Edit `mkdocs.yml`, `docs/index.md`, and `docs/reference.md` in VS Code's editor tabs rather than a separate text
+  editor.
+
+:::
 
 ###### Installing MkDocs
 
@@ -289,6 +322,59 @@ source .venv/bin/activate
 ```
 
 :::
+
+If you're using Visual Studio Code, you can skip the activation command — see the spoiler below.
+
+:::: spoiler
+
+### Selecting the virtual environment in VS Code
+
+In Visual Studio Code, you usually don't need to run the activation command yourself. Shortly after `.venv/` is
+created, VS Code shows a notification — *"We noticed a new environment has been created. Do you want to select it?"*
+— click **Yes**.
+
+If the prompt doesn't appear, open the Command Palette (**Ctrl + Shift + P**, or **Cmd + Shift + P** on macOS), choose
+*Python: Select Interpreter*, and pick the one inside `.venv/`.
+
+Once the interpreter is selected, any new integrated terminal you open (**Ctrl + `**) will activate`.venv/`
+automatically, so you can skip the `source .venv/bin/activate` / `.venv\Scripts\activate` step. This also avoids
+PowerShell execution-policy errors that some Windows learners see when activating manually.
+
+::::
+
+:::: spoiler
+
+### Using Conda instead of `venv`
+
+If you already have Python installed via [Anaconda](https://www.anaconda.com/),
+[Miniconda](https://docs.conda.io/projects/miniconda/), or
+[Miniforge](https://github.com/conda-forge/miniforge), you may prefer to use
+[conda](https://docs.conda.io/) to manage your environment. Conda is a single tool that
+installs both Python itself and the packages you need.
+
+Create a new environment called `oddsong` containing Python:
+
+```bash
+conda create --name oddsong python
+```
+
+Activate the environment. The same command works on Windows, Linux, and macOS:
+
+```bash
+conda activate oddsong
+```
+
+Once the environment is active, the `pip install` command shown below works inside it
+just as it does inside a `venv` environment, so you can continue with the rest of the
+episode without changes. Because the conda environment lives in a central location
+managed by conda — not a `.venv/` folder in your project — there is nothing extra to add
+to `.gitignore` for it.
+
+For more information, see [Managing
+environments](https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html)
+in the conda user guide.
+
+::::
 
 Use the Python package manager [pip](https://pip.pypa.io/en/stable/) to [install
 MkDocs](https://www.mkdocs.org/user-guide/installation/), along with the `mkdocstrings` plugin for generating
@@ -375,8 +461,10 @@ This makes it very fast to see the effect of your writing.
 mkdocs serve
 ```
 
-Open your web browser to `http://127.0.0.1:8000` to view your documentation site. Leave this command running while you
-work — any time you save a Markdown file, the browser will reload with your changes. Press `Ctrl+C` to stop the server.
+Open your web browser to `http://127.0.0.1:8000` to view your documentation site. If you're running this from the VS
+Code integrated terminal, **Ctrl + click** the URL to open it in your default browser without copy-pasting. Leave the
+command running while you work — any time you save a Markdown file, the browser will reload with your changes. Press
+`Ctrl+C` to stop the server.
 
 ##### Building the site
 
@@ -393,7 +481,9 @@ mkdocs build
 MkDocs will load our files from the `docs/` directory and output the built HTML files into a directory called `site/`.
 
 The file `site/index.html` contains the home page of your new documentation site! Open that file to view your
-handiwork.
+handiwork. In VS Code's file explorer, right-click `site/index.html` and choose **Reveal in File Explorer** (Windows)
+or **Reveal in Finder** (macOS) to open the folder in your operating system, then double-click the file to launch it
+in a browser.
 
 ![The MkDocs home page for our documentation site](fig/mkdocs-index.png){alt="MkDocs home page with default theme."}
 
