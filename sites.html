@@ -354,7 +354,7 @@
       </div>
       <hr></nav><main id="main-content" class="main-content"><div class="container lesson-content">
         <h1>Documentation sites</h1>
-        <p>Last updated on 2026-04-24 |
+        <p>Last updated on 2026-04-29 |
 
         <a href="https://github.com/FAIR2-for-research-software/Documentation/edit/main/episodes/sites.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 
@@ -647,10 +647,39 @@ the MkDocs documentation.</p>
 <button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler1" aria-expanded="false" aria-controls="collapseSpoiler1">
   <h3 class="accordion-header" id="headingSpoiler1">
   <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>
-  Documenting R packages
+  Helpful VS Code extensions for documentation work
   </h3>
 </button>
 <div id="collapseSpoiler1" class="accordion-collapse collapse" aria-labelledby="headingSpoiler1" data-bs-parent="#accordionSpoiler1">
+<div class="accordion-body">
+<p>If you’re following along in <a href="https://code.visualstudio.com/" class="external-link">Visual Studio Code</a>, two
+extensions make editing the files in this episode noticeably easier:</p>
+<ul><li>
+<strong><a href="https://marketplace.visualstudio.com/items?itemName=yzhang.markdown-all-in-one" class="external-link">Markdown
+All in One</a></strong> — adds a side-by-side live preview
+(<code>Ctrl + Shift + V</code>), table-of-contents generation, and
+automatic list continuation while you edit the files in
+<code>docs/</code>.</li>
+<li>
+<strong><a href="https://marketplace.visualstudio.com/items?itemName=redhat.vscode-yaml" class="external-link">YAML</a></strong>
+by Red Hat — provides schema validation and key completion for
+<code>mkdocs.yml</code>, which helps catch indentation mistakes
+early.</li>
+</ul><p>Both extensions can be installed from the Extensions view
+(<code>Ctrl + Shift + X</code>).</p>
+</div>
+</div>
+</div>
+</div>
+<div id="accordionSpoiler2" class="accordion spoiler-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
+  <h3 class="accordion-header" id="headingSpoiler2">
+  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>
+  Documenting R packages
+  </h3>
+</button>
+<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
 <div class="accordion-body">
 <p>MkDocs itself is language-agnostic — it simply converts Markdown into
 a website, so you can use it to write prose documentation for code in
@@ -670,6 +699,28 @@ Packages</em> by Hadley Wickham and Jennifer Bryan.</p>
 <h5 id="getting-started-1">Getting started<a class="anchor" aria-label="anchor" href="#getting-started-1"></a></h5>
 <p>Let’s use MkDocs to create a documentation site for our Python
 code.</p>
+<div id="working-in-vs-code" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div id="working-in-vs-code" class="callout-inner">
+<h3 class="callout-title">Working in VS Code</h3>
+<div class="callout-content">
+<p>If you’re using <a href="https://code.visualstudio.com/" class="external-link">Visual
+Studio Code</a> (the recommended editor for this course), the upcoming
+steps fit naturally into a single window:</p>
+<ul><li>Open your project with <strong>File → Open Folder…</strong> so the
+file explorer, editor, and terminal all share the same workspace.</li>
+<li>Open the integrated terminal with <strong>Terminal → New
+Terminal</strong> or <strong>Ctrl + `</strong> (backtick) — every
+terminal command in this episode can be run there.</li>
+<li>Edit <code>mkdocs.yml</code>, <code>docs/index.md</code>, and
+<code>docs/reference.md</code> in VS Code’s editor tabs rather than a
+separate text editor.</li>
+</ul></div>
+</div>
+</div>
 <div class="section level6">
 <h6 id="installing-mkdocs">Installing MkDocs<a class="anchor" aria-label="anchor" href="#installing-mkdocs"></a></h6>
 <p>Navigate to the root folder of your code project. Create a virtual
@@ -766,23 +817,109 @@ the operating system you are using.</p>
 </div>
 </div>
 </div>
-<p>Use the Python package manager <a href="https://pip.pypa.io/en/stable/" class="external-link">pip</a> to <a href="https://www.mkdocs.org/user-guide/installation/" class="external-link">install
-MkDocs</a>, along with the <code>mkdocstrings</code> plugin for
-generating reference material from Python code.</p>
+<p>If you’re using Visual Studio Code, you can skip the activation
+command — see the spoiler below.</p>
+<div id="accordionSpoiler3" class="accordion spoiler-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler3" aria-expanded="false" aria-controls="collapseSpoiler3">
+  <h3 class="accordion-header" id="headingSpoiler3">
+  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>
+  Selecting the virtual environment in VS Code
+  </h3>
+</button>
+<div id="collapseSpoiler3" class="accordion-collapse collapse" aria-labelledby="headingSpoiler3" data-bs-parent="#accordionSpoiler3">
+<div class="accordion-body">
+<p>In Visual Studio Code, you usually don’t need to run the activation
+command yourself. Shortly after <code>.venv/</code> is created, VS Code
+shows a notification — <em>“We noticed a new environment has been
+created. Do you want to select it?”</em> — click
+<strong>Yes</strong>.</p>
+<p>If the prompt doesn’t appear, open the Command Palette (<strong>Ctrl
++ Shift + P</strong>, or <strong>Cmd + Shift + P</strong> on macOS),
+choose <em>Python: Select Interpreter</em>, and pick the one inside
+<code>.venv/</code>.</p>
+<p>Once the interpreter is selected, any new integrated terminal you
+open (<strong>Ctrl + `</strong>) will activate<code>.venv/</code>
+automatically, so you can skip the
+<code>source .venv/bin/activate</code> /
+<code>.venv\Scripts\activate</code> step. This also avoids PowerShell
+execution-policy errors that some Windows learners see when activating
+manually.</p>
+</div>
+</div>
+</div>
+</div>
+<div id="accordionSpoiler4" class="accordion spoiler-accordion accordion-flush">
+<div class="accordion-item">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler4" aria-expanded="false" aria-controls="collapseSpoiler4">
+  <h3 class="accordion-header" id="headingSpoiler4">
+  <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>
+  Using Conda instead of venv
+  </h3>
+</button>
+<div id="collapseSpoiler4" class="accordion-collapse collapse" aria-labelledby="headingSpoiler4" data-bs-parent="#accordionSpoiler4">
+<div class="accordion-body">
+<p>If you already have Python installed via <a href="https://www.anaconda.com/" class="external-link">Anaconda</a>, <a href="https://docs.conda.io/projects/miniconda/" class="external-link">Miniconda</a>, or <a href="https://github.com/conda-forge/miniforge" class="external-link">Miniforge</a>, you may
+prefer to use <a href="https://docs.conda.io/" class="external-link">conda</a> to manage your
+environment. Conda is a single tool that installs both Python itself and
+the packages you need.</p>
+<p>Create a new environment called <code>oddsong</code> containing
+Python:</p>
 <div class="codewrapper sourceCode" id="cb7">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" tabindex="-1" aria-label="code-block-7-1"></a><span class="ex">pip</span> install <span class="st">"mkdocs==1.*"</span> <span class="st">"mkdocstrings[python]"</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb7-1"><a href="#cb7-1" tabindex="-1" aria-label="code-block-7-1"></a><span class="ex">conda</span> create <span class="at">--name</span> oddsong python</span></code></pre>
 </div>
-<div id="accordionSpoiler2" class="accordion spoiler-accordion accordion-flush">
+<p>Activate the environment. The same command works on Windows, Linux,
+and macOS:</p>
+<div class="codewrapper sourceCode" id="cb8">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" tabindex="-1" aria-label="code-block-8-1"></a><span class="ex">conda</span> activate oddsong</span></code></pre>
+</div>
+<p>Once the environment is active, the <code>pip install</code> command
+shown below works inside it just as it does inside a <code>venv</code>
+environment, so you can continue with the rest of the episode without
+changes. Because the conda environment lives in a central location
+managed by conda — not a <code>.venv/</code> folder in your project —
+there is nothing extra to add to <code>.gitignore</code> for it.</p>
+<p>For more information, see <a href="https://docs.conda.io/projects/conda/en/latest/user-guide/tasks/manage-environments.html" class="external-link">Managing
+environments</a> in the conda user guide.</p>
+</div>
+</div>
+</div>
+</div>
+<p>Use the Python package manager <a href="https://pip.pypa.io/en/stable/" class="external-link">pip</a> to <a href="https://www.mkdocs.org/user-guide/installation/" class="external-link">install
+MkDocs</a>, along with the <code>mkdocstrings</code> plugin for
+generating reference material from Python code.</p>
+<div class="codewrapper sourceCode" id="cb9">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" tabindex="-1" aria-label="code-block-9-1"></a><span class="ex">pip</span> install <span class="st">"mkdocs==1.*"</span> <span class="st">"mkdocstrings[python]"</span></span></code></pre>
+</div>
+<div id="callout4" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<span class="callout-header">Callout</span>
+<div class="callout-inner">
+<div class="callout-content">
+<p>The quotation marks in this command are important — some shells
+(particularly on Linux and macOS) treat the square brackets in
+<code>mkdocstrings[python]</code> as a glob pattern and the install will
+fail without them.</p>
+</div>
+</div>
+</div>
+<div id="accordionSpoiler5" class="accordion spoiler-accordion accordion-flush">
 <div class="accordion-item">
-<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler2" aria-expanded="false" aria-controls="collapseSpoiler2">
-  <h3 class="accordion-header" id="headingSpoiler2">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler5" aria-expanded="false" aria-controls="collapseSpoiler5">
+  <h3 class="accordion-header" id="headingSpoiler5">
   <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>
   Why pin MkDocs to version 1?
   </h3>
 </button>
-<div id="collapseSpoiler2" class="accordion-collapse collapse" aria-labelledby="headingSpoiler2" data-bs-parent="#accordionSpoiler2">
+<div id="collapseSpoiler5" class="accordion-collapse collapse" aria-labelledby="headingSpoiler5" data-bs-parent="#accordionSpoiler5">
 <div class="accordion-body">
 <p>MkDocs 2.0 is on the horizon (see the <a href="https://squidfunk.github.io/mkdocs-material/blog/2026/02/18/mkdocs-2.0/" class="external-link">MkDocs
 2.0 announcement</a>) and introduces changes that may break the
@@ -793,10 +930,10 @@ written.</p>
 <p>When you run <code>mkdocs</code> with a 1.x release, you may see a
 warning about the upcoming 2.0 release. To silence it, set the following
 environment variable before running MkDocs:</p>
-<div class="codewrapper sourceCode" id="cb8">
+<div class="codewrapper sourceCode" id="cb10">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb8-1"><a href="#cb8-1" tabindex="-1" aria-label="code-block-8-1"></a><span class="bu">export</span> <span class="va">NO_MKDOCS_2_WARNING</span><span class="op">=</span>1</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb10-1"><a href="#cb10-1" tabindex="-1" aria-label="code-block-10-1"></a><span class="bu">export</span> <span class="va">NO_MKDOCS_2_WARNING</span><span class="op">=</span>1</span></code></pre>
 </div>
 <p>Once you’re comfortable with MkDocs and ready to upgrade, drop the
 version pin and follow the official migration guide.</p>
@@ -810,10 +947,10 @@ version pin and follow the official migration guide.</p>
 <h5 id="start-a-new-mkdocs-project">Start a new MkDocs project<a class="anchor" aria-label="anchor" href="#start-a-new-mkdocs-project"></a></h5>
 <p>MkDocs includes a command to scaffold a new project. Navigate to your
 project’s root folder and run the following command.</p>
-<div class="codewrapper sourceCode" id="cb9">
+<div class="codewrapper sourceCode" id="cb11">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb9-1"><a href="#cb9-1" tabindex="-1" aria-label="code-block-9-1"></a><span class="ex">mkdocs</span> new .</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" tabindex="-1" aria-label="code-block-11-1"></a><span class="ex">mkdocs</span> new .</span></code></pre>
 </div>
 <p>This creates two things:</p>
 <ul><li>
@@ -828,23 +965,23 @@ become pages of your site.</p>
 <h6 id="configure-the-site-and-plugins">Configure the site and plugins<a class="anchor" aria-label="anchor" href="#configure-the-site-and-plugins"></a></h6>
 <p>Open <code>mkdocs.yml</code> and replace its contents with the
 following:</p>
-<div class="codewrapper sourceCode" id="cb10">
+<div class="codewrapper sourceCode" id="cb12">
 <h3 class="code-label">YAML<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode yaml" tabindex="0"><code class="sourceCode yaml"><span id="cb10-1"><a href="#cb10-1" tabindex="-1" aria-label="code-block-10-1"></a><span class="fu">site_name</span><span class="kw">:</span><span class="at"> Birdsong Identifier</span></span>
-<span id="cb10-2"><a href="#cb10-2" tabindex="-1" aria-label="code-block-10-2"></a><span class="fu">plugins</span><span class="kw">:</span></span>
-<span id="cb10-3"><a href="#cb10-3" tabindex="-1" aria-label="code-block-10-3"></a><span class="at">  </span><span class="kw">-</span><span class="at"> search</span></span>
-<span id="cb10-4"><a href="#cb10-4" tabindex="-1" aria-label="code-block-10-4"></a><span class="at">  </span><span class="kw">-</span><span class="at"> mkdocstrings</span></span></code></pre>
+<pre class="sourceCode yaml" tabindex="0"><code class="sourceCode yaml"><span id="cb12-1"><a href="#cb12-1" tabindex="-1" aria-label="code-block-12-1"></a><span class="fu">site_name</span><span class="kw">:</span><span class="at"> Birdsong Identifier</span></span>
+<span id="cb12-2"><a href="#cb12-2" tabindex="-1" aria-label="code-block-12-2"></a><span class="fu">plugins</span><span class="kw">:</span></span>
+<span id="cb12-3"><a href="#cb12-3" tabindex="-1" aria-label="code-block-12-3"></a><span class="at">  </span><span class="kw">-</span><span class="at"> search</span></span>
+<span id="cb12-4"><a href="#cb12-4" tabindex="-1" aria-label="code-block-12-4"></a><span class="at">  </span><span class="kw">-</span><span class="at"> mkdocstrings</span></span></code></pre>
 </div>
-<div id="accordionSpoiler3" class="accordion spoiler-accordion accordion-flush">
+<div id="accordionSpoiler6" class="accordion spoiler-accordion accordion-flush">
 <div class="accordion-item">
-<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler3" aria-expanded="false" aria-controls="collapseSpoiler3">
-  <h3 class="accordion-header" id="headingSpoiler3">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler6" aria-expanded="false" aria-controls="collapseSpoiler6">
+  <h3 class="accordion-header" id="headingSpoiler6">
   <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>
   What does this configuration mean?
   </h3>
 </button>
-<div id="collapseSpoiler3" class="accordion-collapse collapse" aria-labelledby="headingSpoiler3" data-bs-parent="#accordionSpoiler3">
+<div id="collapseSpoiler6" class="accordion-collapse collapse" aria-labelledby="headingSpoiler6" data-bs-parent="#accordionSpoiler6">
 <div class="accordion-body">
 <ul><li>
 <code>site_name</code> sets the title that appears in the site’s
@@ -879,15 +1016,18 @@ documentation</a>.</p>
 <p>MkDocs includes a built-in development server that rebuilds and
 refreshes the site automatically as you edit files. This makes it very
 fast to see the effect of your writing.</p>
-<div class="codewrapper sourceCode" id="cb11">
+<div class="codewrapper sourceCode" id="cb13">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb11-1"><a href="#cb11-1" tabindex="-1" aria-label="code-block-11-1"></a><span class="ex">mkdocs</span> serve</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb13-1"><a href="#cb13-1" tabindex="-1" aria-label="code-block-13-1"></a><span class="ex">mkdocs</span> serve</span></code></pre>
 </div>
 <p>Open your web browser to <code>http://127.0.0.1:8000</code> to view
-your documentation site. Leave this command running while you work — any
-time you save a Markdown file, the browser will reload with your
-changes. Press <code>Ctrl+C</code> to stop the server.</p>
+your documentation site. If you’re running this from the VS Code
+integrated terminal, <strong>Ctrl + click</strong> the URL to open it in
+your default browser without copy-pasting. Leave the command running
+while you work — any time you save a Markdown file, the browser will
+reload with your changes. Press <code>Ctrl+C</code> to stop the
+server.</p>
 </div>
 <div class="section level5">
 <h5 id="building-the-site">Building the site<a class="anchor" aria-label="anchor" href="#building-the-site"></a></h5>
@@ -897,16 +1037,21 @@ define a website. MkDocs will create <em>HyperText Markup Language</em>
 (HTML) files, which is the markup language for pages that display in a
 web browser commonly used on the internet.</p>
 <p>To build our site, we run the following command.</p>
-<div class="codewrapper sourceCode" id="cb12">
+<div class="codewrapper sourceCode" id="cb14">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb12-1"><a href="#cb12-1" tabindex="-1" aria-label="code-block-12-1"></a><span class="ex">mkdocs</span> build</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" tabindex="-1" aria-label="code-block-14-1"></a><span class="ex">mkdocs</span> build</span></code></pre>
 </div>
 <p>MkDocs will load our files from the <code>docs/</code> directory and
 output the built HTML files into a directory called
 <code>site/</code>.</p>
 <p>The file <code>site/index.html</code> contains the home page of your
-new documentation site! Open that file to view your handiwork.</p>
+new documentation site! Open that file to view your handiwork. In VS
+Code’s file explorer, right-click <code>site/index.html</code> and
+choose <strong>Reveal in File Explorer</strong> (Windows) or
+<strong>Reveal in Finder</strong> (macOS) to open the folder in your
+operating system, then double-click the file to launch it in a
+browser.</p>
 <figure><img src="fig/mkdocs-index.png" alt="MkDocs home page with default theme." class="figure mx-auto d-block"><div class="figcaption">The MkDocs home page for our documentation
 site</div>
 </figure></div>
@@ -920,22 +1065,22 @@ already installed and enabled in <code>mkdocs.yml</code>.</p>
 <h6 id="adding-a-reference-page">Adding a reference page<a class="anchor" aria-label="anchor" href="#adding-a-reference-page"></a></h6>
 <p>Create a new file <code>docs/reference.md</code> with the following
 contents.</p>
-<div class="codewrapper sourceCode" id="cb13">
+<div class="codewrapper sourceCode" id="cb15">
 <h3 class="code-label">MARKDOWN<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode markdown" tabindex="0"><code class="sourceCode markdown"><span id="cb13-1"><a href="#cb13-1" tabindex="-1" aria-label="code-block-13-1"></a><span class="fu"># Reference</span></span>
-<span id="cb13-2"><a href="#cb13-2" tabindex="-1" aria-label="code-block-13-2"></a></span>
-<span id="cb13-3"><a href="#cb13-3" tabindex="-1" aria-label="code-block-13-3"></a>::: oddsong.song</span></code></pre>
+<pre class="sourceCode markdown" tabindex="0"><code class="sourceCode markdown"><span id="cb15-1"><a href="#cb15-1" tabindex="-1" aria-label="code-block-15-1"></a><span class="fu"># Reference</span></span>
+<span id="cb15-2"><a href="#cb15-2" tabindex="-1" aria-label="code-block-15-2"></a></span>
+<span id="cb15-3"><a href="#cb15-3" tabindex="-1" aria-label="code-block-15-3"></a>::: oddsong.song</span></code></pre>
 </div>
-<div id="accordionSpoiler4" class="accordion spoiler-accordion accordion-flush">
+<div id="accordionSpoiler7" class="accordion spoiler-accordion accordion-flush">
 <div class="accordion-item">
-<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler4" aria-expanded="false" aria-controls="collapseSpoiler4">
-  <h3 class="accordion-header" id="headingSpoiler4">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler7" aria-expanded="false" aria-controls="collapseSpoiler7">
+  <h3 class="accordion-header" id="headingSpoiler7">
   <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>
   What does this code mean?
   </h3>
 </button>
-<div id="collapseSpoiler4" class="accordion-collapse collapse" aria-labelledby="headingSpoiler4" data-bs-parent="#accordionSpoiler4">
+<div id="collapseSpoiler7" class="accordion-collapse collapse" aria-labelledby="headingSpoiler7" data-bs-parent="#accordionSpoiler7">
 <div class="accordion-body">
 <p>The <code>mkdocstrings</code> plugin uses a special Markdown syntax
 to inject generated documentation into a page:</p>
@@ -957,10 +1102,10 @@ handler documentation</a>.</p>
 <p>Now, when we build our site, MkDocs will scan the contents of the
 <code>oddsong</code> Python module and automatically generate a useful
 reference guide to our functions.</p>
-<div class="codewrapper sourceCode" id="cb14">
+<div class="codewrapper sourceCode" id="cb16">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb14-1"><a href="#cb14-1" tabindex="-1" aria-label="code-block-14-1"></a><span class="ex">mkdocs</span> build</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb16-1"><a href="#cb16-1" tabindex="-1" aria-label="code-block-16-1"></a><span class="ex">mkdocs</span> build</span></code></pre>
 </div>
 <figure><img src="fig/mkdocs-reference.png" alt="API reference page." class="figure mx-auto d-block"><div class="figcaption">Python documentation strings rendered as HTML by
 mkdocstrings</div>
@@ -993,15 +1138,15 @@ Pages</a></strong>, a free hosting service built into GitHub. It can
 automatically build and publish your site whenever you push changes to
 your repository, making it a convenient choice if your code is already
 hosted on GitHub.</p>
-<div id="accordionSpoiler5" class="accordion spoiler-accordion accordion-flush">
+<div id="accordionSpoiler8" class="accordion spoiler-accordion accordion-flush">
 <div class="accordion-item">
-<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler5" aria-expanded="false" aria-controls="collapseSpoiler5">
-  <h3 class="accordion-header" id="headingSpoiler5">
+<button class="accordion-button spoiler-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSpoiler8" aria-expanded="false" aria-controls="collapseSpoiler8">
+  <h3 class="accordion-header" id="headingSpoiler8">
   <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="eye"></i></div>
   Other hosting services
   </h3>
 </button>
-<div id="collapseSpoiler5" class="accordion-collapse collapse" aria-labelledby="headingSpoiler5" data-bs-parent="#accordionSpoiler5">
+<div id="collapseSpoiler8" class="accordion-collapse collapse" aria-labelledby="headingSpoiler8" data-bs-parent="#accordionSpoiler8">
 <div class="accordion-body">
 <p>GitHub Pages is not the only option. Other hosting services popular
 with researchers include:</p>
@@ -1048,10 +1193,10 @@ GitHub Pro account) and already pushed to GitHub.</p>
 </div>
 <p>MkDocs provides a built-in command to publish your site to GitHub
 Pages. From your project’s root folder, run:</p>
-<div class="codewrapper sourceCode" id="cb15">
+<div class="codewrapper sourceCode" id="cb17">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb15-1"><a href="#cb15-1" tabindex="-1" aria-label="code-block-15-1"></a><span class="ex">mkdocs</span> gh-deploy</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb17-1"><a href="#cb17-1" tabindex="-1" aria-label="code-block-17-1"></a><span class="ex">mkdocs</span> gh-deploy</span></code></pre>
 </div>
 <p>This builds your site and pushes the output to a branch called
 <code>gh-pages</code> on your GitHub repository. GitHub Pages will then
@@ -1221,7 +1366,7 @@ any links that you are not going to use.
   "url": "https://FAIR2-for-research-software.github.io/Documentation/sites.html",
   "identifier": "https://FAIR2-for-research-software.github.io/Documentation/sites.html",
   "dateCreated": "2024-05-20",
-  "dateModified": "2026-04-24",
+  "dateModified": "2026-04-29",
   "datePublished": "2026-04-29"
 }
 
