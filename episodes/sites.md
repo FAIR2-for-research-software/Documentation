@@ -381,7 +381,7 @@ MkDocs](https://www.mkdocs.org/user-guide/installation/), along with the `mkdocs
 reference material from Python code.
 
 ```bash
-pip install "mkdocs==1.*" "mkdocstrings[python]"
+pip install "mkdocs==1.*" "mkdocstrings-python==2.*"
 ```
 
 ::: callout
@@ -465,8 +465,11 @@ MkDocs includes a built-in development server that rebuilds and refreshes the si
 This makes it very fast to see the effect of your writing.
 
 ```bash
-mkdocs serve
+mkdocs serve --strict --verbose
 ```
+
+The `--strict` flag tells MkDocs to treat warnings (such as broken links or missing files) as errors, and `--verbose`
+prints extra detail about what it is doing — both are very helpful while you are editing.
 
 Open your web browser to `http://127.0.0.1:8000` to view your documentation site. If you're running this from the VS
 Code integrated terminal, **Ctrl + click** the URL to open it in your default browser without copy-pasting. Leave the
@@ -482,7 +485,7 @@ language for pages that display in a web browser commonly used on the internet.
 To build our site, we run the following command.
 
 ```bash
-mkdocs build
+mkdocs build --strict --verbose
 ```
 
 MkDocs will load our files from the `docs/` directory and output the built HTML files into a directory called `site/`.
@@ -507,20 +510,31 @@ Create a new file `docs/reference.md` with the following contents.
 ```markdown
 # Reference
 
-::: oddsong.song
+::: oddsong
 ```
+
+::: callout
+
+### Why `::: oddsong`?
+
+This line is a `mkdocstrings` directive that tells the plugin to scan a Python module and insert its documentation
+strings into the page at this location:
+
+- The leading `:::` marks the line as an `mkdocstrings` directive rather than ordinary Markdown.
+- `oddsong` is the dotted import path of the Python module to document — in this case the file `oddsong.py` in your
+  project's root folder. If your code lived in a package such as `src/oddsong/__init__.py`, you would still write
+  `::: oddsong` because that's the name you would use in a Python `import` statement.
+
+When the site is built, `mkdocstrings` imports the module, reads the docstrings of its public functions, classes, and
+variables, and renders them as formatted reference content — saving you from copy-pasting documentation by hand.
+
+:::
 
 :::: spoiler
 
-### What does this code mean?
+### More on the mkdocstrings directive
 
-The `mkdocstrings` plugin uses a special Markdown syntax to inject generated documentation into a page:
-
-- `:::` is the directive that tells `mkdocstrings` to pull in documentation.
-- `oddsong.song` is the dotted path to the Python module we want to document.
-
-By default, `mkdocstrings` includes all public functions, classes, and variables in the module, rendered from their
-documentation strings. For more options (such as filtering members or customising the layout), see the [mkdocstrings
+For more options (such as filtering members, hiding the source, or customising the layout), see the [mkdocstrings
 Python handler documentation](https://mkdocstrings.github.io/python/).
 
 ::::
@@ -529,7 +543,7 @@ Now, when we build our site, MkDocs will scan the contents of the `oddsong` Pyth
 useful reference guide to our functions.
 
 ```bash
-mkdocs build
+mkdocs build --strict --verbose
 ```
 
 ![Python documentation strings rendered as HTML by mkdocstrings](fig/mkdocs-reference.png){alt="API reference page."}

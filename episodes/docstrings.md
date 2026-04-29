@@ -543,6 +543,12 @@ def identify(audio_file: str) -> str:
     """
     Identify a bird based on the sound of its call.
 
+    Args:
+        audio_file: The path of an audio file.
+
+    Returns:
+        The name of the bird species.
+
     Examples:
     >>> identify("~/recordings/hirundo.wav")
     "Hirundo atrocaerulea"
@@ -556,6 +562,9 @@ def identify(audio_file: str) -> str:
 
 ```R
 #' Identify a bird based on the sound of its call.
+#'
+#' @param audio_file The path of the sound file
+#' @returns The name of the bird species.
 #'
 #' @examples
 #' identify("~/recordings/hirundo.wav")
@@ -757,6 +766,18 @@ How should we critically evaluate this material so that it can be used appropria
 research teams without jeopardising our ethics or integrity or causing security risks?
 
 :::::::::::::::::::::::::::::::::::::
+
+::: callout
+
+### Carrying this code forward
+
+Keep the `oddsong` script you created in this episode — in the next episode on [documentation
+sites](sites.md), we'll reuse it to **automatically generate a reference page** for our software. Tools such as
+[mkdocstrings](https://mkdocstrings.github.io/) (for Python) and [pkgdown](https://pkgdown.r-lib.org/) (for R)
+read the docstrings you've just written and render them as polished HTML, so the more complete your `Args`,
+`Returns`, and `Examples` sections are, the richer your generated documentation site will be.
+
+:::
 
 ## Conclusion
 
