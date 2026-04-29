@@ -336,7 +336,7 @@ created, VS Code shows a notification — *"We noticed a new environment has bee
 If the prompt doesn't appear, open the Command Palette (**Ctrl + Shift + P**, or **Cmd + Shift + P** on macOS), choose
 *Python: Select Interpreter*, and pick the one inside `.venv/`.
 
-Once the interpreter is selected, any new integrated terminal you open (**Ctrl + `**) will activate`.venv/`
+Once the interpreter is selected, any new integrated terminal you open (**Ctrl + \`**) will activate`.venv/`
 automatically, so you can skip the `source .venv/bin/activate` / `.venv\Scripts\activate` step. This also avoids
 PowerShell execution-policy errors that some Windows learners see when activating manually.
 
