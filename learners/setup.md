@@ -37,10 +37,7 @@ IntelliSense (autocompletion and tooltips), install the
 [Python extension](https://marketplace.visualstudio.com/items?itemName=ms-python.python) and/or the
 [R extension](https://marketplace.visualstudio.com/items?itemName=REditorSupport.r) from the VS Code Marketplace.
 
-Notepad is installed by default on Windows. [Notepad++](https://notepad-plus-plus.org/) is a more powerful, open-source
-alternative with syntax highlighting.
-
-At the University of Sheffield, Notepad++, Visual Studio Code, and
+At the University of Sheffield, Visual Studio Code and
 [RStudio Desktop](https://posit.co/download/rstudio-desktop/) are available on managed computers via the
 [Software Centre](https://students.sheffield.ac.uk/it-services/software/university-applications)
 desktop shortcut.
