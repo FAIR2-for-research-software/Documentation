@@ -32,6 +32,10 @@ us to break our code into smaller units that have a single purpose.
 By documenting those functions effectively, we aim to **explain their purpose** to future users and maintainers of that
 code. We also need to describe all the expected inputs and outputs of the functions.
 
+Throughout this episode we'll build up a small piece of fictional research software called **OddSong**, a birdsong
+identifier that classifies bird species from audio recordings. The code lives in a file called `oddsong.py` (or
+`R/identify.R` for the R version) which we will reuse in the next episode on [documentation sites](sites.md).
+
 ## Documentation strings
 
 We describe functions by using a feature of many programming languages called **documentation strings**, which is
@@ -46,14 +50,14 @@ although the principle is the same.
 ### Python
 
 In Python, we put a string as the first line of a function (or other object.) For example, for a simple Python function
-that calculates the sum of two numbers:
+that counts the total bird calls heard across two recording sessions:
 
 ```python
-def add(x, y):
+def count_calls(morning, evening):
     """
-    Calculate the sum of two numbers.
+    Count the total bird calls from two recording sessions.
     """
-    return x + y
+    return morning + evening
 ```
 
 ### R
@@ -62,9 +66,9 @@ In R, we use the [roxygen2](https://roxygen2.r-lib.org/) package, where a commen
 documentation string for a function.
 
 ```R
-#' Calculate the sum of two numbers.
-add <- function(x, y) {
-  return(x + y)
+#' Count the total bird calls from two recording sessions.
+count_calls <- function(morning, evening) {
+  return(morning + evening)
 }
 ```
 
@@ -294,31 +298,33 @@ We list the input parameters in the code examples below.  Each argument has a na
 
 ### Python
 
-The argument name matches the variable name in the function signature, such as `add(x, y)` in this case.
+The argument name matches the variable name in the function signature, such as `count_calls(morning, evening)` in this
+case.
 
 ```python
-def add(x, y):
+def count_calls(morning, evening):
     """
-    Calculate the sum of two numbers.
+    Count the total bird calls from two recording sessions.
 
     Args:
-        x: The first number to add.
-        y: The second number to add.
+        morning: The number of calls counted in the morning session.
+        evening: The number of calls counted in the evening session.
     """
-    return x + y
+    return morning + evening
 ```
 
 ### R
 
-The argument name matches the variable name in the function signature, such as `function(x, y)` in this case.
+The argument name matches the variable name in the function signature, such as `function(morning, evening)` in this
+case.
 
 ```R
-#' Calculate the sum of two numbers.
+#' Count the total bird calls from two recording sessions.
 #'
-#' @param x The first number to add.
-#' @param y The second number to add.
-add <- function(x, y) {
-  return(x + y)
+#' @param morning The number of calls counted in the morning session.
+#' @param evening The number of calls counted in the evening session.
+count_calls <- function(morning, evening) {
+  return(morning + evening)
 }
 ```
 
@@ -381,18 +387,18 @@ function code block.
 In the Python programming language, we conventionally use the "Returns:" section to describe the function output.
 
 ```python
-def add(x, y):
+def count_calls(morning, evening):
     """
-    Calculate the sum of two numbers.
+    Count the total bird calls from two recording sessions.
 
     Args:
-        x: The first number to add.
-        y: The second number to add.
+        morning: The number of calls counted in the morning session.
+        evening: The number of calls counted in the evening session.
 
     Returns:
-        The sum of x and y.
+        The total number of bird calls across both sessions.
     """
-    return x + y
+    return morning + evening
 ```
 
 ### R
@@ -400,13 +406,13 @@ def add(x, y):
 In R, when using [roxygen2](https://roxygen2.r-lib.org/), the "@return" section describes the function output.
 
 ```R
-#' Calculate the sum of two numbers.
+#' Count the total bird calls from two recording sessions.
 #'
-#' @param x The first number to add.
-#' @param y The second number to add.
-#' @return The sum of x and y.
-add <- function(x, y) {
-  return(x + y)
+#' @param morning The number of calls counted in the morning session.
+#' @param evening The number of calls counted in the evening session.
+#' @return The total number of bird calls across both sessions.
+count_calls <- function(morning, evening) {
+  return(morning + evening)
 }
 ```
 
@@ -480,24 +486,24 @@ Each code example has a prefix of `>>>` which represents the input prompt on the
 will provide syntax highlighting of these code snippets.
 
 ```python
-def add(x, y):
+def count_calls(morning, evening):
     """
-    Calculate the sum of two numbers.
+    Count the total bird calls from two recording sessions.
 
     Args:
-        x: The first number to add.
-        y: The second number to add.
+        morning: The number of calls counted in the morning session.
+        evening: The number of calls counted in the evening session.
 
     Returns:
-        The sum of x and y.
+        The total number of bird calls across both sessions.
 
     Examples:
-    >>> add(1, 1)
-    2
-    >>> add(1.3, 5.3)
-    6.6
+    >>> count_calls(3, 5)
+    8
+    >>> count_calls(12, 7)
+    19
     """
-    return x + y
+    return morning + evening
 ```
 
 For more information about including code examples and test cases in docstrings, please read about the
@@ -508,17 +514,17 @@ For more information about including code examples and test cases in docstrings,
 The code examples section of the docstring is prefixed by `@examples`.
 
 ```R
-#' Add two numbers.
+#' Count the total bird calls from two recording sessions.
 #'
-#' @param x The first number to add.
-#' @param y The second number to add.
-#' @return The sum of `x` and `y`.
+#' @param morning The number of calls counted in the morning session.
+#' @param evening The number of calls counted in the evening session.
+#' @return The total number of bird calls across both sessions.
 #'
 #' @examples
-#' add(1, 1)
-#' add(1.3, 5.3)
-add <- function(x, y) {
-  return(x + y)
+#' count_calls(3, 5)
+#' count_calls(12, 7)
+count_calls <- function(morning, evening) {
+  return(morning + evening)
 }
 ```
 
@@ -543,6 +549,12 @@ def identify(audio_file: str) -> str:
     """
     Identify a bird based on the sound of its call.
 
+    Args:
+        audio_file: The path of an audio file.
+
+    Returns:
+        The name of the bird species.
+
     Examples:
     >>> identify("~/recordings/hirundo.wav")
     "Hirundo atrocaerulea"
@@ -556,6 +568,9 @@ def identify(audio_file: str) -> str:
 
 ```R
 #' Identify a bird based on the sound of its call.
+#'
+#' @param audio_file The path of the sound file
+#' @returns The name of the bird species.
 #'
 #' @examples
 #' identify("~/recordings/hirundo.wav")
@@ -638,21 +653,22 @@ As with any software documentation, **avoid jargon** where possible.
 Read the following documentation string, which is very wordy:
 
 ```python
-def add(x, y):
+def count_calls(morning, evening):
     """
-    Adds two numbers together, which are the x and y arguments of this function.
+    Counts the total bird calls from two recording sessions, which are the morning and evening arguments
+    of this function.
 
     This function takes two numbers as input and returns their sum.
     The addition is performed using the built-in `+` operator.
 
     Args:
-        x: The first number to add to the second number, y.
-        y: The second number to add to the first number, x.
+        morning: The first number to add to the second number, evening.
+        evening: The second number to add to the first number, morning.
 
     Returns:
-        The sum of x and y, which are summed using the addition operator.
+        The sum of morning and evening, which are summed using the addition operator.
     """
-    return x + y
+    return morning + evening
 ```
 
 **Discuss** how can we effectively convey the purpose and functionality of a function in a docstring, without going into
@@ -705,30 +721,30 @@ prompt and the reply generated by the Google Gemini algorithm:
 ```bash
 Please generate a docstring for this Python function:
 
-def calculate_rectangle_area(width, height):
-    area = width * height
-    return area
+def calculate_call_rate(call_count, duration_minutes):
+    rate = call_count / duration_minutes
+    return rate
 ```
 
 The result is the following docstring, in addition to some helpful descriptions of the content that it generated.
 
 ```python
-def calculate_rectangle_area(width, height):
+def calculate_call_rate(call_count, duration_minutes):
   """
-  This function calculates the area of a rectangle.
+  This function calculates the rate of bird calls per minute in a recording.
 
   Args:
-      width (float): The width of the rectangle. Must be a positive number.
-      height (float): The height of the rectangle. Must be a positive number.
+      call_count (int): The number of bird calls observed in the recording. Must be a non-negative number.
+      duration_minutes (float): The length of the recording in minutes. Must be a positive number.
 
   Returns:
-      float: The area of the rectangle. This will be a positive number.
+      float: The rate of bird calls per minute.
   """
 
-  # Calculate the area
-  area = width * height
+  # Calculate the rate
+  rate = call_count / duration_minutes
 
-  return area
+  return rate
 ```
 
 This <abbr title="artificial intelligence">AI</abbr>-generated content contains a function summary, argument
