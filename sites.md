@@ -384,13 +384,6 @@ reference material from Python code.
 pip install "mkdocs==1.*" "mkdocstrings-python==2.*"
 ```
 
-::: callout
-
-The quotation marks in this command are important — some shells (particularly on Linux and macOS) treat the square
-brackets in `mkdocstrings[python]` as a glob pattern and the install will fail without them.
-
-:::
-
 :::: spoiler
 
 ### Why pin MkDocs to version 1?
